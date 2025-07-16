@@ -1,34 +1,17 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const activityTrackingPlugin = require('../plugins/activityTracking');
+const { saleDetailsSchema, priceHistorySchema, collectionItemTransform } = require('./schemas/shared');
 
 const psaGradedCardSchema = new mongoose.Schema({
   cardId: { type: Schema.Types.ObjectId, ref: 'Card', required: true },
   grade: { type: String, required: true },
   images: [{ type: String }],
   myPrice: { type: mongoose.Types.Decimal128, required: true },
-  priceHistory: [{
-    price: { type: mongoose.Types.Decimal128, required: true },
-    dateUpdated: { type: Date, default: Date.now },
-  }],
+  priceHistory: priceHistorySchema,
   dateAdded: { type: Date, default: Date.now },
   sold: { type: Boolean, default: false },
-  saleDetails: {
-    paymentMethod: { type: String, enum: ['CASH', 'Mobilepay', 'BankTransfer'] },
-    actualSoldPrice: { type: mongoose.Types.Decimal128 },
-    deliveryMethod: { type: String, enum: ['Sent', 'Local Meetup'] },
-    source: { type: String, enum: ['Facebook', 'DBA'] },
-    dateSold: { type: Date },
-    buyerFullName: { type: String },
-    buyerAddress: {
-      streetName: { type: String },
-      postnr: { type: String },
-      city: { type: String },
-    },
-    buyerPhoneNumber: { type: String },
-    buyerEmail: { type: String },
-    trackingNumber: { type: String },
-  },
+  saleDetails: saleDetailsSchema,
 });
 
 // Apply activity tracking plugin
@@ -43,42 +26,9 @@ psaGradedCardSchema.plugin(activityTrackingPlugin, {
 });
 
 
-// Transform function to convert Decimal128 to numbers in JSON responses
+// Apply shared transform function for JSON responses
 psaGradedCardSchema.set('toJSON', {
-  transform(doc, ret) {
-    // Convert Decimal128 to number for myPrice
-    if (ret.myPrice) {
-      if (ret.myPrice.$numberDecimal) {
-        ret.myPrice = parseFloat(ret.myPrice.$numberDecimal);
-      } else if (ret.myPrice.toString) {
-        ret.myPrice = parseFloat(ret.myPrice.toString());
-      }
-    }
-
-    // Convert Decimal128 to number for saleDetails.actualSoldPrice
-    if (ret.saleDetails && ret.saleDetails.actualSoldPrice) {
-      if (ret.saleDetails.actualSoldPrice.$numberDecimal) {
-        ret.saleDetails.actualSoldPrice = parseFloat(ret.saleDetails.actualSoldPrice.$numberDecimal);
-      } else if (ret.saleDetails.actualSoldPrice.toString) {
-        ret.saleDetails.actualSoldPrice = parseFloat(ret.saleDetails.actualSoldPrice.toString());
-      }
-    }
-
-    // Convert Decimal128 to number for priceHistory
-    if (ret.priceHistory && Array.isArray(ret.priceHistory)) {
-      ret.priceHistory = ret.priceHistory.map((item) => {
-        if (item.price) {
-          if (item.price.$numberDecimal) {
-            item.price = parseFloat(item.price.$numberDecimal);
-          } else if (item.price.toString) {
-            item.price = parseFloat(item.price.toString());
-          }
-        }
-        return item;
-      });
-    }
-    return ret;
-  },
+  transform: collectionItemTransform
 });
 
 const PsaGradedCard = mongoose.model('PsaGradedCard', psaGradedCardSchema);

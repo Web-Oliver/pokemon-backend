@@ -5,7 +5,7 @@ const path = require('path');
 require('dotenv').config();
 
 const connectDB = require('./config/db');
-const { errorHandler } = require('./middleware/errorHandler');
+const { errorHandler } = require('./utils/errorHandler');
 const { compressionMiddleware, setCacheHeaders } = require('./middleware/compression');
 const { getCacheStats } = require('./middleware/searchCache');
 

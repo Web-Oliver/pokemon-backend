@@ -1,131 +1,42 @@
-const mongoose = require('mongoose');
 const PsaGradedCard = require('../models/PsaGradedCard');
 const psaQueryService = require('../services/psaGradedCardQueryService');
 const psaCrudService = require('../services/psaGradedCardCrudService');
-const SaleService = require('../services/shared/saleService');
-const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
+const BaseController = require('./base/BaseController');
 
-const getAllPsaGradedCards = asyncHandler(async (req, res) => {
-  const { grade, setName, cardName, sold } = req.query;
-
-  try {
-    const filteredCards = await psaQueryService.findAllPsaGradedCards({ grade, setName, cardName, sold });
-
-    res.status(200).json({ success: true, data: filteredCards });
-  } catch (error) {
-    if (error.message.includes('Invalid')) {
-      throw new ValidationError(error.message);
-    }
-    throw error;
+/**
+ * PSA Graded Card Controller
+ * 
+ * Extends BaseController to provide CRUD operations for PSA graded cards.
+ * Uses the new architecture with significantly reduced code duplication.
+ */
+class PsaGradedCardController extends BaseController {
+  constructor() {
+    super(PsaGradedCard, psaQueryService, psaCrudService, {
+      entityName: 'PsaGradedCard',
+      pluralName: 'psaGradedCards',
+      includeMarkAsSold: true,
+      defaultPopulate: {
+        path: 'cardId',
+        populate: {
+          path: 'setId',
+          model: 'Set'
+        }
+      }
+    });
   }
-});
 
-const getPsaGradedCardById = asyncHandler(async (req, res) => {
-  try {
-    const psaGradedCard = await psaQueryService.findPsaGradedCardById(req.params.id);
+  // Custom methods specific to PSA graded cards can be added here
+  // All standard CRUD operations are inherited from BaseController
+}
 
-    res.status(200).json({ success: true, data: psaGradedCard });
-  } catch (error) {
-    if (error.message.includes('Invalid')) {
-      throw new ValidationError(error.message);
-    }
-    if (error.message.includes('not found')) {
-      throw new NotFoundError(error.message);
-    }
-    throw error;
-  }
-});
-
-const createPsaGradedCard = asyncHandler(async (req, res) => {
-  try {
-    console.log('=== PSA GRADED CARD CREATION START ===');
-    console.log('Request body:', JSON.stringify(req.body, null, 2));
-    console.log('Request headers:', req.headers);
-    console.log('Request method:', req.method);
-    console.log('Request URL:', req.url);
-
-    const psaGradedCard = await psaCrudService.createPsaGradedCard(req.body);
-
-    console.log('PSA graded card created successfully:', psaGradedCard);
-    console.log('=== PSA GRADED CARD CREATION END ===');
-
-    res.status(201).json({ success: true, data: psaGradedCard });
-  } catch (error) {
-    console.error('=== PSA GRADED CARD CREATION ERROR ===');
-    console.error('Error type:', error.constructor.name);
-    console.error('Error message:', error.message);
-    console.error('Error code:', error.code);
-    console.error('Error name:', error.name);
-    console.error('Error stack:', error.stack);
-    console.error('Request body that caused error:', JSON.stringify(req.body, null, 2));
-
-    if (error.errors) {
-      console.error('Validation errors:', error.errors);
-    }
-
-    if (error.keyPattern) {
-      console.error('Duplicate key pattern:', error.keyPattern);
-    }
-
-    if (error.keyValue) {
-      console.error('Duplicate key value:', error.keyValue);
-    }
-
-    console.error('=== PSA GRADED CARD CREATION ERROR END ===');
-
-    if (error.message.includes('required') || error.message.includes('Invalid')) {
-      throw new ValidationError(error.message);
-    }
-    throw error;
-  }
-});
-
-const updatePsaGradedCard = asyncHandler(async (req, res) => {
-  try {
-    const updatedCard = await psaCrudService.updatePsaGradedCard(req.params.id, req.body);
-
-    res.status(200).json({ success: true, data: updatedCard });
-  } catch (error) {
-    if (error.message.includes('Invalid')) {
-      throw new ValidationError(error.message);
-    }
-    if (error.message.includes('not found')) {
-      throw new NotFoundError(error.message);
-    }
-    throw error;
-  }
-});
-
-const deletePsaGradedCard = asyncHandler(async (req, res) => {
-  try {
-    await psaCrudService.deletePsaGradedCard(req.params.id);
-    res.status(200).json({ success: true, message: 'PSA graded card deleted successfully' });
-  } catch (error) {
-    if (error.message.includes('Invalid')) {
-      throw new ValidationError(error.message);
-    }
-    if (error.message.includes('not found')) {
-      throw new NotFoundError(error.message);
-    }
-    throw error;
-  }
-});
-
-const markAsSold = asyncHandler(async (req, res) => {
-  // Validate sale details
-  SaleService.validateSaleDetails(req.body);
-  
-  // Mark card as sold using centralized service
-  const psaGradedCard = await SaleService.markCardAsSold(PsaGradedCard, req.params.id, req.body);
-
-  res.status(200).json({ success: true, data: psaGradedCard });
-});
+// Create instance and export methods
+const psaGradedCardController = new PsaGradedCardController();
 
 module.exports = {
-  getAllPsaGradedCards,
-  getPsaGradedCardById,
-  createPsaGradedCard,
-  updatePsaGradedCard,
-  deletePsaGradedCard,
-  markAsSold,
+  getAllPsaGradedCards: psaGradedCardController.getAll,
+  getPsaGradedCardById: psaGradedCardController.getById,
+  createPsaGradedCard: psaGradedCardController.create,
+  updatePsaGradedCard: psaGradedCardController.update,
+  deletePsaGradedCard: psaGradedCardController.delete,
+  markAsSold: psaGradedCardController.markAsSold,
 };
