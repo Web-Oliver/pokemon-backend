@@ -1,0 +1,4400 @@
+{
+  "year": "2018",
+  "set_name": "Pokemon SM Black Star Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2018/pokemon-sm-black-star-promo/157151",
+  "total_cards": 183,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 7,
+        "psa_3": 17,
+        "psa_4": 36,
+        "psa_5": 136,
+        "psa_6": 240,
+        "psa_7": 505,
+        "psa_8": 1895,
+        "psa_9": 3946,
+        "psa_10": 2461,
+        "psa_total": 9252
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 9252
+      }
+    },
+    {
+      "pokemon_number": "SM06",
+      "card_name": "Rockruff-Holo-General Mills 2018",
+      "base_name": "Rockruff-Holo",
+      "variety": "General Mills 2018",
+      "spec_id": 2601958,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "SM30a",
+      "card_name": "Tapu Koko-Holo-Celestial Storm Three Pack Blisters",
+      "base_name": "Tapu Koko-Holo",
+      "variety": "Celestial Storm Three Pack Blisters",
+      "spec_id": 2679958,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 8,
+        "psa_10": 0,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "SM40",
+      "card_name": "Jangmo-O-Holo-General Mills 2018",
+      "base_name": "Jangmo-O-Holo",
+      "variety": "General Mills 2018",
+      "spec_id": 2601970,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 10,
+        "psa_10": 0,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "SM42",
+      "card_name": "Cosmog-Holo-General Mills 2018",
+      "base_name": "Cosmog-Holo",
+      "variety": "General Mills 2018",
+      "spec_id": 2601961,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "SM45",
+      "card_name": "Tapu Lele-Holo-Celestial Storm Three Pack Blisters",
+      "base_name": "Tapu Lele-Holo",
+      "variety": "Celestial Storm Three Pack Blisters",
+      "spec_id": 2899409,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "SM61",
+      "card_name": "Tapu Bulu-Holo-Celestial Storm Single Pack Blisters",
+      "base_name": "Tapu Bulu-Holo",
+      "variety": "Celestial Storm Single Pack Blisters",
+      "spec_id": 2726924,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "SM90",
+      "card_name": "Full Art/Raichu V-Shining Legends Special Collection-German",
+      "base_name": "Full Art/Raichu V",
+      "variety": "Shining Legends Special Collection-German",
+      "spec_id": 9065090,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "SM90",
+      "card_name": "Full Art/Raichu GX-Shining Legends Special Collection-French",
+      "base_name": "Full Art/Raichu GX",
+      "variety": "Shining Legends Special Collection-French",
+      "spec_id": 7876388,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 8,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "SM90",
+      "card_name": "Full Art/Raichu GX-Shining Legends Special Collection-German",
+      "base_name": "Full Art/Raichu GX",
+      "variety": "Shining Legends Special Collection-German",
+      "spec_id": 9478767,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 7,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "SM92",
+      "card_name": "Tapu Fini-Holo-Celestial Storm Single Pack Blisters",
+      "base_name": "Tapu Fini-Holo",
+      "variety": "Celestial Storm Single Pack Blisters",
+      "spec_id": 2726930,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "SM93",
+      "card_name": "Marshadow-Holo-Shining Legends Pin Collection",
+      "base_name": "Marshadow-Holo",
+      "variety": "Shining Legends Pin Collection",
+      "spec_id": 2568390,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 8,
+        "psa_8": 23,
+        "psa_9": 15,
+        "psa_10": 2,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "SM94",
+      "card_name": "Rotom Lavado-Holo-Ultra Prism Prerelease-Staff-Spanish",
+      "base_name": "Rotom Lavado-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-Spanish",
+      "spec_id": 13276197,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM94",
+      "card_name": "Motisma Lavage-Holo-Ultra Prism Prerelease-Staff-French",
+      "base_name": "Motisma Lavage-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-French",
+      "spec_id": 9571819,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM94",
+      "card_name": "Wash Rotom-Holo-Ultra Prism Prerelease",
+      "base_name": "Wash Rotom-Holo",
+      "variety": "Ultra Prism Prerelease",
+      "spec_id": 9559290,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 8,
+        "psa_9": 17,
+        "psa_10": 10,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "SM94",
+      "card_name": "Wash Rotom-Holo-Ultra Prism Prerelease-Staff",
+      "base_name": "Wash Rotom-Holo",
+      "variety": "Ultra Prism Prerelease-Staff",
+      "spec_id": 9505680,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 9,
+        "psa_9": 27,
+        "psa_10": 15,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 58,
+        "grade_total": 58
+      }
+    },
+    {
+      "pokemon_number": "SM95",
+      "card_name": "Lucario-Holo-Ultra Prism Prerelease",
+      "base_name": "Lucario-Holo",
+      "variety": "Ultra Prism Prerelease",
+      "spec_id": 9559407,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 24,
+        "psa_9": 41,
+        "psa_10": 4,
+        "psa_total": 77
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 77
+      }
+    },
+    {
+      "pokemon_number": "SM95",
+      "card_name": "Lucario-Holo-Ultra Prism Prerelease-French",
+      "base_name": "Lucario-Holo",
+      "variety": "Ultra Prism Prerelease-French",
+      "spec_id": 9766757,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM95",
+      "card_name": "Lucario-Holo-Ultra Prism Prerelease-Staff",
+      "base_name": "Lucario-Holo",
+      "variety": "Ultra Prism Prerelease-Staff",
+      "spec_id": 9559412,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 9,
+        "psa_8": 23,
+        "psa_9": 45,
+        "psa_10": 11,
+        "psa_total": 90
+      },
+      "grade_totals": {
+        "total": 90,
+        "grade_total": 90
+      }
+    },
+    {
+      "pokemon_number": "SM95",
+      "card_name": "Lucario-Holo-Ultra Prism Prerelease-Staff-French",
+      "base_name": "Lucario-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-French",
+      "spec_id": 9571822,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM95",
+      "card_name": "Lucario-Holo-Ultra Prism Prerelease-Staff-German",
+      "base_name": "Lucario-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-German",
+      "spec_id": 9571824,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM95",
+      "card_name": "Lucario-Holo-Ultra Prism Prerelease-Staff-Italian",
+      "base_name": "Lucario-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-Italian",
+      "spec_id": 12392385,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM96",
+      "card_name": "Heatran-Holo-Ultra Prism Prerelease",
+      "base_name": "Heatran-Holo",
+      "variety": "Ultra Prism Prerelease",
+      "spec_id": 2581948,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 15,
+        "psa_10": 5,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "SM96",
+      "card_name": "Heatran-Holo-Ultra Prism Prerelease-Staff",
+      "base_name": "Heatran-Holo",
+      "variety": "Ultra Prism Prerelease-Staff",
+      "spec_id": 9559445,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 14,
+        "psa_9": 31,
+        "psa_10": 9,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "SM96",
+      "card_name": "Heatran-Holo-Ultra Prism Prerelease-Staff-French",
+      "base_name": "Heatran-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-French",
+      "spec_id": 9571825,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM96",
+      "card_name": "Heatran-Holo-Ultra Prism Prerelease-Staff-Spanish",
+      "base_name": "Heatran-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-Spanish",
+      "spec_id": 13276200,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM97",
+      "card_name": "Argouste-Holo-Ultra Prism Prerelease-Staff-French",
+      "base_name": "Argouste-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-French",
+      "spec_id": 9571827,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM97",
+      "card_name": "Gumshoos-Holo-Ultra Prism Prerelease",
+      "base_name": "Gumshoos-Holo",
+      "variety": "Ultra Prism Prerelease",
+      "spec_id": 9559481,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 13,
+        "psa_10": 1,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "SM97",
+      "card_name": "Gumshoos-Holo-Ultra Prism Prerelease-Staff",
+      "base_name": "Gumshoos-Holo",
+      "variety": "Ultra Prism Prerelease-Staff",
+      "spec_id": 9559450,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 12,
+        "psa_9": 19,
+        "psa_10": 8,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "SM97",
+      "card_name": "Gumshoos-Holo-Ultra Prism Prerelease-Staff-Spanish",
+      "base_name": "Gumshoos-Holo",
+      "variety": "Ultra Prism Prerelease-Staff-Spanish",
+      "spec_id": 13276182,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM100",
+      "card_name": "Lucario GX-Lucario GX Box",
+      "base_name": "Lucario GX",
+      "variety": "Lucario GX Box",
+      "spec_id": 2568372,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 17,
+        "psa_9": 11,
+        "psa_10": 7,
+        "psa_total": 45
+      },
+      "grade_totals": {
+        "total": 45,
+        "grade_total": 45
+      }
+    },
+    {
+      "pokemon_number": "SM100",
+      "card_name": "Lucario GX-Lucario GX Box-Jumbo",
+      "base_name": "Lucario GX",
+      "variety": "Lucario GX Box-Jumbo",
+      "spec_id": 2634264,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM101",
+      "card_name": "Dawn Wings Necrozma GX-Necrozma Prism Tin",
+      "base_name": "Dawn Wings Necrozma GX",
+      "variety": "Necrozma Prism Tin",
+      "spec_id": 2592217,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 16,
+        "psa_9": 21,
+        "psa_10": 11,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 62,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "SM102",
+      "card_name": "Dusk Mane Necrozma GX-Necrozma Prism Tin",
+      "base_name": "Dusk Mane Necrozma GX",
+      "variety": "Necrozma Prism Tin",
+      "spec_id": 2592216,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 27,
+        "psa_10": 9,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "SM103",
+      "card_name": "Lunala GX-Lunala GX Box",
+      "base_name": "Lunala GX",
+      "variety": "Lunala GX Box",
+      "spec_id": 2664132,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 13,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "SM103",
+      "card_name": "Lunala GX-Lunala GX Box-Jumbo",
+      "base_name": "Lunala GX",
+      "variety": "Lunala GX Box-Jumbo",
+      "spec_id": 2667723,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM104",
+      "card_name": "Solgaleo GX-Solgaleo GX Box",
+      "base_name": "Solgaleo GX",
+      "variety": "Solgaleo GX Box",
+      "spec_id": 2664131,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 18,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "SM104",
+      "card_name": "Solgaleo GX-Solgaleo GX Box-Jumbo",
+      "base_name": "Solgaleo GX",
+      "variety": "Solgaleo GX Box-Jumbo",
+      "spec_id": 2667719,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM104",
+      "card_name": "Solgaleo GX-Solgaleo GX Box-Spanish",
+      "base_name": "Solgaleo GX",
+      "variety": "Solgaleo GX Box-Spanish",
+      "spec_id": 11429076,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM105",
+      "card_name": "Lycanroc-Spring Collector Chest",
+      "base_name": "Lycanroc",
+      "variety": "Spring Collector Chest",
+      "spec_id": 2601811,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "SM106",
+      "card_name": "Dawn Wings Necrozma-Holo-Spring Collector Chest",
+      "base_name": "Dawn Wings Necrozma-Holo",
+      "variety": "Spring Collector Chest",
+      "spec_id": 2568427,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "SM107",
+      "card_name": "Dusk Mane Necrozma-Holo-Spring Collector Chest",
+      "base_name": "Dusk Mane Necrozma-Holo",
+      "variety": "Spring Collector Chest",
+      "spec_id": 2869151,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "SM108",
+      "card_name": "Pikachu de Sacha-Retail Promotion",
+      "base_name": "Pikachu de Sacha",
+      "variety": "Retail Promotion",
+      "spec_id": 8282592,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 11,
+        "psa_10": 1,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "SM109",
+      "card_name": "Pikachu de Sacha-Retail Promotion",
+      "base_name": "Pikachu de Sacha",
+      "variety": "Retail Promotion",
+      "spec_id": 8799578,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "SM110",
+      "card_name": "Pikachu de Sacha-Retail Promotion",
+      "base_name": "Pikachu de Sacha",
+      "variety": "Retail Promotion",
+      "spec_id": 11649843,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "SM111",
+      "card_name": "Pikachu de Sacha-Retail Promotion",
+      "base_name": "Pikachu de Sacha",
+      "variety": "Retail Promotion",
+      "spec_id": 8098156,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "SM112",
+      "card_name": "Pikachu de Sacha-Retail Promotion",
+      "base_name": "Pikachu de Sacha",
+      "variety": "Retail Promotion",
+      "spec_id": 11227908,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "SM113",
+      "card_name": "Pikachu de Sacha-Retail Promotion",
+      "base_name": "Pikachu de Sacha",
+      "variety": "Retail Promotion",
+      "spec_id": 8098154,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 3,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "SM114",
+      "card_name": "Pikachu de Sacha-Retail Promotion",
+      "base_name": "Pikachu de Sacha",
+      "variety": "Retail Promotion",
+      "spec_id": 8799580,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "SM115",
+      "card_name": "Cancrelove-Holo-Forbidden Light Prerelease-Staff-French",
+      "base_name": "Cancrelove-Holo",
+      "variety": "Forbidden Light Prerelease-Staff-French",
+      "spec_id": 9576700,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM115",
+      "card_name": "Pheromosa-Holo-Forbidden Light Prerelease",
+      "base_name": "Pheromosa-Holo",
+      "variety": "Forbidden Light Prerelease",
+      "spec_id": 9575450,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 12,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "SM115",
+      "card_name": "Pheromosa-Holo-Forbidden Light Prerelease-Staff",
+      "base_name": "Pheromosa-Holo",
+      "variety": "Forbidden Light Prerelease-Staff",
+      "spec_id": 9575670,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 15,
+        "psa_9": 20,
+        "psa_10": 10,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "SM115",
+      "card_name": "Schabelle-Holo-Forbidden Light-Prerelease-Staff-German",
+      "base_name": "Schabelle-Holo",
+      "variety": "Forbidden Light-Prerelease-Staff-German",
+      "spec_id": 10553413,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM116",
+      "card_name": "Cablifere-Holo-Forbidden Light Prerelease-Staff-French",
+      "base_name": "Cablifere-Holo",
+      "variety": "Forbidden Light Prerelease-Staff-French",
+      "spec_id": 10208815,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM116",
+      "card_name": "Voltriant-Holo-Forbidden Light-Prerelease-Staff-German",
+      "base_name": "Voltriant-Holo",
+      "variety": "Forbidden Light-Prerelease-Staff-German",
+      "spec_id": 10554114,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM116",
+      "card_name": "Xurkitree-Holo-Forbidden Light Prerelease",
+      "base_name": "Xurkitree-Holo",
+      "variety": "Forbidden Light Prerelease",
+      "spec_id": 9575491,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 14,
+        "psa_10": 7,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "SM116",
+      "card_name": "Xurkitree-Holo-Forbidden Light Prerelease-Staff",
+      "base_name": "Xurkitree-Holo",
+      "variety": "Forbidden Light Prerelease-Staff",
+      "spec_id": 9575714,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 7,
+        "psa_8": 11,
+        "psa_9": 25,
+        "psa_10": 9,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "SM117",
+      "card_name": "Calamanero-Holo-Forbidden Light-Prerelease-Staff-German",
+      "base_name": "Calamanero-Holo",
+      "variety": "Forbidden Light-Prerelease-Staff-German",
+      "spec_id": 10524644,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM117",
+      "card_name": "Malamar-Holo-Forbidden Light Prerelease",
+      "base_name": "Malamar-Holo",
+      "variety": "Forbidden Light Prerelease",
+      "spec_id": 5935243,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 14,
+        "psa_10": 3,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "SM117",
+      "card_name": "Malamar-Holo-Forbidden Light Prerelease-Staff",
+      "base_name": "Malamar-Holo",
+      "variety": "Forbidden Light Prerelease-Staff",
+      "spec_id": 5935220,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 10,
+        "psa_9": 23,
+        "psa_10": 9,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 48,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "SM117",
+      "card_name": "Malamar-Holo-Forbidden Light Prerelease-Staff-Spanish",
+      "base_name": "Malamar-Holo",
+      "variety": "Forbidden Light Prerelease-Staff-Spanish",
+      "spec_id": 13276177,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM117",
+      "card_name": "Sepiatroce-Holo-Forbidden Light Prerelease-French",
+      "base_name": "Sepiatroce-Holo",
+      "variety": "Forbidden Light Prerelease-French",
+      "spec_id": 12317258,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM117",
+      "card_name": "Sepiatroce-Holo-Forbidden Light Prerelease-Staff-French",
+      "base_name": "Sepiatroce-Holo",
+      "variety": "Forbidden Light Prerelease-Staff-French",
+      "spec_id": 10208814,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM118",
+      "card_name": "Lougaroc-Holo-Forbidden Light Prerelease-Staff-French",
+      "base_name": "Lougaroc-Holo",
+      "variety": "Forbidden Light Prerelease-Staff-French",
+      "spec_id": 10208804,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM118",
+      "card_name": "Lycanroc-Forbidden Light-Prerelease-Staff-Spanish",
+      "base_name": "Lycanroc",
+      "variety": "Forbidden Light-Prerelease-Staff-Spanish",
+      "spec_id": 12239801,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM118",
+      "card_name": "Lycanroc-Holo-Forbidden Light Prerelease",
+      "base_name": "Lycanroc-Holo",
+      "variety": "Forbidden Light Prerelease",
+      "spec_id": 9575640,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 14,
+        "psa_10": 6,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "SM118",
+      "card_name": "Lycanroc-Holo-Forbidden Light Prerelease-Staff",
+      "base_name": "Lycanroc-Holo",
+      "variety": "Forbidden Light Prerelease-Staff",
+      "spec_id": 9576043,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 17,
+        "psa_9": 31,
+        "psa_10": 2,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "SM118",
+      "card_name": "Wolwerock-Holo-Forbidden Light-Prerelease-Staff-German",
+      "base_name": "Wolwerock-Holo",
+      "variety": "Forbidden Light-Prerelease-Staff-German",
+      "spec_id": 10523143,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM119",
+      "card_name": "Exeggcute-Holo-Forbidden Light Single Pack",
+      "base_name": "Exeggcute-Holo",
+      "variety": "Forbidden Light Single Pack",
+      "spec_id": 2655750,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 7,
+        "psa_9": 10,
+        "psa_10": 1,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "SM120",
+      "card_name": "Rockruff-Holo-Forbidden Light Single Pack",
+      "base_name": "Rockruff-Holo",
+      "variety": "Forbidden Light Single Pack",
+      "spec_id": 8982058,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "SM121",
+      "card_name": "Raikou GX-Holo-Legends of Johto GX Collection-French",
+      "base_name": "Raikou GX-Holo",
+      "variety": "Legends of Johto GX Collection-French",
+      "spec_id": 8704300,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "SM121",
+      "card_name": "Raikou GX-Holo-Legends of Johto GX Collection-German",
+      "base_name": "Raikou GX-Holo",
+      "variety": "Legends of Johto GX Collection-German",
+      "spec_id": 10731435,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM121",
+      "card_name": "Raikou GX-Holo-Legends of Johto GX Premium Collection",
+      "base_name": "Raikou GX-Holo",
+      "variety": "Legends of Johto GX Premium Collection",
+      "spec_id": 2568432,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 45,
+        "psa_9": 130,
+        "psa_10": 129,
+        "psa_total": 317
+      },
+      "grade_totals": {
+        "total": 317,
+        "grade_total": 317
+      }
+    },
+    {
+      "pokemon_number": "SM122",
+      "card_name": "Zygarde GX-Shiny Zygarde GX Box",
+      "base_name": "Zygarde GX",
+      "variety": "Shiny Zygarde GX Box",
+      "spec_id": 2599237,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 9,
+        "psa_9": 11,
+        "psa_10": 0,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "SM122",
+      "card_name": "Zygarde GX-Shiny Zygarde GX Box-Jumbo",
+      "base_name": "Zygarde GX",
+      "variety": "Shiny Zygarde GX Box-Jumbo",
+      "spec_id": 2634260,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "SM123",
+      "card_name": "Dawn Wings Necrozma-Holo-Dawn Wings Necrozma Premium Collection",
+      "base_name": "Dawn Wings Necrozma-Holo",
+      "variety": "Dawn Wings Necrozma Premium Collection",
+      "spec_id": 2605600,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 31,
+        "psa_10": 27,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "SM124",
+      "card_name": "Dusk Mane Necrozma-Holo-Dusk Mane Necrozma Premium Collection",
+      "base_name": "Dusk Mane Necrozma-Holo",
+      "variety": "Dusk Mane Necrozma Premium Collection",
+      "spec_id": 2605606,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 37,
+        "psa_10": 20,
+        "psa_total": 69
+      },
+      "grade_totals": {
+        "total": 69,
+        "grade_total": 69
+      }
+    },
+    {
+      "pokemon_number": "SM125",
+      "card_name": "Mandrillon GX-Dragon Majesty Elite Trainer Box-French",
+      "base_name": "Mandrillon GX",
+      "variety": "Dragon Majesty Elite Trainer Box-French",
+      "spec_id": 8694886,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM125",
+      "card_name": "Naganadel GX-Dragon Majesty Elite Trainer",
+      "base_name": "Naganadel GX",
+      "variety": "Dragon Majesty Elite Trainer",
+      "spec_id": 2655102,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 13,
+        "psa_9": 52,
+        "psa_10": 108,
+        "psa_total": 179
+      },
+      "grade_totals": {
+        "total": 179,
+        "grade_total": 179
+      }
+    },
+    {
+      "pokemon_number": "SM126",
+      "card_name": "Ultra Necrozma GX-Dragon Majesty Collection",
+      "base_name": "Ultra Necrozma GX",
+      "variety": "Dragon Majesty Collection",
+      "spec_id": 2791127,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 13,
+        "psa_9": 19,
+        "psa_10": 2,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "SM126",
+      "card_name": "Ultra Necrozma GX-Dragon Majesty Collection-Italian",
+      "base_name": "Ultra Necrozma GX",
+      "variety": "Dragon Majesty Collection-Italian",
+      "spec_id": 13556849,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM126",
+      "card_name": "Ultra Necrozma GX-Dragon Majesty Collection-Jumbo",
+      "base_name": "Ultra Necrozma GX",
+      "variety": "Dragon Majesty Collection-Jumbo",
+      "spec_id": 12591307,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM129",
+      "card_name": "Kyogre-Holo-Celestial Storm Prerelease",
+      "base_name": "Kyogre-Holo",
+      "variety": "Celestial Storm Prerelease",
+      "spec_id": 2637734,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 8,
+        "psa_8": 16,
+        "psa_9": 53,
+        "psa_10": 9,
+        "psa_total": 88
+      },
+      "grade_totals": {
+        "total": 88,
+        "grade_total": 88
+      }
+    },
+    {
+      "pokemon_number": "SM129",
+      "card_name": "Kyogre-Holo-Celestial Storm Prerelease-Italian",
+      "base_name": "Kyogre-Holo",
+      "variety": "Celestial Storm Prerelease-Italian",
+      "spec_id": 11665378,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM129",
+      "card_name": "Kyogre-Holo-Celestial Storm Prerelease-Staff",
+      "base_name": "Kyogre-Holo",
+      "variety": "Celestial Storm Prerelease-Staff",
+      "spec_id": 2625986,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 12,
+        "psa_8": 41,
+        "psa_9": 77,
+        "psa_10": 15,
+        "psa_total": 150
+      },
+      "grade_totals": {
+        "total": 150,
+        "grade_total": 150
+      }
+    },
+    {
+      "pokemon_number": "SM129",
+      "card_name": "Kyogre-Holo-Celestial Storm Prerelease-Staff-French",
+      "base_name": "Kyogre-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-French",
+      "spec_id": 8786496,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM129",
+      "card_name": "Kyogre-Holo-Celestial Storm Prerelease-Staff-Spanish",
+      "base_name": "Kyogre-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-Spanish",
+      "spec_id": 10421720,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM130",
+      "card_name": "Elecsprint-Holo-Celestial Storm Prerelease-Staff-French",
+      "base_name": "Elecsprint-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-French",
+      "spec_id": 9124450,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM130",
+      "card_name": "Manectric-Holo-Celestial Storm Prerelease",
+      "base_name": "Manectric-Holo",
+      "variety": "Celestial Storm Prerelease",
+      "spec_id": 2662220,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 6,
+        "psa_8": 10,
+        "psa_9": 7,
+        "psa_10": 8,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "SM130",
+      "card_name": "Manectric-Holo-Celestial Storm Prerelease-Staff",
+      "base_name": "Manectric-Holo",
+      "variety": "Celestial Storm Prerelease-Staff",
+      "spec_id": 2628505,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 17,
+        "psa_9": 44,
+        "psa_10": 6,
+        "psa_total": 75
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 75
+      }
+    },
+    {
+      "pokemon_number": "SM130",
+      "card_name": "Manectric-Holo-Celestial Storm Prerelease-Staff-Spanish",
+      "base_name": "Manectric-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-Spanish",
+      "spec_id": 10421971,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM130",
+      "card_name": "Voltenso-Holo-Celestial Storm Prerelease-Staff-German",
+      "base_name": "Voltenso-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-German",
+      "spec_id": 10553790,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM131",
+      "card_name": "Celesteela-Holo-Celestial Storm Prerelease",
+      "base_name": "Celesteela-Holo",
+      "variety": "Celestial Storm Prerelease",
+      "spec_id": 2627020,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 8,
+        "psa_10": 4,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "SM131",
+      "card_name": "Celesteela-Holo-Celestial Storm Prerelease-Staff",
+      "base_name": "Celesteela-Holo",
+      "variety": "Celestial Storm Prerelease-Staff",
+      "spec_id": 2628507,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 15,
+        "psa_9": 40,
+        "psa_10": 9,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "SM131",
+      "card_name": "Celesteela-Holo-Celestial Storm Prerelease-Staff-Spanish",
+      "base_name": "Celesteela-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-Spanish",
+      "spec_id": 10421967,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM131",
+      "card_name": "Kaguron-Holo-Celestial Storm Prerelease-Staff-German",
+      "base_name": "Kaguron-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-German",
+      "spec_id": 10553328,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM132",
+      "card_name": "Delcatty-Holo-Celestial Storm Prerelease",
+      "base_name": "Delcatty-Holo",
+      "variety": "Celestial Storm Prerelease",
+      "spec_id": 2662224,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 12,
+        "psa_10": 2,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "SM132",
+      "card_name": "Delcatty-Holo-Celestial Storm Prerelease-Staff",
+      "base_name": "Delcatty-Holo",
+      "variety": "Celestial Storm Prerelease-Staff",
+      "spec_id": 2625984,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 19,
+        "psa_9": 34,
+        "psa_10": 9,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "SM132",
+      "card_name": "Delcatty-Holo-Celestial Storm Prerelease-Staff-French",
+      "base_name": "Delcatty-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-French",
+      "spec_id": 11315745,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM132",
+      "card_name": "Delcatty-Holo-Celestial Storm Prerelease-Staff-Spanish",
+      "base_name": "Delcatty-Holo",
+      "variety": "Celestial Storm Prerelease-Staff-Spanish",
+      "spec_id": 10421861,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM133",
+      "card_name": "Thundurus GX-Forces of Nature GX Premium Collection",
+      "base_name": "Thundurus GX",
+      "variety": "Forces of Nature GX Premium Collection",
+      "spec_id": 2632884,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 11,
+        "psa_10": 17,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "SM134",
+      "card_name": "Tornadus GX-Forces of Nature GX Premium Collection",
+      "base_name": "Tornadus GX",
+      "variety": "Forces of Nature GX Premium Collection",
+      "spec_id": 2632885,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 14,
+        "psa_10": 12,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "SM135",
+      "card_name": "Latias-Holo-Dragon Majesty Latias Mini Collection-Italian",
+      "base_name": "Latias-Holo",
+      "variety": "Dragon Majesty Latias Mini Collection-Italian",
+      "spec_id": 10195796,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM135",
+      "card_name": "Latias-Holo-Dragon Majesty Pin Collection",
+      "base_name": "Latias-Holo",
+      "variety": "Dragon Majesty Pin Collection",
+      "spec_id": 2650603,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 9,
+        "psa_8": 18,
+        "psa_9": 25,
+        "psa_10": 10,
+        "psa_total": 69
+      },
+      "grade_totals": {
+        "total": 69,
+        "grade_total": 69
+      }
+    },
+    {
+      "pokemon_number": "SM135",
+      "card_name": "Latias-Holo-Dragon Majesty Pin Collection Latias-French",
+      "base_name": "Latias-Holo",
+      "variety": "Dragon Majesty Pin Collection Latias-French",
+      "spec_id": 12195102,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM136",
+      "card_name": "Latios-Holo-Dragon Majesty Latios Mini Collection-Italian",
+      "base_name": "Latios-Holo",
+      "variety": "Dragon Majesty Latios Mini Collection-Italian",
+      "spec_id": 10195794,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM136",
+      "card_name": "Latios-Holo-Dragon Majesty Pin Collection",
+      "base_name": "Latios-Holo",
+      "variety": "Dragon Majesty Pin Collection",
+      "spec_id": 2650599,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 23,
+        "psa_9": 20,
+        "psa_10": 11,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "SM136",
+      "card_name": "Latios-Holo-Dragon Majesty Pin Collection Latios-French",
+      "base_name": "Latios-Holo",
+      "variety": "Dragon Majesty Pin Collection Latios-French",
+      "spec_id": 11682450,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM137",
+      "card_name": "Reshiram GX-Dragon Majesty Legends of Unova GX Collection",
+      "base_name": "Reshiram GX",
+      "variety": "Dragon Majesty Legends of Unova GX Collection",
+      "spec_id": 2766054,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 44,
+        "psa_10": 12,
+        "psa_total": 75
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 75
+      }
+    },
+    {
+      "pokemon_number": "SM138",
+      "card_name": "Zekrom GX-Dragon Majesty Legends of Unova GX Collection",
+      "base_name": "Zekrom GX",
+      "variety": "Dragon Majesty Legends of Unova GX Collection",
+      "spec_id": 2766060,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 26,
+        "psa_9": 38,
+        "psa_10": 6,
+        "psa_total": 79
+      },
+      "grade_totals": {
+        "total": 79,
+        "grade_total": 79
+      }
+    },
+    {
+      "pokemon_number": "SM139",
+      "card_name": "Full Art/Brutalanda GX-Dragon Majesty Special Collection-German",
+      "base_name": "Full Art/Brutalanda GX",
+      "variety": "Dragon Majesty Special Collection-German",
+      "spec_id": 12177677,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM139",
+      "card_name": "Full Art/Drattak GX-Dragon Majesty Special Collection-French",
+      "base_name": "Full Art/Drattak GX",
+      "variety": "Dragon Majesty Special Collection-French",
+      "spec_id": 8514798,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "SM139",
+      "card_name": "Full Art/Salamence GX-Dragon Majesty Special Collection",
+      "base_name": "Full Art/Salamence GX",
+      "variety": "Dragon Majesty Special Collection",
+      "spec_id": 2687031,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 15,
+        "psa_9": 94,
+        "psa_10": 159,
+        "psa_total": 279
+      },
+      "grade_totals": {
+        "total": 280,
+        "grade_total": 279
+      }
+    },
+    {
+      "pokemon_number": "SM139",
+      "card_name": "Full Art/Salamence GX-Dragon Majesty Special Collection-Jumbo",
+      "base_name": "Full Art/Salamence GX",
+      "variety": "Dragon Majesty Special Collection-Jumbo",
+      "spec_id": 2680814,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 8,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "SM140",
+      "card_name": "Salamence-Holo-Dragon Majesty Special Collection",
+      "base_name": "Salamence-Holo",
+      "variety": "Dragon Majesty Special Collection",
+      "spec_id": 2687033,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 12,
+        "psa_9": 22,
+        "psa_10": 16,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "SM141",
+      "card_name": "Full Art/Kyurem Bianco GX-Dragon Majesty White Kyurem-GX Special Collection-Italian",
+      "base_name": "Full Art/Kyurem Bianco GX",
+      "variety": "Dragon Majesty White Kyurem-GX Special Collection-Italian",
+      "spec_id": 12344097,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM141",
+      "card_name": "Full Art/Kyurem Blanc GX-Dragon Majesty Special Collection-French",
+      "base_name": "Full Art/Kyurem Blanc GX",
+      "variety": "Dragon Majesty Special Collection-French",
+      "spec_id": 11178508,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM141",
+      "card_name": "Full Art/White Kyurem GX-Dragon Majesty Special Collection",
+      "base_name": "Full Art/White Kyurem GX",
+      "variety": "Dragon Majesty Special Collection",
+      "spec_id": 2696395,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 91,
+        "psa_10": 144,
+        "psa_total": 246
+      },
+      "grade_totals": {
+        "total": 246,
+        "grade_total": 246
+      }
+    },
+    {
+      "pokemon_number": "SM141",
+      "card_name": "Full Art/White Kyurem GX-Dragon Majesty Special Collection-Jumbo",
+      "base_name": "Full Art/White Kyurem GX",
+      "variety": "Dragon Majesty Special Collection-Jumbo",
+      "spec_id": 2712232,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 7,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "SM142",
+      "card_name": "Kyurem-Holo-Dragon Majesty Special Collection",
+      "base_name": "Kyurem-Holo",
+      "variety": "Dragon Majesty Special Collection",
+      "spec_id": 2822356,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 12,
+        "psa_10": 6,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "SM143",
+      "card_name": "Moltres-Holo-Fall 2018 Collector Chest",
+      "base_name": "Moltres-Holo",
+      "variety": "Fall 2018 Collector Chest",
+      "spec_id": 2688235,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 8,
+        "psa_7": 11,
+        "psa_8": 38,
+        "psa_9": 69,
+        "psa_10": 16,
+        "psa_total": 148
+      },
+      "grade_totals": {
+        "total": 149,
+        "grade_total": 148
+      }
+    },
+    {
+      "pokemon_number": "SM143",
+      "card_name": "Moltres-Holo-Fall 2018 Collector Chest-Italian",
+      "base_name": "Moltres-Holo",
+      "variety": "Fall 2018 Collector Chest-Italian",
+      "spec_id": 11538475,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM144",
+      "card_name": "Articuno-Holo-Fall 2018 Collector Chest",
+      "base_name": "Articuno-Holo",
+      "variety": "Fall 2018 Collector Chest",
+      "spec_id": 2680229,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 18,
+        "psa_7": 18,
+        "psa_8": 40,
+        "psa_9": 81,
+        "psa_10": 24,
+        "psa_total": 187
+      },
+      "grade_totals": {
+        "total": 188,
+        "grade_total": 187
+      }
+    },
+    {
+      "pokemon_number": "SM144",
+      "card_name": "Articuno-Holo-Fall 2018 Collector Chest-Italian",
+      "base_name": "Articuno-Holo",
+      "variety": "Fall 2018 Collector Chest-Italian",
+      "spec_id": 11538588,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM145",
+      "card_name": "Zapdos-Holo-Fall 2018 Collector Chest",
+      "base_name": "Zapdos-Holo",
+      "variety": "Fall 2018 Collector Chest",
+      "spec_id": 2688236,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 9,
+        "psa_7": 13,
+        "psa_8": 39,
+        "psa_9": 68,
+        "psa_10": 16,
+        "psa_total": 150
+      },
+      "grade_totals": {
+        "total": 152,
+        "grade_total": 150
+      }
+    },
+    {
+      "pokemon_number": "SM145",
+      "card_name": "Zapdos-Holo-Fall 2018 Collector Chest-Italian",
+      "base_name": "Zapdos-Holo",
+      "variety": "Fall 2018 Collector Chest-Italian",
+      "spec_id": 11538632,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM146",
+      "card_name": "Leafeon GX-Evolution Celebration Tin",
+      "base_name": "Leafeon GX",
+      "variety": "Evolution Celebration Tin",
+      "spec_id": 2723617,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 20,
+        "psa_6": 25,
+        "psa_7": 16,
+        "psa_8": 65,
+        "psa_9": 212,
+        "psa_10": 147,
+        "psa_total": 492
+      },
+      "grade_totals": {
+        "total": 495,
+        "grade_total": 492
+      }
+    },
+    {
+      "pokemon_number": "SM146",
+      "card_name": "Phyllali GX-Evolution Celebration Tin-French",
+      "base_name": "Phyllali GX",
+      "variety": "Evolution Celebration Tin-French",
+      "spec_id": 12195263,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM147",
+      "card_name": "Givrali GX-Evolution Celebration Tin-French",
+      "base_name": "Givrali GX",
+      "variety": "Evolution Celebration Tin-French",
+      "spec_id": 10638315,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "SM147",
+      "card_name": "Glaceon GX-Evolution Celebration Tin",
+      "base_name": "Glaceon GX",
+      "variety": "Evolution Celebration Tin",
+      "spec_id": 2723618,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 6,
+        "psa_5": 21,
+        "psa_6": 12,
+        "psa_7": 21,
+        "psa_8": 84,
+        "psa_9": 238,
+        "psa_10": 139,
+        "psa_total": 526
+      },
+      "grade_totals": {
+        "total": 528,
+        "grade_total": 526
+      }
+    },
+    {
+      "pokemon_number": "SM147",
+      "card_name": "Glaceon GX-Evolution Celebration Tin-Spanish",
+      "base_name": "Glaceon GX",
+      "variety": "Evolution Celebration Tin-Spanish",
+      "spec_id": 11429089,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18",
+      "base_name": "Champions Festival",
+      "variety": "World 18",
+      "spec_id": 2702959,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 15,
+        "psa_8": 44,
+        "psa_9": 66,
+        "psa_10": 7,
+        "psa_total": 140
+      },
+      "grade_totals": {
+        "total": 141,
+        "grade_total": 140
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Champion",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Champion",
+      "spec_id": 2736471,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Finalist",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Finalist",
+      "spec_id": 2682610,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-French",
+      "base_name": "Champions Festival",
+      "variety": "World 18-French",
+      "spec_id": 3692122,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 7,
+        "psa_8": 27,
+        "psa_9": 29,
+        "psa_10": 3,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-German",
+      "base_name": "Champions Festival",
+      "variety": "World 18-German",
+      "spec_id": 2713876,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 22,
+        "psa_9": 32,
+        "psa_10": 2,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Italian",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Italian",
+      "spec_id": 2713879,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 8,
+        "psa_8": 21,
+        "psa_9": 32,
+        "psa_10": 1,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Portuguese",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Portuguese",
+      "spec_id": 3692124,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 5,
+        "psa_8": 24,
+        "psa_9": 29,
+        "psa_10": 2,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Quarter-Finalist",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Quarter-Finalist",
+      "spec_id": 2654815,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 8,
+        "psa_10": 2,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Semi-Finalist",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Semi-Finalist",
+      "spec_id": 2648889,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Spanish",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Spanish",
+      "spec_id": 3336168,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 23,
+        "psa_9": 32,
+        "psa_10": 3,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 62,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Staff",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Staff",
+      "spec_id": 2644780,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 22,
+        "psa_8": 62,
+        "psa_9": 48,
+        "psa_10": 6,
+        "psa_total": 144
+      },
+      "grade_totals": {
+        "total": 148,
+        "grade_total": 144
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Top Sixteen",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Top Sixteen",
+      "spec_id": 2682612,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 14,
+        "psa_9": 19,
+        "psa_10": 2,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "SM148",
+      "card_name": "Champions Festival-World 18-Top Thirty-Two",
+      "base_name": "Champions Festival",
+      "variety": "World 18-Top Thirty-Two",
+      "spec_id": 2682595,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 14,
+        "psa_9": 21,
+        "psa_10": 4,
+        "psa_total": 45
+      },
+      "grade_totals": {
+        "total": 45,
+        "grade_total": 45
+      }
+    },
+    {
+      "pokemon_number": "SM149",
+      "card_name": "Suicune-Holo-Lost Thunder Prerelease",
+      "base_name": "Suicune-Holo",
+      "variety": "Lost Thunder Prerelease",
+      "spec_id": 2687035,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 16,
+        "psa_8": 58,
+        "psa_9": 119,
+        "psa_10": 22,
+        "psa_total": 221
+      },
+      "grade_totals": {
+        "total": 221,
+        "grade_total": 221
+      }
+    },
+    {
+      "pokemon_number": "SM149",
+      "card_name": "Suicune-Holo-Lost Thunder Prerelease-French",
+      "base_name": "Suicune-Holo",
+      "variety": "Lost Thunder Prerelease-French",
+      "spec_id": 8139145,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM149",
+      "card_name": "Suicune-Holo-Lost Thunder Prerelease-French-Staff",
+      "base_name": "Suicune-Holo",
+      "variety": "Lost Thunder Prerelease-French-Staff",
+      "spec_id": 7956981,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "SM149",
+      "card_name": "Suicune-Holo-Lost Thunder Prerelease-German-Staff",
+      "base_name": "Suicune-Holo",
+      "variety": "Lost Thunder Prerelease-German-Staff",
+      "spec_id": 13094627,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM149",
+      "card_name": "Suicune-Holo-Lost Thunder Prerelease-Spanish-Staff",
+      "base_name": "Suicune-Holo",
+      "variety": "Lost Thunder Prerelease-Spanish-Staff",
+      "spec_id": 9768583,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM149",
+      "card_name": "Suicune-Holo-Lost Thunder Prerelease-Staff",
+      "base_name": "Suicune-Holo",
+      "variety": "Lost Thunder Prerelease-Staff",
+      "spec_id": 2685492,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 8,
+        "psa_7": 8,
+        "psa_8": 54,
+        "psa_9": 77,
+        "psa_10": 15,
+        "psa_total": 164
+      },
+      "grade_totals": {
+        "total": 164,
+        "grade_total": 164
+      }
+    },
+    {
+      "pokemon_number": "SM150",
+      "card_name": "Raikou-Holo-Lost Thunder Prerelease",
+      "base_name": "Raikou-Holo",
+      "variety": "Lost Thunder Prerelease",
+      "spec_id": 2724830,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 6,
+        "psa_7": 10,
+        "psa_8": 35,
+        "psa_9": 81,
+        "psa_10": 14,
+        "psa_total": 146
+      },
+      "grade_totals": {
+        "total": 146,
+        "grade_total": 146
+      }
+    },
+    {
+      "pokemon_number": "SM150",
+      "card_name": "Raikou-Holo-Lost Thunder Prerelease-French",
+      "base_name": "Raikou-Holo",
+      "variety": "Lost Thunder Prerelease-French",
+      "spec_id": 8502467,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM150",
+      "card_name": "Raikou-Holo-Lost Thunder Prerelease-French-Staff",
+      "base_name": "Raikou-Holo",
+      "variety": "Lost Thunder Prerelease-French-Staff",
+      "spec_id": 8502465,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "SM150",
+      "card_name": "Raikou-Holo-Lost Thunder Prerelease-Staff",
+      "base_name": "Raikou-Holo",
+      "variety": "Lost Thunder Prerelease-Staff",
+      "spec_id": 2677687,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 9,
+        "psa_7": 15,
+        "psa_8": 45,
+        "psa_9": 72,
+        "psa_10": 16,
+        "psa_total": 158
+      },
+      "grade_totals": {
+        "total": 159,
+        "grade_total": 158
+      }
+    },
+    {
+      "pokemon_number": "SM151",
+      "card_name": "Giratina-Holo-Lost Thunder Prerelease",
+      "base_name": "Giratina-Holo",
+      "variety": "Lost Thunder Prerelease",
+      "spec_id": 2685511,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 32,
+        "psa_9": 37,
+        "psa_10": 12,
+        "psa_total": 91
+      },
+      "grade_totals": {
+        "total": 91,
+        "grade_total": 91
+      }
+    },
+    {
+      "pokemon_number": "SM151",
+      "card_name": "Giratina-Holo-Lost Thunder Prerelease-French",
+      "base_name": "Giratina-Holo",
+      "variety": "Lost Thunder Prerelease-French",
+      "spec_id": 8502471,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM151",
+      "card_name": "Giratina-Holo-Lost Thunder Prerelease-French-Staff",
+      "base_name": "Giratina-Holo",
+      "variety": "Lost Thunder Prerelease-French-Staff",
+      "spec_id": 8502472,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM151",
+      "card_name": "Giratina-Holo-Lost Thunder Prerelease-Italian-Staff",
+      "base_name": "Giratina-Holo",
+      "variety": "Lost Thunder Prerelease-Italian-Staff",
+      "spec_id": 13236771,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM151",
+      "card_name": "Giratina-Holo-Lost Thunder Prerelease-Spanish-Staff",
+      "base_name": "Giratina-Holo",
+      "variety": "Lost Thunder Prerelease-Spanish-Staff",
+      "spec_id": 9176369,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM151",
+      "card_name": "Giratina-Holo-Lost Thunder Prerelease-Staff",
+      "base_name": "Giratina-Holo",
+      "variety": "Lost Thunder Prerelease-Staff",
+      "spec_id": 2685493,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 11,
+        "psa_8": 53,
+        "psa_9": 51,
+        "psa_10": 2,
+        "psa_total": 122
+      },
+      "grade_totals": {
+        "total": 122,
+        "grade_total": 122
+      }
+    },
+    {
+      "pokemon_number": "SM152",
+      "card_name": "Tapu Lele-Holo-Lost Thunder Prerelease",
+      "base_name": "Tapu Lele-Holo",
+      "variety": "Lost Thunder Prerelease",
+      "spec_id": 2685504,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 20,
+        "psa_9": 16,
+        "psa_10": 4,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "SM152",
+      "card_name": "Tapu Lele-Holo-Lost Thunder Prerelease-Italian-Staff",
+      "base_name": "Tapu Lele-Holo",
+      "variety": "Lost Thunder Prerelease-Italian-Staff",
+      "spec_id": 13236772,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM152",
+      "card_name": "Tapu Lele-Holo-Lost Thunder Prerelease-Staff",
+      "base_name": "Tapu Lele-Holo",
+      "variety": "Lost Thunder Prerelease-Staff",
+      "spec_id": 2685498,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 33,
+        "psa_9": 33,
+        "psa_10": 2,
+        "psa_total": 77
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 77
+      }
+    },
+    {
+      "pokemon_number": "SM152",
+      "card_name": "Tokopiyon-Holo-Lost Thunder Prerelease-French",
+      "base_name": "Tokopiyon-Holo",
+      "variety": "Lost Thunder Prerelease-French",
+      "spec_id": 8502474,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM152",
+      "card_name": "Tokopiyon-Holo-Lost Thunder Prerelease-French-Staff",
+      "base_name": "Tokopiyon-Holo",
+      "variety": "Lost Thunder Prerelease-French-Staff",
+      "spec_id": 8502477,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "SM153",
+      "card_name": "Rowlet-Holo-Lost Thunder Single Pack Blister",
+      "base_name": "Rowlet-Holo",
+      "variety": "Lost Thunder Single Pack Blister",
+      "spec_id": 4781289,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 7,
+        "psa_10": 1,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "SM154",
+      "card_name": "Salandit-Holo-Lost Thunder Single Pack Blister",
+      "base_name": "Salandit-Holo",
+      "variety": "Lost Thunder Single Pack Blister",
+      "spec_id": 4781250,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "SM155",
+      "card_name": "FA/Seedraking GX-Dragon Majesty Super-Premium Collection-German",
+      "base_name": "FA/Seedraking GX",
+      "variety": "Dragon Majesty Super-Premium Collection-German",
+      "spec_id": 12100239,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "SM155",
+      "card_name": "Full Art/Hyporoi GX-Dragon Majesty Super-Premium Collection-French",
+      "base_name": "Full Art/Hyporoi GX",
+      "variety": "Dragon Majesty Super-Premium Collection-French",
+      "spec_id": 8801310,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "SM155",
+      "card_name": "Full Art/Kingdra GX-Dragon Majesty Super-Premium Collection",
+      "base_name": "Full Art/Kingdra GX",
+      "variety": "Dragon Majesty Super-Premium Collection",
+      "spec_id": 2663376,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 41,
+        "psa_9": 162,
+        "psa_10": 300,
+        "psa_total": 519
+      },
+      "grade_totals": {
+        "total": 519,
+        "grade_total": 519
+      }
+    },
+    {
+      "pokemon_number": "SM155",
+      "card_name": "Full Art/Kingdra GX-Dragon Majesty Super-Premium Collection-Italian",
+      "base_name": "Full Art/Kingdra GX",
+      "variety": "Dragon Majesty Super-Premium Collection-Italian",
+      "spec_id": 9384263,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM156",
+      "card_name": "FA/Dracolosse GX-Dragon Majesty Super-Premium Collection-French",
+      "base_name": "FA/Dracolosse GX",
+      "variety": "Dragon Majesty Super-Premium Collection-French",
+      "spec_id": 6412757,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 1,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "SM156",
+      "card_name": "FA/Dragoran GX-Dragon Majesty Super-Premium Collection-German",
+      "base_name": "FA/Dragoran GX",
+      "variety": "Dragon Majesty Super-Premium Collection-German",
+      "spec_id": 6109547,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "SM156",
+      "card_name": "Full Art/Dragonite GX-Dragon Majesty Premium Powers Collection-Jumbo",
+      "base_name": "Full Art/Dragonite GX",
+      "variety": "Dragon Majesty Premium Powers Collection-Jumbo",
+      "spec_id": 11639724,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM156",
+      "card_name": "Full Art/Dragonite GX-Dragon Majesty Super-Premium Collection",
+      "base_name": "Full Art/Dragonite GX",
+      "variety": "Dragon Majesty Super-Premium Collection",
+      "spec_id": 2662646,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 12,
+        "psa_6": 23,
+        "psa_7": 38,
+        "psa_8": 200,
+        "psa_9": 548,
+        "psa_10": 672,
+        "psa_total": 1500
+      },
+      "grade_totals": {
+        "total": 1500,
+        "grade_total": 1500
+      }
+    },
+    {
+      "pokemon_number": "SM156",
+      "card_name": "Full Art/Dragonite GX-Dragon Majesty Super-Premium Collection-Italian",
+      "base_name": "Full Art/Dragonite GX",
+      "variety": "Dragon Majesty Super-Premium Collection-Italian",
+      "spec_id": 9384310,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "SM156",
+      "card_name": "Full Art/Dragonite GX-Dragon Majesty Super-Premium Collection-Portuguese",
+      "base_name": "Full Art/Dragonite GX",
+      "variety": "Dragon Majesty Super-Premium Collection-Portuguese",
+      "spec_id": 12451027,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM157",
+      "card_name": "Pikachu-Holo-Pikachu & Eevee Poke Ball Collection",
+      "base_name": "Pikachu-Holo",
+      "variety": "Pikachu & Eevee Poke Ball Collection",
+      "spec_id": 2688238,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 17,
+        "psa_8": 68,
+        "psa_9": 150,
+        "psa_10": 27,
+        "psa_total": 272
+      },
+      "grade_totals": {
+        "total": 273,
+        "grade_total": 272
+      }
+    },
+    {
+      "pokemon_number": "SM157",
+      "card_name": "Pikachu-Holo-Pikachu & Eevee Poke Ball Collection-German",
+      "base_name": "Pikachu-Holo",
+      "variety": "Pikachu & Eevee Poke Ball Collection-German",
+      "spec_id": 12124548,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Boreas, Fulguris ET Demeteros-Boreas GX/Fulguris GX Box-Jumbo-French",
+      "base_name": "Boreas, Fulguris ET Demeteros",
+      "variety": "Boreas GX/Fulguris GX Box-Jumbo-French",
+      "spec_id": 11325425,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Kyurem/Reshiram/Zekrom-Legends of Unova GX Premium Collection",
+      "base_name": "Kyurem/Reshiram/Zekrom",
+      "variety": "Legends of Unova GX Premium Collection",
+      "spec_id": 2667751,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 5,
+        "psa_10": 3,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Tornadus, Thundurus & Landorus-Forces of Nature GX Premium Collection-Jumbo",
+      "base_name": "Tornadus, Thundurus & Landorus",
+      "variety": "Forces of Nature GX Premium Collection-Jumbo",
+      "spec_id": 2712376,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Raikou, Entei & Suicune-Legends of Johto GX Premium Collection-Jumbo",
+      "base_name": "Raikou, Entei & Suicune",
+      "variety": "Legends of Johto GX Premium Collection-Jumbo",
+      "spec_id": 2576272,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 9,
+        "psa_9": 52,
+        "psa_10": 19,
+        "psa_total": 89
+      },
+      "grade_totals": {
+        "total": 89,
+        "grade_total": 89
+      }
+    }
+  ]
+}

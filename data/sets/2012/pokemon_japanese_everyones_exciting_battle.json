@@ -1,0 +1,560 @@
+{
+  "year": "2012",
+  "set_name": "Pokemon Japanese Everyone's Exciting Battle",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2012/pokemon-japanese-everyones-exciting-battle/119628",
+  "total_cards": 23,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 30,
+        "psa_9": 192,
+        "psa_10": 449,
+        "psa_total": 682
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 682
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Tangela",
+      "base_name": "Tangela",
+      "variety": "",
+      "spec_id": 13137203,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Virizion",
+      "base_name": "Virizion",
+      "variety": "",
+      "spec_id": 2044120,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 13,
+        "psa_10": 41,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Magmar",
+      "base_name": "Magmar",
+      "variety": "",
+      "spec_id": 11480582,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Victini",
+      "base_name": "Victini",
+      "variety": "",
+      "spec_id": 2044123,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 16,
+        "psa_10": 45,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Marill",
+      "base_name": "Marill",
+      "variety": "",
+      "spec_id": 5824024,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 8,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Azumarill",
+      "base_name": "Azumarill",
+      "variety": "",
+      "spec_id": 5824028,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Keldeo",
+      "base_name": "Keldeo",
+      "variety": "",
+      "spec_id": 2044125,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 14,
+        "psa_10": 38,
+        "psa_total": 60
+      },
+      "grade_totals": {
+        "total": 60,
+        "grade_total": 60
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2044115,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 14,
+        "psa_9": 57,
+        "psa_10": 127,
+        "psa_total": 206
+      },
+      "grade_totals": {
+        "total": 206,
+        "grade_total": 206
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Electabuzz",
+      "base_name": "Electabuzz",
+      "variety": "",
+      "spec_id": 9153099,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Stunfisk",
+      "base_name": "Stunfisk",
+      "variety": "",
+      "spec_id": 2485701,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Thundurus",
+      "base_name": "Thundurus",
+      "variety": "",
+      "spec_id": 2044130,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Meloetta",
+      "base_name": "Meloetta",
+      "variety": "",
+      "spec_id": 2044118,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 27,
+        "psa_10": 31,
+        "psa_total": 59
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 59
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Riolu",
+      "base_name": "Riolu",
+      "variety": "",
+      "spec_id": 2272678,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 6,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Lucario",
+      "base_name": "Lucario",
+      "variety": "",
+      "spec_id": 2272680,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 8,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Terrakion",
+      "base_name": "Terrakion",
+      "variety": "",
+      "spec_id": 2044126,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 24,
+        "psa_10": 28,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "034",
+      "card_name": "Zorua",
+      "base_name": "Zorua",
+      "variety": "",
+      "spec_id": 5824032,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "035",
+      "card_name": "Zoroark",
+      "base_name": "Zoroark",
+      "variety": "",
+      "spec_id": 2044128,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 16,
+        "psa_10": 51,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Aron",
+      "base_name": "Aron",
+      "variety": "",
+      "spec_id": 11777407,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Lairon",
+      "base_name": "Lairon",
+      "variety": "",
+      "spec_id": 11777411,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Aggron",
+      "base_name": "Aggron",
+      "variety": "",
+      "spec_id": 11778170,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "039",
+      "card_name": "Durant",
+      "base_name": "Durant",
+      "variety": "",
+      "spec_id": 10247339,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "040",
+      "card_name": "Cobalion",
+      "base_name": "Cobalion",
+      "variety": "",
+      "spec_id": 2044117,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 49,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 58,
+        "grade_total": 58
+      }
+    }
+  ]
+}

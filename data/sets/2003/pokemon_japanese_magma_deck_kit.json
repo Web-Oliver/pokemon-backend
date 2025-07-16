@@ -1,0 +1,1112 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon Japanese Magma Deck Kit",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-japanese-magma-deck-kit/131756",
+  "total_cards": 46,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 10,
+        "psa_6": 17,
+        "psa_7": 16,
+        "psa_8": 35,
+        "psa_9": 161,
+        "psa_10": 138,
+        "psa_total": 383
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 383
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Entei EX",
+      "base_name": "Entei EX",
+      "variety": "",
+      "spec_id": 2600324,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 9,
+        "psa_10": 8,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Entei EX-1st Edition",
+      "base_name": "Entei EX",
+      "variety": "1st Edition",
+      "spec_id": 2221499,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 17,
+        "psa_10": 13,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Team Magma's Houndour",
+      "base_name": "Team Magma's Houndour",
+      "variety": "",
+      "spec_id": 5158197,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Team Magma's Houndour-1st Edition",
+      "base_name": "Team Magma's Houndour",
+      "variety": "1st Edition",
+      "spec_id": 5158227,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Team Magma's Houndour",
+      "base_name": "Team Magma's Houndour",
+      "variety": "",
+      "spec_id": 5158198,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Team Magma's Houndour-1st Edition",
+      "base_name": "Team Magma's Houndour",
+      "variety": "1st Edition",
+      "spec_id": 5158228,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Team Magma's Houndoom",
+      "base_name": "Team Magma's Houndoom",
+      "variety": "",
+      "spec_id": 2600323,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 6,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Team Magma's Houndoom-1st Edition",
+      "base_name": "Team Magma's Houndoom",
+      "variety": "1st Edition",
+      "spec_id": 5158229,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 2,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Team Magma's Numel-1st Edition",
+      "base_name": "Team Magma's Numel",
+      "variety": "1st Edition",
+      "spec_id": 5158230,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Team Magma's Camerupt",
+      "base_name": "Team Magma's Camerupt",
+      "variety": "",
+      "spec_id": 5158200,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Team Magma's Camerupt-1st Edition",
+      "base_name": "Team Magma's Camerupt",
+      "variety": "1st Edition",
+      "spec_id": 5158231,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Team Magma's Rhyhorn",
+      "base_name": "Team Magma's Rhyhorn",
+      "variety": "",
+      "spec_id": 5158201,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Team Magma's Rhyhorn-1st Edition",
+      "base_name": "Team Magma's Rhyhorn",
+      "variety": "1st Edition",
+      "spec_id": 5158232,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Team Magma's Rhyhorn",
+      "base_name": "Team Magma's Rhyhorn",
+      "variety": "",
+      "spec_id": 5158202,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Team Magma's Rhyhorn-1st Edition",
+      "base_name": "Team Magma's Rhyhorn",
+      "variety": "1st Edition",
+      "spec_id": 5158233,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Team Magma's Rhydon",
+      "base_name": "Team Magma's Rhydon",
+      "variety": "",
+      "spec_id": 5158203,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Team Magma's Rhydon-1st Edition",
+      "base_name": "Team Magma's Rhydon",
+      "variety": "1st Edition",
+      "spec_id": 5158234,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Team Magma's Aron-1st Edition",
+      "base_name": "Team Magma's Aron",
+      "variety": "1st Edition",
+      "spec_id": 5158235,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Team Magma's Aron-1st Edition",
+      "base_name": "Team Magma's Aron",
+      "variety": "1st Edition",
+      "spec_id": 5158236,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Team Magma's Lairon-1st Edition",
+      "base_name": "Team Magma's Lairon",
+      "variety": "1st Edition",
+      "spec_id": 5158237,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Team Magma's Lairon-1st Edition",
+      "base_name": "Team Magma's Lairon",
+      "variety": "1st Edition",
+      "spec_id": 5158238,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Team Magma's Baltoy-1st Edition",
+      "base_name": "Team Magma's Baltoy",
+      "variety": "1st Edition",
+      "spec_id": 5158239,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Team Magma's Baltoy-1st Edition",
+      "base_name": "Team Magma's Baltoy",
+      "variety": "1st Edition",
+      "spec_id": 5158240,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Team Magma's Claydol-1st Edition",
+      "base_name": "Team Magma's Claydol",
+      "variety": "1st Edition",
+      "spec_id": 5158241,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Team Magma's Aggron",
+      "base_name": "Team Magma's Aggron",
+      "variety": "",
+      "spec_id": 2600327,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 7,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Team Magma's Aggron-1st Edition",
+      "base_name": "Team Magma's Aggron",
+      "variety": "1st Edition",
+      "spec_id": 5158242,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Team Magma's Aggron-Holo",
+      "base_name": "Team Magma's Aggron-Holo",
+      "variety": "",
+      "spec_id": 2600317,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 4,
+        "psa_9": 12,
+        "psa_10": 14,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Team Magma's Aggron-Holo-1st Edition",
+      "base_name": "Team Magma's Aggron-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2573472,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 21,
+        "psa_10": 14,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 45,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Team Magma's Groudon-Holo",
+      "base_name": "Team Magma's Groudon-Holo",
+      "variety": "",
+      "spec_id": 2600316,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 7,
+        "psa_7": 5,
+        "psa_8": 4,
+        "psa_9": 13,
+        "psa_10": 18,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Team Magma's Groudon-Holo-1st Edition",
+      "base_name": "Team Magma's Groudon-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2439352,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 29,
+        "psa_10": 14,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Team Magma's Poochyena",
+      "base_name": "Team Magma's Poochyena",
+      "variety": "",
+      "spec_id": 5158211,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Team Magma's Poochyena-1st Edition",
+      "base_name": "Team Magma's Poochyena",
+      "variety": "1st Edition",
+      "spec_id": 5158243,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Team Magma's Poochyena",
+      "base_name": "Team Magma's Poochyena",
+      "variety": "",
+      "spec_id": 5158212,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Team Magma's Poochyena-1st Edition",
+      "base_name": "Team Magma's Poochyena",
+      "variety": "1st Edition",
+      "spec_id": 5158244,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Team Magma's Mightyena",
+      "base_name": "Team Magma's Mightyena",
+      "variety": "",
+      "spec_id": 5158213,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Team Magma's Mightyena-1st Edition",
+      "base_name": "Team Magma's Mightyena",
+      "variety": "1st Edition",
+      "spec_id": 5158245,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Team Magma's Mightyena",
+      "base_name": "Team Magma's Mightyena",
+      "variety": "",
+      "spec_id": 5158214,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Team Magma's Mightyena-1st Edition",
+      "base_name": "Team Magma's Mightyena",
+      "variety": "1st Edition",
+      "spec_id": 5158246,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Team Magma Ball-1st Edition",
+      "base_name": "Team Magma Ball",
+      "variety": "1st Edition",
+      "spec_id": 5158249,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Team Magma Conspirator",
+      "base_name": "Team Magma Conspirator",
+      "variety": "",
+      "spec_id": 5158219,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Team Magma Conspirator-1st Edition",
+      "base_name": "Team Magma Conspirator",
+      "variety": "1st Edition",
+      "spec_id": 5158251,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Maxie-1st Edition",
+      "base_name": "Maxie",
+      "variety": "1st Edition",
+      "spec_id": 5158252,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Magma Energy",
+      "base_name": "Magma Energy",
+      "variety": "",
+      "spec_id": 2600328,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Magma Energy-1st Edition",
+      "base_name": "Magma Energy",
+      "variety": "1st Edition",
+      "spec_id": 5158256,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fighting Energy",
+      "base_name": "Fighting Energy",
+      "variety": "",
+      "spec_id": 5158225,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

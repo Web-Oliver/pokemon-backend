@@ -1,0 +1,1016 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Japanese Bulbasaur Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-japanese-bulbasaur-deck/101542",
+  "total_cards": 42,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 3,
+        "psa_3": 7,
+        "psa_4": 37,
+        "psa_5": 88,
+        "psa_6": 140,
+        "psa_7": 213,
+        "psa_8": 796,
+        "psa_9": 2495,
+        "psa_10": 2035,
+        "psa_total": 5823
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 5823
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Bulbasaur",
+      "base_name": "Bulbasaur",
+      "variety": "",
+      "spec_id": 2401216,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 8,
+        "psa_6": 10,
+        "psa_7": 26,
+        "psa_8": 57,
+        "psa_9": 102,
+        "psa_10": 30,
+        "psa_total": 234
+      },
+      "grade_totals": {
+        "total": 234,
+        "grade_total": 234
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Drowzee",
+      "base_name": "Drowzee",
+      "variety": "",
+      "spec_id": 2350412,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 3,
+        "psa_8": 10,
+        "psa_9": 36,
+        "psa_10": 31,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 86,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Raichu",
+      "base_name": "Raichu",
+      "variety": "",
+      "spec_id": 2023829,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 11,
+        "psa_7": 16,
+        "psa_8": 57,
+        "psa_9": 193,
+        "psa_10": 164,
+        "psa_total": 450
+      },
+      "grade_totals": {
+        "total": 450,
+        "grade_total": 450
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Venusaur-Holo",
+      "base_name": "Venusaur-Holo",
+      "variety": "",
+      "spec_id": 1825906,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 2,
+        "psa_3": 5,
+        "psa_4": 20,
+        "psa_5": 31,
+        "psa_6": 61,
+        "psa_7": 82,
+        "psa_8": 262,
+        "psa_9": 478,
+        "psa_10": 192,
+        "psa_total": 1141
+      },
+      "grade_totals": {
+        "total": 1144,
+        "grade_total": 1141
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2470768,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 10,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2470767,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 2470765,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 6,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Potion",
+      "base_name": "Potion",
+      "variety": "",
+      "spec_id": 2401222,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 16,
+        "psa_10": 8,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2470762,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 6,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Super Scoop Up",
+      "base_name": "Super Scoop Up",
+      "variety": "",
+      "spec_id": 2401224,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 8,
+        "psa_10": 10,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 2470760,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 7,
+        "psa_10": 5,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2470759,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 2470756,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 6,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2067270,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 9,
+        "psa_7": 6,
+        "psa_8": 44,
+        "psa_9": 187,
+        "psa_10": 165,
+        "psa_total": 417
+      },
+      "grade_totals": {
+        "total": 417,
+        "grade_total": 417
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 2470754,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 5,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2470753,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 2,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Meowth",
+      "base_name": "Meowth",
+      "variety": "",
+      "spec_id": 2022691,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 25,
+        "psa_9": 99,
+        "psa_10": 142,
+        "psa_total": 273
+      },
+      "grade_totals": {
+        "total": 273,
+        "grade_total": 273
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 2470752,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 3,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Bulbasaur",
+      "base_name": "Bulbasaur",
+      "variety": "",
+      "spec_id": 2075845,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 8,
+        "psa_7": 8,
+        "psa_8": 35,
+        "psa_9": 143,
+        "psa_10": 163,
+        "psa_total": 364
+      },
+      "grade_totals": {
+        "total": 364,
+        "grade_total": 364
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Switch",
+      "base_name": "Switch",
+      "variety": "",
+      "spec_id": 2401221,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 13,
+        "psa_10": 12,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Bill's Teleporter",
+      "base_name": "Bill's Teleporter",
+      "variety": "",
+      "spec_id": 2401218,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 12,
+        "psa_10": 21,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2401232,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 7,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Ivysaur",
+      "base_name": "Ivysaur",
+      "variety": "",
+      "spec_id": 2075846,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 4,
+        "psa_7": 1,
+        "psa_8": 24,
+        "psa_9": 135,
+        "psa_10": 137,
+        "psa_total": 307
+      },
+      "grade_totals": {
+        "total": 307,
+        "grade_total": 307
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Double Colorless Energy",
+      "base_name": "Double Colorless Energy",
+      "variety": "",
+      "spec_id": 2401228,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 8,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Psychic Energy",
+      "base_name": "Psychic Energy",
+      "variety": "",
+      "spec_id": 2470749,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 8,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2470746,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 5,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Electabuzz",
+      "base_name": "Electabuzz",
+      "variety": "",
+      "spec_id": 2023819,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 24,
+        "psa_9": 106,
+        "psa_10": 139,
+        "psa_total": 280
+      },
+      "grade_totals": {
+        "total": 280,
+        "grade_total": 280
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Psychic Energy",
+      "base_name": "Psychic Energy",
+      "variety": "",
+      "spec_id": 2470745,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 9,
+        "psa_10": 3,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Gust of Wind",
+      "base_name": "Gust of Wind",
+      "variety": "",
+      "spec_id": 2401217,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 7,
+        "psa_10": 12,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Bulbasaur",
+      "base_name": "Bulbasaur",
+      "variety": "",
+      "spec_id": 2297718,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 35,
+        "psa_9": 162,
+        "psa_10": 110,
+        "psa_total": 322
+      },
+      "grade_totals": {
+        "total": 322,
+        "grade_total": 322
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Doduo",
+      "base_name": "Doduo",
+      "variety": "",
+      "spec_id": 2350415,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 8,
+        "psa_9": 31,
+        "psa_10": 36,
+        "psa_total": 81
+      },
+      "grade_totals": {
+        "total": 81,
+        "grade_total": 81
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Psychic Energy",
+      "base_name": "Psychic Energy",
+      "variety": "",
+      "spec_id": 2401234,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 8,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Ivysaur",
+      "base_name": "Ivysaur",
+      "variety": "",
+      "spec_id": 2023839,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 8,
+        "psa_8": 19,
+        "psa_9": 118,
+        "psa_10": 136,
+        "psa_total": 286
+      },
+      "grade_totals": {
+        "total": 286,
+        "grade_total": 286
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 2401233,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 9,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2401230,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Bulbasaur",
+      "base_name": "Bulbasaur",
+      "variety": "",
+      "spec_id": 2023838,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 1,
+        "psa_7": 7,
+        "psa_8": 32,
+        "psa_9": 161,
+        "psa_10": 99,
+        "psa_total": 305
+      },
+      "grade_totals": {
+        "total": 306,
+        "grade_total": 305
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2470741,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 7,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Jynx",
+      "base_name": "Jynx",
+      "variety": "",
+      "spec_id": 2023835,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 3,
+        "psa_8": 31,
+        "psa_9": 102,
+        "psa_10": 92,
+        "psa_total": 235
+      },
+      "grade_totals": {
+        "total": 235,
+        "grade_total": 235
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Psychic Energy",
+      "base_name": "Psychic Energy",
+      "variety": "",
+      "spec_id": 2470739,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 9,
+        "psa_10": 4,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Koffing",
+      "base_name": "Koffing",
+      "variety": "",
+      "spec_id": 2067267,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 5,
+        "psa_8": 25,
+        "psa_9": 95,
+        "psa_10": 76,
+        "psa_total": 205
+      },
+      "grade_totals": {
+        "total": 205,
+        "grade_total": 205
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2067263,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 14,
+        "psa_6": 7,
+        "psa_7": 22,
+        "psa_8": 52,
+        "psa_9": 176,
+        "psa_10": 145,
+        "psa_total": 419
+      },
+      "grade_totals": {
+        "total": 419,
+        "grade_total": 419
+      }
+    }
+  ]
+}

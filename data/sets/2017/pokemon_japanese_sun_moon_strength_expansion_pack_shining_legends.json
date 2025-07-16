@@ -1,0 +1,1208 @@
+{
+  "year": "2017",
+  "set_name": "Pokemon Japanese Sun & Moon Strength Expansion Pack Shining Legends",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2017/pokemon-japanese-sun-moon-strength-expansion-pack-shining-legends/151058",
+  "total_cards": 50,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 6,
+        "psa_4": 12,
+        "psa_5": 49,
+        "psa_6": 148,
+        "psa_7": 159,
+        "psa_8": 625,
+        "psa_9": 3990,
+        "psa_10": 12664,
+        "psa_total": 17654
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 17654
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Bulbasaur",
+      "base_name": "Bulbasaur",
+      "variety": "",
+      "spec_id": 2473422,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 10,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Ivysaur",
+      "base_name": "Ivysaur",
+      "variety": "",
+      "spec_id": 2473423,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 8,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Venusaur",
+      "base_name": "Venusaur",
+      "variety": "",
+      "spec_id": 2463580,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 11,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Shining Celebi-Holo",
+      "base_name": "Shining Celebi-Holo",
+      "variety": "",
+      "spec_id": 2448565,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 6,
+        "psa_8": 27,
+        "psa_9": 254,
+        "psa_10": 955,
+        "psa_total": 1255
+      },
+      "grade_totals": {
+        "total": 1255,
+        "grade_total": 1255
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Carnivine",
+      "base_name": "Carnivine",
+      "variety": "",
+      "spec_id": 4316539,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Shaymin-Holo",
+      "base_name": "Shaymin-Holo",
+      "variety": "",
+      "spec_id": 2497471,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 15,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Virizion-Holo",
+      "base_name": "Virizion-Holo",
+      "variety": "",
+      "spec_id": 2481865,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 10,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Shining Genesect-Holo",
+      "base_name": "Shining Genesect-Holo",
+      "variety": "",
+      "spec_id": 2451604,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 5,
+        "psa_8": 7,
+        "psa_9": 109,
+        "psa_10": 629,
+        "psa_total": 753
+      },
+      "grade_totals": {
+        "total": 753,
+        "grade_total": 753
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Entei GX",
+      "base_name": "Entei GX",
+      "variety": "",
+      "spec_id": 2451991,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 18,
+        "psa_10": 90,
+        "psa_total": 109
+      },
+      "grade_totals": {
+        "total": 109,
+        "grade_total": 109
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Reshiram-Holo",
+      "base_name": "Reshiram-Holo",
+      "variety": "",
+      "spec_id": 2462216,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 21,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Litten",
+      "base_name": "Litten",
+      "variety": "",
+      "spec_id": 2615438,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Incineroar",
+      "base_name": "Incineroar",
+      "variety": "",
+      "spec_id": 2466432,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Totodile",
+      "base_name": "Totodile",
+      "variety": "",
+      "spec_id": 2473425,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 6,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Croconaw",
+      "base_name": "Croconaw",
+      "variety": "",
+      "spec_id": 4629248,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Feraligatr",
+      "base_name": "Feraligatr",
+      "variety": "",
+      "spec_id": 2600903,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Palkia-Holo",
+      "base_name": "Palkia-Holo",
+      "variety": "",
+      "spec_id": 2462224,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 12,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Manaphy-Holo",
+      "base_name": "Manaphy-Holo",
+      "variety": "",
+      "spec_id": 2462228,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 11,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Keldeo-Holo",
+      "base_name": "Keldeo-Holo",
+      "variety": "",
+      "spec_id": 2481866,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 14,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Shining Volcanion-Holo",
+      "base_name": "Shining Volcanion-Holo",
+      "variety": "",
+      "spec_id": 2451606,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 8,
+        "psa_8": 13,
+        "psa_9": 121,
+        "psa_10": 634,
+        "psa_total": 777
+      },
+      "grade_totals": {
+        "total": 777,
+        "grade_total": 777
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2463227,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 60,
+        "psa_total": 70
+      },
+      "grade_totals": {
+        "total": 70,
+        "grade_total": 70
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Raichu GX",
+      "base_name": "Raichu GX",
+      "variety": "",
+      "spec_id": 2453118,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 11,
+        "psa_10": 126,
+        "psa_total": 142
+      },
+      "grade_totals": {
+        "total": 142,
+        "grade_total": 142
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Raikou-Holo",
+      "base_name": "Raikou-Holo",
+      "variety": "",
+      "spec_id": 2467235,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 12,
+        "psa_10": 29,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "034",
+      "card_name": "Plusle",
+      "base_name": "Plusle",
+      "variety": "",
+      "spec_id": 4629257,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "035",
+      "card_name": "Minun",
+      "base_name": "Minun",
+      "variety": "",
+      "spec_id": 4629258,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Zekrom",
+      "base_name": "Zekrom",
+      "variety": "",
+      "spec_id": 2462233,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 14,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Arbok",
+      "base_name": "Arbok",
+      "variety": "",
+      "spec_id": 2753023,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "040",
+      "card_name": "Mewtwo GX",
+      "base_name": "Mewtwo GX",
+      "variety": "",
+      "spec_id": 2451990,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 45,
+        "psa_10": 206,
+        "psa_total": 258
+      },
+      "grade_totals": {
+        "total": 258,
+        "grade_total": 258
+      }
+    },
+    {
+      "pokemon_number": "041",
+      "card_name": "Shining Mew-Holo",
+      "base_name": "Shining Mew-Holo",
+      "variety": "",
+      "spec_id": 2448566,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 27,
+        "psa_7": 35,
+        "psa_8": 71,
+        "psa_9": 536,
+        "psa_10": 1464,
+        "psa_total": 2144
+      },
+      "grade_totals": {
+        "total": 2145,
+        "grade_total": 2144
+      }
+    },
+    {
+      "pokemon_number": "042",
+      "card_name": "Latios-Holo",
+      "base_name": "Latios-Holo",
+      "variety": "",
+      "spec_id": 2540044,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 22,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "043",
+      "card_name": "Shining Jirachi-Holo",
+      "base_name": "Shining Jirachi-Holo",
+      "variety": "",
+      "spec_id": 2451497,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 4,
+        "psa_8": 28,
+        "psa_9": 165,
+        "psa_10": 1028,
+        "psa_total": 1237
+      },
+      "grade_totals": {
+        "total": 1237,
+        "grade_total": 1237
+      }
+    },
+    {
+      "pokemon_number": "046",
+      "card_name": "Marshadow-Holo",
+      "base_name": "Marshadow-Holo",
+      "variety": "",
+      "spec_id": 2499919,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 8,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "054",
+      "card_name": "Zoroark GX",
+      "base_name": "Zoroark GX",
+      "variety": "",
+      "spec_id": 2453106,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 63,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "055",
+      "card_name": "Yveltal-Holo",
+      "base_name": "Yveltal-Holo",
+      "variety": "",
+      "spec_id": 2491617,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 9,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "056",
+      "card_name": "Hoopa-Holo",
+      "base_name": "Hoopa-Holo",
+      "variety": "",
+      "spec_id": 2454603,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 7,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "057",
+      "card_name": "Shining Rayquaza-Holo",
+      "base_name": "Shining Rayquaza-Holo",
+      "variety": "",
+      "spec_id": 2448676,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 13,
+        "psa_7": 16,
+        "psa_8": 44,
+        "psa_9": 407,
+        "psa_10": 1521,
+        "psa_total": 2005
+      },
+      "grade_totals": {
+        "total": 2005,
+        "grade_total": 2005
+      }
+    },
+    {
+      "pokemon_number": "058",
+      "card_name": "Shining Lugia-Holo",
+      "base_name": "Shining Lugia-Holo",
+      "variety": "",
+      "spec_id": 2448567,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 8,
+        "psa_6": 17,
+        "psa_7": 26,
+        "psa_8": 54,
+        "psa_9": 448,
+        "psa_10": 1444,
+        "psa_total": 2000
+      },
+      "grade_totals": {
+        "total": 2000,
+        "grade_total": 2000
+      }
+    },
+    {
+      "pokemon_number": "059",
+      "card_name": "Shining Arceus-Holo",
+      "base_name": "Shining Arceus-Holo",
+      "variety": "",
+      "spec_id": 2451493,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 11,
+        "psa_7": 3,
+        "psa_8": 24,
+        "psa_9": 176,
+        "psa_10": 956,
+        "psa_total": 1174
+      },
+      "grade_totals": {
+        "total": 1174,
+        "grade_total": 1174
+      }
+    },
+    {
+      "pokemon_number": "068",
+      "card_name": "Pokemon Breeder",
+      "base_name": "Pokemon Breeder",
+      "variety": "",
+      "spec_id": 4629306,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "070",
+      "card_name": "Lillie",
+      "base_name": "Lillie",
+      "variety": "",
+      "spec_id": 4629308,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 9,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "073",
+      "card_name": "Full Art/Entei GX",
+      "base_name": "Full Art/Entei GX",
+      "variety": "",
+      "spec_id": 2451607,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 40,
+        "psa_10": 74,
+        "psa_total": 117
+      },
+      "grade_totals": {
+        "total": 117,
+        "grade_total": 117
+      }
+    },
+    {
+      "pokemon_number": "074",
+      "card_name": "Full Art/Raichu GX",
+      "base_name": "Full Art/Raichu GX",
+      "variety": "",
+      "spec_id": 2451608,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 47,
+        "psa_10": 113,
+        "psa_total": 167
+      },
+      "grade_totals": {
+        "total": 168,
+        "grade_total": 167
+      }
+    },
+    {
+      "pokemon_number": "075",
+      "card_name": "Full Art/Mewtwo GX",
+      "base_name": "Full Art/Mewtwo GX",
+      "variety": "",
+      "spec_id": 2460043,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 25,
+        "psa_9": 181,
+        "psa_10": 155,
+        "psa_total": 366
+      },
+      "grade_totals": {
+        "total": 366,
+        "grade_total": 366
+      }
+    },
+    {
+      "pokemon_number": "076",
+      "card_name": "Full Art/Zoroark GX",
+      "base_name": "Full Art/Zoroark GX",
+      "variety": "",
+      "spec_id": 2461981,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 13,
+        "psa_10": 48,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 65,
+        "grade_total": 65
+      }
+    },
+    {
+      "pokemon_number": "077",
+      "card_name": "Full Art/Pokemon Breeder",
+      "base_name": "Full Art/Pokemon Breeder",
+      "variety": "",
+      "spec_id": 2453080,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 10,
+        "psa_7": 16,
+        "psa_8": 49,
+        "psa_9": 200,
+        "psa_10": 513,
+        "psa_total": 792
+      },
+      "grade_totals": {
+        "total": 793,
+        "grade_total": 792
+      }
+    },
+    {
+      "pokemon_number": "078",
+      "card_name": "Full Art/Entei GX-Hyper",
+      "base_name": "Full Art/Entei GX-Hyper",
+      "variety": "",
+      "spec_id": 2469914,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 43,
+        "psa_10": 70,
+        "psa_total": 123
+      },
+      "grade_totals": {
+        "total": 123,
+        "grade_total": 123
+      }
+    },
+    {
+      "pokemon_number": "079",
+      "card_name": "Full Art/Raichu GX-Hyper",
+      "base_name": "Full Art/Raichu GX-Hyper",
+      "variety": "",
+      "spec_id": 2447375,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 46,
+        "psa_10": 114,
+        "psa_total": 169
+      },
+      "grade_totals": {
+        "total": 169,
+        "grade_total": 169
+      }
+    },
+    {
+      "pokemon_number": "080",
+      "card_name": "Full Art/Mewtwo GX-Hyper",
+      "base_name": "Full Art/Mewtwo GX-Hyper",
+      "variety": "",
+      "spec_id": 2448691,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 28,
+        "psa_9": 135,
+        "psa_10": 217,
+        "psa_total": 391
+      },
+      "grade_totals": {
+        "total": 391,
+        "grade_total": 391
+      }
+    },
+    {
+      "pokemon_number": "081",
+      "card_name": "Full Art/Zoroark GX-Hyper",
+      "base_name": "Full Art/Zoroark GX-Hyper",
+      "variety": "",
+      "spec_id": 2454613,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 32,
+        "psa_10": 77,
+        "psa_total": 118
+      },
+      "grade_totals": {
+        "total": 118,
+        "grade_total": 118
+      }
+    },
+    {
+      "pokemon_number": "082",
+      "card_name": "Mewtwo GX",
+      "base_name": "Mewtwo GX",
+      "variety": "",
+      "spec_id": 2451601,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 16,
+        "psa_6": 38,
+        "psa_7": 26,
+        "psa_8": 201,
+        "psa_9": 909,
+        "psa_10": 1876,
+        "psa_total": 3071
+      },
+      "grade_totals": {
+        "total": 3071,
+        "grade_total": 3071
+      }
+    }
+  ]
+}

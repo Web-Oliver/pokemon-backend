@@ -1,0 +1,104 @@
+{
+  "year": "2019",
+  "set_name": "Pokemon Japanese Tag Team GX Deck Build Box",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2019/pokemon-japanese-tag-team-gx-deck-build-box/237409",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 8,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Acerola",
+      "base_name": "Acerola",
+      "variety": "",
+      "spec_id": 8650664,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Sightseer",
+      "base_name": "Sightseer",
+      "variety": "",
+      "spec_id": 9273818,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Lillie",
+      "base_name": "Lillie",
+      "variety": "",
+      "spec_id": 9349447,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    }
+  ]
+}

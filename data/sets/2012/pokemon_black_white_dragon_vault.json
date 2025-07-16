@@ -1,0 +1,968 @@
+{
+  "year": "2012",
+  "set_name": "Pokemon Black & White Dragon Vault",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2012/pokemon-black-white-dragon-vault/108140",
+  "total_cards": 57,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 6,
+        "psa_3": 7,
+        "psa_4": 34,
+        "psa_5": 78,
+        "psa_6": 162,
+        "psa_7": 370,
+        "psa_8": 1057,
+        "psa_9": 1437,
+        "psa_10": 278,
+        "psa_total": 3436
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 3436
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Dratini-Holo",
+      "base_name": "Dratini-Holo",
+      "variety": "",
+      "spec_id": 2298372,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 11,
+        "psa_8": 26,
+        "psa_9": 43,
+        "psa_10": 12,
+        "psa_total": 96
+      },
+      "grade_totals": {
+        "total": 96,
+        "grade_total": 96
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Dratini-Holo",
+      "base_name": "Dratini-Holo",
+      "variety": "",
+      "spec_id": 2061987,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 8,
+        "psa_7": 12,
+        "psa_8": 51,
+        "psa_9": 67,
+        "psa_10": 22,
+        "psa_total": 163
+      },
+      "grade_totals": {
+        "total": 163,
+        "grade_total": 163
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Dragonair-Holo",
+      "base_name": "Dragonair-Holo",
+      "variety": "",
+      "spec_id": 2190076,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 7,
+        "psa_8": 27,
+        "psa_9": 66,
+        "psa_10": 14,
+        "psa_total": 120
+      },
+      "grade_totals": {
+        "total": 120,
+        "grade_total": 120
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Dragonair-Holo",
+      "base_name": "Dragonair-Holo",
+      "variety": "",
+      "spec_id": 2298358,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 32,
+        "psa_9": 66,
+        "psa_10": 18,
+        "psa_total": 128
+      },
+      "grade_totals": {
+        "total": 128,
+        "grade_total": 128
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Dragonite-Cosmos Holo",
+      "base_name": "Dragonite",
+      "variety": "Cosmos Holo",
+      "spec_id": 2973973,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 11,
+        "psa_7": 18,
+        "psa_8": 20,
+        "psa_9": 10,
+        "psa_10": 0,
+        "psa_total": 70
+      },
+      "grade_totals": {
+        "total": 70,
+        "grade_total": 70
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Dragonite-Holo",
+      "base_name": "Dragonite-Holo",
+      "variety": "",
+      "spec_id": 1910730,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 5,
+        "psa_6": 20,
+        "psa_7": 32,
+        "psa_8": 88,
+        "psa_9": 115,
+        "psa_10": 24,
+        "psa_total": 289
+      },
+      "grade_totals": {
+        "total": 291,
+        "grade_total": 289
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Bagon-Holo",
+      "base_name": "Bagon-Holo",
+      "variety": "",
+      "spec_id": 2297699,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 5,
+        "psa_8": 21,
+        "psa_9": 30,
+        "psa_10": 7,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Bagon-Holo-2013 Autumn Region Championships-Staff",
+      "base_name": "Bagon-Holo",
+      "variety": "2013 Autumn Region Championships-Staff",
+      "spec_id": 2488190,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 17,
+        "psa_10": 4,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Bagon-Holo-Crosshatch-2013 Autumn Region Championships",
+      "base_name": "Bagon-Holo",
+      "variety": "Crosshatch-2013 Autumn Region Championships",
+      "spec_id": 5860839,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 21,
+        "psa_10": 10,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Shelgon-Holo",
+      "base_name": "Shelgon-Holo",
+      "variety": "",
+      "spec_id": 2301652,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 13,
+        "psa_9": 39,
+        "psa_10": 10,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Shelgon-Holo-Crosshatch-2013 Spring Regional Championships",
+      "base_name": "Shelgon-Holo",
+      "variety": "Crosshatch-2013 Spring Regional Championships",
+      "spec_id": 5246782,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Shelgon-Holo-Crosshatch-2013 Spring Regional Championships-Staff",
+      "base_name": "Shelgon-Holo",
+      "variety": "Crosshatch-2013 Spring Regional Championships-Staff",
+      "spec_id": 2698410,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 14,
+        "psa_9": 23,
+        "psa_10": 3,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Salamence-Cosmos Holo",
+      "base_name": "Salamence",
+      "variety": "Cosmos Holo",
+      "spec_id": 5310413,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 7,
+        "psa_6": 8,
+        "psa_7": 17,
+        "psa_8": 8,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Salamence-Holo",
+      "base_name": "Salamence-Holo",
+      "variety": "",
+      "spec_id": 2301626,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 5,
+        "psa_7": 14,
+        "psa_8": 39,
+        "psa_9": 76,
+        "psa_10": 20,
+        "psa_total": 161
+      },
+      "grade_totals": {
+        "total": 161,
+        "grade_total": 161
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Salamence-Holo-Crosshatch-2013 Spring Regional Championships",
+      "base_name": "Salamence-Holo",
+      "variety": "Crosshatch-2013 Spring Regional Championships",
+      "spec_id": 2577354,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 8,
+        "psa_9": 28,
+        "psa_10": 5,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Salamence-Holo-Crosshatch-2013 Spring Regional Championships-Staff",
+      "base_name": "Salamence-Holo",
+      "variety": "Crosshatch-2013 Spring Regional Championships-Staff",
+      "spec_id": 2411642,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 26,
+        "psa_9": 48,
+        "psa_10": 5,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 87,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Latias-Dragon Vault Stamp",
+      "base_name": "Latias",
+      "variety": "Dragon Vault Stamp",
+      "spec_id": 2122425,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 38,
+        "psa_9": 18,
+        "psa_10": 1,
+        "psa_total": 74
+      },
+      "grade_totals": {
+        "total": 74,
+        "grade_total": 74
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Latias-Dragon Vault Stamp-French",
+      "base_name": "Latias",
+      "variety": "Dragon Vault Stamp-French",
+      "spec_id": 9833399,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Latias-Holo",
+      "base_name": "Latias-Holo",
+      "variety": "",
+      "spec_id": 2291968,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 16,
+        "psa_8": 56,
+        "psa_9": 73,
+        "psa_10": 12,
+        "psa_total": 159
+      },
+      "grade_totals": {
+        "total": 159,
+        "grade_total": 159
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Latios-Dragon Vault Stamp",
+      "base_name": "Latios",
+      "variety": "Dragon Vault Stamp",
+      "spec_id": 2122424,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 8,
+        "psa_7": 8,
+        "psa_8": 27,
+        "psa_9": 25,
+        "psa_10": 0,
+        "psa_total": 77
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 77
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Latios-Dragon Vault Stamp-French",
+      "base_name": "Latios",
+      "variety": "Dragon Vault Stamp-French",
+      "spec_id": 9833439,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Latios-Holo",
+      "base_name": "Latios-Holo",
+      "variety": "",
+      "spec_id": 2299840,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 14,
+        "psa_8": 38,
+        "psa_9": 88,
+        "psa_10": 5,
+        "psa_total": 153
+      },
+      "grade_totals": {
+        "total": 155,
+        "grade_total": 153
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Rayquaza-Dragon Vault Stamp",
+      "base_name": "Rayquaza",
+      "variety": "Dragon Vault Stamp",
+      "spec_id": 2301611,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 20,
+        "psa_7": 39,
+        "psa_8": 79,
+        "psa_9": 48,
+        "psa_10": 3,
+        "psa_total": 199
+      },
+      "grade_totals": {
+        "total": 202,
+        "grade_total": 199
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Rayquaza-Dragon Vault Stamp-Italian",
+      "base_name": "Rayquaza",
+      "variety": "Dragon Vault Stamp-Italian",
+      "spec_id": 13541174,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Rayquaza-Holo",
+      "base_name": "Rayquaza-Holo",
+      "variety": "",
+      "spec_id": 2061963,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 30,
+        "psa_7": 52,
+        "psa_8": 122,
+        "psa_9": 166,
+        "psa_10": 25,
+        "psa_total": 408
+      },
+      "grade_totals": {
+        "total": 409,
+        "grade_total": 408
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Rayquaza-Holo-Dragon Vault Stamp-French",
+      "base_name": "Rayquaza-Holo",
+      "variety": "Dragon Vault Stamp-French",
+      "spec_id": 8242189,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Axew-Holo",
+      "base_name": "Axew-Holo",
+      "variety": "",
+      "spec_id": 2297694,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 22,
+        "psa_9": 32,
+        "psa_10": 13,
+        "psa_total": 79
+      },
+      "grade_totals": {
+        "total": 79,
+        "grade_total": 79
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Axew-Holo",
+      "base_name": "Axew-Holo",
+      "variety": "",
+      "spec_id": 2257022,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 33,
+        "psa_9": 40,
+        "psa_10": 6,
+        "psa_total": 84
+      },
+      "grade_totals": {
+        "total": 86,
+        "grade_total": 84
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Fraxure-Holo",
+      "base_name": "Fraxure-Holo",
+      "variety": "",
+      "spec_id": 2257023,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 13,
+        "psa_9": 25,
+        "psa_10": 6,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Fraxure-Holo",
+      "base_name": "Fraxure-Holo",
+      "variety": "",
+      "spec_id": 2301497,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 6,
+        "psa_8": 21,
+        "psa_9": 33,
+        "psa_10": 9,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Haxorus-Dragon Vault Stamp",
+      "base_name": "Haxorus",
+      "variety": "Dragon Vault Stamp",
+      "spec_id": 2122426,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 10,
+        "psa_8": 17,
+        "psa_9": 8,
+        "psa_10": 0,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Haxorus-Dragon Vault Stamp-Italian",
+      "base_name": "Haxorus",
+      "variety": "Dragon Vault Stamp-Italian",
+      "spec_id": 12603412,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Haxorus-Holo",
+      "base_name": "Haxorus-Holo",
+      "variety": "",
+      "spec_id": 2257025,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 7,
+        "psa_8": 37,
+        "psa_9": 35,
+        "psa_10": 6,
+        "psa_total": 87
+      },
+      "grade_totals": {
+        "total": 87,
+        "grade_total": 87
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Druddigon-Dragon Vault Stamp",
+      "base_name": "Druddigon",
+      "variety": "Dragon Vault Stamp",
+      "spec_id": 2298519,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 24,
+        "psa_9": 14,
+        "psa_10": 0,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Druddigon-Holo",
+      "base_name": "Druddigon-Holo",
+      "variety": "",
+      "spec_id": 2298517,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 26,
+        "psa_9": 36,
+        "psa_10": 11,
+        "psa_total": 79
+      },
+      "grade_totals": {
+        "total": 79,
+        "grade_total": 79
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Exp. Share-Holo",
+      "base_name": "Exp. Share-Holo",
+      "variety": "",
+      "spec_id": 2298660,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 26,
+        "psa_10": 5,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "First Ticket-Holo",
+      "base_name": "First Ticket-Holo",
+      "variety": "",
+      "spec_id": 2298676,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 19,
+        "psa_10": 6,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Super Rod-Holo",
+      "base_name": "Super Rod-Holo",
+      "variety": "",
+      "spec_id": 2301695,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 7,
+        "psa_8": 7,
+        "psa_9": 17,
+        "psa_10": 8,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Kyurem-Holo",
+      "base_name": "Kyurem-Holo",
+      "variety": "",
+      "spec_id": 1919778,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 8,
+        "psa_7": 15,
+        "psa_8": 64,
+        "psa_9": 65,
+        "psa_10": 6,
+        "psa_total": 167
+      },
+      "grade_totals": {
+        "total": 167,
+        "grade_total": 167
+      }
+    }
+  ]
+}

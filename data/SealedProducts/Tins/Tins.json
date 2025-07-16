@@ -1,0 +1,3801 @@
+{
+  "metadata": {
+    "category": "Tins",
+    "total_products": 384,
+    "last_updated": "2025-07-01T18:14:59.125847"
+  },
+  "products": [
+    {
+      "name": "Prismatic Evolutions: Mini Tin Display",
+      "expansion": "Prismatic Evolutions",
+      "available": "345",
+      "price": "99,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:10:01.856409+00:00",
+      "last_updated": "2025-07-01T18:10:05.933528"
+    },
+    {
+      "name": "Prismatic Evolutions: Umbreon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "261",
+      "price": "14,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Umbreon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:59.033686+00:00",
+      "last_updated": "2025-07-01T18:09:59.702730"
+    },
+    {
+      "name": "Prismatic Evolutions: Sylveon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "287",
+      "price": "11,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Sylveon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:59.669608+00:00",
+      "last_updated": "2025-07-01T18:09:59.702878"
+    },
+    {
+      "name": "Prismatic Evolutions: Vaporeon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "427",
+      "price": "12,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Vaporeon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:58.176220+00:00",
+      "last_updated": "2025-07-01T18:09:59.702528"
+    },
+    {
+      "name": "Prismatic Evolutions: Flareon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "334",
+      "price": "11,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Flareon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:58.597896+00:00",
+      "last_updated": "2025-07-01T18:09:59.702631"
+    },
+    {
+      "name": "Prismatic Evolutions: Espeon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "382",
+      "price": "13,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Espeon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:58.810936+00:00",
+      "last_updated": "2025-07-01T18:09:59.702680"
+    },
+    {
+      "name": "Prismatic Evolutions: Glaceon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "367",
+      "price": "14,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Glaceon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:59.457641+00:00",
+      "last_updated": "2025-07-01T18:09:59.702829"
+    },
+    {
+      "name": "Prismatic Evolutions: Jolteon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "349",
+      "price": "13,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Jolteon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:58.385215+00:00",
+      "last_updated": "2025-07-01T18:09:59.702581"
+    },
+    {
+      "name": "Prismatic Evolutions: Leafeon Mini Tin",
+      "expansion": "Prismatic Evolutions",
+      "available": "350",
+      "price": "11,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Prismatic-Evolutions-Leafeon-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:59.246650+00:00",
+      "last_updated": "2025-07-01T18:09:59.702780"
+    },
+    {
+      "name": "Slashing Legends Tins: Zacian ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "769",
+      "price": "14,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Slashing-Legends-Tins-Zacian-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:55.663878+00:00",
+      "last_updated": "2025-07-01T18:09:59.701751"
+    },
+    {
+      "name": "Slashing Legends Tins: Koraidon ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "803",
+      "price": "14,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Slashing-Legends-Tins-Koraidon-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:53.286328+00:00",
+      "last_updated": "2025-07-01T18:09:53.531281"
+    },
+    {
+      "name": "Azure Legends Tins: Kyogre ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "364",
+      "price": "19,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Azure-Legends-Tins-Kyogre-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:56.915534+00:00",
+      "last_updated": "2025-07-01T18:09:59.702169"
+    },
+    {
+      "name": "Paldea Partners Tins: Skeledirge ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "158",
+      "price": "16,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Partners-Tins-Skeledirge-ex-Tin",
+      "scraped_at": "2025-07-01T16:14:52.891734+00:00",
+      "last_updated": "2025-07-01T18:14:52.926273"
+    },
+    {
+      "name": "Paldean Fates: Tera Charizard ex Tin",
+      "expansion": "Paldean Fates",
+      "available": "265",
+      "price": "39,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Tera-Charizard-ex-Tin",
+      "scraped_at": "2025-07-01T16:14:58.874149+00:00",
+      "last_updated": "2025-07-01T18:14:59.124736"
+    },
+    {
+      "name": "Azure Legends Tins: Dialga ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "391",
+      "price": "15,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Azure-Legends-Tins-Dialga-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:57.751944+00:00",
+      "last_updated": "2025-07-01T18:09:59.702414"
+    },
+    {
+      "name": "Crown Zenith: Galarian Zapdos Tin",
+      "expansion": "Crown Zenith",
+      "available": "173",
+      "price": "10,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Galarian-Zapdos-Tin",
+      "scraped_at": "2025-07-01T16:14:49.027291+00:00",
+      "last_updated": "2025-07-01T18:14:52.925238"
+    },
+    {
+      "name": "Crown Zenith: Galarian Articuno Tin",
+      "expansion": "Crown Zenith",
+      "available": "151",
+      "price": "10,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Galarian-Articuno-Tin",
+      "scraped_at": "2025-07-01T16:14:48.807968+00:00",
+      "last_updated": "2025-07-01T18:14:52.925124"
+    },
+    {
+      "name": "Crown Zenith: Galarian Moltres Tin",
+      "expansion": "Crown Zenith",
+      "available": "133",
+      "price": "20,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Galarian-Moltres-Tin",
+      "scraped_at": "2025-07-01T16:14:49.245331+00:00",
+      "last_updated": "2025-07-01T18:14:52.925311"
+    },
+    {
+      "name": "Paldean Fates: Finizen Mini Tin",
+      "expansion": "Paldean Fates",
+      "available": "43",
+      "price": "14,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Finizen-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:12.226232+00:00",
+      "last_updated": "2025-07-01T18:10:12.258630"
+    },
+    {
+      "name": "Paldea Partners Tins: Meowscarada ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "180",
+      "price": "16,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Partners-Tins-Meowscarada-ex-Tin",
+      "scraped_at": "2025-07-01T16:14:52.677736+00:00",
+      "last_updated": "2025-07-01T18:14:52.926218"
+    },
+    {
+      "name": "Paldean Fates: Flamigo Mini Tin",
+      "expansion": "Paldean Fates",
+      "available": "54",
+      "price": "11,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Flamigo-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:15.509156+00:00",
+      "last_updated": "2025-07-01T18:10:19.623947"
+    },
+    {
+      "name": "Paldea Partners Tins: Quaquaval ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "249",
+      "price": "15,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Partners-Tins-Quaquaval-ex-Tin",
+      "scraped_at": "2025-07-01T16:14:55.010005+00:00",
+      "last_updated": "2025-07-01T18:14:59.123815"
+    },
+    {
+      "name": "Crown Zenith: Mini Tin Display",
+      "expansion": "Crown Zenith",
+      "available": "63",
+      "price": "150,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:14:46.539076+00:00",
+      "last_updated": "2025-07-01T18:14:46.574690"
+    },
+    {
+      "name": "Paldea Legends Tins: Koraidon ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "320",
+      "price": "17,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Legends-Tins-Koraidon-ex-Tin",
+      "scraped_at": "2025-07-01T16:14:52.034330+00:00",
+      "last_updated": "2025-07-01T18:14:52.926053"
+    },
+    {
+      "name": "Paldean Fates: Great Tusk ex Tin",
+      "expansion": "Paldean Fates",
+      "available": "136",
+      "price": "24,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Great-Tusk-ex-Tin",
+      "scraped_at": "2025-07-01T16:10:15.946468+00:00",
+      "last_updated": "2025-07-01T18:10:19.624114"
+    },
+    {
+      "name": "Hidden Fates: Charizard GX Tin",
+      "expansion": "Hidden Fates",
+      "available": "97",
+      "price": "63,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hidden-Fates-Charizard-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:23.353942+00:00",
+      "last_updated": "2025-07-01T18:12:24.265582"
+    },
+    {
+      "name": "Shrouded Fable: Mini Tin Display",
+      "expansion": "Shrouded Fable",
+      "available": "200",
+      "price": "65,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shrouded-Fable-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:10:05.683778+00:00",
+      "last_updated": "2025-07-01T18:10:05.934792"
+    },
+    {
+      "name": "Hidden Potential Tins: Rotom V Tin",
+      "expansion": "Pokémon Products",
+      "available": "152",
+      "price": "24,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hidden-Potential-Tins-Rotom-V-Tin",
+      "scraped_at": "2025-07-01T16:14:43.910965+00:00",
+      "last_updated": "2025-07-01T18:14:46.574020"
+    },
+    {
+      "name": "Paldean Fates: Smoliv Mini Tin",
+      "expansion": "Paldean Fates",
+      "available": "87",
+      "price": "11,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Smoliv-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:11.810505+00:00",
+      "last_updated": "2025-07-01T18:10:12.258531"
+    },
+    {
+      "name": "Paradox Clash Tins: Walking Wake ex Tin (EU Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "337",
+      "price": "17,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Clash-Tins-Walking-Wake-ex-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:10:09.499503+00:00",
+      "last_updated": "2025-07-01T18:10:12.258002"
+    },
+    {
+      "name": "Generic Poké Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "208",
+      "price": "13,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Poke-Ball-Tin",
+      "scraped_at": "2025-07-01T16:12:17.397305+00:00",
+      "last_updated": "2025-07-01T18:12:17.849952"
+    },
+    {
+      "name": "Paldea Legends Tins: Miraidon ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "274",
+      "price": "18,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Legends-Tins-Miraidon-ex-Tin",
+      "scraped_at": "2025-07-01T16:14:51.606144+00:00",
+      "last_updated": "2025-07-01T18:14:52.925942"
+    },
+    {
+      "name": "Azure Legends Tins: Xerneas ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "459",
+      "price": "18,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Azure-Legends-Tins-Xerneas-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:57.339224+00:00",
+      "last_updated": "2025-07-01T18:09:59.702286"
+    },
+    {
+      "name": "Paradox Clash Tins: Iron Leaves ex Tin (EU Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "380",
+      "price": "17,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Clash-Tins-Iron-Leaves-ex-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:10:09.921692+00:00",
+      "last_updated": "2025-07-01T18:10:12.258128"
+    },
+    {
+      "name": "Hidden Potential Tins: Gallade V Tin",
+      "expansion": "Pokémon Products",
+      "available": "139",
+      "price": "22,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hidden-Potential-Tins-Gallade-V-Tin",
+      "scraped_at": "2025-07-01T16:14:44.349929+00:00",
+      "last_updated": "2025-07-01T18:14:46.574133"
+    },
+    {
+      "name": "Galar Power Mini Tins: Toxtricity Tin",
+      "expansion": "Pokémon Products",
+      "available": "16",
+      "price": "28,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Power-Mini-Tins-Toxtricity-Tin",
+      "scraped_at": "2025-07-01T16:12:07.677457+00:00",
+      "last_updated": "2025-07-01T18:12:11.567848"
+    },
+    {
+      "name": "151: Mini Tin Display",
+      "expansion": "151",
+      "available": "163",
+      "price": "200,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:14:58.225047+00:00",
+      "last_updated": "2025-07-01T18:14:59.124592"
+    },
+    {
+      "name": "Paldean Fates: Iron Treads ex Tin",
+      "expansion": "Paldean Fates",
+      "available": "152",
+      "price": "24,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Iron-Treads-ex-Tin",
+      "scraped_at": "2025-07-01T16:10:16.368768+00:00",
+      "last_updated": "2025-07-01T18:10:19.624233"
+    },
+    {
+      "name": "Paldean Fates: Maushold Mini Tin",
+      "expansion": "Paldean Fates",
+      "available": "58",
+      "price": "14,79 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Maushold-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:11.599858+00:00",
+      "last_updated": "2025-07-01T18:10:12.258476"
+    },
+    {
+      "name": "Paldean Fates: Mini Tin Display",
+      "expansion": "Paldean Fates",
+      "available": "143",
+      "price": "80,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:10:15.726164+00:00",
+      "last_updated": "2025-07-01T18:10:19.624047"
+    },
+    {
+      "name": "Hidden Fates: Raichu GX Tin",
+      "expansion": "Hidden Fates",
+      "available": "55",
+      "price": "69,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hidden-Fates-Raichu-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:23.573646+00:00",
+      "last_updated": "2025-07-01T18:12:24.265637"
+    },
+    {
+      "name": "Hidden Potential Tins: Giratina V Tin",
+      "expansion": "Pokémon Products",
+      "available": "165",
+      "price": "27,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hidden-Potential-Tins-Giratina-V-Tin",
+      "scraped_at": "2025-07-01T16:14:44.133803+00:00",
+      "last_updated": "2025-07-01T18:14:46.574077"
+    },
+    {
+      "name": "151: Gengar Mini Tin",
+      "expansion": "151",
+      "available": "100",
+      "price": "19,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Gengar-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:56.729208+00:00",
+      "last_updated": "2025-07-01T18:14:59.124243"
+    },
+    {
+      "name": "Paradox Destinies Tins: Gouging Fire ex Tin (EU Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "158",
+      "price": "18,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Gouging-Fire-ex-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:10:02.908465+00:00",
+      "last_updated": "2025-07-01T18:10:05.933899"
+    },
+    {
+      "name": "2025 Stacking Tin: Paradox Pokémon",
+      "expansion": "Scarlet & Violet Products",
+      "available": "266",
+      "price": "13,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2025-Stacking-Tin-Paradox-Pokemon",
+      "scraped_at": "2025-07-01T16:09:56.284902+00:00",
+      "last_updated": "2025-07-01T18:09:59.701938"
+    },
+    {
+      "name": "2025 Stacking Tin Display",
+      "expansion": "Scarlet & Violet Products",
+      "available": "111",
+      "price": "76,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2025-Stacking-Tin-Display",
+      "scraped_at": "2025-07-01T16:09:56.709188+00:00",
+      "last_updated": "2025-07-01T18:09:59.702112"
+    },
+    {
+      "name": "Shining Fates: Boltund V Tin",
+      "expansion": "Shining Fates",
+      "available": "110",
+      "price": "28,89 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Boltund-V-Tin",
+      "scraped_at": "2025-07-01T16:12:28.708226+00:00",
+      "last_updated": "2025-07-01T18:12:31.614671"
+    },
+    {
+      "name": "Shining Fates: Eldegoss V Tin",
+      "expansion": "Shining Fates",
+      "available": "118",
+      "price": "28,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Eldegoss-V-Tin",
+      "scraped_at": "2025-07-01T16:12:28.496490+00:00",
+      "last_updated": "2025-07-01T18:12:31.614621"
+    },
+    {
+      "name": "V Forces Tins: Mew V Tin",
+      "expansion": "Pokémon Products",
+      "available": "73",
+      "price": "29,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Forces-Tins-Mew-V-Tin",
+      "scraped_at": "2025-07-01T16:12:08.742088+00:00",
+      "last_updated": "2025-07-01T18:12:11.568173"
+    },
+    {
+      "name": "V Forces Tins: Galarian Slowbro V Tin",
+      "expansion": "Pokémon Products",
+      "available": "70",
+      "price": "24,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Forces-Tins-Galarian-Slowbro-V-Tin",
+      "scraped_at": "2025-07-01T16:12:08.955564+00:00",
+      "last_updated": "2025-07-01T18:12:11.568233"
+    },
+    {
+      "name": "Pokémon GO: Pikachu Tin",
+      "expansion": "Pokémon GO",
+      "available": "93",
+      "price": "19,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Pikachu-Tin",
+      "scraped_at": "2025-07-01T16:14:37.522461+00:00",
+      "last_updated": "2025-07-01T18:14:39.463270"
+    },
+    {
+      "name": "Generic Great Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "48",
+      "price": "13,29 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Great-Ball-Tin",
+      "scraped_at": "2025-07-01T16:11:58.065010+00:00",
+      "last_updated": "2025-07-01T18:11:59.155681"
+    },
+    {
+      "name": "Hidden Fates: Gyarados GX Tin",
+      "expansion": "Hidden Fates",
+      "available": "55",
+      "price": "73,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hidden-Fates-Gyarados-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:23.130336+00:00",
+      "last_updated": "2025-07-01T18:12:24.265527"
+    },
+    {
+      "name": "Pokémon GO: Snorlax Tin",
+      "expansion": "Pokémon GO",
+      "available": "102",
+      "price": "17,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Snorlax-Tin",
+      "scraped_at": "2025-07-01T16:14:37.300318+00:00",
+      "last_updated": "2025-07-01T18:14:39.463220"
+    },
+    {
+      "name": "Paldea Friends Mini Tins: Pikachu Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "71",
+      "price": "9,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Friends-Mini-Tins-Pikachu-Tin",
+      "scraped_at": "2025-07-01T16:14:51.397434+00:00",
+      "last_updated": "2025-07-01T18:14:52.925885"
+    },
+    {
+      "name": "Paldean Fates: Tinkatink Mini Tin",
+      "expansion": "Paldean Fates",
+      "available": "84",
+      "price": "12,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Tinkatink-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:12.018157+00:00",
+      "last_updated": "2025-07-01T18:10:12.258582"
+    },
+    {
+      "name": "Vibrant Paldea Mini Tin Display",
+      "expansion": "Scarlet & Violet Products",
+      "available": "103",
+      "price": "78,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Vibrant-Paldea-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:10:09.273326+00:00",
+      "last_updated": "2025-07-01T18:10:12.257912"
+    },
+    {
+      "name": "Paradox Destinies Tins: Iron Boulder ex Tin (EU Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "154",
+      "price": "18,30 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Iron-Boulder-ex-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:10:04.190733+00:00",
+      "last_updated": "2025-07-01T18:10:05.934392"
+    },
+    {
+      "name": "Divergent Powers Tins: Hisuian Typhlosion V Tin (EU Version)",
+      "expansion": "Pokémon Products",
+      "available": "58",
+      "price": "25,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Divergent-Powers-Tins-Hisuian-Typhlosion-V-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:14:36.421745+00:00",
+      "last_updated": "2025-07-01T18:14:39.463018"
+    },
+    {
+      "name": "Pokémon GO: Blissey Mini Tin",
+      "expansion": "Pokémon GO",
+      "available": "163",
+      "price": "7,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Blissey-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:39.212333+00:00",
+      "last_updated": "2025-07-01T18:14:39.463420"
+    },
+    {
+      "name": "Crown Zenith: Galarian Articuno Tin (US Version)",
+      "expansion": "Crown Zenith",
+      "available": "56",
+      "price": "47,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Galarian-Articuno-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:49.456147+00:00",
+      "last_updated": "2025-07-01T18:14:52.925393"
+    },
+    {
+      "name": "Crown Zenith: Galarian Zapdos Tin (US Version)",
+      "expansion": "Crown Zenith",
+      "available": "55",
+      "price": "49,85 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Galarian-Zapdos-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:49.669116+00:00",
+      "last_updated": "2025-07-01T18:14:52.925454"
+    },
+    {
+      "name": "151: Dragonite Mini Tin",
+      "expansion": "151",
+      "available": "95",
+      "price": "18,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Dragonite-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:56.308768+00:00",
+      "last_updated": "2025-07-01T18:14:59.124144"
+    },
+    {
+      "name": "2024 Metal Stacking Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "76",
+      "price": "14,80 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2024-Metal-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:10:10.757336+00:00",
+      "last_updated": "2025-07-01T18:10:12.258280"
+    },
+    {
+      "name": "Paradox Destinies Tins: Raging Bolt ex Tin (EU Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "163",
+      "price": "18,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Raging-Bolt-ex-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:10:03.344482+00:00",
+      "last_updated": "2025-07-01T18:10:05.934106"
+    },
+    {
+      "name": "V Heroes Tins: Sylveon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "80",
+      "price": "29,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Heroes-Tins-Sylveon-V-Tin",
+      "scraped_at": "2025-07-01T16:14:34.897035+00:00",
+      "last_updated": "2025-07-01T18:14:39.462639"
+    },
+    {
+      "name": "V Heroes Tins: Umbreon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "87",
+      "price": "29,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Heroes-Tins-Umbreon-V-Tin",
+      "scraped_at": "2025-07-01T16:14:35.114464+00:00",
+      "last_updated": "2025-07-01T18:14:39.462694"
+    },
+    {
+      "name": "Divergent Powers Tins: Hisuian Samurott V Tin (EU Version)",
+      "expansion": "Pokémon Products",
+      "available": "56",
+      "price": "25,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Divergent-Powers-Tins-Hisuian-Samurott-V-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:14:36.876702+00:00",
+      "last_updated": "2025-07-01T18:14:39.463120"
+    },
+    {
+      "name": "Pokémon GO: Magikarp Mini Tin",
+      "expansion": "Pokémon GO",
+      "available": "160",
+      "price": "8,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Magikarp-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:37.952500+00:00",
+      "last_updated": "2025-07-01T18:14:39.463370"
+    },
+    {
+      "name": "2022 Darkness Stacking Tin",
+      "expansion": "Pokémon Products",
+      "available": "47",
+      "price": "15,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2022-Darkness-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:14:45.015235+00:00",
+      "last_updated": "2025-07-01T18:14:46.574301"
+    },
+    {
+      "name": "151: Arcanine Mini Tin",
+      "expansion": "151",
+      "available": "96",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Arcanine-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:56.083007+00:00",
+      "last_updated": "2025-07-01T18:14:59.124095"
+    },
+    {
+      "name": "Paradox Destinies Tins: Iron Crown ex Tin (EU Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "192",
+      "price": "18,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Iron-Crown-ex-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:10:03.767526+00:00",
+      "last_updated": "2025-07-01T18:10:05.934223"
+    },
+    {
+      "name": "2025 Stacking Tin: Treasures of Ruin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "283",
+      "price": "13,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2025-Stacking-Tin-Treasures-of-Ruin",
+      "scraped_at": "2025-07-01T16:09:56.074942+00:00",
+      "last_updated": "2025-07-01T18:09:59.701855"
+    },
+    {
+      "name": "2025 Stacking Tin: Ogerpon",
+      "expansion": "Scarlet & Violet Products",
+      "available": "268",
+      "price": "13,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2025-Stacking-Tin-Ogerpon",
+      "scraped_at": "2025-07-01T16:09:56.501462+00:00",
+      "last_updated": "2025-07-01T18:09:59.702042"
+    },
+    {
+      "name": "Galar Pals Mini Tins: Scorbunny & Pikachu Tin",
+      "expansion": "Pokémon Products",
+      "available": "36",
+      "price": "13,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Pals-Mini-Tins-Scorbunny-Pikachu-Tin",
+      "scraped_at": "2025-07-01T16:12:04.181184+00:00",
+      "last_updated": "2025-07-01T18:12:05.477730"
+    },
+    {
+      "name": "V Forces Tins: Lucario V Tin",
+      "expansion": "Pokémon Products",
+      "available": "56",
+      "price": "25,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Forces-Tins-Lucario-V-Tin",
+      "scraped_at": "2025-07-01T16:12:08.521516+00:00",
+      "last_updated": "2025-07-01T18:12:11.568121"
+    },
+    {
+      "name": "2022 Fire Stacking Tin",
+      "expansion": "Pokémon Products",
+      "available": "84",
+      "price": "15,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2022-Fire-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:14:44.780533+00:00",
+      "last_updated": "2025-07-01T18:14:46.574245"
+    },
+    {
+      "name": "Back to School 2023 Pencil Case",
+      "expansion": "Scarlet & Violet Products",
+      "available": "372",
+      "price": "2,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Back-to-School-2023-Pencil-Case",
+      "scraped_at": "2025-07-01T16:14:52.464710+00:00",
+      "last_updated": "2025-07-01T18:14:52.926164"
+    },
+    {
+      "name": "Paldean Fates: Tera Charizard ex Tin (US Version)",
+      "expansion": "Paldean Fates",
+      "available": "37",
+      "price": "57,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Tera-Charizard-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:59.089596+00:00",
+      "last_updated": "2025-07-01T18:14:59.124784"
+    },
+    {
+      "name": "Paldean Fates: Great Tusk ex Tin (US Version)",
+      "expansion": "Paldean Fates",
+      "available": "35",
+      "price": "39,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Great-Tusk-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:16.160142+00:00",
+      "last_updated": "2025-07-01T18:10:19.624174"
+    },
+    {
+      "name": "151: Costco 5-Pack Mini Tin Bundle",
+      "expansion": "151",
+      "available": "52",
+      "price": "139,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Costco-5-Pack-Mini-Tin-Bundle",
+      "scraped_at": "2025-07-01T16:10:02.696840+00:00",
+      "last_updated": "2025-07-01T18:10:05.933840"
+    },
+    {
+      "name": "Galar Pals Mini Tins: Sobble & Rookidee Tin",
+      "expansion": "Pokémon Products",
+      "available": "34",
+      "price": "13,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Pals-Mini-Tins-Sobble-Rookidee-Tin",
+      "scraped_at": "2025-07-01T16:12:04.396106+00:00",
+      "last_updated": "2025-07-01T18:12:05.477786"
+    },
+    {
+      "name": "V Strikers Tins: Empoleon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "71",
+      "price": "23,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Strikers-Tins-Empoleon-V-Tin",
+      "scraped_at": "2025-07-01T16:12:30.950188+00:00",
+      "last_updated": "2025-07-01T18:12:31.615157"
+    },
+    {
+      "name": "Pokémon GO: Great Ball Tin",
+      "expansion": "Pokémon GO",
+      "available": "51",
+      "price": "13,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Great-Ball-Tin",
+      "scraped_at": "2025-07-01T16:14:43.047801+00:00",
+      "last_updated": "2025-07-01T18:14:46.573772"
+    },
+    {
+      "name": "151: Slowpoke Mini Tin",
+      "expansion": "151",
+      "available": "111",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Slowpoke-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:58.005907+00:00",
+      "last_updated": "2025-07-01T18:14:59.124541"
+    },
+    {
+      "name": "2024 Dragon Stacking Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "76",
+      "price": "14,80 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2024-Dragon-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:10:10.551063+00:00",
+      "last_updated": "2025-07-01T18:10:12.258230"
+    },
+    {
+      "name": "Paldean Fates: Iron Treads ex Tin (US Version)",
+      "expansion": "Paldean Fates",
+      "available": "32",
+      "price": "34,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Iron-Treads-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:16.579716+00:00",
+      "last_updated": "2025-07-01T18:10:19.624290"
+    },
+    {
+      "name": "Galar Power Mini Tin Display",
+      "expansion": "Pokémon Products",
+      "available": "10",
+      "price": "199,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Power-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:12:13.971107+00:00",
+      "last_updated": "2025-07-01T18:12:17.849073"
+    },
+    {
+      "name": "Kanto Friends Mini Tins: Squirtle Tin",
+      "expansion": "Pokémon Products",
+      "available": "50",
+      "price": "17,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Friends-Mini-Tins-Squirtle-Tin",
+      "scraped_at": "2025-07-01T16:12:21.363601+00:00",
+      "last_updated": "2025-07-01T18:12:24.264977"
+    },
+    {
+      "name": "Tag Team Tins: Celebi & Venusaur GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "8",
+      "price": "289,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Tag-Team-Tins-Celebi-Venusaur-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:21.823093+00:00",
+      "last_updated": "2025-07-01T18:12:24.265174"
+    },
+    {
+      "name": "Galar Partners Tin: Inteleon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "24",
+      "price": "30,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Partners-Tin-Inteleon-V-Tin",
+      "scraped_at": "2025-07-01T16:12:28.044201+00:00",
+      "last_updated": "2025-07-01T18:12:31.614507"
+    },
+    {
+      "name": "Galar Pals Mini Tins: Galarian Ponyta Tin",
+      "expansion": "Pokémon Products",
+      "available": "36",
+      "price": "13,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Pals-Mini-Tins-Galarian-Ponyta-Tin",
+      "scraped_at": "2025-07-01T16:12:03.744973+00:00",
+      "last_updated": "2025-07-01T18:12:05.477617"
+    },
+    {
+      "name": "V Powers Tins: Pikachu V Tin",
+      "expansion": "Pokémon Products",
+      "available": "58",
+      "price": "28,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Powers-Tins-Pikachu-V-Tin",
+      "scraped_at": "2025-07-01T16:12:05.022674+00:00",
+      "last_updated": "2025-07-01T18:12:05.477953"
+    },
+    {
+      "name": "Galar Power Mini Tins: Sirfetch'd Tin",
+      "expansion": "Pokémon Products",
+      "available": "24",
+      "price": "19,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Power-Mini-Tins-Sirfetchd-Tin",
+      "scraped_at": "2025-07-01T16:12:08.311772+00:00",
+      "last_updated": "2025-07-01T18:12:11.568069"
+    },
+    {
+      "name": "Spring 2021 Collector Chest",
+      "expansion": "Pokémon Products",
+      "available": "61",
+      "price": "29,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Spring-2021-Collector-Chest",
+      "scraped_at": "2025-07-01T16:12:30.691829+00:00",
+      "last_updated": "2025-07-01T18:12:31.615108"
+    },
+    {
+      "name": "V Heroes Tins: Espeon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "100",
+      "price": "29,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Heroes-Tins-Espeon-V-Tin",
+      "scraped_at": "2025-07-01T16:14:34.684466+00:00",
+      "last_updated": "2025-07-01T18:14:39.462581"
+    },
+    {
+      "name": "Pokémon GO: Blissey Tin",
+      "expansion": "Pokémon GO",
+      "available": "184",
+      "price": "15,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Blissey-Tin",
+      "scraped_at": "2025-07-01T16:14:37.092820+00:00",
+      "last_updated": "2025-07-01T18:14:39.463170"
+    },
+    {
+      "name": "Pokémon GO: Eevee Mini Tin",
+      "expansion": "Pokémon GO",
+      "available": "77",
+      "price": "8,79 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Eevee-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:39.428072+00:00",
+      "last_updated": "2025-07-01T18:14:39.463469"
+    },
+    {
+      "name": "2024 Psychic Stacking Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "61",
+      "price": "14,70 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2024-Psychic-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:10:10.340099+00:00",
+      "last_updated": "2025-07-01T18:10:12.258180"
+    },
+    {
+      "name": "Vibrant Paldea Mini Tins: Espathra Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "231",
+      "price": "8,48 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Vibrant-Paldea-Mini-Tins-Espathra-Tin",
+      "scraped_at": "2025-07-01T16:10:08.435461+00:00",
+      "last_updated": "2025-07-01T18:10:12.257672"
+    },
+    {
+      "name": "Shrouded Fable: Zoroark Mini Tin",
+      "expansion": "Shrouded Fable",
+      "available": "128",
+      "price": "8,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shrouded-Fable-Zoroark-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:04.826622+00:00",
+      "last_updated": "2025-07-01T18:10:05.934567"
+    },
+    {
+      "name": "Shrouded Fable: Okidogi Mini Tin",
+      "expansion": "Shrouded Fable",
+      "available": "214",
+      "price": "8,40 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shrouded-Fable-Okidogi-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:05.048969+00:00",
+      "last_updated": "2025-07-01T18:10:05.934623"
+    },
+    {
+      "name": "Galar Partners Tin: Rillaboom V Tin",
+      "expansion": "Pokémon Products",
+      "available": "30",
+      "price": "30,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Partners-Tin-Rillaboom-V-Tin",
+      "scraped_at": "2025-07-01T16:12:27.619071+00:00",
+      "last_updated": "2025-07-01T18:12:31.614391"
+    },
+    {
+      "name": "Galar Pals Mini Tins: Grookey & Wooloo Tin",
+      "expansion": "Pokémon Products",
+      "available": "29",
+      "price": "13,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Pals-Mini-Tins-Grookey-Wooloo-Tin",
+      "scraped_at": "2025-07-01T16:12:03.960370+00:00",
+      "last_updated": "2025-07-01T18:12:05.477674"
+    },
+    {
+      "name": "V Strikers Tins: Tyranitar V Tin",
+      "expansion": "Pokémon Products",
+      "available": "50",
+      "price": "25,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Strikers-Tins-Tyranitar-V-Tin",
+      "scraped_at": "2025-07-01T16:12:31.170647+00:00",
+      "last_updated": "2025-07-01T18:12:31.615205"
+    },
+    {
+      "name": "Celebrations: Dark Sylveon V Big Tin",
+      "expansion": "Celebrations",
+      "available": "10",
+      "price": "70,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Dark-Sylveon-V-Big-Tin",
+      "scraped_at": "2025-07-01T16:12:36.242638+00:00",
+      "last_updated": "2025-07-01T18:12:38.010456"
+    },
+    {
+      "name": "Sinnoh Stars Mini Tins: Riolu Tin",
+      "expansion": "Pokémon Products",
+      "available": "43",
+      "price": "10,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Sinnoh-Stars-Mini-Tins-Riolu-Tin",
+      "scraped_at": "2025-07-01T16:14:34.252607+00:00",
+      "last_updated": "2025-07-01T18:14:39.462406"
+    },
+    {
+      "name": "Generic Love Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "12",
+      "price": "53,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Love-Ball-Tin",
+      "scraped_at": "2025-07-01T16:14:36.208034+00:00",
+      "last_updated": "2025-07-01T18:14:39.462966"
+    },
+    {
+      "name": "Pokémon GO: Mini Tin Display",
+      "expansion": "Pokémon GO",
+      "available": "41",
+      "price": "89,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:14:42.824652+00:00",
+      "last_updated": "2025-07-01T18:14:46.573708"
+    },
+    {
+      "name": "Paldea Friends Mini Tins: Sprigatito Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "87",
+      "price": "8,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Friends-Mini-Tins-Sprigatito-Tin",
+      "scraped_at": "2025-07-01T16:14:50.543361+00:00",
+      "last_updated": "2025-07-01T18:14:52.925652"
+    },
+    {
+      "name": "151: Magneton Mini Tin",
+      "expansion": "151",
+      "available": "185",
+      "price": "18,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Magneton-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:57.362884+00:00",
+      "last_updated": "2025-07-01T18:14:59.124386"
+    },
+    {
+      "name": "Vibrant Paldea Mini Tins: Dachsbun Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "198",
+      "price": "8,45 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Vibrant-Paldea-Mini-Tins-Dachsbun-Tin",
+      "scraped_at": "2025-07-01T16:10:08.236556+00:00",
+      "last_updated": "2025-07-01T18:10:12.257566"
+    },
+    {
+      "name": "Back to School 2024 Pencil Case",
+      "expansion": "Scarlet & Violet Products",
+      "available": "350",
+      "price": "8,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Back-to-School-2024-Pencil-Case",
+      "scraped_at": "2025-07-01T16:10:05.900997+00:00",
+      "last_updated": "2025-07-01T18:10:05.934848"
+    },
+    {
+      "name": "Spring 2018 Collector Chest",
+      "expansion": "Pokémon Products",
+      "available": "14",
+      "price": "120,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Spring-2018-Collector-Chest",
+      "scraped_at": "2025-07-01T16:11:59.123425+00:00",
+      "last_updated": "2025-07-01T18:11:59.155921"
+    },
+    {
+      "name": "Generic Premier Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "54",
+      "price": "14,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Premier-Ball-Tin",
+      "scraped_at": "2025-07-01T16:12:01.643653+00:00",
+      "last_updated": "2025-07-01T18:12:05.477027"
+    },
+    {
+      "name": "Galar Pals Mini Tins: Yamper & Morpeko Tin",
+      "expansion": "Pokémon Products",
+      "available": "36",
+      "price": "13,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Pals-Mini-Tins-Yamper-Morpeko-Tin",
+      "scraped_at": "2025-07-01T16:12:04.608418+00:00",
+      "last_updated": "2025-07-01T18:12:05.477841"
+    },
+    {
+      "name": "V Powers Tins: Eternatus V Tin",
+      "expansion": "Pokémon Products",
+      "available": "39",
+      "price": "30,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Powers-Tins-Eternatus-V-Tin",
+      "scraped_at": "2025-07-01T16:12:04.814889+00:00",
+      "last_updated": "2025-07-01T18:12:05.477896"
+    },
+    {
+      "name": "V Powers Tins: Eevee V Tin",
+      "expansion": "Pokémon Products",
+      "available": "37",
+      "price": "39,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Powers-Tins-Eevee-V-Tin",
+      "scraped_at": "2025-07-01T16:12:05.234362+00:00",
+      "last_updated": "2025-07-01T18:12:05.478008"
+    },
+    {
+      "name": "Shining Fates Mini Tins: Reshiram Tin",
+      "expansion": "Shining Fates",
+      "available": "49",
+      "price": "13,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Mini-Tins-Reshiram-Tin",
+      "scraped_at": "2025-07-01T16:12:29.161205+00:00",
+      "last_updated": "2025-07-01T18:12:31.614770"
+    },
+    {
+      "name": "Shining Fates: Cramorant V Tin",
+      "expansion": "Shining Fates",
+      "available": "118",
+      "price": "29,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Cramorant-V-Tin",
+      "scraped_at": "2025-07-01T16:12:28.915003+00:00",
+      "last_updated": "2025-07-01T18:12:31.614720"
+    },
+    {
+      "name": "Eevee Evolution Tins: Vaporeon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "59",
+      "price": "44,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Eevee-Evolution-Tins-Vaporeon-V-Tin",
+      "scraped_at": "2025-07-01T16:12:31.386840+00:00",
+      "last_updated": "2025-07-01T18:12:31.615254"
+    },
+    {
+      "name": "Eevee Evolution Tins: Jolteon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "61",
+      "price": "44,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Eevee-Evolution-Tins-Jolteon-V-Tin",
+      "scraped_at": "2025-07-01T16:12:31.583571+00:00",
+      "last_updated": "2025-07-01T18:12:31.615303"
+    },
+    {
+      "name": "Celebrations: Lance's Charizard V Tin",
+      "expansion": "Celebrations",
+      "available": "101",
+      "price": "50,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Lances-Charizard-V-Tin",
+      "scraped_at": "2025-07-01T16:12:36.030511+00:00",
+      "last_updated": "2025-07-01T18:12:38.010408"
+    },
+    {
+      "name": "Celebrations Mini Tins: 8-Tin Display Box",
+      "expansion": "Celebrations",
+      "available": "50",
+      "price": "184,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-8-Tin-Display-Box",
+      "scraped_at": "2025-07-01T16:12:36.676489+00:00",
+      "last_updated": "2025-07-01T18:12:38.010550"
+    },
+    {
+      "name": "2022 Water Stacking Tin",
+      "expansion": "Pokémon Products",
+      "available": "18",
+      "price": "24,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2022-Water-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:12:37.106669+00:00",
+      "last_updated": "2025-07-01T18:12:38.010647"
+    },
+    {
+      "name": "Divergent Powers Tins: Hisuian Decidueye V Tin (EU Version)",
+      "expansion": "Pokémon Products",
+      "available": "66",
+      "price": "24,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Divergent-Powers-Tins-Hisuian-Decidueye-V-Tin-EU-Version",
+      "scraped_at": "2025-07-01T16:14:36.648436+00:00",
+      "last_updated": "2025-07-01T18:14:39.463069"
+    },
+    {
+      "name": "Strong Bond Tins: Blissey Tin",
+      "expansion": "Pokémon Products",
+      "available": "9",
+      "price": "74,85 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Strong-Bond-Tins-Blissey-Tin",
+      "scraped_at": "2025-07-01T16:12:11.321299+00:00",
+      "last_updated": "2025-07-01T18:12:11.568535"
+    },
+    {
+      "name": "Pokémon GO: Poké Ball Tin",
+      "expansion": "Pokémon GO",
+      "available": "43",
+      "price": "12,29 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Poke-Ball-Tin",
+      "scraped_at": "2025-07-01T16:14:43.474013+00:00",
+      "last_updated": "2025-07-01T18:14:46.573891"
+    },
+    {
+      "name": "Crown Zenith: Marnie & Morpeko Mini Tin",
+      "expansion": "Crown Zenith",
+      "available": "41",
+      "price": "16,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Marnie-Morpeko-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:45.889787+00:00",
+      "last_updated": "2025-07-01T18:14:46.574523"
+    },
+    {
+      "name": "Galar Pals Mini Tin Display",
+      "expansion": "Pokémon Products",
+      "available": "9",
+      "price": "329,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Pals-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:12:13.751390+00:00",
+      "last_updated": "2025-07-01T18:12:17.848969"
+    },
+    {
+      "name": "2010 Spring Collector's Tins: Feraligatr Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "500,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2010-Spring-Collectors-Tins-Feraligatr-Tin",
+      "scraped_at": "2025-07-01T16:11:50.504247+00:00",
+      "last_updated": "2025-07-01T18:11:52.029228"
+    },
+    {
+      "name": "2010 Fall Collector's Tins: Suicune Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "449,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2010-Fall-Collectors-Tins-Suicune-Tin",
+      "scraped_at": "2025-07-01T16:11:51.567396+00:00",
+      "last_updated": "2025-07-01T18:11:52.029517"
+    },
+    {
+      "name": "Battle Heart Tin: Magearna EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "8",
+      "price": "84,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Battle-Heart-Tin-Magearna-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:56.154359+00:00",
+      "last_updated": "2025-07-01T18:11:59.155241"
+    },
+    {
+      "name": "Battle Heart Tin: Volcanion EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "110,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Battle-Heart-Tin-Volcanion-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:56.375709+00:00",
+      "last_updated": "2025-07-01T18:11:59.155293"
+    },
+    {
+      "name": "Tapu Koko Deck Shield Tin",
+      "expansion": "Pokémon Products",
+      "available": "10",
+      "price": "29,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Tapu-Koko-Deck-Shield-Tin",
+      "scraped_at": "2025-07-01T16:11:57.228369+00:00",
+      "last_updated": "2025-07-01T18:11:59.155486"
+    },
+    {
+      "name": "Kanto Friends Mini Tins: Charmander Tin",
+      "expansion": "Pokémon Products",
+      "available": "41",
+      "price": "17,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Friends-Mini-Tins-Charmander-Tin",
+      "scraped_at": "2025-07-01T16:12:21.146756+00:00",
+      "last_updated": "2025-07-01T18:12:24.264920"
+    },
+    {
+      "name": "Tag Team Tins: Eevee & Snorlax GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "13",
+      "price": "249,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Tag-Team-Tins-Eevee-Snorlax-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:22.257655+00:00",
+      "last_updated": "2025-07-01T18:12:24.265292"
+    },
+    {
+      "name": "Spring 2017 Collector Chest",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "140,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Spring-2017-Collector-Chest",
+      "scraped_at": "2025-07-01T16:11:58.915426+00:00",
+      "last_updated": "2025-07-01T18:11:59.155873"
+    },
+    {
+      "name": "Power Partnership Tins: Mewtwo & Mew GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "9",
+      "price": "400,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Power-Partnership-Tins-Mewtwo-Mew-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:23.797287+00:00",
+      "last_updated": "2025-07-01T18:12:24.265692"
+    },
+    {
+      "name": "Kanto Power Mini Tins: Dragonite Tin",
+      "expansion": "Pokémon Products",
+      "available": "56",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Power-Mini-Tins-Dragonite-Tin",
+      "scraped_at": "2025-07-01T16:12:02.481929+00:00",
+      "last_updated": "2025-07-01T18:12:05.477321"
+    },
+    {
+      "name": "Galar Power Mini Tins: Galarian Rapidash Tin",
+      "expansion": "Pokémon Products",
+      "available": "33",
+      "price": "19,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Power-Mini-Tins-Galarian-Rapidash-Tin",
+      "scraped_at": "2025-07-01T16:12:05.444059+00:00",
+      "last_updated": "2025-07-01T18:12:05.478063"
+    },
+    {
+      "name": "Shining Fates Mini Tins: Celebi Tin",
+      "expansion": "Shining Fates",
+      "available": "73",
+      "price": "13,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Mini-Tins-Celebi-Tin",
+      "scraped_at": "2025-07-01T16:12:29.381231+00:00",
+      "last_updated": "2025-07-01T18:12:31.614819"
+    },
+    {
+      "name": "Eevee Evolution Tins: Flareon V Tin",
+      "expansion": "Pokémon Products",
+      "available": "52",
+      "price": "44,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Eevee-Evolution-Tins-Flareon-V-Tin",
+      "scraped_at": "2025-07-01T16:12:33.863314+00:00",
+      "last_updated": "2025-07-01T18:12:38.009834"
+    },
+    {
+      "name": "Celebrations Mini Tins: Kalos Starters Tin",
+      "expansion": "Celebrations",
+      "available": "24",
+      "price": "19,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Kalos-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:35.179826+00:00",
+      "last_updated": "2025-07-01T18:12:38.010216"
+    },
+    {
+      "name": "Celebrations Mini Tins: Alola Starters Tin",
+      "expansion": "Celebrations",
+      "available": "21",
+      "price": "18,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Alola-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:35.389911+00:00",
+      "last_updated": "2025-07-01T18:12:38.010264"
+    },
+    {
+      "name": "2022 Lightning Stacking Tin",
+      "expansion": "Pokémon Products",
+      "available": "19",
+      "price": "24,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2022-Lightning-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:12:37.321130+00:00",
+      "last_updated": "2025-07-01T18:12:38.010694"
+    },
+    {
+      "name": "Sinnoh Stars Mini Tins: Chimchar Tin",
+      "expansion": "Pokémon Products",
+      "available": "90",
+      "price": "9,98 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Sinnoh-Stars-Mini-Tins-Chimchar-Tin",
+      "scraped_at": "2025-07-01T16:12:37.975102+00:00",
+      "last_updated": "2025-07-01T18:12:38.010837"
+    },
+    {
+      "name": "Sinnoh Stars Mini Tins: Munchlax Tin",
+      "expansion": "Pokémon Products",
+      "available": "77",
+      "price": "9,80 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Sinnoh-Stars-Mini-Tins-Munchlax-Tin",
+      "scraped_at": "2025-07-01T16:14:34.468647+00:00",
+      "last_updated": "2025-07-01T18:14:39.462516"
+    },
+    {
+      "name": "Pokémon GO: Ultra Ball Tin",
+      "expansion": "Pokémon GO",
+      "available": "46",
+      "price": "13,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Ultra-Ball-Tin",
+      "scraped_at": "2025-07-01T16:14:43.262214+00:00",
+      "last_updated": "2025-07-01T18:14:46.573833"
+    },
+    {
+      "name": "Crown Zenith: Sonia & Yamper Mini Tin",
+      "expansion": "Crown Zenith",
+      "available": "59",
+      "price": "18,68 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Sonia-Yamper-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:45.678098+00:00",
+      "last_updated": "2025-07-01T18:14:46.574468"
+    },
+    {
+      "name": "Crown Zenith: Galarian Moltres Tin (US Version)",
+      "expansion": "Crown Zenith",
+      "available": "41",
+      "price": "55,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Galarian-Moltres-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:49.888209+00:00",
+      "last_updated": "2025-07-01T18:14:52.925512"
+    },
+    {
+      "name": "151: Electabuzz Mini Tin",
+      "expansion": "151",
+      "available": "130",
+      "price": "16,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Electabuzz-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:56.519294+00:00",
+      "last_updated": "2025-07-01T18:14:59.124194"
+    },
+    {
+      "name": "151: Kadabra Mini Tin",
+      "expansion": "151",
+      "available": "125",
+      "price": "16,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Kadabra-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:56.937847+00:00",
+      "last_updated": "2025-07-01T18:14:59.124290"
+    },
+    {
+      "name": "151: Meowth Mini Tin",
+      "expansion": "151",
+      "available": "113",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Meowth-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:57.575116+00:00",
+      "last_updated": "2025-07-01T18:14:59.124434"
+    },
+    {
+      "name": "2024 Psychic & Dragon & Metal Stacking Tin Display",
+      "expansion": "Scarlet & Violet Products",
+      "available": "10",
+      "price": "84,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2024-Psychic-Dragon-Metal-Stacking-Tin-Display",
+      "scraped_at": "2025-07-01T16:10:10.958765+00:00",
+      "last_updated": "2025-07-01T18:10:12.258329"
+    },
+    {
+      "name": "Vibrant Paldea Mini Tins: Ceruledge Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "191",
+      "price": "8,89 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Vibrant-Paldea-Mini-Tins-Ceruledge-Tin",
+      "scraped_at": "2025-07-01T16:10:08.851688+00:00",
+      "last_updated": "2025-07-01T18:10:12.257796"
+    },
+    {
+      "name": "Hoenn Power Tins: Swampert Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "149,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hoenn-Power-Tins-Swampert-Tin",
+      "scraped_at": "2025-07-01T16:11:31.289962+00:00",
+      "last_updated": "2025-07-01T18:11:32.805637"
+    },
+    {
+      "name": "Triple Power Tins: Machamp EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "9",
+      "price": "139,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Triple-Power-Tins-Machamp-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:51.780527+00:00",
+      "last_updated": "2025-07-01T18:11:52.029572"
+    },
+    {
+      "name": "Triple Power Tins: Shiny Gyarados EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "11",
+      "price": "195,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Triple-Power-Tins-Shiny-Gyarados-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:51.994421+00:00",
+      "last_updated": "2025-07-01T18:11:52.029628"
+    },
+    {
+      "name": "Mysterious Powers Tins: Necrozma GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "12",
+      "price": "80,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Mysterious-Powers-Tins-Necrozma-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:16.111553+00:00",
+      "last_updated": "2025-07-01T18:12:17.849650"
+    },
+    {
+      "name": "Generic Quick Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "32",
+      "price": "18,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Quick-Ball-Tin",
+      "scraped_at": "2025-07-01T16:12:17.610593+00:00",
+      "last_updated": "2025-07-01T18:12:17.850001"
+    },
+    {
+      "name": "Kanto Friends Mini Tins: Bulbasaur Tin",
+      "expansion": "Pokémon Products",
+      "available": "39",
+      "price": "17,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Friends-Mini-Tins-Bulbasaur-Tin",
+      "scraped_at": "2025-07-01T16:12:20.441849+00:00",
+      "last_updated": "2025-07-01T18:12:24.264742"
+    },
+    {
+      "name": "Kanto Friends Mini Tins: Pikachu Tin",
+      "expansion": "Pokémon Products",
+      "available": "38",
+      "price": "17,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Friends-Mini-Tins-Pikachu-Tin",
+      "scraped_at": "2025-07-01T16:12:20.666168+00:00",
+      "last_updated": "2025-07-01T18:12:24.264803"
+    },
+    {
+      "name": "Kanto Friends Mini Tins: Eevee Tin",
+      "expansion": "Pokémon Products",
+      "available": "46",
+      "price": "17,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Friends-Mini-Tins-Eevee-Tin",
+      "scraped_at": "2025-07-01T16:12:20.903380+00:00",
+      "last_updated": "2025-07-01T18:12:24.264862"
+    },
+    {
+      "name": "Power Partnership Tins: Garchomp & Giratina GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "300,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Power-Partnership-Tins-Garchomp-Giratina-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:24.232946+00:00",
+      "last_updated": "2025-07-01T18:12:24.265801"
+    },
+    {
+      "name": "Kanto Power Mini Tins: Mew & Psyduck Tin",
+      "expansion": "Pokémon Products",
+      "available": "44",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Power-Mini-Tins-Mew-Psyduck-Tin",
+      "scraped_at": "2025-07-01T16:12:02.270157+00:00",
+      "last_updated": "2025-07-01T18:12:05.477261"
+    },
+    {
+      "name": "Kanto Power Mini Tins: Charizard Tin",
+      "expansion": "Pokémon Products",
+      "available": "48",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Power-Mini-Tins-Charizard-Tin",
+      "scraped_at": "2025-07-01T16:12:02.699738+00:00",
+      "last_updated": "2025-07-01T18:12:05.477379"
+    },
+    {
+      "name": "Galar Partners Tin: Cinderace V Tin",
+      "expansion": "Pokémon Products",
+      "available": "21",
+      "price": "33,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Partners-Tin-Cinderace-V-Tin",
+      "scraped_at": "2025-07-01T16:12:27.828589+00:00",
+      "last_updated": "2025-07-01T18:12:31.614452"
+    },
+    {
+      "name": "Legends of Galar Tins: Zamazenta V Tin",
+      "expansion": "Pokémon Products",
+      "available": "36",
+      "price": "31,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Galar-Tins-Zamazenta-V-Tin",
+      "scraped_at": "2025-07-01T16:12:03.114564+00:00",
+      "last_updated": "2025-07-01T18:12:05.477503"
+    },
+    {
+      "name": "Generic Ultra Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "45",
+      "price": "13,29 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Ultra-Ball-Tin",
+      "scraped_at": "2025-07-01T16:12:03.328489+00:00",
+      "last_updated": "2025-07-01T18:12:05.477559"
+    },
+    {
+      "name": "Shining Fates Mini Tins: Manaphy Tin",
+      "expansion": "Shining Fates",
+      "available": "76",
+      "price": "10,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Mini-Tins-Manaphy-Tin",
+      "scraped_at": "2025-07-01T16:12:29.817230+00:00",
+      "last_updated": "2025-07-01T18:12:31.614915"
+    },
+    {
+      "name": "Celebrations Mini Tins: Unova Starters Tin",
+      "expansion": "Celebrations",
+      "available": "23",
+      "price": "19,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Unova-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:34.961346+00:00",
+      "last_updated": "2025-07-01T18:12:38.010166"
+    },
+    {
+      "name": "Zygarde Elite Trainer Deck Shield",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "40,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Zygarde-Elite-Trainer-Deck-Shield",
+      "scraped_at": "2025-07-01T16:12:09.991915+00:00",
+      "last_updated": "2025-07-01T18:12:11.568386"
+    },
+    {
+      "name": "Celebrations: Dark Sylveon V Tin",
+      "expansion": "Celebrations",
+      "available": "46",
+      "price": "44,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Dark-Sylveon-V-Tin",
+      "scraped_at": "2025-07-01T16:12:35.813717+00:00",
+      "last_updated": "2025-07-01T18:12:38.010360"
+    },
+    {
+      "name": "Celebrations: Lance's Charizard V Big Tin",
+      "expansion": "Celebrations",
+      "available": "27",
+      "price": "73,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Lances-Charizard-V-Big-Tin",
+      "scraped_at": "2025-07-01T16:12:36.462327+00:00",
+      "last_updated": "2025-07-01T18:12:38.010503"
+    },
+    {
+      "name": "2022 Grass Stacking Tin",
+      "expansion": "Pokémon Products",
+      "available": "20",
+      "price": "24,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2022-Grass-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:12:36.894360+00:00",
+      "last_updated": "2025-07-01T18:12:38.010598"
+    },
+    {
+      "name": "Sinnoh Stars Mini Tins: Piplup Tin",
+      "expansion": "Pokémon Products",
+      "available": "61",
+      "price": "10,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Sinnoh-Stars-Mini-Tins-Piplup-Tin",
+      "scraped_at": "2025-07-01T16:12:37.543716+00:00",
+      "last_updated": "2025-07-01T18:12:38.010742"
+    },
+    {
+      "name": "Sinnoh Stars Mini Tins: Turtwig Tin",
+      "expansion": "Pokémon Products",
+      "available": "62",
+      "price": "10,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Sinnoh-Stars-Mini-Tins-Turtwig-Tin",
+      "scraped_at": "2025-07-01T16:12:37.760220+00:00",
+      "last_updated": "2025-07-01T18:12:38.010789"
+    },
+    {
+      "name": "V Heroes Tins: Espeon V Tin (US Version)",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "70,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Heroes-Tins-Espeon-V-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:35.554969+00:00",
+      "last_updated": "2025-07-01T18:14:39.462801"
+    },
+    {
+      "name": "V Heroes Tins: Sylveon V Tin (US Version)",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "70,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Heroes-Tins-Sylveon-V-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:35.771869+00:00",
+      "last_updated": "2025-07-01T18:14:39.462862"
+    },
+    {
+      "name": "Pokémon GO: Snorlax Mini Tin",
+      "expansion": "Pokémon GO",
+      "available": "99",
+      "price": "8,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Snorlax-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:42.336516+00:00",
+      "last_updated": "2025-07-01T18:14:46.573505"
+    },
+    {
+      "name": "Pokémon GO: Pikachu Mini Tin",
+      "expansion": "Pokémon GO",
+      "available": "86",
+      "price": "9,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Pikachu-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:42.580020+00:00",
+      "last_updated": "2025-07-01T18:14:46.573638"
+    },
+    {
+      "name": "Sinnoh Stars Mini Tin Display",
+      "expansion": "Pokémon Products",
+      "available": "28",
+      "price": "105,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Sinnoh-Stars-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:14:35.991652+00:00",
+      "last_updated": "2025-07-01T18:14:39.462915"
+    },
+    {
+      "name": "Paldea Friends Mini Tin Display",
+      "expansion": "Scarlet & Violet Products",
+      "available": "62",
+      "price": "99,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Friends-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:14:50.332929+00:00",
+      "last_updated": "2025-07-01T18:14:52.925593"
+    },
+    {
+      "name": "Paldea Friends Mini Tins: Fuecoco Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "106",
+      "price": "8,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Friends-Mini-Tins-Fuecoco-Tin",
+      "scraped_at": "2025-07-01T16:14:50.753753+00:00",
+      "last_updated": "2025-07-01T18:14:52.925708"
+    },
+    {
+      "name": "Paldea Friends Mini Tins: Quaxly Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "122",
+      "price": "8,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Friends-Mini-Tins-Quaxly-Tin",
+      "scraped_at": "2025-07-01T16:14:50.964835+00:00",
+      "last_updated": "2025-07-01T18:14:52.925764"
+    },
+    {
+      "name": "151: Machamp Mini Tin",
+      "expansion": "151",
+      "available": "118",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Machamp-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:57.148721+00:00",
+      "last_updated": "2025-07-01T18:14:59.124338"
+    },
+    {
+      "name": "151: Scyther Mini Tin",
+      "expansion": "151",
+      "available": "124",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/151-Scyther-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:57.786387+00:00",
+      "last_updated": "2025-07-01T18:14:59.124482"
+    },
+    {
+      "name": "Generic Lure Ball Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "20",
+      "price": "15,49 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Lure-Ball-Tin",
+      "scraped_at": "2025-07-01T16:14:55.865454+00:00",
+      "last_updated": "2025-07-01T18:14:59.124043"
+    },
+    {
+      "name": "Vibrant Paldea Mini Tins: Arboliva Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "174",
+      "price": "8,48 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Vibrant-Paldea-Mini-Tins-Arboliva-Tin",
+      "scraped_at": "2025-07-01T16:10:08.646220+00:00",
+      "last_updated": "2025-07-01T18:10:12.257738"
+    },
+    {
+      "name": "Shrouded Fable: Dusknoir Mini Tin",
+      "expansion": "Shrouded Fable",
+      "available": "192",
+      "price": "8,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shrouded-Fable-Dusknoir-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:04.607948+00:00",
+      "last_updated": "2025-07-01T18:10:05.934509"
+    },
+    {
+      "name": "Shrouded Fable: Fezandipiti Mini Tin",
+      "expansion": "Shrouded Fable",
+      "available": "183",
+      "price": "7,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shrouded-Fable-Fezandipiti-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:05.470528+00:00",
+      "last_updated": "2025-07-01T18:10:05.934736"
+    },
+    {
+      "name": "Generic Moon Ball Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "53",
+      "price": "14,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Moon-Ball-Tin",
+      "scraped_at": "2025-07-01T16:10:02.487550+00:00",
+      "last_updated": "2025-07-01T18:10:05.933781"
+    },
+    {
+      "name": "Legends of Hoenn Tins: Groudon Tin",
+      "expansion": "Pokémon Products",
+      "available": "7",
+      "price": "150,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Hoenn-Tins-Groudon-Tin",
+      "scraped_at": "2025-07-01T16:11:30.654377+00:00",
+      "last_updated": "2025-07-01T18:11:32.805473"
+    },
+    {
+      "name": "EX Tins: Kyurem-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "600,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Tins-KyuremEX-Tin",
+      "scraped_at": "2025-07-01T16:11:36.558386+00:00",
+      "last_updated": "2025-07-01T18:11:39.307542"
+    },
+    {
+      "name": "Team Plasma Tins: Thundurus-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Plasma-Tins-ThundurusEX-Tin",
+      "scraped_at": "2025-07-01T16:09:11.976063+00:00"
+    },
+    {
+      "name": "2009 Spring Collector's Tins: Giratina LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2009-Spring-Collectors-Tins-Giratina-LVX-Tin",
+      "scraped_at": "2025-07-01T16:09:12.189592+00:00"
+    },
+    {
+      "name": "2009 Spring Collector's Tins: Shaymin LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "3.000,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2009-Spring-Collectors-Tins-Shaymin-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:49.229255+00:00",
+      "last_updated": "2025-07-01T18:11:52.028885"
+    },
+    {
+      "name": "2010 Fall Collector's Tins: Raikou Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "449,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2010-Fall-Collectors-Tins-Raikou-Tin",
+      "scraped_at": "2025-07-01T16:11:51.140069+00:00",
+      "last_updated": "2025-07-01T18:11:52.029405"
+    },
+    {
+      "name": "Shiny Kalos Tins: Zygarde Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "150,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shiny-Kalos-Tins-Zygarde-Tin",
+      "scraped_at": "2025-07-01T16:11:55.733592+00:00",
+      "last_updated": "2025-07-01T18:11:59.155127"
+    },
+    {
+      "name": "Legends of Alola Tins: Solgaleo GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "11",
+      "price": "50,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Alola-Tins-Solgaleo-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:14.174025+00:00",
+      "last_updated": "2025-07-01T18:12:17.849183"
+    },
+    {
+      "name": "Mysterious Powers Tins: Ho-Oh GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "22",
+      "price": "69,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Mysterious-Powers-Tins-HoOh-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:15.682800+00:00",
+      "last_updated": "2025-07-01T18:12:17.849551"
+    },
+    {
+      "name": "Evolution Celebration Tins: Leafeon GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "16",
+      "price": "39,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Evolution-Celebration-Tins-Leafeon-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:16.760164+00:00",
+      "last_updated": "2025-07-01T18:12:17.849795"
+    },
+    {
+      "name": "Evolution Celebration Tins: Glaceon GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "11",
+      "price": "39,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Evolution-Celebration-Tins-Glaceon-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:16.972613+00:00",
+      "last_updated": "2025-07-01T18:12:17.849852"
+    },
+    {
+      "name": "Tag Team Tins: Pikachu & Zekrom GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "11",
+      "price": "350,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Tag-Team-Tins-Pikachu-Zekrom-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:22.037810+00:00",
+      "last_updated": "2025-07-01T18:12:24.265235"
+    },
+    {
+      "name": "Generic Luxury Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "35,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Luxury-Ball-Tin",
+      "scraped_at": "2025-07-01T16:11:58.278644+00:00",
+      "last_updated": "2025-07-01T18:11:59.155729"
+    },
+    {
+      "name": "Detective Pikachu Collector Chest",
+      "expansion": "Detective Pikachu",
+      "available": "19",
+      "price": "40,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Detective-Pikachu-Collector-Chest",
+      "scraped_at": "2025-07-01T16:12:22.474849+00:00",
+      "last_updated": "2025-07-01T18:12:24.265349"
+    },
+    {
+      "name": "Power Partnership Tins: Lucario & Melmetal GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "269,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Power-Partnership-Tins-Lucario-Melmetal-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:24.020680+00:00",
+      "last_updated": "2025-07-01T18:12:24.265747"
+    },
+    {
+      "name": "Kanto Power Mini Tins: Mewtwo Tin",
+      "expansion": "Pokémon Products",
+      "available": "49",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Power-Mini-Tins-Mewtwo-Tin",
+      "scraped_at": "2025-07-01T16:12:01.850773+00:00",
+      "last_updated": "2025-07-01T18:12:05.477133"
+    },
+    {
+      "name": "Legends of Galar Tins: Zacian V Tin",
+      "expansion": "Pokémon Products",
+      "available": "51",
+      "price": "30,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Galar-Tins-Zacian-V-Tin",
+      "scraped_at": "2025-07-01T16:12:02.907096+00:00",
+      "last_updated": "2025-07-01T18:12:05.477447"
+    },
+    {
+      "name": "Shining Fates Mini Tins: Kyogre Tin",
+      "expansion": "Shining Fates",
+      "available": "56",
+      "price": "13,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Mini-Tins-Kyogre-Tin",
+      "scraped_at": "2025-07-01T16:12:29.602909+00:00",
+      "last_updated": "2025-07-01T18:12:31.614868"
+    },
+    {
+      "name": "Shining Fates Mini Tins: Zarude Tin",
+      "expansion": "Shining Fates",
+      "available": "79",
+      "price": "11,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Mini-Tins-Zarude-Tin",
+      "scraped_at": "2025-07-01T16:12:30.046956+00:00",
+      "last_updated": "2025-07-01T18:12:31.614964"
+    },
+    {
+      "name": "Generic Level Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "26",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Generic-Level-Ball-Tin",
+      "scraped_at": "2025-07-01T16:12:30.264685+00:00",
+      "last_updated": "2025-07-01T18:12:31.615012"
+    },
+    {
+      "name": "Lunala Elite Trainer Deck Shield",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "29,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Lunala-Elite-Trainer-Deck-Shield",
+      "scraped_at": "2025-07-01T16:12:14.823406+00:00",
+      "last_updated": "2025-07-01T18:12:17.849351"
+    },
+    {
+      "name": "Pokémon GO: Poké Ball Tin Display",
+      "expansion": "Pokémon GO",
+      "available": "9",
+      "price": "79,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-GO-Poke-Ball-Tin-Display",
+      "scraped_at": "2025-07-01T16:14:43.691237+00:00",
+      "last_updated": "2025-07-01T18:14:46.573961"
+    },
+    {
+      "name": "Crown Zenith: Hop & Wooloo Mini Tin",
+      "expansion": "Crown Zenith",
+      "available": "52",
+      "price": "18,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Hop-Wooloo-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:46.105164+00:00",
+      "last_updated": "2025-07-01T18:14:46.574579"
+    },
+    {
+      "name": "Vibrant Paldea Mini Tins: Palafin Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "223",
+      "price": "8,48 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Vibrant-Paldea-Mini-Tins-Palafin-Tin",
+      "scraped_at": "2025-07-01T16:10:09.060008+00:00",
+      "last_updated": "2025-07-01T18:10:12.257859"
+    },
+    {
+      "name": "Shrouded Fable: Munkidori Mini Tin",
+      "expansion": "Shrouded Fable",
+      "available": "191",
+      "price": "8,43 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shrouded-Fable-Munkidori-Mini-Tin",
+      "scraped_at": "2025-07-01T16:10:05.263681+00:00",
+      "last_updated": "2025-07-01T18:10:05.934680"
+    },
+    {
+      "name": "Unova Mini Tin Display",
+      "expansion": "Scarlet & Violet Products",
+      "available": "34",
+      "price": "139,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:09:50.722320+00:00",
+      "last_updated": "2025-07-01T18:09:53.530399"
+    },
+    {
+      "name": "Kanto Friends Mini Tin Display",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "170,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Friends-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:12:21.599021+00:00",
+      "last_updated": "2025-07-01T18:12:24.265067"
+    },
+    {
+      "name": "Legends of Kalos Tins: Xerneas EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "7",
+      "price": "275,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Kalos-Tins-Xerneas-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:28.734550+00:00",
+      "last_updated": "2025-07-01T18:11:32.804887"
+    },
+    {
+      "name": "Legends of Kalos Tins: Yveltal EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "280,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Kalos-Tins-Yveltal-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:28.958361+00:00",
+      "last_updated": "2025-07-01T18:11:32.804993"
+    },
+    {
+      "name": "Kalos Power Tins: Chesnaught Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "400,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kalos-Power-Tins-Chesnaught-Tin",
+      "scraped_at": "2025-07-01T16:11:29.168372+00:00",
+      "last_updated": "2025-07-01T18:11:32.805069"
+    },
+    {
+      "name": "Kalos Power Tins: Delphox Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "340,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kalos-Power-Tins-Delphox-Tin",
+      "scraped_at": "2025-07-01T16:11:29.374878+00:00",
+      "last_updated": "2025-07-01T18:11:32.805132"
+    },
+    {
+      "name": "EX Power Trio Tins: Venusaur EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "8",
+      "price": "220,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Power-Trio-Tins-Venusaur-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:29.799682+00:00",
+      "last_updated": "2025-07-01T18:11:32.805250"
+    },
+    {
+      "name": "EX Power Trio Tins: Charizard EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "9",
+      "price": "349,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Power-Trio-Tins-Charizard-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:30.012968+00:00",
+      "last_updated": "2025-07-01T18:11:32.805306"
+    },
+    {
+      "name": "EX Power Trio Tins: Blastoise EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "10",
+      "price": "299,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Power-Trio-Tins-Blastoise-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:30.219936+00:00",
+      "last_updated": "2025-07-01T18:11:32.805363"
+    },
+    {
+      "name": "Legends of Hoenn Tins: Kyogre Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "50,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Hoenn-Tins-Kyogre-Tin",
+      "scraped_at": "2025-07-01T16:11:30.443206+00:00",
+      "last_updated": "2025-07-01T18:11:32.805418"
+    },
+    {
+      "name": "Hoenn Power Tins: Sceptile Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "230,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hoenn-Power-Tins-Sceptile-Tin",
+      "scraped_at": "2025-07-01T16:11:30.863548+00:00",
+      "last_updated": "2025-07-01T18:11:32.805528"
+    },
+    {
+      "name": "Hoenn Power Tins: Blaziken Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "230,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Hoenn-Power-Tins-Blaziken-Tin",
+      "scraped_at": "2025-07-01T16:11:31.075516+00:00",
+      "last_updated": "2025-07-01T18:11:32.805583"
+    },
+    {
+      "name": "Powers Beyond Tins: Latios Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "205,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Powers-Beyond-Tins-Latios-Tin",
+      "scraped_at": "2025-07-01T16:11:31.503934+00:00",
+      "last_updated": "2025-07-01T18:11:32.805692"
+    },
+    {
+      "name": "Powers Beyond Tins: Rayquaza Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "320,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Powers-Beyond-Tins-Rayquaza-Tin",
+      "scraped_at": "2025-07-01T16:11:31.720927+00:00",
+      "last_updated": "2025-07-01T18:11:32.805746"
+    },
+    {
+      "name": "Sneak-Peek Tins: Snivy Tin",
+      "expansion": "Pokémon Products",
+      "available": "8",
+      "price": "499,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/SneakPeek-Tins-Snivy-Tin",
+      "scraped_at": "2025-07-01T16:11:32.135875+00:00",
+      "last_updated": "2025-07-01T18:11:32.805802"
+    },
+    {
+      "name": "Sneak-Peek Tins: Oshawott Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "849,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/SneakPeek-Tins-Oshawott-Tin",
+      "scraped_at": "2025-07-01T16:11:32.553900+00:00",
+      "last_updated": "2025-07-01T18:11:32.805911"
+    },
+    {
+      "name": "New Legends Tins: Zekrom Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "89,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/New-Legends-Tins-Zekrom-Tin",
+      "scraped_at": "2025-07-01T16:11:32.771436+00:00",
+      "last_updated": "2025-07-01T18:11:32.805970"
+    },
+    {
+      "name": "New Legends Tins: Reshiram Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "32,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/New-Legends-Tins-Reshiram-Tin",
+      "scraped_at": "2025-07-01T16:11:35.280586+00:00",
+      "last_updated": "2025-07-01T18:11:39.307215"
+    },
+    {
+      "name": "Evolved Battle Action Tins: Serperior Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "449,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Evolved-Battle-Action-Tins-Serperior-Tin",
+      "scraped_at": "2025-07-01T16:11:35.507529+00:00",
+      "last_updated": "2025-07-01T18:11:39.307322"
+    },
+    {
+      "name": "V for Victini Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "107,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-for-Victini-Tin",
+      "scraped_at": "2025-07-01T16:11:36.134055+00:00",
+      "last_updated": "2025-07-01T18:11:39.307490"
+    },
+    {
+      "name": "EX Tins: Zekrom-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Tins-ZekromEX-Tin",
+      "scraped_at": "2025-07-01T16:09:25.378454+00:00"
+    },
+    {
+      "name": "Legendary EX Tins: Mewtwo-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legendary-EX-Tins-MewtwoEX-Tin",
+      "scraped_at": "2025-07-01T16:09:25.588231+00:00"
+    },
+    {
+      "name": "Legendary EX Tins: Darkrai-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "425,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legendary-EX-Tins-DarkraiEX-Tin",
+      "scraped_at": "2025-07-01T16:11:37.186840+00:00",
+      "last_updated": "2025-07-01T18:11:39.307594"
+    },
+    {
+      "name": "Legendary EX Tins: Rayquaza-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legendary-EX-Tins-RayquazaEX-Tin",
+      "scraped_at": "2025-07-01T16:09:28.134694+00:00"
+    },
+    {
+      "name": "EX Power Tins: Keldeo-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "799,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Power-Tins-KeldeoEX-Tin",
+      "scraped_at": "2025-07-01T16:11:37.611049+00:00",
+      "last_updated": "2025-07-01T18:11:39.307645"
+    },
+    {
+      "name": "EX Power Tins: Black Kyurem-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Power-Tins-Black-KyuremEX-Tin",
+      "scraped_at": "2025-07-01T16:09:28.561543+00:00"
+    },
+    {
+      "name": "Team Plasma Tins: Lugia-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "1.000,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Plasma-Tins-LugiaEX-Tin",
+      "scraped_at": "2025-07-01T16:11:38.652288+00:00",
+      "last_updated": "2025-07-01T18:11:39.307745"
+    },
+    {
+      "name": "EX Collector's Tins: Kyogre Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "100,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Collectors-Tins-Kyogre-Tin",
+      "scraped_at": "2025-07-01T16:11:42.429649+00:00",
+      "last_updated": "2025-07-01T18:11:45.562968"
+    },
+    {
+      "name": "EX Collector's Tins: Rayquaza Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Collectors-Tins-Rayquaza-Tin",
+      "scraped_at": "2025-07-01T16:09:29.197770+00:00"
+    },
+    {
+      "name": "2007 Spring Collector's Tins: Milotic Tin (North American)",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2007-Spring-Collectors-Tins-Milotic-Tin-North-American",
+      "scraped_at": "2025-07-01T16:09:29.424329+00:00"
+    },
+    {
+      "name": "2007 Spring Collector's Tins: Camerupt Tin (North American)",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2007-Spring-Collectors-Tins-Camerupt-Tin-North-American",
+      "scraped_at": "2025-07-01T16:09:29.639139+00:00"
+    },
+    {
+      "name": "Lucario Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Lucario-Tin",
+      "scraped_at": "2025-07-01T16:09:29.855089+00:00"
+    },
+    {
+      "name": "2008 Spring Collector's Tins: Palkia LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Spring-Collectors-Tins-Palkia-LVX-Tin",
+      "scraped_at": "2025-07-01T16:09:29.988722+00:00"
+    },
+    {
+      "name": "2008 Holiday Collector's Tins: Heatran LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "40,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Holiday-Collectors-Tins-Heatran-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:48.576806+00:00",
+      "last_updated": "2025-07-01T18:11:52.028754"
+    },
+    {
+      "name": "2009 Fall Collector's Tins: Garchomp LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "695,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2009-Fall-Collectors-Tins-Garchomp-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:49.657254+00:00",
+      "last_updated": "2025-07-01T18:11:52.029002"
+    },
+    {
+      "name": "2010 Spring Collector's Tins: Meganium Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "590,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2010-Spring-Collectors-Tins-Meganium-Tin",
+      "scraped_at": "2025-07-01T16:11:50.717242+00:00",
+      "last_updated": "2025-07-01T18:11:52.029284"
+    },
+    {
+      "name": "2010 Spring Collector's Tins: Typhlosion Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "449,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2010-Spring-Collectors-Tins-Typhlosion-Tin",
+      "scraped_at": "2025-07-01T16:11:50.925060+00:00",
+      "last_updated": "2025-07-01T18:11:52.029340"
+    },
+    {
+      "name": "2010 Fall Collector's Tins: Entei Tin",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "260,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2010-Fall-Collectors-Tins-Entei-Tin",
+      "scraped_at": "2025-07-01T16:11:51.360561+00:00",
+      "last_updated": "2025-07-01T18:11:52.029463"
+    },
+    {
+      "name": "Triple Power Tins: Mewtwo EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "7",
+      "price": "190,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Triple-Power-Tins-Mewtwo-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:55.090418+00:00",
+      "last_updated": "2025-07-01T18:11:59.154907"
+    },
+    {
+      "name": "Shiny Kalos Tins: Yveltal Tin",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "125,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shiny-Kalos-Tins-Yveltal-Tin",
+      "scraped_at": "2025-07-01T16:11:55.521230+00:00",
+      "last_updated": "2025-07-01T18:11:59.155072"
+    },
+    {
+      "name": "Battle Heart Tin: Pikachu EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "13",
+      "price": "110,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Battle-Heart-Tin-Pikachu-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:55.947043+00:00",
+      "last_updated": "2025-07-01T18:11:59.155179"
+    },
+    {
+      "name": "Legends of Alola Tins: Lunala GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "16",
+      "price": "65,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Legends-of-Alola-Tins-Lunala-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:14.389377+00:00",
+      "last_updated": "2025-07-01T18:12:17.849244"
+    },
+    {
+      "name": "Island Guardians Tins: Tapu Koko GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "16",
+      "price": "59,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Island-Guardians-Tins-Tapu-Koko-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:15.046199+00:00",
+      "last_updated": "2025-07-01T18:12:17.849402"
+    },
+    {
+      "name": "Island Guardians Tins: Tapu Bulu GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "16",
+      "price": "49,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Island-Guardians-Tins-Tapu-Bulu-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:15.259195+00:00",
+      "last_updated": "2025-07-01T18:12:17.849452"
+    },
+    {
+      "name": "Mysterious Powers Tins: Marshadow GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "11",
+      "price": "80,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Mysterious-Powers-Tins-Marshadow-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:15.895344+00:00",
+      "last_updated": "2025-07-01T18:12:17.849601"
+    },
+    {
+      "name": "Dusk Mane Necrozma GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "59,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Dusk-Mane-Necrozma-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:16.326595+00:00",
+      "last_updated": "2025-07-01T18:12:17.849698"
+    },
+    {
+      "name": "Dawn Wings Necrozma GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "59,90 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Dawn-Wings-Necrozma-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:16.540360+00:00",
+      "last_updated": "2025-07-01T18:12:17.849747"
+    },
+    {
+      "name": "Evolution Celebration Tins: Sylveon GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "8",
+      "price": "89,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Evolution-Celebration-Tins-Sylveon-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:17.184065+00:00",
+      "last_updated": "2025-07-01T18:12:17.849903"
+    },
+    {
+      "name": "Elemental Power Tins: Jolteon EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "139,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Elemental-Power-Tins-Jolteon-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:57.855472+00:00",
+      "last_updated": "2025-07-01T18:11:59.155632"
+    },
+    {
+      "name": "Elemental Power Tins: Flareon GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "8",
+      "price": "75,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Elemental-Power-Tins-Flareon-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:17.814447+00:00",
+      "last_updated": "2025-07-01T18:12:17.850050"
+    },
+    {
+      "name": "Elemental Power Tins: Jolteon GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "8",
+      "price": "140,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Elemental-Power-Tins-Jolteon-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:20.040560+00:00",
+      "last_updated": "2025-07-01T18:12:24.264568"
+    },
+    {
+      "name": "Elemental Power Tins: Vaporeon GX Tin",
+      "expansion": "Pokémon Products",
+      "available": "10",
+      "price": "125,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Elemental-Power-Tins-Vaporeon-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:20.235738+00:00",
+      "last_updated": "2025-07-01T18:12:24.264676"
+    },
+    {
+      "name": "Fall 2018 Collector Chest",
+      "expansion": "Pokémon Products",
+      "available": "11",
+      "price": "200,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Fall-2018-Collector-Chest",
+      "scraped_at": "2025-07-01T16:12:01.434977+00:00",
+      "last_updated": "2025-07-01T18:12:05.476890"
+    },
+    {
+      "name": "Shining Legends Collector Chest",
+      "expansion": "Shining Legends",
+      "available": "34",
+      "price": "100,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Legends-Collector-Chest",
+      "scraped_at": "2025-07-01T16:12:15.473363+00:00",
+      "last_updated": "2025-07-01T18:12:17.849502"
+    },
+    {
+      "name": "Detective Pikachu Tins: Charizard GX Tin",
+      "expansion": "Detective Pikachu",
+      "available": "1",
+      "price": "299,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Detective-Pikachu-Tins-Charizard-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:22.901283+00:00",
+      "last_updated": "2025-07-01T18:12:24.265469"
+    },
+    {
+      "name": "Kanto Power Mini Tins: Pikachu & Vulpix Tin",
+      "expansion": "Pokémon Products",
+      "available": "46",
+      "price": "19,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kanto-Power-Mini-Tins-Pikachu-Vulpix-Tin",
+      "scraped_at": "2025-07-01T16:12:02.062544+00:00",
+      "last_updated": "2025-07-01T18:12:05.477200"
+    },
+    {
+      "name": "Dive Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Dive-Ball-Tin",
+      "scraped_at": "2025-07-01T16:09:37.301311+00:00"
+    },
+    {
+      "name": "Dusk Ball Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "70,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Dusk-Ball-Tin",
+      "scraped_at": "2025-07-01T16:12:28.262594+00:00",
+      "last_updated": "2025-07-01T18:12:31.614568"
+    },
+    {
+      "name": "Galar Power Mini Tins: Obstagoon & Galarian Weezing Tin",
+      "expansion": "Pokémon Products",
+      "available": "33",
+      "price": "19,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Power-Mini-Tins-Obstagoon-Galarian-Weezing-Tin",
+      "scraped_at": "2025-07-01T16:12:07.885601+00:00",
+      "last_updated": "2025-07-01T18:12:11.567952"
+    },
+    {
+      "name": "Galar Power Mini Tins: Dragapult Tin",
+      "expansion": "Pokémon Products",
+      "available": "29",
+      "price": "19,75 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Galar-Power-Mini-Tins-Dragapult-Tin",
+      "scraped_at": "2025-07-01T16:12:08.099792+00:00",
+      "last_updated": "2025-07-01T18:12:11.568014"
+    },
+    {
+      "name": "Turtwig Classic Trio Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Turtwig-Classic-Trio-Tin",
+      "scraped_at": "2025-07-01T16:09:38.154044+00:00"
+    },
+    {
+      "name": "Chimchar Classic Trio Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Chimchar-Classic-Trio-Tin",
+      "scraped_at": "2025-07-01T16:09:38.365595+00:00"
+    },
+    {
+      "name": "Piplup Classic Trio Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "3.000,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Piplup-Classic-Trio-Tin",
+      "scraped_at": "2025-07-01T16:12:09.782942+00:00",
+      "last_updated": "2025-07-01T18:12:11.568337"
+    },
+    {
+      "name": "Celebrations Mini Tins: Kanto Starters Tin",
+      "expansion": "Celebrations",
+      "available": "44",
+      "price": "30,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Kanto-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:34.070065+00:00",
+      "last_updated": "2025-07-01T18:12:38.009941"
+    },
+    {
+      "name": "Celebrations Mini Tins: Johto Starters Tin",
+      "expansion": "Celebrations",
+      "available": "24",
+      "price": "19,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Johto-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:34.289964+00:00",
+      "last_updated": "2025-07-01T18:12:38.010002"
+    },
+    {
+      "name": "Celebrations Mini Tins: Hoenn Starters Tin",
+      "expansion": "Celebrations",
+      "available": "20",
+      "price": "17,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Hoenn-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:34.505781+00:00",
+      "last_updated": "2025-07-01T18:12:38.010056"
+    },
+    {
+      "name": "Celebrations Mini Tins: Sinnoh Starters Tin",
+      "expansion": "Celebrations",
+      "available": "21",
+      "price": "19,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Sinnoh-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:34.739960+00:00",
+      "last_updated": "2025-07-01T18:12:38.010107"
+    },
+    {
+      "name": "Celebrations Mini Tins: Galar Starters Tin",
+      "expansion": "Celebrations",
+      "available": "21",
+      "price": "24,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Celebrations-Mini-Tins-Galar-Starters-Tin",
+      "scraped_at": "2025-07-01T16:12:35.604147+00:00",
+      "last_updated": "2025-07-01T18:12:38.010313"
+    },
+    {
+      "name": "Dragonite Tin",
+      "expansion": "Pokémon Products",
+      "available": "11",
+      "price": "44,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Dragonite-Tin",
+      "scraped_at": "2025-07-01T16:09:42.709448+00:00"
+    },
+    {
+      "name": "Salamence Tin",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "47,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Salamence-Tin",
+      "scraped_at": "2025-07-01T16:09:42.841630+00:00"
+    },
+    {
+      "name": "Volcanion Elite Trainer Deck Shield",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "39,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Volcanion-Elite-Trainer-Deck-Shield",
+      "scraped_at": "2025-07-01T16:12:11.105685+00:00",
+      "last_updated": "2025-07-01T18:12:11.568487"
+    },
+    {
+      "name": "Solgaleo Elite Trainer Deck Shield",
+      "expansion": "Pokémon Products",
+      "available": "6",
+      "price": "29,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Solgaleo-Elite-Trainer-Deck-Shield",
+      "scraped_at": "2025-07-01T16:12:14.609957+00:00",
+      "last_updated": "2025-07-01T18:12:17.849298"
+    },
+    {
+      "name": "Strong Bond Tins: Gardevoir Tin",
+      "expansion": "Pokémon Products",
+      "available": "10",
+      "price": "119,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Strong-Bond-Tins-Gardevoir-Tin",
+      "scraped_at": "2025-07-01T16:12:11.535759+00:00",
+      "last_updated": "2025-07-01T18:12:11.568584"
+    },
+    {
+      "name": "V Heroes Tins: Umbreon V Tin (US Version)",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "69,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/V-Heroes-Tins-Umbreon-V-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:35.335082+00:00",
+      "last_updated": "2025-07-01T18:14:39.462747"
+    },
+    {
+      "name": "Back to School Pencil Case",
+      "expansion": "Pokémon Products",
+      "available": "24",
+      "price": "31,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Back-to-School-Pencil-Case",
+      "scraped_at": "2025-07-01T16:14:37.740195+00:00",
+      "last_updated": "2025-07-01T18:14:39.463320"
+    },
+    {
+      "name": "2022 Fighting Stacking Tin",
+      "expansion": "Pokémon Products",
+      "available": "59",
+      "price": "12,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2022-Fighting-Stacking-Tin",
+      "scraped_at": "2025-07-01T16:14:44.559202+00:00",
+      "last_updated": "2025-07-01T18:14:46.574189"
+    },
+    {
+      "name": "2022 Fire, Fighting & Darkness Stacking Tin Display",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "109,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2022-Fire-Fighting-Darkness-Stacking-Tin-Display",
+      "scraped_at": "2025-07-01T16:14:45.244001+00:00",
+      "last_updated": "2025-07-01T18:14:46.574357"
+    },
+    {
+      "name": "Crown Zenith: Leon & Charizard Mini Tin",
+      "expansion": "Crown Zenith",
+      "available": "73",
+      "price": "16,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Leon-Charizard-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:45.456326+00:00",
+      "last_updated": "2025-07-01T18:14:46.574413"
+    },
+    {
+      "name": "Crown Zenith: Bede & Hatenna Mini Tin",
+      "expansion": "Crown Zenith",
+      "available": "46",
+      "price": "18,68 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Crown-Zenith-Bede-Hatenna-Mini-Tin",
+      "scraped_at": "2025-07-01T16:14:46.324365+00:00",
+      "last_updated": "2025-07-01T18:14:46.574634"
+    },
+    {
+      "name": "Paldea Friends Mini Tins: Pawmi Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "107",
+      "price": "7,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Friends-Mini-Tins-Pawmi-Tin",
+      "scraped_at": "2025-07-01T16:14:51.181286+00:00",
+      "last_updated": "2025-07-01T18:14:52.925820"
+    },
+    {
+      "name": "Paldea Legends Tins: Koraidon ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "3",
+      "price": "35,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Legends-Tins-Koraidon-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:52.248643+00:00",
+      "last_updated": "2025-07-01T18:14:52.926109"
+    },
+    {
+      "name": "Costco Scarlet & Violet 5-Pack Mini Tins",
+      "expansion": "Scarlet & Violet Products",
+      "available": "3",
+      "price": "100,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Costco-Scarlet-Violet-5-Pack-Mini-Tins",
+      "scraped_at": "2025-07-01T16:14:58.440294+00:00",
+      "last_updated": "2025-07-01T18:14:59.124639"
+    },
+    {
+      "name": "Team Rocket Tins: Team Rocket's Mewtwo ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Rocket-Tins-Team-Rockets-Mewtwo-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:49.369170+00:00"
+    },
+    {
+      "name": "Team Rocket Tins: Team Rocket's Mewtwo ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Rocket-Tins-Team-Rockets-Mewtwo-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:49.568173+00:00"
+    },
+    {
+      "name": "Team Rocket Tins: Team Rocket's Nidoking ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Rocket-Tins-Team-Rockets-Nidoking-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:49.789764+00:00"
+    },
+    {
+      "name": "Team Rocket Tins: Team Rocket's Nidoking ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Rocket-Tins-Team-Rockets-Nidoking-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:50.001338+00:00"
+    },
+    {
+      "name": "Team Rocket Tins: Team Rocket's Persian ex Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Rocket-Tins-Team-Rockets-Persian-ex-Tin",
+      "scraped_at": "2025-07-01T16:09:50.208720+00:00"
+    },
+    {
+      "name": "Team Rocket Tins: Team Rocket's Persian ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Rocket-Tins-Team-Rockets-Persian-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:50.425103+00:00"
+    },
+    {
+      "name": "Unova Alomomola Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Alomomola-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:50.936191+00:00",
+      "last_updated": "2025-07-01T18:09:53.530528"
+    },
+    {
+      "name": "Unova Chandelure Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Chandelure-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:51.142207+00:00",
+      "last_updated": "2025-07-01T18:09:53.530598"
+    },
+    {
+      "name": "Unova Eelektross Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Eelektross-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:51.374676+00:00",
+      "last_updated": "2025-07-01T18:09:53.530730"
+    },
+    {
+      "name": "Unova Garbodor Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Garbodor-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:51.587288+00:00",
+      "last_updated": "2025-07-01T18:09:53.530795"
+    },
+    {
+      "name": "Unova Krookodile Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Krookodile-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:51.803581+00:00",
+      "last_updated": "2025-07-01T18:09:53.530849"
+    },
+    {
+      "name": "Unova Lilligant Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Lilligant-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:52.009309+00:00",
+      "last_updated": "2025-07-01T18:09:53.530900"
+    },
+    {
+      "name": "Unova Mienshao Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Mienshao-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:52.222505+00:00",
+      "last_updated": "2025-07-01T18:09:53.530981"
+    },
+    {
+      "name": "Unova Volcarona Mini Tin",
+      "expansion": "Scarlet & Violet Products",
+      "available": "13",
+      "price": "19,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Unova-Volcarona-Mini-Tin",
+      "scraped_at": "2025-07-01T16:09:52.433191+00:00",
+      "last_updated": "2025-07-01T18:09:53.531090"
+    },
+    {
+      "name": "Pokémon Champions Tins: Machamp Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "185,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-Champions-Tins-Machamp-Tin",
+      "scraped_at": "2025-07-01T16:09:52.644547+00:00",
+      "last_updated": "2025-07-01T18:09:53.531144"
+    },
+    {
+      "name": "Pokémon Champions Tins: Gengar Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-Champions-Tins-Gengar-Tin",
+      "scraped_at": "2025-07-01T16:09:52.768634+00:00"
+    },
+    {
+      "name": "Pokémon Champions Tins: Gyarados Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Pokemon-Champions-Tins-Gyarados-Tin",
+      "scraped_at": "2025-07-01T16:09:52.982909+00:00"
+    },
+    {
+      "name": "Slashing Legends Tins: Koraidon ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Slashing-Legends-Tins-Koraidon-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:53.409446+00:00"
+    },
+    {
+      "name": "Slashing Legends Tins: Zacian ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Slashing-Legends-Tins-Zacian-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:55.782223+00:00"
+    },
+    {
+      "name": "Azure Legends Tins: Kyogre ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "4",
+      "price": "57,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Azure-Legends-Tins-Kyogre-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:57.136815+00:00",
+      "last_updated": "2025-07-01T18:09:59.702222"
+    },
+    {
+      "name": "Azure Legends Tins: Xerneas ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "4",
+      "price": "57,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Azure-Legends-Tins-Xerneas-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:57.544810+00:00",
+      "last_updated": "2025-07-01T18:09:59.702355"
+    },
+    {
+      "name": "Azure Legends Tins: Dialga ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "4",
+      "price": "57,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Azure-Legends-Tins-Dialga-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:09:57.963730+00:00",
+      "last_updated": "2025-07-01T18:09:59.702472"
+    },
+    {
+      "name": "Poké Ball Gift Box: Pokémon Art Illustration Celebration Gathering",
+      "expansion": "Simplified Chinese Products",
+      "available": "10",
+      "price": "19,50 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Poke-Ball-Gift-Box-Pokemon-Art-Illustration-Celebration-Gathering",
+      "scraped_at": "2025-07-01T16:10:02.067828+00:00",
+      "last_updated": "2025-07-01T18:10:05.933648"
+    },
+    {
+      "name": "Level Ball Gift Box: Pokémon Art Illustration Celebration Gathering",
+      "expansion": "Simplified Chinese Products",
+      "available": "8",
+      "price": "19,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Level-Ball-Gift-Box-Pokemon-Art-Illustration-Celebration-Gathering",
+      "scraped_at": "2025-07-01T16:10:02.275800+00:00",
+      "last_updated": "2025-07-01T18:10:05.933718"
+    },
+    {
+      "name": "Paradox Destinies Tins: Gouging Fire ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "6",
+      "price": "42,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Gouging-Fire-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:03.132427+00:00",
+      "last_updated": "2025-07-01T18:10:05.934006"
+    },
+    {
+      "name": "Paradox Destinies Tins: Raging Bolt ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "5",
+      "price": "42,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Raging-Bolt-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:03.550134+00:00",
+      "last_updated": "2025-07-01T18:10:05.934165"
+    },
+    {
+      "name": "Paradox Destinies Tins: Iron Crown ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "5",
+      "price": "42,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Iron-Crown-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:03.982915+00:00",
+      "last_updated": "2025-07-01T18:10:05.934281"
+    },
+    {
+      "name": "Paradox Destinies Tins: Iron Boulder ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "5",
+      "price": "42,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Destinies-Tins-Iron-Boulder-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:04.402745+00:00",
+      "last_updated": "2025-07-01T18:10:05.934451"
+    },
+    {
+      "name": "Paradox Clash Tins: Walking Wake ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "1",
+      "price": "59,98 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Clash-Tins-Walking-Wake-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:09.713379+00:00",
+      "last_updated": "2025-07-01T18:10:12.258075"
+    },
+    {
+      "name": "Paradox Clash Tins: Iron Leaves ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paradox-Clash-Tins-Iron-Leaves-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:10.044138+00:00"
+    },
+    {
+      "name": "Paldean Fates: Costco 5-Pack Mini Tin Bundle",
+      "expansion": "Paldean Fates",
+      "available": "2",
+      "price": "85,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldean-Fates-Costco-5-Pack-Mini-Tin-Bundle",
+      "scraped_at": "2025-07-01T16:14:58.655533+00:00",
+      "last_updated": "2025-07-01T18:14:59.124688"
+    },
+    {
+      "name": "Paldea Partners Tins: Meowscarada ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "1",
+      "price": "59,98 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Partners-Tins-Meowscarada-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:55.216804+00:00",
+      "last_updated": "2025-07-01T18:14:59.123926"
+    },
+    {
+      "name": "Paldea Partners Tins: Skeledirge ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "1",
+      "price": "59,98 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Partners-Tins-Skeledirge-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:55.438603+00:00",
+      "last_updated": "2025-07-01T18:14:59.123987"
+    },
+    {
+      "name": "Paldea Partners Tins: Quaquaval ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Partners-Tins-Quaquaval-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:10:22.850065+00:00"
+    },
+    {
+      "name": "Paldea Legends Tins: Miraidon ex Tin (US Version)",
+      "expansion": "Scarlet & Violet Products",
+      "available": "1",
+      "price": "45,98 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Paldea-Legends-Tins-Miraidon-ex-Tin-US-Version",
+      "scraped_at": "2025-07-01T16:14:51.813953+00:00",
+      "last_updated": "2025-07-01T18:14:52.925998"
+    },
+    {
+      "name": "Shining Pokémon Poké Ball Gift Box",
+      "expansion": "Simplified Chinese Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Pokemon-Poke-Ball-Gift-Box",
+      "scraped_at": "2025-07-01T16:10:28.715227+00:00"
+    },
+    {
+      "name": "Shining Fates: Mini Tin Display",
+      "expansion": "Shining Fates",
+      "available": "24",
+      "price": "146,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shining-Fates-Mini-Tin-Display",
+      "scraped_at": "2025-07-01T16:12:30.485424+00:00",
+      "last_updated": "2025-07-01T18:12:31.615060"
+    },
+    {
+      "name": "Zacian + Zamazenta BOX",
+      "expansion": "Zacian + Zamazenta BOX",
+      "available": "2",
+      "price": "69,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Zacian-Zamazenta-BOX",
+      "scraped_at": "2025-07-01T16:12:27.407443+00:00",
+      "last_updated": "2025-07-01T18:12:31.614291"
+    },
+    {
+      "name": "Detective Pikachu Tins: Mewtwo GX Tin",
+      "expansion": "Detective Pikachu",
+      "available": "2",
+      "price": "160,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Detective-Pikachu-Tins-Mewtwo-GX-Tin",
+      "scraped_at": "2025-07-01T16:12:22.695342+00:00",
+      "last_updated": "2025-07-01T18:12:24.265405"
+    },
+    {
+      "name": "Kalos Power Tins: Greninja Tin",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "365,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Kalos-Power-Tins-Greninja-Tin",
+      "scraped_at": "2025-07-01T16:11:29.584282+00:00",
+      "last_updated": "2025-07-01T18:11:32.805191"
+    },
+    {
+      "name": "Powers Beyond Tins: Hoopa Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Powers-Beyond-Tins-Hoopa-Tin",
+      "scraped_at": "2025-07-01T16:11:10.373473+00:00"
+    },
+    {
+      "name": "Sneak-Peek Tins: Tepig Tin",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "500,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/SneakPeek-Tins-Tepig-Tin",
+      "scraped_at": "2025-07-01T16:11:32.347013+00:00",
+      "last_updated": "2025-07-01T18:11:32.805857"
+    },
+    {
+      "name": "Evolved Battle Action Tins: Emboar Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "600,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Evolved-Battle-Action-Tins-Emboar-Tin",
+      "scraped_at": "2025-07-01T16:11:35.718540+00:00",
+      "last_updated": "2025-07-01T18:11:39.307383"
+    },
+    {
+      "name": "Evolved Battle Action Tins: Samurott Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "499,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Evolved-Battle-Action-Tins-Samurott-Tin",
+      "scraped_at": "2025-07-01T16:11:35.929587+00:00",
+      "last_updated": "2025-07-01T18:11:39.307438"
+    },
+    {
+      "name": "EX Tins: Reshiram-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Tins-ReshiramEX-Tin",
+      "scraped_at": "2025-07-01T16:11:14.622262+00:00"
+    },
+    {
+      "name": "EX Power Tins: White Kyurem-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "600,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Power-Tins-White-KyuremEX-Tin",
+      "scraped_at": "2025-07-01T16:11:38.025309+00:00",
+      "last_updated": "2025-07-01T18:11:39.307694"
+    },
+    {
+      "name": "Team Plasma Tins: Deoxys-EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Team-Plasma-Tins-DeoxysEX-Tin",
+      "scraped_at": "2025-07-01T16:11:16.728792+00:00"
+    },
+    {
+      "name": "EX Deck Tins: Sandstorm Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Deck-Tins-Sandstorm-Tin",
+      "scraped_at": "2025-07-01T16:11:17.151983+00:00"
+    },
+    {
+      "name": "EX Deck Tins: Team Magma vs. Team Aqua Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Deck-Tins-Team-Magma-vs-Team-Aqua-Tin",
+      "scraped_at": "2025-07-01T16:11:20.246088+00:00"
+    },
+    {
+      "name": "EX Deck Tins: Fire Red and Leaf Green Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Deck-Tins-Fire-Red-and-Leaf-Green-Tin",
+      "scraped_at": "2025-07-01T16:11:20.455289+00:00"
+    },
+    {
+      "name": "EX Deck Tins: Dragon Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Deck-Tins-Dragon-Tin",
+      "scraped_at": "2025-07-01T16:11:20.667750+00:00"
+    },
+    {
+      "name": "EX Collector's Window Tins: Moltres ex Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Collectors-Window-Tins-Moltres-ex-Tin",
+      "scraped_at": "2025-07-01T16:11:20.875519+00:00"
+    },
+    {
+      "name": "EX Collector's Window Tins: Articuno ex Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Collectors-Window-Tins-Articuno-ex-Tin",
+      "scraped_at": "2025-07-01T16:11:21.072521+00:00"
+    },
+    {
+      "name": "EX Collector's Window Tins: Zapdos ex Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Collectors-Window-Tins-Zapdos-ex-Tin",
+      "scraped_at": "2025-07-01T16:11:21.284999+00:00"
+    },
+    {
+      "name": "EX Collector's Tins: Groudon Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/EX-Collectors-Tins-Groudon-Tin",
+      "scraped_at": "2025-07-01T16:11:21.728683+00:00"
+    },
+    {
+      "name": "2007 Spring Collector's Tins: Tyranitar Tin (International)",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "1.000,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2007-Spring-Collectors-Tins-Tyranitar-Tin-International",
+      "scraped_at": "2025-07-01T16:11:43.080428+00:00",
+      "last_updated": "2025-07-01T18:11:45.563064"
+    },
+    {
+      "name": "2007 Spring Collector's Tins: Camerupt Tin (International)",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2007-Spring-Collectors-Tins-Camerupt-Tin-International",
+      "scraped_at": "2025-07-01T16:11:22.352566+00:00"
+    },
+    {
+      "name": "2007 Spring Collector's Tins: Milotic Tin (International)",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2007-Spring-Collectors-Tins-Milotic-Tin-International",
+      "scraped_at": "2025-07-01T16:11:22.554294+00:00"
+    },
+    {
+      "name": "2007 Spring Collector's Tins: Tyranitar Tin (North American)",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2007-Spring-Collectors-Tins-Tyranitar-Tin-North-American",
+      "scraped_at": "2025-07-01T16:11:23.180243+00:00"
+    },
+    {
+      "name": "Diamond and Pearl Collector's Tins: Torterra LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Diamond-and-Pearl-Collectors-Tins-Torterra-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:23.392811+00:00"
+    },
+    {
+      "name": "Diamond and Pearl Collector's Tins: Infernape LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "1.650,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Diamond-and-Pearl-Collectors-Tins-Infernape-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:44.552118+00:00",
+      "last_updated": "2025-07-01T18:11:45.563137"
+    },
+    {
+      "name": "Diamond and Pearl Collector's Tins: Empoleon LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "400,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Diamond-and-Pearl-Collectors-Tins-Empoleon-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:44.765255+00:00",
+      "last_updated": "2025-07-01T18:11:45.563198"
+    },
+    {
+      "name": "2008 Spring Collector's Tins: Dialga LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "900,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Spring-Collectors-Tins-Dialga-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:45.101443+00:00",
+      "last_updated": "2025-07-01T18:11:45.563257"
+    },
+    {
+      "name": "2008 Spring Collector's Tins: Darkrai LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "1.999,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Spring-Collectors-Tins-Darkrai-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:45.529204+00:00",
+      "last_updated": "2025-07-01T18:11:45.563315"
+    },
+    {
+      "name": "2008 Fall Collector's Tins: Mewtwo LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "1.200,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Fall-Collectors-Tins-Mewtwo-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:47.936416+00:00",
+      "last_updated": "2025-07-01T18:11:52.028643"
+    },
+    {
+      "name": "2008 Fall Collector's Tins: Rhyperior LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Fall-Collectors-Tins-Rhyperior-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:48.063406+00:00"
+    },
+    {
+      "name": "2008 Holiday Collector's Tins: Regigigas LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Holiday-Collectors-Tins-Regigigas-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:48.272713+00:00"
+    },
+    {
+      "name": "2009 Spring Collector's Tins: Dialga LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "19.999,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2009-Spring-Collectors-Tins-Dialga-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:48.793496+00:00",
+      "last_updated": "2025-07-01T18:11:52.028822"
+    },
+    {
+      "name": "2009 Fall Collector's Tins: Charizard LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "5",
+      "price": "1.699,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2009-Fall-Collectors-Tins-Charizard-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:49.438440+00:00",
+      "last_updated": "2025-07-01T18:11:52.028944"
+    },
+    {
+      "name": "2009 Fall Collector's Tins: Rayquaza LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "1.425,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2009-Fall-Collectors-Tins-Rayquaza-LVX-Tin",
+      "scraped_at": "2025-07-01T16:11:49.870977+00:00",
+      "last_updated": "2025-07-01T18:11:52.029060"
+    },
+    {
+      "name": "Arceus Collector's Tins: Arceus LV.X Tin (Green)",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "1.000,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Arceus-Collectors-Tins-Arceus-LVX-Tin-Green",
+      "scraped_at": "2025-07-01T16:11:50.090891+00:00",
+      "last_updated": "2025-07-01T18:11:52.029116"
+    },
+    {
+      "name": "Arceus Collector's Tins: Arceus LV.X Tin (Blue)",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "1.000,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Arceus-Collectors-Tins-Arceus-LVX-Tin-Blue",
+      "scraped_at": "2025-07-01T16:11:50.298085+00:00",
+      "last_updated": "2025-07-01T18:11:52.029172"
+    },
+    {
+      "name": "Shiny Kalos Tins: Xerneas Tin",
+      "expansion": "Pokémon Products",
+      "available": "4",
+      "price": "149,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Shiny-Kalos-Tins-Xerneas-Tin",
+      "scraped_at": "2025-07-01T16:11:55.305308+00:00",
+      "last_updated": "2025-07-01T18:11:59.155010"
+    },
+    {
+      "name": "Triple Effect Tins: Vaporeon Tin",
+      "expansion": "Pokémon Products",
+      "available": "3",
+      "price": "165,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Triple-Effect-Tins-Vaporeon-Tin",
+      "scraped_at": "2025-07-01T16:11:56.593399+00:00",
+      "last_updated": "2025-07-01T18:11:59.155342"
+    },
+    {
+      "name": "Triple Effect Tins: Flareon Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "165,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Triple-Effect-Tins-Flareon-Tin",
+      "scraped_at": "2025-07-01T16:11:56.798751+00:00",
+      "last_updated": "2025-07-01T18:11:59.155390"
+    },
+    {
+      "name": "Triple Effect Tins: Jolteon Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "165,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Triple-Effect-Tins-Jolteon-Tin",
+      "scraped_at": "2025-07-01T16:11:57.011558+00:00",
+      "last_updated": "2025-07-01T18:11:59.155437"
+    },
+    {
+      "name": "Elemental Power Tins: Flareon EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "119,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Elemental-Power-Tins-Flareon-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:57.432635+00:00",
+      "last_updated": "2025-07-01T18:11:59.155536"
+    },
+    {
+      "name": "Elemental Power Tins: Vaporeon EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "119,99 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Elemental-Power-Tins-Vaporeon-EX-Tin",
+      "scraped_at": "2025-07-01T16:11:57.646689+00:00",
+      "last_updated": "2025-07-01T18:11:59.155584"
+    },
+    {
+      "name": "Primal Groudon & Primal Kyogre Collector Chest",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "999,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Primal-Groudon-Primal-Kyogre-Collector-Chest",
+      "scraped_at": "2025-07-01T16:11:58.487226+00:00",
+      "last_updated": "2025-07-01T18:11:59.155777"
+    },
+    {
+      "name": "MRayquaza & Hoopa Collector Chest",
+      "expansion": "Pokémon Products",
+      "available": "2",
+      "price": "799,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/MRayquaza-Hoopa-Collector-Chest",
+      "scraped_at": "2025-07-01T16:11:58.698526+00:00",
+      "last_updated": "2025-07-01T18:11:59.155825"
+    },
+    {
+      "name": "2008 Holiday Collector's Tins: Mewtwo LV.X Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "2.500,00 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/2008-Holiday-Collectors-Tins-Mewtwo-LVX-Tin",
+      "scraped_at": "2025-07-01T16:12:09.163938+00:00",
+      "last_updated": "2025-07-01T18:12:11.568284"
+    },
+    {
+      "name": "Battle Origins Tins: Mewtwo EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Battle-Origins-Tins-Mewtwo-EX-Tin",
+      "scraped_at": "2025-07-01T16:12:10.374123+00:00"
+    },
+    {
+      "name": "Battle Origins Tins: Rayquaza EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "0",
+      "price": "N/A",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Battle-Origins-Tins-Rayquaza-EX-Tin",
+      "scraped_at": "2025-07-01T16:12:10.593778+00:00"
+    },
+    {
+      "name": "Battle Origins Tins: Darkrai EX Tin",
+      "expansion": "Pokémon Products",
+      "available": "1",
+      "price": "274,95 €",
+      "category": "Tins",
+      "url": "https://www.cardmarket.com/en/Pokemon/Products/Tins/Battle-Origins-Tins-Darkrai-EX-Tin",
+      "scraped_at": "2025-07-01T16:12:10.894009+00:00",
+      "last_updated": "2025-07-01T18:12:11.568438"
+    }
+  ]
+}

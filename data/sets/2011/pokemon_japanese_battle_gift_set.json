@@ -1,0 +1,128 @@
+{
+  "year": "2011",
+  "set_name": "Pokemon Japanese Battle Gift Set",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2011/pokemon-japanese-battle-gift-set/151352",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 1,
+        "psa_9": 12,
+        "psa_10": 26,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Torchic",
+      "base_name": "Torchic",
+      "variety": "",
+      "spec_id": 5209687,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Thundurus-Holo",
+      "base_name": "Thundurus-Holo",
+      "variety": "",
+      "spec_id": 5209702,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 7,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Chatot",
+      "base_name": "Chatot",
+      "variety": "",
+      "spec_id": 5209723,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Tornadus-Holo",
+      "base_name": "Tornadus-Holo",
+      "variety": "",
+      "spec_id": 2452540,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 15,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    }
+  ]
+}

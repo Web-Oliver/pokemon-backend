@@ -1,0 +1,104 @@
+{
+  "year": "2010",
+  "set_name": "Pokemon Pikachu World Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2010/pokemon-pikachu-world-promo/98632",
+  "total_cards": 11,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 12,
+        "psa_2": 7,
+        "psa_3": 21,
+        "psa_4": 86,
+        "psa_5": 222,
+        "psa_6": 317,
+        "psa_7": 268,
+        "psa_8": 345,
+        "psa_9": 1597,
+        "psa_10": 7361,
+        "psa_total": 10237
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 10237
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pikachu-Holo",
+      "base_name": "Pikachu-Holo",
+      "variety": "",
+      "spec_id": 1789995,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 11,
+        "psa_5": 25,
+        "psa_6": 28,
+        "psa_7": 33,
+        "psa_8": 36,
+        "psa_9": 174,
+        "psa_10": 887,
+        "psa_total": 1199
+      },
+      "grade_totals": {
+        "total": 1199,
+        "grade_total": 1199
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pikachu-Holo-Japanese",
+      "base_name": "Pikachu-Holo",
+      "variety": "Japanese",
+      "spec_id": 1791315,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 6,
+        "psa_5": 13,
+        "psa_6": 31,
+        "psa_7": 26,
+        "psa_8": 29,
+        "psa_9": 161,
+        "psa_10": 618,
+        "psa_total": 890
+      },
+      "grade_totals": {
+        "total": 890,
+        "grade_total": 890
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pikachu-Holo-Japanese-7-11-Green",
+      "base_name": "Pikachu-Holo",
+      "variety": "Japanese-7-11-Green",
+      "spec_id": 2415021,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 5,
+        "psa_7": 2,
+        "psa_8": 15,
+        "psa_9": 80,
+        "psa_10": 259,
+        "psa_total": 369
+      },
+      "grade_totals": {
+        "total": 369,
+        "grade_total": 369
+      }
+    }
+  ]
+}

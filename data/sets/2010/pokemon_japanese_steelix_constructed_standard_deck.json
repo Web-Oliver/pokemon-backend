@@ -1,0 +1,488 @@
+{
+  "year": "2010",
+  "set_name": "Pokemon Japanese Steelix Constructed Standard Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2010/pokemon-japanese-steelix-constructed-standard-deck/136457",
+  "total_cards": 20,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 13,
+        "psa_6": 8,
+        "psa_7": 26,
+        "psa_8": 67,
+        "psa_9": 189,
+        "psa_10": 354,
+        "psa_total": 662
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 662
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Scyther-1st Edition",
+      "base_name": "Scyther",
+      "variety": "1st Edition",
+      "spec_id": 5194198,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 9,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Pinsir-1st Edition",
+      "base_name": "Pinsir",
+      "variety": "1st Edition",
+      "spec_id": 5194201,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Pineco-1st Edition",
+      "base_name": "Pineco",
+      "variety": "1st Edition",
+      "spec_id": 5194202,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Tropius-1st Edition",
+      "base_name": "Tropius",
+      "variety": "1st Edition",
+      "spec_id": 5194204,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Onix-1st Edition",
+      "base_name": "Onix",
+      "variety": "1st Edition",
+      "spec_id": 5194206,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Forretress-1st Edition",
+      "base_name": "Forretress",
+      "variety": "1st Edition",
+      "spec_id": 5194208,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Steelix",
+      "base_name": "Steelix",
+      "variety": "",
+      "spec_id": 8032497,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Steelix-1st Edition",
+      "base_name": "Steelix",
+      "variety": "1st Edition",
+      "spec_id": 7870483,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 13,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Steelix-Holo",
+      "base_name": "Steelix-Holo",
+      "variety": "",
+      "spec_id": 2900351,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 6,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Steelix-Holo-1st Edition",
+      "base_name": "Steelix-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2467495,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 23,
+        "psa_10": 66,
+        "psa_total": 101
+      },
+      "grade_totals": {
+        "total": 101,
+        "grade_total": 101
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Scizor-Holo",
+      "base_name": "Scizor-Holo",
+      "variety": "",
+      "spec_id": 2900417,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 15,
+        "psa_10": 9,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Scizor-Holo-1st Edition",
+      "base_name": "Scizor-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2306882,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 9,
+        "psa_6": 7,
+        "psa_7": 18,
+        "psa_8": 54,
+        "psa_9": 130,
+        "psa_10": 207,
+        "psa_total": 430
+      },
+      "grade_totals": {
+        "total": 430,
+        "grade_total": 430
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Aron-1st Edition",
+      "base_name": "Aron",
+      "variety": "1st Edition",
+      "spec_id": 5194210,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Lairon-1st Edition",
+      "base_name": "Lairon",
+      "variety": "1st Edition",
+      "spec_id": 5194212,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Switch-1st Edition",
+      "base_name": "Switch",
+      "variety": "1st Edition",
+      "spec_id": 5194216,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Professor Oak's New Theory-1st Edition",
+      "base_name": "Professor Oak's New Theory",
+      "variety": "1st Edition",
+      "spec_id": 5194222,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Sage's Training-1st Edition",
+      "base_name": "Sage's Training",
+      "variety": "1st Edition",
+      "spec_id": 5194223,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 5,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Pokemon Collector",
+      "base_name": "Pokemon Collector",
+      "variety": "",
+      "spec_id": 2900422,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Pokemon Collector-1st Edition",
+      "base_name": "Pokemon Collector",
+      "variety": "1st Edition",
+      "spec_id": 2789593,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 10,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    }
+  ]
+}

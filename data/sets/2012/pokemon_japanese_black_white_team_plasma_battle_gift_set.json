@@ -1,0 +1,176 @@
+{
+  "year": "2012",
+  "set_name": "Pokemon Japanese Black & White Team Plasma Battle Gift Set",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2012/pokemon-japanese-black-white-team-plasma-battle-gift-set/121519",
+  "total_cards": 7,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 6,
+        "psa_5": 20,
+        "psa_6": 38,
+        "psa_7": 63,
+        "psa_8": 185,
+        "psa_9": 336,
+        "psa_10": 457,
+        "psa_total": 1112
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1112
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Sableye",
+      "base_name": "Sableye",
+      "variety": "",
+      "spec_id": 5211143,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Full Art/Giratina",
+      "base_name": "Full Art/Giratina",
+      "variety": "",
+      "spec_id": 2071431,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 7,
+        "psa_6": 22,
+        "psa_7": 36,
+        "psa_8": 103,
+        "psa_9": 178,
+        "psa_10": 199,
+        "psa_total": 550
+      },
+      "grade_totals": {
+        "total": 550,
+        "grade_total": 550
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Cofagrigus-Holo",
+      "base_name": "Cofagrigus-Holo",
+      "variety": "",
+      "spec_id": 5211145,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Full Art/Darkrai",
+      "base_name": "Full Art/Darkrai",
+      "variety": "",
+      "spec_id": 2071433,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 13,
+        "psa_6": 11,
+        "psa_7": 26,
+        "psa_8": 80,
+        "psa_9": 149,
+        "psa_10": 227,
+        "psa_total": 514
+      },
+      "grade_totals": {
+        "total": 515,
+        "grade_total": 514
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Bisharp-Holo",
+      "base_name": "Bisharp-Holo",
+      "variety": "",
+      "spec_id": 4698733,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 16,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Ghetsis-Holo",
+      "base_name": "Ghetsis-Holo",
+      "variety": "",
+      "spec_id": 5211152,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 12,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    }
+  ]
+}

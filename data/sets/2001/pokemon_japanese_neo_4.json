@@ -1,0 +1,2744 @@
+{
+  "year": "2001",
+  "set_name": "Pokemon Japanese Neo 4",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2001/pokemon-japanese-neo-4/60076",
+  "total_cards": 114,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 77,
+        "psa_2": 112,
+        "psa_3": 195,
+        "psa_4": 401,
+        "psa_5": 940,
+        "psa_6": 1451,
+        "psa_7": 2325,
+        "psa_8": 7058,
+        "psa_9": 18589,
+        "psa_10": 9057,
+        "psa_total": 40225
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 40225
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Shining Charizard",
+      "base_name": "Shining Charizard",
+      "variety": "",
+      "spec_id": 1831690,
+      "psa_grades": {
+        "psa_1": 15,
+        "psa_2": 18,
+        "psa_3": 26,
+        "psa_4": 47,
+        "psa_5": 62,
+        "psa_6": 75,
+        "psa_7": 102,
+        "psa_8": 223,
+        "psa_9": 262,
+        "psa_10": 64,
+        "psa_total": 900
+      },
+      "grade_totals": {
+        "total": 909,
+        "grade_total": 900
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Shining Raichu",
+      "base_name": "Shining Raichu",
+      "variety": "",
+      "spec_id": 530227,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 6,
+        "psa_3": 10,
+        "psa_4": 26,
+        "psa_5": 43,
+        "psa_6": 51,
+        "psa_7": 64,
+        "psa_8": 126,
+        "psa_9": 213,
+        "psa_10": 56,
+        "psa_total": 605
+      },
+      "grade_totals": {
+        "total": 609,
+        "grade_total": 605
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Vulpix",
+      "base_name": "Vulpix",
+      "variety": "",
+      "spec_id": 2272284,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 38,
+        "psa_10": 29,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 86,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Light Ninetales",
+      "base_name": "Light Ninetales",
+      "variety": "",
+      "spec_id": 2468415,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 2,
+        "psa_8": 21,
+        "psa_9": 52,
+        "psa_10": 40,
+        "psa_total": 124
+      },
+      "grade_totals": {
+        "total": 124,
+        "grade_total": 124
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Jigglypuff",
+      "base_name": "Jigglypuff",
+      "variety": "",
+      "spec_id": 4879169,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 25,
+        "psa_10": 16,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Dark Wigglytuff",
+      "base_name": "Dark Wigglytuff",
+      "variety": "",
+      "spec_id": 4260253,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 48,
+        "psa_10": 19,
+        "psa_total": 73
+      },
+      "grade_totals": {
+        "total": 73,
+        "grade_total": 73
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Light Wigglytuff",
+      "base_name": "Light Wigglytuff",
+      "variety": "",
+      "spec_id": 4879171,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 12,
+        "psa_9": 52,
+        "psa_10": 15,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 86,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "48",
+      "card_name": "Venonat",
+      "base_name": "Venonat",
+      "variety": "",
+      "spec_id": 4879173,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 23,
+        "psa_10": 14,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "49",
+      "card_name": "Light Venomoth",
+      "base_name": "Light Venomoth",
+      "variety": "",
+      "spec_id": 4879174,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 9,
+        "psa_9": 24,
+        "psa_10": 19,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Psyduck",
+      "base_name": "Psyduck",
+      "variety": "",
+      "spec_id": 2673966,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 10,
+        "psa_9": 49,
+        "psa_10": 37,
+        "psa_total": 102
+      },
+      "grade_totals": {
+        "total": 102,
+        "grade_total": 102
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Light Golduck",
+      "base_name": "Light Golduck",
+      "variety": "",
+      "spec_id": 2673976,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 12,
+        "psa_9": 35,
+        "psa_10": 22,
+        "psa_total": 73
+      },
+      "grade_totals": {
+        "total": 73,
+        "grade_total": 73
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Growlithe",
+      "base_name": "Growlithe",
+      "variety": "",
+      "spec_id": 2673980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 40,
+        "psa_10": 33,
+        "psa_total": 87
+      },
+      "grade_totals": {
+        "total": 87,
+        "grade_total": 87
+      }
+    },
+    {
+      "pokemon_number": "59",
+      "card_name": "Light Arcanine-Holo",
+      "base_name": "Light Arcanine-Holo",
+      "variety": "",
+      "spec_id": 1865767,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 5,
+        "psa_3": 6,
+        "psa_4": 18,
+        "psa_5": 65,
+        "psa_6": 101,
+        "psa_7": 163,
+        "psa_8": 510,
+        "psa_9": 1314,
+        "psa_10": 543,
+        "psa_total": 2728
+      },
+      "grade_totals": {
+        "total": 2732,
+        "grade_total": 2728
+      }
+    },
+    {
+      "pokemon_number": "66",
+      "card_name": "Machop",
+      "base_name": "Machop",
+      "variety": "",
+      "spec_id": 2904932,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 25,
+        "psa_10": 21,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "67",
+      "card_name": "Light Machoke",
+      "base_name": "Light Machoke",
+      "variety": "",
+      "spec_id": 4879287,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 35,
+        "psa_10": 19,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "68",
+      "card_name": "Light Machamp",
+      "base_name": "Light Machamp",
+      "variety": "",
+      "spec_id": 2673985,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 21,
+        "psa_9": 54,
+        "psa_10": 28,
+        "psa_total": 110
+      },
+      "grade_totals": {
+        "total": 110,
+        "grade_total": 110
+      }
+    },
+    {
+      "pokemon_number": "80",
+      "card_name": "Light Slowbro",
+      "base_name": "Light Slowbro",
+      "variety": "",
+      "spec_id": 2653084,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 13,
+        "psa_9": 62,
+        "psa_10": 68,
+        "psa_total": 147
+      },
+      "grade_totals": {
+        "total": 147,
+        "grade_total": 147
+      }
+    },
+    {
+      "pokemon_number": "86",
+      "card_name": "Seel",
+      "base_name": "Seel",
+      "variety": "",
+      "spec_id": 4879289,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 21,
+        "psa_10": 19,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "87",
+      "card_name": "Light Dewgong",
+      "base_name": "Light Dewgong",
+      "variety": "",
+      "spec_id": 2466293,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 30,
+        "psa_10": 23,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 65,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "92",
+      "card_name": "Gastly",
+      "base_name": "Gastly",
+      "variety": "",
+      "spec_id": 4879292,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 31,
+        "psa_10": 17,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "93",
+      "card_name": "Dark Haunter",
+      "base_name": "Dark Haunter",
+      "variety": "",
+      "spec_id": 2673987,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 4,
+        "psa_8": 17,
+        "psa_9": 58,
+        "psa_10": 28,
+        "psa_total": 117
+      },
+      "grade_totals": {
+        "total": 117,
+        "grade_total": 117
+      }
+    },
+    {
+      "pokemon_number": "94",
+      "card_name": "Dark Gengar-Holo",
+      "base_name": "Dark Gengar-Holo",
+      "variety": "",
+      "spec_id": 1828517,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 11,
+        "psa_3": 10,
+        "psa_4": 15,
+        "psa_5": 61,
+        "psa_6": 96,
+        "psa_7": 199,
+        "psa_8": 634,
+        "psa_9": 1411,
+        "psa_10": 730,
+        "psa_total": 3170
+      },
+      "grade_totals": {
+        "total": 3176,
+        "grade_total": 3170
+      }
+    },
+    {
+      "pokemon_number": "102",
+      "card_name": "Exeggcute",
+      "base_name": "Exeggcute",
+      "variety": "",
+      "spec_id": 2904935,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 9,
+        "psa_9": 24,
+        "psa_10": 11,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "103",
+      "card_name": "Dark Exeggutor",
+      "base_name": "Dark Exeggutor",
+      "variety": "",
+      "spec_id": 4879293,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 40,
+        "psa_10": 20,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "106",
+      "card_name": "Hitmonlee",
+      "base_name": "Hitmonlee",
+      "variety": "",
+      "spec_id": 2904933,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 10,
+        "psa_9": 22,
+        "psa_10": 20,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "107",
+      "card_name": "Hitmonchan",
+      "base_name": "Hitmonchan",
+      "variety": "",
+      "spec_id": 4879294,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 32,
+        "psa_10": 15,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    },
+    {
+      "pokemon_number": "113",
+      "card_name": "Chansey",
+      "base_name": "Chansey",
+      "variety": "",
+      "spec_id": 2828636,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 41,
+        "psa_10": 25,
+        "psa_total": 82
+      },
+      "grade_totals": {
+        "total": 82,
+        "grade_total": 82
+      }
+    },
+    {
+      "pokemon_number": "123",
+      "card_name": "Scyther",
+      "base_name": "Scyther",
+      "variety": "",
+      "spec_id": 2795398,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 42,
+        "psa_10": 22,
+        "psa_total": 75
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 75
+      }
+    },
+    {
+      "pokemon_number": "134",
+      "card_name": "Light Vaporeon",
+      "base_name": "Light Vaporeon",
+      "variety": "",
+      "spec_id": 2272290,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 8,
+        "psa_8": 45,
+        "psa_9": 177,
+        "psa_10": 92,
+        "psa_total": 335
+      },
+      "grade_totals": {
+        "total": 336,
+        "grade_total": 335
+      }
+    },
+    {
+      "pokemon_number": "135",
+      "card_name": "Light Jolteon",
+      "base_name": "Light Jolteon",
+      "variety": "",
+      "spec_id": 2272285,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 18,
+        "psa_8": 39,
+        "psa_9": 193,
+        "psa_10": 120,
+        "psa_total": 380
+      },
+      "grade_totals": {
+        "total": 380,
+        "grade_total": 380
+      }
+    },
+    {
+      "pokemon_number": "136",
+      "card_name": "Light Flareon",
+      "base_name": "Light Flareon",
+      "variety": "",
+      "spec_id": 2272287,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 12,
+        "psa_8": 38,
+        "psa_9": 173,
+        "psa_10": 94,
+        "psa_total": 330
+      },
+      "grade_totals": {
+        "total": 330,
+        "grade_total": 330
+      }
+    },
+    {
+      "pokemon_number": "137",
+      "card_name": "Porygon",
+      "base_name": "Porygon",
+      "variety": "",
+      "spec_id": 2904934,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 4,
+        "psa_9": 29,
+        "psa_10": 17,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "138",
+      "card_name": "Dark Omanyte",
+      "base_name": "Dark Omanyte",
+      "variety": "",
+      "spec_id": 4879296,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 20,
+        "psa_10": 14,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "139",
+      "card_name": "Dark Omastar",
+      "base_name": "Dark Omastar",
+      "variety": "",
+      "spec_id": 2553613,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 10,
+        "psa_9": 34,
+        "psa_10": 18,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "141",
+      "card_name": "Shining Kabutops",
+      "base_name": "Shining Kabutops",
+      "variety": "",
+      "spec_id": 530228,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 11,
+        "psa_3": 10,
+        "psa_4": 23,
+        "psa_5": 33,
+        "psa_6": 44,
+        "psa_7": 62,
+        "psa_8": 151,
+        "psa_9": 236,
+        "psa_10": 62,
+        "psa_total": 637
+      },
+      "grade_totals": {
+        "total": 640,
+        "grade_total": 637
+      }
+    },
+    {
+      "pokemon_number": "147",
+      "card_name": "Dratini",
+      "base_name": "Dratini",
+      "variety": "",
+      "spec_id": 2421616,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 36,
+        "psa_10": 19,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 65,
+        "grade_total": 65
+      }
+    },
+    {
+      "pokemon_number": "148",
+      "card_name": "Light Dragonair",
+      "base_name": "Light Dragonair",
+      "variety": "",
+      "spec_id": 2613948,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 8,
+        "psa_8": 25,
+        "psa_9": 113,
+        "psa_10": 52,
+        "psa_total": 204
+      },
+      "grade_totals": {
+        "total": 204,
+        "grade_total": 204
+      }
+    },
+    {
+      "pokemon_number": "149",
+      "card_name": "Light Dragonite-Holo",
+      "base_name": "Light Dragonite-Holo",
+      "variety": "",
+      "spec_id": 530229,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 4,
+        "psa_3": 5,
+        "psa_4": 20,
+        "psa_5": 53,
+        "psa_6": 86,
+        "psa_7": 190,
+        "psa_8": 502,
+        "psa_9": 1321,
+        "psa_10": 610,
+        "psa_total": 2795
+      },
+      "grade_totals": {
+        "total": 2798,
+        "grade_total": 2795
+      }
+    },
+    {
+      "pokemon_number": "150",
+      "card_name": "Shining Mewtwo",
+      "base_name": "Shining Mewtwo",
+      "variety": "",
+      "spec_id": 870716,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 10,
+        "psa_3": 19,
+        "psa_4": 26,
+        "psa_5": 41,
+        "psa_6": 65,
+        "psa_7": 78,
+        "psa_8": 166,
+        "psa_9": 277,
+        "psa_10": 74,
+        "psa_total": 767
+      },
+      "grade_totals": {
+        "total": 777,
+        "grade_total": 767
+      }
+    },
+    {
+      "pokemon_number": "155",
+      "card_name": "Cyndaquil",
+      "base_name": "Cyndaquil",
+      "variety": "",
+      "spec_id": 2828634,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 11,
+        "psa_9": 47,
+        "psa_10": 35,
+        "psa_total": 98
+      },
+      "grade_totals": {
+        "total": 98,
+        "grade_total": 98
+      }
+    },
+    {
+      "pokemon_number": "156",
+      "card_name": "Dark Quilava",
+      "base_name": "Dark Quilava",
+      "variety": "",
+      "spec_id": 4296407,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 32,
+        "psa_10": 40,
+        "psa_total": 83
+      },
+      "grade_totals": {
+        "total": 83,
+        "grade_total": 83
+      }
+    },
+    {
+      "pokemon_number": "157",
+      "card_name": "Dark Typhlosion-Holo",
+      "base_name": "Dark Typhlosion-Holo",
+      "variety": "",
+      "spec_id": 1828768,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 2,
+        "psa_4": 10,
+        "psa_5": 32,
+        "psa_6": 54,
+        "psa_7": 88,
+        "psa_8": 289,
+        "psa_9": 810,
+        "psa_10": 495,
+        "psa_total": 1784
+      },
+      "grade_totals": {
+        "total": 1788,
+        "grade_total": 1784
+      }
+    },
+    {
+      "pokemon_number": "158",
+      "card_name": "Totodile",
+      "base_name": "Totodile",
+      "variety": "",
+      "spec_id": 2828633,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 8,
+        "psa_9": 46,
+        "psa_10": 28,
+        "psa_total": 89
+      },
+      "grade_totals": {
+        "total": 89,
+        "grade_total": 89
+      }
+    },
+    {
+      "pokemon_number": "159",
+      "card_name": "Dark Croconaw",
+      "base_name": "Dark Croconaw",
+      "variety": "",
+      "spec_id": 2673996,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 21,
+        "psa_10": 24,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "160",
+      "card_name": "Dark Feraligatr-Holo",
+      "base_name": "Dark Feraligatr-Holo",
+      "variety": "",
+      "spec_id": 2052725,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 12,
+        "psa_5": 24,
+        "psa_6": 57,
+        "psa_7": 77,
+        "psa_8": 260,
+        "psa_9": 756,
+        "psa_10": 383,
+        "psa_total": 1573
+      },
+      "grade_totals": {
+        "total": 1574,
+        "grade_total": 1573
+      }
+    },
+    {
+      "pokemon_number": "164",
+      "card_name": "Shining Noctowl",
+      "base_name": "Shining Noctowl",
+      "variety": "",
+      "spec_id": 530230,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 4,
+        "psa_3": 13,
+        "psa_4": 20,
+        "psa_5": 43,
+        "psa_6": 44,
+        "psa_7": 55,
+        "psa_8": 160,
+        "psa_9": 198,
+        "psa_10": 43,
+        "psa_total": 582
+      },
+      "grade_totals": {
+        "total": 585,
+        "grade_total": 582
+      }
+    },
+    {
+      "pokemon_number": "165",
+      "card_name": "Ledyba",
+      "base_name": "Ledyba",
+      "variety": "",
+      "spec_id": 4879298,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 27,
+        "psa_10": 18,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "166",
+      "card_name": "Light Ledian",
+      "base_name": "Light Ledian",
+      "variety": "",
+      "spec_id": 4303809,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 14,
+        "psa_9": 28,
+        "psa_10": 12,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "168",
+      "card_name": "Dark Ariados",
+      "base_name": "Dark Ariados",
+      "variety": "",
+      "spec_id": 4779525,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 19,
+        "psa_10": 14,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "169",
+      "card_name": "Dark Crobat-Holo",
+      "base_name": "Dark Crobat-Holo",
+      "variety": "",
+      "spec_id": 1789871,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 14,
+        "psa_6": 30,
+        "psa_7": 45,
+        "psa_8": 199,
+        "psa_9": 577,
+        "psa_10": 330,
+        "psa_total": 1201
+      },
+      "grade_totals": {
+        "total": 1202,
+        "grade_total": 1201
+      }
+    },
+    {
+      "pokemon_number": "171",
+      "card_name": "Light Lanturn",
+      "base_name": "Light Lanturn",
+      "variety": "",
+      "spec_id": 4774441,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 11,
+        "psa_9": 30,
+        "psa_10": 13,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    },
+    {
+      "pokemon_number": "175",
+      "card_name": "Togepi",
+      "base_name": "Togepi",
+      "variety": "",
+      "spec_id": 2828641,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 7,
+        "psa_9": 35,
+        "psa_10": 23,
+        "psa_total": 70
+      },
+      "grade_totals": {
+        "total": 70,
+        "grade_total": 70
+      }
+    },
+    {
+      "pokemon_number": "176",
+      "card_name": "Light Togetic-Holo",
+      "base_name": "Light Togetic-Holo",
+      "variety": "",
+      "spec_id": 2102809,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 21,
+        "psa_6": 47,
+        "psa_7": 77,
+        "psa_8": 278,
+        "psa_9": 733,
+        "psa_10": 216,
+        "psa_total": 1380
+      },
+      "grade_totals": {
+        "total": 1381,
+        "grade_total": 1380
+      }
+    },
+    {
+      "pokemon_number": "179",
+      "card_name": "Mareep",
+      "base_name": "Mareep",
+      "variety": "",
+      "spec_id": 4879299,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 21,
+        "psa_10": 19,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "180",
+      "card_name": "Dark Flaaffy",
+      "base_name": "Dark Flaaffy",
+      "variety": "",
+      "spec_id": 4879300,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 9,
+        "psa_9": 29,
+        "psa_10": 23,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "181",
+      "card_name": "Dark Ampharos-Holo",
+      "base_name": "Dark Ampharos-Holo",
+      "variety": "",
+      "spec_id": 1865765,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 29,
+        "psa_6": 42,
+        "psa_7": 70,
+        "psa_8": 252,
+        "psa_9": 713,
+        "psa_10": 421,
+        "psa_total": 1534
+      },
+      "grade_totals": {
+        "total": 1534,
+        "grade_total": 1534
+      }
+    },
+    {
+      "pokemon_number": "184",
+      "card_name": "Light Azumarill-Holo",
+      "base_name": "Light Azumarill-Holo",
+      "variety": "",
+      "spec_id": 2102879,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 12,
+        "psa_6": 24,
+        "psa_7": 48,
+        "psa_8": 145,
+        "psa_9": 528,
+        "psa_10": 325,
+        "psa_total": 1089
+      },
+      "grade_totals": {
+        "total": 1089,
+        "grade_total": 1089
+      }
+    },
+    {
+      "pokemon_number": "191",
+      "card_name": "Sunkern",
+      "base_name": "Sunkern",
+      "variety": "",
+      "spec_id": 4879301,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 16,
+        "psa_10": 18,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "192",
+      "card_name": "Light Sunflora",
+      "base_name": "Light Sunflora",
+      "variety": "",
+      "spec_id": 4879302,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 10,
+        "psa_9": 31,
+        "psa_10": 17,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 62,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "196",
+      "card_name": "Dark Espeon-Holo",
+      "base_name": "Dark Espeon-Holo",
+      "variety": "",
+      "spec_id": 2103469,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 3,
+        "psa_3": 10,
+        "psa_4": 34,
+        "psa_5": 76,
+        "psa_6": 133,
+        "psa_7": 213,
+        "psa_8": 661,
+        "psa_9": 1561,
+        "psa_10": 620,
+        "psa_total": 3318
+      },
+      "grade_totals": {
+        "total": 3326,
+        "grade_total": 3318
+      }
+    },
+    {
+      "pokemon_number": "199",
+      "card_name": "Dark Slowking",
+      "base_name": "Dark Slowking",
+      "variety": "",
+      "spec_id": 2444363,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 14,
+        "psa_8": 48,
+        "psa_9": 85,
+        "psa_10": 39,
+        "psa_total": 202
+      },
+      "grade_totals": {
+        "total": 203,
+        "grade_total": 202
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown G",
+      "base_name": "Unown G",
+      "variety": "",
+      "spec_id": 4212823,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 14,
+        "psa_10": 6,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown H",
+      "base_name": "Unown H",
+      "variety": "",
+      "spec_id": 4212824,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 14,
+        "psa_10": 4,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown P",
+      "base_name": "Unown P",
+      "variety": "",
+      "spec_id": 4212826,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 12,
+        "psa_10": 5,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown Q",
+      "base_name": "Unown Q",
+      "variety": "",
+      "spec_id": 4212827,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 14,
+        "psa_10": 4,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown S",
+      "base_name": "Unown S",
+      "variety": "",
+      "spec_id": 4212828,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 17,
+        "psa_10": 10,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown T",
+      "base_name": "Unown T",
+      "variety": "",
+      "spec_id": 4212829,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 10,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown C",
+      "base_name": "Unown C",
+      "variety": "",
+      "spec_id": 4212820,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 14,
+        "psa_10": 7,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown L",
+      "base_name": "Unown L",
+      "variety": "",
+      "spec_id": 4212825,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 14,
+        "psa_10": 3,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown V",
+      "base_name": "Unown V",
+      "variety": "",
+      "spec_id": 4212830,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 18,
+        "psa_10": 10,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown X",
+      "base_name": "Unown X",
+      "variety": "",
+      "spec_id": 4216688,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 13,
+        "psa_10": 6,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown W",
+      "base_name": "Unown W",
+      "variety": "",
+      "spec_id": 4216685,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 12,
+        "psa_10": 8,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown Z",
+      "base_name": "Unown Z",
+      "variety": "",
+      "spec_id": 4216689,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 9,
+        "psa_10": 12,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "203",
+      "card_name": "Girafarig",
+      "base_name": "Girafarig",
+      "variety": "",
+      "spec_id": 4879303,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 32,
+        "psa_10": 13,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "204",
+      "card_name": "Pineco",
+      "base_name": "Pineco",
+      "variety": "",
+      "spec_id": 4879307,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 11,
+        "psa_9": 27,
+        "psa_10": 13,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "205",
+      "card_name": "Dark Forretress",
+      "base_name": "Dark Forretress",
+      "variety": "",
+      "spec_id": 4879309,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 14,
+        "psa_10": 17,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "207",
+      "card_name": "Gligar",
+      "base_name": "Gligar",
+      "variety": "",
+      "spec_id": 4879311,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 22,
+        "psa_10": 12,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "208",
+      "card_name": "Shining Steelix",
+      "base_name": "Shining Steelix",
+      "variety": "",
+      "spec_id": 1799953,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 3,
+        "psa_3": 6,
+        "psa_4": 16,
+        "psa_5": 28,
+        "psa_6": 47,
+        "psa_7": 59,
+        "psa_8": 157,
+        "psa_9": 216,
+        "psa_10": 49,
+        "psa_total": 585
+      },
+      "grade_totals": {
+        "total": 593,
+        "grade_total": 585
+      }
+    },
+    {
+      "pokemon_number": "212",
+      "card_name": "Dark Scizor-Holo",
+      "base_name": "Dark Scizor-Holo",
+      "variety": "",
+      "spec_id": 530231,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 8,
+        "psa_5": 30,
+        "psa_6": 37,
+        "psa_7": 83,
+        "psa_8": 233,
+        "psa_9": 761,
+        "psa_10": 376,
+        "psa_total": 1535
+      },
+      "grade_totals": {
+        "total": 1536,
+        "grade_total": 1535
+      }
+    },
+    {
+      "pokemon_number": "214",
+      "card_name": "Heracross",
+      "base_name": "Heracross",
+      "variety": "",
+      "spec_id": 4879313,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 24,
+        "psa_10": 14,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "217",
+      "card_name": "Dark Ursaring",
+      "base_name": "Dark Ursaring",
+      "variety": "",
+      "spec_id": 2828644,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 10,
+        "psa_9": 55,
+        "psa_10": 19,
+        "psa_total": 91
+      },
+      "grade_totals": {
+        "total": 91,
+        "grade_total": 91
+      }
+    },
+    {
+      "pokemon_number": "218",
+      "card_name": "Slugma",
+      "base_name": "Slugma",
+      "variety": "",
+      "spec_id": 4879314,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 20,
+        "psa_10": 10,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "219",
+      "card_name": "Dark Magcargo",
+      "base_name": "Dark Magcargo",
+      "variety": "",
+      "spec_id": 2612966,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 27,
+        "psa_10": 18,
+        "psa_total": 52
+      },
+      "grade_totals": {
+        "total": 52,
+        "grade_total": 52
+      }
+    },
+    {
+      "pokemon_number": "220",
+      "card_name": "Swinub",
+      "base_name": "Swinub",
+      "variety": "",
+      "spec_id": 4879318,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 23,
+        "psa_10": 23,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "221",
+      "card_name": "Light Piloswine",
+      "base_name": "Light Piloswine",
+      "variety": "",
+      "spec_id": 2883328,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 24,
+        "psa_10": 18,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "223",
+      "card_name": "Remoraid",
+      "base_name": "Remoraid",
+      "variety": "",
+      "spec_id": 4879321,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 21,
+        "psa_10": 10,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "224",
+      "card_name": "Dark Octillery",
+      "base_name": "Dark Octillery",
+      "variety": "",
+      "spec_id": 4879324,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 12,
+        "psa_10": 16,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "226",
+      "card_name": "Mantine",
+      "base_name": "Mantine",
+      "variety": "",
+      "spec_id": 4879325,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 9,
+        "psa_9": 25,
+        "psa_10": 14,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "228",
+      "card_name": "Houndour",
+      "base_name": "Houndour",
+      "variety": "",
+      "spec_id": 4879328,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 8,
+        "psa_9": 23,
+        "psa_10": 15,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "229",
+      "card_name": "Dark Houndoom-Holo",
+      "base_name": "Dark Houndoom-Holo",
+      "variety": "",
+      "spec_id": 2102895,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 13,
+        "psa_5": 32,
+        "psa_6": 51,
+        "psa_7": 86,
+        "psa_8": 291,
+        "psa_9": 816,
+        "psa_10": 390,
+        "psa_total": 1684
+      },
+      "grade_totals": {
+        "total": 1686,
+        "grade_total": 1684
+      }
+    },
+    {
+      "pokemon_number": "231",
+      "card_name": "Phanpy",
+      "base_name": "Phanpy",
+      "variety": "",
+      "spec_id": 4879330,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 27,
+        "psa_10": 7,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "232",
+      "card_name": "Dark Donphan-Holo",
+      "base_name": "Dark Donphan-Holo",
+      "variety": "",
+      "spec_id": 2169222,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 12,
+        "psa_6": 22,
+        "psa_7": 50,
+        "psa_8": 159,
+        "psa_9": 491,
+        "psa_10": 294,
+        "psa_total": 1034
+      },
+      "grade_totals": {
+        "total": 1034,
+        "grade_total": 1034
+      }
+    },
+    {
+      "pokemon_number": "233",
+      "card_name": "Dark PORYGON2-Holo",
+      "base_name": "Dark PORYGON2-Holo",
+      "variety": "",
+      "spec_id": 1828583,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 7,
+        "psa_5": 11,
+        "psa_6": 29,
+        "psa_7": 55,
+        "psa_8": 193,
+        "psa_9": 549,
+        "psa_10": 321,
+        "psa_total": 1169
+      },
+      "grade_totals": {
+        "total": 1173,
+        "grade_total": 1169
+      }
+    },
+    {
+      "pokemon_number": "246",
+      "card_name": "Larvitar",
+      "base_name": "Larvitar",
+      "variety": "",
+      "spec_id": 4774848,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 36,
+        "psa_10": 13,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "247",
+      "card_name": "Dark Pupitar",
+      "base_name": "Dark Pupitar",
+      "variety": "",
+      "spec_id": 2904936,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 27,
+        "psa_10": 18,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "248",
+      "card_name": "Shining Tyranitar",
+      "base_name": "Shining Tyranitar",
+      "variety": "",
+      "spec_id": 1831688,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 10,
+        "psa_3": 15,
+        "psa_4": 25,
+        "psa_5": 60,
+        "psa_6": 62,
+        "psa_7": 79,
+        "psa_8": 137,
+        "psa_9": 260,
+        "psa_10": 65,
+        "psa_total": 723
+      },
+      "grade_totals": {
+        "total": 728,
+        "grade_total": 723
+      }
+    },
+    {
+      "pokemon_number": "248",
+      "card_name": "Dark Tyranitar-Holo",
+      "base_name": "Dark Tyranitar-Holo",
+      "variety": "",
+      "spec_id": 2102877,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 9,
+        "psa_4": 12,
+        "psa_5": 49,
+        "psa_6": 66,
+        "psa_7": 102,
+        "psa_8": 352,
+        "psa_9": 1014,
+        "psa_10": 496,
+        "psa_total": 2102
+      },
+      "grade_totals": {
+        "total": 2105,
+        "grade_total": 2102
+      }
+    },
+    {
+      "pokemon_number": "251",
+      "card_name": "Shining Celebi",
+      "base_name": "Shining Celebi",
+      "variety": "",
+      "spec_id": 530232,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 6,
+        "psa_3": 13,
+        "psa_4": 23,
+        "psa_5": 41,
+        "psa_6": 60,
+        "psa_7": 67,
+        "psa_8": 147,
+        "psa_9": 205,
+        "psa_10": 54,
+        "psa_total": 623
+      },
+      "grade_totals": {
+        "total": 626,
+        "grade_total": 623
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Energy Amplifier",
+      "base_name": "Energy Amplifier",
+      "variety": "",
+      "spec_id": 4846335,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 18,
+        "psa_10": 9,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Mail From Bill",
+      "base_name": "Mail From Bill",
+      "variety": "",
+      "spec_id": 2828647,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 27,
+        "psa_10": 10,
+        "psa_total": 45
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 45
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Counterattack Claws",
+      "base_name": "Counterattack Claws",
+      "variety": "",
+      "spec_id": 4846318,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 17,
+        "psa_10": 13,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Team Rocket's Evil Deeds",
+      "base_name": "Team Rocket's Evil Deeds",
+      "variety": "",
+      "spec_id": 2828656,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 29,
+        "psa_10": 11,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Miracle Energy-Holo",
+      "base_name": "Miracle Energy-Holo",
+      "variety": "",
+      "spec_id": 1828853,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 11,
+        "psa_6": 18,
+        "psa_7": 24,
+        "psa_8": 80,
+        "psa_9": 287,
+        "psa_10": 146,
+        "psa_total": 571
+      },
+      "grade_totals": {
+        "total": 571,
+        "grade_total": 571
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Exp.All",
+      "base_name": "Exp.All",
+      "variety": "",
+      "spec_id": 4757999,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 9,
+        "psa_9": 13,
+        "psa_10": 10,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Broken Ground Gym",
+      "base_name": "Broken Ground Gym",
+      "variety": "",
+      "spec_id": 4758971,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 23,
+        "psa_10": 15,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Imposter Professor Oak's Invention",
+      "base_name": "Imposter Professor Oak's Invention",
+      "variety": "",
+      "spec_id": 2674008,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 7,
+        "psa_9": 20,
+        "psa_10": 25,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Thought Wave Machine",
+      "base_name": "Thought Wave Machine",
+      "variety": "",
+      "spec_id": 4757873,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 15,
+        "psa_10": 15,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Magnifier",
+      "base_name": "Magnifier",
+      "variety": "",
+      "spec_id": 4846382,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 12,
+        "psa_10": 14,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Heal Powder",
+      "base_name": "Heal Powder",
+      "variety": "",
+      "spec_id": 4846404,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 22,
+        "psa_10": 8,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Energy Stadium",
+      "base_name": "Energy Stadium",
+      "variety": "",
+      "spec_id": 4846355,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 19,
+        "psa_10": 13,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Lucky Stadium",
+      "base_name": "Lucky Stadium",
+      "variety": "",
+      "spec_id": 2337268,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 18,
+        "psa_9": 57,
+        "psa_10": 46,
+        "psa_total": 135
+      },
+      "grade_totals": {
+        "total": 135,
+        "grade_total": 135
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pokemon Personality Test",
+      "base_name": "Pokemon Personality Test",
+      "variety": "",
+      "spec_id": 2674004,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 37,
+        "psa_10": 28,
+        "psa_total": 70
+      },
+      "grade_totals": {
+        "total": 70,
+        "grade_total": 70
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Radio Tower",
+      "base_name": "Radio Tower",
+      "variety": "",
+      "spec_id": 2723043,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 26,
+        "psa_10": 19,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 58,
+        "grade_total": 58
+      }
+    }
+  ]
+}

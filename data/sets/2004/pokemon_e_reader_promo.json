@@ -1,0 +1,176 @@
+{
+  "year": "2004",
+  "set_name": "Pokemon E-Reader Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2004/pokemon-e-reader-promo/221437",
+  "total_cards": 7,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "A101",
+      "card_name": "Line Art Card: the Pikachu Star-Australian Pokemon Channel",
+      "base_name": "Line Art Card: the Pikachu Star",
+      "variety": "Australian Pokemon Channel",
+      "spec_id": 7540905,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "A101",
+      "card_name": "Line Art Card: the Pikachu Star-North American Pokemon Channel",
+      "base_name": "Line Art Card: the Pikachu Star",
+      "variety": "North American Pokemon Channel",
+      "spec_id": 8080350,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "A102",
+      "card_name": "Line Art Card: Kyogre Constellation-North American Pokemon Channel",
+      "base_name": "Line Art Card: Kyogre Constellation",
+      "variety": "North American Pokemon Channel",
+      "spec_id": 8080353,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "A103",
+      "card_name": "Paint Pattern Card-Australian Pokemon Channel",
+      "base_name": "Paint Pattern Card",
+      "variety": "Australian Pokemon Channel",
+      "spec_id": 7540909,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "A103",
+      "card_name": "Paint Pattern Card: Poke A La Card-North American Pokemon Channel",
+      "base_name": "Paint Pattern Card: Poke A La Card",
+      "variety": "North American Pokemon Channel",
+      "spec_id": 8080360,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "P101",
+      "card_name": "Line Art Card: Jirachi-Australian Pokemon Channel",
+      "base_name": "Line Art Card: Jirachi",
+      "variety": "Australian Pokemon Channel",
+      "spec_id": 7540914,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

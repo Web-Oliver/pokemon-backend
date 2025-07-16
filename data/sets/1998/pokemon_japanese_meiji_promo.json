@@ -1,0 +1,1232 @@
+{
+  "year": "1998",
+  "set_name": "Pokemon Japanese Meiji Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1998/pokemon-japanese-meiji-promo/59649",
+  "total_cards": 51,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 35,
+        "psa_2": 43,
+        "psa_3": 62,
+        "psa_4": 140,
+        "psa_5": 290,
+        "psa_6": 502,
+        "psa_7": 876,
+        "psa_8": 1177,
+        "psa_9": 783,
+        "psa_10": 79,
+        "psa_total": 3988
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 3988
+      }
+    },
+    {
+      "pokemon_number": "0",
+      "card_name": "Mew-Prism",
+      "base_name": "Mew",
+      "variety": "Prism",
+      "spec_id": 726306,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Mewtwo-Prism",
+      "base_name": "Mewtwo",
+      "variety": "Prism",
+      "spec_id": 726213,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 12,
+        "psa_6": 18,
+        "psa_7": 14,
+        "psa_8": 30,
+        "psa_9": 21,
+        "psa_10": 4,
+        "psa_total": 105
+      },
+      "grade_totals": {
+        "total": 105,
+        "grade_total": 105
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "DR. Fuji-Prism",
+      "base_name": "DR. Fuji",
+      "variety": "Prism",
+      "spec_id": 830337,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 3,
+        "psa_6": 10,
+        "psa_7": 9,
+        "psa_8": 12,
+        "psa_9": 13,
+        "psa_10": 2,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 60,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Ancient Mew-Prism",
+      "base_name": "Ancient Mew",
+      "variety": "Prism",
+      "spec_id": 525453,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 4,
+        "psa_3": 4,
+        "psa_4": 9,
+        "psa_5": 15,
+        "psa_6": 27,
+        "psa_7": 36,
+        "psa_8": 29,
+        "psa_9": 26,
+        "psa_10": 3,
+        "psa_total": 159
+      },
+      "grade_totals": {
+        "total": 162,
+        "grade_total": 159
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Mewtwo in Armor-Prism",
+      "base_name": "Mewtwo in Armor",
+      "variety": "Prism",
+      "spec_id": 726323,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 8,
+        "psa_6": 12,
+        "psa_7": 18,
+        "psa_8": 28,
+        "psa_9": 19,
+        "psa_10": 2,
+        "psa_total": 97
+      },
+      "grade_totals": {
+        "total": 103,
+        "grade_total": 97
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Mewtwo Close Up-Prism",
+      "base_name": "Mewtwo Close Up",
+      "variety": "Prism",
+      "spec_id": 726304,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 8,
+        "psa_6": 11,
+        "psa_7": 21,
+        "psa_8": 19,
+        "psa_9": 31,
+        "psa_10": 5,
+        "psa_total": 102
+      },
+      "grade_totals": {
+        "total": 105,
+        "grade_total": 102
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Pirate Trainer-Prism",
+      "base_name": "Pirate Trainer",
+      "variety": "Prism",
+      "spec_id": 830335,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 6,
+        "psa_7": 15,
+        "psa_8": 16,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Dragonite-Prism",
+      "base_name": "Dragonite",
+      "variety": "Prism",
+      "spec_id": 726314,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 2,
+        "psa_5": 15,
+        "psa_6": 11,
+        "psa_7": 17,
+        "psa_8": 32,
+        "psa_9": 24,
+        "psa_10": 6,
+        "psa_total": 111
+      },
+      "grade_totals": {
+        "total": 116,
+        "grade_total": 111
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Nurse Joy Hologram-Prism",
+      "base_name": "Nurse Joy Hologram",
+      "variety": "Prism",
+      "spec_id": 830333,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 7,
+        "psa_7": 13,
+        "psa_8": 15,
+        "psa_9": 9,
+        "psa_10": 0,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Officer Jenny-Prism",
+      "base_name": "Officer Jenny",
+      "variety": "Prism",
+      "spec_id": 726215,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 14,
+        "psa_8": 20,
+        "psa_9": 23,
+        "psa_10": 0,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Corey & Pidgeot-Prism",
+      "base_name": "Corey & Pidgeot",
+      "variety": "Prism",
+      "spec_id": 859180,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 7,
+        "psa_7": 16,
+        "psa_8": 25,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Miranda-Prism",
+      "base_name": "Miranda",
+      "variety": "Prism",
+      "spec_id": 859177,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 10,
+        "psa_7": 13,
+        "psa_8": 16,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 52
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 52
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Nurse Joy-Prism",
+      "base_name": "Nurse Joy",
+      "variety": "Prism",
+      "spec_id": 859172,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 10,
+        "psa_8": 21,
+        "psa_9": 11,
+        "psa_10": 0,
+        "psa_total": 52
+      },
+      "grade_totals": {
+        "total": 52,
+        "grade_total": 52
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Brock-Prism",
+      "base_name": "Brock",
+      "variety": "Prism",
+      "spec_id": 726316,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 11,
+        "psa_8": 29,
+        "psa_9": 18,
+        "psa_10": 0,
+        "psa_total": 73
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 73
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Mew Flying-Prism",
+      "base_name": "Mew Flying",
+      "variety": "Prism",
+      "spec_id": 726216,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 8,
+        "psa_6": 14,
+        "psa_7": 26,
+        "psa_8": 42,
+        "psa_9": 29,
+        "psa_10": 1,
+        "psa_total": 130
+      },
+      "grade_totals": {
+        "total": 132,
+        "grade_total": 130
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Neesha-Prism",
+      "base_name": "Neesha",
+      "variety": "Prism",
+      "spec_id": 859213,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 6,
+        "psa_7": 12,
+        "psa_8": 15,
+        "psa_9": 11,
+        "psa_10": 3,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Fergus-Prism",
+      "base_name": "Fergus",
+      "variety": "Prism",
+      "spec_id": 859216,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 14,
+        "psa_8": 17,
+        "psa_9": 12,
+        "psa_10": 2,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Pokemon Copy Machine-Prism",
+      "base_name": "Pokemon Copy Machine",
+      "variety": "Prism",
+      "spec_id": 726308,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 7,
+        "psa_6": 8,
+        "psa_7": 13,
+        "psa_8": 21,
+        "psa_9": 20,
+        "psa_10": 1,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Team Rocket-Prism",
+      "base_name": "Team Rocket",
+      "variety": "Prism",
+      "spec_id": 859185,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 7,
+        "psa_7": 17,
+        "psa_8": 18,
+        "psa_9": 11,
+        "psa_10": 1,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 65
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "James/Meowth-Prism",
+      "base_name": "James/Meowth",
+      "variety": "Prism",
+      "spec_id": 830325,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 5,
+        "psa_7": 12,
+        "psa_8": 21,
+        "psa_9": 13,
+        "psa_10": 0,
+        "psa_total": 60
+      },
+      "grade_totals": {
+        "total": 60,
+        "grade_total": 60
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Venusaur-Prism",
+      "base_name": "Venusaur",
+      "variety": "Prism",
+      "spec_id": 830323,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 7,
+        "psa_6": 9,
+        "psa_7": 12,
+        "psa_8": 31,
+        "psa_9": 17,
+        "psa_10": 2,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 89,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Blastoise/Charizard-Prism",
+      "base_name": "Blastoise/Charizard",
+      "variety": "Prism",
+      "spec_id": 830319,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 8,
+        "psa_5": 8,
+        "psa_6": 10,
+        "psa_7": 23,
+        "psa_8": 28,
+        "psa_9": 16,
+        "psa_10": 2,
+        "psa_total": 98
+      },
+      "grade_totals": {
+        "total": 100,
+        "grade_total": 98
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Go!-Prism",
+      "base_name": "Go!",
+      "variety": "Prism",
+      "spec_id": 859165,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 9,
+        "psa_6": 12,
+        "psa_7": 24,
+        "psa_8": 39,
+        "psa_9": 21,
+        "psa_10": 2,
+        "psa_total": 114
+      },
+      "grade_totals": {
+        "total": 114,
+        "grade_total": 114
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Charizard Battle-Prism",
+      "base_name": "Charizard Battle",
+      "variety": "Prism",
+      "spec_id": 726320,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 14,
+        "psa_7": 23,
+        "psa_8": 26,
+        "psa_9": 18,
+        "psa_10": 0,
+        "psa_total": 88
+      },
+      "grade_totals": {
+        "total": 94,
+        "grade_total": 88
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Mewtwo Ball-Prism",
+      "base_name": "Mewtwo Ball",
+      "variety": "Prism",
+      "spec_id": 830317,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 5,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 11,
+        "psa_7": 18,
+        "psa_8": 22,
+        "psa_9": 27,
+        "psa_10": 1,
+        "psa_total": 93
+      },
+      "grade_totals": {
+        "total": 97,
+        "grade_total": 93
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Psyducks-Prism",
+      "base_name": "Psyducks",
+      "variety": "Prism",
+      "spec_id": 859156,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 9,
+        "psa_7": 17,
+        "psa_8": 25,
+        "psa_9": 11,
+        "psa_10": 1,
+        "psa_total": 72
+      },
+      "grade_totals": {
+        "total": 73,
+        "grade_total": 72
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Pikachus-Prism",
+      "base_name": "Pikachus",
+      "variety": "Prism",
+      "spec_id": 829846,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 10,
+        "psa_7": 16,
+        "psa_8": 23,
+        "psa_9": 13,
+        "psa_10": 2,
+        "psa_total": 74
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 74
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Meowth-Prism",
+      "base_name": "Meowth",
+      "variety": "Prism",
+      "spec_id": 829845,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 1,
+        "psa_6": 12,
+        "psa_7": 17,
+        "psa_8": 24,
+        "psa_9": 9,
+        "psa_10": 1,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Sad Pikachu-Prism",
+      "base_name": "Sad Pikachu",
+      "variety": "Prism",
+      "spec_id": 883970,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 8,
+        "psa_5": 3,
+        "psa_6": 10,
+        "psa_7": 17,
+        "psa_8": 28,
+        "psa_9": 11,
+        "psa_10": 1,
+        "psa_total": 80
+      },
+      "grade_totals": {
+        "total": 82,
+        "grade_total": 80
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Brock/Misty-Prism",
+      "base_name": "Brock/Misty",
+      "variety": "Prism",
+      "spec_id": 829844,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 7,
+        "psa_6": 9,
+        "psa_7": 15,
+        "psa_8": 22,
+        "psa_9": 7,
+        "psa_10": 1,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Mew-Prism",
+      "base_name": "Mew",
+      "variety": "Prism",
+      "spec_id": 859189,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 6,
+        "psa_5": 9,
+        "psa_6": 14,
+        "psa_7": 31,
+        "psa_8": 20,
+        "psa_9": 12,
+        "psa_10": 4,
+        "psa_total": 101
+      },
+      "grade_totals": {
+        "total": 106,
+        "grade_total": 101
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Goodbye...-Prism",
+      "base_name": "Goodbye...",
+      "variety": "Prism",
+      "spec_id": 829842,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 10,
+        "psa_7": 20,
+        "psa_8": 18,
+        "psa_9": 10,
+        "psa_10": 2,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Mew-Prism",
+      "base_name": "Mew",
+      "variety": "Prism",
+      "spec_id": 859205,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 6,
+        "psa_6": 13,
+        "psa_7": 30,
+        "psa_8": 29,
+        "psa_9": 12,
+        "psa_10": 0,
+        "psa_total": 101
+      },
+      "grade_totals": {
+        "total": 105,
+        "grade_total": 101
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Mew-Glossy-Prism",
+      "base_name": "Mew-Glossy",
+      "variety": "Prism",
+      "spec_id": 526891,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Pokemon Park-Prism",
+      "base_name": "Pokemon Park",
+      "variety": "Prism",
+      "spec_id": 829841,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 7,
+        "psa_7": 12,
+        "psa_8": 17,
+        "psa_9": 18,
+        "psa_10": 1,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 69,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Charizard & Others-Prism",
+      "base_name": "Charizard & Others",
+      "variety": "Prism",
+      "spec_id": 4041906,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 3,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 12,
+        "psa_6": 21,
+        "psa_7": 31,
+        "psa_8": 34,
+        "psa_9": 21,
+        "psa_10": 5,
+        "psa_total": 138
+      },
+      "grade_totals": {
+        "total": 145,
+        "grade_total": 138
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Togepi-Prism",
+      "base_name": "Togepi",
+      "variety": "Prism",
+      "spec_id": 829837,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 15,
+        "psa_7": 12,
+        "psa_8": 28,
+        "psa_9": 8,
+        "psa_10": 0,
+        "psa_total": 69
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 69
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Togepi Crying-Prism",
+      "base_name": "Togepi Crying",
+      "variety": "Prism",
+      "spec_id": 829668,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 8,
+        "psa_6": 12,
+        "psa_7": 19,
+        "psa_8": 25,
+        "psa_9": 15,
+        "psa_10": 3,
+        "psa_total": 89
+      },
+      "grade_totals": {
+        "total": 93,
+        "grade_total": 89
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Funny Face Pikachu-Prism",
+      "base_name": "Funny Face Pikachu",
+      "variety": "Prism",
+      "spec_id": 883964,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 6,
+        "psa_6": 8,
+        "psa_7": 24,
+        "psa_8": 37,
+        "psa_9": 15,
+        "psa_10": 0,
+        "psa_total": 95
+      },
+      "grade_totals": {
+        "total": 97,
+        "grade_total": 95
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Bulbasaur/Pikachu/Squirtle-Prism",
+      "base_name": "Bulbasaur/Pikachu/Squirtle",
+      "variety": "Prism",
+      "spec_id": 829836,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 9,
+        "psa_6": 13,
+        "psa_7": 13,
+        "psa_8": 26,
+        "psa_9": 17,
+        "psa_10": 1,
+        "psa_total": 84
+      },
+      "grade_totals": {
+        "total": 86,
+        "grade_total": 84
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Pikachu/Togepi-Prism",
+      "base_name": "Pikachu/Togepi",
+      "variety": "Prism",
+      "spec_id": 859182,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 6,
+        "psa_7": 18,
+        "psa_8": 26,
+        "psa_9": 16,
+        "psa_10": 3,
+        "psa_total": 79
+      },
+      "grade_totals": {
+        "total": 81,
+        "grade_total": 79
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Pikachu/Raichu-Prism",
+      "base_name": "Pikachu/Raichu",
+      "variety": "Prism",
+      "spec_id": 829666,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 7,
+        "psa_6": 20,
+        "psa_7": 15,
+        "psa_8": 29,
+        "psa_9": 17,
+        "psa_10": 1,
+        "psa_total": 94
+      },
+      "grade_totals": {
+        "total": 99,
+        "grade_total": 94
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Pikachu/Raichu-Prism",
+      "base_name": "Pikachu/Raichu",
+      "variety": "Prism",
+      "spec_id": 859202,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 16,
+        "psa_7": 22,
+        "psa_8": 21,
+        "psa_9": 24,
+        "psa_10": 1,
+        "psa_total": 94
+      },
+      "grade_totals": {
+        "total": 98,
+        "grade_total": 94
+      }
+    },
+    {
+      "pokemon_number": "42",
+      "card_name": "Daaash!-Prism",
+      "base_name": "Daaash!",
+      "variety": "Prism",
+      "spec_id": 829670,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 18,
+        "psa_8": 26,
+        "psa_9": 16,
+        "psa_10": 4,
+        "psa_total": 83
+      },
+      "grade_totals": {
+        "total": 85,
+        "grade_total": 83
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Pikachu/Raichu-Prism",
+      "base_name": "Pikachu/Raichu",
+      "variety": "Prism",
+      "spec_id": 829659,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 17,
+        "psa_8": 22,
+        "psa_9": 21,
+        "psa_10": 2,
+        "psa_total": 73
+      },
+      "grade_totals": {
+        "total": 73,
+        "grade_total": 73
+      }
+    },
+    {
+      "pokemon_number": "44",
+      "card_name": "Pikachu & Others-Prism",
+      "base_name": "Pikachu & Others",
+      "variety": "Prism",
+      "spec_id": 829655,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 9,
+        "psa_6": 9,
+        "psa_7": 20,
+        "psa_8": 19,
+        "psa_9": 23,
+        "psa_10": 1,
+        "psa_total": 84
+      },
+      "grade_totals": {
+        "total": 84,
+        "grade_total": 84
+      }
+    },
+    {
+      "pokemon_number": "45",
+      "card_name": "Charizard/Squirtle-Prism",
+      "base_name": "Charizard/Squirtle",
+      "variety": "Prism",
+      "spec_id": 829648,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 11,
+        "psa_7": 17,
+        "psa_8": 34,
+        "psa_9": 23,
+        "psa_10": 2,
+        "psa_total": 98
+      },
+      "grade_totals": {
+        "total": 100,
+        "grade_total": 98
+      }
+    },
+    {
+      "pokemon_number": "46",
+      "card_name": "Pikachu-Prism",
+      "base_name": "Pikachu",
+      "variety": "Prism",
+      "spec_id": 859194,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 13,
+        "psa_7": 27,
+        "psa_8": 25,
+        "psa_9": 18,
+        "psa_10": 2,
+        "psa_total": 95
+      },
+      "grade_totals": {
+        "total": 98,
+        "grade_total": 95
+      }
+    },
+    {
+      "pokemon_number": "47",
+      "card_name": "Playing With Sand-Prism",
+      "base_name": "Playing With Sand",
+      "variety": "Prism",
+      "spec_id": 866714,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 21,
+        "psa_8": 24,
+        "psa_9": 22,
+        "psa_10": 0,
+        "psa_total": 78
+      },
+      "grade_totals": {
+        "total": 78,
+        "grade_total": 78
+      }
+    },
+    {
+      "pokemon_number": "48",
+      "card_name": "Happy Pikachu-Prism",
+      "base_name": "Happy Pikachu",
+      "variety": "Prism",
+      "spec_id": 829647,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 5,
+        "psa_7": 23,
+        "psa_8": 20,
+        "psa_9": 13,
+        "psa_10": 3,
+        "psa_total": 76
+      },
+      "grade_totals": {
+        "total": 78,
+        "grade_total": 76
+      }
+    }
+  ]
+}

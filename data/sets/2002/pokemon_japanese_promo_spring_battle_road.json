@@ -1,0 +1,152 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Japanese Promo Spring Battle Road",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-japanese-promo-spring-battle-road/87369",
+  "total_cards": 6,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 10,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer",
+      "base_name": "No. 1 Trainer",
+      "variety": "",
+      "spec_id": 1725026,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-Kansai",
+      "base_name": "No. 1 Trainer",
+      "variety": "Kansai",
+      "spec_id": 7258942,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-Kyushu",
+      "base_name": "No. 1 Trainer",
+      "variety": "Kyushu",
+      "spec_id": 7970576,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer",
+      "base_name": "No. 2 Trainer",
+      "variety": "",
+      "spec_id": 8900166,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer",
+      "base_name": "No. 3 Trainer",
+      "variety": "",
+      "spec_id": 1725027,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    }
+  ]
+}

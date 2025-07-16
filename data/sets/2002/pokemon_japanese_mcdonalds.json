@@ -1,0 +1,752 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Japanese McDonald's",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-japanese-mcdonalds/101619",
+  "total_cards": 31,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 46,
+        "psa_2": 18,
+        "psa_3": 49,
+        "psa_4": 96,
+        "psa_5": 203,
+        "psa_6": 407,
+        "psa_7": 627,
+        "psa_8": 1546,
+        "psa_9": 4773,
+        "psa_10": 10514,
+        "psa_total": 18279
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 18279
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Bulbasaur",
+      "base_name": "Bulbasaur",
+      "variety": "",
+      "spec_id": 2121699,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 10,
+        "psa_7": 23,
+        "psa_8": 60,
+        "psa_9": 163,
+        "psa_10": 302,
+        "psa_total": 571
+      },
+      "grade_totals": {
+        "total": 572,
+        "grade_total": 571
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Oddish",
+      "base_name": "Oddish",
+      "variety": "",
+      "spec_id": 2145637,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 20,
+        "psa_9": 62,
+        "psa_10": 176,
+        "psa_total": 268
+      },
+      "grade_totals": {
+        "total": 268,
+        "grade_total": 268
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Chikorita-Holo",
+      "base_name": "Chikorita-Holo",
+      "variety": "",
+      "spec_id": 1854202,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 7,
+        "psa_5": 13,
+        "psa_6": 30,
+        "psa_7": 35,
+        "psa_8": 142,
+        "psa_9": 477,
+        "psa_10": 782,
+        "psa_total": 1493
+      },
+      "grade_totals": {
+        "total": 1493,
+        "grade_total": 1493
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Charmander-Holo",
+      "base_name": "Charmander-Holo",
+      "variety": "",
+      "spec_id": 1900168,
+      "psa_grades": {
+        "psa_1": 14,
+        "psa_2": 2,
+        "psa_3": 8,
+        "psa_4": 15,
+        "psa_5": 36,
+        "psa_6": 63,
+        "psa_7": 104,
+        "psa_8": 263,
+        "psa_9": 585,
+        "psa_10": 1150,
+        "psa_total": 2240
+      },
+      "grade_totals": {
+        "total": 2242,
+        "grade_total": 2240
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Vulpix",
+      "base_name": "Vulpix",
+      "variety": "",
+      "spec_id": 1958652,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 19,
+        "psa_9": 80,
+        "psa_10": 225,
+        "psa_total": 342
+      },
+      "grade_totals": {
+        "total": 343,
+        "grade_total": 342
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Cyndaquil",
+      "base_name": "Cyndaquil",
+      "variety": "",
+      "spec_id": 1958641,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 14,
+        "psa_7": 9,
+        "psa_8": 23,
+        "psa_9": 80,
+        "psa_10": 227,
+        "psa_total": 356
+      },
+      "grade_totals": {
+        "total": 356,
+        "grade_total": 356
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Squirtle-Holo",
+      "base_name": "Squirtle-Holo",
+      "variety": "",
+      "spec_id": 1900167,
+      "psa_grades": {
+        "psa_1": 13,
+        "psa_2": 5,
+        "psa_3": 12,
+        "psa_4": 27,
+        "psa_5": 50,
+        "psa_6": 80,
+        "psa_7": 117,
+        "psa_8": 291,
+        "psa_9": 759,
+        "psa_10": 944,
+        "psa_total": 2298
+      },
+      "grade_totals": {
+        "total": 2302,
+        "grade_total": 2298
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Totodile",
+      "base_name": "Totodile",
+      "variety": "",
+      "spec_id": 2062277,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 10,
+        "psa_8": 23,
+        "psa_9": 102,
+        "psa_10": 243,
+        "psa_total": 386
+      },
+      "grade_totals": {
+        "total": 386,
+        "grade_total": 386
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Marill",
+      "base_name": "Marill",
+      "variety": "",
+      "spec_id": 1958642,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 8,
+        "psa_7": 8,
+        "psa_8": 16,
+        "psa_9": 73,
+        "psa_10": 237,
+        "psa_total": 346
+      },
+      "grade_totals": {
+        "total": 346,
+        "grade_total": 346
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Pikachu-Holo",
+      "base_name": "Pikachu-Holo",
+      "variety": "",
+      "spec_id": 1826779,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 3,
+        "psa_3": 10,
+        "psa_4": 18,
+        "psa_5": 35,
+        "psa_6": 75,
+        "psa_7": 114,
+        "psa_8": 206,
+        "psa_9": 554,
+        "psa_10": 1325,
+        "psa_total": 2347
+      },
+      "grade_totals": {
+        "total": 2349,
+        "grade_total": 2347
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Chinchou",
+      "base_name": "Chinchou",
+      "variety": "",
+      "spec_id": 1958643,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 1,
+        "psa_8": 13,
+        "psa_9": 51,
+        "psa_10": 188,
+        "psa_total": 262
+      },
+      "grade_totals": {
+        "total": 262,
+        "grade_total": 262
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Mareep",
+      "base_name": "Mareep",
+      "variety": "",
+      "spec_id": 2145641,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 7,
+        "psa_8": 14,
+        "psa_9": 64,
+        "psa_10": 197,
+        "psa_total": 292
+      },
+      "grade_totals": {
+        "total": 292,
+        "grade_total": 292
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Abra",
+      "base_name": "Abra",
+      "variety": "",
+      "spec_id": 2145643,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 18,
+        "psa_9": 71,
+        "psa_10": 203,
+        "psa_total": 299
+      },
+      "grade_totals": {
+        "total": 299,
+        "grade_total": 299
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Slowpoke-Holo",
+      "base_name": "Slowpoke-Holo",
+      "variety": "",
+      "spec_id": 1900169,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 4,
+        "psa_4": 3,
+        "psa_5": 16,
+        "psa_6": 28,
+        "psa_7": 51,
+        "psa_8": 98,
+        "psa_9": 255,
+        "psa_10": 955,
+        "psa_total": 1416
+      },
+      "grade_totals": {
+        "total": 1416,
+        "grade_total": 1416
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Natu",
+      "base_name": "Natu",
+      "variety": "",
+      "spec_id": 2145645,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 7,
+        "psa_8": 10,
+        "psa_9": 75,
+        "psa_10": 182,
+        "psa_total": 280
+      },
+      "grade_totals": {
+        "total": 280,
+        "grade_total": 280
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Sandshrew",
+      "base_name": "Sandshrew",
+      "variety": "",
+      "spec_id": 2145647,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 6,
+        "psa_7": 4,
+        "psa_8": 15,
+        "psa_9": 70,
+        "psa_10": 193,
+        "psa_total": 292
+      },
+      "grade_totals": {
+        "total": 292,
+        "grade_total": 292
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Phanpy",
+      "base_name": "Phanpy",
+      "variety": "",
+      "spec_id": 2145649,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 22,
+        "psa_9": 60,
+        "psa_10": 195,
+        "psa_total": 291
+      },
+      "grade_totals": {
+        "total": 291,
+        "grade_total": 291
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Larvitar-Holo",
+      "base_name": "Larvitar-Holo",
+      "variety": "",
+      "spec_id": 1900179,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 8,
+        "psa_5": 12,
+        "psa_6": 31,
+        "psa_7": 54,
+        "psa_8": 106,
+        "psa_9": 290,
+        "psa_10": 914,
+        "psa_total": 1418
+      },
+      "grade_totals": {
+        "total": 1418,
+        "grade_total": 1418
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fighting Energy",
+      "base_name": "Fighting Energy",
+      "variety": "",
+      "spec_id": 2145663,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 24,
+        "psa_10": 49,
+        "psa_total": 84
+      },
+      "grade_totals": {
+        "total": 84,
+        "grade_total": 84
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fighting Energy-Holo",
+      "base_name": "Fighting Energy-Holo",
+      "variety": "",
+      "spec_id": 2077967,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 21,
+        "psa_9": 116,
+        "psa_10": 282,
+        "psa_total": 431
+      },
+      "grade_totals": {
+        "total": 431,
+        "grade_total": 431
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fire Energy",
+      "base_name": "Fire Energy",
+      "variety": "",
+      "spec_id": 2145656,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 12,
+        "psa_10": 43,
+        "psa_total": 59
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 59
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fire Energy-Holo",
+      "base_name": "Fire Energy-Holo",
+      "variety": "",
+      "spec_id": 2145651,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 13,
+        "psa_8": 26,
+        "psa_9": 140,
+        "psa_10": 294,
+        "psa_total": 479
+      },
+      "grade_totals": {
+        "total": 480,
+        "grade_total": 479
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 2145657,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 21,
+        "psa_10": 66,
+        "psa_total": 90
+      },
+      "grade_totals": {
+        "total": 90,
+        "grade_total": 90
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Grass Energy-Holo",
+      "base_name": "Grass Energy-Holo",
+      "variety": "",
+      "spec_id": 2145653,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 22,
+        "psa_9": 102,
+        "psa_10": 264,
+        "psa_total": 402
+      },
+      "grade_totals": {
+        "total": 402,
+        "grade_total": 402
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 2145662,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 12,
+        "psa_10": 40,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 58,
+        "grade_total": 58
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Lightning Energy-Holo",
+      "base_name": "Lightning Energy-Holo",
+      "variety": "",
+      "spec_id": 2077823,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 9,
+        "psa_8": 41,
+        "psa_9": 166,
+        "psa_10": 244,
+        "psa_total": 469
+      },
+      "grade_totals": {
+        "total": 470,
+        "grade_total": 469
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Psychic Energy",
+      "base_name": "Psychic Energy",
+      "variety": "",
+      "spec_id": 2145659,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 18,
+        "psa_10": 53,
+        "psa_total": 77
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 77
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Psychic Energy-Holo",
+      "base_name": "Psychic Energy-Holo",
+      "variety": "",
+      "spec_id": 2077856,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 11,
+        "psa_8": 19,
+        "psa_9": 121,
+        "psa_10": 245,
+        "psa_total": 403
+      },
+      "grade_totals": {
+        "total": 403,
+        "grade_total": 403
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Water Energy",
+      "base_name": "Water Energy",
+      "variety": "",
+      "spec_id": 2145660,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 16,
+        "psa_10": 60,
+        "psa_total": 85
+      },
+      "grade_totals": {
+        "total": 85,
+        "grade_total": 85
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Water Energy-Holo",
+      "base_name": "Water Energy-Holo",
+      "variety": "",
+      "spec_id": 2145654,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 10,
+        "psa_8": 37,
+        "psa_9": 154,
+        "psa_10": 236,
+        "psa_total": 445
+      },
+      "grade_totals": {
+        "total": 445,
+        "grade_total": 445
+      }
+    }
+  ]
+}

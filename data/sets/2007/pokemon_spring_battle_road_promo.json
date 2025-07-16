@@ -1,0 +1,56 @@
+{
+  "year": "2007",
+  "set_name": "Pokemon Spring Battle Road Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2007/pokemon-spring-battle-road-promo/150729",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 40,
+        "psa_9": 32,
+        "psa_10": 1,
+        "psa_total": 89
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 89
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Victory Medal",
+      "base_name": "Victory Medal",
+      "variety": "",
+      "spec_id": 2443134,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 40,
+        "psa_9": 32,
+        "psa_10": 1,
+        "psa_total": 89
+      },
+      "grade_totals": {
+        "total": 89,
+        "grade_total": 89
+      }
+    }
+  ]
+}

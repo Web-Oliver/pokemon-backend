@@ -1,0 +1,248 @@
+{
+  "year": "2005",
+  "set_name": "Pokemon Japanese Pokepark Blue",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2005/pokemon-japanese-pokepark-blue/193711",
+  "total_cards": 10,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 8,
+        "psa_5": 34,
+        "psa_6": 40,
+        "psa_7": 47,
+        "psa_8": 134,
+        "psa_9": 569,
+        "psa_10": 580,
+        "psa_total": 1416
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1416
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Entei",
+      "base_name": "Entei",
+      "variety": "",
+      "spec_id": 5175850,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 6,
+        "psa_7": 1,
+        "psa_8": 10,
+        "psa_9": 56,
+        "psa_10": 47,
+        "psa_total": 126
+      },
+      "grade_totals": {
+        "total": 126,
+        "grade_total": 126
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "HO-Oh",
+      "base_name": "HO-Oh",
+      "variety": "",
+      "spec_id": 5175851,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 8,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 20,
+        "psa_9": 53,
+        "psa_10": 53,
+        "psa_total": 141
+      },
+      "grade_totals": {
+        "total": 141,
+        "grade_total": 141
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Suicune-Holo",
+      "base_name": "Suicune-Holo",
+      "variety": "",
+      "spec_id": 5175852,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 8,
+        "psa_7": 9,
+        "psa_8": 23,
+        "psa_9": 60,
+        "psa_10": 112,
+        "psa_total": 215
+      },
+      "grade_totals": {
+        "total": 215,
+        "grade_total": 215
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Kyogre",
+      "base_name": "Kyogre",
+      "variety": "",
+      "spec_id": 5175853,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 7,
+        "psa_8": 12,
+        "psa_9": 49,
+        "psa_10": 46,
+        "psa_total": 120
+      },
+      "grade_totals": {
+        "total": 120,
+        "grade_total": 120
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Raikou",
+      "base_name": "Raikou",
+      "variety": "",
+      "spec_id": 5175854,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 6,
+        "psa_9": 58,
+        "psa_10": 60,
+        "psa_total": 141
+      },
+      "grade_totals": {
+        "total": 141,
+        "grade_total": 141
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Lugia-Holo",
+      "base_name": "Lugia-Holo",
+      "variety": "",
+      "spec_id": 5175855,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 4,
+        "psa_7": 8,
+        "psa_8": 22,
+        "psa_9": 94,
+        "psa_10": 78,
+        "psa_total": 213
+      },
+      "grade_totals": {
+        "total": 213,
+        "grade_total": 213
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Groudon",
+      "base_name": "Groudon",
+      "variety": "",
+      "spec_id": 5175856,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 15,
+        "psa_9": 55,
+        "psa_10": 42,
+        "psa_total": 121
+      },
+      "grade_totals": {
+        "total": 121,
+        "grade_total": 121
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Tauros",
+      "base_name": "Tauros",
+      "variety": "",
+      "spec_id": 5175857,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 11,
+        "psa_9": 46,
+        "psa_10": 31,
+        "psa_total": 93
+      },
+      "grade_totals": {
+        "total": 93,
+        "grade_total": 93
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Rayquaza-Holo",
+      "base_name": "Rayquaza-Holo",
+      "variety": "",
+      "spec_id": 5175858,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 5,
+        "psa_7": 8,
+        "psa_8": 15,
+        "psa_9": 98,
+        "psa_10": 111,
+        "psa_total": 246
+      },
+      "grade_totals": {
+        "total": 246,
+        "grade_total": 246
+      }
+    }
+  ]
+}

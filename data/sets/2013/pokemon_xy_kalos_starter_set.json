@@ -1,0 +1,464 @@
+{
+  "year": "2013",
+  "set_name": "Pokemon XY Kalos Starter Set",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2013/pokemon-xy-kalos-starter-set/120244",
+  "total_cards": 19,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 13,
+        "psa_6": 8,
+        "psa_7": 14,
+        "psa_8": 40,
+        "psa_9": 9,
+        "psa_10": 0,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Chespin",
+      "base_name": "Chespin",
+      "variety": "",
+      "spec_id": 5251724,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 0
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 0
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Chespin-Holo",
+      "base_name": "Chespin-Holo",
+      "variety": "",
+      "spec_id": 5251725,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Quilladin-Holo",
+      "base_name": "Quilladin-Holo",
+      "variety": "",
+      "spec_id": 5251727,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Chesnaught-Holo",
+      "base_name": "Chesnaught-Holo",
+      "variety": "",
+      "spec_id": 5251729,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Fennekin",
+      "base_name": "Fennekin",
+      "variety": "",
+      "spec_id": 2055540,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Fennekin-Holo",
+      "base_name": "Fennekin-Holo",
+      "variety": "",
+      "spec_id": 5251732,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Delphox",
+      "base_name": "Delphox",
+      "variety": "",
+      "spec_id": 2264051,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Delphox-Holo",
+      "base_name": "Delphox-Holo",
+      "variety": "",
+      "spec_id": 5251735,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Froakie-Holo",
+      "base_name": "Froakie-Holo",
+      "variety": "",
+      "spec_id": 4700251,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Frogadier-Holo",
+      "base_name": "Frogadier-Holo",
+      "variety": "",
+      "spec_id": 5251739,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Greninja",
+      "base_name": "Greninja",
+      "variety": "",
+      "spec_id": 2264048,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Greninja-Holo",
+      "base_name": "Greninja-Holo",
+      "variety": "",
+      "spec_id": 5251741,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 14,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Snorlax",
+      "base_name": "Snorlax",
+      "variety": "",
+      "spec_id": 5251754,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Miltank",
+      "base_name": "Miltank",
+      "variety": "",
+      "spec_id": 5251756,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Bidoof",
+      "base_name": "Bidoof",
+      "variety": "",
+      "spec_id": 5251760,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Crushing Hammer-Reverse Foil-Pokemon League",
+      "base_name": "Crushing Hammer-Reverse Foil",
+      "variety": "Pokemon League",
+      "spec_id": 5251869,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Pokemon Catcher-Reverse Foil-Pokemon League",
+      "base_name": "Pokemon Catcher-Reverse Foil",
+      "variety": "Pokemon League",
+      "spec_id": 5251870,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Tierno-Reverse Foil-Pokemon League",
+      "base_name": "Tierno-Reverse Foil",
+      "variety": "Pokemon League",
+      "spec_id": 5251871,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    }
+  ]
+}

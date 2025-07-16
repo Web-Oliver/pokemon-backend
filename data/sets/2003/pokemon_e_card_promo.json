@@ -1,0 +1,56 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon E Card Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-e-card-promo/186064",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 10,
+        "psa_4": 16,
+        "psa_5": 26,
+        "psa_6": 17,
+        "psa_7": 9,
+        "psa_8": 21,
+        "psa_9": 46,
+        "psa_10": 32,
+        "psa_total": 180
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 180
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Eon Ticket",
+      "base_name": "Eon Ticket",
+      "variety": "",
+      "spec_id": 4041857,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 10,
+        "psa_4": 16,
+        "psa_5": 26,
+        "psa_6": 17,
+        "psa_7": 9,
+        "psa_8": 21,
+        "psa_9": 46,
+        "psa_10": 32,
+        "psa_total": 180
+      },
+      "grade_totals": {
+        "total": 180,
+        "grade_total": 180
+      }
+    }
+  ]
+}

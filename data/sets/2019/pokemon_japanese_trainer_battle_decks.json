@@ -1,0 +1,536 @@
+{
+  "year": "2019",
+  "set_name": "Pokemon Japanese Trainer Battle Decks",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2019/pokemon-japanese-trainer-battle-decks/164802",
+  "total_cards": 22,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 24,
+        "psa_9": 168,
+        "psa_10": 396,
+        "psa_total": 595
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 595
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Psyduck",
+      "base_name": "Psyduck",
+      "variety": "",
+      "spec_id": 8450980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 9,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Horsea",
+      "base_name": "Horsea",
+      "variety": "",
+      "spec_id": 9814368,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Staryu",
+      "base_name": "Staryu",
+      "variety": "",
+      "spec_id": 9814363,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Starmie GX",
+      "base_name": "Starmie GX",
+      "variety": "",
+      "spec_id": 2723206,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 39,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Magikarp",
+      "base_name": "Magikarp",
+      "variety": "",
+      "spec_id": 9814355,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Gyarados",
+      "base_name": "Gyarados",
+      "variety": "",
+      "spec_id": 8345074,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 9,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Lapras",
+      "base_name": "Lapras",
+      "variety": "",
+      "spec_id": 2756922,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 7,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Graveler",
+      "base_name": "Graveler",
+      "variety": "",
+      "spec_id": 6607229,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Onix GX",
+      "base_name": "Onix GX",
+      "variety": "",
+      "spec_id": 2723195,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 13,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Cubone",
+      "base_name": "Cubone",
+      "variety": "",
+      "spec_id": 8501042,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Misty's Water Manipulation",
+      "base_name": "Misty's Water Manipulation",
+      "variety": "",
+      "spec_id": 2723213,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 101,
+        "psa_10": 255,
+        "psa_total": 367
+      },
+      "grade_totals": {
+        "total": 367,
+        "grade_total": 367
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Misty's Determination",
+      "base_name": "Misty's Determination",
+      "variety": "",
+      "spec_id": 2723214,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 18,
+        "psa_10": 14,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Cynthia",
+      "base_name": "Cynthia",
+      "variety": "",
+      "spec_id": 9814372,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 7,
+        "psa_10": 1,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Brock's Grit",
+      "base_name": "Brock's Grit",
+      "variety": "",
+      "spec_id": 2723209,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Brock's Training",
+      "base_name": "Brock's Training",
+      "variety": "",
+      "spec_id": 2723205,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 11,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Hau",
+      "base_name": "Hau",
+      "variety": "",
+      "spec_id": 9814376,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Pokemon Center Lady",
+      "base_name": "Pokemon Center Lady",
+      "variety": "",
+      "spec_id": 2723199,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Lillie",
+      "base_name": "Lillie",
+      "variety": "",
+      "spec_id": 8450961,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 16,
+        "psa_10": 23,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Misty's Cerulean City Gym",
+      "base_name": "Misty's Cerulean City Gym",
+      "variety": "",
+      "spec_id": 2723192,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Brock's Pewter City Gym",
+      "base_name": "Brock's Pewter City Gym",
+      "variety": "",
+      "spec_id": 2723204,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Double Colorless Energy",
+      "base_name": "Double Colorless Energy",
+      "variety": "",
+      "spec_id": 11126036,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,656 @@
+{
+  "year": "2009",
+  "set_name": "Pokemon Diamond & Pearl Black Star Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2009/pokemon-diamond-pearl-black-star-promo/90093",
+  "total_cards": 40,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 145,
+        "psa_2": 83,
+        "psa_3": 149,
+        "psa_4": 326,
+        "psa_5": 693,
+        "psa_6": 1053,
+        "psa_7": 1415,
+        "psa_8": 1541,
+        "psa_9": 874,
+        "psa_10": 101,
+        "psa_total": 6385
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 6385
+      }
+    },
+    {
+      "pokemon_number": "DP35",
+      "card_name": "Porygon-Z-Holo",
+      "base_name": "Porygon-Z-Holo",
+      "variety": "",
+      "spec_id": 2356567,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 6,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "DP36",
+      "card_name": "Gliscor-Holo",
+      "base_name": "Gliscor-Holo",
+      "variety": "",
+      "spec_id": 2298729,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 4,
+        "psa_8": 4,
+        "psa_9": 9,
+        "psa_10": 1,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "DP37",
+      "card_name": "Dialga LV.X-Holo",
+      "base_name": "Dialga LV.X-Holo",
+      "variety": "",
+      "spec_id": 1796396,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 5,
+        "psa_3": 10,
+        "psa_4": 15,
+        "psa_5": 24,
+        "psa_6": 39,
+        "psa_7": 65,
+        "psa_8": 81,
+        "psa_9": 45,
+        "psa_10": 3,
+        "psa_total": 291
+      },
+      "grade_totals": {
+        "total": 293,
+        "grade_total": 291
+      }
+    },
+    {
+      "pokemon_number": "DP37",
+      "card_name": "Dialga LV.X-Holo-Dialga Collector's Tin-French",
+      "base_name": "Dialga LV.X-Holo",
+      "variety": "Dialga Collector's Tin-French",
+      "spec_id": 10510572,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "DP37",
+      "card_name": "Dialga LV.X-Holo-Spring Tin-German",
+      "base_name": "Dialga LV.X-Holo",
+      "variety": "Spring Tin-German",
+      "spec_id": 11879596,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "DP38",
+      "card_name": "Giratina LV.X-Holo",
+      "base_name": "Giratina LV.X-Holo",
+      "variety": "",
+      "spec_id": 2256764,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 7,
+        "psa_3": 7,
+        "psa_4": 21,
+        "psa_5": 44,
+        "psa_6": 61,
+        "psa_7": 98,
+        "psa_8": 121,
+        "psa_9": 58,
+        "psa_10": 3,
+        "psa_total": 426
+      },
+      "grade_totals": {
+        "total": 428,
+        "grade_total": 426
+      }
+    },
+    {
+      "pokemon_number": "DP38",
+      "card_name": "Giratina LV.X-Holo-Spring Tin-German",
+      "base_name": "Giratina LV.X-Holo",
+      "variety": "Spring Tin-German",
+      "spec_id": 7145506,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 3,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "DP38",
+      "card_name": "Giratina Niv.X-Holo-Giratina Collector's Tin-French",
+      "base_name": "Giratina Niv.X-Holo",
+      "variety": "Giratina Collector's Tin-French",
+      "spec_id": 8775223,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 15,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "DP39",
+      "card_name": "Shaymin LV.X-Holo",
+      "base_name": "Shaymin LV.X-Holo",
+      "variety": "",
+      "spec_id": 2221129,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 6,
+        "psa_5": 15,
+        "psa_6": 39,
+        "psa_7": 54,
+        "psa_8": 86,
+        "psa_9": 49,
+        "psa_10": 1,
+        "psa_total": 255
+      },
+      "grade_totals": {
+        "total": 255,
+        "grade_total": 255
+      }
+    },
+    {
+      "pokemon_number": "DP39",
+      "card_name": "Shaymin LV.X-Holo-Spring Tin-German",
+      "base_name": "Shaymin LV.X-Holo",
+      "variety": "Spring Tin-German",
+      "spec_id": 6150572,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "DP40",
+      "card_name": "Regigigas-Holo",
+      "base_name": "Regigigas-Holo",
+      "variety": "",
+      "spec_id": 2356571,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 12,
+        "psa_10": 2,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "DP41",
+      "card_name": "Toxicroak G-Holo",
+      "base_name": "Toxicroak G",
+      "variety": "Holo",
+      "spec_id": 2356574,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 12,
+        "psa_9": 8,
+        "psa_10": 2,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "DP42",
+      "card_name": "Carnivine G-Holo",
+      "base_name": "Carnivine G",
+      "variety": "Holo",
+      "spec_id": 2356577,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 7,
+        "psa_9": 12,
+        "psa_10": 1,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "DP43",
+      "card_name": "Probopass G-Holo",
+      "base_name": "Probopass G",
+      "variety": "Holo",
+      "spec_id": 1800606,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 12,
+        "psa_9": 16,
+        "psa_10": 1,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "DP44",
+      "card_name": "Magnezone-Holo",
+      "base_name": "Magnezone",
+      "variety": "Holo",
+      "spec_id": 2356095,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 6,
+        "psa_7": 4,
+        "psa_8": 28,
+        "psa_9": 28,
+        "psa_10": 0,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "DP45",
+      "card_name": "Charizard G LV.X-Holo",
+      "base_name": "Charizard G LV.X",
+      "variety": "Holo",
+      "spec_id": 880169,
+      "psa_grades": {
+        "psa_1": 94,
+        "psa_2": 49,
+        "psa_3": 71,
+        "psa_4": 164,
+        "psa_5": 359,
+        "psa_6": 510,
+        "psa_7": 647,
+        "psa_8": 580,
+        "psa_9": 191,
+        "psa_10": 19,
+        "psa_total": 2687
+      },
+      "grade_totals": {
+        "total": 2708,
+        "grade_total": 2687
+      }
+    },
+    {
+      "pokemon_number": "DP46",
+      "card_name": "Garchomp C LV.X-Holo",
+      "base_name": "Garchomp C LV.X",
+      "variety": "Holo",
+      "spec_id": 1814937,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 11,
+        "psa_4": 21,
+        "psa_5": 43,
+        "psa_6": 81,
+        "psa_7": 112,
+        "psa_8": 130,
+        "psa_9": 55,
+        "psa_10": 4,
+        "psa_total": 460
+      },
+      "grade_totals": {
+        "total": 461,
+        "grade_total": 460
+      }
+    },
+    {
+      "pokemon_number": "DP47",
+      "card_name": "Rayquaza C LV.X-Holo",
+      "base_name": "Rayquaza C LV.X-Holo",
+      "variety": "",
+      "spec_id": 1874751,
+      "psa_grades": {
+        "psa_1": 20,
+        "psa_2": 10,
+        "psa_3": 21,
+        "psa_4": 54,
+        "psa_5": 86,
+        "psa_6": 119,
+        "psa_7": 162,
+        "psa_8": 115,
+        "psa_9": 37,
+        "psa_10": 1,
+        "psa_total": 625
+      },
+      "grade_totals": {
+        "total": 630,
+        "grade_total": 625
+      }
+    },
+    {
+      "pokemon_number": "DP49",
+      "card_name": "Dialga-Holo",
+      "base_name": "Dialga",
+      "variety": "Holo",
+      "spec_id": 2356098,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 9,
+        "psa_7": 15,
+        "psa_8": 18,
+        "psa_9": 24,
+        "psa_10": 2,
+        "psa_total": 76
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 76
+      }
+    },
+    {
+      "pokemon_number": "DP50",
+      "card_name": "Arceus-Holo",
+      "base_name": "Arceus-Holo",
+      "variety": "",
+      "spec_id": 2293297,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 3,
+        "psa_3": 4,
+        "psa_4": 5,
+        "psa_5": 15,
+        "psa_6": 44,
+        "psa_7": 40,
+        "psa_8": 62,
+        "psa_9": 44,
+        "psa_10": 8,
+        "psa_total": 229
+      },
+      "grade_totals": {
+        "total": 230,
+        "grade_total": 229
+      }
+    },
+    {
+      "pokemon_number": "DP50",
+      "card_name": "Arceus-Holo-Arceus Poster Box Jumbo",
+      "base_name": "Arceus-Holo",
+      "variety": "Arceus Poster Box Jumbo",
+      "spec_id": 8360876,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "DP51",
+      "card_name": "Cresselia-Holo",
+      "base_name": "Cresselia-Holo",
+      "variety": "",
+      "spec_id": 1827432,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 15,
+        "psa_8": 29,
+        "psa_9": 59,
+        "psa_10": 12,
+        "psa_total": 128
+      },
+      "grade_totals": {
+        "total": 128,
+        "grade_total": 128
+      }
+    },
+    {
+      "pokemon_number": "DP52",
+      "card_name": "Darkrai-Holo",
+      "base_name": "Darkrai-Holo",
+      "variety": "",
+      "spec_id": 1827433,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 7,
+        "psa_6": 12,
+        "psa_7": 19,
+        "psa_8": 38,
+        "psa_9": 113,
+        "psa_10": 32,
+        "psa_total": 227
+      },
+      "grade_totals": {
+        "total": 228,
+        "grade_total": 227
+      }
+    },
+    {
+      "pokemon_number": "DP53",
+      "card_name": "Arceus LV.X-Holo-Arceus Collector's Tin",
+      "base_name": "Arceus LV.X-Holo",
+      "variety": "Arceus Collector's Tin",
+      "spec_id": 1785845,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 7,
+        "psa_4": 12,
+        "psa_5": 34,
+        "psa_6": 34,
+        "psa_7": 61,
+        "psa_8": 59,
+        "psa_9": 19,
+        "psa_10": 0,
+        "psa_total": 231
+      },
+      "grade_totals": {
+        "total": 231,
+        "grade_total": 231
+      }
+    },
+    {
+      "pokemon_number": "DP53",
+      "card_name": "Arceus LV.X-Holo-Arceus Collector's Tin-French",
+      "base_name": "Arceus LV.X-Holo",
+      "variety": "Arceus Collector's Tin-French",
+      "spec_id": 8189943,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "DP56",
+      "card_name": "Arceus LV.X-Holo-Arceus Collector's Tin",
+      "base_name": "Arceus LV.X-Holo",
+      "variety": "Arceus Collector's Tin",
+      "spec_id": 1785841,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 2,
+        "psa_3": 10,
+        "psa_4": 7,
+        "psa_5": 27,
+        "psa_6": 47,
+        "psa_7": 66,
+        "psa_8": 82,
+        "psa_9": 44,
+        "psa_10": 4,
+        "psa_total": 297
+      },
+      "grade_totals": {
+        "total": 299,
+        "grade_total": 297
+      }
+    }
+  ]
+}

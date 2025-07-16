@@ -1,0 +1,176 @@
+{
+  "year": "2017",
+  "set_name": "Pokemon Sun & Moon Trainer Kit Alolan Raichu Half Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2017/pokemon-sun-moon-trainer-kit-alolan-raichu-half-deck/151139",
+  "total_cards": 7,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 30,
+        "psa_9": 54,
+        "psa_10": 42,
+        "psa_total": 138
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 138
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Zubat",
+      "base_name": "Zubat",
+      "variety": "",
+      "spec_id": 2866323,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2626862,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 13,
+        "psa_10": 12,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Alolan Raichu",
+      "base_name": "Alolan Raichu",
+      "variety": "",
+      "spec_id": 2448794,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Togedemaru",
+      "base_name": "Togedemaru",
+      "variety": "",
+      "spec_id": 5037726,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2626861,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 9,
+        "psa_10": 9,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Alolan Raichu-Holo",
+      "base_name": "Alolan Raichu-Holo",
+      "variety": "",
+      "spec_id": 2505205,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 15,
+        "psa_9": 29,
+        "psa_10": 15,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    }
+  ]
+}

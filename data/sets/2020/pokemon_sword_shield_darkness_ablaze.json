@@ -1,0 +1,6680 @@
+{
+  "year": "2020",
+  "set_name": "Pokemon Sword & Shield Darkness Ablaze",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2020/pokemon-sword-shield-darkness-ablaze/178554",
+  "total_cards": 300,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 15,
+        "psa_3": 30,
+        "psa_4": 92,
+        "psa_5": 260,
+        "psa_6": 665,
+        "psa_7": 880,
+        "psa_8": 3437,
+        "psa_9": 21738,
+        "psa_10": 64598,
+        "psa_total": 91729
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 91729
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Butterfree V",
+      "base_name": "Butterfree V",
+      "variety": "",
+      "spec_id": 3848643,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 7,
+        "psa_8": 22,
+        "psa_9": 193,
+        "psa_10": 462,
+        "psa_total": 692
+      },
+      "grade_totals": {
+        "total": 693,
+        "grade_total": 692
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Full Art/Butterfree Vmax",
+      "base_name": "Full Art/Butterfree Vmax",
+      "variety": "",
+      "spec_id": 3706987,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 8,
+        "psa_7": 12,
+        "psa_8": 38,
+        "psa_9": 218,
+        "psa_10": 1230,
+        "psa_total": 1515
+      },
+      "grade_totals": {
+        "total": 1516,
+        "grade_total": 1515
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Paras-Reverse Foil",
+      "base_name": "Paras-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481960,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Paras",
+      "base_name": "Paras",
+      "variety": "",
+      "spec_id": 4481792,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Parasect-Reverse Foil",
+      "base_name": "Parasect-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481961,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Parasect",
+      "base_name": "Parasect",
+      "variety": "",
+      "spec_id": 4481793,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Carnivine",
+      "base_name": "Carnivine",
+      "variety": "",
+      "spec_id": 4481794,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Carnivine-Reverse Foil",
+      "base_name": "Carnivine-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481962,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Pansage-Reverse Foil",
+      "base_name": "Pansage-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481963,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Pansage",
+      "base_name": "Pansage",
+      "variety": "",
+      "spec_id": 4481795,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Simisage-Reverse Foil",
+      "base_name": "Simisage-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481964,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Simisage",
+      "base_name": "Simisage",
+      "variety": "",
+      "spec_id": 4481796,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Karrablast-Reverse Foil",
+      "base_name": "Karrablast-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481965,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Karrablast",
+      "base_name": "Karrablast",
+      "variety": "",
+      "spec_id": 4481797,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Shelmet-Reverse Foil",
+      "base_name": "Shelmet-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481966,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Shelmet",
+      "base_name": "Shelmet",
+      "variety": "",
+      "spec_id": 4481798,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Accelgor",
+      "base_name": "Accelgor",
+      "variety": "",
+      "spec_id": 4481799,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Accelgor-Reverse Foil",
+      "base_name": "Accelgor-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481967,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Rowlet-Reverse Foil",
+      "base_name": "Rowlet-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481968,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Rowlet",
+      "base_name": "Rowlet",
+      "variety": "",
+      "spec_id": 4481800,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 8,
+        "psa_10": 10,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Dartrix",
+      "base_name": "Dartrix",
+      "variety": "",
+      "spec_id": 4481801,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Decidueye-Holo",
+      "base_name": "Decidueye-Holo",
+      "variety": "",
+      "spec_id": 4445171,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 35,
+        "psa_10": 42,
+        "psa_total": 83
+      },
+      "grade_totals": {
+        "total": 84,
+        "grade_total": 83
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Decidueye-Reverse Foil",
+      "base_name": "Decidueye-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481970,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Bounsweet",
+      "base_name": "Bounsweet",
+      "variety": "",
+      "spec_id": 4481802,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Bounsweet-Reverse Foil",
+      "base_name": "Bounsweet-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481971,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Steenee-Reverse Foil",
+      "base_name": "Steenee-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481972,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Tsareena-Reverse Foil",
+      "base_name": "Tsareena-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481973,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Tsareena",
+      "base_name": "Tsareena",
+      "variety": "",
+      "spec_id": 4481804,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Wimpod-Reverse Foil",
+      "base_name": "Wimpod-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481974,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Wimpod",
+      "base_name": "Wimpod",
+      "variety": "",
+      "spec_id": 4481805,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Golisopod-Reverse Foil",
+      "base_name": "Golisopod-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481975,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Golisopod-Holo",
+      "base_name": "Golisopod-Holo",
+      "variety": "",
+      "spec_id": 4445128,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 27,
+        "psa_10": 40,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Charizard V",
+      "base_name": "Charizard V",
+      "variety": "",
+      "spec_id": 3526774,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 9,
+        "psa_5": 46,
+        "psa_6": 117,
+        "psa_7": 181,
+        "psa_8": 550,
+        "psa_9": 2906,
+        "psa_10": 5852,
+        "psa_total": 9666
+      },
+      "grade_totals": {
+        "total": 9675,
+        "grade_total": 9666
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Full Art/Charizard Vmax",
+      "base_name": "Full Art/Charizard Vmax",
+      "variety": "",
+      "spec_id": 3389572,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 5,
+        "psa_3": 16,
+        "psa_4": 39,
+        "psa_5": 100,
+        "psa_6": 212,
+        "psa_7": 231,
+        "psa_8": 822,
+        "psa_9": 5519,
+        "psa_10": 20264,
+        "psa_total": 27214
+      },
+      "grade_totals": {
+        "total": 27227,
+        "grade_total": 27214
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Houndoom V",
+      "base_name": "Houndoom V",
+      "variety": "",
+      "spec_id": 3686935,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 6,
+        "psa_7": 10,
+        "psa_8": 22,
+        "psa_9": 186,
+        "psa_10": 513,
+        "psa_total": 738
+      },
+      "grade_totals": {
+        "total": 738,
+        "grade_total": 738
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Torchic-Reverse Foil",
+      "base_name": "Torchic-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481976,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 9,
+        "psa_10": 10,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Torchic",
+      "base_name": "Torchic",
+      "variety": "",
+      "spec_id": 4481807,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 14,
+        "psa_10": 17,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Combusken",
+      "base_name": "Combusken",
+      "variety": "",
+      "spec_id": 4481808,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 11,
+        "psa_10": 6,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Combusken-Reverse Foil",
+      "base_name": "Combusken-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481977,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 7,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "024",
+      "card_name": "Blaziken-Holo",
+      "base_name": "Blaziken-Holo",
+      "variety": "",
+      "spec_id": 4445197,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 66,
+        "psa_10": 86,
+        "psa_total": 169
+      },
+      "grade_totals": {
+        "total": 169,
+        "grade_total": 169
+      }
+    },
+    {
+      "pokemon_number": "024",
+      "card_name": "Blaziken-Reverse Foil",
+      "base_name": "Blaziken-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481978,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 12,
+        "psa_10": 12,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Heatran-Reverse Foil",
+      "base_name": "Heatran-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481979,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Heatran-Holo",
+      "base_name": "Heatran-Holo",
+      "variety": "",
+      "spec_id": 4427518,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 22,
+        "psa_10": 41,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Pansear-Reverse Foil",
+      "base_name": "Pansear-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Pansear",
+      "base_name": "Pansear",
+      "variety": "",
+      "spec_id": 4481809,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Simisear-Reverse Foil",
+      "base_name": "Simisear-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481981,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Simisear",
+      "base_name": "Simisear",
+      "variety": "",
+      "spec_id": 4481810,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Galarian Darmanitan",
+      "base_name": "Galarian Darmanitan",
+      "variety": "",
+      "spec_id": 4481811,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 2,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Galarian Darmanitan-Reverse Foil",
+      "base_name": "Galarian Darmanitan-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481982,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Larvesta-Reverse Foil",
+      "base_name": "Larvesta-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481983,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Larvesta",
+      "base_name": "Larvesta",
+      "variety": "",
+      "spec_id": 4481812,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Volcarona-Reverse Foil",
+      "base_name": "Volcarona-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481984,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Volcarona",
+      "base_name": "Volcarona",
+      "variety": "",
+      "spec_id": 4481813,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "031",
+      "card_name": "Fletchinder",
+      "base_name": "Fletchinder",
+      "variety": "",
+      "spec_id": 4481814,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "031",
+      "card_name": "Fletchinder-Reverse Foil",
+      "base_name": "Fletchinder-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481985,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "032",
+      "card_name": "Talonflame-Reverse Foil",
+      "base_name": "Talonflame-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481986,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 3,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "032",
+      "card_name": "Talonflame",
+      "base_name": "Talonflame",
+      "variety": "",
+      "spec_id": 4481815,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Centiskorch V",
+      "base_name": "Centiskorch V",
+      "variety": "",
+      "spec_id": 4018392,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 9,
+        "psa_7": 0,
+        "psa_8": 25,
+        "psa_9": 141,
+        "psa_10": 320,
+        "psa_total": 496
+      },
+      "grade_totals": {
+        "total": 496,
+        "grade_total": 496
+      }
+    },
+    {
+      "pokemon_number": "034",
+      "card_name": "Full Art/Centiskorch Vmax",
+      "base_name": "Full Art/Centiskorch Vmax",
+      "variety": "",
+      "spec_id": 3720168,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 15,
+        "psa_9": 174,
+        "psa_10": 924,
+        "psa_total": 1122
+      },
+      "grade_totals": {
+        "total": 1122,
+        "grade_total": 1122
+      }
+    },
+    {
+      "pokemon_number": "035",
+      "card_name": "Galarian Mr. Mime-Reverse Foil",
+      "base_name": "Galarian Mr. Mime-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481987,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "035",
+      "card_name": "Galarian Mr. Mime",
+      "base_name": "Galarian Mr. Mime",
+      "variety": "",
+      "spec_id": 4481816,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Galarian Mr. Mime-Reverse Foil-Pokemon Card Gym",
+      "base_name": "Galarian Mr. Mime-Reverse Foil",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 6953999,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Galarian Mr. Rime-Reverse Foil",
+      "base_name": "Galarian Mr. Rime-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481988,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 7,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Galarian Mr. Rime-Reverse Foil-Thank You Stamp",
+      "base_name": "Galarian Mr. Rime-Reverse Foil",
+      "variety": "Thank You Stamp",
+      "spec_id": 7162256,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 9,
+        "psa_10": 9,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Galarian Mr. Rime",
+      "base_name": "Galarian Mr. Rime",
+      "variety": "",
+      "spec_id": 4481817,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Suicune-Reverse Foil",
+      "base_name": "Suicune-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481989,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 23,
+        "psa_10": 14,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Suicune-Galarian Darmanitan Theme Deck",
+      "base_name": "Suicune",
+      "variety": "Galarian Darmanitan Theme Deck",
+      "spec_id": 4994458,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Suicune-Holo",
+      "base_name": "Suicune-Holo",
+      "variety": "",
+      "spec_id": 4427456,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 10,
+        "psa_9": 116,
+        "psa_10": 137,
+        "psa_total": 265
+      },
+      "grade_totals": {
+        "total": 267,
+        "grade_total": 265
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Feebas",
+      "base_name": "Feebas",
+      "variety": "",
+      "spec_id": 4481818,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Feebas-Reverse Foil",
+      "base_name": "Feebas-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481990,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "039",
+      "card_name": "Milotic-Reverse Foil",
+      "base_name": "Milotic-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481991,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 3,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "039",
+      "card_name": "Milotic-Holo",
+      "base_name": "Milotic-Holo",
+      "variety": "",
+      "spec_id": 4481819,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 62,
+        "psa_10": 73,
+        "psa_total": 143
+      },
+      "grade_totals": {
+        "total": 143,
+        "grade_total": 143
+      }
+    },
+    {
+      "pokemon_number": "040",
+      "card_name": "Relicanth-Reverse Foil",
+      "base_name": "Relicanth-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481992,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "040",
+      "card_name": "Relicanth",
+      "base_name": "Relicanth",
+      "variety": "",
+      "spec_id": 4481820,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "041",
+      "card_name": "Panpour-Reverse Foil",
+      "base_name": "Panpour-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481993,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "041",
+      "card_name": "Panpour",
+      "base_name": "Panpour",
+      "variety": "",
+      "spec_id": 4481821,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "042",
+      "card_name": "Simipour-Reverse Foil",
+      "base_name": "Simipour-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481994,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "042",
+      "card_name": "Simipour",
+      "base_name": "Simipour",
+      "variety": "",
+      "spec_id": 4481822,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "043",
+      "card_name": "Galarian Darumaka",
+      "base_name": "Galarian Darumaka",
+      "variety": "",
+      "spec_id": 4481823,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "043",
+      "card_name": "Galarian Darumaka-Reverse Foil",
+      "base_name": "Galarian Darumaka-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481995,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "044",
+      "card_name": "Galarian Darmanitan",
+      "base_name": "Galarian Darmanitan",
+      "variety": "",
+      "spec_id": 4481824,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "044",
+      "card_name": "Galarian Darmanitan-Holo-Cracked Ice",
+      "base_name": "Galarian Darmanitan-Holo",
+      "variety": "Cracked Ice",
+      "spec_id": 4994618,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 8,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "044",
+      "card_name": "Galarian Darmanitan-Reverse Foil",
+      "base_name": "Galarian Darmanitan-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481996,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "045",
+      "card_name": "Vanillite-Reverse Foil",
+      "base_name": "Vanillite-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481997,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "045",
+      "card_name": "Vanillite",
+      "base_name": "Vanillite",
+      "variety": "",
+      "spec_id": 4481825,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "046",
+      "card_name": "Vanillish-Reverse Foil",
+      "base_name": "Vanillish-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481998,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "046",
+      "card_name": "Vanillish",
+      "base_name": "Vanillish",
+      "variety": "",
+      "spec_id": 4481826,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "047",
+      "card_name": "Vanilluxe-Reverse Foil",
+      "base_name": "Vanilluxe-Reverse Foil",
+      "variety": "",
+      "spec_id": 4481999,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "047",
+      "card_name": "Vanilluxe",
+      "base_name": "Vanilluxe",
+      "variety": "",
+      "spec_id": 4481827,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "048",
+      "card_name": "Cubchoo",
+      "base_name": "Cubchoo",
+      "variety": "",
+      "spec_id": 4481828,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "048",
+      "card_name": "Cubchoo-Reverse Foil",
+      "base_name": "Cubchoo-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482000,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "049",
+      "card_name": "Beartic",
+      "base_name": "Beartic",
+      "variety": "",
+      "spec_id": 4481829,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "049",
+      "card_name": "Beartic-Holo-Holiday Calendar 2022",
+      "base_name": "Beartic-Holo",
+      "variety": "Holiday Calendar 2022",
+      "spec_id": 7634664,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 9,
+        "psa_9": 16,
+        "psa_10": 2,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "049",
+      "card_name": "Beartic-Reverse Foil",
+      "base_name": "Beartic-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482001,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "050",
+      "card_name": "Wishiwashi-Reverse Foil",
+      "base_name": "Wishiwashi-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482002,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "050",
+      "card_name": "Wishiwashi",
+      "base_name": "Wishiwashi",
+      "variety": "",
+      "spec_id": 4481830,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "051",
+      "card_name": "Mareanie-Reverse Foil",
+      "base_name": "Mareanie-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482003,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "051",
+      "card_name": "Mareanie",
+      "base_name": "Mareanie",
+      "variety": "",
+      "spec_id": 4481831,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "052",
+      "card_name": "Toxapex-Reverse Foil",
+      "base_name": "Toxapex-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482004,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "052",
+      "card_name": "Toxapex",
+      "base_name": "Toxapex",
+      "variety": "",
+      "spec_id": 4481832,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "053",
+      "card_name": "Dracovish-Holo",
+      "base_name": "Dracovish-Holo",
+      "variety": "",
+      "spec_id": 4445126,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 23,
+        "psa_10": 40,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "053",
+      "card_name": "Dracovish-Reverse Foil",
+      "base_name": "Dracovish-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482005,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "054",
+      "card_name": "Arctovish",
+      "base_name": "Arctovish",
+      "variety": "",
+      "spec_id": 4481833,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "054",
+      "card_name": "Arctovish-Reverse Foil",
+      "base_name": "Arctovish-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482006,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "055",
+      "card_name": "Mareep-Reverse Foil",
+      "base_name": "Mareep-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482007,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "055",
+      "card_name": "Mareep",
+      "base_name": "Mareep",
+      "variety": "",
+      "spec_id": 4481834,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 8,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "056",
+      "card_name": "Flaaffy",
+      "base_name": "Flaaffy",
+      "variety": "",
+      "spec_id": 4481835,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 6,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "056",
+      "card_name": "Flaaffy-Reverse Foil",
+      "base_name": "Flaaffy-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482008,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 4,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "057",
+      "card_name": "Ampharos",
+      "base_name": "Ampharos",
+      "variety": "",
+      "spec_id": 4481836,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 10,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "057",
+      "card_name": "Ampharos-Reverse Foil",
+      "base_name": "Ampharos-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482009,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 11,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "058",
+      "card_name": "Electrike",
+      "base_name": "Electrike",
+      "variety": "",
+      "spec_id": 4481837,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "058",
+      "card_name": "Electrike-Reverse Foil",
+      "base_name": "Electrike-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482010,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "059",
+      "card_name": "Manectric-Reverse Foil",
+      "base_name": "Manectric-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482011,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "059",
+      "card_name": "Manectric",
+      "base_name": "Manectric",
+      "variety": "",
+      "spec_id": 4481838,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "060",
+      "card_name": "Vikavolt V",
+      "base_name": "Vikavolt V",
+      "variety": "",
+      "spec_id": 3848652,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 6,
+        "psa_8": 17,
+        "psa_9": 123,
+        "psa_10": 272,
+        "psa_total": 424
+      },
+      "grade_totals": {
+        "total": 424,
+        "grade_total": 424
+      }
+    },
+    {
+      "pokemon_number": "061",
+      "card_name": "Tapu Koko-Reverse Foil",
+      "base_name": "Tapu Koko-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482012,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "061",
+      "card_name": "Tapu Koko-Holo",
+      "base_name": "Tapu Koko-Holo",
+      "variety": "",
+      "spec_id": 4481839,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 39,
+        "psa_10": 43,
+        "psa_total": 85
+      },
+      "grade_totals": {
+        "total": 85,
+        "grade_total": 85
+      }
+    },
+    {
+      "pokemon_number": "062",
+      "card_name": "Toxel-Reverse Foil",
+      "base_name": "Toxel-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482013,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "062",
+      "card_name": "Toxel",
+      "base_name": "Toxel",
+      "variety": "",
+      "spec_id": 4481840,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "063",
+      "card_name": "Toxtricity-Reverse Foil",
+      "base_name": "Toxtricity-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482014,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "063",
+      "card_name": "Toxtricity-Holo",
+      "base_name": "Toxtricity-Holo",
+      "variety": "",
+      "spec_id": 4481841,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 43,
+        "psa_10": 29,
+        "psa_total": 79
+      },
+      "grade_totals": {
+        "total": 79,
+        "grade_total": 79
+      }
+    },
+    {
+      "pokemon_number": "063",
+      "card_name": "Toxtricity-Holo-Cosmos-2022 Knock Out Collection",
+      "base_name": "Toxtricity-Holo",
+      "variety": "Cosmos-2022 Knock Out Collection",
+      "spec_id": 8473466,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "064",
+      "card_name": "Pincurchin-Reverse Foil",
+      "base_name": "Pincurchin-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482015,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "064",
+      "card_name": "Pincurchin-Holo",
+      "base_name": "Pincurchin-Holo",
+      "variety": "",
+      "spec_id": 4445125,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 19,
+        "psa_10": 36,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "065",
+      "card_name": "Dracozolt",
+      "base_name": "Dracozolt",
+      "variety": "",
+      "spec_id": 4481842,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "065",
+      "card_name": "Dracozolt-Reverse Foil",
+      "base_name": "Dracozolt-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482017,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 6,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "066",
+      "card_name": "Arctozolt-Holo",
+      "base_name": "Arctozolt-Holo",
+      "variety": "",
+      "spec_id": 4018399,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 34,
+        "psa_10": 33,
+        "psa_total": 72
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 72
+      }
+    },
+    {
+      "pokemon_number": "066",
+      "card_name": "Arctozolt-Reverse Foil",
+      "base_name": "Arctozolt-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482019,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "067",
+      "card_name": "Jigglypuff-Reverse Foil",
+      "base_name": "Jigglypuff-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482021,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 9,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "067",
+      "card_name": "Jigglypuff",
+      "base_name": "Jigglypuff",
+      "variety": "",
+      "spec_id": 4481843,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 16,
+        "psa_10": 26,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "068",
+      "card_name": "Wigglytuff-Reverse Foil",
+      "base_name": "Wigglytuff-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482023,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 5,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "068",
+      "card_name": "Wigglytuff",
+      "base_name": "Wigglytuff",
+      "variety": "",
+      "spec_id": 4481844,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 2,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "069",
+      "card_name": "Mew V",
+      "base_name": "Mew V",
+      "variety": "",
+      "spec_id": 3793751,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 8,
+        "psa_6": 17,
+        "psa_7": 41,
+        "psa_8": 114,
+        "psa_9": 680,
+        "psa_10": 1375,
+        "psa_total": 2237
+      },
+      "grade_totals": {
+        "total": 2240,
+        "grade_total": 2237
+      }
+    },
+    {
+      "pokemon_number": "070",
+      "card_name": "Snubbull-Reverse Foil",
+      "base_name": "Snubbull-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482025,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "070",
+      "card_name": "Snubbull",
+      "base_name": "Snubbull",
+      "variety": "",
+      "spec_id": 4481845,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "071",
+      "card_name": "Granbull-Reverse Foil",
+      "base_name": "Granbull-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482027,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "071",
+      "card_name": "Granbull",
+      "base_name": "Granbull",
+      "variety": "",
+      "spec_id": 4481846,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "072",
+      "card_name": "Lunatone-Reverse Foil",
+      "base_name": "Lunatone-Reverse Foil",
+      "variety": "",
+      "spec_id": 3957153,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "072",
+      "card_name": "Lunatone",
+      "base_name": "Lunatone",
+      "variety": "",
+      "spec_id": 4481847,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "073",
+      "card_name": "Gothita-Reverse Foil",
+      "base_name": "Gothita-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482029,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "073",
+      "card_name": "Gothita",
+      "base_name": "Gothita",
+      "variety": "",
+      "spec_id": 4481848,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "074",
+      "card_name": "Gothorita-Reverse Foil",
+      "base_name": "Gothorita-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482030,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "074",
+      "card_name": "Gothorita",
+      "base_name": "Gothorita",
+      "variety": "",
+      "spec_id": 4481849,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "075",
+      "card_name": "Gothitelle-Reverse Foil",
+      "base_name": "Gothitelle-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482032,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 3,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "075",
+      "card_name": "Gothitelle",
+      "base_name": "Gothitelle",
+      "variety": "",
+      "spec_id": 4481850,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "076",
+      "card_name": "Golett-Reverse Foil",
+      "base_name": "Golett-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482034,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "076",
+      "card_name": "Golett",
+      "base_name": "Golett",
+      "variety": "",
+      "spec_id": 4481851,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "077",
+      "card_name": "Golurk-Reverse Foil",
+      "base_name": "Golurk-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482036,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "077",
+      "card_name": "Golurk",
+      "base_name": "Golurk",
+      "variety": "",
+      "spec_id": 4481852,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "078",
+      "card_name": "Dedenne",
+      "base_name": "Dedenne",
+      "variety": "",
+      "spec_id": 4481853,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "078",
+      "card_name": "Dedenne-Reverse Foil",
+      "base_name": "Dedenne-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482038,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 6,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "078",
+      "card_name": "Dedenne-Reverse Foil-Pokemon Card Gym",
+      "base_name": "Dedenne-Reverse Foil",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 6953977,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "078",
+      "card_name": "Dedenne-Reverse Foil-Thank You Stamp",
+      "base_name": "Dedenne-Reverse Foil",
+      "variety": "Thank You Stamp",
+      "spec_id": 8386687,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 9,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "079",
+      "card_name": "Morelull-Reverse Foil",
+      "base_name": "Morelull-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482040,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "079",
+      "card_name": "Morelull",
+      "base_name": "Morelull",
+      "variety": "",
+      "spec_id": 4481854,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "080",
+      "card_name": "Shiinotic-Reverse Foil",
+      "base_name": "Shiinotic-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482042,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "080",
+      "card_name": "Shiinotic",
+      "base_name": "Shiinotic",
+      "variety": "",
+      "spec_id": 4481855,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "081",
+      "card_name": "Mimikyu-Reverse Foil",
+      "base_name": "Mimikyu-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482044,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 14,
+        "psa_10": 10,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "081",
+      "card_name": "Mimikyu",
+      "base_name": "Mimikyu",
+      "variety": "",
+      "spec_id": 4481856,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 21,
+        "psa_10": 12,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "081",
+      "card_name": "Mimikyu-Holo-Cosmos",
+      "base_name": "Mimikyu-Holo",
+      "variety": "Cosmos",
+      "spec_id": 7487367,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 9,
+        "psa_7": 18,
+        "psa_8": 30,
+        "psa_9": 71,
+        "psa_10": 28,
+        "psa_total": 158
+      },
+      "grade_totals": {
+        "total": 163,
+        "grade_total": 158
+      }
+    },
+    {
+      "pokemon_number": "081",
+      "card_name": "Mimikyu-Holo-Trick or Trade 2022",
+      "base_name": "Mimikyu-Holo",
+      "variety": "Trick or Trade 2022",
+      "spec_id": 7540784,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 45,
+        "psa_9": 157,
+        "psa_10": 125,
+        "psa_total": 338
+      },
+      "grade_totals": {
+        "total": 338,
+        "grade_total": 338
+      }
+    },
+    {
+      "pokemon_number": "082",
+      "card_name": "Sinistea-Reverse Foil",
+      "base_name": "Sinistea-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482046,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "082",
+      "card_name": "Sinistea",
+      "base_name": "Sinistea",
+      "variety": "",
+      "spec_id": 4481857,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "083",
+      "card_name": "Polteageist-Reverse Foil",
+      "base_name": "Polteageist-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482048,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 7,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "083",
+      "card_name": "Polteageist-Reverse Foil-Pokemon Card Gym",
+      "base_name": "Polteageist-Reverse Foil",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 6954002,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "083",
+      "card_name": "Polteageist-Reverse Foil-Thank You Stamp",
+      "base_name": "Polteageist-Reverse Foil",
+      "variety": "Thank You Stamp",
+      "spec_id": 8386692,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 10,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "083",
+      "card_name": "Polteageist",
+      "base_name": "Polteageist",
+      "variety": "",
+      "spec_id": 4481858,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "084",
+      "card_name": "Diglett",
+      "base_name": "Diglett",
+      "variety": "",
+      "spec_id": 4481859,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "084",
+      "card_name": "Diglett-Reverse Foil",
+      "base_name": "Diglett-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482049,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "085",
+      "card_name": "Dugtrio",
+      "base_name": "Dugtrio",
+      "variety": "",
+      "spec_id": 4481860,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 6,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "085",
+      "card_name": "Dugtrio-Reverse Foil",
+      "base_name": "Dugtrio-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482051,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "086",
+      "card_name": "Larvitar-Reverse Foil",
+      "base_name": "Larvitar-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482053,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 19,
+        "psa_10": 10,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "086",
+      "card_name": "Larvitar",
+      "base_name": "Larvitar",
+      "variety": "",
+      "spec_id": 4481861,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 12,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "087",
+      "card_name": "Pupitar-Reverse Foil",
+      "base_name": "Pupitar-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482055,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "087",
+      "card_name": "Pupitar",
+      "base_name": "Pupitar",
+      "variety": "",
+      "spec_id": 4481862,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "088",
+      "card_name": "Tyranitar-Reverse Foil",
+      "base_name": "Tyranitar-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482057,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 22,
+        "psa_10": 30,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 58
+      }
+    },
+    {
+      "pokemon_number": "088",
+      "card_name": "Tyranitar-Holo",
+      "base_name": "Tyranitar-Holo",
+      "variety": "",
+      "spec_id": 4260774,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 5,
+        "psa_8": 25,
+        "psa_9": 129,
+        "psa_10": 120,
+        "psa_total": 283
+      },
+      "grade_totals": {
+        "total": 283,
+        "grade_total": 283
+      }
+    },
+    {
+      "pokemon_number": "089",
+      "card_name": "Trapinch-Reverse Foil",
+      "base_name": "Trapinch-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482059,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "089",
+      "card_name": "Trapinch",
+      "base_name": "Trapinch",
+      "variety": "",
+      "spec_id": 4481863,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "090",
+      "card_name": "Vibrava-Reverse Foil",
+      "base_name": "Vibrava-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482061,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "090",
+      "card_name": "Vibrava",
+      "base_name": "Vibrava",
+      "variety": "",
+      "spec_id": 4481864,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "091",
+      "card_name": "Flygon",
+      "base_name": "Flygon",
+      "variety": "",
+      "spec_id": 4481865,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "091",
+      "card_name": "Flygon-Reverse Foil",
+      "base_name": "Flygon-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482063,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "092",
+      "card_name": "Solrock-Reverse Foil",
+      "base_name": "Solrock-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482065,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "092",
+      "card_name": "Solrock",
+      "base_name": "Solrock",
+      "variety": "",
+      "spec_id": 4481866,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "093",
+      "card_name": "Hippopotas-Reverse Foil",
+      "base_name": "Hippopotas-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482067,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "093",
+      "card_name": "Hippopotas",
+      "base_name": "Hippopotas",
+      "variety": "",
+      "spec_id": 4481867,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "094",
+      "card_name": "Hippowdon-Reverse Foil",
+      "base_name": "Hippowdon-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482068,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "094",
+      "card_name": "Hippowdon",
+      "base_name": "Hippowdon",
+      "variety": "",
+      "spec_id": 4481868,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "095",
+      "card_name": "Rhyperior V",
+      "base_name": "Rhyperior V",
+      "variety": "",
+      "spec_id": 4018393,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 7,
+        "psa_7": 4,
+        "psa_8": 10,
+        "psa_9": 129,
+        "psa_10": 284,
+        "psa_total": 436
+      },
+      "grade_totals": {
+        "total": 436,
+        "grade_total": 436
+      }
+    },
+    {
+      "pokemon_number": "096",
+      "card_name": "Diggersby",
+      "base_name": "Diggersby",
+      "variety": "",
+      "spec_id": 4481869,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "096",
+      "card_name": "Diggersby-Reverse Foil",
+      "base_name": "Diggersby-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482069,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "097",
+      "card_name": "Passimian-Reverse Foil",
+      "base_name": "Passimian-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482070,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "097",
+      "card_name": "Passimian",
+      "base_name": "Passimian",
+      "variety": "",
+      "spec_id": 4481870,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "098",
+      "card_name": "Galarian Sirfetch'd-Reverse Foil",
+      "base_name": "Galarian Sirfetch'd-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482071,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "098",
+      "card_name": "Galarian Sirfetch'd",
+      "base_name": "Galarian Sirfetch'd",
+      "variety": "",
+      "spec_id": 4481871,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "098",
+      "card_name": "Galarian Sirfetch'd-Holo-Cracked Ice",
+      "base_name": "Galarian Sirfetch'd-Holo",
+      "variety": "Cracked Ice",
+      "spec_id": 4996670,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 4,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "099",
+      "card_name": "Galarian Slowbro V",
+      "base_name": "Galarian Slowbro V",
+      "variety": "",
+      "spec_id": 3848650,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 3,
+        "psa_8": 20,
+        "psa_9": 182,
+        "psa_10": 348,
+        "psa_total": 561
+      },
+      "grade_totals": {
+        "total": 562,
+        "grade_total": 561
+      }
+    },
+    {
+      "pokemon_number": "100",
+      "card_name": "Grimer-Reverse Foil",
+      "base_name": "Grimer-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482072,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "100",
+      "card_name": "Grimer",
+      "base_name": "Grimer",
+      "variety": "",
+      "spec_id": 4481872,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "101",
+      "card_name": "Muk-Reverse Foil",
+      "base_name": "Muk-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482073,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 7,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "101",
+      "card_name": "Muk",
+      "base_name": "Muk",
+      "variety": "",
+      "spec_id": 4481873,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "102",
+      "card_name": "Spinarak-Reverse Foil",
+      "base_name": "Spinarak-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482074,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "102",
+      "card_name": "Spinarak",
+      "base_name": "Spinarak",
+      "variety": "",
+      "spec_id": 4481874,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "103",
+      "card_name": "Ariados",
+      "base_name": "Ariados",
+      "variety": "",
+      "spec_id": 4481875,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "103",
+      "card_name": "Ariados-Trick or Trade 2022",
+      "base_name": "Ariados",
+      "variety": "Trick or Trade 2022",
+      "spec_id": 7996971,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "103",
+      "card_name": "Ariados-Reverse Foil",
+      "base_name": "Ariados-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482075,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "104",
+      "card_name": "Crobat V",
+      "base_name": "Crobat V",
+      "variety": "",
+      "spec_id": 3651844,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 8,
+        "psa_8": 32,
+        "psa_9": 300,
+        "psa_10": 781,
+        "psa_total": 1129
+      },
+      "grade_totals": {
+        "total": 1129,
+        "grade_total": 1129
+      }
+    },
+    {
+      "pokemon_number": "105",
+      "card_name": "Darkrai-Build & Battle Box",
+      "base_name": "Darkrai",
+      "variety": "Build & Battle Box",
+      "spec_id": 5138422,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "105",
+      "card_name": "Darkrai-Holo",
+      "base_name": "Darkrai-Holo",
+      "variety": "",
+      "spec_id": 4427519,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 64,
+        "psa_10": 91,
+        "psa_total": 164
+      },
+      "grade_totals": {
+        "total": 164,
+        "grade_total": 164
+      }
+    },
+    {
+      "pokemon_number": "105",
+      "card_name": "Darkrai-Holo-2021 Mighty Mysterious Tins",
+      "base_name": "Darkrai-Holo",
+      "variety": "2021 Mighty Mysterious Tins",
+      "spec_id": 7259871,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 23,
+        "psa_10": 14,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "105",
+      "card_name": "Darkrai-Holo-Trick or Trade 2022",
+      "base_name": "Darkrai-Holo",
+      "variety": "Trick or Trade 2022",
+      "spec_id": 7580011,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 7,
+        "psa_8": 27,
+        "psa_9": 125,
+        "psa_10": 74,
+        "psa_total": 238
+      },
+      "grade_totals": {
+        "total": 238,
+        "grade_total": 238
+      }
+    },
+    {
+      "pokemon_number": "105",
+      "card_name": "Darkrai-Reverse Foil",
+      "base_name": "Darkrai-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482076,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 11,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "106",
+      "card_name": "Purrloin-Reverse Foil",
+      "base_name": "Purrloin-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482077,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "106",
+      "card_name": "Purrloin",
+      "base_name": "Purrloin",
+      "variety": "",
+      "spec_id": 4481876,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "107",
+      "card_name": "Liepard-Reverse Foil",
+      "base_name": "Liepard-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482078,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "107",
+      "card_name": "Liepard",
+      "base_name": "Liepard",
+      "variety": "",
+      "spec_id": 4481877,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "108",
+      "card_name": "Deino",
+      "base_name": "Deino",
+      "variety": "",
+      "spec_id": 4481878,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "108",
+      "card_name": "Deino-Reverse Foil",
+      "base_name": "Deino-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482079,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 7,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "109",
+      "card_name": "Zweilous-Reverse Foil",
+      "base_name": "Zweilous-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482080,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "109",
+      "card_name": "Zweilous",
+      "base_name": "Zweilous",
+      "variety": "",
+      "spec_id": 4481879,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "110",
+      "card_name": "Hydreigon-Reverse Foil",
+      "base_name": "Hydreigon-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482081,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 10,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "110",
+      "card_name": "Hydreigon-Reverse Foil-Thank You Stamp",
+      "base_name": "Hydreigon-Reverse Foil",
+      "variety": "Thank You Stamp",
+      "spec_id": 5138014,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 18,
+        "psa_9": 105,
+        "psa_10": 139,
+        "psa_total": 266
+      },
+      "grade_totals": {
+        "total": 266,
+        "grade_total": 266
+      }
+    },
+    {
+      "pokemon_number": "110",
+      "card_name": "Hydreigon",
+      "base_name": "Hydreigon",
+      "variety": "",
+      "spec_id": 4481880,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "111",
+      "card_name": "Hoopa-Reverse Foil",
+      "base_name": "Hoopa-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482082,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "111",
+      "card_name": "Hoopa-Holo",
+      "base_name": "Hoopa-Holo",
+      "variety": "",
+      "spec_id": 4481881,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 29,
+        "psa_10": 47,
+        "psa_total": 78
+      },
+      "grade_totals": {
+        "total": 78,
+        "grade_total": 78
+      }
+    },
+    {
+      "pokemon_number": "112",
+      "card_name": "Nickit-Reverse Foil",
+      "base_name": "Nickit-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482083,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "112",
+      "card_name": "Nickit",
+      "base_name": "Nickit",
+      "variety": "",
+      "spec_id": 4481882,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "113",
+      "card_name": "Thievul-Reverse Foil",
+      "base_name": "Thievul-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482084,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "113",
+      "card_name": "Thievul",
+      "base_name": "Thievul",
+      "variety": "",
+      "spec_id": 4481883,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "114",
+      "card_name": "Grimmsnarl V",
+      "base_name": "Grimmsnarl V",
+      "variety": "",
+      "spec_id": 3892086,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 21,
+        "psa_9": 144,
+        "psa_10": 332,
+        "psa_total": 503
+      },
+      "grade_totals": {
+        "total": 504,
+        "grade_total": 503
+      }
+    },
+    {
+      "pokemon_number": "115",
+      "card_name": "Full Art/Grimmsnarl Vmax",
+      "base_name": "Full Art/Grimmsnarl Vmax",
+      "variety": "",
+      "spec_id": 3651757,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 7,
+        "psa_9": 167,
+        "psa_10": 828,
+        "psa_total": 1010
+      },
+      "grade_totals": {
+        "total": 1010,
+        "grade_total": 1010
+      }
+    },
+    {
+      "pokemon_number": "116",
+      "card_name": "Eternatus V",
+      "base_name": "Eternatus V",
+      "variety": "",
+      "spec_id": 3704183,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 30,
+        "psa_9": 201,
+        "psa_10": 433,
+        "psa_total": 672
+      },
+      "grade_totals": {
+        "total": 672,
+        "grade_total": 672
+      }
+    },
+    {
+      "pokemon_number": "117",
+      "card_name": "Full Art/Eternatus Vmax",
+      "base_name": "Full Art/Eternatus Vmax",
+      "variety": "",
+      "spec_id": 3651710,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 10,
+        "psa_7": 7,
+        "psa_8": 18,
+        "psa_9": 163,
+        "psa_10": 1149,
+        "psa_total": 1355
+      },
+      "grade_totals": {
+        "total": 1358,
+        "grade_total": 1355
+      }
+    },
+    {
+      "pokemon_number": "118",
+      "card_name": "Scizor V",
+      "base_name": "Scizor V",
+      "variety": "",
+      "spec_id": 3892047,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 8,
+        "psa_8": 34,
+        "psa_9": 213,
+        "psa_10": 471,
+        "psa_total": 732
+      },
+      "grade_totals": {
+        "total": 734,
+        "grade_total": 732
+      }
+    },
+    {
+      "pokemon_number": "119",
+      "card_name": "Full Art/Scizor Vmax",
+      "base_name": "Full Art/Scizor Vmax",
+      "variety": "",
+      "spec_id": 3706586,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 10,
+        "psa_8": 25,
+        "psa_9": 273,
+        "psa_10": 1437,
+        "psa_total": 1758
+      },
+      "grade_totals": {
+        "total": 1759,
+        "grade_total": 1758
+      }
+    },
+    {
+      "pokemon_number": "120",
+      "card_name": "Skarmory-Reverse Foil",
+      "base_name": "Skarmory-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482085,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "120",
+      "card_name": "Skarmory",
+      "base_name": "Skarmory",
+      "variety": "",
+      "spec_id": 4481884,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "121",
+      "card_name": "Aron",
+      "base_name": "Aron",
+      "variety": "",
+      "spec_id": 4481885,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "121",
+      "card_name": "Aron-Reverse Foil",
+      "base_name": "Aron-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482086,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "122",
+      "card_name": "Lairon-Reverse Foil",
+      "base_name": "Lairon-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482087,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "122",
+      "card_name": "Lairon",
+      "base_name": "Lairon",
+      "variety": "",
+      "spec_id": 4481886,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "123",
+      "card_name": "Aggron-Holo",
+      "base_name": "Aggron-Holo",
+      "variety": "",
+      "spec_id": 4445121,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 46,
+        "psa_10": 51,
+        "psa_total": 105
+      },
+      "grade_totals": {
+        "total": 105,
+        "grade_total": 105
+      }
+    },
+    {
+      "pokemon_number": "123",
+      "card_name": "Aggron-Reverse Foil",
+      "base_name": "Aggron-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482088,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 2,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "124",
+      "card_name": "Escavalier",
+      "base_name": "Escavalier",
+      "variety": "",
+      "spec_id": 4481887,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "124",
+      "card_name": "Escavalier-Reverse Foil",
+      "base_name": "Escavalier-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482089,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "125",
+      "card_name": "Klink-Reverse Foil",
+      "base_name": "Klink-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482090,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 2,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "125",
+      "card_name": "Klink",
+      "base_name": "Klink",
+      "variety": "",
+      "spec_id": 4481888,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "126",
+      "card_name": "Klang-Reverse Foil",
+      "base_name": "Klang-Reverse Foil",
+      "variety": "",
+      "spec_id": 3957151,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "126",
+      "card_name": "Klang",
+      "base_name": "Klang",
+      "variety": "",
+      "spec_id": 4481889,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "127",
+      "card_name": "Klinklang-Reverse Foil",
+      "base_name": "Klinklang-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482091,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "127",
+      "card_name": "Klinklang",
+      "base_name": "Klinklang",
+      "variety": "",
+      "spec_id": 4481890,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "128",
+      "card_name": "Galarian Stunfisk V",
+      "base_name": "Galarian Stunfisk V",
+      "variety": "",
+      "spec_id": 3848649,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 21,
+        "psa_9": 124,
+        "psa_10": 234,
+        "psa_total": 384
+      },
+      "grade_totals": {
+        "total": 384,
+        "grade_total": 384
+      }
+    },
+    {
+      "pokemon_number": "129",
+      "card_name": "Meltan-Reverse Foil",
+      "base_name": "Meltan-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482092,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "129",
+      "card_name": "Meltan",
+      "base_name": "Meltan",
+      "variety": "",
+      "spec_id": 4481891,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "130",
+      "card_name": "Melmetal-Reverse Foil",
+      "base_name": "Melmetal-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482093,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "130",
+      "card_name": "Melmetal",
+      "base_name": "Melmetal",
+      "variety": "",
+      "spec_id": 4481892,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "131",
+      "card_name": "Cufant",
+      "base_name": "Cufant",
+      "variety": "",
+      "spec_id": 4481893,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "132",
+      "card_name": "Copperajah-Holo",
+      "base_name": "Copperajah-Holo",
+      "variety": "",
+      "spec_id": 4481894,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 39,
+        "psa_10": 34,
+        "psa_total": 74
+      },
+      "grade_totals": {
+        "total": 74,
+        "grade_total": 74
+      }
+    },
+    {
+      "pokemon_number": "132",
+      "card_name": "Copperajah-Reverse Foil",
+      "base_name": "Copperajah-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482095,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "133",
+      "card_name": "Kangaskhan-Reverse Foil",
+      "base_name": "Kangaskhan-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482096,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 10,
+        "psa_10": 3,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "133",
+      "card_name": "Kangaskhan-Galarian Darmanitan Theme Deck",
+      "base_name": "Kangaskhan",
+      "variety": "Galarian Darmanitan Theme Deck",
+      "spec_id": 4994583,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "133",
+      "card_name": "Kangaskhan-Holo",
+      "base_name": "Kangaskhan-Holo",
+      "variety": "",
+      "spec_id": 3809190,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 34,
+        "psa_10": 64,
+        "psa_total": 102
+      },
+      "grade_totals": {
+        "total": 102,
+        "grade_total": 102
+      }
+    },
+    {
+      "pokemon_number": "134",
+      "card_name": "Tauros-Reverse Foil",
+      "base_name": "Tauros-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482097,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "134",
+      "card_name": "Tauros",
+      "base_name": "Tauros",
+      "variety": "",
+      "spec_id": 4481895,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "135",
+      "card_name": "Sentret-Reverse Foil",
+      "base_name": "Sentret-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482098,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "135",
+      "card_name": "Sentret",
+      "base_name": "Sentret",
+      "variety": "",
+      "spec_id": 4481896,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "136",
+      "card_name": "Furret-Reverse Foil",
+      "base_name": "Furret-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482099,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "136",
+      "card_name": "Furret",
+      "base_name": "Furret",
+      "variety": "",
+      "spec_id": 4481897,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "137",
+      "card_name": "Dunsparce",
+      "base_name": "Dunsparce",
+      "variety": "",
+      "spec_id": 4481898,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "137",
+      "card_name": "Dunsparce-Reverse Foil",
+      "base_name": "Dunsparce-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482100,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "138",
+      "card_name": "Teddiursa-Reverse Foil",
+      "base_name": "Teddiursa-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482101,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "138",
+      "card_name": "Teddiursa",
+      "base_name": "Teddiursa",
+      "variety": "",
+      "spec_id": 4481899,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "139",
+      "card_name": "Ursaring-Reverse Foil",
+      "base_name": "Ursaring-Reverse Foil",
+      "variety": "",
+      "spec_id": 4482102,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "139",
+      "card_name": "Ursaring",
+      "base_name": "Ursaring",
+      "variety": "",
+      "spec_id": 4481900,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "140",
+      "card_name": "Lugia-Reverse Foil",
+      "base_name": "Lugia-Reverse Foil",
+      "variety": "",
+      "spec_id": 3911775,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 10,
+        "psa_8": 24,
+        "psa_9": 98,
+        "psa_10": 85,
+        "psa_total": 218
+      },
+      "grade_totals": {
+        "total": 218,
+        "grade_total": 218
+      }
+    },
+    {
+      "pokemon_number": "140",
+      "card_name": "Lugia",
+      "base_name": "Lugia",
+      "variety": "",
+      "spec_id": 3651848,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 42,
+        "psa_9": 573,
+        "psa_10": 369,
+        "psa_total": 994
+      },
+      "grade_totals": {
+        "total": 994,
+        "grade_total": 994
+      }
+    }
+  ]
+}

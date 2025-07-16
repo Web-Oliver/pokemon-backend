@@ -1,0 +1,704 @@
+{
+  "year": "2008",
+  "set_name": "Pokemon Japanese Gallade Half Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2008/pokemon-japanese-gallade-half-deck/129742",
+  "total_cards": 29,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 13,
+        "psa_8": 44,
+        "psa_9": 244,
+        "psa_10": 452,
+        "psa_total": 762
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 762
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Scizor 4",
+      "base_name": "Scizor 4",
+      "variety": "",
+      "spec_id": 5183377,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 7,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Scizor 4-1st Edition",
+      "base_name": "Scizor 4",
+      "variety": "1st Edition",
+      "spec_id": 3066763,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 22,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Heracross 4",
+      "base_name": "Heracross 4",
+      "variety": "",
+      "spec_id": 5183378,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 9,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Heracross 4-1st Edition",
+      "base_name": "Heracross 4",
+      "variety": "1st Edition",
+      "spec_id": 3066770,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 15,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Vespiquen 4-Holo",
+      "base_name": "Vespiquen 4-Holo",
+      "variety": "",
+      "spec_id": 4039657,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 12,
+        "psa_10": 10,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Vespiquen 4-Holo-1st Edition",
+      "base_name": "Vespiquen 4-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2849824,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 31,
+        "psa_10": 36,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Yanmega 4",
+      "base_name": "Yanmega 4",
+      "variety": "",
+      "spec_id": 5183379,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Yanmega 4-1st Edition",
+      "base_name": "Yanmega 4",
+      "variety": "1st Edition",
+      "spec_id": 3066771,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 5,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Mr. Mime 4",
+      "base_name": "Mr. Mime 4",
+      "variety": "",
+      "spec_id": 5183380,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Mr. Mime 4-1st Edition",
+      "base_name": "Mr. Mime 4",
+      "variety": "1st Edition",
+      "spec_id": 3066586,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 9,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Espeon 4",
+      "base_name": "Espeon 4",
+      "variety": "",
+      "spec_id": 5183381,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 27,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Espeon 4-1st Edition",
+      "base_name": "Espeon 4",
+      "variety": "1st Edition",
+      "spec_id": 2424216,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 24,
+        "psa_10": 51,
+        "psa_total": 83
+      },
+      "grade_totals": {
+        "total": 83,
+        "grade_total": 83
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Bronzong 4",
+      "base_name": "Bronzong 4",
+      "variety": "",
+      "spec_id": 5183382,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Bronzong 4-1st Edition",
+      "base_name": "Bronzong 4",
+      "variety": "1st Edition",
+      "spec_id": 3066592,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 9,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Gallade 4",
+      "base_name": "Gallade 4",
+      "variety": "",
+      "spec_id": 5183383,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Gallade 4-1st Edition",
+      "base_name": "Gallade 4",
+      "variety": "1st Edition",
+      "spec_id": 3066594,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 13,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Gallade 4 LV.X-Holo",
+      "base_name": "Gallade 4 LV.X-Holo",
+      "variety": "",
+      "spec_id": 5183384,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 21,
+        "psa_10": 49,
+        "psa_total": 74
+      },
+      "grade_totals": {
+        "total": 74,
+        "grade_total": 74
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Gallade 4 LV.X-Holo-1st Edition",
+      "base_name": "Gallade 4 LV.X-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2174534,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 9,
+        "psa_8": 28,
+        "psa_9": 111,
+        "psa_10": 164,
+        "psa_total": 320
+      },
+      "grade_totals": {
+        "total": 320,
+        "grade_total": 320
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Drapion 4",
+      "base_name": "Drapion 4",
+      "variety": "",
+      "spec_id": 5183385,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Drapion 4-1st Edition",
+      "base_name": "Drapion 4",
+      "variety": "1st Edition",
+      "spec_id": 3066597,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 6,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Energy Search-1st Edition",
+      "base_name": "Energy Search",
+      "variety": "1st Edition",
+      "spec_id": 3066602,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Team Galactic's Invention G-105 Poke Turn-1st Edition",
+      "base_name": "Team Galactic's Invention G-105 Poke Turn",
+      "variety": "1st Edition",
+      "spec_id": 3066607,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Switch-1st Edition",
+      "base_name": "Switch",
+      "variety": "1st Edition",
+      "spec_id": 5183371,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Poke Ball-1st Edition",
+      "base_name": "Poke Ball",
+      "variety": "1st Edition",
+      "spec_id": 5183372,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Team Galactic's Invention G-101 Energy Gain-1st Edition",
+      "base_name": "Team Galactic's Invention G-101 Energy Gain",
+      "variety": "1st Edition",
+      "spec_id": 5183373,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Lucian's Assignment-1st Edition",
+      "base_name": "Lucian's Assignment",
+      "variety": "1st Edition",
+      "spec_id": 3066776,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Aaron's Collection-1st Edition",
+      "base_name": "Aaron's Collection",
+      "variety": "1st Edition",
+      "spec_id": 3066778,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "SP Energy-1st Edition",
+      "base_name": "SP Energy",
+      "variety": "1st Edition",
+      "spec_id": 5183374,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

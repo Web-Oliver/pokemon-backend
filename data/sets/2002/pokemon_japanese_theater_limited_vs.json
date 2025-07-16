@@ -1,0 +1,464 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Japanese Theater Limited VS",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-japanese-theater-limited-vs/104314",
+  "total_cards": 19,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 34,
+        "psa_2": 17,
+        "psa_3": 27,
+        "psa_4": 51,
+        "psa_5": 87,
+        "psa_6": 177,
+        "psa_7": 260,
+        "psa_8": 542,
+        "psa_9": 1464,
+        "psa_10": 3386,
+        "psa_total": 6045
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 6045
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Oakley's Ariados",
+      "base_name": "Oakley's Ariados",
+      "variety": "",
+      "spec_id": 1974849,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 12,
+        "psa_9": 32,
+        "psa_10": 125,
+        "psa_total": 173
+      },
+      "grade_totals": {
+        "total": 173,
+        "grade_total": 173
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Brock's Crobat",
+      "base_name": "Brock's Crobat",
+      "variety": "",
+      "spec_id": 1974853,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 36,
+        "psa_10": 140,
+        "psa_total": 180
+      },
+      "grade_totals": {
+        "total": 180,
+        "grade_total": 180
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Misty's Politoed",
+      "base_name": "Misty's Politoed",
+      "variety": "",
+      "spec_id": 1974856,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 11,
+        "psa_8": 14,
+        "psa_9": 36,
+        "psa_10": 228,
+        "psa_total": 293
+      },
+      "grade_totals": {
+        "total": 293,
+        "grade_total": 293
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Misty's Corsola",
+      "base_name": "Misty's Corsola",
+      "variety": "",
+      "spec_id": 1974859,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 46,
+        "psa_10": 181,
+        "psa_total": 236
+      },
+      "grade_totals": {
+        "total": 236,
+        "grade_total": 236
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Ross's Wailmer",
+      "base_name": "Ross's Wailmer",
+      "variety": "",
+      "spec_id": 1974863,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 22,
+        "psa_10": 149,
+        "psa_total": 179
+      },
+      "grade_totals": {
+        "total": 179,
+        "grade_total": 179
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Alto Mare's Xatu",
+      "base_name": "Alto Mare's Xatu",
+      "variety": "",
+      "spec_id": 1974867,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 32,
+        "psa_10": 159,
+        "psa_total": 194
+      },
+      "grade_totals": {
+        "total": 194,
+        "grade_total": 194
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Annie's Espeon",
+      "base_name": "Annie's Espeon",
+      "variety": "",
+      "spec_id": 1874294,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 8,
+        "psa_7": 10,
+        "psa_8": 36,
+        "psa_9": 98,
+        "psa_10": 328,
+        "psa_total": 489
+      },
+      "grade_totals": {
+        "total": 490,
+        "grade_total": 489
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Alto Mare's Kabutops",
+      "base_name": "Alto Mare's Kabutops",
+      "variety": "",
+      "spec_id": 1974870,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 10,
+        "psa_9": 42,
+        "psa_10": 220,
+        "psa_total": 284
+      },
+      "grade_totals": {
+        "total": 284,
+        "grade_total": 284
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Alto Mare's Aerodactyl",
+      "base_name": "Alto Mare's Aerodactyl",
+      "variety": "",
+      "spec_id": 1974873,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 14,
+        "psa_9": 45,
+        "psa_10": 227,
+        "psa_total": 295
+      },
+      "grade_totals": {
+        "total": 296,
+        "grade_total": 295
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Alto Mare's Pidgeotto",
+      "base_name": "Alto Mare's Pidgeotto",
+      "variety": "",
+      "spec_id": 1974875,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 10,
+        "psa_9": 27,
+        "psa_10": 173,
+        "psa_total": 217
+      },
+      "grade_totals": {
+        "total": 217,
+        "grade_total": 217
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Alto Mare's Latias-Holo",
+      "base_name": "Alto Mare's Latias-Holo",
+      "variety": "",
+      "spec_id": 1884974,
+      "psa_grades": {
+        "psa_1": 10,
+        "psa_2": 6,
+        "psa_3": 11,
+        "psa_4": 23,
+        "psa_5": 32,
+        "psa_6": 68,
+        "psa_7": 98,
+        "psa_8": 210,
+        "psa_9": 540,
+        "psa_10": 636,
+        "psa_total": 1634
+      },
+      "grade_totals": {
+        "total": 1637,
+        "grade_total": 1634
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Alto Mare's Latios-Holo",
+      "base_name": "Alto Mare's Latios-Holo",
+      "variety": "",
+      "spec_id": 1884987,
+      "psa_grades": {
+        "psa_1": 24,
+        "psa_2": 11,
+        "psa_3": 13,
+        "psa_4": 23,
+        "psa_5": 41,
+        "psa_6": 84,
+        "psa_7": 120,
+        "psa_8": 214,
+        "psa_9": 456,
+        "psa_10": 535,
+        "psa_total": 1521
+      },
+      "grade_totals": {
+        "total": 1522,
+        "grade_total": 1521
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Energy Restore",
+      "base_name": "Energy Restore",
+      "variety": "",
+      "spec_id": 1974880,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 8,
+        "psa_10": 33,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Energy Search",
+      "base_name": "Energy Search",
+      "variety": "",
+      "spec_id": 1974882,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 38,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Potion",
+      "base_name": "Potion",
+      "variety": "",
+      "spec_id": 1974884,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 8,
+        "psa_10": 31,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Soul Dew",
+      "base_name": "Soul Dew",
+      "variety": "",
+      "spec_id": 1974886,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 17,
+        "psa_10": 96,
+        "psa_total": 118
+      },
+      "grade_totals": {
+        "total": 119,
+        "grade_total": 118
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Switch",
+      "base_name": "Switch",
+      "variety": "",
+      "spec_id": 1974888,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 35,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Alto Mare Cube",
+      "base_name": "Alto Mare Cube",
+      "variety": "",
+      "spec_id": 1974891,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 52,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    }
+  ]
+}

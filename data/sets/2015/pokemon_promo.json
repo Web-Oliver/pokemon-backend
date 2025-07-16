@@ -1,0 +1,128 @@
+{
+  "year": "2015",
+  "set_name": "Pokemon Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2015/pokemon-promo/134085",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 4,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pikachu-World Championship Trainer No.1",
+      "base_name": "Pikachu",
+      "variety": "World Championship Trainer No.1",
+      "spec_id": 2362521,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pikachu-World Championship Trainer No.2",
+      "base_name": "Pikachu",
+      "variety": "World Championship Trainer No.2",
+      "spec_id": 6247632,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pikachu-World Championship Trainer No.3",
+      "base_name": "Pikachu",
+      "variety": "World Championship Trainer No.3",
+      "spec_id": 2273633,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pikachu-World Championship Trainer No.4",
+      "base_name": "Pikachu",
+      "variety": "World Championship Trainer No.4",
+      "spec_id": 6247635,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

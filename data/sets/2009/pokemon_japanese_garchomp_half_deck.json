@@ -1,0 +1,488 @@
+{
+  "year": "2009",
+  "set_name": "Pokemon Japanese Garchomp Half Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2009/pokemon-japanese-garchomp-half-deck/120743",
+  "total_cards": 20,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 18,
+        "psa_7": 28,
+        "psa_8": 71,
+        "psa_9": 320,
+        "psa_10": 666,
+        "psa_total": 1113
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1113
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Milotic C",
+      "base_name": "Milotic C",
+      "variety": "",
+      "spec_id": 2839878,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 6,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Milotic C-1st Edition",
+      "base_name": "Milotic C",
+      "variety": "1st Edition",
+      "spec_id": 2062098,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 9,
+        "psa_10": 19,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Roserade C",
+      "base_name": "Roserade C",
+      "variety": "",
+      "spec_id": 5183441,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Roserade C-1st Edition",
+      "base_name": "Roserade C",
+      "variety": "1st Edition",
+      "spec_id": 5183398,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 10,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Spiritomb C",
+      "base_name": "Spiritomb C",
+      "variety": "",
+      "spec_id": 5183444,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Spiritomb C-1st Edition",
+      "base_name": "Spiritomb C",
+      "variety": "1st Edition",
+      "spec_id": 5183399,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 8,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Lucario C",
+      "base_name": "Lucario C",
+      "variety": "",
+      "spec_id": 5183447,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 6,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Lucario C-1st Edition",
+      "base_name": "Lucario C",
+      "variety": "1st Edition",
+      "spec_id": 2062097,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 12,
+        "psa_10": 22,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Altaria C",
+      "base_name": "Altaria C",
+      "variety": "",
+      "spec_id": 5183448,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Altaria C-1st Edition",
+      "base_name": "Altaria C",
+      "variety": "1st Edition",
+      "spec_id": 2062094,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 18,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Garchomp C-Holo",
+      "base_name": "Garchomp C-Holo",
+      "variety": "",
+      "spec_id": 2395870,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 2,
+        "psa_9": 23,
+        "psa_10": 31,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Garchomp C-Holo-1st Edition",
+      "base_name": "Garchomp C-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2062089,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 12,
+        "psa_9": 61,
+        "psa_10": 169,
+        "psa_total": 251
+      },
+      "grade_totals": {
+        "total": 251,
+        "grade_total": 251
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Garchomp C LV.X-Holo",
+      "base_name": "Garchomp C LV.X-Holo",
+      "variety": "",
+      "spec_id": 2174536,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 9,
+        "psa_9": 37,
+        "psa_10": 67,
+        "psa_total": 128
+      },
+      "grade_totals": {
+        "total": 128,
+        "grade_total": 128
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Garchomp C LV.X-Holo-1st Edition",
+      "base_name": "Garchomp C LV.X-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2062086,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 8,
+        "psa_8": 41,
+        "psa_9": 121,
+        "psa_10": 275,
+        "psa_total": 458
+      },
+      "grade_totals": {
+        "total": 458,
+        "grade_total": 458
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Togekiss C",
+      "base_name": "Togekiss C",
+      "variety": "",
+      "spec_id": 5183453,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Togekiss C-1st Edition",
+      "base_name": "Togekiss C",
+      "variety": "1st Edition",
+      "spec_id": 5183400,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 9,
+        "psa_10": 12,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Energy Switch-1st Edition",
+      "base_name": "Energy Switch",
+      "variety": "1st Edition",
+      "spec_id": 5183401,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Cynthia's Guidance",
+      "base_name": "Cynthia's Guidance",
+      "variety": "",
+      "spec_id": 5183473,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Cynthia's Guidance-1st Edition",
+      "base_name": "Cynthia's Guidance",
+      "variety": "1st Edition",
+      "spec_id": 5183407,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 7,
+        "psa_10": 10,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "year": "2013",
+  "set_name": "Pokemon Japanese Black & White Genesect Half Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2013/pokemon-japanese-black-white-genesect-half-deck/195405",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 10,
+        "psa_10": 24,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Genesect-Holo",
+      "base_name": "Genesect-Holo",
+      "variety": "",
+      "spec_id": 5380686,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 10,
+        "psa_10": 23,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Bianca",
+      "base_name": "Bianca",
+      "variety": "",
+      "spec_id": 8665415,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

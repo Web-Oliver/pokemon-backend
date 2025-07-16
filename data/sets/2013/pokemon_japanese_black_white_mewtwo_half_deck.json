@@ -1,0 +1,128 @@
+{
+  "year": "2013",
+  "set_name": "Pokemon Japanese Black & White Mewtwo Half Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2013/pokemon-japanese-black-white-mewtwo-half-deck/130597",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 13,
+        "psa_9": 45,
+        "psa_10": 82,
+        "psa_total": 156
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 156
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Mewtwo-Holo",
+      "base_name": "Mewtwo-Holo",
+      "variety": "",
+      "spec_id": 2186053,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 13,
+        "psa_9": 45,
+        "psa_10": 76,
+        "psa_total": 150
+      },
+      "grade_totals": {
+        "total": 150,
+        "grade_total": 150
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Misdreavus",
+      "base_name": "Misdreavus",
+      "variety": "",
+      "spec_id": 6307447,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Mismagius",
+      "base_name": "Mismagius",
+      "variety": "",
+      "spec_id": 12120401,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Sableye",
+      "base_name": "Sableye",
+      "variety": "",
+      "spec_id": 12451785,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

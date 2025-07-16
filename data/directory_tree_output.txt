@@ -1,0 +1,1196 @@
+Scanning directory tree from: /home/oliver/SAFESPACE/pokemon-collection-backend/data
+
+./
+│   ├── tree.py
+│   ├── New Text Document.txt
+├── sets/
+│   ├── remove_low_population_sets.js
+│   ├── 1998-99/
+│   │   ├── pokemon_japanese_pokemon_japanese_promo.json
+│   │   ├── 1998-99_all_sets.json
+│   ├── 2002/
+│   │   ├── pokemon_expedition_box_topper.json
+│   │   ├── pokemon_japanese_ecard_promo.json
+│   │   ├── pokemon_japanese_promo_jr_rally.json
+│   │   ├── pokemon_japanese_promo_fan_club.json
+│   │   ├── pokemon_japanese_mysterious_mountains.json
+│   │   ├── pokemon_japanese_mcdonalds.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_legendary_collection_box_topper.json
+│   │   ├── pokemon_e_card_sample.json
+│   │   ├── pokemon_japanese_promo_trainers_magazine.json
+│   │   ├── pokemon_game_promo.json
+│   │   ├── pokemon_legendary_collection.json
+│   │   ├── pokemon_japanese_the_town_on_no_map.json
+│   │   ├── pokemon_japanese_split_earth.json
+│   │   ├── pokemon_neo_destiny.json
+│   │   ├── pokemon_league_promo_black_star.json
+│   │   ├── pokemon_japanese_wind_from_the_sea.json
+│   │   ├── pokemon_league_energize_your_game_cycle.json
+│   │   ├── pokemon_expedition.json
+│   │   ├── pokemon_japanese_mcdonalds_promo.json
+│   │   ├── 2002_all_sets.json
+│   │   ├── pokemon_japanese_meiji_promo.json
+│   │   ├── pokemon_japanese_theater_limited_vs.json
+│   ├── 1997/
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── tomy_pokemon_scratch_cards.json
+│   │   ├── pokemon_japanese_rocket.json
+│   │   ├── 1997_all_sets.json
+│   │   ├── pokemon_japanese_jungle.json
+│   │   ├── pokemon_japanese_corocoro_comics_promo.json
+│   │   ├── pokemon_japanese_fossil.json
+│   │   ├── pokemon_japanese_meiji_promo.json
+│   ├── 1996/
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── 1996_all_sets.json
+│   │   ├── pokemon_japanese_corocoro_comics_promo.json
+│   │   ├── pokemon_japanese_basic.json
+│   ├── 2010/
+│   │   ├── 2010_all_sets.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_clash_at_the_summit.json
+│   │   ├── pokemon_heartgold_soulsilver_undaunted.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_pikachu_world_promo.json
+│   │   ├── pokemon_japanese_lost_link.json
+│   │   ├── pokemon_japanese_reviving_legends.json
+│   │   ├── pokemon_japanese_black_white.json
+│   │   ├── pokemon_heartgold_soulsilver_promo.json
+│   │   ├── pokemon_heartgold_soulsilver_unleashed.json
+│   │   ├── pokemon_heartgold_soulsilver.json
+│   │   ├── pokemon_japanese_tyranitar_constructed_standard_deck.json
+│   │   ├── pokemon_japanese_steelix_constructed_standard_deck.json
+│   │   ├── pokemon_heartgold_soulsilver_triumphant.json
+│   │   ├── pokemon_japanese_design_contest_promo.json
+│   ├── 2004/
+│   │   ├── topps_pokemon_advanced_challenge.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_ex_team_magma_vs_team_aqua.json
+│   │   ├── pokemon_japanese_black_deck_kit.json
+│   │   ├── pokemon_japanese_flight_of_legends.json
+│   │   ├── pokemon_advanced_action_cards.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_japanese_clash_of_the_blue_sky.json
+│   │   ├── pokemon_japanese_rocket_gang_strikes_back.json
+│   │   ├── pokemon_promo.json
+│   │   ├── pokemon_japanese_play_promo.json
+│   │   ├── pokemon_ex_trainer_kit_latios.json
+│   │   ├── pokemon_japanese_e_battle_firered_leafgreen.json
+│   │   ├── pokemon_japanese_metagross_constructed_starter_deck.json
+│   │   ├── pokemon_ex_fire_red_leaf_green.json
+│   │   ├── pokemon_japanese_deoxys_constructed_starter_deck.json
+│   │   ├── pokemon_japanese_silver_deck_kit.json
+│   │   ├── pokemon_pop_series_1.json
+│   │   ├── pokemon_japanese_venusaurcharizardblastoise_random_constructed_starter_deck.json
+│   │   ├── 2004_all_sets.json
+│   │   ├── pokemon_japanese_rayquaza_constructed_starter_deck.json
+│   │   ├── pokemon_japanese_gift_box_emerald.json
+│   │   ├── pokemon_japanese_movie_commemoration_vs_pack.json
+│   │   ├── pokemon_ex_battle_stadium.json
+│   │   ├── pokemon_ex_team_rocket_returns.json
+│   │   ├── pokemon_black_star_promo.json
+│   │   ├── pokemon_ex_trainer_kit_latias.json
+│   │   ├── pokemon_ex_hidden_legends.json
+│   │   ├── pokemon_japanese_undone_seal.json
+│   │   ├── topps_pokemon_advanced_challenge_evolution_die_cuts.json
+│   ├── 2021-22/
+│   │   ├── 2021-22_all_sets.json
+│   │   ├── pokemon_promo.json
+│   ├── 2003/
+│   │   ├── pokemon_japanese_torchic_constructed_starter_deck.json
+│   │   ├── pokemon_skyridge.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_magma_deck_kit.json
+│   │   ├── pokemon_ex_sandstorm.json
+│   │   ├── pokemon_japanese_promo_trainers_magazine.json
+│   │   ├── pokemon_japanese_mudkip_constructed_starter_deck.json
+│   │   ├── pokemon_japanese_play_promo.json
+│   │   ├── 2003_all_sets.json
+│   │   ├── pokemon_japanese_magma_vs_aqua.json
+│   │   ├── pokemon_japanese_expansion_pack.json
+│   │   ├── pokemon_skyridge_box_topper.json
+│   │   ├── pokemon_ex_ruby_sapphire.json
+│   │   ├── pokemon_japanese_miracle_of_the_desert.json
+│   │   ├── pokemon_best_of_game_promo.json
+│   │   ├── pokemon_aquapolis_box_topper.json
+│   │   ├── pokemon_japanese_movie_commemoration_vs_pack.json
+│   │   ├── pokemon_black_star_promo.json
+│   │   ├── pokemon_japanese_aqua_half_decks.json
+│   │   ├── pokemon_ex_dragon.json
+│   │   ├── pokemon_japanese_rulers_of_the_heavens.json
+│   │   ├── pokemon_japanese_gift_box_latias_half_deck.json
+│   │   ├── pokemon_japanese_gift_box_latios_half_deck.json
+│   │   ├── pokemon_aquapolis.json
+│   ├── 2020-2022/
+│   │   ├── 2020-2022_all_sets.json
+│   ├── years/
+│   │   ├── all_year_links.json
+│   ├── .claude/
+│   │   ├── settings.local.json
+│   ├── 2018/
+│   │   ├── pokemon_japanese_sun_moon_eevee_gx_starter_set.json
+│   │   ├── pokemon_japanese_sm_promo.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_fairy_rise.json
+│   │   ├── pokemon_japanese_sun_moon_tag_bolt.json
+│   │   ├── pokemon_japanese_sun_moon_super_burst_impact.json
+│   │   ├── pokemon_sun_moon_forbidden_light.json
+│   │   ├── pokemon_sun_moon_ultra_prism.json
+│   │   ├── pokemon_japanese_sun_moon_dragon_storm.json
+│   │   ├── pokemon_sm_black_star_promo.json
+│   │   ├── pokemon_sun_moon_celestial_storm.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_thunderclap_spark.json
+│   │   ├── pokemon_japanese_sun_moon_forbidden_light.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_champion_road.json
+│   │   ├── 2018_all_sets.json
+│   │   ├── pokemon_mcdonalds_collection.json
+│   │   ├── pokemon_japanese_sun_moon_sky_splitting_charisma.json
+│   │   ├── pokemon_sun_moon_dragon_majesty.json
+│   │   ├── pokemon_sun_moon_lost_thunder.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_ultra_force.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_dark_order.json
+│   │   ├── pokemon_japanese_sun_moon_ultra_shiny_gx.json
+│   │   ├── pokemon_japanese_gx_starter_decks.json
+│   ├── 2013/
+│   │   ├── pokemon_black_white_plasma_blast.json
+│   │   ├── pokemon_japanese_black_white_shiny_collection.json
+│   │   ├── pokemon_xy_black_star_promo.json
+│   │   ├── pokemon_japanese_black_white_ex_battle_boost.json
+│   │   ├── pokemon_japanese_blastoise_kyurem_ex_combo_deck.json
+│   │   ├── pokemon_japanese_black_white_megalo_cannon.json
+│   │   ├── pokemon_black_white_plasma_storm.json
+│   │   ├── pokemon_black_white_plasma_freeze.json
+│   │   ├── pokemon_black_white_legendary_treasures.json
+│   │   ├── pokemon_black_white_legendary_treasures_radiant_collection.json
+│   │   ├── pokemon_japanese_xy_promo.json
+│   │   ├── 2013_all_sets.json
+│   │   ├── pokemon_black_white_promo.json
+│   │   ├── pokemon_japanese_xy.json
+│   │   ├── pokemon_japanese_black_white_promo.json
+│   ├── 2007/
+│   │   ├── pokemon_diamond_pearl_mysterious_treasures.json
+│   │   ├── pokemon_ex_power_keepers.json
+│   │   ├── pokemon_japanese_10th_movie_commemoration_promo.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_pop_series_5.json
+│   │   ├── pokemon_pop_series_6.json
+│   │   ├── pokemon_japanese_diamond_pearl_secret_of_the_lakes.json
+│   │   ├── pokemon_japanese_promo_summer_battle_road.json
+│   │   ├── pokemon_japanese_diamond_pearl_dawn_dash.json
+│   │   ├── pokemon_japanese_diamond_pearl_shining_darkness.json
+│   │   ├── pokemon_diamond_pearl_secret_wonders.json
+│   │   ├── pokemon_diamond_pearl.json
+│   │   ├── pokemon_diamond_pearl_black_star_promo.json
+│   │   ├── pokemon_japanese_entry_pack_08.json
+│   │   ├── pokemon_japanese_diamond_pearl_moonlit_pursuit.json
+│   │   ├── 2007_all_sets.json
+│   │   ├── pokemon_japanese_diamond_pearl_palkia_lvx_constructed_standard_deck.json
+│   │   ├── pokemon_japanese_diamond_pearl_dialga_lvx_constructed_standard_deck.json
+│   │   ├── pokemon_japanese_world_champions_pack.json
+│   ├── 1998/
+│   │   ├── pokemon_japanese_promo_game_boy.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_vending.json
+│   │   ├── pokemon_japanese_tamamushi_city_gym_deck.json
+│   │   ├── amada_pokemon_japanese_super_dx_stickers.json
+│   │   ├── pokemon_japanese_coin_promo.json
+│   │   ├── pokemon_japanese_nivi_city_gym_deck.json
+│   │   ├── pokemon_japanese_gym.json
+│   │   ├── pokemon_japanese_hanada_city_gym_deck.json
+│   │   ├── pokemon_japanese_gym_deck.json
+│   │   ├── pokemon_japanese_kuchiba_city_gym_deck.json
+│   │   ├── 1998_all_sets.json
+│   │   ├── pokemon_japanese_meiji_promo.json
+│   │   ├── pokemon_japanese_promo_corocoro_comics.json
+│   │   ├── pokemon_japanese_redgreen_gift_set.json
+│   │   ├── pokemon_japanese_ana_airways.json
+│   ├── 2011/
+│   │   ├── pokemon_japanese_battle_theme_deck_victini.json
+│   │   ├── pokemon_japanese_black_white_red_collection.json
+│   │   ├── pokemon_japanese_black_white_dark_rush.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_black_white_noble_victories.json
+│   │   ├── pokemon_japanese_black_white_psycho_drive.json
+│   │   ├── 2011_all_sets.json
+│   │   ├── pokemon_japanese_black_white_hail_blizzard.json
+│   │   ├── pokemon_black_white_emerging_powers.json
+│   │   ├── pokemon_black_white_promo.json
+│   │   ├── pokemon_call_of_legends.json
+│   │   ├── pokemon_black_white.json
+│   │   ├── pokemon_japanese_black_white_promo.json
+│   ├── 2017/
+│   │   ├── pokemon_japanese_sm_promo.json
+│   │   ├── pokemon_japanese_sun_moon_awakened_heroes.json
+│   │   ├── pokemon_sun_moon_burning_shadows.json
+│   │   ├── pokemon_sun_moon.json
+│   │   ├── pokemon_japanese_sun_moon_gx_battle_boost.json
+│   │   ├── pokemon_xy_black_star_promo.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack.json
+│   │   ├── pokemon_sun_moon_guardians_rising.json
+│   │   ├── pokemon_sm_black_star_promo.json
+│   │   ├── pokemon_japanese_sun_moon_islands_await_you.json
+│   │   ├── pokemon_japanese_sun_moon_ultradimensional_beasts.json
+│   │   ├── pokemon_sun_moon_crimson_invasion.json
+│   │   ├── pokemon_japanese_sun_moon_darkness_that_consumes_light.json
+│   │   ├── pokemon_japanese_the_best_of_xy.json
+│   │   ├── pokemon_japanese_xy_promo.json
+│   │   ├── pokemon_japanese_sun_moon_alolan_moonlight.json
+│   │   ├── pokemon_mega_powers_collection_promo.json
+│   │   ├── pokemon_japanese_sun_moon_to_have_seen_the_battle_rainbow.json
+│   │   ├── pokemon_japanese_sun_moon_ultra_moon.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_facing_a_new_trial.json
+│   │   ├── pokemon_premium_trainer_xy_collection_promo.json
+│   │   ├── pokemon_sun_moon_shining_legends.json
+│   │   ├── pokemon_japanese_sun_moon_ash_vs_team_rocket_deck_kit.json
+│   │   ├── pokemon_japanese_sun_moon_ultra_sun.json
+│   │   ├── 2017_all_sets.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_shining_legends.json
+│   ├── 2000/
+│   │   ├── danone_pokemon_stadium_tip_shiny.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_cd_promo.json
+│   │   ├── topps_pokemon_tv_animation_series_3_heroes_villains.json
+│   │   ├── pokemon_game_movie.json
+│   │   ├── pokemon_promo_black_star.json
+│   │   ├── pokemon_japanese_neo_2_promo.json
+│   │   ├── pokemon_game_promo.json
+│   │   ├── pokemon_2_player_cd_rom_starter_set.json
+│   │   ├── topps_pokemon_tv_animation_series_2_episode_cards.json
+│   │   ├── merlin_pokemon_2.json
+│   │   ├── pokemon_neo_genesis.json
+│   │   ├── pokemon_japanese_neo_2.json
+│   │   ├── pokemon_japanese_trainer_promo_lucky_stadium.json
+│   │   ├── topps_pokemon_tv_animation_series_3_pop_up.json
+│   │   ├── pokemon_gym_challenge.json
+│   │   ├── pokemon_japanese_neo_3.json
+│   │   ├── pokemon_gym_heroes.json
+│   │   ├── pokemon_japanese_neo_3_promo.json
+│   │   ├── 2000_all_sets.json
+│   │   ├── pokemon_neo_genesis_1st_edition.json
+│   │   ├── pokemon_japanese_neo.json
+│   │   ├── pokemon_japanese_meiji_promo.json
+│   │   ├── pokemon_game_base_ii.json
+│   │   ├── topps_chrome_pokemon_tv.json
+│   │   ├── topps_pokemon_the_movie_2000_authentic_film_frame_card.json
+│   │   ├── topps_pokemon_tv_animation_die_cut_embossed.json
+│   │   ├── pokemon_game.json
+│   │   ├── pokemon_japanese_promo_corocoro_comics.json
+│   │   ├── pokemon_rocket.json
+│   │   ├── danone_pokemon_stadium_tip.json
+│   │   ├── pokemon_pikachu_world.json
+│   │   ├── pokemon_japanese_ana_airways.json
+│   ├── 2015/
+│   │   ├── pokemon_japanese_xy_emerald_break.json
+│   │   ├── 2015_all_sets.json
+│   │   ├── pokemon_japanese_raichu_break_evolution_pack.json
+│   │   ├── pokemon_xy_roaring_skies.json
+│   │   ├── pokemon_xy_breakthrough.json
+│   │   ├── pokemon_art_academy_competition.json
+│   │   ├── pokemon_japanese_m_master_deck_build_speed_style.json
+│   │   ├── pokemon_xy_ancient_origins.json
+│   │   ├── pokemon_xy_double_crisis.json
+│   │   ├── pokemon_japanese_xy_double_crisis.json
+│   │   ├── pokemon_japanese_legendary_shine_collection.json
+│   │   ├── pokemon_xy_black_star_promos.json
+│   │   ├── pokemon_japanese_xy_blue_shock.json
+│   │   ├── pokemon_japanese_xy_promo.json
+│   │   ├── pokemon_xy_primal_clash.json
+│   │   ├── pokemon_japanese_xy_red_flash.json
+│   │   ├── pokemon_japanese_xy_rage_of_the_broken_heavens.json
+│   │   ├── pokemon_japanese_golduck_break_palkia_ex_combo_deck.json
+│   │   ├── pokemon_japanese_m_rayquaza_ex_battle_deck.json
+│   │   ├── pokemon_japanese_m_master_deck_build_power_style.json
+│   │   ├── pokemon_japanese_xy_bandit_ring.json
+│   ├── 2022-2023/
+│   │   ├── pokemon_play_pokemon_prize_pack.json
+│   │   ├── 2022-2023_all_sets.json
+│   ├── 2014/
+│   │   ├── pokemon_japanese_xy_rising_fist.json
+│   │   ├── pokemon_japanese_hyper_metal_chain_deck.json
+│   │   ├── pokemon_xy_flashfire.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_xy_black_star_promo.json
+│   │   ├── pokemon_xy_furious_fists.json
+│   │   ├── pokemon_japanese_xy_gaia_volcano.json
+│   │   ├── pokemon_japanese_xy_wild_blaze.json
+│   │   ├── 2014_all_sets.json
+│   │   ├── pokemon_japanese_xy_promo.json
+│   │   ├── pokemon_xy.json
+│   │   ├── pokemon_xy_phantom_forces.json
+│   │   ├── pokemon_japanese_xy_super_legend_set.json
+│   │   ├── pokemon_scrap.json
+│   │   ├── pokemon_japanese_xy_phantom_gate.json
+│   │   ├── pokemon_japanese_xy_tidal_storm.json
+│   │   ├── pokemon_japanese_m_charizard_ex_mega_battle.json
+│   ├── 2008-09/
+│   │   ├── 2008-09_all_sets.json
+│   │   ├── pokemon_pop_series_8.json
+│   ├── 2016/
+│   │   ├── pokemon_japanese_xy_pokekyun_collection.json
+│   │   ├── pokemon_japanese_sm_promo.json
+│   │   ├── pokemon_japanese_sun_moon_collection_sun.json
+│   │   ├── pokemon_japanese_mythical_legendary_dream_shine_collection.json
+│   │   ├── pokemon_xy_black_star_promo.json
+│   │   ├── pokemon_promo_pokken_tournament.json
+│   │   ├── 2016_all_sets.json
+│   │   ├── pokemon_xy_fates_collide.json
+│   │   ├── pokemon_xy_evolutions.json
+│   │   ├── pokemon_xy_steam_siege.json
+│   │   ├── pokemon_sm_black_star_promo.json
+│   │   ├── pokemon_japanese_premium_champion_pack.json
+│   │   ├── pokemon_japanese_xy_starter_pack.json
+│   │   ├── pokemon_japanese_xy_awakening_psychic_king.json
+│   │   ├── pokemon_japanese_expansion_20th_anniversary.json
+│   │   ├── pokemon_xy_breakpoint.json
+│   │   ├── pokemon_japanese_sun_moon_pikachus_new_friends.json
+│   │   ├── pokemon_japanese_xy_fever_burst_fighter.json
+│   │   ├── pokemon_japanese_xy_cruel_traitor.json
+│   │   ├── pokemon_japanese_xy_promo.json
+│   │   ├── pokemon_xy_generations_radiant_collection.json
+│   │   ├── pokemon_japanese_sun_moon_collection_moon.json
+│   │   ├── pokemon_xy_trainer_kit_pikachu_libre_half_deck.json
+│   │   ├── pokemon_xy_generations.json
+│   ├── 2005/
+│   │   ├── 2005_all_sets.json
+│   │   ├── pokemon_world_championship_promo.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_quick_construction_packs.json
+│   │   ├── pokemon_ex_unseen_forces.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_ex_delta_species.json
+│   │   ├── pokemon_japanese_holon_research_tower.json
+│   │   ├── pokemon_ex_deoxys.json
+│   │   ├── pokemon_japanese_master_kit.json
+│   │   ├── pokemon_japanese_play_promo.json
+│   │   ├── pokemon_japanese_movie_vs_pack.json
+│   │   ├── pokemon_japanese_holon_research_tower_fire.json
+│   │   ├── pokemon_japanese_mirages_mew_constructed_starter_deck.json
+│   │   ├── pokemon_japanese_holon_research_tower_lightning.json
+│   │   ├── pokemon_japanese_pokepark_forest.json
+│   │   ├── pokemon_japanese_feraligatr_constructed_starter_deck.json
+│   │   ├── pokemon_japanese_meganium_constructed_starter_deck.json
+│   │   ├── pokemon_pop_series_2.json
+│   │   ├── pokemon_japanese_typhlosion_constructed_starter_deck.json
+│   │   ├── pokemon_japanese_holon_research_tower_water.json
+│   │   ├── pokemon_japanese_pokepark_blue.json
+│   │   ├── pokemon_master_trainer_game_no_longer_grading.json
+│   │   ├── pokemon_black_star_promos.json
+│   │   ├── pokemon_japanese_mirage_forest.json
+│   │   ├── pokemon_ex_emerald.json
+│   │   ├── pokemon_japanese_golden_sky_silvery_ocean.json
+│   │   ├── pokemon_japanese_gift_box_mew.json
+│   ├── 2020/
+│   │   ├── 2020_all_sets.json
+│   │   ├── pokemon_sword_shield_rebel_clash.json
+│   │   ├── pokemon_japanese_s_promo.json
+│   │   ├── pokemon_japanese_sword_shield_vmax_rising.json
+│   │   ├── pokemon_sword_shield_vivid_voltage.json
+│   │   ├── pokemon_japanese_sword_shield_blastoise_vmax_starter_set.json
+│   │   ├── pokemon_sword_shield.json
+│   │   ├── pokemon_japanese_coin_promo.json
+│   │   ├── pokemon_sm_black_star_promo.json
+│   │   ├── pokemon_japanese_sword_shield_venusaur_vmax_starter_set.json
+│   │   ├── pokemon_battle_academy.json
+│   │   ├── pokemon_sword_shield_darkness_ablaze.json
+│   │   ├── pokemon_japanese_sword_shield_charizard_vmax_starter_set_2.json
+│   │   ├── pokemon_japanese_sword_shield_infinity_zone.json
+│   │   ├── pokemon_japanese_sword_shield_amazing_volt_tackle.json
+│   │   ├── pokemon_japanese_sword_shield_explosive_walker.json
+│   │   ├── pokemon_sword_shield_champions_path.json
+│   │   ├── pokemon_scrap.json
+│   │   ├── pokemon_japanese_sword_shield_rebellion_crash.json
+│   │   ├── pokemon_swsh_black_star_promo.json
+│   │   ├── pokemon_japanese_sword_shield_shiny_star_v.json
+│   │   ├── pokemon_japanese_sword_shield_charizard_vmax_starter_set.json
+│   │   ├── pokemon_futsal.json
+│   │   ├── pokemon_japanese_sword_shield_v_starter_decks.json
+│   │   ├── pokemon_japanese_sword_shield_legendary_heartbeat.json
+│   │   ├── pokemon_japanese_sword_shield_vmax_special_set.json
+│   ├── 1999/
+│   │   ├── pokemon_japanese_yamabuki_city_gym_deck.json
+│   │   ├── pokemon_jungle.json
+│   │   ├── pokemon_japanese_cd_promo.json
+│   │   ├── pokemon_game_movie.json
+│   │   ├── pokemon_japanese_vending.json
+│   │   ├── pokemon_game_promo.json
+│   │   ├── pokemon_japanese_promo_tropical_mega_battle.json
+│   │   ├── pokemon_japanese_gym_2.json
+│   │   ├── pokemon_japanese_coin_promo.json
+│   │   ├── pokemon_league_promo.json
+│   │   ├── pokemon_game_TEST.json
+│   │   ├── pokemon_japanese_promo_pro_trainer_mag.json
+│   │   ├── 1999_pokemon_sets_TEST.json
+│   │   ├── pokemon_fossil.json
+│   │   ├── pokemon_japanese_guren_town_gym_deck.json
+│   │   ├── pokemon_japanese_corocoro_comics_promo.json
+│   │   ├── pokemon_japanese_promo_southern_islands.json
+│   │   ├── merlin_pokemon.json
+│   │   ├── pokemon_japanese_squirtle_deck.json
+│   │   ├── pokemon_japanese_bulbasaur_deck.json
+│   │   ├── pokemon_japanese_meiji_promo.json
+│   │   ├── pokemon_japanese_promo_ana_airways.json
+│   │   ├── pokemon_game.json
+│   │   ├── pokemon_jungle_promo.json
+│   │   ├── 1999_all_sets.json
+│   ├── 2019/
+│   │   ├── pokemon_japanese_sword_shield_sword.json
+│   │   ├── pokemon_japanese_sm_promo.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_sword_shield_shield.json
+│   │   ├── pokemon_japanese_s_promo.json
+│   │   ├── pokemon_japanese_sun_moon_tag_team_gx_all_stars.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_japanese_sun_moon_full_metal_wall.json
+│   │   ├── pokemon_sun_moon_unified_minds.json
+│   │   ├── pokemon_japanese_sun_moon_gg_end.json
+│   │   ├── pokemon_old_maid.json
+│   │   ├── pokemon_japanese_sun_moon_double_blaze.json
+│   │   ├── pokemon_sun_moon_team_up.json
+│   │   ├── pokemon_japanese_trainer_battle_decks.json
+│   │   ├── pokemon_japanese_sun_moon_sky_legend.json
+│   │   ├── pokemon_japanese_sun_moon_detective_pikachu.json
+│   │   ├── pokemon_sm_black_star_promo.json
+│   │   ├── pokemon_sun_moon_hidden_fates.json
+│   │   ├── pokemon_sun_moon_detective_pikachu.json
+│   │   ├── pokemon_japanese_family_pokemon_card_game.json
+│   │   ├── pokemon_indonesian_sun_moon_legends_awakened.json
+│   │   ├── pokemon_sun_moon_unbroken_bonds.json
+│   │   ├── pokemon_indonesian_sun_moon_first_impact.json
+│   │   ├── pokemon_japanese_sun_moon_alter_genesis.json
+│   │   ├── pokemon_japanese_extra_regulation_box.json
+│   │   ├── pokemon_japanese_tag_team_starter_set.json
+│   │   ├── pokemon_mcdonalds_collection.json
+│   │   ├── pokemon_japanese_sun_moon_remix_bout.json
+│   │   ├── pokemon_japanese_sun_moon_strength_expansion_pack_night_unison.json
+│   │   ├── pokemon_japanese_sun_moon_dream_league.json
+│   │   ├── pokemon_japanese_sun_moon_miracle_twins.json
+│   │   ├── pokemon_sun_moon_cosmic_eclipse.json
+│   │   ├── 2019_all_sets.json
+│   ├── 2009/
+│   │   ├── 2009_all_sets.json
+│   │   ├── pokemon_japanese_mewtwo_lvx_collection_pack.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_leafeon_vs_metagross_expert_deck_leafeon_deck.json
+│   │   ├── pokemon_pop_series_9.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_japanese_beat_of_the_frontier.json
+│   │   ├── pokemon_japanese_arceus_lvx_deck_lightning_psychic.json
+│   │   ├── pokemon_japanese_arceus_lvx_deck_grass_fire.json
+│   │   ├── pokemon_japanese_advent_of_arceus.json
+│   │   ├── pokemon_japanese_garchomp_half_deck.json
+│   │   ├── pokemon_japanese_leafeon_vs_metagross_expert_deck_metagross_deck.json
+│   │   ├── pokemon_platinum.json
+│   │   ├── pokemon_diamond_pearl_black_star_promo.json
+│   │   ├── pokemon_japanese_shaymin_lvx_collection_pack.json
+│   │   ├── pokemon_japanese_regigigas_lvx_collection_pack.json
+│   │   ├── pokemon_platinum_supreme_victors.json
+│   │   ├── pokemon_japanese_heartgold_collection.json
+│   │   ├── pokemon_japanese_movie_commemoration_random_pack.json
+│   │   ├── pokemon_rumble.json
+│   │   ├── pokemon_platinum_rising_rivals.json
+│   │   ├── pokemon_platinum_arceus.json
+│   │   ├── pokemon_japanese_melee_pokemon_scramble.json
+│   │   ├── pokemon_japanese_soulsilver_collection.json
+│   │   ├── pokemon_japanese_battle_starter_decks.json
+│   │   ├── pokemon_japanese_charizard_half_deck.json
+│   ├── 2006/
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── 2006_all_sets.json
+│   │   ├── pokemon_japanese_shockwave.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_ex_legend_maker.json
+│   │   ├── pokemon_japanese_oceans_kyogre_ex_constructed_starter_deck.json
+│   │   ├── pokemon_ex_trainer_kit_2_minun_half_deck.json
+│   │   ├── pokemon_japanese_diamond_pearl_space_time_creation.json
+│   │   ├── pokemon_japanese_earths_groudon_ex_constructed_starter_deck.json
+│   │   ├── pokemon_japanese_imprison_gardevoir_ex_constructed_standard_deck.json
+│   │   ├── pokemon_japanese_miracle_crystal.json
+│   │   ├── pokemon_ex_dragon_frontiers.json
+│   │   ├── pokemon_japanese_holon_phantoms.json
+│   │   ├── pokemon_pop_series_4.json
+│   │   ├── pokemon_pop_series_1.json
+│   │   ├── pokemon_japanese_dragon_frontiers.json
+│   │   ├── pokemon_pop_series_2.json
+│   │   ├── pokemon_pop_series_3.json
+│   │   ├── pokemon_ex_holon_phantoms.json
+│   │   ├── pokemon_japanese_movie_commemoration_vs_pack.json
+│   │   ├── pokemon_ex_crystal_guardians.json
+│   │   ├── pokemon_black_star_promos.json
+│   ├── 2001/
+│   │   ├── pokemon_japanese_promo_game_boy.json
+│   │   ├── pokemon_japanese_chikorita_half_deck.json
+│   │   ├── pokemon_japanese_chikorita_side_deck.json
+│   │   ├── pokemon_japanese_e_starter_deck.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_japanese_expedition.json
+│   │   ├── topps_pokemon_johto_league_champions.json
+│   │   ├── pokemon_game_movie.json
+│   │   ├── pokemon_promo_black_star.json
+│   │   ├── pokemon_neo_discovery.json
+│   │   ├── pokemon_game_promo.json
+│   │   ├── 2001_all_sets.json
+│   │   ├── pokemon_japanese_web.json
+│   │   ├── pokemon_japanese_totodile_half_deck.json
+│   │   ├── pokemon_southern_islands_promo.json
+│   │   ├── pokemon_neo_revelation_1st_edition.json
+│   │   ├── pokemon_japanese_neo_4.json
+│   │   ├── pokemon_japanese_totodile_side_deck.json
+│   │   ├── merlin_pokemon_3.json
+│   │   ├── pokemon_japanese_meiji_promo_silver_foil.json
+│   │   ├── topps_pokemon_johto_series_1.json
+│   │   ├── pokemon_neo_revelation.json
+│   │   ├── pokemon_japanese_vs.json
+│   │   ├── pokemon_japanese_promo_corocoro_comics.json
+│   ├── 2007-2008/
+│   │   ├── 2007-2008_all_sets.json
+│   ├── 2008/
+│   │   ├── pokemon_japanese_galactics_conquest.json
+│   │   ├── pokemon_diamond_pearl_stormfront.json
+│   │   ├── pokemon_japanese_gallade_half_deck.json
+│   │   ├── pokemon_japanese_promo.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_diamond_pearl_great_encounters.json
+│   │   ├── 2008_all_sets.json
+│   │   ├── pokemon_japanese_diamond_pearl_cry_from_the_mysterious.json
+│   │   ├── pokemon_japanese_11th_movie_commemoration_set.json
+│   │   ├── pokemon_diamond_pearl_world_08_promo.json
+│   │   ├── pokemon_japanese_diamond_pearl_heatran_half_deck.json
+│   │   ├── pokemon_pop_series_7.json
+│   │   ├── pokemon_japanese_diamond_pearl_temple_of_anger.json
+│   │   ├── pokemon_japanese_stormfront.json
+│   │   ├── pokemon_japanese_giratina_half_deck.json
+│   │   ├── pokemon_japanese_giratina_vs_dialga.json
+│   │   ├── pokemon_japanese_palkia_half_deck.json
+│   │   ├── pokemon_diamond_pearl_black_star_promo.json
+│   │   ├── pokemon_japanese_dialga_half_deck.json
+│   │   ├── pokemon_diamond_pearl_majestic_dawn.json
+│   │   ├── pokemon_japanese_bonds_to_the_end_of_time.json
+│   │   ├── pokemon_japanese_diamond_pearl_regigigas_half_deck.json
+│   │   ├── pokemon_diamond_pearl_legends_awakened.json
+│   │   ├── pokemon_japanese_pikachu_half_deck.json
+│   │   ├── pokemon_japanese_infernape_half_deck.json
+│   ├── 2012/
+│   │   ├── pokemon_japanese_black_white_freeze_bolt.json
+│   │   ├── pokemon_japanese_black_white_plasma_gale.json
+│   │   ├── pokemon_black_white_dark_explorers.json
+│   │   ├── pokemon_japanese_black_white_dragon_blade.json
+│   │   ├── pokemon_world_championships_promo.json
+│   │   ├── pokemon_japanese_black_white_dragon_blast.json
+│   │   ├── pokemon_black_white_dragons_exalted.json
+│   │   ├── pokemon_polish_diamond_pearl_mysterious_treasures.json
+│   │   ├── pokemon_japanese_black_white_spiral_force.json
+│   │   ├── pokemon_black_white_next_destinies.json
+│   │   ├── pokemon_japanese_garchomp_half_deck.json
+│   │   ├── pokemon_black_white_boundaries_crossed.json
+│   │   ├── 2012_all_sets.json
+│   │   ├── pokemon_japanese_black_white_dragon_selection.json
+│   │   ├── pokemon_japanese_black_white_team_plasma_battle_gift_set.json
+│   │   ├── pokemon_japanese_black_white_cold_flare.json
+│   │   ├── pokemon_japanese_everyones_exciting_battle.json
+│   │   ├── pokemon_japanese_black_white_thunder_knuckle.json
+│   │   ├── pokemon_black_white_promo.json
+│   │   ├── pokemon_black_white_dragon_vault.json
+│   │   ├── pokemon_japanese_black_white_promo.json
+├── SealedProducts/
+│   ├── Booster-Boxes/
+│   │   ├── progress.json
+│   │   ├── Booster-Boxes.json
+│   ├── Trainer-Kits/
+│   │   ├── Trainer-Kits.json
+│   │   ├── progress.json
+│   ├── Box-Sets/
+│   │   ├── progress.json
+│   │   ├── Box-Sets.json
+│   ├── Tins/
+│   │   ├── progress.json
+│   │   ├── Tins.json
+│   ├── Boosters/
+│   │   ├── progress.json
+│   │   ├── Boosters.json
+│   ├── Theme-Decks/
+│   │   ├── Theme-Decks.json
+│   │   ├── progress.json
+│   ├── Blisters/
+│   │   ├── progress.json
+│   │   ├── Blisters.json
+│   ├── Elite-Trainer-Boxes/
+│   │   ├── progress.json
+│   │   ├── Elite-Trainer-Boxes.json
+
+--- Summary: All Files Found (Full Paths) ---
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/tree.py
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/New Text Document.txt
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/remove_low_population_sets.js
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998-99/pokemon_japanese_pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998-99/1998-99_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_expedition_box_topper.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_ecard_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_promo_jr_rally.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_promo_fan_club.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_mysterious_mountains.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_mcdonalds.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_legendary_collection_box_topper.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_e_card_sample.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_promo_trainers_magazine.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_game_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_legendary_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_the_town_on_no_map.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_split_earth.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_neo_destiny.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_league_promo_black_star.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_wind_from_the_sea.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_league_energize_your_game_cycle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_expedition.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_mcdonalds_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/2002_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_meiji_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2002/pokemon_japanese_theater_limited_vs.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/tomy_pokemon_scratch_cards.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/pokemon_japanese_rocket.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/1997_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/pokemon_japanese_jungle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/pokemon_japanese_corocoro_comics_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/pokemon_japanese_fossil.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1997/pokemon_japanese_meiji_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1996/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1996/1996_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1996/pokemon_japanese_corocoro_comics_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1996/pokemon_japanese_basic.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/2010_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_clash_at_the_summit.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_heartgold_soulsilver_undaunted.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_pikachu_world_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_lost_link.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_reviving_legends.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_black_white.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_heartgold_soulsilver_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_heartgold_soulsilver_unleashed.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_heartgold_soulsilver.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_tyranitar_constructed_standard_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_steelix_constructed_standard_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_heartgold_soulsilver_triumphant.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2010/pokemon_japanese_design_contest_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/topps_pokemon_advanced_challenge.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_ex_team_magma_vs_team_aqua.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_black_deck_kit.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_flight_of_legends.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_advanced_action_cards.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_clash_of_the_blue_sky.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_rocket_gang_strikes_back.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_play_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_ex_trainer_kit_latios.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_e_battle_firered_leafgreen.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_metagross_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_ex_fire_red_leaf_green.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_deoxys_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_silver_deck_kit.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_pop_series_1.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_venusaurcharizardblastoise_random_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/2004_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_rayquaza_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_gift_box_emerald.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_movie_commemoration_vs_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_ex_battle_stadium.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_ex_team_rocket_returns.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_ex_trainer_kit_latias.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_ex_hidden_legends.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/pokemon_japanese_undone_seal.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2004/topps_pokemon_advanced_challenge_evolution_die_cuts.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2021-22/2021-22_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2021-22/pokemon_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_torchic_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_skyridge.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_magma_deck_kit.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_ex_sandstorm.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_promo_trainers_magazine.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_mudkip_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_play_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/2003_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_magma_vs_aqua.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_expansion_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_skyridge_box_topper.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_ex_ruby_sapphire.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_miracle_of_the_desert.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_best_of_game_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_aquapolis_box_topper.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_movie_commemoration_vs_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_aqua_half_decks.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_ex_dragon.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_rulers_of_the_heavens.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_gift_box_latias_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_japanese_gift_box_latios_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2003/pokemon_aquapolis.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020-2022/2020-2022_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/years/all_year_links.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/.claude/settings.local.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_eevee_gx_starter_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sm_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_strength_expansion_pack_fairy_rise.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_tag_bolt.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_super_burst_impact.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_sun_moon_forbidden_light.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_sun_moon_ultra_prism.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_dragon_storm.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_sm_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_sun_moon_celestial_storm.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_strength_expansion_pack_thunderclap_spark.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_forbidden_light.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_strength_expansion_pack_champion_road.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/2018_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_mcdonalds_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_sky_splitting_charisma.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_sun_moon_dragon_majesty.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_sun_moon_lost_thunder.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_strength_expansion_pack_ultra_force.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_strength_expansion_pack_dark_order.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_sun_moon_ultra_shiny_gx.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2018/pokemon_japanese_gx_starter_decks.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_black_white_plasma_blast.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_japanese_black_white_shiny_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_xy_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_japanese_black_white_ex_battle_boost.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_japanese_blastoise_kyurem_ex_combo_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_japanese_black_white_megalo_cannon.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_black_white_plasma_storm.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_black_white_plasma_freeze.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_black_white_legendary_treasures.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_black_white_legendary_treasures_radiant_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_japanese_xy_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/2013_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_black_white_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_japanese_xy.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2013/pokemon_japanese_black_white_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_diamond_pearl_mysterious_treasures.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_ex_power_keepers.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_10th_movie_commemoration_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_pop_series_5.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_pop_series_6.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_diamond_pearl_secret_of_the_lakes.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_promo_summer_battle_road.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_diamond_pearl_dawn_dash.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_diamond_pearl_shining_darkness.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_diamond_pearl_secret_wonders.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_diamond_pearl.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_diamond_pearl_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_entry_pack_08.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_diamond_pearl_moonlit_pursuit.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/2007_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_diamond_pearl_palkia_lvx_constructed_standard_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_diamond_pearl_dialga_lvx_constructed_standard_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007/pokemon_japanese_world_champions_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_promo_game_boy.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_vending.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_tamamushi_city_gym_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/amada_pokemon_japanese_super_dx_stickers.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_coin_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_nivi_city_gym_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_gym.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_hanada_city_gym_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_gym_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_kuchiba_city_gym_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/1998_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_meiji_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_promo_corocoro_comics.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_redgreen_gift_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1998/pokemon_japanese_ana_airways.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_japanese_battle_theme_deck_victini.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_japanese_black_white_red_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_japanese_black_white_dark_rush.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_black_white_noble_victories.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_japanese_black_white_psycho_drive.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/2011_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_japanese_black_white_hail_blizzard.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_black_white_emerging_powers.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_black_white_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_call_of_legends.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_black_white.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2011/pokemon_japanese_black_white_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sm_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_awakened_heroes.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_sun_moon_burning_shadows.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_sun_moon.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_gx_battle_boost.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_xy_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_strength_expansion_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_sun_moon_guardians_rising.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_sm_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_islands_await_you.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_ultradimensional_beasts.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_sun_moon_crimson_invasion.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_darkness_that_consumes_light.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_the_best_of_xy.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_xy_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_alolan_moonlight.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_mega_powers_collection_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_to_have_seen_the_battle_rainbow.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_ultra_moon.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_strength_expansion_pack_facing_a_new_trial.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_premium_trainer_xy_collection_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_sun_moon_shining_legends.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_ash_vs_team_rocket_deck_kit.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_ultra_sun.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/2017_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2017/pokemon_japanese_sun_moon_strength_expansion_pack_shining_legends.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/danone_pokemon_stadium_tip_shiny.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_cd_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/topps_pokemon_tv_animation_series_3_heroes_villains.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_game_movie.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_promo_black_star.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_neo_2_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_game_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_2_player_cd_rom_starter_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/topps_pokemon_tv_animation_series_2_episode_cards.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/merlin_pokemon_2.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_neo_genesis.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_neo_2.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_trainer_promo_lucky_stadium.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/topps_pokemon_tv_animation_series_3_pop_up.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_gym_challenge.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_neo_3.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_gym_heroes.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_neo_3_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/2000_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_neo_genesis_1st_edition.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_neo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_meiji_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_game_base_ii.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/topps_chrome_pokemon_tv.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/topps_pokemon_the_movie_2000_authentic_film_frame_card.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/topps_pokemon_tv_animation_die_cut_embossed.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_game.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_promo_corocoro_comics.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_rocket.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/danone_pokemon_stadium_tip.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_pikachu_world.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2000/pokemon_japanese_ana_airways.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_xy_emerald_break.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/2015_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_raichu_break_evolution_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_xy_roaring_skies.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_xy_breakthrough.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_art_academy_competition.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_m_master_deck_build_speed_style.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_xy_ancient_origins.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_xy_double_crisis.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_xy_double_crisis.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_legendary_shine_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_xy_black_star_promos.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_xy_blue_shock.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_xy_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_xy_primal_clash.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_xy_red_flash.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_xy_rage_of_the_broken_heavens.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_golduck_break_palkia_ex_combo_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_m_rayquaza_ex_battle_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_m_master_deck_build_power_style.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2015/pokemon_japanese_xy_bandit_ring.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2022-2023/pokemon_play_pokemon_prize_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2022-2023/2022-2023_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_xy_rising_fist.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_hyper_metal_chain_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_xy_flashfire.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_xy_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_xy_furious_fists.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_xy_gaia_volcano.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_xy_wild_blaze.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/2014_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_xy_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_xy.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_xy_phantom_forces.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_xy_super_legend_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_scrap.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_xy_phantom_gate.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_xy_tidal_storm.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2014/pokemon_japanese_m_charizard_ex_mega_battle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008-09/2008-09_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008-09/pokemon_pop_series_8.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_xy_pokekyun_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_sm_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_sun_moon_collection_sun.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_mythical_legendary_dream_shine_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_promo_pokken_tournament.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/2016_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_fates_collide.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_evolutions.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_steam_siege.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_sm_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_premium_champion_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_xy_starter_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_xy_awakening_psychic_king.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_expansion_20th_anniversary.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_breakpoint.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_sun_moon_pikachus_new_friends.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_xy_fever_burst_fighter.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_xy_cruel_traitor.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_xy_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_generations_radiant_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_japanese_sun_moon_collection_moon.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_trainer_kit_pikachu_libre_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2016/pokemon_xy_generations.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/2005_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_world_championship_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_quick_construction_packs.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_ex_unseen_forces.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_ex_delta_species.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_holon_research_tower.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_ex_deoxys.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_master_kit.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_play_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_movie_vs_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_holon_research_tower_fire.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_mirages_mew_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_holon_research_tower_lightning.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_pokepark_forest.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_feraligatr_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_meganium_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_pop_series_2.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_typhlosion_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_holon_research_tower_water.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_pokepark_blue.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_master_trainer_game_no_longer_grading.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_black_star_promos.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_mirage_forest.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_ex_emerald.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_golden_sky_silvery_ocean.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2005/pokemon_japanese_gift_box_mew.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/2020_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_sword_shield_rebel_clash.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_s_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_vmax_rising.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_sword_shield_vivid_voltage.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_blastoise_vmax_starter_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_sword_shield.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_coin_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_sm_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_venusaur_vmax_starter_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_battle_academy.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_sword_shield_darkness_ablaze.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_charizard_vmax_starter_set_2.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_infinity_zone.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_amazing_volt_tackle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_explosive_walker.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_sword_shield_champions_path.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_scrap.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_rebellion_crash.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_swsh_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_shiny_star_v.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_charizard_vmax_starter_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_futsal.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_v_starter_decks.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_legendary_heartbeat.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2020/pokemon_japanese_sword_shield_vmax_special_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_yamabuki_city_gym_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_jungle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_cd_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_game_movie.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_vending.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_game_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_promo_tropical_mega_battle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_gym_2.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_coin_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_league_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_game_TEST.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_promo_pro_trainer_mag.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/1999_pokemon_sets_TEST.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_fossil.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_guren_town_gym_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_corocoro_comics_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_promo_southern_islands.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/merlin_pokemon.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_squirtle_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_bulbasaur_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_meiji_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_japanese_promo_ana_airways.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_game.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/pokemon_jungle_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/1999/1999_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sword_shield_sword.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sm_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sword_shield_shield.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_s_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_tag_team_gx_all_stars.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_full_metal_wall.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_sun_moon_unified_minds.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_gg_end.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_old_maid.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_double_blaze.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_sun_moon_team_up.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_trainer_battle_decks.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_sky_legend.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_detective_pikachu.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_sm_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_sun_moon_hidden_fates.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_sun_moon_detective_pikachu.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_family_pokemon_card_game.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_indonesian_sun_moon_legends_awakened.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_sun_moon_unbroken_bonds.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_indonesian_sun_moon_first_impact.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_alter_genesis.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_extra_regulation_box.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_tag_team_starter_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_mcdonalds_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_remix_bout.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_strength_expansion_pack_night_unison.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_dream_league.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_japanese_sun_moon_miracle_twins.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/pokemon_sun_moon_cosmic_eclipse.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2019/2019_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/2009_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_mewtwo_lvx_collection_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_leafeon_vs_metagross_expert_deck_leafeon_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_pop_series_9.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_beat_of_the_frontier.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_arceus_lvx_deck_lightning_psychic.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_arceus_lvx_deck_grass_fire.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_advent_of_arceus.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_garchomp_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_leafeon_vs_metagross_expert_deck_metagross_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_platinum.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_diamond_pearl_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_shaymin_lvx_collection_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_regigigas_lvx_collection_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_platinum_supreme_victors.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_heartgold_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_movie_commemoration_random_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_rumble.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_platinum_rising_rivals.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_platinum_arceus.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_melee_pokemon_scramble.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_soulsilver_collection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_battle_starter_decks.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2009/pokemon_japanese_charizard_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/2006_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_shockwave.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_ex_legend_maker.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_oceans_kyogre_ex_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_ex_trainer_kit_2_minun_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_diamond_pearl_space_time_creation.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_earths_groudon_ex_constructed_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_imprison_gardevoir_ex_constructed_standard_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_miracle_crystal.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_ex_dragon_frontiers.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_holon_phantoms.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_pop_series_4.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_pop_series_1.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_dragon_frontiers.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_pop_series_2.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_pop_series_3.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_ex_holon_phantoms.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_japanese_movie_commemoration_vs_pack.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_ex_crystal_guardians.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2006/pokemon_black_star_promos.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_promo_game_boy.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_chikorita_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_chikorita_side_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_e_starter_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_expedition.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/topps_pokemon_johto_league_champions.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_game_movie.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_promo_black_star.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_neo_discovery.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_game_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/2001_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_web.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_totodile_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_southern_islands_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_neo_revelation_1st_edition.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_neo_4.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_totodile_side_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/merlin_pokemon_3.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_meiji_promo_silver_foil.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/topps_pokemon_johto_series_1.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_neo_revelation.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_vs.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2001/pokemon_japanese_promo_corocoro_comics.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2007-2008/2007-2008_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_galactics_conquest.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_diamond_pearl_stormfront.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_gallade_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_diamond_pearl_great_encounters.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/2008_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_diamond_pearl_cry_from_the_mysterious.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_11th_movie_commemoration_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_diamond_pearl_world_08_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_diamond_pearl_heatran_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_pop_series_7.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_diamond_pearl_temple_of_anger.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_stormfront.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_giratina_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_giratina_vs_dialga.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_palkia_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_diamond_pearl_black_star_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_dialga_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_diamond_pearl_majestic_dawn.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_bonds_to_the_end_of_time.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_diamond_pearl_regigigas_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_diamond_pearl_legends_awakened.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_pikachu_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2008/pokemon_japanese_infernape_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_freeze_bolt.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_plasma_gale.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_black_white_dark_explorers.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_dragon_blade.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_world_championships_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_dragon_blast.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_black_white_dragons_exalted.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_polish_diamond_pearl_mysterious_treasures.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_spiral_force.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_black_white_next_destinies.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_garchomp_half_deck.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_black_white_boundaries_crossed.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/2012_all_sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_dragon_selection.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_team_plasma_battle_gift_set.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_cold_flare.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_everyones_exciting_battle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_thunder_knuckle.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_black_white_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_black_white_dragon_vault.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/sets/2012/pokemon_japanese_black_white_promo.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Booster-Boxes/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Booster-Boxes/Booster-Boxes.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Trainer-Kits/Trainer-Kits.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Trainer-Kits/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Box-Sets/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Box-Sets/Box-Sets.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Tins/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Tins/Tins.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Boosters/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Boosters/Boosters.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Theme-Decks/Theme-Decks.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Theme-Decks/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Blisters/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Blisters/Blisters.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Elite-Trainer-Boxes/progress.json
+/home/oliver/SAFESPACE/pokemon-collection-backend/data/SealedProducts/Elite-Trainer-Boxes/Elite-Trainer-Boxes.json
+
+Total files found: 573

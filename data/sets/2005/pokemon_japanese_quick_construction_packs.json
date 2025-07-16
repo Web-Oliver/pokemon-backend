@@ -1,0 +1,2168 @@
+{
+  "year": "2005",
+  "set_name": "Pokemon Japanese Quick Construction Packs",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2005/pokemon-japanese-quick-construction-packs/125761",
+  "total_cards": 90,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 7,
+        "psa_3": 11,
+        "psa_4": 20,
+        "psa_5": 53,
+        "psa_6": 85,
+        "psa_7": 117,
+        "psa_8": 299,
+        "psa_9": 847,
+        "psa_10": 821,
+        "psa_total": 2267
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2267
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Mudkip-Water",
+      "base_name": "Mudkip",
+      "variety": "Water",
+      "spec_id": 5172654,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Mudkip-Water-1st Edition",
+      "base_name": "Mudkip",
+      "variety": "Water-1st Edition",
+      "spec_id": 2839776,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 7,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Pikachu-Lightning",
+      "base_name": "Pikachu",
+      "variety": "Lightning",
+      "spec_id": 2176996,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 13,
+        "psa_10": 6,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Pikachu-Lightning-1st Edition",
+      "base_name": "Pikachu",
+      "variety": "Lightning-1st Edition",
+      "spec_id": 2441830,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 5,
+        "psa_9": 20,
+        "psa_10": 6,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Pikachu-Lightning-Whf",
+      "base_name": "Pikachu",
+      "variety": "Lightning-Whf",
+      "spec_id": 2474281,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 6,
+        "psa_4": 8,
+        "psa_5": 21,
+        "psa_6": 27,
+        "psa_7": 22,
+        "psa_8": 75,
+        "psa_9": 170,
+        "psa_10": 62,
+        "psa_total": 392
+      },
+      "grade_totals": {
+        "total": 393,
+        "grade_total": 392
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Ralts-Psychic",
+      "base_name": "Ralts",
+      "variety": "Psychic",
+      "spec_id": 5172927,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Ralts-Psychic-1st Edition",
+      "base_name": "Ralts",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172853,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Rhyhorn-Fighting",
+      "base_name": "Rhyhorn",
+      "variety": "Fighting",
+      "spec_id": 5173104,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Rhyhorn-Fighting-1st Edition",
+      "base_name": "Rhyhorn",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 5173090,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Treecko-Grass",
+      "base_name": "Treecko",
+      "variety": "Grass",
+      "spec_id": 5169401,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Treecko-Grass-1st Edition",
+      "base_name": "Treecko",
+      "variety": "Grass-1st Edition",
+      "spec_id": 5169417,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Vulpix-Fire",
+      "base_name": "Vulpix",
+      "variety": "Fire",
+      "spec_id": 5169475,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Vulpix-Fire-1st Edition",
+      "base_name": "Vulpix",
+      "variety": "Fire-1st Edition",
+      "spec_id": 2839753,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Raichu EX-Holo-Lightning",
+      "base_name": "Raichu EX-Holo",
+      "variety": "Lightning",
+      "spec_id": 2493393,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 7,
+        "psa_8": 17,
+        "psa_9": 33,
+        "psa_10": 12,
+        "psa_total": 78
+      },
+      "grade_totals": {
+        "total": 78,
+        "grade_total": 78
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Raichu EX-Holo-Lightning-1st Edition",
+      "base_name": "Raichu EX-Holo",
+      "variety": "Lightning-1st Edition",
+      "spec_id": 2133655,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 7,
+        "psa_6": 12,
+        "psa_7": 10,
+        "psa_8": 27,
+        "psa_9": 75,
+        "psa_10": 123,
+        "psa_total": 262
+      },
+      "grade_totals": {
+        "total": 262,
+        "grade_total": 262
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Grovyle-Grass-1st Edition",
+      "base_name": "Grovyle",
+      "variety": "Grass-1st Edition",
+      "spec_id": 5169418,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Kirlia-Psychic",
+      "base_name": "Kirlia",
+      "variety": "Psychic",
+      "spec_id": 5172929,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Kirlia-Psychic-1st Edition",
+      "base_name": "Kirlia",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172855,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Marshtomp-Water",
+      "base_name": "Marshtomp",
+      "variety": "Water",
+      "spec_id": 5172655,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Marshtomp-Water-1st Edition",
+      "base_name": "Marshtomp",
+      "variety": "Water-1st Edition",
+      "spec_id": 2839769,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Ninetales-Fire",
+      "base_name": "Ninetales",
+      "variety": "Fire",
+      "spec_id": 5169476,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Ninetales-Fire-1st Edition",
+      "base_name": "Ninetales",
+      "variety": "Fire-1st Edition",
+      "spec_id": 2839755,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 12,
+        "psa_10": 4,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Rhydon-Fighting",
+      "base_name": "Rhydon",
+      "variety": "Fighting",
+      "spec_id": 5173105,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Rhydon-Fighting-1st Edition",
+      "base_name": "Rhydon",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 5173091,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Feebas-Water",
+      "base_name": "Feebas",
+      "variety": "Water",
+      "spec_id": 5172656,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Feebas-Water-1st Edition",
+      "base_name": "Feebas",
+      "variety": "Water-1st Edition",
+      "spec_id": 5172642,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Makuhita-Fighting",
+      "base_name": "Makuhita",
+      "variety": "Fighting",
+      "spec_id": 5173106,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Makuhita-Fighting-1st Edition",
+      "base_name": "Makuhita",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 5173092,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Shroomish-Grass-1st Edition",
+      "base_name": "Shroomish",
+      "variety": "Grass-1st Edition",
+      "spec_id": 5169419,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Spoink-Psychic-1st Edition",
+      "base_name": "Spoink",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172857,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Torchic-Fire",
+      "base_name": "Torchic",
+      "variety": "Fire",
+      "spec_id": 5169477,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Torchic-Fire-1st Edition",
+      "base_name": "Torchic",
+      "variety": "Fire-1st Edition",
+      "spec_id": 5169452,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Voltorb-Lightning",
+      "base_name": "Voltorb",
+      "variety": "Lightning",
+      "spec_id": 5172742,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Voltorb-Lightning-1st Edition",
+      "base_name": "Voltorb",
+      "variety": "Lightning-1st Edition",
+      "spec_id": 5172728,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Breloom-Grass-1st Edition",
+      "base_name": "Breloom",
+      "variety": "Grass-1st Edition",
+      "spec_id": 5169420,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Combusken-Fire",
+      "base_name": "Combusken",
+      "variety": "Fire",
+      "spec_id": 5169478,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Combusken-Fire-1st Edition",
+      "base_name": "Combusken",
+      "variety": "Fire-1st Edition",
+      "spec_id": 5169453,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Electrode-Lightning",
+      "base_name": "Electrode",
+      "variety": "Lightning",
+      "spec_id": 5172743,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Electrode-Lightning-1st Edition",
+      "base_name": "Electrode",
+      "variety": "Lightning-1st Edition",
+      "spec_id": 5172729,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Milotic EX-Holo-Water",
+      "base_name": "Milotic EX-Holo",
+      "variety": "Water",
+      "spec_id": 2374509,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 10,
+        "psa_7": 16,
+        "psa_8": 20,
+        "psa_9": 54,
+        "psa_10": 53,
+        "psa_total": 162
+      },
+      "grade_totals": {
+        "total": 162,
+        "grade_total": 162
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Milotic EX-Holo-Water-1st Edition",
+      "base_name": "Milotic EX-Holo",
+      "variety": "Water-1st Edition",
+      "spec_id": 2133654,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 11,
+        "psa_7": 20,
+        "psa_8": 52,
+        "psa_9": 121,
+        "psa_10": 154,
+        "psa_total": 369
+      },
+      "grade_totals": {
+        "total": 369,
+        "grade_total": 369
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Grumpig-Psychic-1st Edition",
+      "base_name": "Grumpig",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172859,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Hariyama-Fighting",
+      "base_name": "Hariyama",
+      "variety": "Fighting",
+      "spec_id": 5173107,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Hariyama-Fighting-1st Edition",
+      "base_name": "Hariyama",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 5173093,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Duskull-Psychic-1st Edition",
+      "base_name": "Duskull",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172861,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Electrike-Lightning",
+      "base_name": "Electrike",
+      "variety": "Lightning",
+      "spec_id": 5172744,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Electrike-Lightning-1st Edition",
+      "base_name": "Electrike",
+      "variety": "Lightning-1st Edition",
+      "spec_id": 5172730,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Nosepass-Fighting",
+      "base_name": "Nosepass",
+      "variety": "Fighting",
+      "spec_id": 5173108,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Nosepass-Fighting-1st Edition",
+      "base_name": "Nosepass",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 5173094,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Numel-Fire",
+      "base_name": "Numel",
+      "variety": "Fire",
+      "spec_id": 5169479,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Numel-Fire-1st Edition",
+      "base_name": "Numel",
+      "variety": "Fire-1st Edition",
+      "spec_id": 5169454,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Snorunt-Water",
+      "base_name": "Snorunt",
+      "variety": "Water",
+      "spec_id": 5172657,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Snorunt-Water-1st Edition",
+      "base_name": "Snorunt",
+      "variety": "Water-1st Edition",
+      "spec_id": 5172643,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Cacturne EX-Holo-Grass",
+      "base_name": "Cacturne EX-Holo",
+      "variety": "Grass",
+      "spec_id": 2449779,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 15,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Cacturne EX-Holo-Grass-1st Edition",
+      "base_name": "Cacturne EX-Holo",
+      "variety": "Grass-1st Edition",
+      "spec_id": 2126144,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 10,
+        "psa_9": 42,
+        "psa_10": 59,
+        "psa_total": 120
+      },
+      "grade_totals": {
+        "total": 120,
+        "grade_total": 120
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Camerupt EX-Holo-Fire",
+      "base_name": "Camerupt EX-Holo",
+      "variety": "Fire",
+      "spec_id": 2851377,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 12,
+        "psa_10": 5,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Camerupt EX-Holo-Fire-1st Edition",
+      "base_name": "Camerupt EX-Holo",
+      "variety": "Fire-1st Edition",
+      "spec_id": 2133651,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 15,
+        "psa_9": 62,
+        "psa_10": 54,
+        "psa_total": 144
+      },
+      "grade_totals": {
+        "total": 144,
+        "grade_total": 144
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Dusclops EX-Holo-Psychic",
+      "base_name": "Dusclops EX-Holo",
+      "variety": "Psychic",
+      "spec_id": 2346730,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 11,
+        "psa_10": 20,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Dusclops EX-Holo-Psychic-1st Edition",
+      "base_name": "Dusclops EX-Holo",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 2133656,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 70,
+        "psa_10": 72,
+        "psa_total": 162
+      },
+      "grade_totals": {
+        "total": 162,
+        "grade_total": 162
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Glalie-Water",
+      "base_name": "Glalie",
+      "variety": "Water",
+      "spec_id": 5172658,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Glalie-Water-1st Edition",
+      "base_name": "Glalie",
+      "variety": "Water-1st Edition",
+      "spec_id": 5172644,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Manectric-Lightning",
+      "base_name": "Manectric",
+      "variety": "Lightning",
+      "spec_id": 5172745,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Manectric-Lightning-1st Edition",
+      "base_name": "Manectric",
+      "variety": "Lightning-1st Edition",
+      "spec_id": 5172731,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Meditite-Fighting",
+      "base_name": "Meditite",
+      "variety": "Fighting",
+      "spec_id": 5173109,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Meditite-Fighting-1st Edition",
+      "base_name": "Meditite",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 5173095,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Chimecho-Psychic-1st Edition",
+      "base_name": "Chimecho",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172863,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Medicham EX-Holo-Fighting",
+      "base_name": "Medicham EX-Holo",
+      "variety": "Fighting",
+      "spec_id": 2595357,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 13,
+        "psa_10": 10,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Medicham EX-Holo-Fighting-1st Edition",
+      "base_name": "Medicham EX-Holo",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 2126142,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 16,
+        "psa_9": 45,
+        "psa_10": 71,
+        "psa_total": 140
+      },
+      "grade_totals": {
+        "total": 140,
+        "grade_total": 140
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Farfetch'd-Lightning",
+      "base_name": "Farfetch'd",
+      "variety": "Lightning",
+      "spec_id": 5172746,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Relicanth-Water",
+      "base_name": "Relicanth",
+      "variety": "Water",
+      "spec_id": 5172659,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Relicanth-Water-1st Edition",
+      "base_name": "Relicanth",
+      "variety": "Water-1st Edition",
+      "spec_id": 5172645,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Seviper-Grass-1st Edition",
+      "base_name": "Seviper",
+      "variety": "Grass-1st Edition",
+      "spec_id": 5169422,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Zangoose-Fire",
+      "base_name": "Zangoose",
+      "variety": "Fire",
+      "spec_id": 5169480,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Zangoose-Fire-1st Edition",
+      "base_name": "Zangoose",
+      "variety": "Fire-1st Edition",
+      "spec_id": 5169455,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Switch-Fire-1st Edition",
+      "base_name": "Switch",
+      "variety": "Fire-1st Edition",
+      "spec_id": 5169456,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Switch-Psychic-1st Edition",
+      "base_name": "Switch",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172865,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Mr. Stone's Project-Fire-1st Edition",
+      "base_name": "Mr. Stone's Project",
+      "variety": "Fire-1st Edition",
+      "spec_id": 5169457,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Mr. Stone's Project-Psychic-1st Edition",
+      "base_name": "Mr. Stone's Project",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172867,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Mr. Stone's Project-Water-1st Edition",
+      "base_name": "Mr. Stone's Project",
+      "variety": "Water-1st Edition",
+      "spec_id": 5172647,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Bill's Maintenance-Psychic-1st Edition",
+      "base_name": "Bill's Maintenance",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172869,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Mr. Stone's Project-Fighting-1st Edition",
+      "base_name": "Mr. Stone's Project",
+      "variety": "Fighting-1st Edition",
+      "spec_id": 5173098,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Mr. Stone's Project-Lightning-1st Edition",
+      "base_name": "Mr. Stone's Project",
+      "variety": "Lightning-1st Edition",
+      "spec_id": 5172735,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "TV Reporter-Fire-1st Edition",
+      "base_name": "TV Reporter",
+      "variety": "Fire-1st Edition",
+      "spec_id": 5169458,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Grass Energy-Grass",
+      "base_name": "Grass Energy",
+      "variety": "Grass",
+      "spec_id": 5169411,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Psychic Energy-Psychic-1st Edition",
+      "base_name": "Psychic Energy",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172871,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Water Energy-Water-1st Edition",
+      "base_name": "Water Energy",
+      "variety": "Water-1st Edition",
+      "spec_id": 5172650,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Grass Energy-Grass",
+      "base_name": "Grass Energy",
+      "variety": "Grass",
+      "spec_id": 5169413,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Psychic Energy-Psychic",
+      "base_name": "Psychic Energy",
+      "variety": "Psychic",
+      "spec_id": 5172949,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 5,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Psychic Energy-Psychic-1st Edition",
+      "base_name": "Psychic Energy",
+      "variety": "Psychic-1st Edition",
+      "spec_id": 5172875,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,824 @@
+{
+  "year": "2016",
+  "set_name": "Pokemon Japanese XY Pokekyun Collection",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2016/pokemon-japanese-xy-pokekyun-collection/134288",
+  "total_cards": 34,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 6,
+        "psa_3": 18,
+        "psa_4": 62,
+        "psa_5": 143,
+        "psa_6": 258,
+        "psa_7": 367,
+        "psa_8": 1122,
+        "psa_9": 5156,
+        "psa_10": 31268,
+        "psa_total": 38416
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 38416
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Chikorita-1st Edition",
+      "base_name": "Chikorita",
+      "variety": "1st Edition",
+      "spec_id": 2601950,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 22,
+        "psa_9": 104,
+        "psa_10": 567,
+        "psa_total": 708
+      },
+      "grade_totals": {
+        "total": 708,
+        "grade_total": 708
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Shroomish-1st Edition",
+      "base_name": "Shroomish",
+      "variety": "1st Edition",
+      "spec_id": 4484212,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 58,
+        "psa_10": 245,
+        "psa_total": 313
+      },
+      "grade_totals": {
+        "total": 313,
+        "grade_total": 313
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Charmander-1st Edition",
+      "base_name": "Charmander",
+      "variety": "1st Edition",
+      "spec_id": 2305318,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 6,
+        "psa_5": 8,
+        "psa_6": 10,
+        "psa_7": 42,
+        "psa_8": 84,
+        "psa_9": 387,
+        "psa_10": 1478,
+        "psa_total": 2018
+      },
+      "grade_totals": {
+        "total": 2018,
+        "grade_total": 2018
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Charmeleon-1st Edition",
+      "base_name": "Charmeleon",
+      "variety": "1st Edition",
+      "spec_id": 2305322,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 8,
+        "psa_6": 12,
+        "psa_7": 19,
+        "psa_8": 83,
+        "psa_9": 306,
+        "psa_10": 1293,
+        "psa_total": 1730
+      },
+      "grade_totals": {
+        "total": 1730,
+        "grade_total": 1730
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Charizard-1st Edition",
+      "base_name": "Charizard",
+      "variety": "1st Edition",
+      "spec_id": 2279804,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 25,
+        "psa_7": 22,
+        "psa_8": 97,
+        "psa_9": 433,
+        "psa_10": 3389,
+        "psa_total": 3976
+      },
+      "grade_totals": {
+        "total": 3976,
+        "grade_total": 3976
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Flareon EX-1st Edition",
+      "base_name": "Flareon EX",
+      "variety": "1st Edition",
+      "spec_id": 2293791,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 21,
+        "psa_7": 19,
+        "psa_8": 41,
+        "psa_9": 209,
+        "psa_10": 1395,
+        "psa_total": 1694
+      },
+      "grade_totals": {
+        "total": 1694,
+        "grade_total": 1694
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Full Art/Flareon EX-1st Edition",
+      "base_name": "Full Art/Flareon EX",
+      "variety": "1st Edition",
+      "spec_id": 2276541,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 6,
+        "psa_5": 26,
+        "psa_6": 37,
+        "psa_7": 38,
+        "psa_8": 104,
+        "psa_9": 310,
+        "psa_10": 2001,
+        "psa_total": 2525
+      },
+      "grade_totals": {
+        "total": 2525,
+        "grade_total": 2525
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Snorunt-1st Edition",
+      "base_name": "Snorunt",
+      "variety": "1st Edition",
+      "spec_id": 4484229,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 69,
+        "psa_10": 413,
+        "psa_total": 496
+      },
+      "grade_totals": {
+        "total": 496,
+        "grade_total": 496
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Froslass-1st Edition",
+      "base_name": "Froslass",
+      "variety": "1st Edition",
+      "spec_id": 4321663,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 76,
+        "psa_10": 617,
+        "psa_total": 702
+      },
+      "grade_totals": {
+        "total": 702,
+        "grade_total": 702
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Full Art/Pikachu-1st Edition",
+      "base_name": "Full Art/Pikachu",
+      "variety": "1st Edition",
+      "spec_id": 2276539,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 7,
+        "psa_5": 25,
+        "psa_6": 44,
+        "psa_7": 47,
+        "psa_8": 131,
+        "psa_9": 560,
+        "psa_10": 2249,
+        "psa_total": 3071
+      },
+      "grade_totals": {
+        "total": 3071,
+        "grade_total": 3071
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Raichu-1st Edition",
+      "base_name": "Raichu",
+      "variety": "1st Edition",
+      "spec_id": 2293106,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 14,
+        "psa_8": 46,
+        "psa_9": 197,
+        "psa_10": 842,
+        "psa_total": 1111
+      },
+      "grade_totals": {
+        "total": 1111,
+        "grade_total": 1111
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Dedenne-1st Edition",
+      "base_name": "Dedenne",
+      "variety": "1st Edition",
+      "spec_id": 2323765,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 8,
+        "psa_8": 39,
+        "psa_9": 239,
+        "psa_10": 1611,
+        "psa_total": 1907
+      },
+      "grade_totals": {
+        "total": 1907,
+        "grade_total": 1907
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Wobbuffet-1st Edition",
+      "base_name": "Wobbuffet",
+      "variety": "1st Edition",
+      "spec_id": 3082479,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 20,
+        "psa_9": 75,
+        "psa_10": 405,
+        "psa_total": 503
+      },
+      "grade_totals": {
+        "total": 503,
+        "grade_total": 503
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Gulpin-1st Edition",
+      "base_name": "Gulpin",
+      "variety": "1st Edition",
+      "spec_id": 4645671,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 20,
+        "psa_9": 68,
+        "psa_10": 363,
+        "psa_total": 458
+      },
+      "grade_totals": {
+        "total": 458,
+        "grade_total": 458
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Jirachi-1st Edition",
+      "base_name": "Jirachi",
+      "variety": "1st Edition",
+      "spec_id": 2305324,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 8,
+        "psa_7": 11,
+        "psa_8": 32,
+        "psa_9": 265,
+        "psa_10": 1487,
+        "psa_total": 1811
+      },
+      "grade_totals": {
+        "total": 1811,
+        "grade_total": 1811
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Espurr-1st Edition",
+      "base_name": "Espurr",
+      "variety": "1st Edition",
+      "spec_id": 2402314,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 17,
+        "psa_9": 91,
+        "psa_10": 443,
+        "psa_total": 557
+      },
+      "grade_totals": {
+        "total": 557,
+        "grade_total": 557
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Meowstic-1st Edition",
+      "base_name": "Meowstic",
+      "variety": "1st Edition",
+      "spec_id": 2421050,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 61,
+        "psa_10": 620,
+        "psa_total": 696
+      },
+      "grade_totals": {
+        "total": 696,
+        "grade_total": 696
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Yveltal-1st Edition",
+      "base_name": "Yveltal",
+      "variety": "1st Edition",
+      "spec_id": 2305325,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 10,
+        "psa_9": 61,
+        "psa_10": 614,
+        "psa_total": 696
+      },
+      "grade_totals": {
+        "total": 696,
+        "grade_total": 696
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Full Art/Gardevoir EX-1st Edition",
+      "base_name": "Full Art/Gardevoir EX",
+      "variety": "1st Edition",
+      "spec_id": 2278578,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 10,
+        "psa_6": 11,
+        "psa_7": 14,
+        "psa_8": 52,
+        "psa_9": 203,
+        "psa_10": 1604,
+        "psa_total": 1895
+      },
+      "grade_totals": {
+        "total": 1895,
+        "grade_total": 1895
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Full Art/M Gardevoir EX-1st Edition",
+      "base_name": "Full Art/M Gardevoir EX",
+      "variety": "1st Edition",
+      "spec_id": 2278581,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 8,
+        "psa_5": 10,
+        "psa_6": 12,
+        "psa_7": 13,
+        "psa_8": 38,
+        "psa_9": 155,
+        "psa_10": 1385,
+        "psa_total": 1622
+      },
+      "grade_totals": {
+        "total": 1622,
+        "grade_total": 1622
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Flabebe-1st Edition",
+      "base_name": "Flabebe",
+      "variety": "1st Edition",
+      "spec_id": 4072293,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 11,
+        "psa_9": 57,
+        "psa_10": 274,
+        "psa_total": 344
+      },
+      "grade_totals": {
+        "total": 344,
+        "grade_total": 344
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Floette-1st Edition",
+      "base_name": "Floette",
+      "variety": "1st Edition",
+      "spec_id": 4113798,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 49,
+        "psa_10": 378,
+        "psa_total": 434
+      },
+      "grade_totals": {
+        "total": 434,
+        "grade_total": 434
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Swirlix-1st Edition",
+      "base_name": "Swirlix",
+      "variety": "1st Edition",
+      "spec_id": 3082477,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 32,
+        "psa_10": 461,
+        "psa_total": 501
+      },
+      "grade_totals": {
+        "total": 501,
+        "grade_total": 501
+      }
+    },
+    {
+      "pokemon_number": "024",
+      "card_name": "Slurpuff-1st Edition",
+      "base_name": "Slurpuff",
+      "variety": "1st Edition",
+      "spec_id": 4072079,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 47,
+        "psa_10": 405,
+        "psa_total": 459
+      },
+      "grade_totals": {
+        "total": 459,
+        "grade_total": 459
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Sylveon EX-1st Edition",
+      "base_name": "Sylveon EX",
+      "variety": "1st Edition",
+      "spec_id": 2293793,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 12,
+        "psa_7": 19,
+        "psa_8": 40,
+        "psa_9": 173,
+        "psa_10": 1488,
+        "psa_total": 1741
+      },
+      "grade_totals": {
+        "total": 1741,
+        "grade_total": 1741
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Full Art/Sylveon EX-1st Edition",
+      "base_name": "Full Art/Sylveon EX",
+      "variety": "1st Edition",
+      "spec_id": 2278585,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 9,
+        "psa_5": 14,
+        "psa_6": 30,
+        "psa_7": 34,
+        "psa_8": 108,
+        "psa_9": 374,
+        "psa_10": 1938,
+        "psa_total": 2512
+      },
+      "grade_totals": {
+        "total": 2512,
+        "grade_total": 2512
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Full Art/Sylveon EX-1st Edition-Corrected",
+      "base_name": "Full Art/Sylveon EX",
+      "variety": "1st Edition-Corrected",
+      "spec_id": 11468625,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 7,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Diancie-1st Edition",
+      "base_name": "Diancie",
+      "variety": "1st Edition",
+      "spec_id": 2323763,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 50,
+        "psa_10": 450,
+        "psa_total": 512
+      },
+      "grade_totals": {
+        "total": 512,
+        "grade_total": 512
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Swablu-1st Edition",
+      "base_name": "Swablu",
+      "variety": "1st Edition",
+      "spec_id": 2627632,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 18,
+        "psa_9": 116,
+        "psa_10": 484,
+        "psa_total": 625
+      },
+      "grade_totals": {
+        "total": 625,
+        "grade_total": 625
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Altaria-1st Edition",
+      "base_name": "Altaria",
+      "variety": "1st Edition",
+      "spec_id": 2323766,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 9,
+        "psa_8": 17,
+        "psa_9": 144,
+        "psa_10": 1202,
+        "psa_total": 1379
+      },
+      "grade_totals": {
+        "total": 1379,
+        "grade_total": 1379
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Fletchling-1st Edition",
+      "base_name": "Fletchling",
+      "variety": "1st Edition",
+      "spec_id": 3082482,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 16,
+        "psa_9": 64,
+        "psa_10": 314,
+        "psa_total": 400
+      },
+      "grade_totals": {
+        "total": 400,
+        "grade_total": 400
+      }
+    },
+    {
+      "pokemon_number": "031",
+      "card_name": "Crown of Flowers-1st Edition",
+      "base_name": "Crown of Flowers",
+      "variety": "1st Edition",
+      "spec_id": 3682836,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 30,
+        "psa_10": 196,
+        "psa_total": 238
+      },
+      "grade_totals": {
+        "total": 239,
+        "grade_total": 238
+      }
+    },
+    {
+      "pokemon_number": "032",
+      "card_name": "Wally-1st Edition",
+      "base_name": "Wally",
+      "variety": "1st Edition",
+      "spec_id": 3682867,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 13,
+        "psa_8": 15,
+        "psa_9": 91,
+        "psa_10": 650,
+        "psa_total": 773
+      },
+      "grade_totals": {
+        "total": 773,
+        "grade_total": 773
+      }
+    }
+  ]
+}

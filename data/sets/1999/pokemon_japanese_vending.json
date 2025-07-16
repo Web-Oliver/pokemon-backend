@@ -1,0 +1,152 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Japanese Vending",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-japanese-vending/129403",
+  "total_cards": 6,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 38,
+        "psa_2": 41,
+        "psa_3": 72,
+        "psa_4": 233,
+        "psa_5": 636,
+        "psa_6": 1109,
+        "psa_7": 1030,
+        "psa_8": 1394,
+        "psa_9": 1340,
+        "psa_10": 239,
+        "psa_total": 6146
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 6146
+      }
+    },
+    {
+      "pokemon_number": "65",
+      "card_name": "Alakazam-Holo-Masaki Promo",
+      "base_name": "Alakazam-Holo",
+      "variety": "Masaki Promo",
+      "spec_id": 2169274,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 13,
+        "psa_3": 19,
+        "psa_4": 58,
+        "psa_5": 157,
+        "psa_6": 271,
+        "psa_7": 246,
+        "psa_8": 366,
+        "psa_9": 316,
+        "psa_10": 41,
+        "psa_total": 1499
+      },
+      "grade_totals": {
+        "total": 1509,
+        "grade_total": 1499
+      }
+    },
+    {
+      "pokemon_number": "68",
+      "card_name": "Machamp-Holo-Masaki Promo",
+      "base_name": "Machamp-Holo",
+      "variety": "Masaki Promo",
+      "spec_id": 2169276,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 29,
+        "psa_5": 77,
+        "psa_6": 160,
+        "psa_7": 161,
+        "psa_8": 232,
+        "psa_9": 230,
+        "psa_10": 33,
+        "psa_total": 935
+      },
+      "grade_totals": {
+        "total": 944,
+        "grade_total": 935
+      }
+    },
+    {
+      "pokemon_number": "76",
+      "card_name": "Golem-Holo-Masaki Promo",
+      "base_name": "Golem-Holo",
+      "variety": "Masaki Promo",
+      "spec_id": 2169275,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 8,
+        "psa_4": 26,
+        "psa_5": 69,
+        "psa_6": 138,
+        "psa_7": 144,
+        "psa_8": 209,
+        "psa_9": 215,
+        "psa_10": 36,
+        "psa_total": 852
+      },
+      "grade_totals": {
+        "total": 857,
+        "grade_total": 852
+      }
+    },
+    {
+      "pokemon_number": "94",
+      "card_name": "Gengar-Holo-Masaki Promo",
+      "base_name": "Gengar-Holo",
+      "variety": "Masaki Promo",
+      "spec_id": 2169277,
+      "psa_grades": {
+        "psa_1": 18,
+        "psa_2": 23,
+        "psa_3": 37,
+        "psa_4": 98,
+        "psa_5": 270,
+        "psa_6": 418,
+        "psa_7": 361,
+        "psa_8": 390,
+        "psa_9": 342,
+        "psa_10": 83,
+        "psa_total": 2047
+      },
+      "grade_totals": {
+        "total": 2055,
+        "grade_total": 2047
+      }
+    },
+    {
+      "pokemon_number": "139",
+      "card_name": "Omastar-Holo-Masaki Promo",
+      "base_name": "Omastar-Holo",
+      "variety": "Masaki Promo",
+      "spec_id": 2169279,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 5,
+        "psa_4": 22,
+        "psa_5": 63,
+        "psa_6": 122,
+        "psa_7": 118,
+        "psa_8": 197,
+        "psa_9": 237,
+        "psa_10": 46,
+        "psa_total": 813
+      },
+      "grade_totals": {
+        "total": 818,
+        "grade_total": 813
+      }
+    }
+  ]
+}

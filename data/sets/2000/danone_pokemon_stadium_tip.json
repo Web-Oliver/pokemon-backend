@@ -1,0 +1,992 @@
+{
+  "year": "2000",
+  "set_name": "Danone Pokemon Stadium Tip",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2000/danone-pokemon-stadium-tip/167372",
+  "total_cards": 41,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 13,
+        "psa_3": 57,
+        "psa_4": 136,
+        "psa_5": 128,
+        "psa_6": 90,
+        "psa_7": 59,
+        "psa_8": 94,
+        "psa_9": 134,
+        "psa_10": 166,
+        "psa_total": 878
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 878
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Charmander",
+      "base_name": "Charmander",
+      "variety": "",
+      "spec_id": 2846560,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 7,
+        "psa_6": 6,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Spearow",
+      "base_name": "Spearow",
+      "variety": "",
+      "spec_id": 6144975,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2777851,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 6,
+        "psa_4": 9,
+        "psa_5": 7,
+        "psa_6": 7,
+        "psa_7": 2,
+        "psa_8": 11,
+        "psa_9": 10,
+        "psa_10": 15,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Raichu",
+      "base_name": "Raichu",
+      "variety": "",
+      "spec_id": 2777852,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 4,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Sandshrew",
+      "base_name": "Sandshrew",
+      "variety": "",
+      "spec_id": 2777854,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Paras",
+      "base_name": "Paras",
+      "variety": "",
+      "spec_id": 2777855,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Diglett",
+      "base_name": "Diglett",
+      "variety": "",
+      "spec_id": 2777856,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Growlithe",
+      "base_name": "Growlithe",
+      "variety": "",
+      "spec_id": 2802648,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Abra",
+      "base_name": "Abra",
+      "variety": "",
+      "spec_id": 5855577,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Kadabra",
+      "base_name": "Kadabra",
+      "variety": "",
+      "spec_id": 5855630,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Gastly",
+      "base_name": "Gastly",
+      "variety": "",
+      "spec_id": 2777845,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Haunter",
+      "base_name": "Haunter",
+      "variety": "",
+      "spec_id": 2777846,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 5,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Drowzee",
+      "base_name": "Drowzee",
+      "variety": "",
+      "spec_id": 2777838,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Voltorb",
+      "base_name": "Voltorb",
+      "variety": "",
+      "spec_id": 2777847,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Electrode",
+      "base_name": "Electrode",
+      "variety": "",
+      "spec_id": 2777848,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Hitmonlee",
+      "base_name": "Hitmonlee",
+      "variety": "",
+      "spec_id": 2777849,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Kangaskhan",
+      "base_name": "Kangaskhan",
+      "variety": "",
+      "spec_id": 2777850,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 8,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Horsea",
+      "base_name": "Horsea",
+      "variety": "",
+      "spec_id": 6144977,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Staryu",
+      "base_name": "Staryu",
+      "variety": "",
+      "spec_id": 2777844,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 10,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Mr. Mime",
+      "base_name": "Mr. Mime",
+      "variety": "",
+      "spec_id": 6144979,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Scyther",
+      "base_name": "Scyther",
+      "variety": "",
+      "spec_id": 2777860,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Jynx",
+      "base_name": "Jynx",
+      "variety": "",
+      "spec_id": 6144980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Tauros",
+      "base_name": "Tauros",
+      "variety": "",
+      "spec_id": 2777859,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Lapras",
+      "base_name": "Lapras",
+      "variety": "",
+      "spec_id": 2777858,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 7,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Vaporeon",
+      "base_name": "Vaporeon",
+      "variety": "",
+      "spec_id": 2777842,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 5,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 8,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Aerodactyl",
+      "base_name": "Aerodactyl",
+      "variety": "",
+      "spec_id": 2777857,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Snorlax",
+      "base_name": "Snorlax",
+      "variety": "",
+      "spec_id": 2777841,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 12,
+        "psa_10": 4,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Articuno",
+      "base_name": "Articuno",
+      "variety": "",
+      "spec_id": 2777862,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Dratini",
+      "base_name": "Dratini",
+      "variety": "",
+      "spec_id": 2777861,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 7,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Mewtwo",
+      "base_name": "Mewtwo",
+      "variety": "",
+      "spec_id": 2802645,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 6,
+        "psa_10": 8,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Squirtle",
+      "base_name": "Squirtle",
+      "variety": "",
+      "spec_id": 2777839,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 4,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Vulpix",
+      "base_name": "Vulpix",
+      "variety": "",
+      "spec_id": 2802647,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 4,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Poliwag",
+      "base_name": "Poliwag",
+      "variety": "",
+      "spec_id": 6144983,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 6,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Bellsprout",
+      "base_name": "Bellsprout",
+      "variety": "",
+      "spec_id": 6144984,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Geodude",
+      "base_name": "Geodude",
+      "variety": "",
+      "spec_id": 6144986,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Seel",
+      "base_name": "Seel",
+      "variety": "",
+      "spec_id": 2777843,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Exeggcute",
+      "base_name": "Exeggcute",
+      "variety": "",
+      "spec_id": 6144987,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Rhyhorn",
+      "base_name": "Rhyhorn",
+      "variety": "",
+      "spec_id": 6144989,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Magikarp",
+      "base_name": "Magikarp",
+      "variety": "",
+      "spec_id": 2777864,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 2,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Eevee",
+      "base_name": "Eevee",
+      "variety": "",
+      "spec_id": 2777863,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 8,
+        "psa_6": 7,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    }
+  ]
+}

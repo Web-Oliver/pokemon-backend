@@ -1,0 +1,56 @@
+{
+  "year": "2008",
+  "set_name": "Pokemon Autumn Battle Road Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2008/pokemon-autumn-battle-road-promo/150728",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 7,
+        "psa_7": 11,
+        "psa_8": 15,
+        "psa_9": 32,
+        "psa_10": 4,
+        "psa_total": 75
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 75
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Victory Medal",
+      "base_name": "Victory Medal",
+      "variety": "",
+      "spec_id": 2443125,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 7,
+        "psa_7": 11,
+        "psa_8": 15,
+        "psa_9": 32,
+        "psa_10": 4,
+        "psa_total": 75
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 75
+      }
+    }
+  ]
+}

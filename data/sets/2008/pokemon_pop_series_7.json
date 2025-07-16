@@ -1,0 +1,584 @@
+{
+  "year": "2008",
+  "set_name": "Pokemon Pop Series 7",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2008/pokemon-pop-series-7/90104",
+  "total_cards": 27,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 12,
+        "psa_5": 53,
+        "psa_6": 54,
+        "psa_7": 113,
+        "psa_8": 201,
+        "psa_9": 233,
+        "psa_10": 24,
+        "psa_total": 700
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 700
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Ampharos",
+      "base_name": "Ampharos",
+      "variety": "",
+      "spec_id": 2259395,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 9,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Ampharos-Holo",
+      "base_name": "Ampharos-Holo",
+      "variety": "",
+      "spec_id": 2628813,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 11,
+        "psa_6": 11,
+        "psa_7": 16,
+        "psa_8": 28,
+        "psa_9": 58,
+        "psa_10": 7,
+        "psa_total": 137
+      },
+      "grade_totals": {
+        "total": 137,
+        "grade_total": 137
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Gallade",
+      "base_name": "Gallade",
+      "variety": "",
+      "spec_id": 2124082,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Gallade-Holo",
+      "base_name": "Gallade-Holo",
+      "variety": "",
+      "spec_id": 2765889,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Latias",
+      "base_name": "Latias",
+      "variety": "",
+      "spec_id": 2299835,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Latias-Holo",
+      "base_name": "Latias-Holo",
+      "variety": "",
+      "spec_id": 880339,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 22,
+        "psa_6": 19,
+        "psa_7": 33,
+        "psa_8": 43,
+        "psa_9": 18,
+        "psa_10": 0,
+        "psa_total": 139
+      },
+      "grade_totals": {
+        "total": 139,
+        "grade_total": 139
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Latios",
+      "base_name": "Latios",
+      "variety": "",
+      "spec_id": 2496349,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 11,
+        "psa_10": 2,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Latios-Holo",
+      "base_name": "Latios-Holo",
+      "variety": "",
+      "spec_id": 1827395,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 11,
+        "psa_6": 16,
+        "psa_7": 31,
+        "psa_8": 45,
+        "psa_9": 17,
+        "psa_10": 0,
+        "psa_total": 127
+      },
+      "grade_totals": {
+        "total": 127,
+        "grade_total": 127
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Mothim",
+      "base_name": "Mothim",
+      "variety": "",
+      "spec_id": 2795287,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Mothim-Holo",
+      "base_name": "Mothim-Holo",
+      "variety": "",
+      "spec_id": 2301453,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 8,
+        "psa_9": 10,
+        "psa_10": 0,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Delibird",
+      "base_name": "Delibird",
+      "variety": "",
+      "spec_id": 2765891,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Flaaffy",
+      "base_name": "Flaaffy",
+      "variety": "",
+      "spec_id": 2765892,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Kirlia",
+      "base_name": "Kirlia",
+      "variety": "",
+      "spec_id": 4645730,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Kirlia-Holo",
+      "base_name": "Kirlia-Holo",
+      "variety": "",
+      "spec_id": 2380621,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 10,
+        "psa_8": 13,
+        "psa_9": 31,
+        "psa_10": 3,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Stantler",
+      "base_name": "Stantler",
+      "variety": "",
+      "spec_id": 2765894,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Wormadam",
+      "base_name": "Wormadam",
+      "variety": "",
+      "spec_id": 2765897,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Burmy",
+      "base_name": "Burmy",
+      "variety": "",
+      "spec_id": 2765898,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Burmy",
+      "base_name": "Burmy",
+      "variety": "",
+      "spec_id": 2770726,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Corsola",
+      "base_name": "Corsola",
+      "variety": "",
+      "spec_id": 2765901,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Mareep",
+      "base_name": "Mareep",
+      "variety": "",
+      "spec_id": 2765904,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Ralts",
+      "base_name": "Ralts",
+      "variety": "",
+      "spec_id": 2765906,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 7,
+        "psa_10": 1,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Sentret",
+      "base_name": "Sentret",
+      "variety": "",
+      "spec_id": 2765907,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Spinda",
+      "base_name": "Spinda",
+      "variety": "",
+      "spec_id": 2765908,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    }
+  ]
+}

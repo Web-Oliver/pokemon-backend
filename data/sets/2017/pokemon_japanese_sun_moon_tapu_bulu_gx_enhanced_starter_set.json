@@ -1,0 +1,104 @@
+{
+  "year": "2017",
+  "set_name": "Pokemon Japanese Sun & Moon Tapu Bulu GX Enhanced Starter Set",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2017/pokemon-japanese-sun-moon-tapu-bulu-gx-enhanced-starter-set/150956",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 6,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Tapu Bulu GX",
+      "base_name": "Tapu Bulu GX",
+      "variety": "",
+      "spec_id": 2445912,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Chansey",
+      "base_name": "Chansey",
+      "variety": "",
+      "spec_id": 5048054,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Lillie",
+      "base_name": "Lillie",
+      "variety": "",
+      "spec_id": 5048065,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,1208 @@
+{
+  "year": "2012",
+  "set_name": "Pokemon Black & White Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2012/pokemon-black-white-promo/111823",
+  "total_cards": 52,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 13,
+        "psa_2": 6,
+        "psa_3": 17,
+        "psa_4": 20,
+        "psa_5": 70,
+        "psa_6": 159,
+        "psa_7": 295,
+        "psa_8": 554,
+        "psa_9": 683,
+        "psa_10": 218,
+        "psa_total": 2039
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2039
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Mewtwo EX-Jumbo-Mewtwo Collection",
+      "base_name": "Mewtwo EX",
+      "variety": "Jumbo-Mewtwo Collection",
+      "spec_id": 1975870,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "BW29",
+      "card_name": "Victory Cup-3rd Place-Battle Road Autumn",
+      "base_name": "Victory Cup",
+      "variety": "3rd Place-Battle Road Autumn",
+      "spec_id": 2332973,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 7,
+        "psa_8": 17,
+        "psa_9": 21,
+        "psa_10": 13,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "BW29",
+      "card_name": "Victory Cup-3rd Place-Battle Road Spring",
+      "base_name": "Victory Cup",
+      "variety": "3rd Place-Battle Road Spring",
+      "spec_id": 2339592,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 10,
+        "psa_8": 20,
+        "psa_9": 33,
+        "psa_10": 16,
+        "psa_total": 84
+      },
+      "grade_totals": {
+        "total": 84,
+        "grade_total": 84
+      }
+    },
+    {
+      "pokemon_number": "BW30",
+      "card_name": "Victory Cup-2nd Place-Battle Road Autumn",
+      "base_name": "Victory Cup",
+      "variety": "2nd Place-Battle Road Autumn",
+      "spec_id": 2332974,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 3,
+        "psa_8": 17,
+        "psa_9": 34,
+        "psa_10": 19,
+        "psa_total": 78
+      },
+      "grade_totals": {
+        "total": 78,
+        "grade_total": 78
+      }
+    },
+    {
+      "pokemon_number": "BW30",
+      "card_name": "Victory Cup-2nd Place-Battle Road Spring",
+      "base_name": "Victory Cup",
+      "variety": "2nd Place-Battle Road Spring",
+      "spec_id": 2339594,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 12,
+        "psa_8": 11,
+        "psa_9": 39,
+        "psa_10": 15,
+        "psa_total": 81
+      },
+      "grade_totals": {
+        "total": 81,
+        "grade_total": 81
+      }
+    },
+    {
+      "pokemon_number": "BW31",
+      "card_name": "Victory Cup-1st Place-Battle Road Autumn",
+      "base_name": "Victory Cup",
+      "variety": "1st Place-Battle Road Autumn",
+      "spec_id": 2339597,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 13,
+        "psa_7": 9,
+        "psa_8": 34,
+        "psa_9": 33,
+        "psa_10": 14,
+        "psa_total": 106
+      },
+      "grade_totals": {
+        "total": 106,
+        "grade_total": 106
+      }
+    },
+    {
+      "pokemon_number": "BW31",
+      "card_name": "Victory Cup-1st Place-Battle Road Spring",
+      "base_name": "Victory Cup",
+      "variety": "1st Place-Battle Road Spring",
+      "spec_id": 2339596,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 16,
+        "psa_8": 24,
+        "psa_9": 37,
+        "psa_10": 22,
+        "psa_total": 106
+      },
+      "grade_totals": {
+        "total": 106,
+        "grade_total": 106
+      }
+    },
+    {
+      "pokemon_number": "BW33",
+      "card_name": "Riolu",
+      "base_name": "Riolu",
+      "variety": "",
+      "spec_id": 2230042,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "BW33",
+      "card_name": "Riolu-Cosmos Holo-Next Destinies",
+      "base_name": "Riolu",
+      "variety": "Cosmos Holo-Next Destinies",
+      "spec_id": 2356252,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 3,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "BW34",
+      "card_name": "Luxio-Cosmos Holo-Next Destinies",
+      "base_name": "Luxio",
+      "variety": "Cosmos Holo-Next Destinies",
+      "spec_id": 2352552,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 4,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "BW34",
+      "card_name": "Luxio-Cracked Ice-Dark Explorers",
+      "base_name": "Luxio",
+      "variety": "Cracked Ice-Dark Explorers",
+      "spec_id": 2339899,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 5,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "BW35",
+      "card_name": "Meowth",
+      "base_name": "Meowth",
+      "variety": "",
+      "spec_id": 2356255,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "BW36",
+      "card_name": "Reshiram EX-EX Tin",
+      "base_name": "Reshiram EX",
+      "variety": "EX Tin",
+      "spec_id": 1973284,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 10,
+        "psa_8": 17,
+        "psa_9": 26,
+        "psa_10": 4,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    },
+    {
+      "pokemon_number": "BW36",
+      "card_name": "Reshiram EX-EX Tin-French",
+      "base_name": "Reshiram EX",
+      "variety": "EX Tin-French",
+      "spec_id": 8102973,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 6,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "BW37",
+      "card_name": "Kyurem EX",
+      "base_name": "Kyurem EX",
+      "variety": "",
+      "spec_id": 1960929,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 19,
+        "psa_8": 19,
+        "psa_9": 30,
+        "psa_10": 12,
+        "psa_total": 92
+      },
+      "grade_totals": {
+        "total": 93,
+        "grade_total": 92
+      }
+    },
+    {
+      "pokemon_number": "BW37",
+      "card_name": "Kyurem EX-EX Tin-French",
+      "base_name": "Kyurem EX",
+      "variety": "EX Tin-French",
+      "spec_id": 8518384,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "BW38",
+      "card_name": "Zekrom EX",
+      "base_name": "Zekrom EX",
+      "variety": "",
+      "spec_id": 1940918,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 7,
+        "psa_6": 8,
+        "psa_7": 9,
+        "psa_8": 22,
+        "psa_9": 34,
+        "psa_10": 12,
+        "psa_total": 100
+      },
+      "grade_totals": {
+        "total": 101,
+        "grade_total": 100
+      }
+    },
+    {
+      "pokemon_number": "BW38",
+      "card_name": "Zekrom EX-EX Tin-French",
+      "base_name": "Zekrom EX",
+      "variety": "EX Tin-French",
+      "spec_id": 8518408,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "BW39",
+      "card_name": "Battle City-Mewtwo Collection Box",
+      "base_name": "Battle City",
+      "variety": "Mewtwo Collection Box",
+      "spec_id": 2341373,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 11,
+        "psa_8": 6,
+        "psa_9": 18,
+        "psa_10": 4,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "BW40",
+      "card_name": "Volcarona-Holo-Dark Explorers",
+      "base_name": "Volcarona-Holo",
+      "variety": "Dark Explorers",
+      "spec_id": 2356259,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 12,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "BW40",
+      "card_name": "Volcarona-Holo-Dark Explorers-Staff",
+      "base_name": "Volcarona-Holo",
+      "variety": "Dark Explorers-Staff",
+      "spec_id": 3681830,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 9,
+        "psa_8": 14,
+        "psa_9": 9,
+        "psa_10": 1,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "BW41",
+      "card_name": "Thundurus-Reverse Foil",
+      "base_name": "Thundurus-Reverse Foil",
+      "variety": "",
+      "spec_id": 7968469,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "BW41",
+      "card_name": "Thundurus-Holo",
+      "base_name": "Thundurus-Holo",
+      "variety": "",
+      "spec_id": 2356260,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "BW42",
+      "card_name": "Tornadus-Holo-Forces of Nature",
+      "base_name": "Tornadus-Holo",
+      "variety": "Forces of Nature",
+      "spec_id": 2339903,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "BW43",
+      "card_name": "Landorus-Holo",
+      "base_name": "Landorus-Holo",
+      "variety": "",
+      "spec_id": 2319056,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 12,
+        "psa_7": 12,
+        "psa_8": 17,
+        "psa_9": 9,
+        "psa_10": 0,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "BW44",
+      "card_name": "Kyurem-Holo",
+      "base_name": "Kyurem-Holo",
+      "variety": "",
+      "spec_id": 2356263,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 11,
+        "psa_10": 5,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "BW44",
+      "card_name": "Kyurem-Holo-Kyurem Box-French",
+      "base_name": "Kyurem-Holo",
+      "variety": "Kyurem Box-French",
+      "spec_id": 9599928,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "BW45",
+      "card_name": "Mewtwo EX",
+      "base_name": "Mewtwo EX",
+      "variety": "",
+      "spec_id": 1961469,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 3,
+        "psa_3": 4,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 21,
+        "psa_7": 34,
+        "psa_8": 58,
+        "psa_9": 61,
+        "psa_10": 15,
+        "psa_total": 208
+      },
+      "grade_totals": {
+        "total": 209,
+        "grade_total": 208
+      }
+    },
+    {
+      "pokemon_number": "BW46",
+      "card_name": "Darkrai EX",
+      "base_name": "Darkrai EX",
+      "variety": "",
+      "spec_id": 1965571,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 23,
+        "psa_7": 27,
+        "psa_8": 31,
+        "psa_9": 14,
+        "psa_10": 9,
+        "psa_total": 117
+      },
+      "grade_totals": {
+        "total": 118,
+        "grade_total": 117
+      }
+    },
+    {
+      "pokemon_number": "BW46",
+      "card_name": "Darkrai EX-EX Tin-French",
+      "base_name": "Darkrai EX",
+      "variety": "EX Tin-French",
+      "spec_id": 10678006,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "BW47",
+      "card_name": "Rayquaza EX",
+      "base_name": "Rayquaza EX",
+      "variety": "",
+      "spec_id": 1961471,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 14,
+        "psa_6": 16,
+        "psa_7": 30,
+        "psa_8": 45,
+        "psa_9": 46,
+        "psa_10": 9,
+        "psa_total": 172
+      },
+      "grade_totals": {
+        "total": 173,
+        "grade_total": 172
+      }
+    },
+    {
+      "pokemon_number": "BW47",
+      "card_name": "Rayquaza EX-EX Tin-French",
+      "base_name": "Rayquaza EX",
+      "variety": "EX Tin-French",
+      "spec_id": 8500057,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "BW48",
+      "card_name": "Altaria-Holo-Dragons Exalted-Staff",
+      "base_name": "Altaria-Holo",
+      "variety": "Dragons Exalted-Staff",
+      "spec_id": 2339599,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 13,
+        "psa_9": 36,
+        "psa_10": 9,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "BW48",
+      "card_name": "Altaria-Holo-Dragons Exhalted",
+      "base_name": "Altaria-Holo",
+      "variety": "Dragons Exhalted",
+      "spec_id": 2356266,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 9,
+        "psa_8": 9,
+        "psa_9": 18,
+        "psa_10": 4,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "BW49",
+      "card_name": "Lilligant-Holo",
+      "base_name": "Lilligant-Holo",
+      "variety": "",
+      "spec_id": 2356267,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 6,
+        "psa_10": 2,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "BW51",
+      "card_name": "Crobat-Holo-Plasma Storm",
+      "base_name": "Crobat-Holo",
+      "variety": "Plasma Storm",
+      "spec_id": 2356272,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 9,
+        "psa_8": 15,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "BW51",
+      "card_name": "Crobat-Holo-Plasma Storm-Staff",
+      "base_name": "Crobat-Holo",
+      "variety": "Plasma Storm-Staff",
+      "spec_id": 2339602,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 13,
+        "psa_8": 30,
+        "psa_9": 9,
+        "psa_10": 1,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 58
+      }
+    },
+    {
+      "pokemon_number": "BW51",
+      "card_name": "Iksbat-Holo-Plasma Storm-German",
+      "base_name": "Iksbat-Holo",
+      "variety": "Plasma Storm-German",
+      "spec_id": 12071980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "BW52",
+      "card_name": "Lillipup-Reverse Foil",
+      "base_name": "Lillipup-Reverse Foil",
+      "variety": "",
+      "spec_id": 2356277,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "BW53",
+      "card_name": "Flygon-Holo-Boundaries Crossed",
+      "base_name": "Flygon-Holo",
+      "variety": "Boundaries Crossed",
+      "spec_id": 2339606,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 21,
+        "psa_10": 4,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "BW53",
+      "card_name": "Flygon-Holo-Boundaries Crossed-Staff",
+      "base_name": "Flygon-Holo",
+      "variety": "Boundaries Crossed-Staff",
+      "spec_id": 2320724,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 19,
+        "psa_9": 23,
+        "psa_10": 4,
+        "psa_total": 52
+      },
+      "grade_totals": {
+        "total": 52,
+        "grade_total": 52
+      }
+    },
+    {
+      "pokemon_number": "BW53",
+      "card_name": "Libelldra-Holo-Boundaries Crossed-German",
+      "base_name": "Libelldra-Holo",
+      "variety": "Boundaries Crossed-German",
+      "spec_id": 10428412,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "BW54",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2356278,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 10,
+        "psa_8": 14,
+        "psa_9": 18,
+        "psa_10": 1,
+        "psa_total": 48
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 48
+      }
+    },
+    {
+      "pokemon_number": "BW54",
+      "card_name": "Pikachu-Holo-Boundaries Crossed-Italian",
+      "base_name": "Pikachu-Holo",
+      "variety": "Boundaries Crossed-Italian",
+      "spec_id": 11535435,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "BW55",
+      "card_name": "Elgyem-Boundaries Crossed",
+      "base_name": "Elgyem",
+      "variety": "Boundaries Crossed",
+      "spec_id": 2385245,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "BW56",
+      "card_name": "Empoleon-Holo",
+      "base_name": "Empoleon-Holo",
+      "variety": "",
+      "spec_id": 2356281,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 13,
+        "psa_9": 13,
+        "psa_10": 1,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "BW57",
+      "card_name": "Haxorus-Holo",
+      "base_name": "Haxorus-Holo",
+      "variety": "",
+      "spec_id": 2356282,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 14,
+        "psa_10": 0,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "BW59",
+      "card_name": "White Kyurem-Holo-White Kyurem Box",
+      "base_name": "White Kyurem-Holo",
+      "variety": "White Kyurem Box",
+      "spec_id": 2385248,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "BW60",
+      "card_name": "Keldeo-Holo-Keldeo Box",
+      "base_name": "Keldeo-Holo",
+      "variety": "Keldeo Box",
+      "spec_id": 2385251,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    }
+  ]
+}

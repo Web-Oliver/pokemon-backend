@@ -1,0 +1,560 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Japanese Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-japanese-promo/100427",
+  "total_cards": 23,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 8,
+        "psa_3": 12,
+        "psa_4": 38,
+        "psa_5": 64,
+        "psa_6": 98,
+        "psa_7": 97,
+        "psa_8": 257,
+        "psa_9": 589,
+        "psa_10": 808,
+        "psa_total": 1975
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1975
+      }
+    },
+    {
+      "pokemon_number": "002/J",
+      "card_name": "Latias & Latios-Movie Promo Jumbo",
+      "base_name": "Latias & Latios",
+      "variety": "Movie Promo Jumbo",
+      "spec_id": 2634262,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 9,
+        "psa_7": 9,
+        "psa_8": 30,
+        "psa_9": 10,
+        "psa_10": 1,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Venusaur-E-Card Promo",
+      "base_name": "Venusaur",
+      "variety": "E-Card Promo",
+      "spec_id": 666063,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Blastoise-E-Card Promo",
+      "base_name": "Blastoise",
+      "variety": "E-Card Promo",
+      "spec_id": 666064,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "019/P",
+      "card_name": "Trainer: Pokemon Center Tokyo",
+      "base_name": "Trainer: Pokemon Center Tokyo",
+      "variety": "",
+      "spec_id": 2035875,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 3,
+        "psa_3": 7,
+        "psa_4": 12,
+        "psa_5": 17,
+        "psa_6": 15,
+        "psa_7": 13,
+        "psa_8": 19,
+        "psa_9": 39,
+        "psa_10": 46,
+        "psa_total": 172
+      },
+      "grade_totals": {
+        "total": 172,
+        "grade_total": 172
+      }
+    },
+    {
+      "pokemon_number": "020/P",
+      "card_name": "Pokemon Center Osaka",
+      "base_name": "Pokemon Center Osaka",
+      "variety": "",
+      "spec_id": 2128228,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 4,
+        "psa_3": 3,
+        "psa_4": 11,
+        "psa_5": 17,
+        "psa_6": 12,
+        "psa_7": 14,
+        "psa_8": 13,
+        "psa_9": 22,
+        "psa_10": 35,
+        "psa_total": 132
+      },
+      "grade_totals": {
+        "total": 132,
+        "grade_total": 132
+      }
+    },
+    {
+      "pokemon_number": "027/P",
+      "card_name": "Touch Generation Change!",
+      "base_name": "Touch Generation Change!",
+      "variety": "",
+      "spec_id": 1965596,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 4,
+        "psa_8": 21,
+        "psa_9": 53,
+        "psa_10": 137,
+        "psa_total": 222
+      },
+      "grade_totals": {
+        "total": 222,
+        "grade_total": 222
+      }
+    },
+    {
+      "pokemon_number": "028/P",
+      "card_name": "Pichu Bros.-Movie",
+      "base_name": "Pichu Bros.",
+      "variety": "Movie",
+      "spec_id": 1812845,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 6,
+        "psa_5": 10,
+        "psa_6": 24,
+        "psa_7": 13,
+        "psa_8": 27,
+        "psa_9": 59,
+        "psa_10": 130,
+        "psa_total": 271
+      },
+      "grade_totals": {
+        "total": 271,
+        "grade_total": 271
+      }
+    },
+    {
+      "pokemon_number": "038/P",
+      "card_name": "Pikachu-Pokemon Festa 2002",
+      "base_name": "Pikachu",
+      "variety": "Pokemon Festa 2002",
+      "spec_id": 2055954,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 8,
+        "psa_6": 12,
+        "psa_7": 20,
+        "psa_8": 52,
+        "psa_9": 132,
+        "psa_10": 145,
+        "psa_total": 372
+      },
+      "grade_totals": {
+        "total": 372,
+        "grade_total": 372
+      }
+    },
+    {
+      "pokemon_number": "039/P",
+      "card_name": "Crystal Energy-Holo-Battle Road Summer Gift Card",
+      "base_name": "Crystal Energy-Holo",
+      "variety": "Battle Road Summer Gift Card",
+      "spec_id": 2010550,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 21,
+        "psa_9": 89,
+        "psa_10": 73,
+        "psa_total": 195
+      },
+      "grade_totals": {
+        "total": 195,
+        "grade_total": 195
+      }
+    },
+    {
+      "pokemon_number": "040/P",
+      "card_name": "Boost Energy-Holo-Battle Road Summer Gift Card",
+      "base_name": "Boost Energy-Holo",
+      "variety": "Battle Road Summer Gift Card",
+      "spec_id": 2010552,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 6,
+        "psa_8": 8,
+        "psa_9": 42,
+        "psa_10": 97,
+        "psa_total": 155
+      },
+      "grade_totals": {
+        "total": 155,
+        "grade_total": 155
+      }
+    },
+    {
+      "pokemon_number": "041/P",
+      "card_name": "Warp Energy-Holo-Battle Road Summer Gift Card",
+      "base_name": "Warp Energy-Holo",
+      "variety": "Battle Road Summer Gift Card",
+      "spec_id": 2010554,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 18,
+        "psa_9": 60,
+        "psa_10": 90,
+        "psa_total": 174
+      },
+      "grade_totals": {
+        "total": 174,
+        "grade_total": 174
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Touch Generation Change!",
+      "base_name": "Touch Generation Change!",
+      "variety": "",
+      "spec_id": 1965595,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 10,
+        "psa_7": 9,
+        "psa_8": 41,
+        "psa_9": 72,
+        "psa_10": 44,
+        "psa_total": 179
+      },
+      "grade_totals": {
+        "total": 179,
+        "grade_total": 179
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-Battle Road Spring-Hokkaido",
+      "base_name": "No. 1 Trainer",
+      "variety": "Battle Road Spring-Hokkaido",
+      "spec_id": 7898166,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Battle Road Spring",
+      "base_name": "No. 2 Trainer",
+      "variety": "Battle Road Spring",
+      "spec_id": 2253141,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Battle Road Spring-Kyushu",
+      "base_name": "No. 2 Trainer",
+      "variety": "Battle Road Spring-Kyushu",
+      "spec_id": 7898060,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Battle Road Summer",
+      "base_name": "No. 2 Trainer",
+      "variety": "Battle Road Summer",
+      "spec_id": 2253140,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Battle Road Summer-Kanto",
+      "base_name": "No. 2 Trainer",
+      "variety": "Battle Road Summer-Kanto",
+      "spec_id": 13226516,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Battle Road Summer",
+      "base_name": "No. 3 Trainer",
+      "variety": "Battle Road Summer",
+      "spec_id": 7471911,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Battle Road Summer-Hokkaido",
+      "base_name": "No. 3 Trainer",
+      "variety": "Battle Road Summer-Hokkaido",
+      "spec_id": 4215143,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Battle Road Summer-Kansai",
+      "base_name": "No. 3 Trainer",
+      "variety": "Battle Road Summer-Kansai",
+      "spec_id": 7898198,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Battle Road Summer-Kanto",
+      "base_name": "No. 3 Trainer",
+      "variety": "Battle Road Summer-Kanto",
+      "spec_id": 7716643,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Battle Road Summer-Kyushu",
+      "base_name": "No. 3 Trainer",
+      "variety": "Battle Road Summer-Kyushu",
+      "spec_id": 7970699,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,80 @@
+{
+  "year": "2010",
+  "set_name": "Pokemon Insert Cards",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2010/pokemon-insert-cards/238584",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "2010 Pokemon TCG World Championship Decks Coming This Fall!-Welcome Kit",
+      "base_name": "2010 Pokemon TCG World Championship Decks Coming This Fall!",
+      "variety": "Welcome Kit",
+      "spec_id": 8754724,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pokemon World Chapionships 2011 August 12th-14th 2011 San Diego, CA USA-Welcome Kit",
+      "base_name": "Pokemon World Chapionships 2011 August 12th-14th 2011 San Diego, CA USA",
+      "variety": "Welcome Kit",
+      "spec_id": 8754726,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

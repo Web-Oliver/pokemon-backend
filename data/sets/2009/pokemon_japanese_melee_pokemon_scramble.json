@@ -1,0 +1,488 @@
+{
+  "year": "2009",
+  "set_name": "Pokemon Japanese Melee! Pokemon Scramble",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2009/pokemon-japanese-melee-scramble/130936",
+  "total_cards": 20,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 12,
+        "psa_4": 28,
+        "psa_5": 42,
+        "psa_6": 93,
+        "psa_7": 128,
+        "psa_8": 261,
+        "psa_9": 940,
+        "psa_10": 1458,
+        "psa_total": 2965
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2965
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Venusaur",
+      "base_name": "Venusaur",
+      "variety": "",
+      "spec_id": 2349163,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 12,
+        "psa_8": 27,
+        "psa_9": 55,
+        "psa_10": 82,
+        "psa_total": 191
+      },
+      "grade_totals": {
+        "total": 191,
+        "grade_total": 191
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Cherrim",
+      "base_name": "Cherrim",
+      "variety": "",
+      "spec_id": 2382203,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 9,
+        "psa_8": 8,
+        "psa_9": 68,
+        "psa_10": 66,
+        "psa_total": 153
+      },
+      "grade_totals": {
+        "total": 153,
+        "grade_total": 153
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Ninetales",
+      "base_name": "Ninetales",
+      "variety": "",
+      "spec_id": 2349168,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 53,
+        "psa_10": 92,
+        "psa_total": 164
+      },
+      "grade_totals": {
+        "total": 164,
+        "grade_total": 164
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Heatran",
+      "base_name": "Heatran",
+      "variety": "",
+      "spec_id": 2382205,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 7,
+        "psa_9": 35,
+        "psa_10": 95,
+        "psa_total": 148
+      },
+      "grade_totals": {
+        "total": 148,
+        "grade_total": 148
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Starmie",
+      "base_name": "Starmie",
+      "variety": "",
+      "spec_id": 2382206,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 6,
+        "psa_8": 9,
+        "psa_9": 34,
+        "psa_10": 96,
+        "psa_total": 153
+      },
+      "grade_totals": {
+        "total": 153,
+        "grade_total": 153
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Gyarados",
+      "base_name": "Gyarados",
+      "variety": "",
+      "spec_id": 2349159,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 13,
+        "psa_9": 64,
+        "psa_10": 117,
+        "psa_total": 208
+      },
+      "grade_totals": {
+        "total": 208,
+        "grade_total": 208
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2349157,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 17,
+        "psa_6": 31,
+        "psa_7": 26,
+        "psa_8": 56,
+        "psa_9": 125,
+        "psa_10": 82,
+        "psa_total": 345
+      },
+      "grade_totals": {
+        "total": 345,
+        "grade_total": 345
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Zapdos",
+      "base_name": "Zapdos",
+      "variety": "",
+      "spec_id": 2339624,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 10,
+        "psa_9": 52,
+        "psa_10": 105,
+        "psa_total": 179
+      },
+      "grade_totals": {
+        "total": 179,
+        "grade_total": 179
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Mewtwo",
+      "base_name": "Mewtwo",
+      "variety": "",
+      "spec_id": 2382207,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 9,
+        "psa_6": 4,
+        "psa_7": 7,
+        "psa_8": 19,
+        "psa_9": 127,
+        "psa_10": 88,
+        "psa_total": 259
+      },
+      "grade_totals": {
+        "total": 259,
+        "grade_total": 259
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Mew",
+      "base_name": "Mew",
+      "variety": "",
+      "spec_id": 2190994,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 9,
+        "psa_8": 20,
+        "psa_9": 75,
+        "psa_10": 111,
+        "psa_total": 232
+      },
+      "grade_totals": {
+        "total": 232,
+        "grade_total": 232
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Diglett",
+      "base_name": "Diglett",
+      "variety": "",
+      "spec_id": 2382208,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 11,
+        "psa_9": 54,
+        "psa_10": 81,
+        "psa_total": 152
+      },
+      "grade_totals": {
+        "total": 152,
+        "grade_total": 152
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Lucario",
+      "base_name": "Lucario",
+      "variety": "",
+      "spec_id": 2349173,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 12,
+        "psa_8": 12,
+        "psa_9": 34,
+        "psa_10": 103,
+        "psa_total": 166
+      },
+      "grade_totals": {
+        "total": 166,
+        "grade_total": 166
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Skuntank",
+      "base_name": "Skuntank",
+      "variety": "",
+      "spec_id": 2382210,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 51,
+        "psa_10": 88,
+        "psa_total": 151
+      },
+      "grade_totals": {
+        "total": 152,
+        "grade_total": 151
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Bastiodon",
+      "base_name": "Bastiodon",
+      "variety": "",
+      "spec_id": 2382211,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 11,
+        "psa_9": 43,
+        "psa_10": 87,
+        "psa_total": 149
+      },
+      "grade_totals": {
+        "total": 149,
+        "grade_total": 149
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Rattata",
+      "base_name": "Rattata",
+      "variety": "",
+      "spec_id": 2382212,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 14,
+        "psa_9": 33,
+        "psa_10": 82,
+        "psa_total": 145
+      },
+      "grade_totals": {
+        "total": 145,
+        "grade_total": 145
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Bibarel",
+      "base_name": "Bibarel",
+      "variety": "",
+      "spec_id": 2382213,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 8,
+        "psa_7": 9,
+        "psa_8": 18,
+        "psa_9": 29,
+        "psa_10": 61,
+        "psa_total": 128
+      },
+      "grade_totals": {
+        "total": 128,
+        "grade_total": 128
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Pachirisu",
+      "base_name": "Pachirisu",
+      "variety": "",
+      "spec_id": 2504925,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 1,
+        "psa_10": 7,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Croagunk",
+      "base_name": "Croagunk",
+      "variety": "",
+      "spec_id": 2504927,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 8,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Eevee",
+      "base_name": "Eevee",
+      "variety": "",
+      "spec_id": 2504928,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    }
+  ]
+}

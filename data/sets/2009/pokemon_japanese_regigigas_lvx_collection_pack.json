@@ -1,0 +1,320 @@
+{
+  "year": "2009",
+  "set_name": "Pokemon Japanese Regigigas LV.X Collection Pack",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2009/pokemon-japanese-regigigas-lv-x-collection-pack/134355",
+  "total_cards": 13,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 12,
+        "psa_6": 23,
+        "psa_7": 35,
+        "psa_8": 90,
+        "psa_9": 410,
+        "psa_10": 926,
+        "psa_total": 1501
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1501
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Turtwig",
+      "base_name": "Turtwig",
+      "variety": "",
+      "spec_id": 5184082,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 7,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Leafeon-Holo",
+      "base_name": "Leafeon-Holo",
+      "variety": "",
+      "spec_id": 2359867,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 10,
+        "psa_8": 25,
+        "psa_9": 115,
+        "psa_10": 243,
+        "psa_total": 399
+      },
+      "grade_totals": {
+        "total": 399,
+        "grade_total": 399
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Heatran-Holo",
+      "base_name": "Heatran-Holo",
+      "variety": "",
+      "spec_id": 2698515,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 17,
+        "psa_10": 71,
+        "psa_total": 97
+      },
+      "grade_totals": {
+        "total": 97,
+        "grade_total": 97
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Shellos East Sea-Holo",
+      "base_name": "Shellos East Sea-Holo",
+      "variety": "",
+      "spec_id": 4315136,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 18,
+        "psa_10": 69,
+        "psa_total": 93
+      },
+      "grade_totals": {
+        "total": 93,
+        "grade_total": 93
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Phione",
+      "base_name": "Phione",
+      "variety": "",
+      "spec_id": 5184083,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 6,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Manaphy",
+      "base_name": "Manaphy",
+      "variety": "",
+      "spec_id": 5184084,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 8,
+        "psa_10": 5,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Chingling",
+      "base_name": "Chingling",
+      "variety": "",
+      "spec_id": 5184085,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 4,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Cresselia-Holo",
+      "base_name": "Cresselia-Holo",
+      "variety": "",
+      "spec_id": 4315232,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 11,
+        "psa_9": 43,
+        "psa_10": 129,
+        "psa_total": 187
+      },
+      "grade_totals": {
+        "total": 187,
+        "grade_total": 187
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Buneary",
+      "base_name": "Buneary",
+      "variety": "",
+      "spec_id": 5184086,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 9,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Lopunny",
+      "base_name": "Lopunny",
+      "variety": "",
+      "spec_id": 5184087,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 4,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Regigigas LV.X-Holo",
+      "base_name": "Regigigas LV.X-Holo",
+      "variety": "",
+      "spec_id": 2277632,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 5,
+        "psa_7": 11,
+        "psa_8": 30,
+        "psa_9": 133,
+        "psa_10": 232,
+        "psa_total": 417
+      },
+      "grade_totals": {
+        "total": 417,
+        "grade_total": 417
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Time-Space Distortion-Holo",
+      "base_name": "Time-Space Distortion-Holo",
+      "variety": "",
+      "spec_id": 4114907,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 9,
+        "psa_8": 14,
+        "psa_9": 63,
+        "psa_10": 147,
+        "psa_total": 240
+      },
+      "grade_totals": {
+        "total": 240,
+        "grade_total": 240
+      }
+    }
+  ]
+}

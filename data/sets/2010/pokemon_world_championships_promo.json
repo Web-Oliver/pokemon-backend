@@ -1,0 +1,1376 @@
+{
+  "year": "2010",
+  "set_name": "Pokemon World Championships Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2010/pokemon-world-championships-promo/95327",
+  "total_cards": 62,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 5,
+        "psa_3": 6,
+        "psa_4": 16,
+        "psa_5": 30,
+        "psa_6": 43,
+        "psa_7": 67,
+        "psa_8": 195,
+        "psa_9": 270,
+        "psa_10": 191,
+        "psa_total": 826
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 826
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Azelf-Happy Luck",
+      "base_name": "Azelf",
+      "variety": "Happy Luck",
+      "spec_id": 8300232,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Dialga G-Luxchomp of the Spirit",
+      "base_name": "Dialga G",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5808545,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Gardevoir-Boltevoir",
+      "base_name": "Gardevoir",
+      "variety": "Boltevoir",
+      "spec_id": 10815323,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Lucario GL-Luxchomp of the Spirit",
+      "base_name": "Lucario GL",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 10740537,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Luxray GL-Happy Luck",
+      "base_name": "Luxray GL",
+      "variety": "Happy Luck",
+      "spec_id": 7579637,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Mesprit-Happy Luck",
+      "base_name": "Mesprit",
+      "variety": "Happy Luck",
+      "spec_id": 8300495,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Claydol-Power Cottonweed",
+      "base_name": "Claydol",
+      "variety": "Power Cottonweed",
+      "spec_id": 12522324,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Azelf-Happy Luck",
+      "base_name": "Azelf",
+      "variety": "Happy Luck",
+      "spec_id": 8300910,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Azelf-Luxchomp of the Spirit",
+      "base_name": "Azelf",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5456797,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Gyarados-Happy Luck",
+      "base_name": "Gyarados",
+      "variety": "Happy Luck",
+      "spec_id": 2794881,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 13,
+        "psa_10": 12,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Spiritomb-Boltevoir",
+      "base_name": "Spiritomb",
+      "variety": "Boltevoir",
+      "spec_id": 13531489,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Bronzong G-Luxchomp of the Spirit",
+      "base_name": "Bronzong G",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 9120185,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Uxie-Happy Luck",
+      "base_name": "Uxie",
+      "variety": "Happy Luck",
+      "spec_id": 8300329,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Uxie-Luxchomp of the Spirit",
+      "base_name": "Uxie",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 6387701,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "47",
+      "card_name": "Crobat G-Happy Luck",
+      "base_name": "Crobat G",
+      "variety": "Happy Luck",
+      "spec_id": 8300841,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "47",
+      "card_name": "Crobat G-Luxchomp of the Spirit",
+      "base_name": "Crobat G",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 10740550,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "47",
+      "card_name": "Crobat G-Power Cottonweed",
+      "base_name": "Crobat G",
+      "variety": "Power Cottonweed",
+      "spec_id": 6093709,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "56",
+      "card_name": "Dragonite FB-Luxchomp of the Spirit",
+      "base_name": "Dragonite FB",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5808541,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "57",
+      "card_name": "Combee-Happy Luck",
+      "base_name": "Combee",
+      "variety": "Happy Luck",
+      "spec_id": 3843315,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "60",
+      "card_name": "Garchomp C-Luxchomp of the Spirit",
+      "base_name": "Garchomp C",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 2632239,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 5,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "65",
+      "card_name": "Magikarp-Happy Luck",
+      "base_name": "Magikarp",
+      "variety": "Happy Luck",
+      "spec_id": 6725820,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 16,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "82",
+      "card_name": "Rare Candy-Boltevoir",
+      "base_name": "Rare Candy",
+      "variety": "Boltevoir",
+      "spec_id": 13593732,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "86",
+      "card_name": "Machop-Boltevoir",
+      "base_name": "Machop",
+      "variety": "Boltevoir",
+      "spec_id": 12219708,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "89",
+      "card_name": "Ralts-Boltevoir",
+      "base_name": "Ralts",
+      "variety": "Boltevoir",
+      "spec_id": 9848589,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "89",
+      "card_name": "Bebe's Search-Boltevoir",
+      "base_name": "Bebe's Search",
+      "variety": "Boltevoir",
+      "spec_id": 9626969,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "89",
+      "card_name": "Bebe's Search-Luxchomp of the Spirit",
+      "base_name": "Bebe's Search",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 12573718,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "92",
+      "card_name": "Call Energy-Boltevoir",
+      "base_name": "Call Energy",
+      "variety": "Boltevoir",
+      "spec_id": 5844994,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "94",
+      "card_name": "Cyclone Energy-Happy Luck",
+      "base_name": "Cyclone Energy",
+      "variety": "Happy Luck",
+      "spec_id": 9848619,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "95",
+      "card_name": "Warp Energy-Luxchomp of the Spirit",
+      "base_name": "Warp Energy",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5844999,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "97",
+      "card_name": "Pokemon Collector-Luxchomp of the Spirit",
+      "base_name": "Pokemon Collector",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 2835543,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "97",
+      "card_name": "Pokemon Collector-Power Cottonweed",
+      "base_name": "Pokemon Collector",
+      "variety": "Power Cottonweed",
+      "spec_id": 2835525,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "98",
+      "card_name": "Pokemon Communication-Power Cottonweed",
+      "base_name": "Pokemon Communication",
+      "variety": "Power Cottonweed",
+      "spec_id": 6846796,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "103",
+      "card_name": "Double Colorless Energy-Boltevoir",
+      "base_name": "Double Colorless Energy",
+      "variety": "Boltevoir",
+      "spec_id": 5845058,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "105",
+      "card_name": "Cyrus's Conspiracy-Luxchomp of the Spirit",
+      "base_name": "Cyrus's Conspiracy",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 10203125,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "109",
+      "card_name": "Luxray GL LV.X-Happy Luck",
+      "base_name": "Luxray GL LV.X",
+      "variety": "Happy Luck",
+      "spec_id": 2586159,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "109",
+      "card_name": "Luxray GL LV.X-Luxchomp of the Spirit",
+      "base_name": "Luxray GL LV.X",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5808552,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "122",
+      "card_name": "Dialga G LV.X-Luxchomp of the Spirit",
+      "base_name": "Dialga G LV.X",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5808562,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "125",
+      "card_name": "Roseanne's Research-Boltevoir",
+      "base_name": "Roseanne's Research",
+      "variety": "Boltevoir",
+      "spec_id": 9670769,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "131",
+      "card_name": "Gardevoir LV.X-Boltevoir",
+      "base_name": "Gardevoir LV.X",
+      "variety": "Boltevoir",
+      "spec_id": 6420909,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "140",
+      "card_name": "Azelf LV.X-Boltevoir",
+      "base_name": "Azelf LV.X",
+      "variety": "Boltevoir",
+      "spec_id": 6420456,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "145",
+      "card_name": "Garchomp C LV.X-Luxchomp of the Spirit",
+      "base_name": "Garchomp C LV.X",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5808570,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 9,
+        "psa_10": 8,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "146",
+      "card_name": "Uxie LV.X-Luxchomp of the Spirit",
+      "base_name": "Uxie LV.X",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 5808558,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "HGSS18",
+      "card_name": "Tropical Tidal Wave",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "",
+      "spec_id": 1830215,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 10,
+        "psa_8": 11,
+        "psa_9": 19,
+        "psa_10": 11,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 58
+      }
+    },
+    {
+      "pokemon_number": "HGSS18",
+      "card_name": "Tropical Tidal Wave-Finalist",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "Finalist",
+      "spec_id": 1735922,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "HGSS18",
+      "card_name": "Tropical Tidal Wave-Quarter-Finalist",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "Quarter-Finalist",
+      "spec_id": 2090074,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 11,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "HGSS18",
+      "card_name": "Tropical Tidal Wave-Semi-Finalist",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "Semi-Finalist",
+      "spec_id": 2090076,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "HGSS18",
+      "card_name": "Tropical Tidal Wave-Staff",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "Staff",
+      "spec_id": 1951410,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 11,
+        "psa_8": 34,
+        "psa_9": 43,
+        "psa_10": 8,
+        "psa_total": 98
+      },
+      "grade_totals": {
+        "total": 99,
+        "grade_total": 98
+      }
+    },
+    {
+      "pokemon_number": "HGSS18",
+      "card_name": "Tropical Tidal Wave-Top Sixteen",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "Top Sixteen",
+      "spec_id": 2090073,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 12,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "HGSS18",
+      "card_name": "Tropical Tidal Wave-Top Thirty-Two",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "Top Thirty-Two",
+      "spec_id": 2090071,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 22,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "L-P",
+      "card_name": "Tropical Tidal Wave-Japanese",
+      "base_name": "Tropical Tidal Wave",
+      "variety": "Japanese",
+      "spec_id": 1830219,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 30,
+        "psa_10": 51,
+        "psa_total": 96
+      },
+      "grade_totals": {
+        "total": 96,
+        "grade_total": 96
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Grass Energy-Power Cottonweed",
+      "base_name": "Grass Energy",
+      "variety": "Power Cottonweed",
+      "spec_id": 8857321,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Lightning Energy-Luxchomp of the Spirit",
+      "base_name": "Lightning Energy",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 8247273,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Metal Energy-Luxchomp of the Spirit",
+      "base_name": "Metal Energy",
+      "variety": "Luxchomp of the Spirit",
+      "spec_id": 6134809,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Psychic Energy-Boltevoir",
+      "base_name": "Psychic Energy",
+      "variety": "Boltevoir",
+      "spec_id": 11302352,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Holo",
+      "base_name": "No. 2 Trainer",
+      "variety": "Holo",
+      "spec_id": 2834594,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Holo",
+      "base_name": "No. 3 Trainer",
+      "variety": "Holo",
+      "spec_id": 2457875,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

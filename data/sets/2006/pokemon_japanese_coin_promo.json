@@ -1,0 +1,128 @@
+{
+  "year": "2006",
+  "set_name": "Pokemon Japanese Coin Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2006/pokemon-japanese-coin-promo/171101",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 6,
+        "psa_10": 16,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Chimchar/Piplup/Turtwig-Entry Pack",
+      "base_name": "Chimchar/Piplup/Turtwig",
+      "variety": "Entry Pack",
+      "spec_id": 2852735,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Dialga-Space-Time Creation Battle Roads",
+      "base_name": "Dialga",
+      "variety": "Space-Time Creation Battle Roads",
+      "spec_id": 3628359,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Groudon-Earth's Groudon EX Constructed Starter Deck",
+      "base_name": "Groudon",
+      "variety": "Earth's Groudon EX Constructed Starter Deck",
+      "spec_id": 8491964,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Manaphy-Movie Commemoration VS Pack Sea's Manaphy",
+      "base_name": "Manaphy",
+      "variety": "Movie Commemoration VS Pack Sea's Manaphy",
+      "spec_id": 4157303,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 10,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    }
+  ]
+}

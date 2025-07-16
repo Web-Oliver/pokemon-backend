@@ -1,0 +1,752 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon Japanese Aqua Half Decks",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-japanese-aqua-half-decks/157378",
+  "total_cards": 31,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 18,
+        "psa_8": 37,
+        "psa_9": 99,
+        "psa_10": 61,
+        "psa_total": 228
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 228
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Team Aqua's Sharpedo",
+      "base_name": "Team Aqua's Sharpedo",
+      "variety": "",
+      "spec_id": 2600916,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Team Aqua's Sharpedo-1st Edition",
+      "base_name": "Team Aqua's Sharpedo",
+      "variety": "1st Edition",
+      "spec_id": 5159856,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Team Aqua's Corphish",
+      "base_name": "Team Aqua's Corphish",
+      "variety": "",
+      "spec_id": 5159890,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Team Aqua's Corphish",
+      "base_name": "Team Aqua's Corphish",
+      "variety": "",
+      "spec_id": 5159891,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Team Aqua's Crawdaunt",
+      "base_name": "Team Aqua's Crawdaunt",
+      "variety": "",
+      "spec_id": 2600920,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Team Aqua's Spheal",
+      "base_name": "Team Aqua's Spheal",
+      "variety": "",
+      "spec_id": 5159892,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Team Aqua's Spheal",
+      "base_name": "Team Aqua's Spheal",
+      "variety": "",
+      "spec_id": 5159893,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Team Aqua's Spheal-1st Edition",
+      "base_name": "Team Aqua's Spheal",
+      "variety": "1st Edition",
+      "spec_id": 5159861,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Team Aqua's Walrein",
+      "base_name": "Team Aqua's Walrein",
+      "variety": "",
+      "spec_id": 2600921,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Team Aqua's Walrein-Holo",
+      "base_name": "Team Aqua's Walrein-Holo",
+      "variety": "",
+      "spec_id": 2600319,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 9,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Team Aqua's Walrein-Holo-1st Edition",
+      "base_name": "Team Aqua's Walrein-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2573454,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 15,
+        "psa_10": 8,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Team Aqua's Kyogre-Holo",
+      "base_name": "Team Aqua's Kyogre-Holo",
+      "variety": "",
+      "spec_id": 2600318,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 6,
+        "psa_8": 7,
+        "psa_9": 10,
+        "psa_10": 9,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Team Aqua's Kyogre-Holo-1st Edition",
+      "base_name": "Team Aqua's Kyogre-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2573455,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 29,
+        "psa_10": 12,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Raikou EX",
+      "base_name": "Raikou EX",
+      "variety": "",
+      "spec_id": 2600320,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 13,
+        "psa_10": 4,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Raikou EX-1st Edition",
+      "base_name": "Raikou EX",
+      "variety": "1st Edition",
+      "spec_id": 2573458,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 14,
+        "psa_10": 8,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Team Aqua's Lanturn",
+      "base_name": "Team Aqua's Lanturn",
+      "variety": "",
+      "spec_id": 5159897,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Team Aqua's Lanturn-1st Edition",
+      "base_name": "Team Aqua's Lanturn",
+      "variety": "1st Edition",
+      "spec_id": 5159866,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Team Aqua's Electrike",
+      "base_name": "Team Aqua's Electrike",
+      "variety": "",
+      "spec_id": 5159898,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Team Aqua's Electrike",
+      "base_name": "Team Aqua's Electrike",
+      "variety": "",
+      "spec_id": 5159899,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Team Aqua's Manectric",
+      "base_name": "Team Aqua's Manectric",
+      "variety": "",
+      "spec_id": 5159900,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Team Aqua's Poochyena",
+      "base_name": "Team Aqua's Poochyena",
+      "variety": "",
+      "spec_id": 5159901,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Team Aqua's Poochyena",
+      "base_name": "Team Aqua's Poochyena",
+      "variety": "",
+      "spec_id": 5159902,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Team Aqua's Mightyena",
+      "base_name": "Team Aqua's Mightyena",
+      "variety": "",
+      "spec_id": 5159903,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Team Aqua's Mightyena",
+      "base_name": "Team Aqua's Mightyena",
+      "variety": "",
+      "spec_id": 5159904,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Team Aqua Ball",
+      "base_name": "Team Aqua Ball",
+      "variety": "",
+      "spec_id": 5159907,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Team Aqua Conspirator",
+      "base_name": "Team Aqua Conspirator",
+      "variety": "",
+      "spec_id": 5159909,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Archie",
+      "base_name": "Archie",
+      "variety": "",
+      "spec_id": 5159910,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "032",
+      "card_name": "Team Aqua Hideout",
+      "base_name": "Team Aqua Hideout",
+      "variety": "",
+      "spec_id": 5159913,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Aqua Energy",
+      "base_name": "Aqua Energy",
+      "variety": "",
+      "spec_id": 2600925,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Darkness Energy",
+      "base_name": "Darkness Energy",
+      "variety": "",
+      "spec_id": 5159916,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

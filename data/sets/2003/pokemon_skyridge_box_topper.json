@@ -1,0 +1,128 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon Skyridge Box Topper",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-skyridge-box-topper/111981",
+  "total_cards": 10,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 8,
+        "psa_3": 4,
+        "psa_4": 11,
+        "psa_5": 15,
+        "psa_6": 43,
+        "psa_7": 40,
+        "psa_8": 133,
+        "psa_9": 373,
+        "psa_10": 420,
+        "psa_total": 1053
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1053
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Charizard",
+      "base_name": "Charizard",
+      "variety": "",
+      "spec_id": 1964850,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 4,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 6,
+        "psa_6": 18,
+        "psa_7": 12,
+        "psa_8": 36,
+        "psa_9": 99,
+        "psa_10": 135,
+        "psa_total": 322
+      },
+      "grade_totals": {
+        "total": 322,
+        "grade_total": 322
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Crobat",
+      "base_name": "Crobat",
+      "variety": "",
+      "spec_id": 1942134,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 6,
+        "psa_8": 28,
+        "psa_9": 78,
+        "psa_10": 77,
+        "psa_total": 201
+      },
+      "grade_totals": {
+        "total": 202,
+        "grade_total": 201
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "HO-Oh",
+      "base_name": "HO-Oh",
+      "variety": "",
+      "spec_id": 1964854,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 11,
+        "psa_7": 10,
+        "psa_8": 33,
+        "psa_9": 80,
+        "psa_10": 85,
+        "psa_total": 227
+      },
+      "grade_totals": {
+        "total": 227,
+        "grade_total": 227
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Kabutops",
+      "base_name": "Kabutops",
+      "variety": "",
+      "spec_id": 1964859,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 9,
+        "psa_8": 26,
+        "psa_9": 73,
+        "psa_10": 79,
+        "psa_total": 200
+      },
+      "grade_totals": {
+        "total": 200,
+        "grade_total": 200
+      }
+    }
+  ]
+}

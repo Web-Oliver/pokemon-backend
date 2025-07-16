@@ -1,0 +1,872 @@
+{
+  "year": "2000",
+  "set_name": "Pokemon Promo Black Star",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2000/pokemon-promo-black-star/81092",
+  "total_cards": 54,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 301,
+        "psa_2": 333,
+        "psa_3": 729,
+        "psa_4": 1720,
+        "psa_5": 4129,
+        "psa_6": 5860,
+        "psa_7": 8727,
+        "psa_8": 18439,
+        "psa_9": 25996,
+        "psa_10": 23609,
+        "psa_total": 89849
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 89849
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Arcanin-Pokemon League-French",
+      "base_name": "Arcanin",
+      "variety": "Pokemon League-French",
+      "spec_id": 8172807,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Arcanine-Pokemon League",
+      "base_name": "Arcanine",
+      "variety": "Pokemon League",
+      "spec_id": 1724800,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 7,
+        "psa_5": 31,
+        "psa_6": 83,
+        "psa_7": 218,
+        "psa_8": 561,
+        "psa_9": 694,
+        "psa_10": 243,
+        "psa_total": 1843
+      },
+      "grade_totals": {
+        "total": 1852,
+        "grade_total": 1843
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Arcanine-Pokemon League-Italian",
+      "base_name": "Arcanine",
+      "variety": "Pokemon League-Italian",
+      "spec_id": 5984206,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Jigglypuff",
+      "base_name": "Jigglypuff",
+      "variety": "",
+      "spec_id": 526893,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 6,
+        "psa_5": 26,
+        "psa_6": 25,
+        "psa_7": 55,
+        "psa_8": 184,
+        "psa_9": 373,
+        "psa_10": 255,
+        "psa_total": 929
+      },
+      "grade_totals": {
+        "total": 939,
+        "grade_total": 929
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Mew-Pokemon League",
+      "base_name": "Mew",
+      "variety": "Pokemon League",
+      "spec_id": 525130,
+      "psa_grades": {
+        "psa_1": 70,
+        "psa_2": 43,
+        "psa_3": 99,
+        "psa_4": 189,
+        "psa_5": 356,
+        "psa_6": 550,
+        "psa_7": 862,
+        "psa_8": 2226,
+        "psa_9": 5427,
+        "psa_10": 3335,
+        "psa_total": 13157
+      },
+      "grade_totals": {
+        "total": 13201,
+        "grade_total": 13157
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Mew-Pokemon League-German",
+      "base_name": "Mew",
+      "variety": "Pokemon League-German",
+      "spec_id": 7771159,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 10,
+        "psa_10": 8,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Mew-Pokemon League-Inverted Back",
+      "base_name": "Mew",
+      "variety": "Pokemon League-Inverted Back",
+      "spec_id": 12268681,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Mew-Holo-Pokemon League",
+      "base_name": "Mew-Holo",
+      "variety": "Pokemon League",
+      "spec_id": 525131,
+      "psa_grades": {
+        "psa_1": 25,
+        "psa_2": 22,
+        "psa_3": 46,
+        "psa_4": 108,
+        "psa_5": 340,
+        "psa_6": 579,
+        "psa_7": 1278,
+        "psa_8": 3233,
+        "psa_9": 3071,
+        "psa_10": 282,
+        "psa_total": 8984
+      },
+      "grade_totals": {
+        "total": 9056,
+        "grade_total": 8984
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Mew-Holo-Pokemon League-German",
+      "base_name": "Mew-Holo",
+      "variety": "Pokemon League-German",
+      "spec_id": 8280804,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 5,
+        "psa_7": 13,
+        "psa_8": 26,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Mew-Holo-Pokemon League-Spanish",
+      "base_name": "Mew-Holo",
+      "variety": "Pokemon League-Spanish",
+      "spec_id": 5414685,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 6,
+        "psa_8": 10,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Meowth-Holo-Game Boy",
+      "base_name": "Meowth-Holo",
+      "variety": "Game Boy",
+      "spec_id": 527145,
+      "psa_grades": {
+        "psa_1": 34,
+        "psa_2": 45,
+        "psa_3": 156,
+        "psa_4": 438,
+        "psa_5": 711,
+        "psa_6": 458,
+        "psa_7": 521,
+        "psa_8": 972,
+        "psa_9": 745,
+        "psa_10": 71,
+        "psa_total": 4152
+      },
+      "grade_totals": {
+        "total": 4167,
+        "grade_total": 4152
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Eevee-Jr. Stamp Rally",
+      "base_name": "Eevee",
+      "variety": "Jr. Stamp Rally",
+      "spec_id": 2082246,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 5,
+        "psa_4": 12,
+        "psa_5": 17,
+        "psa_6": 31,
+        "psa_7": 53,
+        "psa_8": 59,
+        "psa_9": 59,
+        "psa_10": 215,
+        "psa_total": 452
+      },
+      "grade_totals": {
+        "total": 452,
+        "grade_total": 452
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Eevee-Holo-Pokemon League",
+      "base_name": "Eevee-Holo",
+      "variety": "Pokemon League",
+      "spec_id": 525132,
+      "psa_grades": {
+        "psa_1": 19,
+        "psa_2": 24,
+        "psa_3": 36,
+        "psa_4": 104,
+        "psa_5": 346,
+        "psa_6": 813,
+        "psa_7": 1919,
+        "psa_8": 3492,
+        "psa_9": 1731,
+        "psa_10": 30,
+        "psa_total": 8515
+      },
+      "grade_totals": {
+        "total": 8586,
+        "grade_total": 8515
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Mewtwo",
+      "base_name": "Mewtwo",
+      "variety": "",
+      "spec_id": 708852,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 11,
+        "psa_3": 15,
+        "psa_4": 43,
+        "psa_5": 91,
+        "psa_6": 171,
+        "psa_7": 209,
+        "psa_8": 408,
+        "psa_9": 396,
+        "psa_10": 244,
+        "psa_total": 1593
+      },
+      "grade_totals": {
+        "total": 1605,
+        "grade_total": 1593
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Venusaur-Holo",
+      "base_name": "Venusaur-Holo",
+      "variety": "",
+      "spec_id": 886443,
+      "psa_grades": {
+        "psa_1": 21,
+        "psa_2": 39,
+        "psa_3": 87,
+        "psa_4": 227,
+        "psa_5": 620,
+        "psa_6": 924,
+        "psa_7": 838,
+        "psa_8": 851,
+        "psa_9": 322,
+        "psa_10": 9,
+        "psa_total": 3938
+      },
+      "grade_totals": {
+        "total": 3966,
+        "grade_total": 3938
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Mewtwo",
+      "base_name": "Mewtwo",
+      "variety": "",
+      "spec_id": 527146,
+      "psa_grades": {
+        "psa_1": 50,
+        "psa_2": 56,
+        "psa_3": 89,
+        "psa_4": 174,
+        "psa_5": 348,
+        "psa_6": 429,
+        "psa_7": 417,
+        "psa_8": 636,
+        "psa_9": 823,
+        "psa_10": 305,
+        "psa_total": 3327
+      },
+      "grade_totals": {
+        "total": 3335,
+        "grade_total": 3327
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Cool Porygon-Holo",
+      "base_name": "Cool Porygon-Holo",
+      "variety": "",
+      "spec_id": 527147,
+      "psa_grades": {
+        "psa_1": 13,
+        "psa_2": 7,
+        "psa_3": 32,
+        "psa_4": 82,
+        "psa_5": 181,
+        "psa_6": 195,
+        "psa_7": 319,
+        "psa_8": 1121,
+        "psa_9": 1253,
+        "psa_10": 164,
+        "psa_total": 3367
+      },
+      "grade_totals": {
+        "total": 3390,
+        "grade_total": 3367
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Computer Error-Pokemon League",
+      "base_name": "Computer Error",
+      "variety": "Pokemon League",
+      "spec_id": 866710,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 19,
+        "psa_6": 40,
+        "psa_7": 34,
+        "psa_8": 218,
+        "psa_9": 770,
+        "psa_10": 721,
+        "psa_total": 1815
+      },
+      "grade_totals": {
+        "total": 1843,
+        "grade_total": 1815
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Dark Persian-Holo",
+      "base_name": "Dark Persian-Holo",
+      "variety": "",
+      "spec_id": 2293576,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Team Rocket's Meowth-Pokemon League",
+      "base_name": "Team Rocket's Meowth",
+      "variety": "Pokemon League",
+      "spec_id": 1724804,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 13,
+        "psa_5": 29,
+        "psa_6": 40,
+        "psa_7": 49,
+        "psa_8": 192,
+        "psa_9": 835,
+        "psa_10": 1436,
+        "psa_total": 2601
+      },
+      "grade_totals": {
+        "total": 2606,
+        "grade_total": 2601
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Sabrina's Abra",
+      "base_name": "Sabrina's Abra",
+      "variety": "",
+      "spec_id": 866706,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 6,
+        "psa_3": 13,
+        "psa_4": 19,
+        "psa_5": 49,
+        "psa_6": 47,
+        "psa_7": 49,
+        "psa_8": 96,
+        "psa_9": 328,
+        "psa_10": 465,
+        "psa_total": 1074
+      },
+      "grade_totals": {
+        "total": 1076,
+        "grade_total": 1074
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Psyduck-Pokemon League",
+      "base_name": "Psyduck",
+      "variety": "Pokemon League",
+      "spec_id": 1724803,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 19,
+        "psa_6": 26,
+        "psa_7": 28,
+        "psa_8": 170,
+        "psa_9": 890,
+        "psa_10": 862,
+        "psa_total": 2003
+      },
+      "grade_totals": {
+        "total": 2008,
+        "grade_total": 2003
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Moltres-Naoyo Kimura Corrected",
+      "base_name": "Moltres",
+      "variety": "Naoyo Kimura Corrected",
+      "spec_id": 5020592,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 3,
+        "psa_3": 4,
+        "psa_4": 8,
+        "psa_5": 25,
+        "psa_6": 28,
+        "psa_7": 22,
+        "psa_8": 50,
+        "psa_9": 76,
+        "psa_10": 111,
+        "psa_total": 328
+      },
+      "grade_totals": {
+        "total": 328,
+        "grade_total": 328
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Moltres-Toshinao Aoki Error",
+      "base_name": "Moltres",
+      "variety": "Toshinao Aoki Error",
+      "spec_id": 866494,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 3,
+        "psa_3": 18,
+        "psa_4": 39,
+        "psa_5": 172,
+        "psa_6": 175,
+        "psa_7": 151,
+        "psa_8": 305,
+        "psa_9": 1250,
+        "psa_10": 2852,
+        "psa_total": 4973
+      },
+      "grade_totals": {
+        "total": 4980,
+        "grade_total": 4973
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Articuno-Naoyo Kimura Corrected",
+      "base_name": "Articuno",
+      "variety": "Naoyo Kimura Corrected",
+      "spec_id": 5020591,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 6,
+        "psa_4": 11,
+        "psa_5": 23,
+        "psa_6": 28,
+        "psa_7": 30,
+        "psa_8": 37,
+        "psa_9": 93,
+        "psa_10": 199,
+        "psa_total": 432
+      },
+      "grade_totals": {
+        "total": 433,
+        "grade_total": 432
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Articuno-Toshinao Aoki Error",
+      "base_name": "Articuno",
+      "variety": "Toshinao Aoki Error",
+      "spec_id": 866495,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 11,
+        "psa_3": 11,
+        "psa_4": 38,
+        "psa_5": 147,
+        "psa_6": 243,
+        "psa_7": 135,
+        "psa_8": 324,
+        "psa_9": 1253,
+        "psa_10": 2836,
+        "psa_total": 5004
+      },
+      "grade_totals": {
+        "total": 5006,
+        "grade_total": 5004
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Zapdos-Naoyo Kimura Corrected",
+      "base_name": "Zapdos",
+      "variety": "Naoyo Kimura Corrected",
+      "spec_id": 5020589,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 27,
+        "psa_6": 24,
+        "psa_7": 25,
+        "psa_8": 40,
+        "psa_9": 76,
+        "psa_10": 113,
+        "psa_total": 315
+      },
+      "grade_totals": {
+        "total": 316,
+        "grade_total": 315
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Zapdos-Toshinao Aoki Error",
+      "base_name": "Zapdos",
+      "variety": "Toshinao Aoki Error",
+      "spec_id": 902696,
+      "psa_grades": {
+        "psa_1": 11,
+        "psa_2": 9,
+        "psa_3": 14,
+        "psa_4": 19,
+        "psa_5": 126,
+        "psa_6": 194,
+        "psa_7": 166,
+        "psa_8": 325,
+        "psa_9": 1191,
+        "psa_10": 2785,
+        "psa_total": 4840
+      },
+      "grade_totals": {
+        "total": 4847,
+        "grade_total": 4840
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Birthday Pikachu-Holo",
+      "base_name": "Birthday Pikachu-Holo",
+      "variety": "",
+      "spec_id": 5471143,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 19,
+        "psa_3": 30,
+        "psa_4": 55,
+        "psa_5": 169,
+        "psa_6": 451,
+        "psa_7": 1091,
+        "psa_8": 2336,
+        "psa_9": 1909,
+        "psa_10": 145,
+        "psa_total": 6211
+      },
+      "grade_totals": {
+        "total": 6296,
+        "grade_total": 6211
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Birthday Pikachu-Holo-Wizards Mail Giveaway-French",
+      "base_name": "Birthday Pikachu-Holo",
+      "variety": "Wizards Mail Giveaway-French",
+      "spec_id": 6905608,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Birthday Pikachu-Holo-Wizards Mail Giveaway-Italian",
+      "base_name": "Birthday Pikachu-Holo",
+      "variety": "Wizards Mail Giveaway-Italian",
+      "spec_id": 4946014,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 7,
+        "psa_7": 20,
+        "psa_8": 82,
+        "psa_9": 49,
+        "psa_10": 1,
+        "psa_total": 162
+      },
+      "grade_totals": {
+        "total": 163,
+        "grade_total": 162
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 886473,
+      "psa_grades": {
+        "psa_1": 12,
+        "psa_2": 15,
+        "psa_3": 32,
+        "psa_4": 68,
+        "psa_5": 127,
+        "psa_6": 127,
+        "psa_7": 104,
+        "psa_8": 251,
+        "psa_9": 1920,
+        "psa_10": 5461,
+        "psa_total": 8117
+      },
+      "grade_totals": {
+        "total": 8123,
+        "grade_total": 8117
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Marill-Pokemon League",
+      "base_name": "Marill",
+      "variety": "Pokemon League",
+      "spec_id": 1825660,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 9,
+        "psa_3": 19,
+        "psa_4": 27,
+        "psa_5": 104,
+        "psa_6": 135,
+        "psa_7": 91,
+        "psa_8": 187,
+        "psa_9": 347,
+        "psa_10": 310,
+        "psa_total": 1237
+      },
+      "grade_totals": {
+        "total": 1237,
+        "grade_total": 1237
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Marill-Pokemon League-French",
+      "base_name": "Marill",
+      "variety": "Pokemon League-French",
+      "spec_id": 11429093,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Marill-Pokemon League-Italian",
+      "base_name": "Marill",
+      "variety": "Pokemon League-Italian",
+      "spec_id": 10217771,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

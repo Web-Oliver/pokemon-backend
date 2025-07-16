@@ -1,0 +1,22 @@
+{
+  "year": "2022-2023",
+  "total_sets": 2,
+  "set_links": [
+    {
+      "set_name": "Pokemon Play! Pokemon Prize Pack",
+      "url": "https://www.psacard.com/pop/tcg-cards/2022-2023/pokemon-play-prize-pack/266098",
+      "total_items": "Grade",
+      "total_graded": "1",
+      "id": "266098",
+      "intercepted": false
+    },
+    {
+      "set_name": "Pokemon Simplified Chinese SM Promo",
+      "url": "https://www.psacard.com/pop/tcg-cards/2022-2023/pokemon-simplified-chinese-sm-promo/240518",
+      "total_items": "Grade",
+      "total_graded": "0",
+      "id": "240518",
+      "intercepted": false
+    }
+  ]
+}

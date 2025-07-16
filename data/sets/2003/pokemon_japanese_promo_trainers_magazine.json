@@ -1,0 +1,176 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon Japanese Promo Trainers Magazine",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-japanese-promo-trainers-magazine/113804",
+  "total_cards": 7,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 10,
+        "psa_6": 13,
+        "psa_7": 22,
+        "psa_8": 55,
+        "psa_9": 361,
+        "psa_10": 588,
+        "psa_total": 1051
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1051
+      }
+    },
+    {
+      "pokemon_number": "019/T",
+      "card_name": "Larvitar-Vol. 20",
+      "base_name": "Larvitar",
+      "variety": "Vol. 20",
+      "spec_id": 1960352,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 9,
+        "psa_9": 86,
+        "psa_10": 47,
+        "psa_total": 143
+      },
+      "grade_totals": {
+        "total": 143,
+        "grade_total": 143
+      }
+    },
+    {
+      "pokemon_number": "020/T",
+      "card_name": "Pupitar-Vol. 20",
+      "base_name": "Pupitar",
+      "variety": "Vol. 20",
+      "spec_id": 1960355,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 14,
+        "psa_9": 73,
+        "psa_10": 54,
+        "psa_total": 144
+      },
+      "grade_totals": {
+        "total": 144,
+        "grade_total": 144
+      }
+    },
+    {
+      "pokemon_number": "021/T",
+      "card_name": "Tyranitar EX-Vol. 20",
+      "base_name": "Tyranitar EX",
+      "variety": "Vol. 20",
+      "spec_id": 1960357,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 8,
+        "psa_9": 48,
+        "psa_10": 108,
+        "psa_total": 177
+      },
+      "grade_totals": {
+        "total": 177,
+        "grade_total": 177
+      }
+    },
+    {
+      "pokemon_number": "022/T",
+      "card_name": "Imakuni?'s Whismur-Vol. 21",
+      "base_name": "Imakuni?'s Whismur",
+      "variety": "Vol. 21",
+      "spec_id": 1960367,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 10,
+        "psa_9": 50,
+        "psa_10": 116,
+        "psa_total": 187
+      },
+      "grade_totals": {
+        "total": 187,
+        "grade_total": 187
+      }
+    },
+    {
+      "pokemon_number": "023/T",
+      "card_name": "Imakuni?'s Loudred-Vol. 21",
+      "base_name": "Imakuni?'s Loudred",
+      "variety": "Vol. 21",
+      "spec_id": 1960370,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 58,
+        "psa_10": 128,
+        "psa_total": 201
+      },
+      "grade_totals": {
+        "total": 201,
+        "grade_total": 201
+      }
+    },
+    {
+      "pokemon_number": "024/T",
+      "card_name": "Imakuni?'s Exploud EX-Vol. 21",
+      "base_name": "Imakuni?'s Exploud EX",
+      "variety": "Vol. 21",
+      "spec_id": 1960374,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 7,
+        "psa_8": 6,
+        "psa_9": 46,
+        "psa_10": 135,
+        "psa_total": 199
+      },
+      "grade_totals": {
+        "total": 199,
+        "grade_total": 199
+      }
+    }
+  ]
+}

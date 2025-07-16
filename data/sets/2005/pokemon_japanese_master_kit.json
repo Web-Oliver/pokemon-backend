@@ -1,0 +1,1328 @@
+{
+  "year": "2005",
+  "set_name": "Pokemon Japanese Master Kit",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2005/pokemon-japanese-master-kit/117297",
+  "total_cards": 55,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 9,
+        "psa_6": 37,
+        "psa_7": 46,
+        "psa_8": 120,
+        "psa_9": 350,
+        "psa_10": 492,
+        "psa_total": 1069
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1069
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Blaziken-Side Deck",
+      "base_name": "Blaziken",
+      "variety": "Side Deck",
+      "spec_id": 5175985,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Blaziken-Side Deck-1st Edition",
+      "base_name": "Blaziken",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175974,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 8,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Bulbasaur-Bulbasaur Quarter Deck",
+      "base_name": "Bulbasaur",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175918,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Bulbasaur-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Bulbasaur",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 2789829,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 12,
+        "psa_10": 21,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Torchic-Torchic Quarter Deck",
+      "base_name": "Torchic",
+      "variety": "Torchic Quarter Deck",
+      "spec_id": 5175954,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Torchic-Torchic Quarter Deck-1st Edition",
+      "base_name": "Torchic",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175936,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 8,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Combusken-Torchic Quarter Deck",
+      "base_name": "Combusken",
+      "variety": "Torchic Quarter Deck",
+      "spec_id": 5175955,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Combusken-Torchic Quarter Deck-1st Edition",
+      "base_name": "Combusken",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175937,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 8,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Exploud-Side Deck",
+      "base_name": "Exploud",
+      "variety": "Side Deck",
+      "spec_id": 5175986,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Exploud-Side Deck-1st Edition",
+      "base_name": "Exploud",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175975,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Ivysaur-Bulbasaur Quarter Deck",
+      "base_name": "Ivysaur",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175919,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Ivysaur-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Ivysaur",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 5175905,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 12,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Rayquaza EX-Holo-Side Deck",
+      "base_name": "Rayquaza EX-Holo",
+      "variety": "Side Deck",
+      "spec_id": 2109901,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 30,
+        "psa_10": 31,
+        "psa_total": 78
+      },
+      "grade_totals": {
+        "total": 78,
+        "grade_total": 78
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Rayquaza EX-Holo-Side Deck-1st Edition",
+      "base_name": "Rayquaza EX-Holo",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 2109900,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 13,
+        "psa_7": 21,
+        "psa_8": 50,
+        "psa_9": 82,
+        "psa_10": 164,
+        "psa_total": 342
+      },
+      "grade_totals": {
+        "total": 342,
+        "grade_total": 342
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Luvdisc-Bulbasaur Quarter Deck",
+      "base_name": "Luvdisc",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175920,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Luvdisc-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Luvdisc",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 5175906,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Wobbuffet-Torchic Quarter Deck",
+      "base_name": "Wobbuffet",
+      "variety": "Torchic Quarter Deck",
+      "spec_id": 5175956,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Wobbuffet-Torchic Quarter Deck-1st Edition",
+      "base_name": "Wobbuffet",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175938,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 9,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Phanpy-Torchic Quarter Deck",
+      "base_name": "Phanpy",
+      "variety": "Torchic Quarter Deck",
+      "spec_id": 5175957,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Phanpy-Torchic Quarter Deck-1st Edition",
+      "base_name": "Phanpy",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175939,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Pikachu-Bulbasaur Quarter Deck",
+      "base_name": "Pikachu",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175921,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Pikachu-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Pikachu",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 2696974,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 28,
+        "psa_10": 14,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Sableye-Side Deck",
+      "base_name": "Sableye",
+      "variety": "Side Deck",
+      "spec_id": 5175987,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Sableye-Side Deck-1st Edition",
+      "base_name": "Sableye",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175976,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 9,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Donphan-Torchic Quarter Deck",
+      "base_name": "Donphan",
+      "variety": "Torchic Quarter Deck",
+      "spec_id": 5175958,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Donphan-Torchic Quarter Deck-1st Edition",
+      "base_name": "Donphan",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175940,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Mawile-Side Deck",
+      "base_name": "Mawile",
+      "variety": "Side Deck",
+      "spec_id": 5175988,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Mawile-Side Deck-1st Edition",
+      "base_name": "Mawile",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175977,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 14,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Raichu-Bulbasaur Quarter Deck",
+      "base_name": "Raichu",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175922,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Raichu-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Raichu",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 4717042,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 10,
+        "psa_10": 16,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Doduo-Bulbasaur Quarter Deck",
+      "base_name": "Doduo",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175923,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Doduo-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Doduo",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 5175908,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Aura's Lucario EX-Holo-Side Deck",
+      "base_name": "Aura's Lucario EX-Holo",
+      "variety": "Side Deck",
+      "spec_id": 2013800,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 20,
+        "psa_10": 21,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Aura's Lucario EX-Holo-Side Deck-1st Edition",
+      "base_name": "Aura's Lucario EX-Holo",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 2079208,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 11,
+        "psa_7": 21,
+        "psa_8": 30,
+        "psa_9": 95,
+        "psa_10": 95,
+        "psa_total": 256
+      },
+      "grade_totals": {
+        "total": 256,
+        "grade_total": 256
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Whismur-Torchic Quarter Deck",
+      "base_name": "Whismur",
+      "variety": "Torchic Quarter Deck",
+      "spec_id": 5175959,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Whismur-Torchic Quarter Deck-1st Edition",
+      "base_name": "Whismur",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175941,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Dodrio-Bulbasaur Quarter Deck",
+      "base_name": "Dodrio",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175924,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Dodrio-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Dodrio",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 5175909,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Loudred-Torchic Quarter Deck",
+      "base_name": "Loudred",
+      "variety": "Torchic Quarter Deck",
+      "spec_id": 5175960,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Loudred-Torchic Quarter Deck-1st Edition",
+      "base_name": "Loudred",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175944,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Professor Oak's Research-Side Deck-1st Edition",
+      "base_name": "Professor Oak's Research",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175978,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Oran Berry-Side Deck",
+      "base_name": "Oran Berry",
+      "variety": "Side Deck",
+      "spec_id": 5175990,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Oran Berry-Side Deck-1st Edition",
+      "base_name": "Oran Berry",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175979,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Potion-Torchic Quarter Deck-1st Edition",
+      "base_name": "Potion",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175945,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Energy Switch-Bulbasaur Quarter Deck",
+      "base_name": "Energy Switch",
+      "variety": "Bulbasaur Quarter Deck",
+      "spec_id": 5175925,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Energy Switch-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Energy Switch",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 5175910,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Multi Technical Machine 01-Side Deck",
+      "base_name": "Multi Technical Machine 01",
+      "variety": "Side Deck",
+      "spec_id": 5175991,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Multi Technical Machine 01-Side Deck-1st Edition",
+      "base_name": "Multi Technical Machine 01",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Potion-Bulbasaur Quarter Deck-1st Edition",
+      "base_name": "Potion",
+      "variety": "Bulbasaur Quarter Deck-1st Edition",
+      "spec_id": 5175911,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Switch-Torchic Quarter Deck-1st Edition",
+      "base_name": "Switch",
+      "variety": "Torchic Quarter Deck-1st Edition",
+      "spec_id": 5175946,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Pokemon Park-Side Deck",
+      "base_name": "Pokemon Park",
+      "variety": "Side Deck",
+      "spec_id": 5175992,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Pokemon Park-Side Deck-1st Edition",
+      "base_name": "Pokemon Park",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175981,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 14,
+        "psa_10": 12,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Darkness Energy-Side Deck-1st Edition",
+      "base_name": "Darkness Energy",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175982,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Metal Energy-Side Deck-1st Edition",
+      "base_name": "Metal Energy",
+      "variety": "Side Deck-1st Edition",
+      "spec_id": 5175983,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,320 @@
+{
+  "year": "2000",
+  "set_name": "Topps Pokemon TV Animation Die-Cut Embossed",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2000/topps-pokemon-tv-animation-die-cut-embossed/128551",
+  "total_cards": 13,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 11,
+        "psa_5": 56,
+        "psa_6": 65,
+        "psa_7": 103,
+        "psa_8": 144,
+        "psa_9": 57,
+        "psa_10": 11,
+        "psa_total": 451
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 451
+      }
+    },
+    {
+      "pokemon_number": "EV1",
+      "card_name": "Caterpie",
+      "base_name": "Caterpie",
+      "variety": "",
+      "spec_id": 2902981,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 15,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "EV2",
+      "card_name": "Metapod",
+      "base_name": "Metapod",
+      "variety": "",
+      "spec_id": 2160224,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 14,
+        "psa_8": 24,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "EV3",
+      "card_name": "Butterfree",
+      "base_name": "Butterfree",
+      "variety": "",
+      "spec_id": 3670106,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "EV4",
+      "card_name": "Oddish",
+      "base_name": "Oddish",
+      "variety": "",
+      "spec_id": 2160542,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 10,
+        "psa_8": 15,
+        "psa_9": 11,
+        "psa_10": 1,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "EV5",
+      "card_name": "Gloom",
+      "base_name": "Gloom",
+      "variety": "",
+      "spec_id": 3670104,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 12,
+        "psa_9": 7,
+        "psa_10": 1,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "EV6",
+      "card_name": "Vileplume",
+      "base_name": "Vileplume",
+      "variety": "",
+      "spec_id": 4238119,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 10,
+        "psa_8": 10,
+        "psa_9": 6,
+        "psa_10": 2,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "EV7",
+      "card_name": "Abra",
+      "base_name": "Abra",
+      "variety": "",
+      "spec_id": 2831301,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 9,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 9,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "EV8",
+      "card_name": "Kadabra",
+      "base_name": "Kadabra",
+      "variety": "",
+      "spec_id": 2831305,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 18,
+        "psa_8": 14,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "EV9",
+      "card_name": "Alakazam",
+      "base_name": "Alakazam",
+      "variety": "",
+      "spec_id": 2160544,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 10,
+        "psa_6": 7,
+        "psa_7": 8,
+        "psa_8": 10,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "EV10",
+      "card_name": "Pidgey",
+      "base_name": "Pidgey",
+      "variety": "",
+      "spec_id": 2903032,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 12,
+        "psa_7": 5,
+        "psa_8": 8,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "EV11",
+      "card_name": "Pidgeotto",
+      "base_name": "Pidgeotto",
+      "variety": "",
+      "spec_id": 2846517,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 11,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 7,
+        "psa_10": 3,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "EV12",
+      "card_name": "Pidgeot",
+      "base_name": "Pidgeot",
+      "variety": "",
+      "spec_id": 2312818,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 13,
+        "psa_6": 9,
+        "psa_7": 11,
+        "psa_8": 7,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    }
+  ]
+}

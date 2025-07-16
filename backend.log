@@ -1,0 +1,44 @@
+[dotenv@17.0.1] injecting env (2) from .env – [tip] encrypt with dotenvx: https://dotenvx.com
+Server running on port 3000
+MongoDB Connected: localhost
+Starting data import with options: {
+  includePsa: false,
+  includeCardMarket: true,
+  limitPsaFiles: null,
+  limitCardMarketFiles: null
+}
+Starting Sealed Product data import...
+Found 8 Sealed Product files to import
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Blisters/Blisters.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Blisters/Blisters.json completed successfully
+Products processed: 400, Skipped: 0
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Booster-Boxes/Booster-Boxes.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Booster-Boxes/Booster-Boxes.json completed successfully
+Products processed: 533, Skipped: 0
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Boosters/Boosters.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Boosters/Boosters.json completed successfully
+Products processed: 636, Skipped: 0
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Box-Sets/Box-Sets.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Box-Sets/Box-Sets.json completed successfully
+Products processed: 707, Skipped: 0
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Elite-Trainer-Boxes/Elite-Trainer-Boxes.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Elite-Trainer-Boxes/Elite-Trainer-Boxes.json completed successfully
+Products processed: 131, Skipped: 0
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Theme-Decks/Theme-Decks.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Theme-Decks/Theme-Decks.json completed successfully
+Products processed: 529, Skipped: 0
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Tins/Tins.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Tins/Tins.json completed successfully
+Products processed: 384, Skipped: 0
+Importing CardMarket reference data from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Trainer-Kits/Trainer-Kits.json...
+CardMarket reference data import from /home/oliver/claude/Pokemon-Vault/pokemon-collection-backend/data/SealedProducts/Trainer-Kits/Trainer-Kits.json completed successfully
+Products processed: 13, Skipped: 0
+All data import completed
+Summary: {
+  psaFiles: 0,
+  sealedProductFiles: 8,
+  setsProcessed: 0,
+  cardsProcessed: 0,
+  sealedProductsProcessed: 3333,
+  errors: []
+}

@@ -1,0 +1,1616 @@
+{
+  "year": "2014",
+  "set_name": "Pokemon XY Black Star Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2014/pokemon-xy-black-star-promo/120962",
+  "total_cards": 68,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 43,
+        "psa_2": 21,
+        "psa_3": 84,
+        "psa_4": 174,
+        "psa_5": 421,
+        "psa_6": 597,
+        "psa_7": 830,
+        "psa_8": 1471,
+        "psa_9": 1567,
+        "psa_10": 874,
+        "psa_total": 6086
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 6086
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Primal Kyogre EX-Hoenn Collection-Jumbo",
+      "base_name": "Primal Kyogre EX",
+      "variety": "Hoenn Collection-Jumbo",
+      "spec_id": 8360945,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "86",
+      "card_name": "Primal Groudon EX-Hoenn Collection-Jumbo",
+      "base_name": "Primal Groudon EX",
+      "variety": "Hoenn Collection-Jumbo",
+      "spec_id": 8360702,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY01",
+      "card_name": "Chespin-Holo-Two Pack Blister-Russian",
+      "base_name": "Chespin-Holo",
+      "variety": "Two Pack Blister-Russian",
+      "spec_id": 11755797,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY02",
+      "card_name": "Fennekin-Holo-Two Pack Blister-Russian",
+      "base_name": "Fennekin-Holo",
+      "variety": "Two Pack Blister-Russian",
+      "spec_id": 11755795,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY03",
+      "card_name": "Froakie-Holo-Two Pack Blister-Russian",
+      "base_name": "Froakie-Holo",
+      "variety": "Two Pack Blister-Russian",
+      "spec_id": 11755775,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY04",
+      "card_name": "Nymphali-Holo-Sylveon Collection-French",
+      "base_name": "Nymphali-Holo",
+      "variety": "Sylveon Collection-French",
+      "spec_id": 8126825,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY04",
+      "card_name": "Sylveon-Holo-Sylveon Collection-Italian",
+      "base_name": "Sylveon-Holo",
+      "variety": "Sylveon Collection-Italian",
+      "spec_id": 12194050,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY05",
+      "card_name": "Xerneas-Xerneas Collection-Jumbo",
+      "base_name": "Xerneas",
+      "variety": "Xerneas Collection-Jumbo",
+      "spec_id": 11481997,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY05",
+      "card_name": "Xerneas-Holo-Xerneas Collection",
+      "base_name": "Xerneas-Holo",
+      "variety": "Xerneas Collection",
+      "spec_id": 2293327,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "XY06",
+      "card_name": "Yveltal",
+      "base_name": "Yveltal",
+      "variety": "",
+      "spec_id": 2168752,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY06",
+      "card_name": "Yveltal-Jumbo",
+      "base_name": "Yveltal",
+      "variety": "Jumbo",
+      "spec_id": 2634248,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY07",
+      "card_name": "Xerneas EX-Holo",
+      "base_name": "Xerneas EX-Holo",
+      "variety": "",
+      "spec_id": 2099000,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 5,
+        "psa_4": 4,
+        "psa_5": 9,
+        "psa_6": 14,
+        "psa_7": 25,
+        "psa_8": 17,
+        "psa_9": 20,
+        "psa_10": 7,
+        "psa_total": 104
+      },
+      "grade_totals": {
+        "total": 106,
+        "grade_total": 104
+      }
+    },
+    {
+      "pokemon_number": "XY08",
+      "card_name": "Yveltal EX",
+      "base_name": "Yveltal EX",
+      "variety": "",
+      "spec_id": 2098991,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 11,
+        "psa_6": 10,
+        "psa_7": 16,
+        "psa_8": 26,
+        "psa_9": 24,
+        "psa_10": 5,
+        "psa_total": 97
+      },
+      "grade_totals": {
+        "total": 99,
+        "grade_total": 97
+      }
+    },
+    {
+      "pokemon_number": "XY09",
+      "card_name": "Carchacrok EX-Holo-Garchomp EX Box-French",
+      "base_name": "Carchacrok EX-Holo",
+      "variety": "Garchomp EX Box-French",
+      "spec_id": 8791544,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 1,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "XY09",
+      "card_name": "Garchomp EX-Holo",
+      "base_name": "Garchomp EX-Holo",
+      "variety": "",
+      "spec_id": 2102878,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 2,
+        "psa_7": 8,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "XY10",
+      "card_name": "Dragalge-Holo-Flashfire",
+      "base_name": "Dragalge-Holo",
+      "variety": "Flashfire",
+      "spec_id": 2641818,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 12,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "XY10",
+      "card_name": "Dragalge-Holo-Flashfire Prerelease-Staff",
+      "base_name": "Dragalge-Holo",
+      "variety": "Flashfire Prerelease-Staff",
+      "spec_id": 2411599,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 7,
+        "psa_8": 10,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "XY13",
+      "card_name": "Machamp-Holo-Furious Fists Prerelease",
+      "base_name": "Machamp-Holo",
+      "variety": "Furious Fists Prerelease",
+      "spec_id": 2112489,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 15,
+        "psa_9": 18,
+        "psa_10": 2,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "XY13",
+      "card_name": "Machamp-Holo-Furious Fists Prerelease-Staff",
+      "base_name": "Machamp-Holo",
+      "variety": "Furious Fists Prerelease-Staff",
+      "spec_id": 2568488,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 10,
+        "psa_8": 28,
+        "psa_9": 27,
+        "psa_10": 2,
+        "psa_total": 76
+      },
+      "grade_totals": {
+        "total": 76,
+        "grade_total": 76
+      }
+    },
+    {
+      "pokemon_number": "XY14",
+      "card_name": "Trevenant-Holo-Furious Fists Blisters",
+      "base_name": "Trevenant-Holo",
+      "variety": "Furious Fists Blisters",
+      "spec_id": 2641822,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "XY15",
+      "card_name": "Slurpuff-Holo-Furious Fists Blisters",
+      "base_name": "Slurpuff-Holo",
+      "variety": "Furious Fists Blisters",
+      "spec_id": 2750580,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "XY16",
+      "card_name": "Gogoat-Holo-Furious Fists Blisters",
+      "base_name": "Gogoat-Holo",
+      "variety": "Furious Fists Blisters",
+      "spec_id": 5567557,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "XY17",
+      "card_name": "Charizard EX",
+      "base_name": "Charizard EX",
+      "variety": "",
+      "spec_id": 2064519,
+      "psa_grades": {
+        "psa_1": 18,
+        "psa_2": 11,
+        "psa_3": 39,
+        "psa_4": 104,
+        "psa_5": 236,
+        "psa_6": 279,
+        "psa_7": 291,
+        "psa_8": 419,
+        "psa_9": 344,
+        "psa_10": 151,
+        "psa_total": 1892
+      },
+      "grade_totals": {
+        "total": 1898,
+        "grade_total": 1892
+      }
+    },
+    {
+      "pokemon_number": "XY17",
+      "card_name": "Charizard EX-Jumbo",
+      "base_name": "Charizard EX",
+      "variety": "Jumbo",
+      "spec_id": 2386338,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 5,
+        "psa_6": 6,
+        "psa_7": 5,
+        "psa_8": 11,
+        "psa_9": 11,
+        "psa_10": 4,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "XY17",
+      "card_name": "Charizard EX-Mega Charizard Box-Italian",
+      "base_name": "Charizard EX",
+      "variety": "Mega Charizard Box-Italian",
+      "spec_id": 10078420,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY17",
+      "card_name": "Dracaufeu EX-Mega Charizard Box-French",
+      "base_name": "Dracaufeu EX",
+      "variety": "Mega Charizard Box-French",
+      "spec_id": 8793252,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY17",
+      "card_name": "Glurak EX-Mega Charizard Box-German",
+      "base_name": "Glurak EX",
+      "variety": "Mega Charizard Box-German",
+      "spec_id": 10602560,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY18",
+      "card_name": "Chesnaught EX",
+      "base_name": "Chesnaught EX",
+      "variety": "",
+      "spec_id": 2135582,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 6,
+        "psa_9": 11,
+        "psa_10": 3,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "XY19",
+      "card_name": "Delphox EX-Holo",
+      "base_name": "Delphox EX-Holo",
+      "variety": "",
+      "spec_id": 2321757,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 7,
+        "psa_8": 12,
+        "psa_9": 17,
+        "psa_10": 8,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "XY20",
+      "card_name": "Greninja EX",
+      "base_name": "Greninja EX",
+      "variety": "",
+      "spec_id": 2086052,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 6,
+        "psa_5": 5,
+        "psa_6": 9,
+        "psa_7": 16,
+        "psa_8": 51,
+        "psa_9": 57,
+        "psa_10": 24,
+        "psa_total": 170
+      },
+      "grade_totals": {
+        "total": 175,
+        "grade_total": 170
+      }
+    },
+    {
+      "pokemon_number": "XY21",
+      "card_name": "Bronzong-Holo-Phantom Forces Prerelease",
+      "base_name": "Bronzong-Holo",
+      "variety": "Phantom Forces Prerelease",
+      "spec_id": 5162543,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "XY21",
+      "card_name": "Bronzong-Holo-Phantom Forces Prerelease-Staff",
+      "base_name": "Bronzong-Holo",
+      "variety": "Phantom Forces Prerelease-Staff",
+      "spec_id": 2297561,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "XY22",
+      "card_name": "Darkrai-Holo",
+      "base_name": "Darkrai-Holo",
+      "variety": "",
+      "spec_id": 2146601,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 10,
+        "psa_8": 16,
+        "psa_9": 29,
+        "psa_10": 2,
+        "psa_total": 60
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 60
+      }
+    },
+    {
+      "pokemon_number": "XY22",
+      "card_name": "Darkrai-Holo-Phantom Forces Blisters-French",
+      "base_name": "Darkrai-Holo",
+      "variety": "Phantom Forces Blisters-French",
+      "spec_id": 10348298,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY23",
+      "card_name": "Shiftry-Holo",
+      "base_name": "Shiftry-Holo",
+      "variety": "",
+      "spec_id": 2438515,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 12,
+        "psa_10": 1,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "XY24",
+      "card_name": "Greninja-Holo",
+      "base_name": "Greninja-Holo",
+      "variety": "",
+      "spec_id": 2307618,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 14,
+        "psa_7": 14,
+        "psa_8": 24,
+        "psa_9": 10,
+        "psa_10": 2,
+        "psa_total": 74
+      },
+      "grade_totals": {
+        "total": 76,
+        "grade_total": 74
+      }
+    },
+    {
+      "pokemon_number": "XY25",
+      "card_name": "Krookodile EX-Holo",
+      "base_name": "Krookodile EX-Holo",
+      "variety": "",
+      "spec_id": 2118283,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "XY26",
+      "card_name": "Pyroar-Holo",
+      "base_name": "Pyroar-Holo",
+      "variety": "",
+      "spec_id": 2333610,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14",
+      "spec_id": 2141673,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 21,
+        "psa_8": 45,
+        "psa_9": 17,
+        "psa_10": 0,
+        "psa_total": 88
+      },
+      "grade_totals": {
+        "total": 89,
+        "grade_total": 88
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Champion",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Champion",
+      "spec_id": 2216889,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Finalist",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Finalist",
+      "spec_id": 2216888,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 9,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-French",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-French",
+      "spec_id": 2141681,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 14,
+        "psa_9": 9,
+        "psa_10": 0,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-German",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-German",
+      "spec_id": 2141678,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 12,
+        "psa_9": 9,
+        "psa_10": 0,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Italian",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Italian",
+      "spec_id": 2141701,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 14,
+        "psa_9": 9,
+        "psa_10": 0,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Portuguese",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Portuguese",
+      "spec_id": 2141703,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 13,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Quarter Finalist",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Quarter Finalist",
+      "spec_id": 2141709,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Semi-Finalist",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Semi-Finalist",
+      "spec_id": 2141710,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Spanish",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Spanish",
+      "spec_id": 2141676,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 14,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Staff",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Staff",
+      "spec_id": 2097026,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 17,
+        "psa_8": 47,
+        "psa_9": 19,
+        "psa_10": 0,
+        "psa_total": 88
+      },
+      "grade_totals": {
+        "total": 89,
+        "grade_total": 88
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Top 16",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Top 16",
+      "spec_id": 2141707,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 16,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "XY27",
+      "card_name": "Champions Festival-Worlds 14-Top 32",
+      "base_name": "Champions Festival",
+      "variety": "Worlds 14-Top 32",
+      "spec_id": 2141705,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 19,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "XY28",
+      "card_name": "Charizard EX-EX Power Trio Tins-Russian",
+      "base_name": "Charizard EX",
+      "variety": "EX Power Trio Tins-Russian",
+      "spec_id": 10813623,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY28",
+      "card_name": "Venusaur EX",
+      "base_name": "Venusaur EX",
+      "variety": "",
+      "spec_id": 2111091,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 6,
+        "psa_5": 6,
+        "psa_6": 23,
+        "psa_7": 38,
+        "psa_8": 88,
+        "psa_9": 100,
+        "psa_10": 88,
+        "psa_total": 352
+      },
+      "grade_totals": {
+        "total": 360,
+        "grade_total": 352
+      }
+    },
+    {
+      "pokemon_number": "XY29",
+      "card_name": "Charizard EX",
+      "base_name": "Charizard EX",
+      "variety": "",
+      "spec_id": 2111098,
+      "psa_grades": {
+        "psa_1": 14,
+        "psa_2": 4,
+        "psa_3": 9,
+        "psa_4": 22,
+        "psa_5": 67,
+        "psa_6": 105,
+        "psa_7": 195,
+        "psa_8": 340,
+        "psa_9": 491,
+        "psa_10": 450,
+        "psa_total": 1697
+      },
+      "grade_totals": {
+        "total": 1704,
+        "grade_total": 1697
+      }
+    },
+    {
+      "pokemon_number": "XY29",
+      "card_name": "Dracaufeu EX-EX Power Trio Tins-French",
+      "base_name": "Dracaufeu EX",
+      "variety": "EX Power Trio Tins-French",
+      "spec_id": 8645462,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY29",
+      "card_name": "Glurak EX-EX Power Trio Tins-German",
+      "base_name": "Glurak EX",
+      "variety": "EX Power Trio Tins-German",
+      "spec_id": 10859703,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY30",
+      "card_name": "Blastoise EX-Holo",
+      "base_name": "Blastoise EX-Holo",
+      "variety": "",
+      "spec_id": 2133010,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 6,
+        "psa_4": 7,
+        "psa_5": 16,
+        "psa_6": 30,
+        "psa_7": 46,
+        "psa_8": 96,
+        "psa_9": 166,
+        "psa_10": 109,
+        "psa_total": 481
+      },
+      "grade_totals": {
+        "total": 485,
+        "grade_total": 481
+      }
+    },
+    {
+      "pokemon_number": "XY31",
+      "card_name": "Xerneas-Battle Arena",
+      "base_name": "Xerneas",
+      "variety": "Battle Arena",
+      "spec_id": 6390553,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "XY32",
+      "card_name": "Yveltal-Battle Arena",
+      "base_name": "Yveltal",
+      "variety": "Battle Arena",
+      "spec_id": 6390593,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "XY33",
+      "card_name": "Trevor-Battle Arena",
+      "base_name": "Trevor",
+      "variety": "Battle Arena",
+      "spec_id": 6390600,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "XY34",
+      "card_name": "Metagross EX-Holo",
+      "base_name": "Metagross EX-Holo",
+      "variety": "",
+      "spec_id": 2146954,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 2,
+        "psa_5": 13,
+        "psa_6": 12,
+        "psa_7": 5,
+        "psa_8": 8,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 52
+      },
+      "grade_totals": {
+        "total": 52,
+        "grade_total": 52
+      }
+    },
+    {
+      "pokemon_number": "XY35",
+      "card_name": "M Metagross EX",
+      "base_name": "M Metagross EX",
+      "variety": "",
+      "spec_id": 2131032,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 4,
+        "psa_5": 8,
+        "psa_6": 12,
+        "psa_7": 22,
+        "psa_8": 21,
+        "psa_9": 49,
+        "psa_10": 1,
+        "psa_total": 123
+      },
+      "grade_totals": {
+        "total": 124,
+        "grade_total": 123
+      }
+    },
+    {
+      "pokemon_number": "XY35",
+      "card_name": "M Metagross EX-Mega Metagross EX Premium Collection-Jumbo",
+      "base_name": "M Metagross EX",
+      "variety": "Mega Metagross EX Premium Collection-Jumbo",
+      "spec_id": 8255484,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY36",
+      "card_name": "Treecko-Holo-Hoenn Collection",
+      "base_name": "Treecko-Holo",
+      "variety": "Hoenn Collection",
+      "spec_id": 2149136,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "XY37",
+      "card_name": "Torchic-Holo-Hoenn Collection",
+      "base_name": "Torchic-Holo",
+      "variety": "Hoenn Collection",
+      "spec_id": 2149135,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "XY38",
+      "card_name": "Mudkip-Holo-Hoenn Collection",
+      "base_name": "Mudkip-Holo",
+      "variety": "Hoenn Collection",
+      "spec_id": 2149094,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    }
+  ]
+}

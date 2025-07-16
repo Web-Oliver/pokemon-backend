@@ -1,0 +1,176 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Japanese Ecard Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-japanese-ecard-promo/97791",
+  "total_cards": 7,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 5,
+        "psa_4": 12,
+        "psa_5": 34,
+        "psa_6": 65,
+        "psa_7": 80,
+        "psa_8": 140,
+        "psa_9": 405,
+        "psa_10": 1643,
+        "psa_total": 2388
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2388
+      }
+    },
+    {
+      "pokemon_number": "012/P",
+      "card_name": "Venusaur-Holo",
+      "base_name": "Venusaur-Holo",
+      "variety": "",
+      "spec_id": 1794286,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 12,
+        "psa_7": 11,
+        "psa_8": 37,
+        "psa_9": 61,
+        "psa_10": 335,
+        "psa_total": 466
+      },
+      "grade_totals": {
+        "total": 466,
+        "grade_total": 466
+      }
+    },
+    {
+      "pokemon_number": "013/P",
+      "card_name": "Blastoise-Holo",
+      "base_name": "Blastoise-Holo",
+      "variety": "",
+      "spec_id": 1776063,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 8,
+        "psa_7": 14,
+        "psa_8": 20,
+        "psa_9": 80,
+        "psa_10": 367,
+        "psa_total": 498
+      },
+      "grade_totals": {
+        "total": 498,
+        "grade_total": 498
+      }
+    },
+    {
+      "pokemon_number": "014/P",
+      "card_name": "Charizard-Holo",
+      "base_name": "Charizard-Holo",
+      "variety": "",
+      "spec_id": 1794283,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 5,
+        "psa_5": 12,
+        "psa_6": 30,
+        "psa_7": 25,
+        "psa_8": 35,
+        "psa_9": 144,
+        "psa_10": 352,
+        "psa_total": 610
+      },
+      "grade_totals": {
+        "total": 610,
+        "grade_total": 610
+      }
+    },
+    {
+      "pokemon_number": "015/P",
+      "card_name": "Meganium-Holo",
+      "base_name": "Meganium-Holo",
+      "variety": "",
+      "spec_id": 1794277,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 10,
+        "psa_7": 12,
+        "psa_8": 17,
+        "psa_9": 55,
+        "psa_10": 170,
+        "psa_total": 268
+      },
+      "grade_totals": {
+        "total": 268,
+        "grade_total": 268
+      }
+    },
+    {
+      "pokemon_number": "016/P",
+      "card_name": "Feraligatr-Holo",
+      "base_name": "Feraligatr-Holo",
+      "variety": "",
+      "spec_id": 1794280,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 7,
+        "psa_8": 13,
+        "psa_9": 32,
+        "psa_10": 211,
+        "psa_total": 269
+      },
+      "grade_totals": {
+        "total": 269,
+        "grade_total": 269
+      }
+    },
+    {
+      "pokemon_number": "017/P",
+      "card_name": "Typhlosion-Holo",
+      "base_name": "Typhlosion-Holo",
+      "variety": "",
+      "spec_id": 1794273,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 11,
+        "psa_8": 18,
+        "psa_9": 33,
+        "psa_10": 208,
+        "psa_total": 277
+      },
+      "grade_totals": {
+        "total": 278,
+        "grade_total": 277
+      }
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "year": "2014",
+  "set_name": "Pokemon Japanese Insert Cards",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2014/pokemon-japanese-insert-cards/241151",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 1,
+        "psa_10": 54,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 65
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Lets Go to the Stadium Together!",
+      "base_name": "Lets Go to the Stadium Together!",
+      "variety": "",
+      "spec_id": 8921504,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 1,
+        "psa_10": 54,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 65,
+        "grade_total": 65
+      }
+    }
+  ]
+}

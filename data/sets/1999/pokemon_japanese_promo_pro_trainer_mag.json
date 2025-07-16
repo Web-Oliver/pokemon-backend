@@ -1,0 +1,104 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Japanese Promo Pro Trainer Mag",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-japanese-promo-pro-trainer-mag/61004",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 13,
+        "psa_5": 28,
+        "psa_6": 63,
+        "psa_7": 95,
+        "psa_8": 184,
+        "psa_9": 337,
+        "psa_10": 211,
+        "psa_total": 932
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 932
+      }
+    },
+    {
+      "pokemon_number": "103",
+      "card_name": "Bilingual Exeggutor-Glossy",
+      "base_name": "Bilingual Exeggutor-Glossy",
+      "variety": "",
+      "spec_id": 526486,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 7,
+        "psa_5": 19,
+        "psa_6": 38,
+        "psa_7": 71,
+        "psa_8": 124,
+        "psa_9": 219,
+        "psa_10": 165,
+        "psa_total": 644
+      },
+      "grade_totals": {
+        "total": 644,
+        "grade_total": 644
+      }
+    },
+    {
+      "pokemon_number": "198",
+      "card_name": "Murkrow",
+      "base_name": "Murkrow",
+      "variety": "",
+      "spec_id": 1948699,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 17,
+        "psa_7": 22,
+        "psa_8": 44,
+        "psa_9": 76,
+        "psa_10": 32,
+        "psa_total": 199
+      },
+      "grade_totals": {
+        "total": 199,
+        "grade_total": 199
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Darkness Energy",
+      "base_name": "Darkness Energy",
+      "variety": "",
+      "spec_id": 1948701,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 2,
+        "psa_8": 16,
+        "psa_9": 42,
+        "psa_10": 14,
+        "psa_total": 89
+      },
+      "grade_totals": {
+        "total": 89,
+        "grade_total": 89
+      }
+    }
+  ]
+}

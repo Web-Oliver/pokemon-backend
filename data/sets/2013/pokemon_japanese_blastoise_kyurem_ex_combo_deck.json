@@ -1,0 +1,248 @@
+{
+  "year": "2013",
+  "set_name": "Pokemon Japanese Blastoise + Kyurem EX Combo Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2013/pokemon-japanese-blastoise-kyurem-ex-combo-deck/132564",
+  "total_cards": 10,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 6,
+        "psa_7": 8,
+        "psa_8": 17,
+        "psa_9": 51,
+        "psa_10": 131,
+        "psa_total": 220
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 220
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Squirtle",
+      "base_name": "Squirtle",
+      "variety": "",
+      "spec_id": 2251711,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 21,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Wartortle",
+      "base_name": "Wartortle",
+      "variety": "",
+      "spec_id": 2886299,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 8,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Blastoise",
+      "base_name": "Blastoise",
+      "variety": "",
+      "spec_id": 2884215,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 8,
+        "psa_10": 19,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Blastoise-Holo",
+      "base_name": "Blastoise-Holo",
+      "variety": "",
+      "spec_id": 2353593,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 14,
+        "psa_10": 27,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Suicune",
+      "base_name": "Suicune",
+      "variety": "",
+      "spec_id": 9843130,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 6,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Ducklett",
+      "base_name": "Ducklett",
+      "variety": "",
+      "spec_id": 9843127,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Kyurem EX",
+      "base_name": "Kyurem EX",
+      "variety": "",
+      "spec_id": 5529736,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Kangaskhan",
+      "base_name": "Kangaskhan",
+      "variety": "",
+      "spec_id": 9324342,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Master Ball",
+      "base_name": "Master Ball",
+      "variety": "",
+      "spec_id": 2367308,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 17,
+        "psa_10": 38,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    }
+  ]
+}

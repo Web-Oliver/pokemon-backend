@@ -1,0 +1,152 @@
+{
+  "year": "2016",
+  "set_name": "Pokemon XY Trainer Kit Pikachu Libre Half Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2016/pokemon-xy-trainer-kit-pikachu-libre-half-deck/137227",
+  "total_cards": 8,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 5,
+        "psa_3": 6,
+        "psa_4": 13,
+        "psa_5": 29,
+        "psa_6": 62,
+        "psa_7": 79,
+        "psa_8": 178,
+        "psa_9": 258,
+        "psa_10": 59,
+        "psa_total": 694
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 694
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 9682635,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 0
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 0
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Pikachu Libre",
+      "base_name": "Pikachu Libre",
+      "variety": "",
+      "spec_id": 2369700,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 7,
+        "psa_6": 6,
+        "psa_7": 7,
+        "psa_8": 39,
+        "psa_9": 107,
+        "psa_10": 36,
+        "psa_total": 211
+      },
+      "grade_totals": {
+        "total": 212,
+        "grade_total": 211
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Lightning Energy",
+      "base_name": "Lightning Energy",
+      "variety": "",
+      "spec_id": 9682632,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 0
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 0
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Electabuzz",
+      "base_name": "Electabuzz",
+      "variety": "",
+      "spec_id": 5308616,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Pikachu Libre-Holo",
+      "base_name": "Pikachu Libre-Holo",
+      "variety": "",
+      "spec_id": 2319074,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 5,
+        "psa_3": 4,
+        "psa_4": 8,
+        "psa_5": 22,
+        "psa_6": 56,
+        "psa_7": 69,
+        "psa_8": 137,
+        "psa_9": 150,
+        "psa_10": 23,
+        "psa_total": 477
+      },
+      "grade_totals": {
+        "total": 478,
+        "grade_total": 477
+      }
+    }
+  ]
+}

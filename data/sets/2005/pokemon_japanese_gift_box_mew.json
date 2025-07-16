@@ -1,0 +1,824 @@
+{
+  "year": "2005",
+  "set_name": "Pokemon Japanese Gift Box Mew",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2005/pokemon-japanese-gift-box-mew/101038",
+  "total_cards": 34,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 96,
+        "psa_2": 80,
+        "psa_3": 120,
+        "psa_4": 179,
+        "psa_5": 281,
+        "psa_6": 387,
+        "psa_7": 445,
+        "psa_8": 623,
+        "psa_9": 1202,
+        "psa_10": 1162,
+        "psa_total": 4582
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 4582
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Electrike",
+      "base_name": "Electrike",
+      "variety": "",
+      "spec_id": 5179177,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Nosepass-Lucario Quarter Deck",
+      "base_name": "Nosepass",
+      "variety": "Lucario Quarter Deck",
+      "spec_id": 5179194,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 3,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Numel-Mightyena Quarter Deck",
+      "base_name": "Numel",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179229,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Pikachu-Holo-Gold Star",
+      "base_name": "Pikachu-Holo",
+      "variety": "Gold Star",
+      "spec_id": 1960238,
+      "psa_grades": {
+        "psa_1": 35,
+        "psa_2": 41,
+        "psa_3": 55,
+        "psa_4": 78,
+        "psa_5": 138,
+        "psa_6": 177,
+        "psa_7": 191,
+        "psa_8": 257,
+        "psa_9": 382,
+        "psa_10": 317,
+        "psa_total": 1675
+      },
+      "grade_totals": {
+        "total": 1684,
+        "grade_total": 1675
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Surskit-Crawdaunt Quarter Deck",
+      "base_name": "Surskit",
+      "variety": "Crawdaunt Quarter Deck",
+      "spec_id": 5179210,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Barboach-Lucario Quarter Deck",
+      "base_name": "Barboach",
+      "variety": "Lucario Quarter Deck",
+      "spec_id": 5179195,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Camerupt-Mightyena Quarter Deck",
+      "base_name": "Camerupt",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179230,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Manectric",
+      "base_name": "Manectric",
+      "variety": "",
+      "spec_id": 5179178,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Masquerain-Crawdaunt Quarter Deck",
+      "base_name": "Masquerain",
+      "variety": "Crawdaunt Quarter Deck",
+      "spec_id": 5179211,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Mewtwo-Holo-Gold Star",
+      "base_name": "Mewtwo-Holo",
+      "variety": "Gold Star",
+      "spec_id": 1819972,
+      "psa_grades": {
+        "psa_1": 52,
+        "psa_2": 33,
+        "psa_3": 59,
+        "psa_4": 88,
+        "psa_5": 122,
+        "psa_6": 144,
+        "psa_7": 162,
+        "psa_8": 190,
+        "psa_9": 284,
+        "psa_10": 312,
+        "psa_total": 1449
+      },
+      "grade_totals": {
+        "total": 1452,
+        "grade_total": 1449
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Mew EX-Holo",
+      "base_name": "Mew EX-Holo",
+      "variety": "",
+      "spec_id": 2058550,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 3,
+        "psa_3": 5,
+        "psa_4": 7,
+        "psa_5": 12,
+        "psa_6": 42,
+        "psa_7": 42,
+        "psa_8": 94,
+        "psa_9": 216,
+        "psa_10": 223,
+        "psa_total": 651
+      },
+      "grade_totals": {
+        "total": 652,
+        "grade_total": 651
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Torkoal-Mightyena Quarter Deck",
+      "base_name": "Torkoal",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179231,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Whiscash-Lucario Quarter Deck",
+      "base_name": "Whiscash",
+      "variety": "Lucario Quarter Deck",
+      "spec_id": 5179196,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Aron-Lucario Quarter Deck",
+      "base_name": "Aron",
+      "variety": "Lucario Quarter Deck",
+      "spec_id": 5179197,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Baltoy",
+      "base_name": "Baltoy",
+      "variety": "",
+      "spec_id": 5179180,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Corphish-Crawdaunt Quarter Deck",
+      "base_name": "Corphish",
+      "variety": "Crawdaunt Quarter Deck",
+      "spec_id": 5179213,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Poochyena-Mightyena Quarter Deck",
+      "base_name": "Poochyena",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179232,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Claydol",
+      "base_name": "Claydol",
+      "variety": "",
+      "spec_id": 5179181,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Crawdaunt EX-Holo-Crawdaunt Quarter Deck",
+      "base_name": "Crawdaunt EX-Holo",
+      "variety": "Crawdaunt Quarter Deck",
+      "spec_id": 2058551,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 7,
+        "psa_8": 24,
+        "psa_9": 80,
+        "psa_10": 80,
+        "psa_total": 202
+      },
+      "grade_totals": {
+        "total": 202,
+        "grade_total": 202
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Mightyena EX-Holo-Mightyena Quarter Deck",
+      "base_name": "Mightyena EX-Holo",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 2058552,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 18,
+        "psa_8": 16,
+        "psa_9": 95,
+        "psa_10": 92,
+        "psa_total": 231
+      },
+      "grade_totals": {
+        "total": 232,
+        "grade_total": 231
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Lairon-Lucario Quarter Deck",
+      "base_name": "Lairon",
+      "variety": "Lucario Quarter Deck",
+      "spec_id": 5179198,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Absol-Mightyena Quarter Deck",
+      "base_name": "Absol",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179233,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Folklore's Lucario EX-Holo-Lucario Quarter Deck",
+      "base_name": "Folklore's Lucario EX-Holo",
+      "variety": "Lucario Quarter Deck",
+      "spec_id": 2013821,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 5,
+        "psa_6": 11,
+        "psa_7": 22,
+        "psa_8": 39,
+        "psa_9": 108,
+        "psa_10": 104,
+        "psa_total": 295
+      },
+      "grade_totals": {
+        "total": 295,
+        "grade_total": 295
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Zangoose",
+      "base_name": "Zangoose",
+      "variety": "",
+      "spec_id": 5179182,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Switch-Mightyena Quarter Deck",
+      "base_name": "Switch",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179234,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Energy Switch-Crawdaunt Quarter Deck",
+      "base_name": "Energy Switch",
+      "variety": "Crawdaunt Quarter Deck",
+      "spec_id": 5179215,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Master Ball",
+      "base_name": "Master Ball",
+      "variety": "",
+      "spec_id": 5179184,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Professor Birch-Mightyena Quarter Deck",
+      "base_name": "Professor Birch",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179235,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Mr. Stone's Project-Crawdaunt Quarter Deck",
+      "base_name": "Mr. Stone's Project",
+      "variety": "Crawdaunt Quarter Deck",
+      "spec_id": 5179216,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Professor Cozmo's Discovery-Mightyena Quarter Deck",
+      "base_name": "Professor Cozmo's Discovery",
+      "variety": "Mightyena Quarter Deck",
+      "spec_id": 5179236,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Bill's Maintenance-Crawdaunt Quarter Deck",
+      "base_name": "Bill's Maintenance",
+      "variety": "Crawdaunt Quarter Deck",
+      "spec_id": 5179217,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "TV Reporter-Lucario Quarter Deck",
+      "base_name": "TV Reporter",
+      "variety": "Lucario Quarter Deck",
+      "spec_id": 5179201,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Professor Oak's Research",
+      "base_name": "Professor Oak's Research",
+      "variety": "",
+      "spec_id": 5179185,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

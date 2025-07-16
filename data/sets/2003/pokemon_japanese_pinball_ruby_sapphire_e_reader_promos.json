@@ -1,0 +1,128 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon Japanese Pinball Ruby & Sapphire E-Reader Promos",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-japanese-pinball-ruby-sapphire-e-reader-promos/190473",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 5,
+        "psa_10": 10,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "A001",
+      "card_name": "Bonus Stage",
+      "base_name": "Bonus Stage",
+      "variety": "",
+      "spec_id": 4667350,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "A003",
+      "card_name": "Ruin Area",
+      "base_name": "Ruin Area",
+      "variety": "",
+      "spec_id": 4667356,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "A004",
+      "card_name": "DX Mode",
+      "base_name": "DX Mode",
+      "variety": "",
+      "spec_id": 4667360,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "A005",
+      "card_name": "Encounter Rate Up",
+      "base_name": "Encounter Rate Up",
+      "variety": "",
+      "spec_id": 4667363,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    }
+  ]
+}

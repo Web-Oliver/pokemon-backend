@@ -1,0 +1,32 @@
+{
+  "year": "2009",
+  "set_name": "Pokemon Pop Series 7",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2009/pokemon-pop-series-7/246394",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 18,
+        "psa_9": 9,
+        "psa_10": 1,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 32
+      }
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Legendary Collection Box Topper",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-legendary-collection-box-topper/114394",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 12,
+        "psa_2": 26,
+        "psa_3": 42,
+        "psa_4": 63,
+        "psa_5": 136,
+        "psa_6": 163,
+        "psa_7": 157,
+        "psa_8": 274,
+        "psa_9": 278,
+        "psa_10": 82,
+        "psa_total": 1235
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1235
+      }
+    },
+    {
+      "pokemon_number": "S1",
+      "card_name": "Charizard",
+      "base_name": "Charizard",
+      "variety": "",
+      "spec_id": 1964835,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 12,
+        "psa_3": 25,
+        "psa_4": 21,
+        "psa_5": 58,
+        "psa_6": 54,
+        "psa_7": 52,
+        "psa_8": 84,
+        "psa_9": 89,
+        "psa_10": 32,
+        "psa_total": 436
+      },
+      "grade_totals": {
+        "total": 438,
+        "grade_total": 436
+      }
+    },
+    {
+      "pokemon_number": "S2",
+      "card_name": "Dark Blastoise",
+      "base_name": "Dark Blastoise",
+      "variety": "",
+      "spec_id": 1964842,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 5,
+        "psa_3": 9,
+        "psa_4": 17,
+        "psa_5": 29,
+        "psa_6": 40,
+        "psa_7": 37,
+        "psa_8": 66,
+        "psa_9": 69,
+        "psa_10": 18,
+        "psa_total": 292
+      },
+      "grade_totals": {
+        "total": 293,
+        "grade_total": 292
+      }
+    },
+    {
+      "pokemon_number": "S3",
+      "card_name": "Dark Raichu",
+      "base_name": "Dark Raichu",
+      "variety": "",
+      "spec_id": 1964844,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 3,
+        "psa_4": 10,
+        "psa_5": 25,
+        "psa_6": 38,
+        "psa_7": 28,
+        "psa_8": 67,
+        "psa_9": 58,
+        "psa_10": 14,
+        "psa_total": 247
+      },
+      "grade_totals": {
+        "total": 248,
+        "grade_total": 247
+      }
+    },
+    {
+      "pokemon_number": "S4",
+      "card_name": "Mewtwo",
+      "base_name": "Mewtwo",
+      "variety": "",
+      "spec_id": 1964846,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 6,
+        "psa_3": 5,
+        "psa_4": 15,
+        "psa_5": 24,
+        "psa_6": 31,
+        "psa_7": 40,
+        "psa_8": 57,
+        "psa_9": 62,
+        "psa_10": 18,
+        "psa_total": 260
+      },
+      "grade_totals": {
+        "total": 261,
+        "grade_total": 260
+      }
+    }
+  ]
+}

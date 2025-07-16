@@ -1,0 +1,5312 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Fossil",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-fossil/57617",
+  "total_cards": 222,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 890,
+        "psa_2": 1060,
+        "psa_3": 2252,
+        "psa_4": 5771,
+        "psa_5": 17003,
+        "psa_6": 26935,
+        "psa_7": 40909,
+        "psa_8": 74114,
+        "psa_9": 95731,
+        "psa_10": 35489,
+        "psa_total": 300270
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 300270
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "",
+      "spec_id": 543970,
+      "psa_grades": {
+        "psa_1": 28,
+        "psa_2": 34,
+        "psa_3": 79,
+        "psa_4": 169,
+        "psa_5": 534,
+        "psa_6": 866,
+        "psa_7": 1319,
+        "psa_8": 1715,
+        "psa_9": 953,
+        "psa_10": 71,
+        "psa_total": 5768
+      },
+      "grade_totals": {
+        "total": 5792,
+        "grade_total": 5768
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo-1st Edition",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543971,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 10,
+        "psa_3": 12,
+        "psa_4": 65,
+        "psa_5": 214,
+        "psa_6": 349,
+        "psa_7": 645,
+        "psa_8": 1383,
+        "psa_9": 1453,
+        "psa_10": 202,
+        "psa_total": 4342
+      },
+      "grade_totals": {
+        "total": 4368,
+        "grade_total": 4342
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479254,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo-1st Edition-Prerelease",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "1st Edition-Prerelease",
+      "spec_id": 898799,
+      "psa_grades": {
+        "psa_1": 16,
+        "psa_2": 19,
+        "psa_3": 47,
+        "psa_4": 129,
+        "psa_5": 376,
+        "psa_6": 667,
+        "psa_7": 1178,
+        "psa_8": 1455,
+        "psa_9": 982,
+        "psa_10": 62,
+        "psa_total": 4932
+      },
+      "grade_totals": {
+        "total": 4958,
+        "grade_total": 4932
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo-1st Edition-Prerelease-Cosmos",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "1st Edition-Prerelease-Cosmos",
+      "spec_id": 543972,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 25,
+        "psa_6": 59,
+        "psa_7": 133,
+        "psa_8": 223,
+        "psa_9": 83,
+        "psa_10": 2,
+        "psa_total": 537
+      },
+      "grade_totals": {
+        "total": 538,
+        "grade_total": 537
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo-Cosmos",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151133,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo-Incomplete Holo",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479268,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Aerodactyl-Holo-Inverted Back",
+      "base_name": "Aerodactyl-Holo",
+      "variety": "Inverted Back",
+      "spec_id": 11037091,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Ptera-Holo-1st Edition-French",
+      "base_name": "Ptera-Holo",
+      "variety": "1st Edition-French",
+      "spec_id": 1827064,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Articuno-Holo",
+      "base_name": "Articuno-Holo",
+      "variety": "",
+      "spec_id": 543973,
+      "psa_grades": {
+        "psa_1": 41,
+        "psa_2": 44,
+        "psa_3": 117,
+        "psa_4": 283,
+        "psa_5": 840,
+        "psa_6": 1249,
+        "psa_7": 1711,
+        "psa_8": 2208,
+        "psa_9": 956,
+        "psa_10": 66,
+        "psa_total": 7516
+      },
+      "grade_totals": {
+        "total": 7557,
+        "grade_total": 7516
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Articuno-Holo-1st Edition",
+      "base_name": "Articuno-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543974,
+      "psa_grades": {
+        "psa_1": 10,
+        "psa_2": 20,
+        "psa_3": 42,
+        "psa_4": 93,
+        "psa_5": 323,
+        "psa_6": 568,
+        "psa_7": 905,
+        "psa_8": 1764,
+        "psa_9": 1598,
+        "psa_10": 147,
+        "psa_total": 5472
+      },
+      "grade_totals": {
+        "total": 5539,
+        "grade_total": 5472
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Articuno-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Articuno-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479255,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Articuno-Holo-Cosmos",
+      "base_name": "Articuno-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151135,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Ditto-Holo",
+      "base_name": "Ditto-Holo",
+      "variety": "",
+      "spec_id": 543975,
+      "psa_grades": {
+        "psa_1": 16,
+        "psa_2": 17,
+        "psa_3": 45,
+        "psa_4": 94,
+        "psa_5": 342,
+        "psa_6": 501,
+        "psa_7": 810,
+        "psa_8": 1392,
+        "psa_9": 1062,
+        "psa_10": 113,
+        "psa_total": 4393
+      },
+      "grade_totals": {
+        "total": 4414,
+        "grade_total": 4393
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Ditto-Holo-1st Edition",
+      "base_name": "Ditto-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543976,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 11,
+        "psa_3": 12,
+        "psa_4": 38,
+        "psa_5": 117,
+        "psa_6": 220,
+        "psa_7": 376,
+        "psa_8": 989,
+        "psa_9": 1538,
+        "psa_10": 308,
+        "psa_total": 3618
+      },
+      "grade_totals": {
+        "total": 3640,
+        "grade_total": 3618
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Ditto-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Ditto-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479256,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Ditto-Holo-Incomplete Holo",
+      "base_name": "Ditto-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479270,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Dragonite-Holo",
+      "base_name": "Dragonite-Holo",
+      "variety": "",
+      "spec_id": 543977,
+      "psa_grades": {
+        "psa_1": 90,
+        "psa_2": 96,
+        "psa_3": 188,
+        "psa_4": 523,
+        "psa_5": 1435,
+        "psa_6": 2158,
+        "psa_7": 2671,
+        "psa_8": 3195,
+        "psa_9": 1391,
+        "psa_10": 61,
+        "psa_total": 11820
+      },
+      "grade_totals": {
+        "total": 11894,
+        "grade_total": 11820
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Dragonite-Holo-1st Edition",
+      "base_name": "Dragonite-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543978,
+      "psa_grades": {
+        "psa_1": 27,
+        "psa_2": 34,
+        "psa_3": 64,
+        "psa_4": 155,
+        "psa_5": 439,
+        "psa_6": 698,
+        "psa_7": 1054,
+        "psa_8": 1910,
+        "psa_9": 2040,
+        "psa_10": 234,
+        "psa_total": 6659
+      },
+      "grade_totals": {
+        "total": 6716,
+        "grade_total": 6659
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Dragonite-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Dragonite-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479257,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Dragonite-Holo-Cosmos",
+      "base_name": "Dragonite-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151137,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Dragonite-Holo-Incomplete Holo",
+      "base_name": "Dragonite-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479271,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Gengar-Holo",
+      "base_name": "Gengar-Holo",
+      "variety": "",
+      "spec_id": 543979,
+      "psa_grades": {
+        "psa_1": 67,
+        "psa_2": 58,
+        "psa_3": 128,
+        "psa_4": 304,
+        "psa_5": 1073,
+        "psa_6": 1591,
+        "psa_7": 2133,
+        "psa_8": 2469,
+        "psa_9": 1055,
+        "psa_10": 51,
+        "psa_total": 8931
+      },
+      "grade_totals": {
+        "total": 8962,
+        "grade_total": 8931
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Gengar-Holo-1st Edition",
+      "base_name": "Gengar-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543980,
+      "psa_grades": {
+        "psa_1": 23,
+        "psa_2": 23,
+        "psa_3": 49,
+        "psa_4": 109,
+        "psa_5": 333,
+        "psa_6": 524,
+        "psa_7": 809,
+        "psa_8": 1700,
+        "psa_9": 1851,
+        "psa_10": 181,
+        "psa_total": 5603
+      },
+      "grade_totals": {
+        "total": 5661,
+        "grade_total": 5603
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Gengar-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Gengar-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8476448,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Gengar-Holo-Incomplete Holo",
+      "base_name": "Gengar-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479272,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Haunter-Holo",
+      "base_name": "Haunter-Holo",
+      "variety": "",
+      "spec_id": 543981,
+      "psa_grades": {
+        "psa_1": 14,
+        "psa_2": 25,
+        "psa_3": 55,
+        "psa_4": 129,
+        "psa_5": 431,
+        "psa_6": 774,
+        "psa_7": 1124,
+        "psa_8": 1694,
+        "psa_9": 1177,
+        "psa_10": 129,
+        "psa_total": 5553
+      },
+      "grade_totals": {
+        "total": 5584,
+        "grade_total": 5553
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Haunter-Holo-1st Edition",
+      "base_name": "Haunter-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543982,
+      "psa_grades": {
+        "psa_1": 10,
+        "psa_2": 8,
+        "psa_3": 13,
+        "psa_4": 57,
+        "psa_5": 146,
+        "psa_6": 269,
+        "psa_7": 459,
+        "psa_8": 1187,
+        "psa_9": 1962,
+        "psa_10": 433,
+        "psa_total": 4546
+      },
+      "grade_totals": {
+        "total": 4584,
+        "grade_total": 4546
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Haunter-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Haunter-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479258,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 7,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Haunter-Holo-1st Edition-Stain Error",
+      "base_name": "Haunter-Holo",
+      "variety": "1st Edition-Stain Error",
+      "spec_id": 8150193,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Haunter-Holo-Cosmos",
+      "base_name": "Haunter-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151139,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Haunter-Holo-Incomplete Holo",
+      "base_name": "Haunter-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479273,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Haunter-Holo-Stain Error",
+      "base_name": "Haunter-Holo",
+      "variety": "Stain Error",
+      "spec_id": 7918235,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 13,
+        "psa_5": 25,
+        "psa_6": 28,
+        "psa_7": 27,
+        "psa_8": 20,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 124
+      },
+      "grade_totals": {
+        "total": 125,
+        "grade_total": 124
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Hitmonlee-Holo",
+      "base_name": "Hitmonlee-Holo",
+      "variety": "",
+      "spec_id": 543983,
+      "psa_grades": {
+        "psa_1": 16,
+        "psa_2": 19,
+        "psa_3": 47,
+        "psa_4": 145,
+        "psa_5": 519,
+        "psa_6": 708,
+        "psa_7": 988,
+        "psa_8": 1365,
+        "psa_9": 635,
+        "psa_10": 27,
+        "psa_total": 4470
+      },
+      "grade_totals": {
+        "total": 4488,
+        "grade_total": 4470
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Hitmonlee-Holo-1st Edition",
+      "base_name": "Hitmonlee-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543984,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 9,
+        "psa_3": 17,
+        "psa_4": 57,
+        "psa_5": 208,
+        "psa_6": 313,
+        "psa_7": 483,
+        "psa_8": 1125,
+        "psa_9": 1351,
+        "psa_10": 178,
+        "psa_total": 3746
+      },
+      "grade_totals": {
+        "total": 3788,
+        "grade_total": 3746
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Hitmonlee-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Hitmonlee-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8473136,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Hitmonlee-Holo-1st Edition-Stain Error",
+      "base_name": "Hitmonlee-Holo",
+      "variety": "1st Edition-Stain Error",
+      "spec_id": 7754088,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 4,
+        "psa_7": 7,
+        "psa_8": 17,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Hitmonlee-Holo-1st Edition-Stain-Incomplete Holo",
+      "base_name": "Hitmonlee-Holo",
+      "variety": "1st Edition-Stain-Incomplete Holo",
+      "spec_id": 8433147,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Kicklee-1st Edition-French",
+      "base_name": "Kicklee",
+      "variety": "1st Edition-French",
+      "spec_id": 2021359,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Hypno-Holo",
+      "base_name": "Hypno-Holo",
+      "variety": "",
+      "spec_id": 543985,
+      "psa_grades": {
+        "psa_1": 11,
+        "psa_2": 22,
+        "psa_3": 39,
+        "psa_4": 111,
+        "psa_5": 352,
+        "psa_6": 650,
+        "psa_7": 861,
+        "psa_8": 1407,
+        "psa_9": 897,
+        "psa_10": 77,
+        "psa_total": 4428
+      },
+      "grade_totals": {
+        "total": 4461,
+        "grade_total": 4428
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Hypno-Holo-1st Edition",
+      "base_name": "Hypno-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543986,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 19,
+        "psa_4": 42,
+        "psa_5": 123,
+        "psa_6": 220,
+        "psa_7": 384,
+        "psa_8": 949,
+        "psa_9": 1538,
+        "psa_10": 275,
+        "psa_total": 3556
+      },
+      "grade_totals": {
+        "total": 3570,
+        "grade_total": 3556
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Hypno-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Hypno-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479259,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 7,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Hypno-Holo-Incomplete Holo",
+      "base_name": "Hypno-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479275,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Kabutops-Holo",
+      "base_name": "Kabutops-Holo",
+      "variety": "",
+      "spec_id": 543987,
+      "psa_grades": {
+        "psa_1": 15,
+        "psa_2": 24,
+        "psa_3": 60,
+        "psa_4": 164,
+        "psa_5": 504,
+        "psa_6": 879,
+        "psa_7": 1255,
+        "psa_8": 1468,
+        "psa_9": 830,
+        "psa_10": 45,
+        "psa_total": 5244
+      },
+      "grade_totals": {
+        "total": 5279,
+        "grade_total": 5244
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Kabutops-Holo-1999-2000 Copyright",
+      "base_name": "Kabutops-Holo",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 7657928,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Kabutops-Holo-1st Edition",
+      "base_name": "Kabutops-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543988,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 10,
+        "psa_3": 26,
+        "psa_4": 65,
+        "psa_5": 213,
+        "psa_6": 330,
+        "psa_7": 598,
+        "psa_8": 1329,
+        "psa_9": 1485,
+        "psa_10": 230,
+        "psa_total": 4294
+      },
+      "grade_totals": {
+        "total": 4331,
+        "grade_total": 4294
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Kabutops-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Kabutops-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479260,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Kabutops-Holo-Cosmos",
+      "base_name": "Kabutops-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151142,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Kabutops-Holo-Incomplete Holo",
+      "base_name": "Kabutops-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479276,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Lapras-Holo",
+      "base_name": "Lapras-Holo",
+      "variety": "",
+      "spec_id": 543989,
+      "psa_grades": {
+        "psa_1": 48,
+        "psa_2": 57,
+        "psa_3": 152,
+        "psa_4": 373,
+        "psa_5": 1275,
+        "psa_6": 1793,
+        "psa_7": 2572,
+        "psa_8": 2830,
+        "psa_9": 1097,
+        "psa_10": 50,
+        "psa_total": 10249
+      },
+      "grade_totals": {
+        "total": 10301,
+        "grade_total": 10249
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Lapras-Holo-1st Edition",
+      "base_name": "Lapras-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543990,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 9,
+        "psa_3": 15,
+        "psa_4": 66,
+        "psa_5": 180,
+        "psa_6": 418,
+        "psa_7": 714,
+        "psa_8": 1480,
+        "psa_9": 1497,
+        "psa_10": 120,
+        "psa_total": 4508
+      },
+      "grade_totals": {
+        "total": 4565,
+        "grade_total": 4508
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Lapras-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Lapras-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479261,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Lapras-Holo-Cosmos",
+      "base_name": "Lapras-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151143,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Lapras-Holo-Incomplete Holo",
+      "base_name": "Lapras-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479277,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Magneton-Holo",
+      "base_name": "Magneton-Holo",
+      "variety": "",
+      "spec_id": 543991,
+      "psa_grades": {
+        "psa_1": 20,
+        "psa_2": 16,
+        "psa_3": 49,
+        "psa_4": 115,
+        "psa_5": 361,
+        "psa_6": 576,
+        "psa_7": 800,
+        "psa_8": 1491,
+        "psa_9": 1343,
+        "psa_10": 168,
+        "psa_total": 4940
+      },
+      "grade_totals": {
+        "total": 4972,
+        "grade_total": 4940
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Magneton-Holo-1st Edition",
+      "base_name": "Magneton-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543992,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 8,
+        "psa_3": 14,
+        "psa_4": 36,
+        "psa_5": 100,
+        "psa_6": 209,
+        "psa_7": 353,
+        "psa_8": 978,
+        "psa_9": 1788,
+        "psa_10": 404,
+        "psa_total": 3898
+      },
+      "grade_totals": {
+        "total": 3918,
+        "grade_total": 3898
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Magneton-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Magneton-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479262,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Magneton-Holo-Incomplete Holo",
+      "base_name": "Magneton-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479278,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Moltres-Holo",
+      "base_name": "Moltres-Holo",
+      "variety": "",
+      "spec_id": 543993,
+      "psa_grades": {
+        "psa_1": 40,
+        "psa_2": 54,
+        "psa_3": 91,
+        "psa_4": 239,
+        "psa_5": 706,
+        "psa_6": 1063,
+        "psa_7": 1444,
+        "psa_8": 1907,
+        "psa_9": 1146,
+        "psa_10": 95,
+        "psa_total": 6785
+      },
+      "grade_totals": {
+        "total": 6818,
+        "grade_total": 6785
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Moltres-Holo-1st Edition",
+      "base_name": "Moltres-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543994,
+      "psa_grades": {
+        "psa_1": 15,
+        "psa_2": 12,
+        "psa_3": 33,
+        "psa_4": 68,
+        "psa_5": 219,
+        "psa_6": 389,
+        "psa_7": 579,
+        "psa_8": 1233,
+        "psa_9": 1906,
+        "psa_10": 317,
+        "psa_total": 4772
+      },
+      "grade_totals": {
+        "total": 4810,
+        "grade_total": 4772
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Moltres-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Moltres-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479263,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Moltres-Holo-Incomplete Holo",
+      "base_name": "Moltres-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479279,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Muk-Holo",
+      "base_name": "Muk-Holo",
+      "variety": "",
+      "spec_id": 543995,
+      "psa_grades": {
+        "psa_1": 31,
+        "psa_2": 35,
+        "psa_3": 64,
+        "psa_4": 177,
+        "psa_5": 499,
+        "psa_6": 809,
+        "psa_7": 1168,
+        "psa_8": 1985,
+        "psa_9": 1933,
+        "psa_10": 273,
+        "psa_total": 6975
+      },
+      "grade_totals": {
+        "total": 7010,
+        "grade_total": 6975
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Muk-Holo-1st Edition",
+      "base_name": "Muk-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543996,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 3,
+        "psa_3": 8,
+        "psa_4": 24,
+        "psa_5": 70,
+        "psa_6": 155,
+        "psa_7": 254,
+        "psa_8": 693,
+        "psa_9": 1514,
+        "psa_10": 486,
+        "psa_total": 3216
+      },
+      "grade_totals": {
+        "total": 3232,
+        "grade_total": 3216
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Muk-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Muk-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479264,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Muk-Holo-Incomplete Holo",
+      "base_name": "Muk-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479280,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Raichu-Holo",
+      "base_name": "Raichu-Holo",
+      "variety": "",
+      "spec_id": 543997,
+      "psa_grades": {
+        "psa_1": 28,
+        "psa_2": 26,
+        "psa_3": 72,
+        "psa_4": 159,
+        "psa_5": 600,
+        "psa_6": 920,
+        "psa_7": 1365,
+        "psa_8": 1756,
+        "psa_9": 822,
+        "psa_10": 47,
+        "psa_total": 5795
+      },
+      "grade_totals": {
+        "total": 5825,
+        "grade_total": 5795
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Raichu-Holo-1st Edition",
+      "base_name": "Raichu-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543998,
+      "psa_grades": {
+        "psa_1": 12,
+        "psa_2": 19,
+        "psa_3": 25,
+        "psa_4": 64,
+        "psa_5": 184,
+        "psa_6": 381,
+        "psa_7": 647,
+        "psa_8": 1359,
+        "psa_9": 1398,
+        "psa_10": 172,
+        "psa_total": 4262
+      },
+      "grade_totals": {
+        "total": 4301,
+        "grade_total": 4262
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Raichu-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Raichu-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479265,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Raichu-Holo-Cosmos",
+      "base_name": "Raichu-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151147,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Raichu-Holo-Incomplete Holo",
+      "base_name": "Raichu-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479281,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Zapdos-Holo",
+      "base_name": "Zapdos-Holo",
+      "variety": "",
+      "spec_id": 1724847,
+      "psa_grades": {
+        "psa_1": 22,
+        "psa_2": 35,
+        "psa_3": 47,
+        "psa_4": 125,
+        "psa_5": 375,
+        "psa_6": 545,
+        "psa_7": 780,
+        "psa_8": 1306,
+        "psa_9": 1237,
+        "psa_10": 121,
+        "psa_total": 4593
+      },
+      "grade_totals": {
+        "total": 4630,
+        "grade_total": 4593
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Zapdos-Holo-1st Edition",
+      "base_name": "Zapdos-Holo",
+      "variety": "1st Edition",
+      "spec_id": 543999,
+      "psa_grades": {
+        "psa_1": 15,
+        "psa_2": 8,
+        "psa_3": 24,
+        "psa_4": 83,
+        "psa_5": 203,
+        "psa_6": 356,
+        "psa_7": 474,
+        "psa_8": 1277,
+        "psa_9": 1813,
+        "psa_10": 376,
+        "psa_total": 4630
+      },
+      "grade_totals": {
+        "total": 4676,
+        "grade_total": 4630
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Zapdos-Holo-1st Edition-Incomplete Holo",
+      "base_name": "Zapdos-Holo",
+      "variety": "1st Edition-Incomplete Holo",
+      "spec_id": 8479266,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 24,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Zapdos-Holo-Corrected Foil",
+      "base_name": "Zapdos-Holo",
+      "variety": "Corrected Foil",
+      "spec_id": 7646771,
+      "psa_grades": {
+        "psa_1": 15,
+        "psa_2": 15,
+        "psa_3": 29,
+        "psa_4": 71,
+        "psa_5": 220,
+        "psa_6": 365,
+        "psa_7": 434,
+        "psa_8": 641,
+        "psa_9": 328,
+        "psa_10": 19,
+        "psa_total": 2137
+      },
+      "grade_totals": {
+        "total": 2147,
+        "grade_total": 2137
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Zapdos-Holo-Cosmos",
+      "base_name": "Zapdos-Holo",
+      "variety": "Cosmos",
+      "spec_id": 10151148,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Zapdos-Holo-Cosmos-Thunderstorm Deck",
+      "base_name": "Zapdos-Holo",
+      "variety": "Cosmos-Thunderstorm Deck",
+      "spec_id": 2583955,
+      "psa_grades": {
+        "psa_1": 20,
+        "psa_2": 21,
+        "psa_3": 37,
+        "psa_4": 92,
+        "psa_5": 245,
+        "psa_6": 290,
+        "psa_7": 411,
+        "psa_8": 537,
+        "psa_9": 417,
+        "psa_10": 35,
+        "psa_total": 2105
+      },
+      "grade_totals": {
+        "total": 2114,
+        "grade_total": 2105
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Zapdos-Holo-Incomplete Holo",
+      "base_name": "Zapdos-Holo",
+      "variety": "Incomplete Holo",
+      "spec_id": 8479282,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Aerodactyl",
+      "base_name": "Aerodactyl",
+      "variety": "",
+      "spec_id": 2215750,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 8,
+        "psa_4": 24,
+        "psa_5": 39,
+        "psa_6": 72,
+        "psa_7": 95,
+        "psa_8": 160,
+        "psa_9": 260,
+        "psa_10": 102,
+        "psa_total": 763
+      },
+      "grade_totals": {
+        "total": 765,
+        "grade_total": 763
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Aerodactyl-1999-2000 Copyright",
+      "base_name": "Aerodactyl",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810760,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 6,
+        "psa_10": 2,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Aerodactyl-1st Edition",
+      "base_name": "Aerodactyl",
+      "variety": "1st Edition",
+      "spec_id": 1853117,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 9,
+        "psa_4": 15,
+        "psa_5": 44,
+        "psa_6": 68,
+        "psa_7": 126,
+        "psa_8": 300,
+        "psa_9": 662,
+        "psa_10": 358,
+        "psa_total": 1586
+      },
+      "grade_totals": {
+        "total": 1592,
+        "grade_total": 1586
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Articuno",
+      "base_name": "Articuno",
+      "variety": "",
+      "spec_id": 1787860,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 12,
+        "psa_3": 21,
+        "psa_4": 41,
+        "psa_5": 77,
+        "psa_6": 124,
+        "psa_7": 147,
+        "psa_8": 273,
+        "psa_9": 351,
+        "psa_10": 107,
+        "psa_total": 1160
+      },
+      "grade_totals": {
+        "total": 1163,
+        "grade_total": 1160
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Articuno-1999-2000 Copyright",
+      "base_name": "Articuno",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810761,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 5,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Articuno-1st Edition",
+      "base_name": "Articuno",
+      "variety": "1st Edition",
+      "spec_id": 1827060,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 5,
+        "psa_3": 12,
+        "psa_4": 25,
+        "psa_5": 60,
+        "psa_6": 103,
+        "psa_7": 200,
+        "psa_8": 419,
+        "psa_9": 807,
+        "psa_10": 361,
+        "psa_total": 1999
+      },
+      "grade_totals": {
+        "total": 2004,
+        "grade_total": 1999
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Ditto",
+      "base_name": "Ditto",
+      "variety": "",
+      "spec_id": 1789712,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 3,
+        "psa_3": 3,
+        "psa_4": 17,
+        "psa_5": 27,
+        "psa_6": 63,
+        "psa_7": 84,
+        "psa_8": 137,
+        "psa_9": 187,
+        "psa_10": 96,
+        "psa_total": 620
+      },
+      "grade_totals": {
+        "total": 622,
+        "grade_total": 620
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Ditto-1999-2000 Copyright",
+      "base_name": "Ditto",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810762,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 7,
+        "psa_10": 3,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Ditto-1st Edition",
+      "base_name": "Ditto",
+      "variety": "1st Edition",
+      "spec_id": 1837320,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 8,
+        "psa_3": 2,
+        "psa_4": 14,
+        "psa_5": 41,
+        "psa_6": 72,
+        "psa_7": 135,
+        "psa_8": 290,
+        "psa_9": 563,
+        "psa_10": 330,
+        "psa_total": 1459
+      },
+      "grade_totals": {
+        "total": 1462,
+        "grade_total": 1459
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Dragonite",
+      "base_name": "Dragonite",
+      "variety": "",
+      "spec_id": 544000,
+      "psa_grades": {
+        "psa_1": 16,
+        "psa_2": 12,
+        "psa_3": 31,
+        "psa_4": 79,
+        "psa_5": 206,
+        "psa_6": 258,
+        "psa_7": 379,
+        "psa_8": 655,
+        "psa_9": 726,
+        "psa_10": 232,
+        "psa_total": 2594
+      },
+      "grade_totals": {
+        "total": 2602,
+        "grade_total": 2594
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Dragonite-1999-2000 Copyright",
+      "base_name": "Dragonite",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810763,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 11,
+        "psa_10": 2,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "Dragonite-1st Edition",
+      "base_name": "Dragonite",
+      "variety": "1st Edition",
+      "spec_id": 1837475,
+      "psa_grades": {
+        "psa_1": 10,
+        "psa_2": 16,
+        "psa_3": 20,
+        "psa_4": 58,
+        "psa_5": 132,
+        "psa_6": 187,
+        "psa_7": 300,
+        "psa_8": 696,
+        "psa_9": 1194,
+        "psa_10": 520,
+        "psa_total": 3136
+      },
+      "grade_totals": {
+        "total": 3150,
+        "grade_total": 3136
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Gengar",
+      "base_name": "Gengar",
+      "variety": "",
+      "spec_id": 2215752,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 9,
+        "psa_3": 24,
+        "psa_4": 48,
+        "psa_5": 100,
+        "psa_6": 175,
+        "psa_7": 227,
+        "psa_8": 398,
+        "psa_9": 505,
+        "psa_10": 189,
+        "psa_total": 1684
+      },
+      "grade_totals": {
+        "total": 1688,
+        "grade_total": 1684
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Gengar-1999-2000 Copyright",
+      "base_name": "Gengar",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810764,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 6,
+        "psa_10": 3,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "Gengar-1st Edition",
+      "base_name": "Gengar",
+      "variety": "1st Edition",
+      "spec_id": 1853115,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 9,
+        "psa_4": 21,
+        "psa_5": 78,
+        "psa_6": 121,
+        "psa_7": 208,
+        "psa_8": 532,
+        "psa_9": 968,
+        "psa_10": 472,
+        "psa_total": 2416
+      },
+      "grade_totals": {
+        "total": 2421,
+        "grade_total": 2416
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Haunter",
+      "base_name": "Haunter",
+      "variety": "",
+      "spec_id": 544001,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 3,
+        "psa_4": 18,
+        "psa_5": 25,
+        "psa_6": 49,
+        "psa_7": 74,
+        "psa_8": 159,
+        "psa_9": 229,
+        "psa_10": 79,
+        "psa_total": 642
+      },
+      "grade_totals": {
+        "total": 644,
+        "grade_total": 642
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Haunter-1999-2000 Copyright",
+      "base_name": "Haunter",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810765,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 5,
+        "psa_10": 4,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Haunter-1st Edition",
+      "base_name": "Haunter",
+      "variety": "1st Edition",
+      "spec_id": 1837492,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 13,
+        "psa_5": 33,
+        "psa_6": 76,
+        "psa_7": 111,
+        "psa_8": 291,
+        "psa_9": 629,
+        "psa_10": 317,
+        "psa_total": 1477
+      },
+      "grade_totals": {
+        "total": 1482,
+        "grade_total": 1477
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Hitmonlee",
+      "base_name": "Hitmonlee",
+      "variety": "",
+      "spec_id": 2153311,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 5,
+        "psa_3": 6,
+        "psa_4": 10,
+        "psa_5": 29,
+        "psa_6": 42,
+        "psa_7": 70,
+        "psa_8": 107,
+        "psa_9": 196,
+        "psa_10": 87,
+        "psa_total": 555
+      },
+      "grade_totals": {
+        "total": 556,
+        "grade_total": 555
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Hitmonlee-1999-2000 Copyright",
+      "base_name": "Hitmonlee",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810766,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 8,
+        "psa_10": 3,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "Hitmonlee-1st Edition",
+      "base_name": "Hitmonlee",
+      "variety": "1st Edition",
+      "spec_id": 1853104,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 0,
+        "psa_3": 5,
+        "psa_4": 13,
+        "psa_5": 34,
+        "psa_6": 50,
+        "psa_7": 95,
+        "psa_8": 251,
+        "psa_9": 568,
+        "psa_10": 302,
+        "psa_total": 1323
+      },
+      "grade_totals": {
+        "total": 1324,
+        "grade_total": 1323
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Hypno",
+      "base_name": "Hypno",
+      "variety": "",
+      "spec_id": 2332918,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 4,
+        "psa_3": 3,
+        "psa_4": 10,
+        "psa_5": 26,
+        "psa_6": 37,
+        "psa_7": 56,
+        "psa_8": 132,
+        "psa_9": 188,
+        "psa_10": 84,
+        "psa_total": 540
+      },
+      "grade_totals": {
+        "total": 544,
+        "grade_total": 540
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Hypno-1999-2000 Copyright",
+      "base_name": "Hypno",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810767,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 8,
+        "psa_10": 4,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "23",
+      "card_name": "Hypno-1st Edition",
+      "base_name": "Hypno",
+      "variety": "1st Edition",
+      "spec_id": 1837297,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 11,
+        "psa_5": 26,
+        "psa_6": 51,
+        "psa_7": 84,
+        "psa_8": 255,
+        "psa_9": 586,
+        "psa_10": 378,
+        "psa_total": 1395
+      },
+      "grade_totals": {
+        "total": 1396,
+        "grade_total": 1395
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Kabutops",
+      "base_name": "Kabutops",
+      "variety": "",
+      "spec_id": 2215753,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 18,
+        "psa_5": 34,
+        "psa_6": 36,
+        "psa_7": 62,
+        "psa_8": 128,
+        "psa_9": 223,
+        "psa_10": 82,
+        "psa_total": 590
+      },
+      "grade_totals": {
+        "total": 591,
+        "grade_total": 590
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Kabutops-1999-2000 Copyright",
+      "base_name": "Kabutops",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810768,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 10,
+        "psa_10": 3,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "24",
+      "card_name": "Kabutops-1st Edition",
+      "base_name": "Kabutops",
+      "variety": "1st Edition",
+      "spec_id": 1837311,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 6,
+        "psa_4": 7,
+        "psa_5": 20,
+        "psa_6": 46,
+        "psa_7": 67,
+        "psa_8": 238,
+        "psa_9": 593,
+        "psa_10": 336,
+        "psa_total": 1318
+      },
+      "grade_totals": {
+        "total": 1321,
+        "grade_total": 1318
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Lapras",
+      "base_name": "Lapras",
+      "variety": "",
+      "spec_id": 2068930,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 7,
+        "psa_4": 17,
+        "psa_5": 37,
+        "psa_6": 62,
+        "psa_7": 63,
+        "psa_8": 178,
+        "psa_9": 284,
+        "psa_10": 83,
+        "psa_total": 734
+      },
+      "grade_totals": {
+        "total": 736,
+        "grade_total": 734
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Lapras-1999-2000 Copyright",
+      "base_name": "Lapras",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810769,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 4,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Lapras-1st Edition",
+      "base_name": "Lapras",
+      "variety": "1st Edition",
+      "spec_id": 1837319,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 8,
+        "psa_4": 15,
+        "psa_5": 39,
+        "psa_6": 64,
+        "psa_7": 119,
+        "psa_8": 311,
+        "psa_9": 754,
+        "psa_10": 335,
+        "psa_total": 1648
+      },
+      "grade_totals": {
+        "total": 1650,
+        "grade_total": 1648
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Magneton",
+      "base_name": "Magneton",
+      "variety": "",
+      "spec_id": 544002,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 1,
+        "psa_3": 5,
+        "psa_4": 11,
+        "psa_5": 19,
+        "psa_6": 25,
+        "psa_7": 61,
+        "psa_8": 147,
+        "psa_9": 177,
+        "psa_10": 100,
+        "psa_total": 552
+      },
+      "grade_totals": {
+        "total": 554,
+        "grade_total": 552
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Magneton-1999-2000 Copyright",
+      "base_name": "Magneton",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810770,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 5,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Magneton-1st Edition",
+      "base_name": "Magneton",
+      "variety": "1st Edition",
+      "spec_id": 1837321,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 25,
+        "psa_6": 40,
+        "psa_7": 99,
+        "psa_8": 280,
+        "psa_9": 515,
+        "psa_10": 332,
+        "psa_total": 1298
+      },
+      "grade_totals": {
+        "total": 1300,
+        "grade_total": 1298
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Moltres",
+      "base_name": "Moltres",
+      "variety": "",
+      "spec_id": 544003,
+      "psa_grades": {
+        "psa_1": 11,
+        "psa_2": 11,
+        "psa_3": 21,
+        "psa_4": 38,
+        "psa_5": 86,
+        "psa_6": 125,
+        "psa_7": 142,
+        "psa_8": 290,
+        "psa_9": 365,
+        "psa_10": 124,
+        "psa_total": 1213
+      },
+      "grade_totals": {
+        "total": 1216,
+        "grade_total": 1213
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Moltres-1999-2000 Copyright",
+      "base_name": "Moltres",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810771,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 2,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Moltres-1st Edition",
+      "base_name": "Moltres",
+      "variety": "1st Edition",
+      "spec_id": 544004,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 7,
+        "psa_3": 11,
+        "psa_4": 30,
+        "psa_5": 66,
+        "psa_6": 97,
+        "psa_7": 147,
+        "psa_8": 365,
+        "psa_9": 807,
+        "psa_10": 361,
+        "psa_total": 1893
+      },
+      "grade_totals": {
+        "total": 1896,
+        "grade_total": 1893
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Muk",
+      "base_name": "Muk",
+      "variety": "",
+      "spec_id": 2215756,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 4,
+        "psa_3": 7,
+        "psa_4": 4,
+        "psa_5": 19,
+        "psa_6": 30,
+        "psa_7": 55,
+        "psa_8": 106,
+        "psa_9": 156,
+        "psa_10": 61,
+        "psa_total": 443
+      },
+      "grade_totals": {
+        "total": 444,
+        "grade_total": 443
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Muk-1999-2000 Copyright",
+      "base_name": "Muk",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810772,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 9,
+        "psa_10": 1,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Muk-1st Edition",
+      "base_name": "Muk",
+      "variety": "1st Edition",
+      "spec_id": 1827062,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 8,
+        "psa_5": 28,
+        "psa_6": 39,
+        "psa_7": 67,
+        "psa_8": 236,
+        "psa_9": 519,
+        "psa_10": 279,
+        "psa_total": 1182
+      },
+      "grade_totals": {
+        "total": 1185,
+        "grade_total": 1182
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Raichu",
+      "base_name": "Raichu",
+      "variety": "",
+      "spec_id": 2189690,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 9,
+        "psa_3": 16,
+        "psa_4": 28,
+        "psa_5": 66,
+        "psa_6": 87,
+        "psa_7": 119,
+        "psa_8": 236,
+        "psa_9": 341,
+        "psa_10": 137,
+        "psa_total": 1042
+      },
+      "grade_totals": {
+        "total": 1048,
+        "grade_total": 1042
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Raichu-1999-2000 Copyright",
+      "base_name": "Raichu",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810773,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 10,
+        "psa_6": 12,
+        "psa_7": 19,
+        "psa_8": 36,
+        "psa_9": 41,
+        "psa_10": 14,
+        "psa_total": 137
+      },
+      "grade_totals": {
+        "total": 137,
+        "grade_total": 137
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Raichu-1st Edition",
+      "base_name": "Raichu",
+      "variety": "1st Edition",
+      "spec_id": 1837313,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 13,
+        "psa_5": 46,
+        "psa_6": 68,
+        "psa_7": 139,
+        "psa_8": 374,
+        "psa_9": 713,
+        "psa_10": 414,
+        "psa_total": 1774
+      },
+      "grade_totals": {
+        "total": 1779,
+        "grade_total": 1774
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Zapdos",
+      "base_name": "Zapdos",
+      "variety": "",
+      "spec_id": 544005,
+      "psa_grades": {
+        "psa_1": 11,
+        "psa_2": 17,
+        "psa_3": 12,
+        "psa_4": 36,
+        "psa_5": 84,
+        "psa_6": 106,
+        "psa_7": 146,
+        "psa_8": 259,
+        "psa_9": 352,
+        "psa_10": 126,
+        "psa_total": 1149
+      },
+      "grade_totals": {
+        "total": 1150,
+        "grade_total": 1149
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Zapdos-1999-2000 Copyright",
+      "base_name": "Zapdos",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810774,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Zapdos-1st Edition",
+      "base_name": "Zapdos",
+      "variety": "1st Edition",
+      "spec_id": 1853101,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 7,
+        "psa_3": 16,
+        "psa_4": 28,
+        "psa_5": 72,
+        "psa_6": 109,
+        "psa_7": 167,
+        "psa_8": 444,
+        "psa_9": 806,
+        "psa_10": 380,
+        "psa_total": 2036
+      },
+      "grade_totals": {
+        "total": 2041,
+        "grade_total": 2036
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Arbok",
+      "base_name": "Arbok",
+      "variety": "",
+      "spec_id": 2397985,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 10,
+        "psa_5": 12,
+        "psa_6": 14,
+        "psa_7": 35,
+        "psa_8": 82,
+        "psa_9": 124,
+        "psa_10": 54,
+        "psa_total": 333
+      },
+      "grade_totals": {
+        "total": 334,
+        "grade_total": 333
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Arbok-1999-2000 Copyright",
+      "base_name": "Arbok",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810775,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Arbok-1st Edition",
+      "base_name": "Arbok",
+      "variety": "1st Edition",
+      "spec_id": 1837336,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 7,
+        "psa_4": 15,
+        "psa_5": 33,
+        "psa_6": 53,
+        "psa_7": 113,
+        "psa_8": 357,
+        "psa_9": 774,
+        "psa_10": 406,
+        "psa_total": 1760
+      },
+      "grade_totals": {
+        "total": 1766,
+        "grade_total": 1760
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Cloyster",
+      "base_name": "Cloyster",
+      "variety": "",
+      "spec_id": 2176273,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 13,
+        "psa_6": 20,
+        "psa_7": 37,
+        "psa_8": 84,
+        "psa_9": 113,
+        "psa_10": 62,
+        "psa_total": 338
+      },
+      "grade_totals": {
+        "total": 340,
+        "grade_total": 338
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Cloyster-1999-2000 Copyright",
+      "base_name": "Cloyster",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810776,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 8,
+        "psa_10": 6,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Cloyster-1st Edition",
+      "base_name": "Cloyster",
+      "variety": "1st Edition",
+      "spec_id": 1837335,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 11,
+        "psa_5": 23,
+        "psa_6": 80,
+        "psa_7": 123,
+        "psa_8": 348,
+        "psa_9": 724,
+        "psa_10": 419,
+        "psa_total": 1736
+      },
+      "grade_totals": {
+        "total": 1743,
+        "grade_total": 1736
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Gastly",
+      "base_name": "Gastly",
+      "variety": "",
+      "spec_id": 1796598,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 8,
+        "psa_5": 16,
+        "psa_6": 21,
+        "psa_7": 40,
+        "psa_8": 83,
+        "psa_9": 131,
+        "psa_10": 56,
+        "psa_total": 358
+      },
+      "grade_totals": {
+        "total": 360,
+        "grade_total": 358
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Gastly-1999-2000 Copyright",
+      "base_name": "Gastly",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810777,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 2,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Gastly-1st Edition",
+      "base_name": "Gastly",
+      "variety": "1st Edition",
+      "spec_id": 1837334,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 4,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 32,
+        "psa_6": 51,
+        "psa_7": 125,
+        "psa_8": 420,
+        "psa_9": 786,
+        "psa_10": 370,
+        "psa_total": 1794
+      },
+      "grade_totals": {
+        "total": 1802,
+        "grade_total": 1794
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Golbat",
+      "base_name": "Golbat",
+      "variety": "",
+      "spec_id": 544006,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 9,
+        "psa_5": 6,
+        "psa_6": 12,
+        "psa_7": 38,
+        "psa_8": 63,
+        "psa_9": 132,
+        "psa_10": 81,
+        "psa_total": 347
+      },
+      "grade_totals": {
+        "total": 349,
+        "grade_total": 347
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Golbat-1999-2000 Copyright",
+      "base_name": "Golbat",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810778,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 3,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Golbat-1st Edition",
+      "base_name": "Golbat",
+      "variety": "1st Edition",
+      "spec_id": 1837332,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 3,
+        "psa_4": 8,
+        "psa_5": 26,
+        "psa_6": 38,
+        "psa_7": 84,
+        "psa_8": 301,
+        "psa_9": 691,
+        "psa_10": 399,
+        "psa_total": 1554
+      },
+      "grade_totals": {
+        "total": 1559,
+        "grade_total": 1554
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Golduck",
+      "base_name": "Golduck",
+      "variety": "",
+      "spec_id": 2397987,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 21,
+        "psa_6": 19,
+        "psa_7": 39,
+        "psa_8": 77,
+        "psa_9": 139,
+        "psa_10": 65,
+        "psa_total": 371
+      },
+      "grade_totals": {
+        "total": 372,
+        "grade_total": 371
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Golduck-1999-2000 Copyright",
+      "base_name": "Golduck",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810779,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 13,
+        "psa_10": 9,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Golduck-1st Edition",
+      "base_name": "Golduck",
+      "variety": "1st Edition",
+      "spec_id": 1837333,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 5,
+        "psa_4": 12,
+        "psa_5": 29,
+        "psa_6": 63,
+        "psa_7": 104,
+        "psa_8": 368,
+        "psa_9": 750,
+        "psa_10": 397,
+        "psa_total": 1733
+      },
+      "grade_totals": {
+        "total": 1736,
+        "grade_total": 1733
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Golem",
+      "base_name": "Golem",
+      "variety": "",
+      "spec_id": 2307664,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 19,
+        "psa_6": 24,
+        "psa_7": 48,
+        "psa_8": 87,
+        "psa_9": 130,
+        "psa_10": 52,
+        "psa_total": 371
+      },
+      "grade_totals": {
+        "total": 372,
+        "grade_total": 371
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Golem-1999-2000 Copyright",
+      "base_name": "Golem",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810780,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 9,
+        "psa_10": 5,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Golem-1st Edition",
+      "base_name": "Golem",
+      "variety": "1st Edition",
+      "spec_id": 1837331,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 6,
+        "psa_4": 14,
+        "psa_5": 32,
+        "psa_6": 56,
+        "psa_7": 103,
+        "psa_8": 342,
+        "psa_9": 772,
+        "psa_10": 405,
+        "psa_total": 1731
+      },
+      "grade_totals": {
+        "total": 1736,
+        "grade_total": 1731
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Graveler",
+      "base_name": "Graveler",
+      "variety": "",
+      "spec_id": 1939497,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 16,
+        "psa_6": 17,
+        "psa_7": 36,
+        "psa_8": 92,
+        "psa_9": 157,
+        "psa_10": 89,
+        "psa_total": 413
+      },
+      "grade_totals": {
+        "total": 414,
+        "grade_total": 413
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Graveler-1999-2000 Copyright",
+      "base_name": "Graveler",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810781,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 3,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Graveler-1st Edition",
+      "base_name": "Graveler",
+      "variety": "1st Edition",
+      "spec_id": 1837330,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 12,
+        "psa_5": 29,
+        "psa_6": 52,
+        "psa_7": 92,
+        "psa_8": 354,
+        "psa_9": 800,
+        "psa_10": 414,
+        "psa_total": 1759
+      },
+      "grade_totals": {
+        "total": 1767,
+        "grade_total": 1759
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Kingler",
+      "base_name": "Kingler",
+      "variety": "",
+      "spec_id": 2356402,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 18,
+        "psa_6": 10,
+        "psa_7": 39,
+        "psa_8": 88,
+        "psa_9": 150,
+        "psa_10": 100,
+        "psa_total": 416
+      },
+      "grade_totals": {
+        "total": 419,
+        "grade_total": 416
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Kingler-1999-2000 Copyright",
+      "base_name": "Kingler",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810782,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Kingler-1st Edition",
+      "base_name": "Kingler",
+      "variety": "1st Edition",
+      "spec_id": 1837329,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 13,
+        "psa_5": 27,
+        "psa_6": 53,
+        "psa_7": 87,
+        "psa_8": 378,
+        "psa_9": 791,
+        "psa_10": 380,
+        "psa_total": 1735
+      },
+      "grade_totals": {
+        "total": 1736,
+        "grade_total": 1735
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Magmar",
+      "base_name": "Magmar",
+      "variety": "",
+      "spec_id": 2356406,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 11,
+        "psa_5": 16,
+        "psa_6": 18,
+        "psa_7": 64,
+        "psa_8": 120,
+        "psa_9": 217,
+        "psa_10": 57,
+        "psa_total": 510
+      },
+      "grade_totals": {
+        "total": 512,
+        "grade_total": 510
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Magmar-1999-2000 Copyright",
+      "base_name": "Magmar",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810783,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 5,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Magmar-1st Edition",
+      "base_name": "Magmar",
+      "variety": "1st Edition",
+      "spec_id": 1837328,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 5,
+        "psa_3": 3,
+        "psa_4": 13,
+        "psa_5": 37,
+        "psa_6": 76,
+        "psa_7": 141,
+        "psa_8": 450,
+        "psa_9": 931,
+        "psa_10": 435,
+        "psa_total": 2095
+      },
+      "grade_totals": {
+        "total": 2099,
+        "grade_total": 2095
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Omastar",
+      "base_name": "Omastar",
+      "variety": "",
+      "spec_id": 2356405,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 9,
+        "psa_6": 26,
+        "psa_7": 34,
+        "psa_8": 81,
+        "psa_9": 128,
+        "psa_10": 60,
+        "psa_total": 344
+      },
+      "grade_totals": {
+        "total": 345,
+        "grade_total": 344
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Omastar-1999-2000 Copyright",
+      "base_name": "Omastar",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810784,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 3,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Omastar-1st Edition",
+      "base_name": "Omastar",
+      "variety": "1st Edition",
+      "spec_id": 1837327,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 10,
+        "psa_5": 27,
+        "psa_6": 43,
+        "psa_7": 81,
+        "psa_8": 294,
+        "psa_9": 715,
+        "psa_10": 394,
+        "psa_total": 1569
+      },
+      "grade_totals": {
+        "total": 1574,
+        "grade_total": 1569
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Sandslash",
+      "base_name": "Sandslash",
+      "variety": "",
+      "spec_id": 2345698,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 6,
+        "psa_5": 12,
+        "psa_6": 21,
+        "psa_7": 39,
+        "psa_8": 66,
+        "psa_9": 103,
+        "psa_10": 56,
+        "psa_total": 305
+      },
+      "grade_totals": {
+        "total": 305,
+        "grade_total": 305
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Sandslash-1999-2000 Copyright",
+      "base_name": "Sandslash",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810785,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 7,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Sandslash-1st Edition",
+      "base_name": "Sandslash",
+      "variety": "1st Edition",
+      "spec_id": 1837326,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 29,
+        "psa_6": 62,
+        "psa_7": 135,
+        "psa_8": 338,
+        "psa_9": 726,
+        "psa_10": 396,
+        "psa_total": 1701
+      },
+      "grade_totals": {
+        "total": 1711,
+        "grade_total": 1701
+      }
+    },
+    {
+      "pokemon_number": "42",
+      "card_name": "Seadra",
+      "base_name": "Seadra",
+      "variety": "",
+      "spec_id": 2178281,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 8,
+        "psa_5": 7,
+        "psa_6": 19,
+        "psa_7": 41,
+        "psa_8": 79,
+        "psa_9": 160,
+        "psa_10": 83,
+        "psa_total": 397
+      },
+      "grade_totals": {
+        "total": 399,
+        "grade_total": 397
+      }
+    },
+    {
+      "pokemon_number": "42",
+      "card_name": "Seadra-1999-2000 Copyright",
+      "base_name": "Seadra",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810786,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 8,
+        "psa_10": 2,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "42",
+      "card_name": "Seadra-1st Edition",
+      "base_name": "Seadra",
+      "variety": "1st Edition",
+      "spec_id": 1837324,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 8,
+        "psa_4": 13,
+        "psa_5": 24,
+        "psa_6": 47,
+        "psa_7": 115,
+        "psa_8": 333,
+        "psa_9": 819,
+        "psa_10": 461,
+        "psa_total": 1827
+      },
+      "grade_totals": {
+        "total": 1834,
+        "grade_total": 1827
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Slowbro",
+      "base_name": "Slowbro",
+      "variety": "",
+      "spec_id": 544007,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 3,
+        "psa_5": 21,
+        "psa_6": 25,
+        "psa_7": 42,
+        "psa_8": 93,
+        "psa_9": 163,
+        "psa_10": 76,
+        "psa_total": 431
+      },
+      "grade_totals": {
+        "total": 431,
+        "grade_total": 431
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Slowbro-1999-2000 Copyright",
+      "base_name": "Slowbro",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810787,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 5,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Slowbro-1st Edition",
+      "base_name": "Slowbro",
+      "variety": "1st Edition",
+      "spec_id": 1837323,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 9,
+        "psa_4": 10,
+        "psa_5": 37,
+        "psa_6": 69,
+        "psa_7": 115,
+        "psa_8": 401,
+        "psa_9": 815,
+        "psa_10": 412,
+        "psa_total": 1873
+      },
+      "grade_totals": {
+        "total": 1878,
+        "grade_total": 1873
+      }
+    },
+    {
+      "pokemon_number": "44",
+      "card_name": "Tentacruel",
+      "base_name": "Tentacruel",
+      "variety": "",
+      "spec_id": 1961607,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 10,
+        "psa_6": 12,
+        "psa_7": 28,
+        "psa_8": 69,
+        "psa_9": 112,
+        "psa_10": 48,
+        "psa_total": 285
+      },
+      "grade_totals": {
+        "total": 286,
+        "grade_total": 285
+      }
+    },
+    {
+      "pokemon_number": "44",
+      "card_name": "Tentacruel-1999-2000 Copyright",
+      "base_name": "Tentacruel",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810788,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 5,
+        "psa_10": 3,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "44",
+      "card_name": "Tentacruel-1st Edition",
+      "base_name": "Tentacruel",
+      "variety": "1st Edition",
+      "spec_id": 1837295,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 3,
+        "psa_3": 3,
+        "psa_4": 7,
+        "psa_5": 20,
+        "psa_6": 26,
+        "psa_7": 80,
+        "psa_8": 299,
+        "psa_9": 687,
+        "psa_10": 324,
+        "psa_total": 1451
+      },
+      "grade_totals": {
+        "total": 1452,
+        "grade_total": 1451
+      }
+    },
+    {
+      "pokemon_number": "45",
+      "card_name": "Weezing",
+      "base_name": "Weezing",
+      "variety": "",
+      "spec_id": 1939494,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 8,
+        "psa_5": 8,
+        "psa_6": 16,
+        "psa_7": 30,
+        "psa_8": 56,
+        "psa_9": 129,
+        "psa_10": 59,
+        "psa_total": 310
+      },
+      "grade_totals": {
+        "total": 311,
+        "grade_total": 310
+      }
+    },
+    {
+      "pokemon_number": "45",
+      "card_name": "Weezing-1999-2000 Copyright",
+      "base_name": "Weezing",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810789,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 2,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "45",
+      "card_name": "Weezing-1st Edition",
+      "base_name": "Weezing",
+      "variety": "1st Edition",
+      "spec_id": 1837292,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 2,
+        "psa_3": 5,
+        "psa_4": 7,
+        "psa_5": 25,
+        "psa_6": 49,
+        "psa_7": 107,
+        "psa_8": 337,
+        "psa_9": 820,
+        "psa_10": 410,
+        "psa_total": 1767
+      },
+      "grade_totals": {
+        "total": 1769,
+        "grade_total": 1767
+      }
+    },
+    {
+      "pokemon_number": "46",
+      "card_name": "Ekans",
+      "base_name": "Ekans",
+      "variety": "",
+      "spec_id": 1939500,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 13,
+        "psa_5": 9,
+        "psa_6": 19,
+        "psa_7": 34,
+        "psa_8": 81,
+        "psa_9": 133,
+        "psa_10": 121,
+        "psa_total": 416
+      },
+      "grade_totals": {
+        "total": 416,
+        "grade_total": 416
+      }
+    },
+    {
+      "pokemon_number": "46",
+      "card_name": "Ekans-1999-2000 Copyright",
+      "base_name": "Ekans",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810790,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 20,
+        "psa_10": 9,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "46",
+      "card_name": "Ekans-1st Edition",
+      "base_name": "Ekans",
+      "variety": "1st Edition",
+      "spec_id": 1837290,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 5,
+        "psa_3": 4,
+        "psa_4": 28,
+        "psa_5": 39,
+        "psa_6": 91,
+        "psa_7": 184,
+        "psa_8": 417,
+        "psa_9": 1181,
+        "psa_10": 829,
+        "psa_total": 2781
+      },
+      "grade_totals": {
+        "total": 2786,
+        "grade_total": 2781
+      }
+    },
+    {
+      "pokemon_number": "47",
+      "card_name": "Geodude",
+      "base_name": "Geodude",
+      "variety": "",
+      "spec_id": 1796636,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 13,
+        "psa_6": 17,
+        "psa_7": 48,
+        "psa_8": 95,
+        "psa_9": 191,
+        "psa_10": 163,
+        "psa_total": 541
+      },
+      "grade_totals": {
+        "total": 543,
+        "grade_total": 541
+      }
+    },
+    {
+      "pokemon_number": "47",
+      "card_name": "Geodude-1999-2000 Copyright",
+      "base_name": "Geodude",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810791,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 17,
+        "psa_10": 6,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "47",
+      "card_name": "Geodude-1st Edition",
+      "base_name": "Geodude",
+      "variety": "1st Edition",
+      "spec_id": 1837483,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 6,
+        "psa_4": 15,
+        "psa_5": 55,
+        "psa_6": 77,
+        "psa_7": 135,
+        "psa_8": 438,
+        "psa_9": 1451,
+        "psa_10": 921,
+        "psa_total": 3102
+      },
+      "grade_totals": {
+        "total": 3114,
+        "grade_total": 3102
+      }
+    },
+    {
+      "pokemon_number": "48",
+      "card_name": "Grimer",
+      "base_name": "Grimer",
+      "variety": "",
+      "spec_id": 1939499,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 10,
+        "psa_5": 20,
+        "psa_6": 22,
+        "psa_7": 35,
+        "psa_8": 115,
+        "psa_9": 204,
+        "psa_10": 135,
+        "psa_total": 545
+      },
+      "grade_totals": {
+        "total": 547,
+        "grade_total": 545
+      }
+    },
+    {
+      "pokemon_number": "48",
+      "card_name": "Grimer-1999-2000 Copyright",
+      "base_name": "Grimer",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810792,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 18,
+        "psa_10": 6,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "48",
+      "card_name": "Grimer-1st Edition",
+      "base_name": "Grimer",
+      "variety": "1st Edition",
+      "spec_id": 1837485,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 9,
+        "psa_4": 19,
+        "psa_5": 32,
+        "psa_6": 56,
+        "psa_7": 120,
+        "psa_8": 407,
+        "psa_9": 1251,
+        "psa_10": 710,
+        "psa_total": 2610
+      },
+      "grade_totals": {
+        "total": 2619,
+        "grade_total": 2610
+      }
+    },
+    {
+      "pokemon_number": "49",
+      "card_name": "Horsea",
+      "base_name": "Horsea",
+      "variety": "",
+      "spec_id": 1939503,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 6,
+        "psa_5": 16,
+        "psa_6": 25,
+        "psa_7": 38,
+        "psa_8": 107,
+        "psa_9": 191,
+        "psa_10": 139,
+        "psa_total": 528
+      },
+      "grade_totals": {
+        "total": 530,
+        "grade_total": 528
+      }
+    },
+    {
+      "pokemon_number": "49",
+      "card_name": "Horsea-1999-2000 Copyright",
+      "base_name": "Horsea",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810793,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 19,
+        "psa_10": 5,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "49",
+      "card_name": "Horsea-1st Edition",
+      "base_name": "Horsea",
+      "variety": "1st Edition",
+      "spec_id": 1837487,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 5,
+        "psa_4": 10,
+        "psa_5": 40,
+        "psa_6": 100,
+        "psa_7": 181,
+        "psa_8": 493,
+        "psa_9": 1271,
+        "psa_10": 767,
+        "psa_total": 2870
+      },
+      "grade_totals": {
+        "total": 2879,
+        "grade_total": 2870
+      }
+    },
+    {
+      "pokemon_number": "50",
+      "card_name": "Kabuto",
+      "base_name": "Kabuto",
+      "variety": "",
+      "spec_id": 1939496,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 10,
+        "psa_5": 19,
+        "psa_6": 19,
+        "psa_7": 43,
+        "psa_8": 94,
+        "psa_9": 206,
+        "psa_10": 179,
+        "psa_total": 573
+      },
+      "grade_totals": {
+        "total": 576,
+        "grade_total": 573
+      }
+    },
+    {
+      "pokemon_number": "50",
+      "card_name": "Kabuto-1999-2000 Copyright",
+      "base_name": "Kabuto",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810794,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 14,
+        "psa_10": 9,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "50",
+      "card_name": "Kabuto-1st Edition",
+      "base_name": "Kabuto",
+      "variety": "1st Edition",
+      "spec_id": 1837489,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 12,
+        "psa_4": 27,
+        "psa_5": 40,
+        "psa_6": 68,
+        "psa_7": 156,
+        "psa_8": 505,
+        "psa_9": 1393,
+        "psa_10": 909,
+        "psa_total": 3117
+      },
+      "grade_totals": {
+        "total": 3120,
+        "grade_total": 3117
+      }
+    },
+    {
+      "pokemon_number": "51",
+      "card_name": "Krabby",
+      "base_name": "Krabby",
+      "variety": "",
+      "spec_id": 1939487,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 9,
+        "psa_5": 28,
+        "psa_6": 25,
+        "psa_7": 54,
+        "psa_8": 91,
+        "psa_9": 217,
+        "psa_10": 189,
+        "psa_total": 620
+      },
+      "grade_totals": {
+        "total": 625,
+        "grade_total": 620
+      }
+    },
+    {
+      "pokemon_number": "51",
+      "card_name": "Krabby-1999-2000 Copyright",
+      "base_name": "Krabby",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810796,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 11,
+        "psa_10": 10,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "51",
+      "card_name": "Krabby-1st Edition",
+      "base_name": "Krabby",
+      "variety": "1st Edition",
+      "spec_id": 1837478,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 5,
+        "psa_4": 13,
+        "psa_5": 32,
+        "psa_6": 44,
+        "psa_7": 124,
+        "psa_8": 399,
+        "psa_9": 1168,
+        "psa_10": 916,
+        "psa_total": 2706
+      },
+      "grade_totals": {
+        "total": 2709,
+        "grade_total": 2706
+      }
+    },
+    {
+      "pokemon_number": "51",
+      "card_name": "Krabby-Slash Error",
+      "base_name": "Krabby",
+      "variety": "Slash Error",
+      "spec_id": 7846070,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 13,
+        "psa_7": 7,
+        "psa_8": 5,
+        "psa_9": 10,
+        "psa_10": 1,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "52",
+      "card_name": "Omanyte",
+      "base_name": "Omanyte",
+      "variety": "",
+      "spec_id": 1939492,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 6,
+        "psa_4": 4,
+        "psa_5": 13,
+        "psa_6": 27,
+        "psa_7": 38,
+        "psa_8": 84,
+        "psa_9": 175,
+        "psa_10": 139,
+        "psa_total": 487
+      },
+      "grade_totals": {
+        "total": 487,
+        "grade_total": 487
+      }
+    },
+    {
+      "pokemon_number": "52",
+      "card_name": "Omanyte-1999-2000 Copyright",
+      "base_name": "Omanyte",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810797,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 16,
+        "psa_10": 10,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "52",
+      "card_name": "Omanyte-1st Edition",
+      "base_name": "Omanyte",
+      "variety": "1st Edition",
+      "spec_id": 1837481,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 5,
+        "psa_4": 12,
+        "psa_5": 45,
+        "psa_6": 59,
+        "psa_7": 133,
+        "psa_8": 508,
+        "psa_9": 1375,
+        "psa_10": 810,
+        "psa_total": 2950
+      },
+      "grade_totals": {
+        "total": 2955,
+        "grade_total": 2950
+      }
+    },
+    {
+      "pokemon_number": "53",
+      "card_name": "Psyduck",
+      "base_name": "Psyduck",
+      "variety": "",
+      "spec_id": 1939491,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 6,
+        "psa_4": 14,
+        "psa_5": 17,
+        "psa_6": 44,
+        "psa_7": 58,
+        "psa_8": 154,
+        "psa_9": 293,
+        "psa_10": 199,
+        "psa_total": 786
+      },
+      "grade_totals": {
+        "total": 789,
+        "grade_total": 786
+      }
+    },
+    {
+      "pokemon_number": "53",
+      "card_name": "Psyduck-1999-2000 Copyright",
+      "base_name": "Psyduck",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810798,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 28,
+        "psa_10": 13,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "53",
+      "card_name": "Psyduck-1st Edition",
+      "base_name": "Psyduck",
+      "variety": "1st Edition",
+      "spec_id": 1837482,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 4,
+        "psa_3": 5,
+        "psa_4": 30,
+        "psa_5": 53,
+        "psa_6": 94,
+        "psa_7": 207,
+        "psa_8": 627,
+        "psa_9": 1764,
+        "psa_10": 1087,
+        "psa_total": 3873
+      },
+      "grade_totals": {
+        "total": 3883,
+        "grade_total": 3873
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Shellder",
+      "base_name": "Shellder",
+      "variety": "",
+      "spec_id": 1939495,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 4,
+        "psa_4": 2,
+        "psa_5": 11,
+        "psa_6": 16,
+        "psa_7": 26,
+        "psa_8": 88,
+        "psa_9": 164,
+        "psa_10": 131,
+        "psa_total": 442
+      },
+      "grade_totals": {
+        "total": 444,
+        "grade_total": 442
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Shellder-1999-2000 Copyright",
+      "base_name": "Shellder",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810799,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 13,
+        "psa_10": 9,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Shellder-1st Edition",
+      "base_name": "Shellder",
+      "variety": "1st Edition",
+      "spec_id": 1837493,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 7,
+        "psa_4": 18,
+        "psa_5": 40,
+        "psa_6": 55,
+        "psa_7": 113,
+        "psa_8": 400,
+        "psa_9": 1299,
+        "psa_10": 888,
+        "psa_total": 2822
+      },
+      "grade_totals": {
+        "total": 2826,
+        "grade_total": 2822
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Slowpoke",
+      "base_name": "Slowpoke",
+      "variety": "",
+      "spec_id": 1939489,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 8,
+        "psa_5": 20,
+        "psa_6": 25,
+        "psa_7": 46,
+        "psa_8": 109,
+        "psa_9": 226,
+        "psa_10": 184,
+        "psa_total": 625
+      },
+      "grade_totals": {
+        "total": 628,
+        "grade_total": 625
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Slowpoke-1999-2000 Copyright",
+      "base_name": "Slowpoke",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810800,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 16,
+        "psa_10": 9,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Slowpoke-1st Edition",
+      "base_name": "Slowpoke",
+      "variety": "1st Edition",
+      "spec_id": 1837494,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 6,
+        "psa_3": 7,
+        "psa_4": 25,
+        "psa_5": 63,
+        "psa_6": 81,
+        "psa_7": 172,
+        "psa_8": 515,
+        "psa_9": 1550,
+        "psa_10": 973,
+        "psa_total": 3394
+      },
+      "grade_totals": {
+        "total": 3403,
+        "grade_total": 3394
+      }
+    },
+    {
+      "pokemon_number": "56",
+      "card_name": "Tentacool",
+      "base_name": "Tentacool",
+      "variety": "",
+      "spec_id": 1939498,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 10,
+        "psa_6": 12,
+        "psa_7": 30,
+        "psa_8": 74,
+        "psa_9": 140,
+        "psa_10": 121,
+        "psa_total": 397
+      },
+      "grade_totals": {
+        "total": 398,
+        "grade_total": 397
+      }
+    },
+    {
+      "pokemon_number": "56",
+      "card_name": "Tentacool-1999-2000 Copyright",
+      "base_name": "Tentacool",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810801,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 4,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "56",
+      "card_name": "Tentacool-1st Edition",
+      "base_name": "Tentacool",
+      "variety": "1st Edition",
+      "spec_id": 1837495,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 7,
+        "psa_4": 16,
+        "psa_5": 36,
+        "psa_6": 60,
+        "psa_7": 110,
+        "psa_8": 402,
+        "psa_9": 1195,
+        "psa_10": 688,
+        "psa_total": 2518
+      },
+      "grade_totals": {
+        "total": 2525,
+        "grade_total": 2518
+      }
+    },
+    {
+      "pokemon_number": "57",
+      "card_name": "Zubat",
+      "base_name": "Zubat",
+      "variety": "",
+      "spec_id": 2277788,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 8,
+        "psa_5": 15,
+        "psa_6": 19,
+        "psa_7": 55,
+        "psa_8": 77,
+        "psa_9": 181,
+        "psa_10": 148,
+        "psa_total": 505
+      },
+      "grade_totals": {
+        "total": 508,
+        "grade_total": 505
+      }
+    },
+    {
+      "pokemon_number": "57",
+      "card_name": "Zubat-1999-2000 Copyright",
+      "base_name": "Zubat",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810802,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 12,
+        "psa_10": 7,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "57",
+      "card_name": "Zubat-1st Edition",
+      "base_name": "Zubat",
+      "variety": "1st Edition",
+      "spec_id": 1837496,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 5,
+        "psa_4": 13,
+        "psa_5": 32,
+        "psa_6": 57,
+        "psa_7": 114,
+        "psa_8": 340,
+        "psa_9": 1252,
+        "psa_10": 784,
+        "psa_total": 2598
+      },
+      "grade_totals": {
+        "total": 2609,
+        "grade_total": 2598
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Mr. Fuji",
+      "base_name": "Mr. Fuji",
+      "variety": "",
+      "spec_id": 2397992,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 15,
+        "psa_6": 19,
+        "psa_7": 30,
+        "psa_8": 64,
+        "psa_9": 114,
+        "psa_10": 53,
+        "psa_total": 304
+      },
+      "grade_totals": {
+        "total": 305,
+        "grade_total": 304
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Mr. Fuji-1999-2000 Copyright",
+      "base_name": "Mr. Fuji",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810803,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 1,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Mr. Fuji-1st Edition",
+      "base_name": "Mr. Fuji",
+      "variety": "1st Edition",
+      "spec_id": 1837497,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 6,
+        "psa_5": 29,
+        "psa_6": 39,
+        "psa_7": 67,
+        "psa_8": 267,
+        "psa_9": 674,
+        "psa_10": 385,
+        "psa_total": 1472
+      },
+      "grade_totals": {
+        "total": 1479,
+        "grade_total": 1472
+      }
+    },
+    {
+      "pokemon_number": "59",
+      "card_name": "Energy Search",
+      "base_name": "Energy Search",
+      "variety": "",
+      "spec_id": 1939505,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 11,
+        "psa_6": 11,
+        "psa_7": 32,
+        "psa_8": 58,
+        "psa_9": 129,
+        "psa_10": 91,
+        "psa_total": 335
+      },
+      "grade_totals": {
+        "total": 336,
+        "grade_total": 335
+      }
+    },
+    {
+      "pokemon_number": "59",
+      "card_name": "Energy Search-1999-2000 Copyright",
+      "base_name": "Energy Search",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810804,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 17,
+        "psa_10": 7,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "59",
+      "card_name": "Energy Search-1st Edition",
+      "base_name": "Energy Search",
+      "variety": "1st Edition",
+      "spec_id": 1837498,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 9,
+        "psa_5": 20,
+        "psa_6": 29,
+        "psa_7": 85,
+        "psa_8": 260,
+        "psa_9": 844,
+        "psa_10": 712,
+        "psa_total": 1963
+      },
+      "grade_totals": {
+        "total": 1965,
+        "grade_total": 1963
+      }
+    },
+    {
+      "pokemon_number": "60",
+      "card_name": "Gambler",
+      "base_name": "Gambler",
+      "variety": "",
+      "spec_id": 2277792,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 1,
+        "psa_5": 12,
+        "psa_6": 11,
+        "psa_7": 22,
+        "psa_8": 63,
+        "psa_9": 144,
+        "psa_10": 94,
+        "psa_total": 352
+      },
+      "grade_totals": {
+        "total": 353,
+        "grade_total": 352
+      }
+    },
+    {
+      "pokemon_number": "60",
+      "card_name": "Gambler-1999-2000 Copyright",
+      "base_name": "Gambler",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810805,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 9,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "60",
+      "card_name": "Gambler-1st Edition",
+      "base_name": "Gambler",
+      "variety": "1st Edition",
+      "spec_id": 1837500,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 14,
+        "psa_5": 24,
+        "psa_6": 44,
+        "psa_7": 99,
+        "psa_8": 225,
+        "psa_9": 863,
+        "psa_10": 693,
+        "psa_total": 1965
+      },
+      "grade_totals": {
+        "total": 1966,
+        "grade_total": 1965
+      }
+    },
+    {
+      "pokemon_number": "61",
+      "card_name": "Recycle",
+      "base_name": "Recycle",
+      "variety": "",
+      "spec_id": 1939504,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 8,
+        "psa_6": 8,
+        "psa_7": 34,
+        "psa_8": 52,
+        "psa_9": 96,
+        "psa_10": 69,
+        "psa_total": 275
+      },
+      "grade_totals": {
+        "total": 278,
+        "grade_total": 275
+      }
+    },
+    {
+      "pokemon_number": "61",
+      "card_name": "Recycle-1999-2000 Copyright",
+      "base_name": "Recycle",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810806,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 15,
+        "psa_10": 6,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "61",
+      "card_name": "Recycle-1st Edition",
+      "base_name": "Recycle",
+      "variety": "1st Edition",
+      "spec_id": 1837501,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 7,
+        "psa_4": 9,
+        "psa_5": 31,
+        "psa_6": 47,
+        "psa_7": 107,
+        "psa_8": 286,
+        "psa_9": 899,
+        "psa_10": 610,
+        "psa_total": 1998
+      },
+      "grade_totals": {
+        "total": 2003,
+        "grade_total": 1998
+      }
+    },
+    {
+      "pokemon_number": "62",
+      "card_name": "Mysterious Fossil",
+      "base_name": "Mysterious Fossil",
+      "variety": "",
+      "spec_id": 1961606,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 10,
+        "psa_6": 26,
+        "psa_7": 32,
+        "psa_8": 59,
+        "psa_9": 82,
+        "psa_10": 80,
+        "psa_total": 293
+      },
+      "grade_totals": {
+        "total": 294,
+        "grade_total": 293
+      }
+    },
+    {
+      "pokemon_number": "62",
+      "card_name": "Mysterious Fossil-1999-2000 Copyright",
+      "base_name": "Mysterious Fossil",
+      "variety": "1999-2000 Copyright",
+      "spec_id": 4810807,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 13,
+        "psa_10": 2,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "62",
+      "card_name": "Mysterious Fossil-1st Edition",
+      "base_name": "Mysterious Fossil",
+      "variety": "1st Edition",
+      "spec_id": 1837504,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 15,
+        "psa_5": 24,
+        "psa_6": 57,
+        "psa_7": 100,
+        "psa_8": 273,
+        "psa_9": 830,
+        "psa_10": 557,
+        "psa_total": 1859
+      },
+      "grade_totals": {
+        "total": 1863,
+        "grade_total": 1859
+      }
+    }
+  ]
+}

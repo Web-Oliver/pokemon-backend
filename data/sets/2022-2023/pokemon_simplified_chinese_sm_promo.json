@@ -1,0 +1,56 @@
+{
+  "year": "2022-2023",
+  "set_name": "Pokemon Simplified Chinese SM Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2022-2023/pokemon-simplified-chinese-sm-promo/240518",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "18",
+      "card_name": "Mimikyu-Pokemon TCG Event Promo Pack B",
+      "base_name": "Mimikyu",
+      "variety": "Pokemon TCG Event Promo Pack B",
+      "spec_id": 8889911,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

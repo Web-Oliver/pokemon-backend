@@ -1,0 +1,80 @@
+{
+  "year": "2017",
+  "set_name": "Pokemon XY Breakthrough",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2017/pokemon-xy-breakthrough/246402",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Raikou-Holo-Cosmos-French-Pin Collection",
+      "base_name": "Raikou-Holo",
+      "variety": "Cosmos-French-Pin Collection",
+      "spec_id": 9380714,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Raikou-Holo-Cosmos-Italian-Sun & Moon Guardians Rising Blister",
+      "base_name": "Raikou-Holo",
+      "variety": "Cosmos-Italian-Sun & Moon Guardians Rising Blister",
+      "spec_id": 13496513,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

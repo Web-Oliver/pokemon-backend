@@ -1,0 +1,80 @@
+{
+  "year": "2017",
+  "set_name": "Pokemon Japanese XY Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2017/pokemon-japanese-xy-promo/142307",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 7,
+        "psa_6": 16,
+        "psa_7": 12,
+        "psa_8": 21,
+        "psa_9": 128,
+        "psa_10": 403,
+        "psa_total": 591
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 591
+      }
+    },
+    {
+      "pokemon_number": "277",
+      "card_name": "Giovanni's Scheme/Full Art-Team Rocket Special Case",
+      "base_name": "Giovanni's Scheme/Full Art",
+      "variety": "Team Rocket Special Case",
+      "spec_id": 2388235,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 5,
+        "psa_7": 7,
+        "psa_8": 9,
+        "psa_9": 37,
+        "psa_10": 201,
+        "psa_total": 266
+      },
+      "grade_totals": {
+        "total": 266,
+        "grade_total": 266
+      }
+    },
+    {
+      "pokemon_number": "278",
+      "card_name": "Full Art/Team Rocket-Team Rocket Special Case",
+      "base_name": "Full Art/Team Rocket",
+      "variety": "Team Rocket Special Case",
+      "spec_id": 2388236,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 11,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 91,
+        "psa_10": 202,
+        "psa_total": 325
+      },
+      "grade_totals": {
+        "total": 325,
+        "grade_total": 325
+      }
+    }
+  ]
+}

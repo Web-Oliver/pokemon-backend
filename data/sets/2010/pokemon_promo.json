@@ -1,0 +1,80 @@
+{
+  "year": "2010",
+  "set_name": "Pokemon Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2010/pokemon-promo/125448",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 8,
+        "psa_6": 10,
+        "psa_7": 28,
+        "psa_8": 47,
+        "psa_9": 92,
+        "psa_10": 9,
+        "psa_total": 194
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 194
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Victory Medal-Autumn Battle Road",
+      "base_name": "Victory Medal",
+      "variety": "Autumn Battle Road",
+      "spec_id": 2339938,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 9,
+        "psa_8": 18,
+        "psa_9": 66,
+        "psa_10": 7,
+        "psa_total": 103
+      },
+      "grade_totals": {
+        "total": 103,
+        "grade_total": 103
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Victory Medal-Spring Battle Road",
+      "base_name": "Victory Medal",
+      "variety": "Spring Battle Road",
+      "spec_id": 2390099,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 9,
+        "psa_7": 19,
+        "psa_8": 29,
+        "psa_9": 26,
+        "psa_10": 2,
+        "psa_total": 91
+      },
+      "grade_totals": {
+        "total": 92,
+        "grade_total": 91
+      }
+    }
+  ]
+}

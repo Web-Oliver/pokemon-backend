@@ -1,0 +1,80 @@
+{
+  "year": "1997",
+  "set_name": "Pokemon Japanese Toyota Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1997/pokemon-japanese-toyota-promo/63349",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 8,
+        "psa_4": 17,
+        "psa_5": 13,
+        "psa_6": 18,
+        "psa_7": 17,
+        "psa_8": 21,
+        "psa_9": 60,
+        "psa_10": 54,
+        "psa_total": 210
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 210
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Pikachu-Toyota Promo",
+      "base_name": "Pikachu",
+      "variety": "Toyota Promo",
+      "spec_id": 528062,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 8,
+        "psa_4": 17,
+        "psa_5": 13,
+        "psa_6": 17,
+        "psa_7": 17,
+        "psa_8": 21,
+        "psa_9": 55,
+        "psa_10": 44,
+        "psa_total": 194
+      },
+      "grade_totals": {
+        "total": 194,
+        "grade_total": 194
+      }
+    },
+    {
+      "pokemon_number": "59",
+      "card_name": "Arcanine",
+      "base_name": "Arcanine",
+      "variety": "",
+      "spec_id": 1828773,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 10,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    }
+  ]
+}

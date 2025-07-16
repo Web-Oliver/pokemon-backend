@@ -1,0 +1,80 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Game Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-game-promo/57938",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 37,
+        "psa_2": 36,
+        "psa_3": 76,
+        "psa_4": 113,
+        "psa_5": 140,
+        "psa_6": 145,
+        "psa_7": 183,
+        "psa_8": 335,
+        "psa_9": 474,
+        "psa_10": 94,
+        "psa_total": 1633
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1633
+      }
+    },
+    {
+      "pokemon_number": "50",
+      "card_name": "Kabuto-Top Deck Magazine w/Wizards Gold Stamp",
+      "base_name": "Kabuto",
+      "variety": "Top Deck Magazine w/Wizards Gold Stamp",
+      "spec_id": 527155,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 6,
+        "psa_3": 24,
+        "psa_4": 45,
+        "psa_5": 51,
+        "psa_6": 56,
+        "psa_7": 99,
+        "psa_8": 206,
+        "psa_9": 278,
+        "psa_10": 63,
+        "psa_total": 830
+      },
+      "grade_totals": {
+        "total": 835,
+        "grade_total": 830
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Pikachu-Australia Poketour",
+      "base_name": "Pikachu",
+      "variety": "Australia Poketour",
+      "spec_id": 883809,
+      "psa_grades": {
+        "psa_1": 35,
+        "psa_2": 30,
+        "psa_3": 52,
+        "psa_4": 68,
+        "psa_5": 89,
+        "psa_6": 89,
+        "psa_7": 84,
+        "psa_8": 129,
+        "psa_9": 196,
+        "psa_10": 31,
+        "psa_total": 803
+      },
+      "grade_totals": {
+        "total": 812,
+        "grade_total": 803
+      }
+    }
+  ]
+}

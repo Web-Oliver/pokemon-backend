@@ -1,0 +1,608 @@
+{
+  "year": "2020",
+  "set_name": "Pokemon SM Black Star Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2020/pokemon-sm-black-star-promo/176382",
+  "total_cards": 25,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 13,
+        "psa_2": 12,
+        "psa_3": 18,
+        "psa_4": 58,
+        "psa_5": 190,
+        "psa_6": 333,
+        "psa_7": 613,
+        "psa_8": 3929,
+        "psa_9": 8660,
+        "psa_10": 2175,
+        "psa_total": 16003
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 16003
+      }
+    },
+    {
+      "pokemon_number": "SM236",
+      "card_name": "Alolan Sandslash GX-GX Box",
+      "base_name": "Alolan Sandslash GX",
+      "variety": "GX Box",
+      "spec_id": 3545697,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 8,
+        "psa_6": 8,
+        "psa_7": 0,
+        "psa_8": 9,
+        "psa_9": 17,
+        "psa_10": 12,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    },
+    {
+      "pokemon_number": "SM236",
+      "card_name": "Alolan Sandslash GX-GX Box-Jumbo",
+      "base_name": "Alolan Sandslash GX",
+      "variety": "GX Box-Jumbo",
+      "spec_id": 4689358,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "SM237",
+      "card_name": "Folipurba-Tag Team Powers Collection-German",
+      "base_name": "Folipurba",
+      "variety": "Tag Team Powers Collection-German",
+      "spec_id": 8849654,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM237",
+      "card_name": "Leafeon-Tag Team Powers Collection",
+      "base_name": "Leafeon",
+      "variety": "Tag Team Powers Collection",
+      "spec_id": 3651585,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 78,
+        "psa_10": 26,
+        "psa_total": 120
+      },
+      "grade_totals": {
+        "total": 120,
+        "grade_total": 120
+      }
+    },
+    {
+      "pokemon_number": "SM238",
+      "card_name": "Glaceon-Tag Team Powers Collection",
+      "base_name": "Glaceon",
+      "variety": "Tag Team Powers Collection",
+      "spec_id": 3649980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 42,
+        "psa_10": 50,
+        "psa_total": 118
+      },
+      "grade_totals": {
+        "total": 118,
+        "grade_total": 118
+      }
+    },
+    {
+      "pokemon_number": "SM238",
+      "card_name": "Glaziola-Tag Team Powers Collection-German",
+      "base_name": "Glaziola",
+      "variety": "Tag Team Powers Collection-German",
+      "spec_id": 8849658,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM239",
+      "card_name": "Carracosta GX-Tag Team Powers Collection",
+      "base_name": "Carracosta GX",
+      "variety": "Tag Team Powers Collection",
+      "spec_id": 3625670,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 8,
+        "psa_8": 37,
+        "psa_9": 89,
+        "psa_10": 32,
+        "psa_total": 167
+      },
+      "grade_totals": {
+        "total": 169,
+        "grade_total": 167
+      }
+    },
+    {
+      "pokemon_number": "SM239",
+      "card_name": "Karippas GX-Tag Team Powers Collection-German",
+      "base_name": "Karippas GX",
+      "variety": "Tag Team Powers Collection-German",
+      "spec_id": 9151515,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "SM240",
+      "card_name": "Espeon & Deoxys GX-Tag Team Powers Collection",
+      "base_name": "Espeon & Deoxys GX",
+      "variety": "Tag Team Powers Collection",
+      "spec_id": 3116424,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 3,
+        "psa_3": 5,
+        "psa_4": 16,
+        "psa_5": 71,
+        "psa_6": 106,
+        "psa_7": 210,
+        "psa_8": 1399,
+        "psa_9": 3229,
+        "psa_10": 770,
+        "psa_total": 5816
+      },
+      "grade_totals": {
+        "total": 5838,
+        "grade_total": 5816
+      }
+    },
+    {
+      "pokemon_number": "SM240",
+      "card_name": "Espeon & Deoxys GX-Tag Team Powers Collection-Jumbo",
+      "base_name": "Espeon & Deoxys GX",
+      "variety": "Tag Team Powers Collection-Jumbo",
+      "spec_id": 4428664,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 7,
+        "psa_8": 22,
+        "psa_9": 10,
+        "psa_10": 5,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 48,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "SM240",
+      "card_name": "Espeon E Deoxys GX-Tag Team Powers Collection-Italian",
+      "base_name": "Espeon E Deoxys GX",
+      "variety": "Tag Team Powers Collection-Italian",
+      "spec_id": 8924249,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 28,
+        "psa_9": 39,
+        "psa_10": 4,
+        "psa_total": 81
+      },
+      "grade_totals": {
+        "total": 81,
+        "grade_total": 81
+      }
+    },
+    {
+      "pokemon_number": "SM240",
+      "card_name": "Full Art/Mentali ET Deoxys GX-GX Box-French",
+      "base_name": "Full Art/Mentali ET Deoxys GX",
+      "variety": "GX Box-French",
+      "spec_id": 8500141,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 33,
+        "psa_9": 41,
+        "psa_10": 15,
+        "psa_total": 96
+      },
+      "grade_totals": {
+        "total": 96,
+        "grade_total": 96
+      }
+    },
+    {
+      "pokemon_number": "SM240",
+      "card_name": "Psiana & Deoxys GX-Tag Team Powers Collection-German",
+      "base_name": "Psiana & Deoxys GX",
+      "variety": "Tag Team Powers Collection-German",
+      "spec_id": 7521287,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 27,
+        "psa_9": 34,
+        "psa_10": 5,
+        "psa_total": 69
+      },
+      "grade_totals": {
+        "total": 69,
+        "grade_total": 69
+      }
+    },
+    {
+      "pokemon_number": "SM241",
+      "card_name": "Nachtara & Darkrai GX-Tag Team Powers Collection-German",
+      "base_name": "Nachtara & Darkrai GX",
+      "variety": "Tag Team Powers Collection-German",
+      "spec_id": 7509059,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 29,
+        "psa_9": 40,
+        "psa_10": 9,
+        "psa_total": 82
+      },
+      "grade_totals": {
+        "total": 82,
+        "grade_total": 82
+      }
+    },
+    {
+      "pokemon_number": "SM241",
+      "card_name": "Noctali ET Darkrai GX-Tag Team Powers Collection-French",
+      "base_name": "Noctali ET Darkrai GX",
+      "variety": "Tag Team Powers Collection-French",
+      "spec_id": 7721800,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 27,
+        "psa_9": 47,
+        "psa_10": 4,
+        "psa_total": 85
+      },
+      "grade_totals": {
+        "total": 85,
+        "grade_total": 85
+      }
+    },
+    {
+      "pokemon_number": "SM241",
+      "card_name": "Umbreon & Darkrai GX-Tag Team Powers Collection",
+      "base_name": "Umbreon & Darkrai GX",
+      "variety": "Tag Team Powers Collection",
+      "spec_id": 3116420,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 9,
+        "psa_3": 11,
+        "psa_4": 29,
+        "psa_5": 72,
+        "psa_6": 150,
+        "psa_7": 271,
+        "psa_8": 1786,
+        "psa_9": 3784,
+        "psa_10": 900,
+        "psa_total": 7017
+      },
+      "grade_totals": {
+        "total": 7055,
+        "grade_total": 7017
+      }
+    },
+    {
+      "pokemon_number": "SM241",
+      "card_name": "Umbreon & Darkrai GX-Tag Team Powers Collection-Jumbo",
+      "base_name": "Umbreon & Darkrai GX",
+      "variety": "Tag Team Powers Collection-Jumbo",
+      "spec_id": 3603909,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 14,
+        "psa_8": 16,
+        "psa_9": 9,
+        "psa_10": 3,
+        "psa_total": 48
+      },
+      "grade_totals": {
+        "total": 48,
+        "grade_total": 48
+      }
+    },
+    {
+      "pokemon_number": "SM241",
+      "card_name": "Umbreon E Darkrai GX-Tag Team Powers Collection-Italian",
+      "base_name": "Umbreon E Darkrai GX",
+      "variety": "Tag Team Powers Collection-Italian",
+      "spec_id": 7773792,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 45,
+        "psa_9": 52,
+        "psa_10": 7,
+        "psa_total": 111
+      },
+      "grade_totals": {
+        "total": 112,
+        "grade_total": 111
+      }
+    },
+    {
+      "pokemon_number": "SM242",
+      "card_name": "Eevee GX-Tag Team Powers Collection",
+      "base_name": "Eevee GX",
+      "variety": "Tag Team Powers Collection",
+      "spec_id": 3287446,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 8,
+        "psa_5": 27,
+        "psa_6": 40,
+        "psa_7": 69,
+        "psa_8": 416,
+        "psa_9": 1048,
+        "psa_10": 305,
+        "psa_total": 1914
+      },
+      "grade_totals": {
+        "total": 1918,
+        "grade_total": 1914
+      }
+    },
+    {
+      "pokemon_number": "SM242",
+      "card_name": "Eevee GX-Tag Team Powers Collection-Italian",
+      "base_name": "Eevee GX",
+      "variety": "Tag Team Powers Collection-Italian",
+      "spec_id": 10561772,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "SM242",
+      "card_name": "Evoli GX-Tag Team Powers Collection-French",
+      "base_name": "Evoli GX",
+      "variety": "Tag Team Powers Collection-French",
+      "spec_id": 9961383,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "SM242",
+      "card_name": "Evoli GX-Tag Team Powers Collection-German",
+      "base_name": "Evoli GX",
+      "variety": "Tag Team Powers Collection-German",
+      "spec_id": 7521090,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "SM243",
+      "card_name": "Regigigas-Holo-Tag Team Powers Collection",
+      "base_name": "Regigigas-Holo",
+      "variety": "Tag Team Powers Collection",
+      "spec_id": 3389622,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 26,
+        "psa_9": 76,
+        "psa_10": 23,
+        "psa_total": 132
+      },
+      "grade_totals": {
+        "total": 132,
+        "grade_total": 132
+      }
+    },
+    {
+      "pokemon_number": "SM244",
+      "card_name": "Aipom-Pikachu & Zekrom-GX League Battle Deck",
+      "base_name": "Aipom",
+      "variety": "Pikachu & Zekrom-GX League Battle Deck",
+      "spec_id": 5661862,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    }
+  ]
+}

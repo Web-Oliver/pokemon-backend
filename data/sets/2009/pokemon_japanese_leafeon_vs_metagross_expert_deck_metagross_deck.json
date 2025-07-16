@@ -1,0 +1,344 @@
+{
+  "year": "2009",
+  "set_name": "Pokemon Japanese Leafeon VS Metagross Expert Deck: Metagross Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2009/pokemon-japanese-leafeon-vs-metagross-expert-deck/157307",
+  "total_cards": 14,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 27,
+        "psa_9": 89,
+        "psa_10": 294,
+        "psa_total": 422
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 422
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Misdreavus",
+      "base_name": "Misdreavus",
+      "variety": "",
+      "spec_id": 5186542,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 8,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Mismagius",
+      "base_name": "Mismagius",
+      "variety": "",
+      "spec_id": 5186543,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 11,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Beldum",
+      "base_name": "Beldum",
+      "variety": "",
+      "spec_id": 5186544,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 11,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Metang",
+      "base_name": "Metang",
+      "variety": "",
+      "spec_id": 5186545,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 12,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Metagross",
+      "base_name": "Metagross",
+      "variety": "",
+      "spec_id": 8266693,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 15,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Metagross-Holo",
+      "base_name": "Metagross-Holo",
+      "variety": "",
+      "spec_id": 2572169,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 25,
+        "psa_10": 63,
+        "psa_total": 97
+      },
+      "grade_totals": {
+        "total": 97,
+        "grade_total": 97
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Jirachi-Holo",
+      "base_name": "Jirachi-Holo",
+      "variety": "",
+      "spec_id": 2572174,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 14,
+        "psa_9": 44,
+        "psa_10": 133,
+        "psa_total": 196
+      },
+      "grade_totals": {
+        "total": 196,
+        "grade_total": 196
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Dunsparce",
+      "base_name": "Dunsparce",
+      "variety": "",
+      "spec_id": 5186546,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 7,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Rare Candy",
+      "base_name": "Rare Candy",
+      "variety": "",
+      "spec_id": 5186548,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Professor Elm's Training Method",
+      "base_name": "Professor Elm's Training Method",
+      "variety": "",
+      "spec_id": 5186550,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Emcee's Chatter",
+      "base_name": "Emcee's Chatter",
+      "variety": "",
+      "spec_id": 5186551,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 16,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Engineer's Adjustments",
+      "base_name": "Engineer's Adjustments",
+      "variety": "",
+      "spec_id": 5186552,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 11,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Judge",
+      "base_name": "Judge",
+      "variety": "",
+      "spec_id": 5186553,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 3,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    }
+  ]
+}

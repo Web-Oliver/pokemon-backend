@@ -1,0 +1,56 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Burger King Canada",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-burger-king-canada/262188",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Charizard-Perforated",
+      "base_name": "Charizard",
+      "variety": "Perforated",
+      "spec_id": 10516360,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    }
+  ]
+}

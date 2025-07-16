@@ -1,0 +1,1160 @@
+{
+  "year": "2004",
+  "set_name": "Pokemon Japanese Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2004/pokemon-japanese-promo/101747",
+  "total_cards": 48,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 21,
+        "psa_2": 20,
+        "psa_3": 28,
+        "psa_4": 75,
+        "psa_5": 166,
+        "psa_6": 192,
+        "psa_7": 243,
+        "psa_8": 551,
+        "psa_9": 1248,
+        "psa_10": 1611,
+        "psa_total": 4156
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 4156
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Blastoise-Corocoro Magazine",
+      "base_name": "Blastoise",
+      "variety": "Corocoro Magazine",
+      "spec_id": 1839524,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 4,
+        "psa_7": 20,
+        "psa_8": 25,
+        "psa_9": 46,
+        "psa_10": 37,
+        "psa_total": 140
+      },
+      "grade_totals": {
+        "total": 142,
+        "grade_total": 140
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Charizard-Battle Road Spring",
+      "base_name": "Charizard",
+      "variety": "Battle Road Spring",
+      "spec_id": 1855509,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 8,
+        "psa_6": 8,
+        "psa_7": 17,
+        "psa_8": 25,
+        "psa_9": 95,
+        "psa_10": 87,
+        "psa_total": 243
+      },
+      "grade_totals": {
+        "total": 243,
+        "grade_total": 243
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Venusaur-Corocoro Magazine",
+      "base_name": "Venusaur",
+      "variety": "Corocoro Magazine",
+      "spec_id": 2181381,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 4,
+        "psa_8": 10,
+        "psa_9": 19,
+        "psa_10": 66,
+        "psa_total": 106
+      },
+      "grade_totals": {
+        "total": 106,
+        "grade_total": 106
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Ivysaur-Pokemon Game Lottery",
+      "base_name": "Ivysaur",
+      "variety": "Pokemon Game Lottery",
+      "spec_id": 2177156,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 14,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Beautifly-Meiji Chocolate",
+      "base_name": "Beautifly",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291475,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 7,
+        "psa_10": 5,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Masquerain-Meiji Chocolate",
+      "base_name": "Masquerain",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291477,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 8,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Blaziken-Meiji Chocolate",
+      "base_name": "Blaziken",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2374333,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 1,
+        "psa_7": 7,
+        "psa_8": 5,
+        "psa_9": 12,
+        "psa_10": 14,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Surskit-Meiji Chocolate",
+      "base_name": "Surskit",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291478,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Plusle-Meiji Chocolate",
+      "base_name": "Plusle",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291479,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 14,
+        "psa_10": 17,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Minun-Meiji Chocolate",
+      "base_name": "Minun",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291480,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 18,
+        "psa_10": 15,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Deoxys-Meiji Chocolate",
+      "base_name": "Deoxys",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291481,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 6,
+        "psa_8": 9,
+        "psa_9": 22,
+        "psa_10": 21,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Torkoal-Meiji Chocolate",
+      "base_name": "Torkoal",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291482,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 7,
+        "psa_10": 10,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Swellow-Meiji Chocolate",
+      "base_name": "Swellow",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291483,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 7,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Rayquaza-Meiji Chocolate",
+      "base_name": "Rayquaza",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2135338,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 6,
+        "psa_6": 5,
+        "psa_7": 6,
+        "psa_8": 15,
+        "psa_9": 35,
+        "psa_10": 38,
+        "psa_total": 115
+      },
+      "grade_totals": {
+        "total": 115,
+        "grade_total": 115
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Murkrow-Meiji Chocolate",
+      "base_name": "Murkrow",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291484,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Metagross-Meiji Chocolate",
+      "base_name": "Metagross",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2291485,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 8,
+        "psa_10": 14,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Deoxys-Shogakukan Magazine",
+      "base_name": "Deoxys",
+      "variety": "Shogakukan Magazine",
+      "spec_id": 2291489,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 12,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Sky-Splittling Deoxys-Wonderland Magazine #2",
+      "base_name": "Sky-Splittling Deoxys",
+      "variety": "Wonderland Magazine #2",
+      "spec_id": 2291638,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 10,
+        "psa_10": 6,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Deoxys-Pokemon Festa",
+      "base_name": "Deoxys",
+      "variety": "Pokemon Festa",
+      "spec_id": 2291640,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 5,
+        "psa_7": 6,
+        "psa_8": 14,
+        "psa_9": 21,
+        "psa_10": 29,
+        "psa_total": 84
+      },
+      "grade_totals": {
+        "total": 84,
+        "grade_total": 84
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "LaRousse's Munchlax-Shogakukan Magazine",
+      "base_name": "LaRousse's Munchlax",
+      "variety": "Shogakukan Magazine",
+      "spec_id": 2369669,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 10,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Scramble Energy-Holo-Battle Road Summer",
+      "base_name": "Scramble Energy-Holo",
+      "variety": "Battle Road Summer",
+      "spec_id": 2291642,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 12,
+        "psa_10": 14,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Heal Energy-Holo-Battle Road Summer",
+      "base_name": "Heal Energy-Holo",
+      "variety": "Battle Road Summer",
+      "spec_id": 2291643,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 5,
+        "psa_10": 25,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Luvdisc",
+      "base_name": "Luvdisc",
+      "variety": "",
+      "spec_id": 2291644,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 6,
+        "psa_10": 22,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "024",
+      "card_name": "Pokemon Card Laboratory-Battle Road Summer",
+      "base_name": "Pokemon Card Laboratory",
+      "variety": "Battle Road Summer",
+      "spec_id": 2088609,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 6,
+        "psa_7": 7,
+        "psa_8": 29,
+        "psa_9": 37,
+        "psa_10": 96,
+        "psa_total": 185
+      },
+      "grade_totals": {
+        "total": 185,
+        "grade_total": 185
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Munchlax-Holo-Pokemon Center Tokyo",
+      "base_name": "Munchlax-Holo",
+      "variety": "Pokemon Center Tokyo",
+      "spec_id": 1945271,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 15,
+        "psa_9": 34,
+        "psa_10": 46,
+        "psa_total": 106
+      },
+      "grade_totals": {
+        "total": 106,
+        "grade_total": 106
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Rocket's Raikou EX-Battle Road Autumn",
+      "base_name": "Rocket's Raikou EX",
+      "variety": "Battle Road Autumn",
+      "spec_id": 2227782,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 6,
+        "psa_6": 7,
+        "psa_7": 17,
+        "psa_8": 32,
+        "psa_9": 75,
+        "psa_10": 29,
+        "psa_total": 172
+      },
+      "grade_totals": {
+        "total": 172,
+        "grade_total": 172
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Deoxys EX-Wonderland Magazine #4",
+      "base_name": "Deoxys EX",
+      "variety": "Wonderland Magazine #4",
+      "spec_id": 2291653,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 9,
+        "psa_9": 19,
+        "psa_10": 8,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "045",
+      "card_name": "Beldum-Shogakukan Elementary School Magazine",
+      "base_name": "Beldum",
+      "variety": "Shogakukan Elementary School Magazine",
+      "spec_id": 2581192,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 8,
+        "psa_10": 6,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "046",
+      "card_name": "Sceptile-McDonald's",
+      "base_name": "Sceptile",
+      "variety": "McDonald's",
+      "spec_id": 2066974,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 16,
+        "psa_10": 17,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "047",
+      "card_name": "Blaziken-McDonald's",
+      "base_name": "Blaziken",
+      "variety": "McDonald's",
+      "spec_id": 2066971,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 18,
+        "psa_10": 33,
+        "psa_total": 60
+      },
+      "grade_totals": {
+        "total": 60,
+        "grade_total": 60
+      }
+    },
+    {
+      "pokemon_number": "048",
+      "card_name": "Swampert-McDonald's",
+      "base_name": "Swampert",
+      "variety": "McDonald's",
+      "spec_id": 2066968,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 30,
+        "psa_10": 23,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "049",
+      "card_name": "Plusle-McDonald's",
+      "base_name": "Plusle",
+      "variety": "McDonald's",
+      "spec_id": 2066967,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 38,
+        "psa_10": 22,
+        "psa_total": 82
+      },
+      "grade_totals": {
+        "total": 82,
+        "grade_total": 82
+      }
+    },
+    {
+      "pokemon_number": "050",
+      "card_name": "Minun-McDonald's",
+      "base_name": "Minun",
+      "variety": "McDonald's",
+      "spec_id": 2066965,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 1,
+        "psa_8": 16,
+        "psa_9": 47,
+        "psa_10": 30,
+        "psa_total": 102
+      },
+      "grade_totals": {
+        "total": 102,
+        "grade_total": 102
+      }
+    },
+    {
+      "pokemon_number": "051",
+      "card_name": "Bulbasaur-Meiji Chocolate",
+      "base_name": "Bulbasaur",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2099917,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 9,
+        "psa_7": 10,
+        "psa_8": 17,
+        "psa_9": 35,
+        "psa_10": 61,
+        "psa_total": 142
+      },
+      "grade_totals": {
+        "total": 143,
+        "grade_total": 142
+      }
+    },
+    {
+      "pokemon_number": "052",
+      "card_name": "Charmander-Meiji Chocolate",
+      "base_name": "Charmander",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2099901,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 10,
+        "psa_7": 6,
+        "psa_8": 14,
+        "psa_9": 50,
+        "psa_10": 70,
+        "psa_total": 162
+      },
+      "grade_totals": {
+        "total": 162,
+        "grade_total": 162
+      }
+    },
+    {
+      "pokemon_number": "053",
+      "card_name": "Charmeleon-Meiji Chocolate",
+      "base_name": "Charmeleon",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2070917,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 7,
+        "psa_7": 7,
+        "psa_8": 17,
+        "psa_9": 28,
+        "psa_10": 65,
+        "psa_total": 135
+      },
+      "grade_totals": {
+        "total": 135,
+        "grade_total": 135
+      }
+    },
+    {
+      "pokemon_number": "054",
+      "card_name": "Charizard-Meiji Chocolate",
+      "base_name": "Charizard",
+      "variety": "Meiji Chocolate",
+      "spec_id": 1855503,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 4,
+        "psa_3": 5,
+        "psa_4": 14,
+        "psa_5": 21,
+        "psa_6": 28,
+        "psa_7": 32,
+        "psa_8": 80,
+        "psa_9": 105,
+        "psa_10": 171,
+        "psa_total": 469
+      },
+      "grade_totals": {
+        "total": 469,
+        "grade_total": 469
+      }
+    },
+    {
+      "pokemon_number": "055",
+      "card_name": "Squirtle-Meiji Chocolate",
+      "base_name": "Squirtle",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2070916,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 11,
+        "psa_6": 13,
+        "psa_7": 8,
+        "psa_8": 25,
+        "psa_9": 58,
+        "psa_10": 70,
+        "psa_total": 190
+      },
+      "grade_totals": {
+        "total": 190,
+        "grade_total": 190
+      }
+    },
+    {
+      "pokemon_number": "056",
+      "card_name": "Psyduck-Meiji Chocolate",
+      "base_name": "Psyduck",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2632314,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 7,
+        "psa_7": 5,
+        "psa_8": 13,
+        "psa_9": 40,
+        "psa_10": 41,
+        "psa_total": 114
+      },
+      "grade_totals": {
+        "total": 114,
+        "grade_total": 114
+      }
+    },
+    {
+      "pokemon_number": "057",
+      "card_name": "Pikachu-Meiji Chocolate",
+      "base_name": "Pikachu",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2099910,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 9,
+        "psa_6": 12,
+        "psa_7": 12,
+        "psa_8": 33,
+        "psa_9": 77,
+        "psa_10": 124,
+        "psa_total": 271
+      },
+      "grade_totals": {
+        "total": 271,
+        "grade_total": 271
+      }
+    },
+    {
+      "pokemon_number": "058",
+      "card_name": "Raichu-Meiji Chocolate",
+      "base_name": "Raichu",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2070915,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 5,
+        "psa_6": 6,
+        "psa_7": 4,
+        "psa_8": 10,
+        "psa_9": 40,
+        "psa_10": 62,
+        "psa_total": 134
+      },
+      "grade_totals": {
+        "total": 134,
+        "grade_total": 134
+      }
+    },
+    {
+      "pokemon_number": "059",
+      "card_name": "Slowpoke-Meiji Chocolate",
+      "base_name": "Slowpoke",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2064715,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 3,
+        "psa_7": 5,
+        "psa_8": 8,
+        "psa_9": 25,
+        "psa_10": 31,
+        "psa_total": 82
+      },
+      "grade_totals": {
+        "total": 82,
+        "grade_total": 82
+      }
+    },
+    {
+      "pokemon_number": "060",
+      "card_name": "Cubone-Meiji Chocolate",
+      "base_name": "Cubone",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2311108,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 17,
+        "psa_10": 28,
+        "psa_total": 59
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 59
+      }
+    },
+    {
+      "pokemon_number": "061",
+      "card_name": "Jigglypuff-Meiji Chocolate",
+      "base_name": "Jigglypuff",
+      "variety": "Meiji Chocolate",
+      "spec_id": 1828636,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 12,
+        "psa_9": 17,
+        "psa_10": 31,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "062",
+      "card_name": "Meowth-Meiji Chocolate",
+      "base_name": "Meowth",
+      "variety": "Meiji Chocolate",
+      "spec_id": 2070759,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 13,
+        "psa_9": 19,
+        "psa_10": 33,
+        "psa_total": 80
+      },
+      "grade_totals": {
+        "total": 80,
+        "grade_total": 80
+      }
+    },
+    {
+      "pokemon_number": "063",
+      "card_name": "Metang-World Hobby Fair",
+      "base_name": "Metang",
+      "variety": "World Hobby Fair",
+      "spec_id": 2429924,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 9,
+        "psa_10": 23,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poke Dude-Daisuki Club",
+      "base_name": "Poke Dude",
+      "variety": "Daisuki Club",
+      "spec_id": 1943095,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 3,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 8,
+        "psa_6": 8,
+        "psa_7": 13,
+        "psa_8": 15,
+        "psa_9": 18,
+        "psa_10": 9,
+        "psa_total": 83
+      },
+      "grade_totals": {
+        "total": 83,
+        "grade_total": 83
+      }
+    }
+  ]
+}

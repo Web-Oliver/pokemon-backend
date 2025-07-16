@@ -1,0 +1,1184 @@
+{
+  "year": "2000",
+  "set_name": "Pokemon Japanese Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2000/pokemon-japanese-promo/102673",
+  "total_cards": 49,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 13,
+        "psa_2": 15,
+        "psa_3": 44,
+        "psa_4": 99,
+        "psa_5": 226,
+        "psa_6": 323,
+        "psa_7": 367,
+        "psa_8": 798,
+        "psa_9": 2086,
+        "psa_10": 963,
+        "psa_total": 4949
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 4949
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Bulbasaur-Teach Set-Jumbo",
+      "base_name": "Bulbasaur",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9368862,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Charizard-Corocoro English Jumbo",
+      "base_name": "Charizard",
+      "variety": "Corocoro English Jumbo",
+      "spec_id": 2378805,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 8,
+        "psa_3": 11,
+        "psa_4": 29,
+        "psa_5": 48,
+        "psa_6": 58,
+        "psa_7": 52,
+        "psa_8": 63,
+        "psa_9": 8,
+        "psa_10": 0,
+        "psa_total": 283
+      },
+      "grade_totals": {
+        "total": 286,
+        "grade_total": 283
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Pikachu-French Glossy- Gotta Magazine",
+      "base_name": "Pikachu",
+      "variety": "French Glossy- Gotta Magazine",
+      "spec_id": 2436189,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 6,
+        "psa_8": 13,
+        "psa_9": 37,
+        "psa_10": 3,
+        "psa_total": 70
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 70
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Mew-English Glossy-Gotta Magazine",
+      "base_name": "Mew",
+      "variety": "English Glossy-Gotta Magazine",
+      "spec_id": 2386290,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 8,
+        "psa_7": 6,
+        "psa_8": 25,
+        "psa_9": 40,
+        "psa_10": 16,
+        "psa_total": 102
+      },
+      "grade_totals": {
+        "total": 102,
+        "grade_total": 102
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Meowth-Pokemon Stamp Rally",
+      "base_name": "Meowth",
+      "variety": "Pokemon Stamp Rally",
+      "spec_id": 2225667,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 9,
+        "psa_5": 16,
+        "psa_6": 23,
+        "psa_7": 13,
+        "psa_8": 16,
+        "psa_9": 14,
+        "psa_10": 21,
+        "psa_total": 116
+      },
+      "grade_totals": {
+        "total": 116,
+        "grade_total": 116
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Squirtle-Teach Set-Jumbo",
+      "base_name": "Squirtle",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500306,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Pikachu-Teach Set-Jumbo",
+      "base_name": "Pikachu",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500310,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Nidoran-Teach Set-Jumbo",
+      "base_name": "Nidoran",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500299,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Jynx-Teach Set-Jumbo",
+      "base_name": "Jynx",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500296,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Growlithe-Teach Set-Jumbo",
+      "base_name": "Growlithe",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500314,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "74",
+      "card_name": "Geodude-Teach Set-Jumbo",
+      "base_name": "Geodude",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500303,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "84",
+      "card_name": "Doduo-Teach Set-Jumbo",
+      "base_name": "Doduo",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500290,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "124",
+      "card_name": "Jynx-Natta Wake Vol. 3",
+      "base_name": "Jynx",
+      "variety": "Natta Wake Vol. 3",
+      "spec_id": 1908148,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 7,
+        "psa_4": 13,
+        "psa_5": 38,
+        "psa_6": 48,
+        "psa_7": 27,
+        "psa_8": 29,
+        "psa_9": 83,
+        "psa_10": 68,
+        "psa_total": 314
+      },
+      "grade_totals": {
+        "total": 314,
+        "grade_total": 314
+      }
+    },
+    {
+      "pokemon_number": "133",
+      "card_name": "Eevee-Holo-500 PT. Fan Club",
+      "base_name": "Eevee-Holo",
+      "variety": "500 PT. Fan Club",
+      "spec_id": 666051,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 10,
+        "psa_6": 13,
+        "psa_7": 14,
+        "psa_8": 35,
+        "psa_9": 235,
+        "psa_10": 79,
+        "psa_total": 393
+      },
+      "grade_totals": {
+        "total": 395,
+        "grade_total": 393
+      }
+    },
+    {
+      "pokemon_number": "137",
+      "card_name": "Porygon-Holo-Promo-700 PT. Fan Club",
+      "base_name": "Porygon-Holo",
+      "variety": "Promo-700 PT. Fan Club",
+      "spec_id": 666052,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 13,
+        "psa_6": 21,
+        "psa_7": 34,
+        "psa_8": 68,
+        "psa_9": 237,
+        "psa_10": 90,
+        "psa_total": 469
+      },
+      "grade_totals": {
+        "total": 472,
+        "grade_total": 469
+      }
+    },
+    {
+      "pokemon_number": "152",
+      "card_name": "Chikorita-Champion Road 2000",
+      "base_name": "Chikorita",
+      "variety": "Champion Road 2000",
+      "spec_id": 1948691,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 6,
+        "psa_7": 9,
+        "psa_8": 22,
+        "psa_9": 55,
+        "psa_10": 24,
+        "psa_total": 122
+      },
+      "grade_totals": {
+        "total": 122,
+        "grade_total": 122
+      }
+    },
+    {
+      "pokemon_number": "152",
+      "card_name": "Chikorita-World Hobby Fair",
+      "base_name": "Chikorita",
+      "variety": "World Hobby Fair",
+      "spec_id": 1975479,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 5,
+        "psa_7": 9,
+        "psa_8": 23,
+        "psa_9": 76,
+        "psa_10": 53,
+        "psa_total": 166
+      },
+      "grade_totals": {
+        "total": 166,
+        "grade_total": 166
+      }
+    },
+    {
+      "pokemon_number": "155",
+      "card_name": "Cyndaquil-Champion Road 2000",
+      "base_name": "Cyndaquil",
+      "variety": "Champion Road 2000",
+      "spec_id": 1948693,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 5,
+        "psa_7": 12,
+        "psa_8": 19,
+        "psa_9": 60,
+        "psa_10": 23,
+        "psa_total": 125
+      },
+      "grade_totals": {
+        "total": 125,
+        "grade_total": 125
+      }
+    },
+    {
+      "pokemon_number": "155",
+      "card_name": "Cyndaquil-World Hobby Fair",
+      "base_name": "Cyndaquil",
+      "variety": "World Hobby Fair",
+      "spec_id": 1975481,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 17,
+        "psa_9": 72,
+        "psa_10": 62,
+        "psa_total": 164
+      },
+      "grade_totals": {
+        "total": 164,
+        "grade_total": 164
+      }
+    },
+    {
+      "pokemon_number": "158",
+      "card_name": "Totodile-Champion Road 2000",
+      "base_name": "Totodile",
+      "variety": "Champion Road 2000",
+      "spec_id": 1948697,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 10,
+        "psa_8": 18,
+        "psa_9": 56,
+        "psa_10": 23,
+        "psa_total": 117
+      },
+      "grade_totals": {
+        "total": 117,
+        "grade_total": 117
+      }
+    },
+    {
+      "pokemon_number": "158",
+      "card_name": "Totodile-World Hobby Fair",
+      "base_name": "Totodile",
+      "variety": "World Hobby Fair",
+      "spec_id": 1975486,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 6,
+        "psa_7": 6,
+        "psa_8": 18,
+        "psa_9": 78,
+        "psa_10": 48,
+        "psa_total": 156
+      },
+      "grade_totals": {
+        "total": 156,
+        "grade_total": 156
+      }
+    },
+    {
+      "pokemon_number": "161",
+      "card_name": "Sentret-Teach Set-Jumbo",
+      "base_name": "Sentret",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500294,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "174",
+      "card_name": "Igglybuff-2000 Movie Promo-Glossy",
+      "base_name": "Igglybuff",
+      "variety": "2000 Movie Promo-Glossy",
+      "spec_id": 2177095,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 23,
+        "psa_7": 23,
+        "psa_8": 45,
+        "psa_9": 76,
+        "psa_10": 40,
+        "psa_total": 216
+      },
+      "grade_totals": {
+        "total": 216,
+        "grade_total": 216
+      }
+    },
+    {
+      "pokemon_number": "185",
+      "card_name": "Sudowoodo-Teach Set-Jumbo",
+      "base_name": "Sudowoodo",
+      "variety": "Teach Set-Jumbo",
+      "spec_id": 9500298,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "191",
+      "card_name": "Sunkern-Natta Wake Vol. 4",
+      "base_name": "Sunkern",
+      "variety": "Natta Wake Vol. 4",
+      "spec_id": 1908151,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 14,
+        "psa_6": 15,
+        "psa_7": 22,
+        "psa_8": 46,
+        "psa_9": 109,
+        "psa_10": 89,
+        "psa_total": 302
+      },
+      "grade_totals": {
+        "total": 302,
+        "grade_total": 302
+      }
+    },
+    {
+      "pokemon_number": "200",
+      "card_name": "Misdreavus-Trainer Magazine",
+      "base_name": "Misdreavus",
+      "variety": "Trainer Magazine",
+      "spec_id": 1839347,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 1,
+        "psa_7": 9,
+        "psa_8": 16,
+        "psa_9": 38,
+        "psa_10": 32,
+        "psa_total": 100
+      },
+      "grade_totals": {
+        "total": 100,
+        "grade_total": 100
+      }
+    },
+    {
+      "pokemon_number": "201",
+      "card_name": "Unown J-Trainer Magazine",
+      "base_name": "Unown J",
+      "variety": "Trainer Magazine",
+      "spec_id": 1975450,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 8,
+        "psa_6": 6,
+        "psa_7": 4,
+        "psa_8": 12,
+        "psa_9": 49,
+        "psa_10": 14,
+        "psa_total": 93
+      },
+      "grade_totals": {
+        "total": 93,
+        "grade_total": 93
+      }
+    },
+    {
+      "pokemon_number": "208",
+      "card_name": "Steelix-Holo-Trainer Magazine",
+      "base_name": "Steelix-Holo",
+      "variety": "Trainer Magazine",
+      "spec_id": 1975475,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 2,
+        "psa_5": 19,
+        "psa_6": 32,
+        "psa_7": 34,
+        "psa_8": 201,
+        "psa_9": 452,
+        "psa_10": 105,
+        "psa_total": 850
+      },
+      "grade_totals": {
+        "total": 858,
+        "grade_total": 850
+      }
+    },
+    {
+      "pokemon_number": "235",
+      "card_name": "Smeargle-Trainer Magazine",
+      "base_name": "Smeargle",
+      "variety": "Trainer Magazine",
+      "spec_id": 1964885,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 10,
+        "psa_7": 9,
+        "psa_8": 14,
+        "psa_9": 68,
+        "psa_10": 29,
+        "psa_total": 138
+      },
+      "grade_totals": {
+        "total": 138,
+        "grade_total": 138
+      }
+    },
+    {
+      "pokemon_number": "237",
+      "card_name": "Hitmontop-2000 Movie Promo-Glossy",
+      "base_name": "Hitmontop",
+      "variety": "2000 Movie Promo-Glossy",
+      "spec_id": 2066348,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 8,
+        "psa_7": 22,
+        "psa_8": 42,
+        "psa_9": 80,
+        "psa_10": 35,
+        "psa_total": 200
+      },
+      "grade_totals": {
+        "total": 200,
+        "grade_total": 200
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fruit of Healing-Trainer-Champion Road 2000",
+      "base_name": "Fruit of Healing",
+      "variety": "Trainer-Champion Road 2000",
+      "spec_id": 666048,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 9,
+        "psa_6": 9,
+        "psa_7": 16,
+        "psa_8": 17,
+        "psa_9": 80,
+        "psa_10": 50,
+        "psa_total": 184
+      },
+      "grade_totals": {
+        "total": 187,
+        "grade_total": 184
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fruit of Miracle-Trainer-Champion Road 2000",
+      "base_name": "Fruit of Miracle",
+      "variety": "Trainer-Champion Road 2000",
+      "spec_id": 666049,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 7,
+        "psa_7": 10,
+        "psa_8": 25,
+        "psa_9": 69,
+        "psa_10": 54,
+        "psa_total": 173
+      },
+      "grade_totals": {
+        "total": 174,
+        "grade_total": 173
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "New Century Present-Special Card-Fan Club Jumbo",
+      "base_name": "New Century Present",
+      "variety": "Special Card-Fan Club Jumbo",
+      "spec_id": 2780998,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "New Year Present-Special Card-Fan Club Jumbo",
+      "base_name": "New Year Present",
+      "variety": "Special Card-Fan Club Jumbo",
+      "spec_id": 2539818,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-W.C. Secret Super Battle",
+      "base_name": "No. 1 Trainer",
+      "variety": "W.C. Secret Super Battle",
+      "spec_id": 2771303,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-World Challenge Secret Super Battle Best in Japan Decisive Battle",
+      "base_name": "No. 1 Trainer",
+      "variety": "World Challenge Secret Super Battle Best in Japan Decisive Battle",
+      "spec_id": 9960332,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-World Challenge Tropical Mega Battle",
+      "base_name": "No. 1 Trainer",
+      "variety": "World Challenge Tropical Mega Battle",
+      "spec_id": 2780665,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-World Challenge Tropical Mega Battle-Chubu",
+      "base_name": "No. 1 Trainer",
+      "variety": "World Challenge Tropical Mega Battle-Chubu",
+      "spec_id": 6050719,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-World Challenge Tropical Mega Battle-Hokkaido",
+      "base_name": "No. 1 Trainer",
+      "variety": "World Challenge Tropical Mega Battle-Hokkaido",
+      "spec_id": 4041962,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Champion Road Mega Battle",
+      "base_name": "No. 2 Trainer",
+      "variety": "Champion Road Mega Battle",
+      "spec_id": 9930702,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-W.C. Secret Super Battle",
+      "base_name": "No. 2 Trainer",
+      "variety": "W.C. Secret Super Battle",
+      "spec_id": 1934097,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-World Challenge Secret Super Battle Best in Japan Decisive Battle",
+      "base_name": "No. 2 Trainer",
+      "variety": "World Challenge Secret Super Battle Best in Japan Decisive Battle",
+      "spec_id": 9960268,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-World Challenge Tropical Mega Battle",
+      "base_name": "No. 2 Trainer",
+      "variety": "World Challenge Tropical Mega Battle",
+      "spec_id": 2253150,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-W.C. Secret Super Battle",
+      "base_name": "No. 3 Trainer",
+      "variety": "W.C. Secret Super Battle",
+      "spec_id": 2165996,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-World Challenge Secret Super Battle Best in Japan Decisive Battle",
+      "base_name": "No. 3 Trainer",
+      "variety": "World Challenge Secret Super Battle Best in Japan Decisive Battle",
+      "spec_id": 9515301,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-World Challenge Tropical Mega Battle",
+      "base_name": "No. 3 Trainer",
+      "variety": "World Challenge Tropical Mega Battle",
+      "spec_id": 2771299,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-World Challenge Tropical Mega Battle-Tohoku",
+      "base_name": "No. 3 Trainer",
+      "variety": "World Challenge Tropical Mega Battle-Tohoku",
+      "spec_id": 11800529,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Holo-World Challenge Tropical Mega Battle-National",
+      "base_name": "No. 3 Trainer-Holo",
+      "variety": "World Challenge Tropical Mega Battle-National",
+      "spec_id": 4049154,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

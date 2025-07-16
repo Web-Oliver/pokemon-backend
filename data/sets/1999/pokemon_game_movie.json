@@ -1,0 +1,224 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Game Movie",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-game-movie/57927",
+  "total_cards": 9,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 176,
+        "psa_2": 211,
+        "psa_3": 366,
+        "psa_4": 941,
+        "psa_5": 2112,
+        "psa_6": 2846,
+        "psa_7": 2964,
+        "psa_8": 6052,
+        "psa_9": 11056,
+        "psa_10": 3997,
+        "psa_total": 30729
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 30729
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Electabuzz-Movie Promo",
+      "base_name": "Electabuzz",
+      "variety": "Movie Promo",
+      "spec_id": 525146,
+      "psa_grades": {
+        "psa_1": 26,
+        "psa_2": 27,
+        "psa_3": 54,
+        "psa_4": 152,
+        "psa_5": 377,
+        "psa_6": 547,
+        "psa_7": 516,
+        "psa_8": 1133,
+        "psa_9": 2194,
+        "psa_10": 859,
+        "psa_total": 5886
+      },
+      "grade_totals": {
+        "total": 5903,
+        "grade_total": 5886
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Electabuzz-Movie Promo-Inverted Stamp",
+      "base_name": "Electabuzz",
+      "variety": "Movie Promo-Inverted Stamp",
+      "spec_id": 8388946,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Mewtwo-Movie Promo",
+      "base_name": "Mewtwo",
+      "variety": "Movie Promo",
+      "spec_id": 525147,
+      "psa_grades": {
+        "psa_1": 50,
+        "psa_2": 70,
+        "psa_3": 99,
+        "psa_4": 260,
+        "psa_5": 560,
+        "psa_6": 750,
+        "psa_7": 769,
+        "psa_8": 1442,
+        "psa_9": 2831,
+        "psa_10": 983,
+        "psa_total": 7818
+      },
+      "grade_totals": {
+        "total": 7843,
+        "grade_total": 7818
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Mewtwo-Movie Promo-Inverted Stamp",
+      "base_name": "Mewtwo",
+      "variety": "Movie Promo-Inverted Stamp",
+      "spec_id": 8388947,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Pikachu-Movie Promo",
+      "base_name": "Pikachu",
+      "variety": "Movie Promo",
+      "spec_id": 525148,
+      "psa_grades": {
+        "psa_1": 41,
+        "psa_2": 47,
+        "psa_3": 92,
+        "psa_4": 248,
+        "psa_5": 576,
+        "psa_6": 739,
+        "psa_7": 758,
+        "psa_8": 1646,
+        "psa_9": 2841,
+        "psa_10": 1088,
+        "psa_total": 8076
+      },
+      "grade_totals": {
+        "total": 8099,
+        "grade_total": 8076
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Pikachu-Movie Promo-Inverted Stamp",
+      "base_name": "Pikachu",
+      "variety": "Movie Promo-Inverted Stamp",
+      "spec_id": 8388948,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Dragonite-Movie Promo",
+      "base_name": "Dragonite",
+      "variety": "Movie Promo",
+      "spec_id": 525149,
+      "psa_grades": {
+        "psa_1": 57,
+        "psa_2": 67,
+        "psa_3": 118,
+        "psa_4": 279,
+        "psa_5": 596,
+        "psa_6": 803,
+        "psa_7": 919,
+        "psa_8": 1831,
+        "psa_9": 3185,
+        "psa_10": 1066,
+        "psa_total": 8923
+      },
+      "grade_totals": {
+        "total": 8961,
+        "grade_total": 8923
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Dragonite-Movie Promo-Inverted Stamp",
+      "base_name": "Dragonite",
+      "variety": "Movie Promo-Inverted Stamp",
+      "spec_id": 8388949,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

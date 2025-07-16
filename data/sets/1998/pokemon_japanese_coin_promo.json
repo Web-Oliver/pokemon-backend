@@ -1,0 +1,176 @@
+{
+  "year": "1998",
+  "set_name": "Pokemon Japanese Coin Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1998/pokemon-japanese-coin-promo/161655",
+  "total_cards": 7,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 12,
+        "psa_8": 22,
+        "psa_9": 89,
+        "psa_10": 121,
+        "psa_total": 247
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 247
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Chansey-Quick Starter Gift Set-Green",
+      "base_name": "Chansey",
+      "variety": "Quick Starter Gift Set-Green",
+      "spec_id": 4051787,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 2,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Chansey-Quick Starter Gift Set-Red",
+      "base_name": "Chansey",
+      "variety": "Quick Starter Gift Set-Red",
+      "spec_id": 3234210,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 2,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Gloom-Tammshi. Gym",
+      "base_name": "Gloom",
+      "variety": "Tammshi. Gym",
+      "spec_id": 2687445,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 20,
+        "psa_10": 31,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 62,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Onix-Nivi City Gym",
+      "base_name": "Onix",
+      "variety": "Nivi City Gym",
+      "spec_id": 2686216,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 14,
+        "psa_10": 38,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Raichu-Kuchiba City Gym",
+      "base_name": "Raichu",
+      "variety": "Kuchiba City Gym",
+      "spec_id": 2686278,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 15,
+        "psa_10": 21,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Starmie-Hanada City Gym",
+      "base_name": "Starmie",
+      "variety": "Hanada City Gym",
+      "spec_id": 2658960,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 23,
+        "psa_10": 27,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    }
+  ]
+}

@@ -1,0 +1,1280 @@
+{
+  "year": "2022-2023",
+  "set_name": "Pokemon Play! Pokemon Prize Pack",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2022-2023/pokemon-play-prize-pack/266098",
+  "total_cards": 111,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 8,
+        "psa_7": 41,
+        "psa_8": 422,
+        "psa_9": 689,
+        "psa_10": 117,
+        "psa_total": 1284
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1284
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Kricketune V",
+      "base_name": "Kricketune V",
+      "variety": "",
+      "spec_id": 12554748,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Leafeon V",
+      "base_name": "Leafeon V",
+      "variety": "",
+      "spec_id": 10844780,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 18,
+        "psa_9": 14,
+        "psa_10": 1,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Full Art/Leafeon Vmax",
+      "base_name": "Full Art/Leafeon Vmax",
+      "variety": "",
+      "spec_id": 10845159,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 20,
+        "psa_9": 20,
+        "psa_10": 3,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Full Art/Flareon Vmax",
+      "base_name": "Full Art/Flareon Vmax",
+      "variety": "",
+      "spec_id": 12542784,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 15,
+        "psa_9": 20,
+        "psa_10": 2,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Full Art/Vaporeon Vmax",
+      "base_name": "Full Art/Vaporeon Vmax",
+      "variety": "",
+      "spec_id": 12542781,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 15,
+        "psa_9": 20,
+        "psa_10": 4,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "031",
+      "card_name": "Suicune V",
+      "base_name": "Suicune V",
+      "variety": "",
+      "spec_id": 12554753,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 9,
+        "psa_10": 2,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "040",
+      "card_name": "Glaceon V",
+      "base_name": "Glaceon V",
+      "variety": "",
+      "spec_id": 12554744,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 25,
+        "psa_10": 3,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "041",
+      "card_name": "Full Art/Glaceon Vmax",
+      "base_name": "Full Art/Glaceon Vmax",
+      "variety": "",
+      "spec_id": 12542793,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 26,
+        "psa_10": 2,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "043",
+      "card_name": "Inteleon-Holo",
+      "base_name": "Inteleon-Holo",
+      "variety": "",
+      "spec_id": 12554711,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "045",
+      "card_name": "Ice Rider Calyrex V",
+      "base_name": "Ice Rider Calyrex V",
+      "variety": "",
+      "spec_id": 12554746,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "046",
+      "card_name": "Full Art/Ice Rider Calyrex Vmax",
+      "base_name": "Full Art/Ice Rider Calyrex Vmax",
+      "variety": "",
+      "spec_id": 10845162,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "051",
+      "card_name": "Full Art/Jolteon Vmax",
+      "base_name": "Full Art/Jolteon Vmax",
+      "variety": "",
+      "spec_id": 12542774,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 20,
+        "psa_9": 23,
+        "psa_10": 5,
+        "psa_total": 48
+      },
+      "grade_totals": {
+        "total": 48,
+        "grade_total": 48
+      }
+    },
+    {
+      "pokemon_number": "055",
+      "card_name": "Flaaffy-Holo",
+      "base_name": "Flaaffy-Holo",
+      "variety": "",
+      "spec_id": 12554710,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 3,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "058",
+      "card_name": "Galarian Articuno V",
+      "base_name": "Galarian Articuno V",
+      "variety": "",
+      "spec_id": 12554740,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 6,
+        "psa_10": 1,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "063",
+      "card_name": "Galarian Articuno",
+      "base_name": "Galarian Articuno",
+      "variety": "",
+      "spec_id": 12554739,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "064",
+      "card_name": "Espeon V",
+      "base_name": "Espeon V",
+      "variety": "",
+      "spec_id": 12554737,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 24,
+        "psa_9": 26,
+        "psa_10": 2,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "065",
+      "card_name": "Full Art/Espeon Vmax",
+      "base_name": "Full Art/Espeon Vmax",
+      "variety": "",
+      "spec_id": 12542791,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 15,
+        "psa_9": 39,
+        "psa_10": 5,
+        "psa_total": 60
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 60
+      }
+    },
+    {
+      "pokemon_number": "070",
+      "card_name": "Malamar-Holo",
+      "base_name": "Malamar-Holo",
+      "variety": "",
+      "spec_id": 12554712,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "074",
+      "card_name": "Shadow Rider Calyrex V",
+      "base_name": "Shadow Rider Calyrex V",
+      "variety": "",
+      "spec_id": 12554751,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "074",
+      "card_name": "Sylveon V",
+      "base_name": "Sylveon V",
+      "variety": "",
+      "spec_id": 12554754,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 15,
+        "psa_9": 16,
+        "psa_10": 6,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "075",
+      "card_name": "Full Art/Feelinara Vmax",
+      "base_name": "Full Art/Feelinara Vmax",
+      "variety": "",
+      "spec_id": 13401688,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "075",
+      "card_name": "Full Art/Shadow Rider Calyrex Vmax",
+      "base_name": "Full Art/Shadow Rider Calyrex Vmax",
+      "variety": "",
+      "spec_id": 12554729,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 10,
+        "psa_10": 0,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "075",
+      "card_name": "Full Art/Sylveon Vmax",
+      "base_name": "Full Art/Sylveon Vmax",
+      "variety": "",
+      "spec_id": 12542795,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 13,
+        "psa_9": 32,
+        "psa_10": 5,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "080",
+      "card_name": "Galarian Zapdos V",
+      "base_name": "Galarian Zapdos V",
+      "variety": "",
+      "spec_id": 12553427,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "082",
+      "card_name": "Galarian Zapdos",
+      "base_name": "Galarian Zapdos",
+      "variety": "",
+      "spec_id": 12553430,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "085",
+      "card_name": "Single Strike Urshifu V",
+      "base_name": "Single Strike Urshifu V",
+      "variety": "",
+      "spec_id": 12554752,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "086",
+      "card_name": "Full Art/Single Strike Urshifu Vmax",
+      "base_name": "Full Art/Single Strike Urshifu Vmax",
+      "variety": "",
+      "spec_id": 12554730,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 10,
+        "psa_10": 1,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "087",
+      "card_name": "Rapid Strike Urshifu V",
+      "base_name": "Rapid Strike Urshifu V",
+      "variety": "",
+      "spec_id": 12553433,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "088",
+      "card_name": "Passimian-Holo",
+      "base_name": "Passimian-Holo",
+      "variety": "",
+      "spec_id": 12554713,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "088",
+      "card_name": "Full Art/Rapid Strike Urshifu Vmax",
+      "base_name": "Full Art/Rapid Strike Urshifu Vmax",
+      "variety": "",
+      "spec_id": 12554727,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "093",
+      "card_name": "Galarian Moltres",
+      "base_name": "Galarian Moltres",
+      "variety": "",
+      "spec_id": 12554741,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "094",
+      "card_name": "Umbreon V",
+      "base_name": "Umbreon V",
+      "variety": "",
+      "spec_id": 12554755,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 8,
+        "psa_8": 26,
+        "psa_9": 26,
+        "psa_10": 6,
+        "psa_total": 70
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 70
+      }
+    },
+    {
+      "pokemon_number": "095",
+      "card_name": "Full Art/Umbreon Vmax",
+      "base_name": "Full Art/Umbreon Vmax",
+      "variety": "",
+      "spec_id": 12542789,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 49,
+        "psa_9": 76,
+        "psa_10": 7,
+        "psa_total": 139
+      },
+      "grade_totals": {
+        "total": 140,
+        "grade_total": 139
+      }
+    },
+    {
+      "pokemon_number": "096",
+      "card_name": "Houndoom",
+      "base_name": "Houndoom",
+      "variety": "",
+      "spec_id": 12554745,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 8,
+        "psa_10": 6,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "097",
+      "card_name": "Galarian Moltres V",
+      "base_name": "Galarian Moltres V",
+      "variety": "",
+      "spec_id": 12554742,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 10,
+        "psa_10": 0,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "110",
+      "card_name": "Rayquaza V",
+      "base_name": "Rayquaza V",
+      "variety": "",
+      "spec_id": 12554750,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 18,
+        "psa_9": 23,
+        "psa_10": 3,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "111",
+      "card_name": "Galarian Rapidash V",
+      "base_name": "Galarian Rapidash V",
+      "variety": "",
+      "spec_id": 12554743,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "111",
+      "card_name": "Full Art/Rayquaza Vmax",
+      "base_name": "Full Art/Rayquaza Vmax",
+      "variety": "",
+      "spec_id": 12553425,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 9,
+        "psa_9": 37,
+        "psa_10": 9,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    },
+    {
+      "pokemon_number": "119",
+      "card_name": "Blissey V",
+      "base_name": "Blissey V",
+      "variety": "",
+      "spec_id": 12554732,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "122",
+      "card_name": "Duraludon V",
+      "base_name": "Duraludon V",
+      "variety": "",
+      "spec_id": 12554736,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "123",
+      "card_name": "Cheryl-Holo",
+      "base_name": "Cheryl-Holo",
+      "variety": "",
+      "spec_id": 12554714,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "123",
+      "card_name": "Full Art/Duraludon Vmax",
+      "base_name": "Full Art/Duraludon Vmax",
+      "variety": "",
+      "spec_id": 12554726,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "125",
+      "card_name": "Escape Rope",
+      "base_name": "Escape Rope",
+      "variety": "",
+      "spec_id": 12554699,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "129",
+      "card_name": "Level Ball-Holo",
+      "base_name": "Level Ball-Holo",
+      "variety": "",
+      "spec_id": 12554718,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "140",
+      "card_name": "Rapid Strike Energy-Reverse Foil",
+      "base_name": "Rapid Strike Energy-Reverse Foil",
+      "variety": "",
+      "spec_id": 12554724,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "143",
+      "card_name": "Copycat-Holo",
+      "base_name": "Copycat-Holo",
+      "variety": "",
+      "spec_id": 12554709,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 10,
+        "psa_10": 1,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "148",
+      "card_name": "Path to the Peak",
+      "base_name": "Path to the Peak",
+      "variety": "",
+      "spec_id": 12554702,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "149",
+      "card_name": "Flareon V",
+      "base_name": "Flareon V",
+      "variety": "",
+      "spec_id": 12554738,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 14,
+        "psa_9": 19,
+        "psa_10": 1,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "150",
+      "card_name": "Vaporeon V",
+      "base_name": "Vaporeon V",
+      "variety": "",
+      "spec_id": 10845160,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 12,
+        "psa_9": 12,
+        "psa_10": 3,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "151",
+      "card_name": "Jolteon V",
+      "base_name": "Jolteon V",
+      "variety": "",
+      "spec_id": 12554747,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 13,
+        "psa_9": 27,
+        "psa_10": 3,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "152",
+      "card_name": "Raihan-Holo",
+      "base_name": "Raihan-Holo",
+      "variety": "",
+      "spec_id": 12554720,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "159",
+      "card_name": "Crushing Hammer-Holo",
+      "base_name": "Crushing Hammer-Holo",
+      "variety": "",
+      "spec_id": 12554715,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

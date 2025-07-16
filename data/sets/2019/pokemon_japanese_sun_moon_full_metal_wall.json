@@ -1,0 +1,920 @@
+{
+  "year": "2019",
+  "set_name": "Pokemon Japanese Sun & Moon Full Metal Wall",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2019/pokemon-japanese-sun-moon-full-metal-wall/164526",
+  "total_cards": 38,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 14,
+        "psa_5": 53,
+        "psa_6": 73,
+        "psa_7": 120,
+        "psa_8": 660,
+        "psa_9": 3196,
+        "psa_10": 5671,
+        "psa_total": 9789
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 9789
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Pheromosa & Buzzwole GX",
+      "base_name": "Pheromosa & Buzzwole GX",
+      "variety": "",
+      "spec_id": 2767497,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 54,
+        "psa_10": 104,
+        "psa_total": 166
+      },
+      "grade_totals": {
+        "total": 166,
+        "grade_total": 166
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Kartana-Holo",
+      "base_name": "Kartana-Holo",
+      "variety": "",
+      "spec_id": 5117997,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Squirtle",
+      "base_name": "Squirtle",
+      "variety": "",
+      "spec_id": 5117998,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 16,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Wartortle",
+      "base_name": "Wartortle",
+      "variety": "",
+      "spec_id": 5117999,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Blastoise GX",
+      "base_name": "Blastoise GX",
+      "variety": "",
+      "spec_id": 2733394,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 13,
+        "psa_9": 85,
+        "psa_10": 301,
+        "psa_total": 408
+      },
+      "grade_totals": {
+        "total": 408,
+        "grade_total": 408
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Slowpoke",
+      "base_name": "Slowpoke",
+      "variety": "",
+      "spec_id": 5118000,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Slowbro-Holo",
+      "base_name": "Slowbro-Holo",
+      "variety": "",
+      "spec_id": 5118001,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 9,
+        "psa_10": 22,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Zubat",
+      "base_name": "Zubat",
+      "variety": "",
+      "spec_id": 2866208,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Crobat-Holo",
+      "base_name": "Crobat-Holo",
+      "variety": "",
+      "spec_id": 2864663,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 4,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Golem-Holo",
+      "base_name": "Golem-Holo",
+      "variety": "",
+      "spec_id": 5118014,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 6,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Stakataka-Holo",
+      "base_name": "Stakataka-Holo",
+      "variety": "",
+      "spec_id": 5118017,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Lucario & Melmetal GX",
+      "base_name": "Lucario & Melmetal GX",
+      "variety": "",
+      "spec_id": 2767498,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 74,
+        "psa_10": 228,
+        "psa_total": 314
+      },
+      "grade_totals": {
+        "total": 315,
+        "grade_total": 314
+      }
+    },
+    {
+      "pokemon_number": "035",
+      "card_name": "Lucario-Holo",
+      "base_name": "Lucario-Holo",
+      "variety": "",
+      "spec_id": 5118023,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 15,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Meltan",
+      "base_name": "Meltan",
+      "variety": "",
+      "spec_id": 3013584,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Melmetal-Holo",
+      "base_name": "Melmetal-Holo",
+      "variety": "",
+      "spec_id": 3013586,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "039",
+      "card_name": "Spearow",
+      "base_name": "Spearow",
+      "variety": "",
+      "spec_id": 5118025,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "042",
+      "card_name": "Purugly",
+      "base_name": "Purugly",
+      "variety": "",
+      "spec_id": 5118029,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "043",
+      "card_name": "Celesteela GX",
+      "base_name": "Celesteela GX",
+      "variety": "",
+      "spec_id": 2767494,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 11,
+        "psa_10": 11,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "048",
+      "card_name": "Green's Exploration",
+      "base_name": "Green's Exploration",
+      "variety": "",
+      "spec_id": 5118034,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 5,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "051",
+      "card_name": "Ultra Ball-Holo",
+      "base_name": "Ultra Ball-Holo",
+      "variety": "",
+      "spec_id": 2742675,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 9,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "053",
+      "card_name": "Metal Frying Pan-Holo",
+      "base_name": "Metal Frying Pan-Holo",
+      "variety": "",
+      "spec_id": 3013589,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "054",
+      "card_name": "Acerola-Holo",
+      "base_name": "Acerola-Holo",
+      "variety": "",
+      "spec_id": 2723157,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 31,
+        "psa_9": 328,
+        "psa_10": 690,
+        "psa_total": 1063
+      },
+      "grade_totals": {
+        "total": 1063,
+        "grade_total": 1063
+      }
+    },
+    {
+      "pokemon_number": "055",
+      "card_name": "Full Art/Pheromosa & Buzzwole GX",
+      "base_name": "Full Art/Pheromosa & Buzzwole GX",
+      "variety": "",
+      "spec_id": 2719468,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 18,
+        "psa_10": 29,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "056",
+      "card_name": "Full Art/Pheromosa & Buzzwole GX",
+      "base_name": "Full Art/Pheromosa & Buzzwole GX",
+      "variety": "",
+      "spec_id": 2719469,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 36,
+        "psa_9": 205,
+        "psa_10": 180,
+        "psa_total": 432
+      },
+      "grade_totals": {
+        "total": 432,
+        "grade_total": 432
+      }
+    },
+    {
+      "pokemon_number": "057",
+      "card_name": "Full Art/Blastoise GX",
+      "base_name": "Full Art/Blastoise GX",
+      "variety": "",
+      "spec_id": 2719460,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 19,
+        "psa_9": 177,
+        "psa_10": 319,
+        "psa_total": 524
+      },
+      "grade_totals": {
+        "total": 524,
+        "grade_total": 524
+      }
+    },
+    {
+      "pokemon_number": "058",
+      "card_name": "Full Art/Lucario & Melmetal GX",
+      "base_name": "Full Art/Lucario & Melmetal GX",
+      "variety": "",
+      "spec_id": 2719464,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 13,
+        "psa_9": 61,
+        "psa_10": 45,
+        "psa_total": 121
+      },
+      "grade_totals": {
+        "total": 121,
+        "grade_total": 121
+      }
+    },
+    {
+      "pokemon_number": "059",
+      "card_name": "Full Art/Lucario & Melmetal GX",
+      "base_name": "Full Art/Lucario & Melmetal GX",
+      "variety": "",
+      "spec_id": 2719465,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 8,
+        "psa_6": 8,
+        "psa_7": 15,
+        "psa_8": 97,
+        "psa_9": 332,
+        "psa_10": 431,
+        "psa_total": 892
+      },
+      "grade_totals": {
+        "total": 892,
+        "grade_total": 892
+      }
+    },
+    {
+      "pokemon_number": "060",
+      "card_name": "Full Art/Celesteela GX",
+      "base_name": "Full Art/Celesteela GX",
+      "variety": "",
+      "spec_id": 2768502,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 17,
+        "psa_10": 10,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "061",
+      "card_name": "Full Art/Green's Exploration",
+      "base_name": "Full Art/Green's Exploration",
+      "variety": "",
+      "spec_id": 2718634,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 7,
+        "psa_5": 31,
+        "psa_6": 51,
+        "psa_7": 69,
+        "psa_8": 351,
+        "psa_9": 1509,
+        "psa_10": 2779,
+        "psa_total": 4799
+      },
+      "grade_totals": {
+        "total": 4799,
+        "grade_total": 4799
+      }
+    },
+    {
+      "pokemon_number": "062",
+      "card_name": "Full Art/Molayne",
+      "base_name": "Full Art/Molayne",
+      "variety": "",
+      "spec_id": 2752712,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 50,
+        "psa_10": 65,
+        "psa_total": 121
+      },
+      "grade_totals": {
+        "total": 121,
+        "grade_total": 121
+      }
+    },
+    {
+      "pokemon_number": "063",
+      "card_name": "Full Art/Pheromosa & Buzzwole GX-Hyper",
+      "base_name": "Full Art/Pheromosa & Buzzwole GX-Hyper",
+      "variety": "",
+      "spec_id": 2777627,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 14,
+        "psa_10": 12,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "064",
+      "card_name": "Full Art/Blastoise GX-Hyper",
+      "base_name": "Full Art/Blastoise GX-Hyper",
+      "variety": "",
+      "spec_id": 2718230,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 48,
+        "psa_9": 160,
+        "psa_10": 275,
+        "psa_total": 490
+      },
+      "grade_totals": {
+        "total": 490,
+        "grade_total": 490
+      }
+    },
+    {
+      "pokemon_number": "065",
+      "card_name": "Full Art/Lucario & Melmetal GX-Hyper",
+      "base_name": "Full Art/Lucario & Melmetal GX-Hyper",
+      "variety": "",
+      "spec_id": 2719467,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 19,
+        "psa_9": 59,
+        "psa_10": 54,
+        "psa_total": 137
+      },
+      "grade_totals": {
+        "total": 137,
+        "grade_total": 137
+      }
+    },
+    {
+      "pokemon_number": "066",
+      "card_name": "Full Art/Celesteela GX-Hyper",
+      "base_name": "Full Art/Celesteela GX-Hyper",
+      "variety": "",
+      "spec_id": 2904931,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 8,
+        "psa_10": 12,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "067",
+      "card_name": "Full Art/Beast Bringer",
+      "base_name": "Full Art/Beast Bringer",
+      "variety": "",
+      "spec_id": 5118040,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "068",
+      "card_name": "Full Art/Metal Core Barrier",
+      "base_name": "Full Art/Metal Core Barrier",
+      "variety": "",
+      "spec_id": 2767500,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "069",
+      "card_name": "Full Art/MT. Coronet",
+      "base_name": "Full Art/MT. Coronet",
+      "variety": "",
+      "spec_id": 2792260,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 9,
+        "psa_10": 22,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    }
+  ]
+}

@@ -1,0 +1,752 @@
+{
+  "year": "2012",
+  "set_name": "Pokemon World Championships Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2012/pokemon-world-championships-promo/112945",
+  "total_cards": 36,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 3,
+        "psa_3": 8,
+        "psa_4": 23,
+        "psa_5": 25,
+        "psa_6": 37,
+        "psa_7": 59,
+        "psa_8": 130,
+        "psa_9": 118,
+        "psa_10": 58,
+        "psa_total": 463
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 463
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "Smeargle-C.M.T.",
+      "base_name": "Smeargle",
+      "variety": "C.M.T.",
+      "spec_id": 12396810,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Raikou EX-Eeltwo",
+      "base_name": "Raikou EX",
+      "variety": "Eeltwo",
+      "spec_id": 6391735,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "50",
+      "card_name": "Zekrom-Eeltwo",
+      "base_name": "Zekrom",
+      "variety": "Eeltwo",
+      "spec_id": 9014941,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Mewtwo EX-C.M.T.",
+      "base_name": "Mewtwo EX",
+      "variety": "C.M.T.",
+      "spec_id": 2656622,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Mewtwo EX-Eeltwo",
+      "base_name": "Mewtwo EX",
+      "variety": "Eeltwo",
+      "spec_id": 2650965,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Mewtwo EX-Pesadelo Prism",
+      "base_name": "Mewtwo EX",
+      "variety": "Pesadelo Prism",
+      "spec_id": 6420218,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Mewtwo EX-Terraki-Mewtwo",
+      "base_name": "Mewtwo EX",
+      "variety": "Terraki-Mewtwo",
+      "spec_id": 2575689,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 2,
+        "psa_10": 2,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "63",
+      "card_name": "Darkrai EX-Pesadelo Prism",
+      "base_name": "Darkrai EX",
+      "variety": "Pesadelo Prism",
+      "spec_id": 6419962,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "73",
+      "card_name": "Terrakion-Terraki-Mewtwo",
+      "base_name": "Terrakion",
+      "variety": "Terraki-Mewtwo",
+      "spec_id": 8748906,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "87",
+      "card_name": "Exp. Share-Terraki-Mewtwo",
+      "base_name": "Exp. Share",
+      "variety": "Terraki-Mewtwo",
+      "spec_id": 5478198,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "90",
+      "card_name": "Tornadus EX-C.M.T.",
+      "base_name": "Tornadus EX",
+      "variety": "C.M.T.",
+      "spec_id": 6391736,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "91",
+      "card_name": "Eviolite-Terraki-Mewtwo",
+      "base_name": "Eviolite",
+      "variety": "Terraki-Mewtwo",
+      "spec_id": 2684689,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "92",
+      "card_name": "Celebi-C.M.T.",
+      "base_name": "Celebi",
+      "variety": "C.M.T.",
+      "spec_id": 5924241,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "96",
+      "card_name": "N-Eeltwo",
+      "base_name": "N",
+      "variety": "Eeltwo",
+      "spec_id": 9014980,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "96",
+      "card_name": "N-Terraki Mewtwo",
+      "base_name": "N",
+      "variety": "Terraki Mewtwo",
+      "spec_id": 8965451,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "96",
+      "card_name": "Pluspower-Terraki Mewtwo",
+      "base_name": "Pluspower",
+      "variety": "Terraki Mewtwo",
+      "spec_id": 9812400,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "98",
+      "card_name": "Professor Juniper-Eeltwo",
+      "base_name": "Professor Juniper",
+      "variety": "Eeltwo",
+      "spec_id": 9014966,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "99",
+      "card_name": "Random Receiver-C.M.T.",
+      "base_name": "Random Receiver",
+      "variety": "C.M.T.",
+      "spec_id": 10242998,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "100",
+      "card_name": "Potion-C.M.T.",
+      "base_name": "Potion",
+      "variety": "C.M.T.",
+      "spec_id": 9812402,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach",
+      "base_name": "Tropical Beach",
+      "variety": "",
+      "spec_id": 2090086,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 4,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 16,
+        "psa_9": 10,
+        "psa_10": 3,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach-Champion",
+      "base_name": "Tropical Beach",
+      "variety": "Champion",
+      "spec_id": 2216501,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach-Finalist",
+      "base_name": "Tropical Beach",
+      "variety": "Finalist",
+      "spec_id": 2086309,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach-Quarter-Finalist",
+      "base_name": "Tropical Beach",
+      "variety": "Quarter-Finalist",
+      "spec_id": 2090096,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach-Semi-Finalist",
+      "base_name": "Tropical Beach",
+      "variety": "Semi-Finalist",
+      "spec_id": 2090098,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 0,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach-Staff",
+      "base_name": "Tropical Beach",
+      "variety": "Staff",
+      "spec_id": 2090089,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 9,
+        "psa_8": 12,
+        "psa_9": 10,
+        "psa_10": 0,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach-Top Sixteen",
+      "base_name": "Tropical Beach",
+      "variety": "Top Sixteen",
+      "spec_id": 2090095,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "BW50",
+      "card_name": "Tropical Beach-Top Thirty-Two",
+      "base_name": "Tropical Beach",
+      "variety": "Top Thirty-Two",
+      "spec_id": 2090094,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 7,
+        "psa_8": 12,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "BW-P",
+      "card_name": "Tropical Beach-Japanese",
+      "base_name": "Tropical Beach",
+      "variety": "Japanese",
+      "spec_id": 2141658,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 2,
+        "psa_8": 9,
+        "psa_9": 15,
+        "psa_10": 36,
+        "psa_total": 72
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 72
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer",
+      "base_name": "No. 1 Trainer",
+      "variety": "",
+      "spec_id": 4301927,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer",
+      "base_name": "No. 3 Trainer",
+      "variety": "",
+      "spec_id": 1948996,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

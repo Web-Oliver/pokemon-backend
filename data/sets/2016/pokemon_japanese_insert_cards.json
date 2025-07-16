@@ -1,0 +1,128 @@
+{
+  "year": "2016",
+  "set_name": "Pokemon Japanese Insert Cards",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2016/pokemon-japanese-insert-cards/236176",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 6,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Ribbons-Pokekyun Charm Secrets",
+      "base_name": "Ribbons",
+      "variety": "Pokekyun Charm Secrets",
+      "spec_id": 8554916,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Hearts-Pokekyun Charm Secrets",
+      "base_name": "Hearts",
+      "variety": "Pokekyun Charm Secrets",
+      "spec_id": 8554988,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Awakening of the Psychic King Advertisement-Kingdra/Magnezone Front",
+      "base_name": "Awakening of the Psychic King Advertisement",
+      "variety": "Kingdra/Magnezone Front",
+      "spec_id": 9601318,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fever-Burst Fighter & Cruel Traitor Advertisement-Movie Back",
+      "base_name": "Fever-Burst Fighter & Cruel Traitor Advertisement",
+      "variety": "Movie Back",
+      "spec_id": 8824147,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

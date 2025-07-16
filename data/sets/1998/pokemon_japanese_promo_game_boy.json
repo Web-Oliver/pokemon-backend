@@ -1,0 +1,80 @@
+{
+  "year": "1998",
+  "set_name": "Pokemon Japanese Promo Game Boy",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1998/pokemon-japanese-promo-game-boy/81228",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 52,
+        "psa_2": 26,
+        "psa_3": 78,
+        "psa_4": 185,
+        "psa_5": 441,
+        "psa_6": 499,
+        "psa_7": 507,
+        "psa_8": 926,
+        "psa_9": 2496,
+        "psa_10": 1703,
+        "psa_total": 6917
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 6917
+      }
+    },
+    {
+      "pokemon_number": "149",
+      "card_name": "Dragonite-Holo",
+      "base_name": "Dragonite-Holo",
+      "variety": "",
+      "spec_id": 525427,
+      "psa_grades": {
+        "psa_1": 52,
+        "psa_2": 26,
+        "psa_3": 78,
+        "psa_4": 185,
+        "psa_5": 441,
+        "psa_6": 499,
+        "psa_7": 507,
+        "psa_8": 926,
+        "psa_9": 2494,
+        "psa_10": 1698,
+        "psa_total": 6910
+      },
+      "grade_totals": {
+        "total": 6920,
+        "grade_total": 6910
+      }
+    },
+    {
+      "pokemon_number": "249",
+      "card_name": "Lugia-Holo",
+      "base_name": "Lugia-Holo",
+      "variety": "",
+      "spec_id": 1726324,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    }
+  ]
+}

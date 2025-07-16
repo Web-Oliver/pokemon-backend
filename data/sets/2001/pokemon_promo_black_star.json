@@ -1,0 +1,920 @@
+{
+  "year": "2001",
+  "set_name": "Pokemon Promo Black Star",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2001/pokemon-promo-black-star/81226",
+  "total_cards": 42,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 38,
+        "psa_2": 40,
+        "psa_3": 76,
+        "psa_4": 163,
+        "psa_5": 446,
+        "psa_6": 779,
+        "psa_7": 1509,
+        "psa_8": 4541,
+        "psa_9": 9613,
+        "psa_10": 5159,
+        "psa_total": 22364
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 22364
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Mew-Pokemon League-French",
+      "base_name": "Mew",
+      "variety": "Pokemon League-French",
+      "spec_id": 8278795,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Mew-Holo-Pokemon League-French",
+      "base_name": "Mew-Holo",
+      "variety": "Pokemon League-French",
+      "spec_id": 5262437,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 5,
+        "psa_7": 15,
+        "psa_8": 39,
+        "psa_9": 7,
+        "psa_10": 0,
+        "psa_total": 75
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 75
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Mew-Holo-Pokemon League-Italian",
+      "base_name": "Mew-Holo",
+      "variety": "Pokemon League-Italian",
+      "spec_id": 5764652,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 11,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Fliegendes Pikachu-Pokemon League-German",
+      "base_name": "Fliegendes Pikachu",
+      "variety": "Pokemon League-German",
+      "spec_id": 9839853,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Flying Pikachu-Pokemon League",
+      "base_name": "Flying Pikachu",
+      "variety": "Pokemon League",
+      "spec_id": 711984,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 9,
+        "psa_4": 11,
+        "psa_5": 45,
+        "psa_6": 62,
+        "psa_7": 115,
+        "psa_8": 340,
+        "psa_9": 566,
+        "psa_10": 363,
+        "psa_total": 1517
+      },
+      "grade_totals": {
+        "total": 1521,
+        "grade_total": 1517
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Flying Pikachu-Promo-PM League-Italian",
+      "base_name": "Flying Pikachu",
+      "variety": "Promo-PM League-Italian",
+      "spec_id": 5872411,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Pikachu Volant-Pokemon League-French",
+      "base_name": "Pikachu Volant",
+      "variety": "Pokemon League-French",
+      "spec_id": 10392069,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Pikachu-Pokemon League",
+      "base_name": "Pikachu",
+      "variety": "Pokemon League",
+      "spec_id": 1724881,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 18,
+        "psa_5": 27,
+        "psa_6": 56,
+        "psa_7": 115,
+        "psa_8": 410,
+        "psa_9": 761,
+        "psa_10": 360,
+        "psa_total": 1752
+      },
+      "grade_totals": {
+        "total": 1756,
+        "grade_total": 1752
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Pikachu-Pokemon League-French",
+      "base_name": "Pikachu",
+      "variety": "Pokemon League-French",
+      "spec_id": 8604607,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "26",
+      "card_name": "Pikachu-Pokemon League-German",
+      "base_name": "Pikachu",
+      "variety": "Pokemon League-German",
+      "spec_id": 13232096,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Surfing Pikachu-Pokemon League",
+      "base_name": "Surfing Pikachu",
+      "variety": "Pokemon League",
+      "spec_id": 525134,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 5,
+        "psa_3": 9,
+        "psa_4": 30,
+        "psa_5": 80,
+        "psa_6": 123,
+        "psa_7": 288,
+        "psa_8": 971,
+        "psa_9": 2348,
+        "psa_10": 1174,
+        "psa_total": 5030
+      },
+      "grade_totals": {
+        "total": 5063,
+        "grade_total": 5030
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Surfing Pikachu-Pokemon League-Italian",
+      "base_name": "Surfing Pikachu",
+      "variety": "Pokemon League-Italian",
+      "spec_id": 8478743,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Togepi-Pokemon League",
+      "base_name": "Togepi",
+      "variety": "Pokemon League",
+      "spec_id": 525135,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 4,
+        "psa_4": 8,
+        "psa_5": 17,
+        "psa_6": 41,
+        "psa_7": 62,
+        "psa_8": 286,
+        "psa_9": 590,
+        "psa_10": 381,
+        "psa_total": 1392
+      },
+      "grade_totals": {
+        "total": 1393,
+        "grade_total": 1392
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Togepi-Pokemon League-French",
+      "base_name": "Togepi",
+      "variety": "Pokemon League-French",
+      "spec_id": 9106252,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Togepi-Pokemon League-German",
+      "base_name": "Togepi",
+      "variety": "Pokemon League-German",
+      "spec_id": 12347552,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "30",
+      "card_name": "Togepi-Pokemon League-Italian",
+      "base_name": "Togepi",
+      "variety": "Pokemon League-Italian",
+      "spec_id": 10217766,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Cleffa-Pokemon League",
+      "base_name": "Cleffa",
+      "variety": "Pokemon League",
+      "spec_id": 1724820,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 6,
+        "psa_5": 15,
+        "psa_6": 27,
+        "psa_7": 41,
+        "psa_8": 139,
+        "psa_9": 438,
+        "psa_10": 405,
+        "psa_total": 1075
+      },
+      "grade_totals": {
+        "total": 1076,
+        "grade_total": 1075
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Melo-Pokemon League-French",
+      "base_name": "Melo",
+      "variety": "Pokemon League-French",
+      "spec_id": 11429097,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Queulorior-Pokemon League-French",
+      "base_name": "Queulorior",
+      "variety": "Pokemon League-French",
+      "spec_id": 11258168,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "32",
+      "card_name": "Smeargle-Pokemon League",
+      "base_name": "Smeargle",
+      "variety": "Pokemon League",
+      "spec_id": 1724815,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 10,
+        "psa_6": 18,
+        "psa_7": 64,
+        "psa_8": 163,
+        "psa_9": 590,
+        "psa_10": 258,
+        "psa_total": 1110
+      },
+      "grade_totals": {
+        "total": 1111,
+        "grade_total": 1110
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Cizayox-Pokemon League-French",
+      "base_name": "Cizayox",
+      "variety": "Pokemon League-French",
+      "spec_id": 11258170,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Scherox-Pokemon League-German",
+      "base_name": "Scherox",
+      "variety": "Pokemon League-German",
+      "spec_id": 11193644,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "33",
+      "card_name": "Scizor-Pokemon League",
+      "base_name": "Scizor",
+      "variety": "Pokemon League",
+      "spec_id": 1724810,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 16,
+        "psa_6": 25,
+        "psa_7": 79,
+        "psa_8": 291,
+        "psa_9": 1035,
+        "psa_10": 370,
+        "psa_total": 1825
+      },
+      "grade_totals": {
+        "total": 1829,
+        "grade_total": 1825
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Pichu-Reverse Foil-Pokemon League",
+      "base_name": "Pichu-Reverse Foil",
+      "variety": "Pokemon League",
+      "spec_id": 886462,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 7,
+        "psa_3": 4,
+        "psa_4": 23,
+        "psa_5": 76,
+        "psa_6": 154,
+        "psa_7": 403,
+        "psa_8": 854,
+        "psa_9": 530,
+        "psa_10": 69,
+        "psa_total": 2127
+      },
+      "grade_totals": {
+        "total": 2132,
+        "grade_total": 2127
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Pichu-Reverse Foil-Pokemon League-French",
+      "base_name": "Pichu-Reverse Foil",
+      "variety": "Pokemon League-French",
+      "spec_id": 7704534,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Pichu-Reverse Foil-Pokemon League-German",
+      "base_name": "Pichu-Reverse Foil",
+      "variety": "Pokemon League-German",
+      "spec_id": 10909779,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Pichu-Reverse Foil-Pokemon League-Italian",
+      "base_name": "Pichu-Reverse Foil",
+      "variety": "Pokemon League-Italian",
+      "spec_id": 8498353,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Fluffeluff-Pokemon League-German",
+      "base_name": "Fluffeluff",
+      "variety": "Pokemon League-German",
+      "spec_id": 11550466,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Igglybuff-Pokemon League",
+      "base_name": "Igglybuff",
+      "variety": "Pokemon League",
+      "spec_id": 1724739,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 22,
+        "psa_7": 31,
+        "psa_8": 173,
+        "psa_9": 623,
+        "psa_10": 546,
+        "psa_total": 1404
+      },
+      "grade_totals": {
+        "total": 1406,
+        "grade_total": 1404
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Toudoudou-Pokemon League-French",
+      "base_name": "Toudoudou",
+      "variety": "Pokemon League-French",
+      "spec_id": 10392073,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Hitmontop-Pokemon League",
+      "base_name": "Hitmontop",
+      "variety": "Pokemon League",
+      "spec_id": 1724807,
+      "psa_grades": {
+        "psa_1": 13,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 11,
+        "psa_6": 17,
+        "psa_7": 31,
+        "psa_8": 166,
+        "psa_9": 763,
+        "psa_10": 565,
+        "psa_total": 1570
+      },
+      "grade_totals": {
+        "total": 1573,
+        "grade_total": 1570
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Kapoera-Pokemon League-French",
+      "base_name": "Kapoera",
+      "variety": "Pokemon League-French",
+      "spec_id": 7721919,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Unown J",
+      "base_name": "Unown J",
+      "variety": "",
+      "spec_id": 1724802,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 8,
+        "psa_3": 19,
+        "psa_4": 22,
+        "psa_5": 50,
+        "psa_6": 78,
+        "psa_7": 70,
+        "psa_8": 113,
+        "psa_9": 86,
+        "psa_10": 43,
+        "psa_total": 496
+      },
+      "grade_totals": {
+        "total": 498,
+        "grade_total": 496
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Feuforeve-Pokemon League-French",
+      "base_name": "Feuforeve",
+      "variety": "Pokemon League-French",
+      "spec_id": 10234535,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Misdreavus-Pokemon League",
+      "base_name": "Misdreavus",
+      "variety": "Pokemon League",
+      "spec_id": 1724818,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 9,
+        "psa_6": 24,
+        "psa_7": 55,
+        "psa_8": 181,
+        "psa_9": 544,
+        "psa_10": 240,
+        "psa_total": 1061
+      },
+      "grade_totals": {
+        "total": 1065,
+        "grade_total": 1061
+      }
+    },
+    {
+      "pokemon_number": "40",
+      "card_name": "Pokemon Center-N.Y.",
+      "base_name": "Pokemon Center-N.Y.",
+      "variety": "",
+      "spec_id": 886440,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 8,
+        "psa_4": 6,
+        "psa_5": 22,
+        "psa_6": 54,
+        "psa_7": 38,
+        "psa_8": 142,
+        "psa_9": 316,
+        "psa_10": 172,
+        "psa_total": 758
+      },
+      "grade_totals": {
+        "total": 764,
+        "grade_total": 758
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Lucky Stadium-N.Y. Center",
+      "base_name": "Lucky Stadium-N.Y. Center",
+      "variety": "",
+      "spec_id": 866497,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 6,
+        "psa_3": 7,
+        "psa_4": 17,
+        "psa_5": 45,
+        "psa_6": 59,
+        "psa_7": 68,
+        "psa_8": 231,
+        "psa_9": 391,
+        "psa_10": 205,
+        "psa_total": 1033
+      },
+      "grade_totals": {
+        "total": 1038,
+        "grade_total": 1033
+      }
+    }
+  ]
+}

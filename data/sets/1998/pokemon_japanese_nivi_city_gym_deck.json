@@ -1,0 +1,488 @@
+{
+  "year": "1998",
+  "set_name": "Pokemon Japanese Nivi City Gym Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1998/pokemon-japanese-nivi-city-gym-deck/138689",
+  "total_cards": 20,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 7,
+        "psa_3": 11,
+        "psa_4": 38,
+        "psa_5": 79,
+        "psa_6": 73,
+        "psa_7": 104,
+        "psa_8": 223,
+        "psa_9": 487,
+        "psa_10": 313,
+        "psa_total": 1337
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1337
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Brock's Sandshrew",
+      "base_name": "Brock's Sandshrew",
+      "variety": "",
+      "spec_id": 2540342,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 4,
+        "psa_9": 8,
+        "psa_10": 10,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Brock's Zubat",
+      "base_name": "Brock's Zubat",
+      "variety": "",
+      "spec_id": 4056381,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Brock's Sandslash",
+      "base_name": "Brock's Sandslash",
+      "variety": "",
+      "spec_id": 2540298,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 0,
+        "psa_10": 9,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Brock's Vulpix",
+      "base_name": "Brock's Vulpix",
+      "variety": "",
+      "spec_id": 2540303,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 9,
+        "psa_10": 9,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Brock's Zubat",
+      "base_name": "Brock's Zubat",
+      "variety": "",
+      "spec_id": 2540296,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 4,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "56",
+      "card_name": "Brock's Mankey",
+      "base_name": "Brock's Mankey",
+      "variety": "",
+      "spec_id": 2603956,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 4,
+        "psa_10": 16,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "74",
+      "card_name": "Brock's Geodude-LV.13",
+      "base_name": "Brock's Geodude",
+      "variety": "LV.13",
+      "spec_id": 2603957,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 5,
+        "psa_10": 14,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "74",
+      "card_name": "Brock's Geodude-LV.17",
+      "base_name": "Brock's Geodude",
+      "variety": "LV.17",
+      "spec_id": 2603971,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 11,
+        "psa_10": 13,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "75",
+      "card_name": "Brock's Graveler",
+      "base_name": "Brock's Graveler",
+      "variety": "",
+      "spec_id": 2540293,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 11,
+        "psa_10": 16,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "76",
+      "card_name": "Brock's Golem",
+      "base_name": "Brock's Golem",
+      "variety": "",
+      "spec_id": 2540294,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 8,
+        "psa_10": 7,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "95",
+      "card_name": "Brock's Onix-LV.30",
+      "base_name": "Brock's Onix",
+      "variety": "LV.30",
+      "spec_id": 2603954,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 10,
+        "psa_10": 19,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "95",
+      "card_name": "Brock's Onix-LV.41",
+      "base_name": "Brock's Onix",
+      "variety": "LV.41",
+      "spec_id": 2603951,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 13,
+        "psa_10": 10,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "111",
+      "card_name": "Brock's Rhyhorn",
+      "base_name": "Brock's Rhyhorn",
+      "variety": "",
+      "spec_id": 2603949,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 8,
+        "psa_10": 16,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "112",
+      "card_name": "Brock's Rhydon-Holo",
+      "base_name": "Brock's Rhydon-Holo",
+      "variety": "",
+      "spec_id": 2467801,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 1,
+        "psa_4": 13,
+        "psa_5": 33,
+        "psa_6": 29,
+        "psa_7": 47,
+        "psa_8": 78,
+        "psa_9": 177,
+        "psa_10": 69,
+        "psa_total": 453
+      },
+      "grade_totals": {
+        "total": 455,
+        "grade_total": 453
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Brock-Holo",
+      "base_name": "Brock-Holo",
+      "variety": "",
+      "spec_id": 2340991,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 6,
+        "psa_4": 18,
+        "psa_5": 36,
+        "psa_6": 35,
+        "psa_7": 42,
+        "psa_8": 91,
+        "psa_9": 183,
+        "psa_10": 72,
+        "psa_total": 485
+      },
+      "grade_totals": {
+        "total": 485,
+        "grade_total": 485
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pewter City Gym",
+      "base_name": "Pewter City Gym",
+      "variety": "",
+      "spec_id": 2603941,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 4,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Brock's Training Method",
+      "base_name": "Brock's Training Method",
+      "variety": "",
+      "spec_id": 2603942,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 17,
+        "psa_10": 7,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Recall",
+      "base_name": "Recall",
+      "variety": "",
+      "spec_id": 2603959,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 13,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Revive",
+      "base_name": "Revive",
+      "variety": "",
+      "spec_id": 2540348,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    }
+  ]
+}

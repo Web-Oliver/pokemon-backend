@@ -1,0 +1,104 @@
+{
+  "year": "2020",
+  "set_name": "Pokemon Japanese Sword & Shield Grimmsnarl Vmax Starter Set",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2020/pokemon-japanese-sword-shield-grimmsnarl-vmax-starter-set/181122",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 13,
+        "psa_10": 66,
+        "psa_total": 82
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 82
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Grimmsnarl V",
+      "base_name": "Grimmsnarl V",
+      "variety": "",
+      "spec_id": 4111100,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 13,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Full Art/Grimmsnarl Vmax",
+      "base_name": "Full Art/Grimmsnarl Vmax",
+      "variety": "",
+      "spec_id": 3691856,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 22,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Lugia",
+      "base_name": "Lugia",
+      "variety": "",
+      "spec_id": 4351094,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 9,
+        "psa_10": 31,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    }
+  ]
+}

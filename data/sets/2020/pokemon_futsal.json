@@ -1,0 +1,152 @@
+{
+  "year": "2020",
+  "set_name": "Pokemon Futsal",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2020/pokemon-futsal/182005",
+  "total_cards": 6,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 4,
+        "psa_3": 10,
+        "psa_4": 42,
+        "psa_5": 94,
+        "psa_6": 148,
+        "psa_7": 120,
+        "psa_8": 705,
+        "psa_9": 5590,
+        "psa_10": 5273,
+        "psa_total": 11988
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 11988
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Pikachu on the Ball",
+      "base_name": "Pikachu on the Ball",
+      "variety": "",
+      "spec_id": 4721793,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 16,
+        "psa_5": 45,
+        "psa_6": 62,
+        "psa_7": 46,
+        "psa_8": 218,
+        "psa_9": 2102,
+        "psa_10": 2240,
+        "psa_total": 4735
+      },
+      "grade_totals": {
+        "total": 4737,
+        "grade_total": 4735
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Eevee on the Ball",
+      "base_name": "Eevee on the Ball",
+      "variety": "",
+      "spec_id": 3818156,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 8,
+        "psa_5": 23,
+        "psa_6": 39,
+        "psa_7": 29,
+        "psa_8": 138,
+        "psa_9": 1262,
+        "psa_10": 1570,
+        "psa_total": 3072
+      },
+      "grade_totals": {
+        "total": 3073,
+        "grade_total": 3072
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Grookey on the Ball",
+      "base_name": "Grookey on the Ball",
+      "variety": "",
+      "spec_id": 4053150,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 7,
+        "psa_5": 11,
+        "psa_6": 18,
+        "psa_7": 16,
+        "psa_8": 124,
+        "psa_9": 907,
+        "psa_10": 633,
+        "psa_total": 1718
+      },
+      "grade_totals": {
+        "total": 1719,
+        "grade_total": 1718
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Scorbunny on the Ball",
+      "base_name": "Scorbunny on the Ball",
+      "variety": "",
+      "spec_id": 4721795,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 8,
+        "psa_5": 10,
+        "psa_6": 18,
+        "psa_7": 16,
+        "psa_8": 68,
+        "psa_9": 547,
+        "psa_10": 438,
+        "psa_total": 1109
+      },
+      "grade_totals": {
+        "total": 1109,
+        "grade_total": 1109
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Sobble on the Ball",
+      "base_name": "Sobble on the Ball",
+      "variety": "",
+      "spec_id": 4721796,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 11,
+        "psa_7": 13,
+        "psa_8": 157,
+        "psa_9": 772,
+        "psa_10": 392,
+        "psa_total": 1354
+      },
+      "grade_totals": {
+        "total": 1356,
+        "grade_total": 1354
+      }
+    }
+  ]
+}

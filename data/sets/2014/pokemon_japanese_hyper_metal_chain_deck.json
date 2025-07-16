@@ -1,0 +1,104 @@
+{
+  "year": "2014",
+  "set_name": "Pokemon Japanese Hyper Metal Chain Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2014/pokemon-japanese-hyper-metal-chain-deck/124895",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 8,
+        "psa_5": 13,
+        "psa_6": 17,
+        "psa_7": 33,
+        "psa_8": 64,
+        "psa_9": 231,
+        "psa_10": 471,
+        "psa_total": 841
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 841
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Dialga EX",
+      "base_name": "Dialga EX",
+      "variety": "",
+      "spec_id": 2141016,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 8,
+        "psa_9": 37,
+        "psa_10": 182,
+        "psa_total": 239
+      },
+      "grade_totals": {
+        "total": 239,
+        "grade_total": 239
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Aegislash EX",
+      "base_name": "Aegislash EX",
+      "variety": "",
+      "spec_id": 2116136,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 20,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Full Art/Dialga EX",
+      "base_name": "Full Art/Dialga EX",
+      "variety": "",
+      "spec_id": 2116121,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 11,
+        "psa_6": 14,
+        "psa_7": 30,
+        "psa_8": 55,
+        "psa_9": 190,
+        "psa_10": 269,
+        "psa_total": 577
+      },
+      "grade_totals": {
+        "total": 577,
+        "grade_total": 577
+      }
+    }
+  ]
+}

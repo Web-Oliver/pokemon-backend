@@ -1,0 +1,152 @@
+{
+  "year": "2017",
+  "set_name": "Pokemon Mega Powers Collection Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2017/pokemon-mega-powers-collection-promo/144411",
+  "total_cards": 6,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 4,
+        "psa_3": 5,
+        "psa_4": 30,
+        "psa_5": 61,
+        "psa_6": 89,
+        "psa_7": 131,
+        "psa_8": 494,
+        "psa_9": 1896,
+        "psa_10": 2099,
+        "psa_total": 4812
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 4812
+      }
+    },
+    {
+      "pokemon_number": "24a",
+      "card_name": "Full Art/M Manectric EX",
+      "base_name": "Full Art/M Manectric EX",
+      "variety": "",
+      "spec_id": 2428999,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 3,
+        "psa_6": 16,
+        "psa_7": 12,
+        "psa_8": 79,
+        "psa_9": 262,
+        "psa_10": 265,
+        "psa_total": 646
+      },
+      "grade_totals": {
+        "total": 646,
+        "grade_total": 646
+      }
+    },
+    {
+      "pokemon_number": "28a",
+      "card_name": "Full Art/Jolteon EX",
+      "base_name": "Full Art/Jolteon EX",
+      "variety": "",
+      "spec_id": 2428997,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 8,
+        "psa_5": 17,
+        "psa_6": 18,
+        "psa_7": 47,
+        "psa_8": 137,
+        "psa_9": 602,
+        "psa_10": 679,
+        "psa_total": 1509
+      },
+      "grade_totals": {
+        "total": 1509,
+        "grade_total": 1509
+      }
+    },
+    {
+      "pokemon_number": "54a",
+      "card_name": "Full Art/Zygarde EX",
+      "base_name": "Full Art/Zygarde EX",
+      "variety": "",
+      "spec_id": 2429004,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 10,
+        "psa_6": 16,
+        "psa_7": 12,
+        "psa_8": 72,
+        "psa_9": 318,
+        "psa_10": 399,
+        "psa_total": 830
+      },
+      "grade_totals": {
+        "total": 832,
+        "grade_total": 830
+      }
+    },
+    {
+      "pokemon_number": "55a",
+      "card_name": "Full Art/M Lucario EX",
+      "base_name": "Full Art/M Lucario EX",
+      "variety": "",
+      "spec_id": 2427434,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 15,
+        "psa_5": 31,
+        "psa_6": 39,
+        "psa_7": 60,
+        "psa_8": 206,
+        "psa_9": 707,
+        "psa_10": 753,
+        "psa_total": 1815
+      },
+      "grade_totals": {
+        "total": 1815,
+        "grade_total": 1815
+      }
+    },
+    {
+      "pokemon_number": "55a",
+      "card_name": "Full Art/M Lucario EX-Jumbo",
+      "base_name": "Full Art/M Lucario EX",
+      "variety": "Jumbo",
+      "spec_id": 2442792,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 7,
+        "psa_10": 3,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    }
+  ]
+}

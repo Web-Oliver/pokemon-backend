@@ -1,0 +1,128 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Japanese Promo Ana Airways",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-japanese-promo-ana-airways/54858",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 17,
+        "psa_3": 60,
+        "psa_4": 131,
+        "psa_5": 333,
+        "psa_6": 328,
+        "psa_7": 239,
+        "psa_8": 369,
+        "psa_9": 1093,
+        "psa_10": 798,
+        "psa_total": 3375
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 3375
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Flying Pikachu-Ana-Plane on Left",
+      "base_name": "Flying Pikachu",
+      "variety": "Ana-Plane on Left",
+      "spec_id": 525467,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 7,
+        "psa_3": 19,
+        "psa_4": 40,
+        "psa_5": 95,
+        "psa_6": 100,
+        "psa_7": 60,
+        "psa_8": 107,
+        "psa_9": 302,
+        "psa_10": 183,
+        "psa_total": 915
+      },
+      "grade_totals": {
+        "total": 918,
+        "grade_total": 915
+      }
+    },
+    {
+      "pokemon_number": "144",
+      "card_name": "Articuno-All Nippon Airways",
+      "base_name": "Articuno",
+      "variety": "All Nippon Airways",
+      "spec_id": 525468,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 3,
+        "psa_3": 14,
+        "psa_4": 41,
+        "psa_5": 71,
+        "psa_6": 67,
+        "psa_7": 61,
+        "psa_8": 91,
+        "psa_9": 253,
+        "psa_10": 127,
+        "psa_total": 730
+      },
+      "grade_totals": {
+        "total": 732,
+        "grade_total": 730
+      }
+    },
+    {
+      "pokemon_number": "145",
+      "card_name": "Zapdos-All Nippon Airways",
+      "base_name": "Zapdos",
+      "variety": "All Nippon Airways",
+      "spec_id": 525469,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 3,
+        "psa_3": 10,
+        "psa_4": 24,
+        "psa_5": 81,
+        "psa_6": 91,
+        "psa_7": 51,
+        "psa_8": 78,
+        "psa_9": 267,
+        "psa_10": 248,
+        "psa_total": 854
+      },
+      "grade_totals": {
+        "total": 854,
+        "grade_total": 854
+      }
+    },
+    {
+      "pokemon_number": "146",
+      "card_name": "Moltres-All Nippon Airways",
+      "base_name": "Moltres",
+      "variety": "All Nippon Airways",
+      "spec_id": 525470,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 17,
+        "psa_4": 26,
+        "psa_5": 86,
+        "psa_6": 70,
+        "psa_7": 67,
+        "psa_8": 93,
+        "psa_9": 271,
+        "psa_10": 240,
+        "psa_total": 876
+      },
+      "grade_totals": {
+        "total": 878,
+        "grade_total": 876
+      }
+    }
+  ]
+}

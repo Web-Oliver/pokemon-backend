@@ -1,0 +1,344 @@
+{
+  "year": "2000",
+  "set_name": "Pokemon Japanese Trainer Promo Lucky Stadium",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2000/pokemon-japanese-trainer-promo-lucky-stadium/81100",
+  "total_cards": 14,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 3,
+        "psa_3": 6,
+        "psa_4": 21,
+        "psa_5": 55,
+        "psa_6": 75,
+        "psa_7": 114,
+        "psa_8": 331,
+        "psa_9": 1030,
+        "psa_10": 578,
+        "psa_total": 2214
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2214
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Chubu",
+      "base_name": "Chubu",
+      "variety": "",
+      "spec_id": 2053811,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 14,
+        "psa_7": 16,
+        "psa_8": 36,
+        "psa_9": 75,
+        "psa_10": 56,
+        "psa_total": 203
+      },
+      "grade_totals": {
+        "total": 204,
+        "grade_total": 203
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Chugoku/Shikoku",
+      "base_name": "Chugoku/Shikoku",
+      "variety": "",
+      "spec_id": 2071948,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 8,
+        "psa_7": 17,
+        "psa_8": 24,
+        "psa_9": 123,
+        "psa_10": 29,
+        "psa_total": 208
+      },
+      "grade_totals": {
+        "total": 209,
+        "grade_total": 208
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Hokkaido",
+      "base_name": "Hokkaido",
+      "variety": "",
+      "spec_id": 666061,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 4,
+        "psa_6": 5,
+        "psa_7": 19,
+        "psa_8": 29,
+        "psa_9": 141,
+        "psa_10": 86,
+        "psa_total": 289
+      },
+      "grade_totals": {
+        "total": 289,
+        "grade_total": 289
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Hokushin'Etsu",
+      "base_name": "Hokushin'Etsu",
+      "variety": "",
+      "spec_id": 2071949,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 8,
+        "psa_6": 7,
+        "psa_7": 10,
+        "psa_8": 26,
+        "psa_9": 77,
+        "psa_10": 56,
+        "psa_total": 186
+      },
+      "grade_totals": {
+        "total": 186,
+        "grade_total": 186
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Jyo-Etsu",
+      "base_name": "Jyo-Etsu",
+      "variety": "",
+      "spec_id": 666056,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 41,
+        "psa_10": 36,
+        "psa_total": 78
+      },
+      "grade_totals": {
+        "total": 78,
+        "grade_total": 78
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Kansai",
+      "base_name": "Kansai",
+      "variety": "",
+      "spec_id": 2071950,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 12,
+        "psa_6": 8,
+        "psa_7": 12,
+        "psa_8": 64,
+        "psa_9": 150,
+        "psa_10": 71,
+        "psa_total": 323
+      },
+      "grade_totals": {
+        "total": 324,
+        "grade_total": 323
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Kanto",
+      "base_name": "Kanto",
+      "variety": "",
+      "spec_id": 2071951,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 15,
+        "psa_7": 22,
+        "psa_8": 55,
+        "psa_9": 154,
+        "psa_10": 119,
+        "psa_total": 378
+      },
+      "grade_totals": {
+        "total": 380,
+        "grade_total": 378
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Kyushu",
+      "base_name": "Kyushu",
+      "variety": "",
+      "spec_id": 666059,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 7,
+        "psa_6": 10,
+        "psa_7": 7,
+        "psa_8": 46,
+        "psa_9": 103,
+        "psa_10": 32,
+        "psa_total": 207
+      },
+      "grade_totals": {
+        "total": 209,
+        "grade_total": 207
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Morioka",
+      "base_name": "Morioka",
+      "variety": "",
+      "spec_id": 666058,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 37,
+        "psa_10": 26,
+        "psa_total": 69
+      },
+      "grade_totals": {
+        "total": 69,
+        "grade_total": 69
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Morioka",
+      "base_name": "Morioka",
+      "variety": "",
+      "spec_id": 859131,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Shizuoka",
+      "base_name": "Shizuoka",
+      "variety": "",
+      "spec_id": 666055,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 39,
+        "psa_10": 35,
+        "psa_total": 77
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 77
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Tohoku",
+      "base_name": "Tohoku",
+      "variety": "",
+      "spec_id": 2364166,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 8,
+        "psa_6": 4,
+        "psa_7": 8,
+        "psa_8": 35,
+        "psa_9": 77,
+        "psa_10": 22,
+        "psa_total": 159
+      },
+      "grade_totals": {
+        "total": 159,
+        "grade_total": 159
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Tropical Mega Battle",
+      "base_name": "Tropical Mega Battle",
+      "variety": "",
+      "spec_id": 873164,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 7,
+        "psa_9": 10,
+        "psa_10": 10,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 34
+      }
+    }
+  ]
+}

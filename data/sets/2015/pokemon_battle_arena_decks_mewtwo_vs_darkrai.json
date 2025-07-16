@@ -1,0 +1,56 @@
+{
+  "year": "2015",
+  "set_name": "Pokemon Battle Arena Decks: Mewtwo vs. Darkrai",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2015/pokemon-battle-arena-decks-mewtwo-vs-darkrai/224294",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Mewtwo EX",
+      "base_name": "Mewtwo EX",
+      "variety": "",
+      "spec_id": 7748723,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    }
+  ]
+}

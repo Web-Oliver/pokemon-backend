@@ -1,0 +1,128 @@
+{
+  "year": "2018",
+  "set_name": "Pokemon Battle Arena Deck: Mega Charizard X VS Mega Blastoise",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2018/pokemon-battle-arena-deck-mega-charizard-x-vs-blastoise/161510",
+  "total_cards": 5,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 11,
+        "psa_10": 6,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "98a",
+      "card_name": "Delinquent-Mega Charizard X Deck",
+      "base_name": "Delinquent",
+      "variety": "Mega Charizard X Deck",
+      "spec_id": 5445570,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "98a",
+      "card_name": "Delinquent-Holo-Mega Blastoise Deck",
+      "base_name": "Delinquent-Holo",
+      "variety": "Mega Blastoise Deck",
+      "spec_id": 2854026,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "146a",
+      "card_name": "Professor's Letter-Mega Blastoise Deck",
+      "base_name": "Professor's Letter",
+      "variety": "Mega Blastoise Deck",
+      "spec_id": 2700287,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "146a",
+      "card_name": "Professor's Letter-Holo-Mega Charizard X Deck",
+      "base_name": "Professor's Letter-Holo",
+      "variety": "Mega Charizard X Deck",
+      "spec_id": 2655051,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 2,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    }
+  ]
+}

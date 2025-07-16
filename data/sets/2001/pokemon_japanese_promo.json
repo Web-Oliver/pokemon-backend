@@ -1,0 +1,680 @@
+{
+  "year": "2001",
+  "set_name": "Pokemon Japanese Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2001/pokemon-japanese-promo/102685",
+  "total_cards": 28,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 11,
+        "psa_3": 20,
+        "psa_4": 93,
+        "psa_5": 219,
+        "psa_6": 318,
+        "psa_7": 363,
+        "psa_8": 935,
+        "psa_9": 2112,
+        "psa_10": 1548,
+        "psa_total": 5629
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 5629
+      }
+    },
+    {
+      "pokemon_number": "001/J",
+      "card_name": "Timeless Celebi-Movie Promo Jumbo",
+      "base_name": "Timeless Celebi",
+      "variety": "Movie Promo Jumbo",
+      "spec_id": 5152133,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "001/P",
+      "card_name": "Kecleon-Theatrical Release",
+      "base_name": "Kecleon",
+      "variety": "Theatrical Release",
+      "spec_id": 2086422,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 4,
+        "psa_3": 2,
+        "psa_4": 8,
+        "psa_5": 15,
+        "psa_6": 23,
+        "psa_7": 9,
+        "psa_8": 15,
+        "psa_9": 27,
+        "psa_10": 45,
+        "psa_total": 148
+      },
+      "grade_totals": {
+        "total": 148,
+        "grade_total": 148
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Dark Ivysaur-Trainer Magazine",
+      "base_name": "Dark Ivysaur",
+      "variety": "Trainer Magazine",
+      "spec_id": 2794605,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 9,
+        "psa_6": 16,
+        "psa_7": 38,
+        "psa_8": 57,
+        "psa_9": 126,
+        "psa_10": 152,
+        "psa_total": 402
+      },
+      "grade_totals": {
+        "total": 403,
+        "grade_total": 402
+      }
+    },
+    {
+      "pokemon_number": "002/P",
+      "card_name": "Rocket's Scizor-Holo-Trainers Vol.12",
+      "base_name": "Rocket's Scizor-Holo",
+      "variety": "Trainers Vol.12",
+      "spec_id": 2086427,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 12,
+        "psa_7": 21,
+        "psa_8": 61,
+        "psa_9": 125,
+        "psa_10": 137,
+        "psa_total": 364
+      },
+      "grade_totals": {
+        "total": 364,
+        "grade_total": 364
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Dark Venusaur-Holo-Trainer Magazine",
+      "base_name": "Dark Venusaur-Holo",
+      "variety": "Trainer Magazine",
+      "spec_id": 2090496,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 14,
+        "psa_6": 19,
+        "psa_7": 53,
+        "psa_8": 180,
+        "psa_9": 516,
+        "psa_10": 188,
+        "psa_total": 978
+      },
+      "grade_totals": {
+        "total": 979,
+        "grade_total": 978
+      }
+    },
+    {
+      "pokemon_number": "003/P",
+      "card_name": "Rocket's Sneasel-Corocoro Comic",
+      "base_name": "Rocket's Sneasel",
+      "variety": "Corocoro Comic",
+      "spec_id": 2749629,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 5,
+        "psa_5": 9,
+        "psa_6": 6,
+        "psa_7": 14,
+        "psa_8": 30,
+        "psa_9": 59,
+        "psa_10": 66,
+        "psa_total": 189
+      },
+      "grade_totals": {
+        "total": 189,
+        "grade_total": 189
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Pikachu-All Nippon Airways",
+      "base_name": "Pikachu",
+      "variety": "All Nippon Airways",
+      "spec_id": 2070125,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 7,
+        "psa_4": 19,
+        "psa_5": 37,
+        "psa_6": 55,
+        "psa_7": 41,
+        "psa_8": 81,
+        "psa_9": 209,
+        "psa_10": 250,
+        "psa_total": 700
+      },
+      "grade_totals": {
+        "total": 700,
+        "grade_total": 700
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Larvitar-All Nippon Airways",
+      "base_name": "Larvitar",
+      "variety": "All Nippon Airways",
+      "spec_id": 1839522,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 12,
+        "psa_5": 23,
+        "psa_6": 40,
+        "psa_7": 33,
+        "psa_8": 72,
+        "psa_9": 125,
+        "psa_10": 225,
+        "psa_total": 534
+      },
+      "grade_totals": {
+        "total": 534,
+        "grade_total": 534
+      }
+    },
+    {
+      "pokemon_number": "006/P",
+      "card_name": "Celebi-Space World 2001",
+      "base_name": "Celebi",
+      "variety": "Space World 2001",
+      "spec_id": 2097034,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 6,
+        "psa_5": 8,
+        "psa_6": 14,
+        "psa_7": 12,
+        "psa_8": 18,
+        "psa_9": 37,
+        "psa_10": 56,
+        "psa_total": 152
+      },
+      "grade_totals": {
+        "total": 152,
+        "grade_total": 152
+      }
+    },
+    {
+      "pokemon_number": "007/P",
+      "card_name": "Celebi-Trainers Vol. 13",
+      "base_name": "Celebi",
+      "variety": "Trainers Vol. 13",
+      "spec_id": 2096126,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 7,
+        "psa_8": 29,
+        "psa_9": 70,
+        "psa_10": 106,
+        "psa_total": 224
+      },
+      "grade_totals": {
+        "total": 224,
+        "grade_total": 224
+      }
+    },
+    {
+      "pokemon_number": "009/P",
+      "card_name": "Bill-Trainers Vol. 13",
+      "base_name": "Bill",
+      "variety": "Trainers Vol. 13",
+      "spec_id": 2096132,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 13,
+        "psa_8": 21,
+        "psa_9": 20,
+        "psa_10": 50,
+        "psa_total": 112
+      },
+      "grade_totals": {
+        "total": 113,
+        "grade_total": 112
+      }
+    },
+    {
+      "pokemon_number": "010/P",
+      "card_name": "HO-Oh-Corocoro Comic",
+      "base_name": "HO-Oh",
+      "variety": "Corocoro Comic",
+      "spec_id": 2749642,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 11,
+        "psa_6": 12,
+        "psa_7": 19,
+        "psa_8": 41,
+        "psa_9": 63,
+        "psa_10": 17,
+        "psa_total": 169
+      },
+      "grade_totals": {
+        "total": 169,
+        "grade_total": 169
+      }
+    },
+    {
+      "pokemon_number": "011/P",
+      "card_name": "Rapidash-Corocoro Comic",
+      "base_name": "Rapidash",
+      "variety": "Corocoro Comic",
+      "spec_id": 2749647,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 11,
+        "psa_6": 6,
+        "psa_7": 10,
+        "psa_8": 33,
+        "psa_9": 32,
+        "psa_10": 9,
+        "psa_total": 108
+      },
+      "grade_totals": {
+        "total": 108,
+        "grade_total": 108
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Birthday Pikachu-Natta Wake Vol. 6",
+      "base_name": "Birthday Pikachu",
+      "variety": "Natta Wake Vol. 6",
+      "spec_id": 666062,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 19,
+        "psa_5": 43,
+        "psa_6": 74,
+        "psa_7": 61,
+        "psa_8": 185,
+        "psa_9": 445,
+        "psa_10": 124,
+        "psa_total": 957
+      },
+      "grade_totals": {
+        "total": 961,
+        "grade_total": 957
+      }
+    },
+    {
+      "pokemon_number": "182",
+      "card_name": "Bellossom-Information Pack",
+      "base_name": "Bellossom",
+      "variety": "Information Pack",
+      "spec_id": 1948679,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 25,
+        "psa_9": 72,
+        "psa_10": 54,
+        "psa_total": 165
+      },
+      "grade_totals": {
+        "total": 165,
+        "grade_total": 165
+      }
+    },
+    {
+      "pokemon_number": "187",
+      "card_name": "Hoppip-Natta Wake Vol. 5",
+      "base_name": "Hoppip",
+      "variety": "Natta Wake Vol. 5",
+      "spec_id": 1908154,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 13,
+        "psa_7": 15,
+        "psa_8": 49,
+        "psa_9": 107,
+        "psa_10": 36,
+        "psa_total": 228
+      },
+      "grade_totals": {
+        "total": 229,
+        "grade_total": 228
+      }
+    },
+    {
+      "pokemon_number": "206",
+      "card_name": "Dunsparce-Information Pack Vol. 1",
+      "base_name": "Dunsparce",
+      "variety": "Information Pack Vol. 1",
+      "spec_id": 2055811,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 7,
+        "psa_7": 5,
+        "psa_8": 25,
+        "psa_9": 70,
+        "psa_10": 30,
+        "psa_total": 143
+      },
+      "grade_totals": {
+        "total": 143,
+        "grade_total": 143
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Tropical Present-Summer Pokemon Card Fan Club Jumbo",
+      "base_name": "Tropical Present",
+      "variety": "Summer Pokemon Card Fan Club Jumbo",
+      "spec_id": 2780993,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 10,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-Neo Spring Battle-Hokkaido",
+      "base_name": "No. 1 Trainer",
+      "variety": "Neo Spring Battle-Hokkaido",
+      "spec_id": 2475081,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 1 Trainer-Neo Summer Battle-Hokkaido",
+      "base_name": "No. 1 Trainer",
+      "variety": "Neo Summer Battle-Hokkaido",
+      "spec_id": 6481316,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Neo Spring Battle",
+      "base_name": "No. 2 Trainer",
+      "variety": "Neo Spring Battle",
+      "spec_id": 2253152,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 2 Trainer-Neo Summer Battle",
+      "base_name": "No. 2 Trainer",
+      "variety": "Neo Summer Battle",
+      "spec_id": 2253145,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Neo Spring Battle-Chubu",
+      "base_name": "No. 3 Trainer",
+      "variety": "Neo Spring Battle-Chubu",
+      "spec_id": 2490909,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Neo Spring Battle-Hokkaido",
+      "base_name": "No. 3 Trainer",
+      "variety": "Neo Spring Battle-Hokkaido",
+      "spec_id": 8686721,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Neo Spring Battle-Kansai",
+      "base_name": "No. 3 Trainer",
+      "variety": "Neo Spring Battle-Kansai",
+      "spec_id": 7768947,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 0
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 0
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Neo Spring Battle-Tohoku",
+      "base_name": "No. 3 Trainer",
+      "variety": "Neo Spring Battle-Tohoku",
+      "spec_id": 11489136,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No. 3 Trainer-Neo Summer Battle-Kyushu",
+      "base_name": "No. 3 Trainer",
+      "variety": "Neo Summer Battle-Kyushu",
+      "spec_id": 3429665,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,560 @@
+{
+  "year": "2010",
+  "set_name": "Pokemon Japanese Tyranitar Constructed Standard Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2010/pokemon-japanese-tyranitar-constructed-standard-deck/153637",
+  "total_cards": 23,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 6,
+        "psa_6": 19,
+        "psa_7": 33,
+        "psa_8": 85,
+        "psa_9": 274,
+        "psa_10": 388,
+        "psa_total": 810
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 810
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Hitmonlee-1st Edition",
+      "base_name": "Hitmonlee",
+      "variety": "1st Edition",
+      "spec_id": 5199655,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Hitmonchan-1st Edition",
+      "base_name": "Hitmonchan",
+      "variety": "1st Edition",
+      "spec_id": 5199657,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Larvitar-1st Edition",
+      "base_name": "Larvitar",
+      "variety": "1st Edition",
+      "spec_id": 5199659,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 8,
+        "psa_10": 4,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Pupitar-1st Edition",
+      "base_name": "Pupitar",
+      "variety": "1st Edition",
+      "spec_id": 5199661,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Murkrow-1st Edition",
+      "base_name": "Murkrow",
+      "variety": "1st Edition",
+      "spec_id": 3090676,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 9,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Honchkrow-1st Edition",
+      "base_name": "Honchkrow",
+      "variety": "1st Edition",
+      "spec_id": 3090679,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Houndour-1st Edition",
+      "base_name": "Houndour",
+      "variety": "1st Edition",
+      "spec_id": 5199663,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 4,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Houndoom-Holo",
+      "base_name": "Houndoom-Holo",
+      "variety": "",
+      "spec_id": 2852967,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 13,
+        "psa_9": 22,
+        "psa_10": 26,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Houndoom-Holo-1st Edition",
+      "base_name": "Houndoom-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2572150,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 8,
+        "psa_7": 18,
+        "psa_8": 51,
+        "psa_9": 175,
+        "psa_10": 189,
+        "psa_total": 446
+      },
+      "grade_totals": {
+        "total": 446,
+        "grade_total": 446
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Tyranitar",
+      "base_name": "Tyranitar",
+      "variety": "",
+      "spec_id": 7727344,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Tyranitar-1st Edition",
+      "base_name": "Tyranitar",
+      "variety": "1st Edition",
+      "spec_id": 7758535,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 11,
+        "psa_10": 15,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Tyranitar-Holo",
+      "base_name": "Tyranitar-Holo",
+      "variety": "",
+      "spec_id": 3090680,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 11,
+        "psa_10": 13,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Tyranitar-Holo-1st Edition",
+      "base_name": "Tyranitar-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2493380,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 10,
+        "psa_9": 34,
+        "psa_10": 101,
+        "psa_total": 156
+      },
+      "grade_totals": {
+        "total": 156,
+        "grade_total": 156
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Stunky-1st Edition",
+      "base_name": "Stunky",
+      "variety": "1st Edition",
+      "spec_id": 5199666,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Skuntank-1st Edition",
+      "base_name": "Skuntank",
+      "variety": "1st Edition",
+      "spec_id": 5199668,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Energy Exchanger",
+      "base_name": "Energy Exchanger",
+      "variety": "",
+      "spec_id": 5199793,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Pokemon Reversal-1st Edition",
+      "base_name": "Pokemon Reversal",
+      "variety": "1st Edition",
+      "spec_id": 5199670,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Pokemon Collector",
+      "base_name": "Pokemon Collector",
+      "variety": "",
+      "spec_id": 2900429,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Pokemon Collector-1st Edition",
+      "base_name": "Pokemon Collector",
+      "variety": "1st Edition",
+      "spec_id": 2835597,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 6,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Bill",
+      "base_name": "Bill",
+      "variety": "",
+      "spec_id": 5199797,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Team Rocket's Trickery",
+      "base_name": "Team Rocket's Trickery",
+      "variety": "",
+      "spec_id": 5199798,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Team Rocket's Trickery-1st Edition",
+      "base_name": "Team Rocket's Trickery",
+      "variety": "1st Edition",
+      "spec_id": 4244011,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    }
+  ]
+}

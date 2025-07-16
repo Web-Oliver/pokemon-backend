@@ -1,0 +1,248 @@
+{
+  "year": "2005",
+  "set_name": "Pokemon Japanese Pokepark Forest",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2005/pokemon-japanese-pokepark-forest/134800",
+  "total_cards": 10,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 7,
+        "psa_4": 11,
+        "psa_5": 38,
+        "psa_6": 57,
+        "psa_7": 73,
+        "psa_8": 212,
+        "psa_9": 958,
+        "psa_10": 968,
+        "psa_total": 2328
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2328
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Pokepark's Celebi",
+      "base_name": "Pokepark's Celebi",
+      "variety": "",
+      "spec_id": 2284708,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 6,
+        "psa_8": 17,
+        "psa_9": 79,
+        "psa_10": 94,
+        "psa_total": 209
+      },
+      "grade_totals": {
+        "total": 209,
+        "grade_total": 209
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Pokepark's Torchic-Holo",
+      "base_name": "Pokepark's Torchic-Holo",
+      "variety": "",
+      "spec_id": 2284736,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 37,
+        "psa_9": 153,
+        "psa_10": 139,
+        "psa_total": 342
+      },
+      "grade_totals": {
+        "total": 342,
+        "grade_total": 342
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Pokepark's Mudkip",
+      "base_name": "Pokepark's Mudkip",
+      "variety": "",
+      "spec_id": 2284737,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 4,
+        "psa_7": 8,
+        "psa_8": 22,
+        "psa_9": 95,
+        "psa_10": 48,
+        "psa_total": 184
+      },
+      "grade_totals": {
+        "total": 184,
+        "grade_total": 184
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Pokepark's Pikachu-Holo",
+      "base_name": "Pokepark's Pikachu-Holo",
+      "variety": "",
+      "spec_id": 2284741,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 8,
+        "psa_6": 12,
+        "psa_7": 15,
+        "psa_8": 49,
+        "psa_9": 234,
+        "psa_10": 182,
+        "psa_total": 509
+      },
+      "grade_totals": {
+        "total": 509,
+        "grade_total": 509
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Pokepark's Latias",
+      "base_name": "Pokepark's Latias",
+      "variety": "",
+      "spec_id": 2284746,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 8,
+        "psa_7": 10,
+        "psa_8": 21,
+        "psa_9": 93,
+        "psa_10": 77,
+        "psa_total": 213
+      },
+      "grade_totals": {
+        "total": 213,
+        "grade_total": 213
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Pokepark's Latios",
+      "base_name": "Pokepark's Latios",
+      "variety": "",
+      "spec_id": 2284748,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 6,
+        "psa_7": 11,
+        "psa_8": 11,
+        "psa_9": 61,
+        "psa_10": 104,
+        "psa_total": 204
+      },
+      "grade_totals": {
+        "total": 205,
+        "grade_total": 204
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Pokepark's Whismur",
+      "base_name": "Pokepark's Whismur",
+      "variety": "",
+      "spec_id": 2284749,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 69,
+        "psa_10": 68,
+        "psa_total": 159
+      },
+      "grade_totals": {
+        "total": 159,
+        "grade_total": 159
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Pokepark's Munchlax-Holo",
+      "base_name": "Pokepark's Munchlax-Holo",
+      "variety": "",
+      "spec_id": 2284752,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 8,
+        "psa_7": 5,
+        "psa_8": 19,
+        "psa_9": 103,
+        "psa_10": 148,
+        "psa_total": 286
+      },
+      "grade_totals": {
+        "total": 287,
+        "grade_total": 286
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Pokepark's Jirachi",
+      "base_name": "Pokepark's Jirachi",
+      "variety": "",
+      "spec_id": 2284757,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 7,
+        "psa_7": 7,
+        "psa_8": 24,
+        "psa_9": 71,
+        "psa_10": 108,
+        "psa_total": 222
+      },
+      "grade_totals": {
+        "total": 222,
+        "grade_total": 222
+      }
+    }
+  ]
+}

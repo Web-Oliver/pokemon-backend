@@ -1,0 +1,56 @@
+{
+  "year": "2000",
+  "set_name": "Pokemon 2-Player CD-Rom Starter Set",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2000/pokemon-2-player-cd-rom-starter-set/126924",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 28,
+        "psa_2": 30,
+        "psa_3": 66,
+        "psa_4": 132,
+        "psa_5": 271,
+        "psa_6": 330,
+        "psa_7": 298,
+        "psa_8": 540,
+        "psa_9": 469,
+        "psa_10": 42,
+        "psa_total": 2206
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2206
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Machamp-Holo-1st Edition Cosmos Holofoil",
+      "base_name": "Machamp-Holo",
+      "variety": "1st Edition Cosmos Holofoil",
+      "spec_id": 2141985,
+      "psa_grades": {
+        "psa_1": 28,
+        "psa_2": 30,
+        "psa_3": 66,
+        "psa_4": 132,
+        "psa_5": 271,
+        "psa_6": 330,
+        "psa_7": 298,
+        "psa_8": 540,
+        "psa_9": 469,
+        "psa_10": 42,
+        "psa_total": 2206
+      },
+      "grade_totals": {
+        "total": 2229,
+        "grade_total": 2206
+      }
+    }
+  ]
+}

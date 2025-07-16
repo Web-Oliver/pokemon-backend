@@ -1,0 +1,128 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Expedition Box Topper",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-expedition-box-topper/116562",
+  "total_cards": 11,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 1,
+        "psa_3": 13,
+        "psa_4": 31,
+        "psa_5": 63,
+        "psa_6": 78,
+        "psa_7": 120,
+        "psa_8": 173,
+        "psa_9": 192,
+        "psa_10": 90,
+        "psa_total": 772
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 772
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Alakazam",
+      "base_name": "Alakazam",
+      "variety": "",
+      "spec_id": 1984973,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 7,
+        "psa_5": 15,
+        "psa_6": 18,
+        "psa_7": 34,
+        "psa_8": 43,
+        "psa_9": 45,
+        "psa_10": 19,
+        "psa_total": 187
+      },
+      "grade_totals": {
+        "total": 187,
+        "grade_total": 187
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Feraligatr",
+      "base_name": "Feraligatr",
+      "variety": "",
+      "spec_id": 1984976,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 10,
+        "psa_6": 16,
+        "psa_7": 28,
+        "psa_8": 41,
+        "psa_9": 49,
+        "psa_10": 19,
+        "psa_total": 173
+      },
+      "grade_totals": {
+        "total": 173,
+        "grade_total": 173
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Tyranitar",
+      "base_name": "Tyranitar",
+      "variety": "",
+      "spec_id": 1984978,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 9,
+        "psa_5": 19,
+        "psa_6": 21,
+        "psa_7": 27,
+        "psa_8": 44,
+        "psa_9": 46,
+        "psa_10": 29,
+        "psa_total": 198
+      },
+      "grade_totals": {
+        "total": 198,
+        "grade_total": 198
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Venusaur",
+      "base_name": "Venusaur",
+      "variety": "",
+      "spec_id": 1984986,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 6,
+        "psa_4": 9,
+        "psa_5": 17,
+        "psa_6": 20,
+        "psa_7": 27,
+        "psa_8": 44,
+        "psa_9": 51,
+        "psa_10": 23,
+        "psa_total": 200
+      },
+      "grade_totals": {
+        "total": 201,
+        "grade_total": 200
+      }
+    }
+  ]
+}

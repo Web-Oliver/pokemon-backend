@@ -1,0 +1,104 @@
+{
+  "year": "2017",
+  "set_name": "Pokemon Battle Arena Deck: Black Kyurem VS White Kyurem",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2017/pokemon-battle-arena-deck-black-kyurem-vs-white/153918",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 10,
+        "psa_9": 28,
+        "psa_10": 3,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Chandelure",
+      "base_name": "Chandelure",
+      "variety": "",
+      "spec_id": 2838893,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "92a",
+      "card_name": "Trainers' Mail-Holo-Black Kyurem Deck",
+      "base_name": "Trainers' Mail-Holo",
+      "variety": "Black Kyurem Deck",
+      "spec_id": 2498321,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 14,
+        "psa_10": 1,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "107a",
+      "card_name": "Professor Sycamore-Holo-White Kyurem Deck",
+      "base_name": "Professor Sycamore-Holo",
+      "variety": "White Kyurem Deck",
+      "spec_id": 2498325,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 14,
+        "psa_10": 2,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    }
+  ]
+}

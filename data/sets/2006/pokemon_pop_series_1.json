@@ -1,0 +1,104 @@
+{
+  "year": "2006",
+  "set_name": "Pokemon Pop Series 1",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2006/pokemon-pop-series-1/123838",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 31,
+        "psa_2": 5,
+        "psa_3": 7,
+        "psa_4": 34,
+        "psa_5": 73,
+        "psa_6": 123,
+        "psa_7": 165,
+        "psa_8": 281,
+        "psa_9": 269,
+        "psa_10": 42,
+        "psa_total": 1030
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1030
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Blaziken-Holo",
+      "base_name": "Blaziken-Holo",
+      "variety": "",
+      "spec_id": 2103150,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 9,
+        "psa_5": 15,
+        "psa_6": 14,
+        "psa_7": 30,
+        "psa_8": 69,
+        "psa_9": 76,
+        "psa_10": 11,
+        "psa_total": 235
+      },
+      "grade_totals": {
+        "total": 235,
+        "grade_total": 235
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Metagross-Holo",
+      "base_name": "Metagross-Holo",
+      "variety": "",
+      "spec_id": 9955358,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 3,
+        "psa_6": 20,
+        "psa_7": 34,
+        "psa_8": 52,
+        "psa_9": 49,
+        "psa_10": 8,
+        "psa_total": 177
+      },
+      "grade_totals": {
+        "total": 179,
+        "grade_total": 177
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Rayquaza-Holo",
+      "base_name": "Rayquaza-Holo",
+      "variety": "",
+      "spec_id": 2535704,
+      "psa_grades": {
+        "psa_1": 19,
+        "psa_2": 3,
+        "psa_3": 4,
+        "psa_4": 20,
+        "psa_5": 55,
+        "psa_6": 89,
+        "psa_7": 101,
+        "psa_8": 160,
+        "psa_9": 144,
+        "psa_10": 23,
+        "psa_total": 618
+      },
+      "grade_totals": {
+        "total": 621,
+        "grade_total": 618
+      }
+    }
+  ]
+}

@@ -1,0 +1,2072 @@
+{
+  "year": "2009",
+  "set_name": "Pokemon Japanese Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2009/pokemon-japanese-promo/96771",
+  "total_cards": 86,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 18,
+        "psa_2": 10,
+        "psa_3": 39,
+        "psa_4": 98,
+        "psa_5": 252,
+        "psa_6": 425,
+        "psa_7": 591,
+        "psa_8": 1559,
+        "psa_9": 4972,
+        "psa_10": 10247,
+        "psa_total": 18215
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 18215
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Meganium-Challenge Road",
+      "base_name": "Meganium",
+      "variety": "Challenge Road",
+      "spec_id": 2066642,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 12,
+        "psa_10": 23,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Feraligatr-Gym Challenge",
+      "base_name": "Feraligatr",
+      "variety": "Gym Challenge",
+      "spec_id": 2021784,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 15,
+        "psa_9": 43,
+        "psa_10": 129,
+        "psa_total": 194
+      },
+      "grade_totals": {
+        "total": 194,
+        "grade_total": 194
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Typhlosion-Pokemon Fan Magazine",
+      "base_name": "Typhlosion",
+      "variety": "Pokemon Fan Magazine",
+      "spec_id": 2089034,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 7,
+        "psa_8": 4,
+        "psa_9": 14,
+        "psa_10": 22,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Gyarados-Holo-Random Basic Pack",
+      "base_name": "Gyarados-Holo",
+      "variety": "Random Basic Pack",
+      "spec_id": 2135443,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 15,
+        "psa_6": 26,
+        "psa_7": 46,
+        "psa_8": 141,
+        "psa_9": 361,
+        "psa_10": 453,
+        "psa_total": 1050
+      },
+      "grade_totals": {
+        "total": 1050,
+        "grade_total": 1050
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Chikorita-Holo-HG & SS Release Campaign",
+      "base_name": "Chikorita-Holo",
+      "variety": "HG & SS Release Campaign",
+      "spec_id": 2021796,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 4,
+        "psa_7": 9,
+        "psa_8": 26,
+        "psa_9": 113,
+        "psa_10": 281,
+        "psa_total": 441
+      },
+      "grade_totals": {
+        "total": 441,
+        "grade_total": 441
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Cyndaquil-Holo-HG & SS Release Campaign",
+      "base_name": "Cyndaquil-Holo",
+      "variety": "HG & SS Release Campaign",
+      "spec_id": 2021798,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 6,
+        "psa_7": 13,
+        "psa_8": 17,
+        "psa_9": 130,
+        "psa_10": 292,
+        "psa_total": 464
+      },
+      "grade_totals": {
+        "total": 464,
+        "grade_total": 464
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Totodile-Holo-HG & SS Release Campaign",
+      "base_name": "Totodile-Holo",
+      "variety": "HG & SS Release Campaign",
+      "spec_id": 2021800,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 13,
+        "psa_8": 33,
+        "psa_9": 120,
+        "psa_10": 296,
+        "psa_total": 475
+      },
+      "grade_totals": {
+        "total": 475,
+        "grade_total": 475
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Mareep-Holo-HG & SS Release Campaign",
+      "base_name": "Mareep-Holo",
+      "variety": "HG & SS Release Campaign",
+      "spec_id": 2021801,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 10,
+        "psa_7": 6,
+        "psa_8": 17,
+        "psa_9": 98,
+        "psa_10": 191,
+        "psa_total": 330
+      },
+      "grade_totals": {
+        "total": 330,
+        "grade_total": 330
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Phanpy-Holo-HG & SS Release Campaign",
+      "base_name": "Phanpy-Holo",
+      "variety": "HG & SS Release Campaign",
+      "spec_id": 2021803,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 8,
+        "psa_8": 9,
+        "psa_9": 92,
+        "psa_10": 171,
+        "psa_total": 287
+      },
+      "grade_totals": {
+        "total": 287,
+        "grade_total": 287
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Electrode G-Holo-Galactic's Conquest/Bonds to End of Time Special Pack",
+      "base_name": "Electrode G-Holo",
+      "variety": "Galactic's Conquest/Bonds to End of Time Special Pack",
+      "spec_id": 2676146,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 9,
+        "psa_9": 53,
+        "psa_10": 87,
+        "psa_total": 160
+      },
+      "grade_totals": {
+        "total": 160,
+        "grade_total": 160
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Teddiursa-Holo-HG & SS Release Campaign",
+      "base_name": "Teddiursa-Holo",
+      "variety": "HG & SS Release Campaign",
+      "spec_id": 1909758,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 5,
+        "psa_8": 26,
+        "psa_9": 104,
+        "psa_10": 215,
+        "psa_total": 357
+      },
+      "grade_totals": {
+        "total": 357,
+        "grade_total": 357
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Grass Energy-Holo-Gym Challenge",
+      "base_name": "Grass Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2021808,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 11,
+        "psa_10": 24,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Mismagius GL LV.X-Holo-Galactic's Conquest/Bonds End of Time Special Pack",
+      "base_name": "Mismagius GL LV.X-Holo",
+      "variety": "Galactic's Conquest/Bonds End of Time Special Pack",
+      "spec_id": 2178255,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 6,
+        "psa_7": 11,
+        "psa_8": 44,
+        "psa_9": 210,
+        "psa_10": 167,
+        "psa_total": 448
+      },
+      "grade_totals": {
+        "total": 451,
+        "grade_total": 448
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Fire Energy-Holo-Gym Challenge",
+      "base_name": "Fire Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2021816,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 11,
+        "psa_10": 25,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Water Energy-Holo-Gym Challenge",
+      "base_name": "Water Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2021817,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 19,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Lightning Energy-Holo-Gym Challenge",
+      "base_name": "Lightning Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 1918275,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 14,
+        "psa_9": 43,
+        "psa_10": 105,
+        "psa_total": 174
+      },
+      "grade_totals": {
+        "total": 174,
+        "grade_total": 174
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Psychic Energy-Holo-Gym Challenge",
+      "base_name": "Psychic Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 1918277,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 29,
+        "psa_10": 65,
+        "psa_total": 94
+      },
+      "grade_totals": {
+        "total": 94,
+        "grade_total": 94
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Lucario-Sunday Campaign",
+      "base_name": "Lucario",
+      "variety": "Sunday Campaign",
+      "spec_id": 2272676,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 13,
+        "psa_9": 62,
+        "psa_10": 63,
+        "psa_total": 144
+      },
+      "grade_totals": {
+        "total": 145,
+        "grade_total": 144
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Fighting Energy-Holo-Gym Challenge",
+      "base_name": "Fighting Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2021821,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 8,
+        "psa_10": 27,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Pikachu-Holo-Daisuki Club Gold Point",
+      "base_name": "Pikachu-Holo",
+      "variety": "Daisuki Club Gold Point",
+      "spec_id": 1913805,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 39,
+        "psa_10": 32,
+        "psa_total": 81
+      },
+      "grade_totals": {
+        "total": 82,
+        "grade_total": 81
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Darkness Energy-Holo-Gym Challenge",
+      "base_name": "Darkness Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 1918279,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 26,
+        "psa_10": 75,
+        "psa_total": 105
+      },
+      "grade_totals": {
+        "total": 105,
+        "grade_total": 105
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Drifblim FB-Holo-Beat of the Frontier Commmemorative Rally",
+      "base_name": "Drifblim FB-Holo",
+      "variety": "Beat of the Frontier Commmemorative Rally",
+      "spec_id": 2581769,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 15,
+        "psa_10": 41,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 62,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Metal Energy-Holo-Gym Challenge",
+      "base_name": "Metal Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2021823,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 25,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Dragonite FB-Holo-Beat of the Frontier Commmemorative Rally",
+      "base_name": "Dragonite FB-Holo",
+      "variety": "Beat of the Frontier Commmemorative Rally",
+      "spec_id": 2011987,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 19,
+        "psa_9": 72,
+        "psa_10": 179,
+        "psa_total": 282
+      },
+      "grade_totals": {
+        "total": 282,
+        "grade_total": 282
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Pikachu-Holo-Gold Rank Gift Card",
+      "base_name": "Pikachu-Holo",
+      "variety": "Gold Rank Gift Card",
+      "spec_id": 1754804,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 6,
+        "psa_6": 13,
+        "psa_7": 27,
+        "psa_8": 54,
+        "psa_9": 242,
+        "psa_10": 340,
+        "psa_total": 684
+      },
+      "grade_totals": {
+        "total": 684,
+        "grade_total": 684
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Battle Tower-Holo-Beat of the Frontier Release",
+      "base_name": "Battle Tower-Holo",
+      "variety": "Beat of the Frontier Release",
+      "spec_id": 2180986,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 11,
+        "psa_9": 56,
+        "psa_10": 201,
+        "psa_total": 272
+      },
+      "grade_totals": {
+        "total": 272,
+        "grade_total": 272
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "Cresselia-Holo-Super Rank Prize",
+      "base_name": "Cresselia-Holo",
+      "variety": "Super Rank Prize",
+      "spec_id": 1754810,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 9,
+        "psa_9": 27,
+        "psa_10": 171,
+        "psa_total": 211
+      },
+      "grade_totals": {
+        "total": 211,
+        "grade_total": 211
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "SP Energy-Holo-Beat of the Frontier Gym Challenge",
+      "base_name": "SP Energy-Holo",
+      "variety": "Beat of the Frontier Gym Challenge",
+      "spec_id": 2180989,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 12,
+        "psa_10": 59,
+        "psa_total": 74
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 74
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Darkrai-Holo-Super Rank Prize",
+      "base_name": "Darkrai-Holo",
+      "variety": "Super Rank Prize",
+      "spec_id": 1791565,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 4,
+        "psa_8": 16,
+        "psa_9": 35,
+        "psa_10": 170,
+        "psa_total": 233
+      },
+      "grade_totals": {
+        "total": 233,
+        "grade_total": 233
+      }
+    },
+    {
+      "pokemon_number": "021",
+      "card_name": "Rainbow Energy-Holo-Gym Challenge",
+      "base_name": "Rainbow Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2180991,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 17,
+        "psa_10": 41,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Grass Energy-Holo-Gym Challenge",
+      "base_name": "Grass Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2640598,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 7,
+        "psa_10": 12,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "022",
+      "card_name": "Sentret-Holo-Legend Battle Prize",
+      "base_name": "Sentret-Holo",
+      "variety": "Legend Battle Prize",
+      "spec_id": 2021826,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 16,
+        "psa_9": 49,
+        "psa_10": 162,
+        "psa_total": 232
+      },
+      "grade_totals": {
+        "total": 232,
+        "grade_total": 232
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Professor Elm-Holo-Legend Battle Award",
+      "base_name": "Professor Elm-Holo",
+      "variety": "Legend Battle Award",
+      "spec_id": 1754845,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 13,
+        "psa_9": 25,
+        "psa_10": 65,
+        "psa_total": 106
+      },
+      "grade_totals": {
+        "total": 106,
+        "grade_total": 106
+      }
+    },
+    {
+      "pokemon_number": "023",
+      "card_name": "Fire Energy-Holo-Gym Challenge",
+      "base_name": "Fire Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2640599,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 6,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "024",
+      "card_name": "Copycat-Holo-Legend Winner's Prize",
+      "base_name": "Copycat-Holo",
+      "variety": "Legend Winner's Prize",
+      "spec_id": 1754841,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 11,
+        "psa_9": 26,
+        "psa_10": 77,
+        "psa_total": 124
+      },
+      "grade_totals": {
+        "total": 124,
+        "grade_total": 124
+      }
+    },
+    {
+      "pokemon_number": "024",
+      "card_name": "Water Energy-Holo-Gym Challenge",
+      "base_name": "Water Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2640601,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 10,
+        "psa_10": 5,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Lightning Energy-Holo-Gym Challenge",
+      "base_name": "Lightning Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2689808,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 8,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "025",
+      "card_name": "Hoothoot-Battle Tour Participation Prize",
+      "base_name": "Hoothoot",
+      "variety": "Battle Tour Participation Prize",
+      "spec_id": 2108156,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 14,
+        "psa_10": 19,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Psychic Energy-Holo-Gym Challenge",
+      "base_name": "Psychic Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2640603,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 6,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "026",
+      "card_name": "Noctowl-Holo-Battle Tour Winner's Prize",
+      "base_name": "Noctowl-Holo",
+      "variety": "Battle Tour Winner's Prize",
+      "spec_id": 2108165,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 90,
+        "psa_10": 31,
+        "psa_total": 130
+      },
+      "grade_totals": {
+        "total": 130,
+        "grade_total": 130
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Fighting Energy-Holo-Gym Challenge",
+      "base_name": "Fighting Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2640602,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 7,
+        "psa_10": 18,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "027",
+      "card_name": "Victory Medal-Knockout Battle",
+      "base_name": "Victory Medal",
+      "variety": "Knockout Battle",
+      "spec_id": 2021827,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 8,
+        "psa_8": 24,
+        "psa_9": 99,
+        "psa_10": 149,
+        "psa_total": 294
+      },
+      "grade_totals": {
+        "total": 294,
+        "grade_total": 294
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Darkness Energy-Holo-Gym Challenge",
+      "base_name": "Darkness Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2640604,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 7,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Slowpoke-Domino's Pizza",
+      "base_name": "Slowpoke",
+      "variety": "Domino's Pizza",
+      "spec_id": 2185696,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 7,
+        "psa_7": 12,
+        "psa_8": 34,
+        "psa_9": 73,
+        "psa_10": 156,
+        "psa_total": 289
+      },
+      "grade_totals": {
+        "total": 290,
+        "grade_total": 289
+      }
+    },
+    {
+      "pokemon_number": "028",
+      "card_name": "Slowpoke-Holo-Domino's Pizza",
+      "base_name": "Slowpoke-Holo",
+      "variety": "Domino's Pizza",
+      "spec_id": 2017663,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 13,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Metal Energy-Holo-Gym Challenge",
+      "base_name": "Metal Energy-Holo",
+      "variety": "Gym Challenge",
+      "spec_id": 2640605,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 8,
+        "psa_10": 8,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "029",
+      "card_name": "Slowbro-Holo-Domino's Pizza",
+      "base_name": "Slowbro-Holo",
+      "variety": "Domino's Pizza",
+      "spec_id": 2017662,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 63,
+        "psa_10": 47,
+        "psa_total": 128
+      },
+      "grade_totals": {
+        "total": 128,
+        "grade_total": 128
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Bulbasaur-10th Anniversary",
+      "base_name": "Bulbasaur",
+      "variety": "10th Anniversary",
+      "spec_id": 2326234,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 9,
+        "psa_7": 12,
+        "psa_8": 27,
+        "psa_9": 56,
+        "psa_10": 52,
+        "psa_total": 162
+      },
+      "grade_totals": {
+        "total": 162,
+        "grade_total": 162
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Slowking-Holo-Domino's Pizza",
+      "base_name": "Slowking-Holo",
+      "variety": "Domino's Pizza",
+      "spec_id": 2017661,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 17,
+        "psa_7": 23,
+        "psa_8": 41,
+        "psa_9": 109,
+        "psa_10": 268,
+        "psa_total": 469
+      },
+      "grade_totals": {
+        "total": 470,
+        "grade_total": 469
+      }
+    },
+    {
+      "pokemon_number": "031",
+      "card_name": "Victory Medal-3rd Place-Gym Challenge",
+      "base_name": "Victory Medal",
+      "variety": "3rd Place-Gym Challenge",
+      "spec_id": 1754852,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 6,
+        "psa_5": 5,
+        "psa_6": 15,
+        "psa_7": 27,
+        "psa_8": 58,
+        "psa_9": 186,
+        "psa_10": 775,
+        "psa_total": 1073
+      },
+      "grade_totals": {
+        "total": 1074,
+        "grade_total": 1073
+      }
+    },
+    {
+      "pokemon_number": "031",
+      "card_name": "Victory Medal-Pokemon Plaza Challenge",
+      "base_name": "Victory Medal",
+      "variety": "Pokemon Plaza Challenge",
+      "spec_id": 1877971,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 33,
+        "psa_9": 115,
+        "psa_10": 288,
+        "psa_total": 449
+      },
+      "grade_totals": {
+        "total": 449,
+        "grade_total": 449
+      }
+    },
+    {
+      "pokemon_number": "032",
+      "card_name": "Chatot-Challenge Hiroba",
+      "base_name": "Chatot",
+      "variety": "Challenge Hiroba",
+      "spec_id": 2581764,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 13,
+        "psa_10": 53,
+        "psa_total": 72
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 72
+      }
+    },
+    {
+      "pokemon_number": "032",
+      "card_name": "Victory Medal-2nd Place-Gym Challenge",
+      "base_name": "Victory Medal",
+      "variety": "2nd Place-Gym Challenge",
+      "spec_id": 1754851,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 14,
+        "psa_7": 23,
+        "psa_8": 68,
+        "psa_9": 167,
+        "psa_10": 858,
+        "psa_total": 1133
+      },
+      "grade_totals": {
+        "total": 1134,
+        "grade_total": 1133
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Victory Medal-1st Place-Gym Challenge",
+      "base_name": "Victory Medal",
+      "variety": "1st Place-Gym Challenge",
+      "spec_id": 1754849,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 11,
+        "psa_6": 23,
+        "psa_7": 30,
+        "psa_8": 85,
+        "psa_9": 220,
+        "psa_10": 918,
+        "psa_total": 1290
+      },
+      "grade_totals": {
+        "total": 1290,
+        "grade_total": 1290
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Wonder Platinum-Japan National Championship",
+      "base_name": "Wonder Platinum",
+      "variety": "Japan National Championship",
+      "spec_id": 1885787,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 10,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "034",
+      "card_name": "Chikorita-Pokemon Center",
+      "base_name": "Chikorita",
+      "variety": "Pokemon Center",
+      "spec_id": 2108159,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 7,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "034",
+      "card_name": "Ponyta-Challenge Hiroba",
+      "base_name": "Ponyta",
+      "variety": "Challenge Hiroba",
+      "spec_id": 2581770,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 7,
+        "psa_8": 6,
+        "psa_9": 23,
+        "psa_10": 20,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "035",
+      "card_name": "Cyndaquil-Pokemon Center",
+      "base_name": "Cyndaquil",
+      "variety": "Pokemon Center",
+      "spec_id": 2021853,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 5,
+        "psa_10": 5,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "035",
+      "card_name": "Porygon-Z G",
+      "base_name": "Porygon-Z G",
+      "variety": "",
+      "spec_id": 2381511,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 30,
+        "psa_10": 75,
+        "psa_total": 115
+      },
+      "grade_totals": {
+        "total": 115,
+        "grade_total": 115
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Victory Medal-Battle Tour 2009: Knockout Battle",
+      "base_name": "Victory Medal",
+      "variety": "Battle Tour 2009: Knockout Battle",
+      "spec_id": 1861411,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 8,
+        "psa_8": 56,
+        "psa_9": 142,
+        "psa_10": 142,
+        "psa_total": 357
+      },
+      "grade_totals": {
+        "total": 357,
+        "grade_total": 357
+      }
+    },
+    {
+      "pokemon_number": "036",
+      "card_name": "Totodile-Pokemon Center",
+      "base_name": "Totodile",
+      "variety": "Pokemon Center",
+      "spec_id": 2021855,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 13,
+        "psa_10": 13,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Beginning Door-Holo-Advent of Arceus Release",
+      "base_name": "Beginning Door-Holo",
+      "variety": "Advent of Arceus Release",
+      "spec_id": 2180992,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 74,
+        "psa_10": 114,
+        "psa_total": 208
+      },
+      "grade_totals": {
+        "total": 208,
+        "grade_total": 208
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Mareep-Pokemon Center",
+      "base_name": "Mareep",
+      "variety": "Pokemon Center",
+      "spec_id": 2021858,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 8,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Phanpy-Pokemon Center",
+      "base_name": "Phanpy",
+      "variety": "Pokemon Center",
+      "spec_id": 2021859,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 9,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Pichu-Holo-Advent of Arceus Release",
+      "base_name": "Pichu-Holo",
+      "variety": "Advent of Arceus Release",
+      "spec_id": 2493280,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 10,
+        "psa_9": 14,
+        "psa_10": 34,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 65,
+        "grade_total": 65
+      }
+    },
+    {
+      "pokemon_number": "039",
+      "card_name": "Mothim-Holo-Advent of Arceus Release",
+      "base_name": "Mothim-Holo",
+      "variety": "Advent of Arceus Release",
+      "spec_id": 2638589,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 23,
+        "psa_10": 13,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "039",
+      "card_name": "Teddiursa-Pokemon Center",
+      "base_name": "Teddiursa",
+      "variety": "Pokemon Center",
+      "spec_id": 2021861,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 8,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "040",
+      "card_name": "Arceus-Holo-Advent of Arceus",
+      "base_name": "Arceus-Holo",
+      "variety": "Advent of Arceus",
+      "spec_id": 2180997,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 4,
+        "psa_8": 12,
+        "psa_9": 31,
+        "psa_10": 81,
+        "psa_total": 140
+      },
+      "grade_totals": {
+        "total": 140,
+        "grade_total": 140
+      }
+    },
+    {
+      "pokemon_number": "040",
+      "card_name": "Wobbuffet-Holo-Challenge Battle Participant",
+      "base_name": "Wobbuffet-Holo",
+      "variety": "Challenge Battle Participant",
+      "spec_id": 2086709,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 21,
+        "psa_10": 44,
+        "psa_total": 69
+      },
+      "grade_totals": {
+        "total": 69,
+        "grade_total": 69
+      }
+    },
+    {
+      "pokemon_number": "041",
+      "card_name": "Arceus-Arceus:to A Conquering Movie Release",
+      "base_name": "Arceus",
+      "variety": "Arceus:to A Conquering Movie Release",
+      "spec_id": 2180999,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 5,
+        "psa_4": 7,
+        "psa_5": 14,
+        "psa_6": 20,
+        "psa_7": 17,
+        "psa_8": 25,
+        "psa_9": 64,
+        "psa_10": 99,
+        "psa_total": 253
+      },
+      "grade_totals": {
+        "total": 253,
+        "grade_total": 253
+      }
+    },
+    {
+      "pokemon_number": "041",
+      "card_name": "Victory Medal-Challenge Battle Winner",
+      "base_name": "Victory Medal",
+      "variety": "Challenge Battle Winner",
+      "spec_id": 2023644,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 32,
+        "psa_10": 89,
+        "psa_total": 136
+      },
+      "grade_totals": {
+        "total": 136,
+        "grade_total": 136
+      }
+    },
+    {
+      "pokemon_number": "042",
+      "card_name": "Spiky-Eared Pichu-Shonen Sunday Magazine",
+      "base_name": "Spiky-Eared Pichu",
+      "variety": "Shonen Sunday Magazine",
+      "spec_id": 5816166,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 13,
+        "psa_6": 22,
+        "psa_7": 14,
+        "psa_8": 28,
+        "psa_9": 74,
+        "psa_10": 39,
+        "psa_total": 200
+      },
+      "grade_totals": {
+        "total": 200,
+        "grade_total": 200
+      }
+    },
+    {
+      "pokemon_number": "043",
+      "card_name": "Pikachu M LV.X-Holo-Advent of Arceus",
+      "base_name": "Pikachu M LV.X-Holo",
+      "variety": "Advent of Arceus",
+      "spec_id": 1825299,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 2,
+        "psa_3": 14,
+        "psa_4": 22,
+        "psa_5": 70,
+        "psa_6": 76,
+        "psa_7": 115,
+        "psa_8": 244,
+        "psa_9": 523,
+        "psa_10": 687,
+        "psa_total": 1762
+      },
+      "grade_totals": {
+        "total": 1765,
+        "grade_total": 1762
+      }
+    },
+    {
+      "pokemon_number": "044",
+      "card_name": "Raichu-Holo-Daisuki Club 5,200 Pts.",
+      "base_name": "Raichu-Holo",
+      "variety": "Daisuki Club 5,200 Pts.",
+      "spec_id": 1780185,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 15,
+        "psa_9": 51,
+        "psa_10": 74,
+        "psa_total": 157
+      },
+      "grade_totals": {
+        "total": 157,
+        "grade_total": 157
+      }
+    },
+    {
+      "pokemon_number": "044",
+      "card_name": "Michina Temple-Holo-Advent of Arceus",
+      "base_name": "Michina Temple-Holo",
+      "variety": "Advent of Arceus",
+      "spec_id": 1754799,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 6,
+        "psa_5": 31,
+        "psa_6": 28,
+        "psa_7": 36,
+        "psa_8": 84,
+        "psa_9": 195,
+        "psa_10": 367,
+        "psa_total": 750
+      },
+      "grade_totals": {
+        "total": 751,
+        "grade_total": 750
+      }
+    },
+    {
+      "pokemon_number": "045",
+      "card_name": "Cresselia-Holo-Super Rank Prize",
+      "base_name": "Cresselia-Holo",
+      "variety": "Super Rank Prize",
+      "spec_id": 3715090,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "046",
+      "card_name": "Darkrai-Holo-Super Rank Prize",
+      "base_name": "Darkrai-Holo",
+      "variety": "Super Rank Prize",
+      "spec_id": 3714956,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "047",
+      "card_name": "Jigglypuff-Holo-Pokemon Challenge Open",
+      "base_name": "Jigglypuff-Holo",
+      "variety": "Pokemon Challenge Open",
+      "spec_id": 2280674,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 27,
+        "psa_10": 50,
+        "psa_total": 90
+      },
+      "grade_totals": {
+        "total": 90,
+        "grade_total": 90
+      }
+    },
+    {
+      "pokemon_number": "048",
+      "card_name": "Ultimate Zone-Advent of Arceus Release",
+      "base_name": "Ultimate Zone",
+      "variety": "Advent of Arceus Release",
+      "spec_id": 2613835,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 16,
+        "psa_9": 30,
+        "psa_10": 22,
+        "psa_total": 77
+      },
+      "grade_totals": {
+        "total": 77,
+        "grade_total": 77
+      }
+    },
+    {
+      "pokemon_number": "049",
+      "card_name": "Mewtwo-Holo-Pokemon Battle Tour",
+      "base_name": "Mewtwo-Holo",
+      "variety": "Pokemon Battle Tour",
+      "spec_id": 2444739,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 19,
+        "psa_9": 49,
+        "psa_10": 83,
+        "psa_total": 155
+      },
+      "grade_totals": {
+        "total": 155,
+        "grade_total": 155
+      }
+    },
+    {
+      "pokemon_number": "050",
+      "card_name": "Heatran-Holo-Pokemon Battle Tour Deck",
+      "base_name": "Heatran-Holo",
+      "variety": "Pokemon Battle Tour Deck",
+      "spec_id": 2653122,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 10,
+        "psa_10": 5,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "051",
+      "card_name": "Victory Medal-Battle Tour 2009: Knockout Battle",
+      "base_name": "Victory Medal",
+      "variety": "Battle Tour 2009: Knockout Battle",
+      "spec_id": 1861413,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 9,
+        "psa_8": 17,
+        "psa_9": 79,
+        "psa_10": 151,
+        "psa_total": 262
+      },
+      "grade_totals": {
+        "total": 262,
+        "grade_total": 262
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Jirachi-Pokemon Smile School Campaign Trial Set",
+      "base_name": "Jirachi",
+      "variety": "Pokemon Smile School Campaign Trial Set",
+      "spec_id": 10953597,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "HO-Oh Legend/Lugia Legend-Hgss Legends Campaign-Jumbo",
+      "base_name": "HO-Oh Legend/Lugia Legend",
+      "variety": "Hgss Legends Campaign-Jumbo",
+      "spec_id": 7329181,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 8,
+        "psa_9": 3,
+        "psa_10": 7,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Piplup-Pokemon Smile School Campaign Trial Set",
+      "base_name": "Piplup",
+      "variety": "Pokemon Smile School Campaign Trial Set",
+      "spec_id": 10953595,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

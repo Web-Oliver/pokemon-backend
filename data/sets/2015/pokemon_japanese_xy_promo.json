@@ -1,0 +1,4016 @@
+{
+  "year": "2015",
+  "set_name": "Pokemon Japanese XY Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2015/pokemon-japanese-xy-promo/128401",
+  "total_cards": 167,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 31,
+        "psa_2": 36,
+        "psa_3": 155,
+        "psa_4": 365,
+        "psa_5": 875,
+        "psa_6": 1237,
+        "psa_7": 1222,
+        "psa_8": 2313,
+        "psa_9": 5382,
+        "psa_10": 24182,
+        "psa_total": 35803
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 35803
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Energy Switch",
+      "base_name": "Energy Switch",
+      "variety": "",
+      "spec_id": 2263056,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Pal Pad",
+      "base_name": "Pal Pad",
+      "variety": "",
+      "spec_id": 2263053,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Dedenne-Marumiya",
+      "base_name": "Dedenne",
+      "variety": "Marumiya",
+      "spec_id": 5454185,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Fennekin-Daiichi Pan",
+      "base_name": "Fennekin",
+      "variety": "Daiichi Pan",
+      "spec_id": 2851552,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Froakie-Marumiya",
+      "base_name": "Froakie",
+      "variety": "Marumiya",
+      "spec_id": 2851559,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "64",
+      "card_name": "Pikachu-Daiichi Pan",
+      "base_name": "Pikachu",
+      "variety": "Daiichi Pan",
+      "spec_id": 2184153,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 10,
+        "psa_6": 15,
+        "psa_7": 12,
+        "psa_8": 11,
+        "psa_9": 24,
+        "psa_10": 77,
+        "psa_total": 156
+      },
+      "grade_totals": {
+        "total": 156,
+        "grade_total": 156
+      }
+    },
+    {
+      "pokemon_number": "65",
+      "card_name": "Hawlucha-Daiichi Pan",
+      "base_name": "Hawlucha",
+      "variety": "Daiichi Pan",
+      "spec_id": 4204687,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 8,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "105",
+      "card_name": "Inkay-Daiichi Pan",
+      "base_name": "Inkay",
+      "variety": "Daiichi Pan",
+      "spec_id": 2181265,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 12,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "106",
+      "card_name": "Meowth-Daiichi Pan",
+      "base_name": "Meowth",
+      "variety": "Daiichi Pan",
+      "spec_id": 2178602,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 18,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "107",
+      "card_name": "Treecko-Double Crisis Combini",
+      "base_name": "Treecko",
+      "variety": "Double Crisis Combini",
+      "spec_id": 2851534,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "108",
+      "card_name": "Torchic-Double Crisis Combini",
+      "base_name": "Torchic",
+      "variety": "Double Crisis Combini",
+      "spec_id": 2851539,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "109",
+      "card_name": "Mudkip-Double Crisis Combini",
+      "base_name": "Mudkip",
+      "variety": "Double Crisis Combini",
+      "spec_id": 2741982,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 2,
+        "psa_10": 22,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "110",
+      "card_name": "Vulpix-Pokemon Card Gym Pack",
+      "base_name": "Vulpix",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2186372,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 3,
+        "psa_10": 28,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "111",
+      "card_name": "Lanturn-Pokemon Card Gym Pack",
+      "base_name": "Lanturn",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2185736,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "112",
+      "card_name": "Tynamo-Pokemon Card Gym Pack",
+      "base_name": "Tynamo",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2185732,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "113",
+      "card_name": "Rhydon-Pokemon Card Gym Pack",
+      "base_name": "Rhydon",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2503830,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "114",
+      "card_name": "Flygon EX-Pokemon Card Gym Pack",
+      "base_name": "Flygon EX",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2180724,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 7,
+        "psa_10": 54,
+        "psa_total": 66
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 66
+      }
+    },
+    {
+      "pokemon_number": "115",
+      "card_name": "Fearow-Pokemon Card Gym Pack",
+      "base_name": "Fearow",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 6481298,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 7,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "116",
+      "card_name": "Swablu-Pokemon Card Gym Pack",
+      "base_name": "Swablu",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 8475099,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "118",
+      "card_name": "Acro Bike-Holo-Pokemon Card Gym",
+      "base_name": "Acro Bike-Holo",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2293919,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "119",
+      "card_name": "Team Aqua Grunt-Pokemon Center",
+      "base_name": "Team Aqua Grunt",
+      "variety": "Pokemon Center",
+      "spec_id": 2160371,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 9,
+        "psa_10": 25,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "120",
+      "card_name": "Team Magma Grunt-Pokemon Center",
+      "base_name": "Team Magma Grunt",
+      "variety": "Pokemon Center",
+      "spec_id": 2160373,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 2,
+        "psa_9": 14,
+        "psa_10": 23,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "121",
+      "card_name": "Full Art/Steven-Pokemon Center",
+      "base_name": "Full Art/Steven",
+      "variety": "Pokemon Center",
+      "spec_id": 2167643,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 8,
+        "psa_7": 10,
+        "psa_8": 28,
+        "psa_9": 117,
+        "psa_10": 506,
+        "psa_total": 670
+      },
+      "grade_totals": {
+        "total": 670,
+        "grade_total": 670
+      }
+    },
+    {
+      "pokemon_number": "122",
+      "card_name": "Rayquaza EX",
+      "base_name": "Rayquaza EX",
+      "variety": "",
+      "spec_id": 2161050,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 23,
+        "psa_6": 45,
+        "psa_7": 30,
+        "psa_8": 76,
+        "psa_9": 160,
+        "psa_10": 1489,
+        "psa_total": 1832
+      },
+      "grade_totals": {
+        "total": 1833,
+        "grade_total": 1832
+      }
+    },
+    {
+      "pokemon_number": "123",
+      "card_name": "Rayquaza EX-Corocoro",
+      "base_name": "Rayquaza EX",
+      "variety": "Corocoro",
+      "spec_id": 2158644,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 10,
+        "psa_6": 18,
+        "psa_7": 20,
+        "psa_8": 39,
+        "psa_9": 98,
+        "psa_10": 310,
+        "psa_total": 505
+      },
+      "grade_totals": {
+        "total": 505,
+        "grade_total": 505
+      }
+    },
+    {
+      "pokemon_number": "124",
+      "card_name": "Salamence-Corocoro Ichiban!",
+      "base_name": "Salamence",
+      "variety": "Corocoro Ichiban!",
+      "spec_id": 2173301,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 15,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "125",
+      "card_name": "Muscle Band-Pokemon Center",
+      "base_name": "Muscle Band",
+      "variety": "Pokemon Center",
+      "spec_id": 2388207,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 10,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "126",
+      "card_name": "Rayquaza Spirit Link-Pokemon Center",
+      "base_name": "Rayquaza Spirit Link",
+      "variety": "Pokemon Center",
+      "spec_id": 2161036,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 12,
+        "psa_9": 33,
+        "psa_10": 80,
+        "psa_total": 130
+      },
+      "grade_totals": {
+        "total": 130,
+        "grade_total": 130
+      }
+    },
+    {
+      "pokemon_number": "127",
+      "card_name": "Blaziken EX",
+      "base_name": "Blaziken EX",
+      "variety": "",
+      "spec_id": 2182639,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 14,
+        "psa_10": 117,
+        "psa_total": 142
+      },
+      "grade_totals": {
+        "total": 142,
+        "grade_total": 142
+      }
+    },
+    {
+      "pokemon_number": "128",
+      "card_name": "Wurmple-Pokemon Card Gym",
+      "base_name": "Wurmple",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2668910,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 5,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "129",
+      "card_name": "Jirachi-Pokemon Card Gym",
+      "base_name": "Jirachi",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2584036,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 17,
+        "psa_10": 38,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "130",
+      "card_name": "Malamar-Pokemon Card Gym Pack",
+      "base_name": "Malamar",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2186373,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 12,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "131",
+      "card_name": "Ralts-Pokemon Card Gym",
+      "base_name": "Ralts",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 5441436,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "132",
+      "card_name": "Dragonair",
+      "base_name": "Dragonair",
+      "variety": "",
+      "spec_id": 2360234,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 9,
+        "psa_10": 34,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "133",
+      "card_name": "Tyrantrum EX-Pokemon Card Gym Pack",
+      "base_name": "Tyrantrum EX",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2188815,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 6,
+        "psa_10": 40,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "134",
+      "card_name": "Taillow-Pokemon Card Gym",
+      "base_name": "Taillow",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 5441472,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "135",
+      "card_name": "Heavy Boots-Pokemon Card Gym",
+      "base_name": "Heavy Boots",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 5441478,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "136",
+      "card_name": "Rare Candy-Pokemon Card Gym",
+      "base_name": "Rare Candy",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 9067816,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "137",
+      "card_name": "Swampert EX-Rayquaza Mega Battle",
+      "base_name": "Swampert EX",
+      "variety": "Rayquaza Mega Battle",
+      "spec_id": 2189000,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 43,
+        "psa_10": 92,
+        "psa_total": 145
+      },
+      "grade_totals": {
+        "total": 145,
+        "grade_total": 145
+      }
+    },
+    {
+      "pokemon_number": "138",
+      "card_name": "M Blaziken EX-Rayquaza Mega Battle",
+      "base_name": "M Blaziken EX",
+      "variety": "Rayquaza Mega Battle",
+      "spec_id": 2212832,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 9,
+        "psa_9": 33,
+        "psa_10": 189,
+        "psa_total": 234
+      },
+      "grade_totals": {
+        "total": 234,
+        "grade_total": 234
+      }
+    },
+    {
+      "pokemon_number": "139",
+      "card_name": "All Night Party-Pokemon Gym",
+      "base_name": "All Night Party",
+      "variety": "Pokemon Gym",
+      "spec_id": 2190273,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 8,
+        "psa_6": 9,
+        "psa_7": 19,
+        "psa_8": 46,
+        "psa_9": 162,
+        "psa_10": 839,
+        "psa_total": 1086
+      },
+      "grade_totals": {
+        "total": 1086,
+        "grade_total": 1086
+      }
+    },
+    {
+      "pokemon_number": "140",
+      "card_name": "Umbreon-Holo-Pokemon Gym",
+      "base_name": "Umbreon-Holo",
+      "variety": "Pokemon Gym",
+      "spec_id": 2178209,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 12,
+        "psa_9": 23,
+        "psa_10": 179,
+        "psa_total": 230
+      },
+      "grade_totals": {
+        "total": 230,
+        "grade_total": 230
+      }
+    },
+    {
+      "pokemon_number": "141",
+      "card_name": "Sylveon-Pokemon Time Eevee Collection",
+      "base_name": "Sylveon",
+      "variety": "Pokemon Time Eevee Collection",
+      "spec_id": 2263046,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 3,
+        "psa_8": 25,
+        "psa_9": 128,
+        "psa_10": 435,
+        "psa_total": 599
+      },
+      "grade_totals": {
+        "total": 599,
+        "grade_total": 599
+      }
+    },
+    {
+      "pokemon_number": "142",
+      "card_name": "Celebi-Holo-Bandit Ring",
+      "base_name": "Celebi-Holo",
+      "variety": "Bandit Ring",
+      "spec_id": 2251336,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 11,
+        "psa_9": 40,
+        "psa_10": 327,
+        "psa_total": 385
+      },
+      "grade_totals": {
+        "total": 385,
+        "grade_total": 385
+      }
+    },
+    {
+      "pokemon_number": "143",
+      "card_name": "Kyogre-Hoopa's Appearance",
+      "base_name": "Kyogre",
+      "variety": "Hoopa's Appearance",
+      "spec_id": 2284595,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 5,
+        "psa_8": 8,
+        "psa_9": 7,
+        "psa_10": 35,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 62,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "144",
+      "card_name": "Groudon-Hoopa's Appearance",
+      "base_name": "Groudon",
+      "variety": "Hoopa's Appearance",
+      "spec_id": 2284596,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 5,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 15,
+        "psa_10": 55,
+        "psa_total": 87
+      },
+      "grade_totals": {
+        "total": 87,
+        "grade_total": 87
+      }
+    },
+    {
+      "pokemon_number": "145",
+      "card_name": "Latias-Hoopa's Appearance",
+      "base_name": "Latias",
+      "variety": "Hoopa's Appearance",
+      "spec_id": 2284598,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 8,
+        "psa_8": 8,
+        "psa_9": 19,
+        "psa_10": 58,
+        "psa_total": 102
+      },
+      "grade_totals": {
+        "total": 102,
+        "grade_total": 102
+      }
+    },
+    {
+      "pokemon_number": "146",
+      "card_name": "Latios-Hoopa's Appearance",
+      "base_name": "Latios",
+      "variety": "Hoopa's Appearance",
+      "spec_id": 2284599,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 85,
+        "psa_total": 116
+      },
+      "grade_totals": {
+        "total": 116,
+        "grade_total": 116
+      }
+    },
+    {
+      "pokemon_number": "147",
+      "card_name": "Sableye-Corocoro Ichiban!",
+      "base_name": "Sableye",
+      "variety": "Corocoro Ichiban!",
+      "spec_id": 2861434,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 9,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "148",
+      "card_name": "Chespin-Marumiya",
+      "base_name": "Chespin",
+      "variety": "Marumiya",
+      "spec_id": 2851572,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 5,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "149",
+      "card_name": "Snorlax-Marumiya",
+      "base_name": "Snorlax",
+      "variety": "Marumiya",
+      "spec_id": 2741990,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 8,
+        "psa_10": 13,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "150",
+      "card_name": "Pretend Magikarp Pikachu-Holo",
+      "base_name": "Pretend Magikarp Pikachu",
+      "variety": "Holo",
+      "spec_id": 2181590,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 10,
+        "psa_5": 18,
+        "psa_6": 22,
+        "psa_7": 41,
+        "psa_8": 88,
+        "psa_9": 305,
+        "psa_10": 1955,
+        "psa_total": 2447
+      },
+      "grade_totals": {
+        "total": 2447,
+        "grade_total": 2447
+      }
+    },
+    {
+      "pokemon_number": "151",
+      "card_name": "Pretend Gyarados Pikachu-Holo",
+      "base_name": "Pretend Gyarados Pikachu",
+      "variety": "Holo",
+      "spec_id": 2181595,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 19,
+        "psa_6": 39,
+        "psa_7": 44,
+        "psa_8": 88,
+        "psa_9": 390,
+        "psa_10": 1947,
+        "psa_total": 2536
+      },
+      "grade_totals": {
+        "total": 2537,
+        "grade_total": 2536
+      }
+    },
+    {
+      "pokemon_number": "152",
+      "card_name": "Kyogre EX-7-Eleven",
+      "base_name": "Kyogre EX",
+      "variety": "7-Eleven",
+      "spec_id": 2584034,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 33,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "153",
+      "card_name": "Groudon EX-7 Eleven Giveaway",
+      "base_name": "Groudon EX",
+      "variety": "7 Eleven Giveaway",
+      "spec_id": 2304958,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 46,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "154",
+      "card_name": "Pikachu-7-11 Bento Box",
+      "base_name": "Pikachu",
+      "variety": "7-11 Bento Box",
+      "spec_id": 2188875,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 2,
+        "psa_3": 22,
+        "psa_4": 37,
+        "psa_5": 68,
+        "psa_6": 104,
+        "psa_7": 73,
+        "psa_8": 80,
+        "psa_9": 64,
+        "psa_10": 269,
+        "psa_total": 722
+      },
+      "grade_totals": {
+        "total": 723,
+        "grade_total": 722
+      }
+    },
+    {
+      "pokemon_number": "155",
+      "card_name": "Full Art/Hoopa-The Archdjinni of the Rings Giveaway",
+      "base_name": "Full Art/Hoopa",
+      "variety": "The Archdjinni of the Rings Giveaway",
+      "spec_id": 2189312,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 19,
+        "psa_3": 91,
+        "psa_4": 210,
+        "psa_5": 465,
+        "psa_6": 561,
+        "psa_7": 444,
+        "psa_8": 514,
+        "psa_9": 452,
+        "psa_10": 1259,
+        "psa_total": 4024
+      },
+      "grade_totals": {
+        "total": 4026,
+        "grade_total": 4024
+      }
+    },
+    {
+      "pokemon_number": "156",
+      "card_name": "Pikachu-Holo-Movie Commemorative Special Pack",
+      "base_name": "Pikachu-Holo",
+      "variety": "Movie Commemorative Special Pack",
+      "spec_id": 2188877,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 21,
+        "psa_9": 31,
+        "psa_10": 186,
+        "psa_total": 250
+      },
+      "grade_totals": {
+        "total": 250,
+        "grade_total": 250
+      }
+    },
+    {
+      "pokemon_number": "157",
+      "card_name": "Hoopa-Holo-Movie Commemorative Special Pack",
+      "base_name": "Hoopa-Holo",
+      "variety": "Movie Commemorative Special Pack",
+      "spec_id": 2188878,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 3,
+        "psa_10": 36,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "158",
+      "card_name": "Rayquaza EX-Pokemon Center",
+      "base_name": "Rayquaza EX",
+      "variety": "Pokemon Center",
+      "spec_id": 2220096,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 14,
+        "psa_9": 30,
+        "psa_10": 233,
+        "psa_total": 288
+      },
+      "grade_totals": {
+        "total": 288,
+        "grade_total": 288
+      }
+    },
+    {
+      "pokemon_number": "159",
+      "card_name": "Hippopotas-Pokemon Center",
+      "base_name": "Hippopotas",
+      "variety": "Pokemon Center",
+      "spec_id": 2263050,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 7,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "160",
+      "card_name": "Regigigas-Holo-Pokemon Center",
+      "base_name": "Regigigas-Holo",
+      "variety": "Pokemon Center",
+      "spec_id": 2263048,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 31,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "161",
+      "card_name": "Reshiram-Pokemon Center",
+      "base_name": "Reshiram",
+      "variety": "Pokemon Center",
+      "spec_id": 2263047,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 20,
+        "psa_10": 100,
+        "psa_total": 127
+      },
+      "grade_totals": {
+        "total": 127,
+        "grade_total": 127
+      }
+    },
+    {
+      "pokemon_number": "162",
+      "card_name": "Altaria-Shogakukan Book Fair",
+      "base_name": "Altaria",
+      "variety": "Shogakukan Book Fair",
+      "spec_id": 2348573,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 17,
+        "psa_10": 64,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 86,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "163",
+      "card_name": "Sceptile EX-Pokemon Card Gym M Deck",
+      "base_name": "Sceptile EX",
+      "variety": "Pokemon Card Gym M Deck",
+      "spec_id": 4051166,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 20,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "164",
+      "card_name": "Full Art/Skyla-Blue Shock/Red Flash",
+      "base_name": "Full Art/Skyla",
+      "variety": "Blue Shock/Red Flash",
+      "spec_id": 2218193,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 9,
+        "psa_6": 26,
+        "psa_7": 22,
+        "psa_8": 69,
+        "psa_9": 317,
+        "psa_10": 1397,
+        "psa_total": 1844
+      },
+      "grade_totals": {
+        "total": 1844,
+        "grade_total": 1844
+      }
+    },
+    {
+      "pokemon_number": "165",
+      "card_name": "Vivillon-Pokemon Card Gym",
+      "base_name": "Vivillon",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2584021,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "166",
+      "card_name": "Pansear-Pokemon Card Gym",
+      "base_name": "Pansear",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2668909,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 8,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "167",
+      "card_name": "Froakie-Pokemon Card Gym",
+      "base_name": "Froakie",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2584020,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 9,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "168",
+      "card_name": "Aurorus EX",
+      "base_name": "Aurorus EX",
+      "variety": "",
+      "spec_id": 2458355,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 3,
+        "psa_10": 28,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "169",
+      "card_name": "Marowak-Pokemon Card Gym",
+      "base_name": "Marowak",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 5441414,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 6,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "170",
+      "card_name": "Gastly-Pokemon Card Gym",
+      "base_name": "Gastly",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2383985,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 35,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "171",
+      "card_name": "Floette-Pokemon Card Gym",
+      "base_name": "Floette",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2795356,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 5,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "172",
+      "card_name": "Energy Reset-Pokemon Card Gym",
+      "base_name": "Energy Reset",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 5441418,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "173",
+      "card_name": "Hex Maniac-Pokemon Card Gym",
+      "base_name": "Hex Maniac",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 2424892,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 6,
+        "psa_8": 18,
+        "psa_9": 72,
+        "psa_10": 171,
+        "psa_total": 273
+      },
+      "grade_totals": {
+        "total": 273,
+        "grade_total": 273
+      }
+    },
+    {
+      "pokemon_number": "174",
+      "card_name": "Latios",
+      "base_name": "Latios",
+      "variety": "",
+      "spec_id": 2253420,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 80,
+        "psa_total": 91
+      },
+      "grade_totals": {
+        "total": 91,
+        "grade_total": 91
+      }
+    },
+    {
+      "pokemon_number": "175",
+      "card_name": "Pikachu-Battle Festa",
+      "base_name": "Pikachu",
+      "variety": "Battle Festa",
+      "spec_id": 2251754,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 3,
+        "psa_3": 3,
+        "psa_4": 12,
+        "psa_5": 31,
+        "psa_6": 48,
+        "psa_7": 53,
+        "psa_8": 133,
+        "psa_9": 323,
+        "psa_10": 1763,
+        "psa_total": 2373
+      },
+      "grade_totals": {
+        "total": 2374,
+        "grade_total": 2373
+      }
+    },
+    {
+      "pokemon_number": "175",
+      "card_name": "Pikachu-Battle Festa Event Organizer",
+      "base_name": "Pikachu",
+      "variety": "Battle Festa Event Organizer",
+      "spec_id": 2439365,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 8,
+        "psa_10": 32,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "176",
+      "card_name": "Mewtwo-Battle Festa 1 Play Point",
+      "base_name": "Mewtwo",
+      "variety": "Battle Festa 1 Play Point",
+      "spec_id": 2281829,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 13,
+        "psa_9": 38,
+        "psa_10": 277,
+        "psa_total": 336
+      },
+      "grade_totals": {
+        "total": 336,
+        "grade_total": 336
+      }
+    },
+    {
+      "pokemon_number": "177",
+      "card_name": "Kyogre-Holo-Double Mega Break Set",
+      "base_name": "Kyogre-Holo",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2288724,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 15,
+        "psa_10": 65,
+        "psa_total": 88
+      },
+      "grade_totals": {
+        "total": 88,
+        "grade_total": 88
+      }
+    },
+    {
+      "pokemon_number": "178",
+      "card_name": "Shinx-Double Mega Break Set",
+      "base_name": "Shinx",
+      "variety": "Double Mega Break Set",
+      "spec_id": 4727472,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 32,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "179",
+      "card_name": "Luxio-Double Mega Break Set",
+      "base_name": "Luxio",
+      "variety": "Double Mega Break Set",
+      "spec_id": 4727474,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 12,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "180",
+      "card_name": "Luxray-Double Mega Break Set",
+      "base_name": "Luxray",
+      "variety": "Double Mega Break Set",
+      "spec_id": 4727476,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 11,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "181",
+      "card_name": "Luxray Break-Double Mega Break Set",
+      "base_name": "Luxray Break",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2676217,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 10,
+        "psa_10": 36,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 46,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "182",
+      "card_name": "Aerodactyl EX-Double Mega Break Set",
+      "base_name": "Aerodactyl EX",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2676218,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 8,
+        "psa_10": 63,
+        "psa_total": 73
+      },
+      "grade_totals": {
+        "total": 73,
+        "grade_total": 73
+      }
+    },
+    {
+      "pokemon_number": "183",
+      "card_name": "M Aerodactyl EX-Double Mega Break Set",
+      "base_name": "M Aerodactyl EX",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2676206,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 11,
+        "psa_10": 92,
+        "psa_total": 111
+      },
+      "grade_totals": {
+        "total": 111,
+        "grade_total": 111
+      }
+    },
+    {
+      "pokemon_number": "184",
+      "card_name": "Groudon-Holo-Double Mega Break Set",
+      "base_name": "Groudon-Holo",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2371549,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 6,
+        "psa_10": 61,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "185",
+      "card_name": "Mawile EX-Double Mega Break Set",
+      "base_name": "Mawile EX",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2301229,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 63,
+        "psa_total": 76
+      },
+      "grade_totals": {
+        "total": 76,
+        "grade_total": 76
+      }
+    },
+    {
+      "pokemon_number": "186",
+      "card_name": "M Mawile EX-Double Mega Break Set",
+      "base_name": "M Mawile EX",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2301230,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 10,
+        "psa_10": 95,
+        "psa_total": 111
+      },
+      "grade_totals": {
+        "total": 111,
+        "grade_total": 111
+      }
+    },
+    {
+      "pokemon_number": "187",
+      "card_name": "Aerodactyl Spirit Link-Double Mega Break Set",
+      "base_name": "Aerodactyl Spirit Link",
+      "variety": "Double Mega Break Set",
+      "spec_id": 9379193,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "188",
+      "card_name": "Mawile Spirit Link-Double Mega Break Set",
+      "base_name": "Mawile Spirit Link",
+      "variety": "Double Mega Break Set",
+      "spec_id": 2499906,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 9,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "189",
+      "card_name": "Beheeyem Break-Corocoro Ichiban!",
+      "base_name": "Beheeyem Break",
+      "variety": "Corocoro Ichiban!",
+      "spec_id": 2676220,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "190",
+      "card_name": "Mewtwo EX-Special Jumbo Card Pack",
+      "base_name": "Mewtwo EX",
+      "variety": "Special Jumbo Card Pack",
+      "spec_id": 2359856,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 14,
+        "psa_10": 138,
+        "psa_total": 159
+      },
+      "grade_totals": {
+        "total": 159,
+        "grade_total": 159
+      }
+    },
+    {
+      "pokemon_number": "191",
+      "card_name": "Mewtwo EX-Special Jumbo Card Pack",
+      "base_name": "Mewtwo EX",
+      "variety": "Special Jumbo Card Pack",
+      "spec_id": 2401331,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 116,
+        "psa_total": 130
+      },
+      "grade_totals": {
+        "total": 130,
+        "grade_total": 130
+      }
+    },
+    {
+      "pokemon_number": "192",
+      "card_name": "Leafeon EX-Grass/Fighting Battle",
+      "base_name": "Leafeon EX",
+      "variety": "Grass/Fighting Battle",
+      "spec_id": 2279911,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 12,
+        "psa_9": 38,
+        "psa_10": 478,
+        "psa_total": 532
+      },
+      "grade_totals": {
+        "total": 532,
+        "grade_total": 532
+      }
+    },
+    {
+      "pokemon_number": "193",
+      "card_name": "Ninetales EX-Fire/Lightning Battle",
+      "base_name": "Ninetales EX",
+      "variety": "Fire/Lightning Battle",
+      "spec_id": 2279913,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 14,
+        "psa_10": 98,
+        "psa_total": 118
+      },
+      "grade_totals": {
+        "total": 118,
+        "grade_total": 118
+      }
+    },
+    {
+      "pokemon_number": "194",
+      "card_name": "Vaporeon EX-Water/Psychic Battle",
+      "base_name": "Vaporeon EX",
+      "variety": "Water/Psychic Battle",
+      "spec_id": 2279915,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 13,
+        "psa_9": 58,
+        "psa_10": 479,
+        "psa_total": 559
+      },
+      "grade_totals": {
+        "total": 560,
+        "grade_total": 559
+      }
+    },
+    {
+      "pokemon_number": "195",
+      "card_name": "Jolteon EX-Fire/Lightning Battle",
+      "base_name": "Jolteon EX",
+      "variety": "Fire/Lightning Battle",
+      "spec_id": 2279918,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 8,
+        "psa_7": 3,
+        "psa_8": 12,
+        "psa_9": 49,
+        "psa_10": 464,
+        "psa_total": 539
+      },
+      "grade_totals": {
+        "total": 539,
+        "grade_total": 539
+      }
+    },
+    {
+      "pokemon_number": "196",
+      "card_name": "Meowstic EX-Water/Psychic Battle",
+      "base_name": "Meowstic EX",
+      "variety": "Water/Psychic Battle",
+      "spec_id": 2301046,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 52,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "197",
+      "card_name": "Golem EX-Grass/Fighting Battle",
+      "base_name": "Golem EX",
+      "variety": "Grass/Fighting Battle",
+      "spec_id": 2305295,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 4,
+        "psa_10": 37,
+        "psa_total": 45
+      },
+      "grade_totals": {
+        "total": 45,
+        "grade_total": 45
+      }
+    },
+    {
+      "pokemon_number": "198",
+      "card_name": "Revitalizer-Grass/Fighting Battle",
+      "base_name": "Revitalizer",
+      "variety": "Grass/Fighting Battle",
+      "spec_id": 5324792,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "199",
+      "card_name": "Olympia-Water/Psychic Battle",
+      "base_name": "Olympia",
+      "variety": "Water/Psychic Battle",
+      "spec_id": 5324937,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 13,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "200",
+      "card_name": "Clemont-Fire/Lightning Battle",
+      "base_name": "Clemont",
+      "variety": "Fire/Lightning Battle",
+      "spec_id": 5324933,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 7,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "202",
+      "card_name": "Mewtwo-Battle Festa",
+      "base_name": "Mewtwo",
+      "variety": "Battle Festa",
+      "spec_id": 2255466,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 39,
+        "psa_10": 297,
+        "psa_total": 352
+      },
+      "grade_totals": {
+        "total": 353,
+        "grade_total": 352
+      }
+    },
+    {
+      "pokemon_number": "203",
+      "card_name": "Poncho-Wearing Pikachu-Pikachu Mega Campaign",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Pikachu Mega Campaign",
+      "spec_id": 2266497,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 6,
+        "psa_3": 17,
+        "psa_4": 32,
+        "psa_5": 89,
+        "psa_6": 125,
+        "psa_7": 155,
+        "psa_8": 390,
+        "psa_9": 951,
+        "psa_10": 4234,
+        "psa_total": 6003
+      },
+      "grade_totals": {
+        "total": 6006,
+        "grade_total": 6003
+      }
+    },
+    {
+      "pokemon_number": "205",
+      "card_name": "Suicune-Corocoro Ichiban!",
+      "base_name": "Suicune",
+      "variety": "Corocoro Ichiban!",
+      "spec_id": 4298956,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 12,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "209",
+      "card_name": "Greninja-Cracked Ice Holofoil",
+      "base_name": "Greninja",
+      "variety": "Cracked Ice Holofoil",
+      "spec_id": 2447744,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 8,
+        "psa_6": 9,
+        "psa_7": 7,
+        "psa_8": 16,
+        "psa_9": 20,
+        "psa_10": 207,
+        "psa_total": 269
+      },
+      "grade_totals": {
+        "total": 269,
+        "grade_total": 269
+      }
+    },
+    {
+      "pokemon_number": "273",
+      "card_name": "Lopunny-Pokemon Center",
+      "base_name": "Lopunny",
+      "variety": "Pokemon Center",
+      "spec_id": 3081219,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 7,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "287",
+      "card_name": "Tyranitar-Pokemon Card Gym",
+      "base_name": "Tyranitar",
+      "variety": "Pokemon Card Gym",
+      "spec_id": 5441413,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 9,
+        "psa_10": 30,
+        "psa_total": 43
+      },
+      "grade_totals": {
+        "total": 43,
+        "grade_total": 43
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Brawly-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Brawly",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321340,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 14,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Flannery-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Flannery",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321332,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 26,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Norman-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Norman",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321353,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 19,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Roxanne-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Roxanne",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321344,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 16,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Wallace-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Wallace",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321347,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 15,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Wattson-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Wattson",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321346,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 16,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Winona-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Winona",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321357,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 1,
+        "psa_10": 20,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Empoleon Break-Battle Festa",
+      "base_name": "Empoleon Break",
+      "variety": "Battle Festa",
+      "spec_id": 2253418,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 10,
+        "psa_10": 61,
+        "psa_total": 72
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 72
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Bronzong-Battle Festa 2015",
+      "base_name": "Bronzong",
+      "variety": "Battle Festa 2015",
+      "spec_id": 4339973,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 19,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Darkness Energy-Pokemon Card Gym Pack",
+      "base_name": "Darkness Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2424924,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 8,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Double Dragon Energy-Battle Festa",
+      "base_name": "Double Dragon Energy",
+      "variety": "Battle Festa",
+      "spec_id": 2253419,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 32,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Fairy Energy-Pokemon Card Gym Pack",
+      "base_name": "Fairy Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 2424922,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Fighting Energy-Pokemon Card Gym Pack",
+      "base_name": "Fighting Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 9695369,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Fire Energy-Pokemon Card Gym Pack",
+      "base_name": "Fire Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 8458259,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Grass Energy",
+      "base_name": "Grass Energy",
+      "variety": "",
+      "spec_id": 7554985,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Lightning Energy-Pokemon Card Gym Pack",
+      "base_name": "Lightning Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 9416962,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Metal Energy-Pokemon Card Gym Pack",
+      "base_name": "Metal Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 8458241,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Psychic Energy-Pokemon Card Gym Pack",
+      "base_name": "Psychic Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 5949308,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Water Energy-Pokemon Card Gym Pack",
+      "base_name": "Water Energy",
+      "variety": "Pokemon Card Gym Pack",
+      "spec_id": 8458251,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Darkness Energy-Holo-Golden Present Campaign",
+      "base_name": "Darkness Energy-Holo",
+      "variety": "Golden Present Campaign",
+      "spec_id": 2278042,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 20,
+        "psa_10": 72,
+        "psa_total": 97
+      },
+      "grade_totals": {
+        "total": 97,
+        "grade_total": 97
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Grass Energy-Holo-Golden Present Campaign",
+      "base_name": "Grass Energy-Holo",
+      "variety": "Golden Present Campaign",
+      "spec_id": 2278046,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 22,
+        "psa_10": 108,
+        "psa_total": 134
+      },
+      "grade_totals": {
+        "total": 134,
+        "grade_total": 134
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "M Mewtwo EX-M Mewtwo-EX Special Jumbo Card Pack: Blue Shock/Rage of the Broken Heaven Ver.",
+      "base_name": "M Mewtwo EX",
+      "variety": "M Mewtwo-EX Special Jumbo Card Pack: Blue Shock/Rage of the Broken Heaven Ver.",
+      "spec_id": 3271382,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "M Mewtwo EX-M Mewtwo-EX Special Jumbo Card Pack: Red Flash/Rage of the Broken Heavens Ver.",
+      "base_name": "M Mewtwo EX",
+      "variety": "M Mewtwo-EX Special Jumbo Card Pack: Red Flash/Rage of the Broken Heavens Ver.",
+      "spec_id": 9518387,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "M Swampert EX-Rayquaza Mega Battle",
+      "base_name": "M Swampert EX",
+      "variety": "Rayquaza Mega Battle",
+      "spec_id": 2188964,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 49,
+        "psa_10": 108,
+        "psa_total": 164
+      },
+      "grade_totals": {
+        "total": 164,
+        "grade_total": 164
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Champions Festival-World Champions 2015",
+      "base_name": "Champions Festival",
+      "variety": "World Champions 2015",
+      "spec_id": 2349742,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 1,
+        "psa_6": 5,
+        "psa_7": 25,
+        "psa_8": 38,
+        "psa_9": 37,
+        "psa_10": 182,
+        "psa_total": 292
+      },
+      "grade_totals": {
+        "total": 292,
+        "grade_total": 292
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Goomy-Art Academy-Mio Muroi",
+      "base_name": "Goomy",
+      "variety": "Art Academy-Mio Muroi",
+      "spec_id": 2324700,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 19,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gourgeist-Art Academy-Rina",
+      "base_name": "Gourgeist",
+      "variety": "Art Academy-Rina",
+      "spec_id": 2280644,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 15,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gyarados-Pokemon Center Hiroshima",
+      "base_name": "Gyarados",
+      "variety": "Pokemon Center Hiroshima",
+      "spec_id": 2279304,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 7,
+        "psa_8": 11,
+        "psa_9": 40,
+        "psa_10": 236,
+        "psa_total": 304
+      },
+      "grade_totals": {
+        "total": 304,
+        "grade_total": 304
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Gym Badge-Tate & Liza-Rayquaza Pre/Mega Battle",
+      "base_name": "Gym Badge-Tate & Liza",
+      "variety": "Rayquaza Pre/Mega Battle",
+      "spec_id": 2321351,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 21,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Mudkip-Art Academy-Daisuke Ochiai",
+      "base_name": "Mudkip",
+      "variety": "Art Academy-Daisuke Ochiai",
+      "spec_id": 9231837,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Pikachu-Art Academy-Ginga",
+      "base_name": "Pikachu",
+      "variety": "Art Academy-Ginga",
+      "spec_id": 11036739,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Pikachu-Art Academy-Gogotake",
+      "base_name": "Pikachu",
+      "variety": "Art Academy-Gogotake",
+      "spec_id": 11036741,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Pikachu-Art Academy-Mame Akimaru",
+      "base_name": "Pikachu",
+      "variety": "Art Academy-Mame Akimaru",
+      "spec_id": 2389413,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 5,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Pikachu-Art Academy-Pikamania",
+      "base_name": "Pikachu",
+      "variety": "Art Academy-Pikamania",
+      "spec_id": 2718093,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 18,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Pikachu-Art Academy-S. Maruyama",
+      "base_name": "Pikachu",
+      "variety": "Art Academy-S. Maruyama",
+      "spec_id": 2401826,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 7,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Pikachu-Art Academy-Y. Fujishima",
+      "base_name": "Pikachu",
+      "variety": "Art Academy-Y. Fujishima",
+      "spec_id": 2192038,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 54,
+        "psa_total": 59
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 59
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Max Potion-Battle Festa Victory Battle 3-Win Prize",
+      "base_name": "Max Potion",
+      "variety": "Battle Festa Victory Battle 3-Win Prize",
+      "spec_id": 2592511,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 9,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Battle Festa 1st Place",
+      "base_name": "Victory Ring",
+      "variety": "Battle Festa 1st Place",
+      "spec_id": 12347102,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Battle Festa 2nd Place",
+      "base_name": "Victory Ring",
+      "variety": "Battle Festa 2nd Place",
+      "spec_id": 12347103,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Battle Festa 3rd Place",
+      "base_name": "Victory Ring",
+      "variety": "Battle Festa 3rd Place",
+      "spec_id": 2276984,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Battle Festa-Corocoro Challenge-1st Place",
+      "base_name": "Victory Ring",
+      "variety": "Battle Festa-Corocoro Challenge-1st Place",
+      "spec_id": 7716785,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Battle Festa-Corocoro Challenge-2nd Place",
+      "base_name": "Victory Ring",
+      "variety": "Battle Festa-Corocoro Challenge-2nd Place",
+      "spec_id": 7716809,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Battle Festa-Corocoro Challenge-3rd Place",
+      "base_name": "Victory Ring",
+      "variety": "Battle Festa-Corocoro Challenge-3rd Place",
+      "spec_id": 7716832,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Rayquaza Mega Battle-1st Place",
+      "base_name": "Victory Ring",
+      "variety": "Rayquaza Mega Battle-1st Place",
+      "spec_id": 4086363,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Rayquaza Mega Battle-2nd Place",
+      "base_name": "Victory Ring",
+      "variety": "Rayquaza Mega Battle-2nd Place",
+      "spec_id": 7705283,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Victory Ring-Rayquaza Mega Battle-3rd Place",
+      "base_name": "Victory Ring",
+      "variety": "Rayquaza Mega Battle-3rd Place",
+      "spec_id": 2283352,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Sableye-Art Academy-Iwaiya",
+      "base_name": "Sableye",
+      "variety": "Art Academy-Iwaiya",
+      "spec_id": 8878098,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "XY-P",
+      "card_name": "Mega Turbo-Rayquaza Mega Battle",
+      "base_name": "Mega Turbo",
+      "variety": "Rayquaza Mega Battle",
+      "spec_id": 2581337,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 5,
+        "psa_10": 18,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Altaria",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Altaria",
+      "spec_id": 8138805,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 11,
+        "psa_8": 29,
+        "psa_9": 64,
+        "psa_10": 28,
+        "psa_total": 140
+      },
+      "grade_totals": {
+        "total": 140,
+        "grade_total": 140
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Audino",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Audino",
+      "spec_id": 7705474,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 11,
+        "psa_9": 15,
+        "psa_10": 10,
+        "psa_total": 46
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 46
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Charizard X",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Charizard X",
+      "spec_id": 7552065,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 6,
+        "psa_5": 8,
+        "psa_6": 16,
+        "psa_7": 21,
+        "psa_8": 90,
+        "psa_9": 156,
+        "psa_10": 112,
+        "psa_total": 410
+      },
+      "grade_totals": {
+        "total": 410,
+        "grade_total": 410
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Charizard Y",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Charizard Y",
+      "spec_id": 7552067,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 8,
+        "psa_6": 25,
+        "psa_7": 26,
+        "psa_8": 84,
+        "psa_9": 168,
+        "psa_10": 138,
+        "psa_total": 454
+      },
+      "grade_totals": {
+        "total": 454,
+        "grade_total": 454
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Lucario",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Lucario",
+      "spec_id": 7552066,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 8,
+        "psa_6": 18,
+        "psa_7": 21,
+        "psa_8": 55,
+        "psa_9": 102,
+        "psa_10": 87,
+        "psa_total": 295
+      },
+      "grade_totals": {
+        "total": 295,
+        "grade_total": 295
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Mega Rayquaza",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Mega Rayquaza",
+      "spec_id": 8507618,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 4,
+        "psa_8": 3,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Mega Rayquaza-Stamped",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Mega Rayquaza-Stamped",
+      "spec_id": 8507616,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 6,
+        "psa_7": 8,
+        "psa_8": 6,
+        "psa_9": 10,
+        "psa_10": 5,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Sableye",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Sableye",
+      "spec_id": 7705626,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 8,
+        "psa_7": 22,
+        "psa_8": 47,
+        "psa_9": 96,
+        "psa_10": 65,
+        "psa_total": 243
+      },
+      "grade_totals": {
+        "total": 244,
+        "grade_total": 243
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Poncho-Wearing Pikachu-Mega Campaign Business Card-Slowbro",
+      "base_name": "Poncho-Wearing Pikachu",
+      "variety": "Mega Campaign Business Card-Slowbro",
+      "spec_id": 7705561,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 9,
+        "psa_8": 29,
+        "psa_9": 60,
+        "psa_10": 48,
+        "psa_total": 154
+      },
+      "grade_totals": {
+        "total": 154,
+        "grade_total": 154
+      }
+    }
+  ]
+}

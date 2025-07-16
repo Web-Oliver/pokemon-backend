@@ -1,0 +1,392 @@
+{
+  "year": "2018",
+  "set_name": "Pokemon Japanese Sun & Moon Eevee GX Starter Set",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2018/pokemon-japanese-sun-moon-eevee-gx-starter-set/163198",
+  "total_cards": 16,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 8,
+        "psa_7": 17,
+        "psa_8": 53,
+        "psa_9": 423,
+        "psa_10": 1388,
+        "psa_total": 1895
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1895
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Flareon GX",
+      "base_name": "Flareon GX",
+      "variety": "",
+      "spec_id": 2691526,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 90,
+        "psa_10": 298,
+        "psa_total": 395
+      },
+      "grade_totals": {
+        "total": 395,
+        "grade_total": 395
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Moltres",
+      "base_name": "Moltres",
+      "variety": "",
+      "spec_id": 2697697,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Reshiram",
+      "base_name": "Reshiram",
+      "variety": "",
+      "spec_id": 5110317,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Pyroar",
+      "base_name": "Pyroar",
+      "variety": "",
+      "spec_id": 5110319,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Vaporeon GX",
+      "base_name": "Vaporeon GX",
+      "variety": "",
+      "spec_id": 2691527,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 18,
+        "psa_9": 97,
+        "psa_10": 323,
+        "psa_total": 448
+      },
+      "grade_totals": {
+        "total": 448,
+        "grade_total": 448
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Wooper",
+      "base_name": "Wooper",
+      "variety": "",
+      "spec_id": 5110321,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Quagsire",
+      "base_name": "Quagsire",
+      "variety": "",
+      "spec_id": 5110322,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Jolteon GX",
+      "base_name": "Jolteon GX",
+      "variety": "",
+      "spec_id": 2691523,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 12,
+        "psa_9": 84,
+        "psa_10": 305,
+        "psa_total": 404
+      },
+      "grade_totals": {
+        "total": 404,
+        "grade_total": 404
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Zapdos",
+      "base_name": "Zapdos",
+      "variety": "",
+      "spec_id": 2697698,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 5,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Eevee",
+      "base_name": "Eevee",
+      "variety": "",
+      "spec_id": 2697699,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 7,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Eevee GX",
+      "base_name": "Eevee GX",
+      "variety": "",
+      "spec_id": 2697694,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 32,
+        "psa_10": 146,
+        "psa_total": 186
+      },
+      "grade_totals": {
+        "total": 186,
+        "grade_total": 186
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Eevee GX",
+      "base_name": "Eevee GX",
+      "variety": "",
+      "spec_id": 2697695,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 9,
+        "psa_9": 42,
+        "psa_10": 115,
+        "psa_total": 167
+      },
+      "grade_totals": {
+        "total": 167,
+        "grade_total": 167
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Eevee GX",
+      "base_name": "Eevee GX",
+      "variety": "",
+      "spec_id": 2691529,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 48,
+        "psa_10": 156,
+        "psa_total": 211
+      },
+      "grade_totals": {
+        "total": 211,
+        "grade_total": 211
+      }
+    },
+    {
+      "pokemon_number": "037",
+      "card_name": "Bill's Analysis",
+      "base_name": "Bill's Analysis",
+      "variety": "",
+      "spec_id": 5110344,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "038",
+      "card_name": "Lillie",
+      "base_name": "Lillie",
+      "variety": "",
+      "spec_id": 5110345,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 22,
+        "psa_10": 26,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    }
+  ]
+}

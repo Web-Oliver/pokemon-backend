@@ -1,0 +1,560 @@
+{
+  "year": "1999",
+  "set_name": "Pokemon Japanese Guren Town Gym Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1999/pokemon-japanese-guren-town-gym-deck/136999",
+  "total_cards": 23,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 15,
+        "psa_2": 10,
+        "psa_3": 29,
+        "psa_4": 59,
+        "psa_5": 125,
+        "psa_6": 167,
+        "psa_7": 171,
+        "psa_8": 379,
+        "psa_9": 803,
+        "psa_10": 538,
+        "psa_total": 2296
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2296
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Blaine's Charmander",
+      "base_name": "Blaine's Charmander",
+      "variety": "",
+      "spec_id": 2313921,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 5,
+        "psa_5": 5,
+        "psa_6": 10,
+        "psa_7": 14,
+        "psa_8": 22,
+        "psa_9": 67,
+        "psa_10": 64,
+        "psa_total": 190
+      },
+      "grade_totals": {
+        "total": 191,
+        "grade_total": 190
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Blaine's Vulpix-LV.18",
+      "base_name": "Blaine's Vulpix",
+      "variety": "LV.18",
+      "spec_id": 2313916,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 27,
+        "psa_10": 17,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Blaine's Vulpix-LV.9",
+      "base_name": "Blaine's Vulpix",
+      "variety": "LV.9",
+      "spec_id": 2313914,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 17,
+        "psa_10": 15,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Blaine's Ninetales",
+      "base_name": "Blaine's Ninetales",
+      "variety": "",
+      "spec_id": 2313918,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 19,
+        "psa_10": 26,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 58
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Blaine's Growlithe-LV.17",
+      "base_name": "Blaine's Growlithe",
+      "variety": "LV.17",
+      "spec_id": 2313903,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 27,
+        "psa_10": 27,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "58",
+      "card_name": "Blaine's Growlithe-LV.20",
+      "base_name": "Blaine's Growlithe",
+      "variety": "LV.20",
+      "spec_id": 2313905,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 29,
+        "psa_10": 29,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "59",
+      "card_name": "Blaine's Arcanine-Holo",
+      "base_name": "Blaine's Arcanine-Holo",
+      "variety": "",
+      "spec_id": 2313895,
+      "psa_grades": {
+        "psa_1": 11,
+        "psa_2": 5,
+        "psa_3": 15,
+        "psa_4": 28,
+        "psa_5": 72,
+        "psa_6": 87,
+        "psa_7": 68,
+        "psa_8": 180,
+        "psa_9": 325,
+        "psa_10": 114,
+        "psa_total": 905
+      },
+      "grade_totals": {
+        "total": 908,
+        "grade_total": 905
+      }
+    },
+    {
+      "pokemon_number": "77",
+      "card_name": "Blaine's Ponyta-LV.11",
+      "base_name": "Blaine's Ponyta",
+      "variety": "LV.11",
+      "spec_id": 2313908,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 8,
+        "psa_10": 14,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "77",
+      "card_name": "Blaine's Ponyta-LV.13",
+      "base_name": "Blaine's Ponyta",
+      "variety": "LV.13",
+      "spec_id": 2313911,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 9,
+        "psa_10": 14,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "78",
+      "card_name": "Blaine's Rapidash",
+      "base_name": "Blaine's Rapidash",
+      "variety": "",
+      "spec_id": 2313913,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 8,
+        "psa_10": 14,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "84",
+      "card_name": "Blaine's Doduo",
+      "base_name": "Blaine's Doduo",
+      "variety": "",
+      "spec_id": 2313923,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 2,
+        "psa_9": 13,
+        "psa_10": 20,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "85",
+      "card_name": "Blaine's Dodrio",
+      "base_name": "Blaine's Dodrio",
+      "variety": "",
+      "spec_id": 2313929,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 3,
+        "psa_9": 7,
+        "psa_10": 9,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "126",
+      "card_name": "Blaine's Magmar",
+      "base_name": "Blaine's Magmar",
+      "variety": "",
+      "spec_id": 2313919,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 11,
+        "psa_10": 18,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Blaine's Quiz #1",
+      "base_name": "Blaine's Quiz #1",
+      "variety": "",
+      "spec_id": 2313931,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 10,
+        "psa_10": 23,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Blaine's Quiz #2",
+      "base_name": "Blaine's Quiz #2",
+      "variety": "",
+      "spec_id": 2313932,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 11,
+        "psa_10": 10,
+        "psa_total": 25
+      },
+      "grade_totals": {
+        "total": 25,
+        "grade_total": 25
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Blaine-Holo",
+      "base_name": "Blaine-Holo",
+      "variety": "",
+      "spec_id": 2313877,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 1,
+        "psa_3": 5,
+        "psa_4": 16,
+        "psa_5": 28,
+        "psa_6": 44,
+        "psa_7": 65,
+        "psa_8": 110,
+        "psa_9": 184,
+        "psa_10": 75,
+        "psa_total": 532
+      },
+      "grade_totals": {
+        "total": 536,
+        "grade_total": 532
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Double Colorless Energy",
+      "base_name": "Double Colorless Energy",
+      "variety": "",
+      "spec_id": 2313949,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Fervor",
+      "base_name": "Fervor",
+      "variety": "",
+      "spec_id": 2313936,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 10,
+        "psa_10": 15,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Blaine's Gamble",
+      "base_name": "Blaine's Gamble",
+      "variety": "",
+      "spec_id": 2313934,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 12,
+        "psa_10": 19,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Cinnabar City Gym",
+      "base_name": "Cinnabar City Gym",
+      "variety": "",
+      "spec_id": 2313944,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 0,
+        "psa_9": 8,
+        "psa_10": 6,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Max Revive",
+      "base_name": "Max Revive",
+      "variety": "",
+      "spec_id": 2313939,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 1,
+        "psa_10": 5,
+        "psa_total": 13
+      },
+      "grade_totals": {
+        "total": 13,
+        "grade_total": 13
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Switch",
+      "base_name": "Switch",
+      "variety": "",
+      "spec_id": 2313942,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    }
+  ]
+}

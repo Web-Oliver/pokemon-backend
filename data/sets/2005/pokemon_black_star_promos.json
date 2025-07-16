@@ -1,0 +1,176 @@
+{
+  "year": "2005",
+  "set_name": "Pokemon Black Star Promos",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2005/pokemon-black-star-promos/102680",
+  "total_cards": 15,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 65,
+        "psa_2": 20,
+        "psa_3": 27,
+        "psa_4": 64,
+        "psa_5": 164,
+        "psa_6": 291,
+        "psa_7": 396,
+        "psa_8": 669,
+        "psa_9": 558,
+        "psa_10": 119,
+        "psa_total": 2381
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2381
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Championship Arena-2005 World Championships",
+      "base_name": "Championship Arena",
+      "variety": "2005 World Championships",
+      "spec_id": 2090014,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 14,
+        "psa_6": 16,
+        "psa_7": 5,
+        "psa_8": 15,
+        "psa_9": 19,
+        "psa_10": 12,
+        "psa_total": 93
+      },
+      "grade_totals": {
+        "total": 93,
+        "grade_total": 93
+      }
+    },
+    {
+      "pokemon_number": "29",
+      "card_name": "Celebi-Holo",
+      "base_name": "Celebi-Holo",
+      "variety": "",
+      "spec_id": 1839400,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 4,
+        "psa_3": 3,
+        "psa_4": 4,
+        "psa_5": 13,
+        "psa_6": 32,
+        "psa_7": 64,
+        "psa_8": 81,
+        "psa_9": 53,
+        "psa_10": 7,
+        "psa_total": 265
+      },
+      "grade_totals": {
+        "total": 265,
+        "grade_total": 265
+      }
+    },
+    {
+      "pokemon_number": "030",
+      "card_name": "Suicune-Holo",
+      "base_name": "Suicune-Holo",
+      "variety": "",
+      "spec_id": 2103158,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 7,
+        "psa_5": 15,
+        "psa_6": 24,
+        "psa_7": 55,
+        "psa_8": 103,
+        "psa_9": 122,
+        "psa_10": 26,
+        "psa_total": 361
+      },
+      "grade_totals": {
+        "total": 362,
+        "grade_total": 361
+      }
+    },
+    {
+      "pokemon_number": "031",
+      "card_name": "Moltres EX-Holo",
+      "base_name": "Moltres EX-Holo",
+      "variety": "",
+      "spec_id": 1948577,
+      "psa_grades": {
+        "psa_1": 19,
+        "psa_2": 3,
+        "psa_3": 6,
+        "psa_4": 15,
+        "psa_5": 36,
+        "psa_6": 65,
+        "psa_7": 98,
+        "psa_8": 131,
+        "psa_9": 131,
+        "psa_10": 30,
+        "psa_total": 536
+      },
+      "grade_totals": {
+        "total": 539,
+        "grade_total": 536
+      }
+    },
+    {
+      "pokemon_number": "032",
+      "card_name": "Articuno EX-Holo",
+      "base_name": "Articuno EX-Holo",
+      "variety": "",
+      "spec_id": 2108885,
+      "psa_grades": {
+        "psa_1": 21,
+        "psa_2": 4,
+        "psa_3": 5,
+        "psa_4": 16,
+        "psa_5": 38,
+        "psa_6": 72,
+        "psa_7": 87,
+        "psa_8": 162,
+        "psa_9": 114,
+        "psa_10": 25,
+        "psa_total": 545
+      },
+      "grade_totals": {
+        "total": 550,
+        "grade_total": 545
+      }
+    },
+    {
+      "pokemon_number": "033",
+      "card_name": "Zapdos EX-Holo",
+      "base_name": "Zapdos EX-Holo",
+      "variety": "",
+      "spec_id": 2057573,
+      "psa_grades": {
+        "psa_1": 15,
+        "psa_2": 4,
+        "psa_3": 11,
+        "psa_4": 16,
+        "psa_5": 42,
+        "psa_6": 71,
+        "psa_7": 76,
+        "psa_8": 129,
+        "psa_9": 91,
+        "psa_10": 18,
+        "psa_total": 474
+      },
+      "grade_totals": {
+        "total": 477,
+        "grade_total": 474
+      }
+    }
+  ]
+}

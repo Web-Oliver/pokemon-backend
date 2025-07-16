@@ -1,0 +1,104 @@
+{
+  "year": "1996",
+  "set_name": "Pokemon Japanese Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1996/pokemon-japanese-promo/61006",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 4,
+        "psa_3": 9,
+        "psa_4": 15,
+        "psa_5": 31,
+        "psa_6": 40,
+        "psa_7": 59,
+        "psa_8": 95,
+        "psa_9": 183,
+        "psa_10": 78,
+        "psa_total": 516
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 516
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Ivy Pikachu-Non-Glossy",
+      "base_name": "Ivy Pikachu",
+      "variety": "Non-Glossy",
+      "spec_id": 666067,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 3,
+        "psa_3": 4,
+        "psa_4": 8,
+        "psa_5": 26,
+        "psa_6": 27,
+        "psa_7": 35,
+        "psa_8": 59,
+        "psa_9": 107,
+        "psa_10": 39,
+        "psa_total": 309
+      },
+      "grade_totals": {
+        "total": 310,
+        "grade_total": 309
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Jigglypuff-Non-Glossy, Singing",
+      "base_name": "Jigglypuff",
+      "variety": "Non-Glossy, Singing",
+      "spec_id": 666068,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 5,
+        "psa_5": 2,
+        "psa_6": 8,
+        "psa_7": 12,
+        "psa_8": 17,
+        "psa_9": 63,
+        "psa_10": 39,
+        "psa_total": 152
+      },
+      "grade_totals": {
+        "total": 153,
+        "grade_total": 152
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "My Deck Memo Card-Carrying Case",
+      "base_name": "My Deck Memo Card",
+      "variety": "Carrying Case",
+      "spec_id": 9378955,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 5,
+        "psa_7": 12,
+        "psa_8": 19,
+        "psa_9": 13,
+        "psa_10": 0,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    }
+  ]
+}

@@ -1,0 +1,584 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon Japanese E-Battle Series 2",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-japanese-e-battle-series-2/162996",
+  "total_cards": 24,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 10,
+        "psa_10": 17,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "B001",
+      "card_name": "Pkmn Breeder Mami-Sharp Claw",
+      "base_name": "Pkmn Breeder Mami",
+      "variety": "Sharp Claw",
+      "spec_id": 9464033,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B003",
+      "card_name": "Expert Koto-Sharp Claw",
+      "base_name": "Expert Koto",
+      "variety": "Sharp Claw",
+      "spec_id": 8672024,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "B008",
+      "card_name": "Dragon Tamer Kuen-Sharp Claw",
+      "base_name": "Dragon Tamer Kuen",
+      "variety": "Sharp Claw",
+      "spec_id": 10248019,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B011",
+      "card_name": "Kindler Jo-Cursed Showdown",
+      "base_name": "Kindler Jo",
+      "variety": "Cursed Showdown",
+      "spec_id": 10248022,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "B020",
+      "card_name": "Triathlete Natsuko-Reversal Blow",
+      "base_name": "Triathlete Natsuko",
+      "variety": "Reversal Blow",
+      "spec_id": 2788062,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "B027",
+      "card_name": "Triathlete Nozomu-Battle Without Conclusion",
+      "base_name": "Triathlete Nozomu",
+      "variety": "Battle Without Conclusion",
+      "spec_id": 2687761,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "B030",
+      "card_name": "Pokefan Makio-Battle Without Conclusion",
+      "base_name": "Pokefan Makio",
+      "variety": "Battle Without Conclusion",
+      "spec_id": 10248039,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B031",
+      "card_name": "Battle Girl Noriko-Battle Without Conclusion",
+      "base_name": "Battle Girl Noriko",
+      "variety": "Battle Without Conclusion",
+      "spec_id": 8474514,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "B033",
+      "card_name": "School Kid Tomoyasu-Self-Confidence Not Wasted",
+      "base_name": "School Kid Tomoyasu",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 9392322,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B034",
+      "card_name": "Gentleman Anthony-Self-Confidence Not Wasted",
+      "base_name": "Gentleman Anthony",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 9392323,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "B035",
+      "card_name": "Triathlete Ryo-Self-Confidence Not Wasted",
+      "base_name": "Triathlete Ryo",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 2751461,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "B036",
+      "card_name": "Guitarist Daikichi-Self-Confidence Not Wasted",
+      "base_name": "Guitarist Daikichi",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 9392325,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "B037",
+      "card_name": "Pkmn Breeder Shigenobu-Self-Confidence Not Wasted",
+      "base_name": "Pkmn Breeder Shigenobu",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 9392326,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B038",
+      "card_name": "Pkmn Ranger Reina-Self-Confidence Not Wasted",
+      "base_name": "Pkmn Ranger Reina",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 9392327,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B039",
+      "card_name": "Pkmn Breeder Momoko-Self-Confidence Not Wasted",
+      "base_name": "Pkmn Breeder Momoko",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 9392328,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B040",
+      "card_name": "Cool Trainer Ihara-Self-Confidence Not Wasted",
+      "base_name": "Cool Trainer Ihara",
+      "variety": "Self-Confidence Not Wasted",
+      "spec_id": 9392329,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B041",
+      "card_name": "Psychic Satoe-Steady Power",
+      "base_name": "Psychic Satoe",
+      "variety": "Steady Power",
+      "spec_id": 10248043,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B042",
+      "card_name": "Bird Keeper Suekichi-Steady Power",
+      "base_name": "Bird Keeper Suekichi",
+      "variety": "Steady Power",
+      "spec_id": 10248044,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B043",
+      "card_name": "Aroma Lady Miyoko-Steady Power",
+      "base_name": "Aroma Lady Miyoko",
+      "variety": "Steady Power",
+      "spec_id": 10248046,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "B044",
+      "card_name": "Lady Moet-Steady Power",
+      "base_name": "Lady Moet",
+      "variety": "Steady Power",
+      "spec_id": 10248047,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "K009",
+      "card_name": "Yago Berry-Berry Cards",
+      "base_name": "Yago Berry",
+      "variety": "Berry Cards",
+      "spec_id": 10248056,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "K010",
+      "card_name": "Touga Berry-Berry Cards",
+      "base_name": "Touga Berry",
+      "variety": "Berry Cards",
+      "spec_id": 10248057,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "K011",
+      "card_name": "Niniku Berry-Berry Cards",
+      "base_name": "Niniku Berry",
+      "variety": "Berry Cards",
+      "spec_id": 10248058,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    }
+  ]
+}

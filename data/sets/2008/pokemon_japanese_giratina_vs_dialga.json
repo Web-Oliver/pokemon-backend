@@ -1,0 +1,728 @@
+{
+  "year": "2008",
+  "set_name": "Pokemon Japanese Giratina vs. Dialga",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2008/pokemon-japanese-giratina-vs-dialga/140265",
+  "total_cards": 30,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 17,
+        "psa_7": 19,
+        "psa_8": 41,
+        "psa_9": 243,
+        "psa_10": 369,
+        "psa_total": 696
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 696
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Magnemite-Dialga Half Deck-1st Edition",
+      "base_name": "Magnemite",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8304237,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Treecko-Giratina Half Deck",
+      "base_name": "Treecko",
+      "variety": "Giratina Half Deck",
+      "spec_id": 10557574,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Treecko-Giratina Half Deck-1st Edition",
+      "base_name": "Treecko",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 2797355,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 8,
+        "psa_10": 9,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Grovyle-Giratina Half Deck-1st Edition",
+      "base_name": "Grovyle",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 8304345,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 2,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Magneton-Dialga Half Deck-1st Edition",
+      "base_name": "Magneton",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8304241,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Magnezone-Holo-Dialga Half Deck",
+      "base_name": "Magnezone-Holo",
+      "variety": "Dialga Half Deck",
+      "spec_id": 6323141,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 4,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Magnezone-Holo-Dialga Half Deck-1st Edition",
+      "base_name": "Magnezone-Holo",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 4254213,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 40,
+        "psa_10": 35,
+        "psa_total": 81
+      },
+      "grade_totals": {
+        "total": 81,
+        "grade_total": 81
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Shaymin-Giratina Half Deck-1st Edition",
+      "base_name": "Shaymin",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 4254245,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 5,
+        "psa_10": 8,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Duskull-Giratina Half Deck",
+      "base_name": "Duskull",
+      "variety": "Giratina Half Deck",
+      "spec_id": 8206716,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Duskull-Giratina Half Deck-1st Edition",
+      "base_name": "Duskull",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 8304396,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 7,
+        "psa_total": 12
+      },
+      "grade_totals": {
+        "total": 12,
+        "grade_total": 12
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Voltorb-Dialga Half Deck-1st Edition",
+      "base_name": "Voltorb",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8304244,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Dusclops-Giratina Half Deck-1st Edition",
+      "base_name": "Dusclops",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 8304389,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 3,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Electrode-Dialga Half Deck-1st Edition",
+      "base_name": "Electrode",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8304208,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Dusknoir-Holo-Giratina Half Deck",
+      "base_name": "Dusknoir-Holo",
+      "variety": "Giratina Half Deck",
+      "spec_id": 6323137,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 4,
+        "psa_10": 9,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Dusknoir-Holo-Giratina Half Deck-1st Edition",
+      "base_name": "Dusknoir-Holo",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 2758049,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 3,
+        "psa_9": 33,
+        "psa_10": 59,
+        "psa_total": 99
+      },
+      "grade_totals": {
+        "total": 99,
+        "grade_total": 99
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Skarmory-Dialga Half Deck-1st Edition",
+      "base_name": "Skarmory",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8304246,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 2,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Dialga-Holo-Dialga Half Deck",
+      "base_name": "Dialga-Holo",
+      "variety": "Dialga Half Deck",
+      "spec_id": 6322820,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 9,
+        "psa_10": 10,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Dialga-Holo-Dialga Half Deck-1st Edition",
+      "base_name": "Dialga-Holo",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 2554803,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 7,
+        "psa_7": 9,
+        "psa_8": 8,
+        "psa_9": 70,
+        "psa_10": 68,
+        "psa_total": 164
+      },
+      "grade_totals": {
+        "total": 164,
+        "grade_total": 164
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Giratina-Holo-Giratina Half Deck",
+      "base_name": "Giratina-Holo",
+      "variety": "Giratina Half Deck",
+      "spec_id": 2359777,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 6,
+        "psa_10": 21,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Giratina-Holo-Giratina Half Deck-1st Edition",
+      "base_name": "Giratina-Holo",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 2554806,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 3,
+        "psa_8": 14,
+        "psa_9": 36,
+        "psa_10": 107,
+        "psa_total": 168
+      },
+      "grade_totals": {
+        "total": 168,
+        "grade_total": 168
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Farfetch'd-Dialga Half Deck",
+      "base_name": "Farfetch'd",
+      "variety": "Dialga Half Deck",
+      "spec_id": 11437421,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Farfetch'd-Dialga Half Deck-1st Edition",
+      "base_name": "Farfetch'd",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8304251,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 3,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Miltank-Giratina Half Deck-1st Edition",
+      "base_name": "Miltank",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 2795420,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 5,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Energy Switch-Giratina Half Deck-1st Edition",
+      "base_name": "Energy Switch",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 8902453,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Super Scoop Up-Dialga Half Deck-1st Edition",
+      "base_name": "Super Scoop Up",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8902457,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Switch-Dialga Half Deck-1st Edition",
+      "base_name": "Switch",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8902459,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Warp Point-Giratina Half Deck-1st Edition",
+      "base_name": "Warp Point",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 8902461,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 1,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Mom's Kindness-Dialga Half Deck-1st Edition",
+      "base_name": "Mom's Kindness",
+      "variety": "Dialga Half Deck-1st Edition",
+      "spec_id": 8566013,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Mom's Kindness-Giratina Half Deck-1st Edition",
+      "base_name": "Mom's Kindness",
+      "variety": "Giratina Half Deck-1st Edition",
+      "spec_id": 8565991,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 2,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    }
+  ]
+}

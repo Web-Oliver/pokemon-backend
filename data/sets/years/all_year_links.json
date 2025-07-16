@@ -1,0 +1,541 @@
+{
+  "total_years": 67,
+  "year_links": [
+    {
+      "year": "1986",
+      "url": "https://www.psacard.com/pop/tcg-cards/1986/265581",
+      "sets_count": "1",
+      "total_items": "2",
+      "total_graded": "2",
+      "id": "265581"
+    },
+    {
+      "year": "1989",
+      "url": "https://www.psacard.com/pop/tcg-cards/1989/156949",
+      "sets_count": "1",
+      "total_items": "5",
+      "total_graded": "7",
+      "id": "156949"
+    },
+    {
+      "year": "1990",
+      "url": "https://www.psacard.com/pop/tcg-cards/1990/219408",
+      "sets_count": "1",
+      "total_items": "1",
+      "total_graded": "1",
+      "id": "219408"
+    },
+    {
+      "year": "1991",
+      "url": "https://www.psacard.com/pop/tcg-cards/1991/203775",
+      "sets_count": "7",
+      "total_items": "124",
+      "total_graded": "775",
+      "id": "203775"
+    },
+    {
+      "year": "1992",
+      "url": "https://www.psacard.com/pop/tcg-cards/1992/203249",
+      "sets_count": "5",
+      "total_items": "109",
+      "total_graded": "635",
+      "id": "203249"
+    },
+    {
+      "year": "1993",
+      "url": "https://www.psacard.com/pop/tcg-cards/1993/156957",
+      "sets_count": "15",
+      "total_items": "1,857",
+      "total_graded": "59,964",
+      "id": "156957"
+    },
+    {
+      "year": "1994",
+      "url": "https://www.psacard.com/pop/tcg-cards/1994/156968",
+      "sets_count": "17",
+      "total_items": "1,729",
+      "total_graded": "39,335",
+      "id": "156968"
+    },
+    {
+      "year": "1995",
+      "url": "https://www.psacard.com/pop/tcg-cards/1995/156958",
+      "sets_count": "44",
+      "total_items": "1,927",
+      "total_graded": "9,730",
+      "id": "156958"
+    },
+    {
+      "year": "1996",
+      "url": "https://www.psacard.com/pop/tcg-cards/1996/156944",
+      "sets_count": "24",
+      "total_items": "1,180",
+      "total_graded": "130,120",
+      "id": "156944"
+    },
+    {
+      "year": "1996-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/1996-date/156951",
+      "sets_count": "1",
+      "total_items": "4",
+      "total_graded": "15",
+      "id": "156951"
+    },
+    {
+      "year": "1997",
+      "url": "https://www.psacard.com/pop/tcg-cards/1997/156963",
+      "sets_count": "43",
+      "total_items": "1,842",
+      "total_graded": "180,363",
+      "id": "156963"
+    },
+    {
+      "year": "1997-98",
+      "url": "https://www.psacard.com/pop/tcg-cards/1997-98/258480",
+      "sets_count": "1",
+      "total_items": "6",
+      "total_graded": "39",
+      "id": "258480"
+    },
+    {
+      "year": "1998",
+      "url": "https://www.psacard.com/pop/tcg-cards/1998/156952",
+      "sets_count": "54",
+      "total_items": "1,766",
+      "total_graded": "145,315",
+      "id": "156952"
+    },
+    {
+      "year": "1998-99",
+      "url": "https://www.psacard.com/pop/tcg-cards/1998-99/160664",
+      "sets_count": "1",
+      "total_items": "22",
+      "total_graded": "13,839",
+      "id": "160664"
+    },
+    {
+      "year": "1999",
+      "url": "https://www.psacard.com/pop/tcg-cards/1999/156971",
+      "sets_count": "116",
+      "total_items": "5,807",
+      "total_graded": "1,994,120",
+      "id": "156971"
+    },
+    {
+      "year": "1999-00",
+      "url": "https://www.psacard.com/pop/tcg-cards/1999-00/225382",
+      "sets_count": "1",
+      "total_items": "37",
+      "total_graded": "141",
+      "id": "225382"
+    },
+    {
+      "year": "2000",
+      "url": "https://www.psacard.com/pop/tcg-cards/2000/156969",
+      "sets_count": "166",
+      "total_items": "7,813",
+      "total_graded": "1,317,110",
+      "id": "156969"
+    },
+    {
+      "year": "2000-03",
+      "url": "https://www.psacard.com/pop/tcg-cards/2000-03/162009",
+      "sets_count": "1",
+      "total_items": "9",
+      "total_graded": "10",
+      "id": "162009"
+    },
+    {
+      "year": "2001",
+      "url": "https://www.psacard.com/pop/tcg-cards/2001/156956",
+      "sets_count": "169",
+      "total_items": "5,954",
+      "total_graded": "398,623",
+      "id": "156956"
+    },
+    {
+      "year": "2001-2002",
+      "url": "https://www.psacard.com/pop/tcg-cards/2001-2002/199774",
+      "sets_count": "1",
+      "total_items": "36",
+      "total_graded": "88",
+      "id": "199774"
+    },
+    {
+      "year": "2002",
+      "url": "https://www.psacard.com/pop/tcg-cards/2002/156967",
+      "sets_count": "177",
+      "total_items": "7,714",
+      "total_graded": "549,316",
+      "id": "156967"
+    },
+    {
+      "year": "2003",
+      "url": "https://www.psacard.com/pop/tcg-cards/2003/156962",
+      "sets_count": "201",
+      "total_items": "7,860",
+      "total_graded": "343,072",
+      "id": "156962"
+    },
+    {
+      "year": "2003-05",
+      "url": "https://www.psacard.com/pop/tcg-cards/2003-05/294545",
+      "sets_count": "1",
+      "total_items": "3",
+      "total_graded": "3",
+      "id": "294545"
+    },
+    {
+      "year": "2004",
+      "url": "https://www.psacard.com/pop/tcg-cards/2004/156943",
+      "sets_count": "258",
+      "total_items": "7,498",
+      "total_graded": "235,897",
+      "id": "156943"
+    },
+    {
+      "year": "2004-10",
+      "url": "https://www.psacard.com/pop/tcg-cards/2004-10/156961",
+      "sets_count": "1",
+      "total_items": "8",
+      "total_graded": "222",
+      "id": "156961"
+    },
+    {
+      "year": "2005",
+      "url": "https://www.psacard.com/pop/tcg-cards/2005/156970",
+      "sets_count": "222",
+      "total_items": "6,335",
+      "total_graded": "230,964",
+      "id": "156970"
+    },
+    {
+      "year": "2005-06",
+      "url": "https://www.psacard.com/pop/tcg-cards/2005-06/240426",
+      "sets_count": "1",
+      "total_items": "1",
+      "total_graded": "2",
+      "id": "240426"
+    },
+    {
+      "year": "2006",
+      "url": "https://www.psacard.com/pop/tcg-cards/2006/156942",
+      "sets_count": "218",
+      "total_items": "5,745",
+      "total_graded": "213,992",
+      "id": "156942"
+    },
+    {
+      "year": "2007",
+      "url": "https://www.psacard.com/pop/tcg-cards/2007/156947",
+      "sets_count": "253",
+      "total_items": "5,873",
+      "total_graded": "159,557",
+      "id": "156947"
+    },
+    {
+      "year": "2007-2008",
+      "url": "https://www.psacard.com/pop/tcg-cards/2007-2008/283080",
+      "sets_count": "1",
+      "total_items": "61",
+      "total_graded": "64",
+      "id": "283080"
+    },
+    {
+      "year": "2008",
+      "url": "https://www.psacard.com/pop/tcg-cards/2008/156950",
+      "sets_count": "264",
+      "total_items": "5,298",
+      "total_graded": "123,635",
+      "id": "156950"
+    },
+    {
+      "year": "2008-09",
+      "url": "https://www.psacard.com/pop/tcg-cards/2008-09/156955",
+      "sets_count": "2",
+      "total_items": "63",
+      "total_graded": "756",
+      "id": "156955"
+    },
+    {
+      "year": "2009",
+      "url": "https://www.psacard.com/pop/tcg-cards/2009/156946",
+      "sets_count": "259",
+      "total_items": "5,264",
+      "total_graded": "178,317",
+      "id": "156946"
+    },
+    {
+      "year": "2010",
+      "url": "https://www.psacard.com/pop/tcg-cards/2010/156964",
+      "sets_count": "262",
+      "total_items": "5,301",
+      "total_graded": "147,667",
+      "id": "156964"
+    },
+    {
+      "year": "2010-2017",
+      "url": "https://www.psacard.com/pop/tcg-cards/2010-2017/189942",
+      "sets_count": "6",
+      "total_items": "453",
+      "total_graded": "9,456",
+      "id": "189942"
+    },
+    {
+      "year": "2011",
+      "url": "https://www.psacard.com/pop/tcg-cards/2011/156959",
+      "sets_count": "309",
+      "total_items": "5,133",
+      "total_graded": "76,288",
+      "id": "156959"
+    },
+    {
+      "year": "2011-2013",
+      "url": "https://www.psacard.com/pop/tcg-cards/2011-2013/259675",
+      "sets_count": "1",
+      "total_items": "1",
+      "total_graded": "3",
+      "id": "259675"
+    },
+    {
+      "year": "2012",
+      "url": "https://www.psacard.com/pop/tcg-cards/2012/156953",
+      "sets_count": "362",
+      "total_items": "5,605",
+      "total_graded": "97,641",
+      "id": "156953"
+    },
+    {
+      "year": "2013",
+      "url": "https://www.psacard.com/pop/tcg-cards/2013/156948",
+      "sets_count": "368",
+      "total_items": "5,310",
+      "total_graded": "113,624",
+      "id": "156948"
+    },
+    {
+      "year": "2013-2018",
+      "url": "https://www.psacard.com/pop/tcg-cards/2013-2018/194448",
+      "sets_count": "1",
+      "total_items": "15",
+      "total_graded": "4,205",
+      "id": "194448"
+    },
+    {
+      "year": "2014",
+      "url": "https://www.psacard.com/pop/tcg-cards/2014/156945",
+      "sets_count": "382",
+      "total_items": "5,096",
+      "total_graded": "137,184",
+      "id": "156945"
+    },
+    {
+      "year": "2015",
+      "url": "https://www.psacard.com/pop/tcg-cards/2015/156941",
+      "sets_count": "370",
+      "total_items": "5,896",
+      "total_graded": "214,091",
+      "id": "156941"
+    },
+    {
+      "year": "2016",
+      "url": "https://www.psacard.com/pop/tcg-cards/2016/156960",
+      "sets_count": "367",
+      "total_items": "7,902",
+      "total_graded": "780,334",
+      "id": "156960"
+    },
+    {
+      "year": "2017",
+      "url": "https://www.psacard.com/pop/tcg-cards/2017/156965",
+      "sets_count": "380",
+      "total_items": "8,373",
+      "total_graded": "416,702",
+      "id": "156965"
+    },
+    {
+      "year": "2017-2018",
+      "url": "https://www.psacard.com/pop/tcg-cards/2017-2018/195089",
+      "sets_count": "6",
+      "total_items": "58",
+      "total_graded": "894",
+      "id": "195089"
+    },
+    {
+      "year": "2018",
+      "url": "https://www.psacard.com/pop/tcg-cards/2018/156954",
+      "sets_count": "423",
+      "total_items": "9,340",
+      "total_graded": "424,586",
+      "id": "156954"
+    },
+    {
+      "year": "2018-19",
+      "url": "https://www.psacard.com/pop/tcg-cards/2018-19/237983",
+      "sets_count": "1",
+      "total_items": "2",
+      "total_graded": "11",
+      "id": "237983"
+    },
+    {
+      "year": "2018-21",
+      "url": "https://www.psacard.com/pop/tcg-cards/2018-21/229491",
+      "sets_count": "1",
+      "total_items": "3",
+      "total_graded": "3",
+      "id": "229491"
+    },
+    {
+      "year": "2018-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/2018-date/239521",
+      "sets_count": "1",
+      "total_items": "21",
+      "total_graded": "64",
+      "id": "239521"
+    },
+    {
+      "year": "2019",
+      "url": "https://www.psacard.com/pop/tcg-cards/2019/163661",
+      "sets_count": "477",
+      "total_items": "12,151",
+      "total_graded": "1,467,592",
+      "id": "163661"
+    },
+    {
+      "year": "2019-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/2019-date/236995",
+      "sets_count": "2",
+      "total_items": "52",
+      "total_graded": "132",
+      "id": "236995"
+    },
+    {
+      "year": "2020",
+      "url": "https://www.psacard.com/pop/tcg-cards/2020/172687",
+      "sets_count": "467",
+      "total_items": "14,519",
+      "total_graded": "1,124,720",
+      "id": "172687"
+    },
+    {
+      "year": "2020-2022",
+      "url": "https://www.psacard.com/pop/tcg-cards/2020-2022/261437",
+      "sets_count": "1",
+      "total_items": "1",
+      "total_graded": "3",
+      "id": "261437"
+    },
+    {
+      "year": "2020-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/2020-date/239529",
+      "sets_count": "2",
+      "total_items": "59",
+      "total_graded": "123",
+      "id": "239529"
+    },
+    {
+      "year": "2021",
+      "url": "https://www.psacard.com/pop/tcg-cards/2021/187906",
+      "sets_count": "604",
+      "total_items": "17,706",
+      "total_graded": "2,157,384",
+      "id": "187906"
+    },
+    {
+      "year": "2021-22",
+      "url": "https://www.psacard.com/pop/tcg-cards/2021-22/224317",
+      "sets_count": "2",
+      "total_items": "5",
+      "total_graded": "245",
+      "id": "224317"
+    },
+    {
+      "year": "2021-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/2021-date/239526",
+      "sets_count": "3",
+      "total_items": "42",
+      "total_graded": "76",
+      "id": "239526"
+    },
+    {
+      "year": "2022",
+      "url": "https://www.psacard.com/pop/tcg-cards/2022/205607",
+      "sets_count": "807",
+      "total_items": "26,457",
+      "total_graded": "2,340,114",
+      "id": "205607"
+    },
+    {
+      "year": "2022-2023",
+      "url": "https://www.psacard.com/pop/tcg-cards/2022-2023/240516",
+      "sets_count": "2",
+      "total_items": "111",
+      "total_graded": "1,285",
+      "id": "240516"
+    },
+    {
+      "year": "2022-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/2022-date/247974",
+      "sets_count": "2",
+      "total_items": "33",
+      "total_graded": "98",
+      "id": "247974"
+    },
+    {
+      "year": "2023",
+      "url": "https://www.psacard.com/pop/tcg-cards/2023/227655",
+      "sets_count": "1,125",
+      "total_items": "33,529",
+      "total_graded": "4,092,528",
+      "id": "227655"
+    },
+    {
+      "year": "2023-2024",
+      "url": "https://www.psacard.com/pop/tcg-cards/2023-2024/263690",
+      "sets_count": "2",
+      "total_items": "70",
+      "total_graded": "1,106",
+      "id": "263690"
+    },
+    {
+      "year": "2023-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/2023-date/250925",
+      "sets_count": "5",
+      "total_items": "44",
+      "total_graded": "804",
+      "id": "250925"
+    },
+    {
+      "year": "2024",
+      "url": "https://www.psacard.com/pop/tcg-cards/2024/256988",
+      "sets_count": "1,408",
+      "total_items": "32,152",
+      "total_graded": "2,157,879",
+      "id": "256988"
+    },
+    {
+      "year": "2024-2025",
+      "url": "https://www.psacard.com/pop/tcg-cards/2024-2025/295058",
+      "sets_count": "1",
+      "total_items": "25",
+      "total_graded": "1,010",
+      "id": "295058"
+    },
+    {
+      "year": "2024-DATE",
+      "url": "https://www.psacard.com/pop/tcg-cards/2024-date/266223",
+      "sets_count": "2",
+      "total_items": "16",
+      "total_graded": "54",
+      "id": "266223"
+    },
+    {
+      "year": "2025",
+      "url": "https://www.psacard.com/pop/tcg-cards/2025/290436",
+      "sets_count": "371",
+      "total_items": "6,045",
+      "total_graded": "454,052",
+      "id": "290436"
+    }
+  ]
+}

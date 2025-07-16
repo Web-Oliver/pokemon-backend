@@ -1,0 +1,224 @@
+{
+  "year": "2003",
+  "set_name": "Pokemon Japanese Play Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2003/pokemon-japanese-play-promo/115710",
+  "total_cards": 9,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 3,
+        "psa_3": 7,
+        "psa_4": 26,
+        "psa_5": 78,
+        "psa_6": 128,
+        "psa_7": 202,
+        "psa_8": 430,
+        "psa_9": 1479,
+        "psa_10": 2263,
+        "psa_total": 4622
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 4622
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Regice EX-Holo-1st Season Subscription",
+      "base_name": "Regice EX-Holo",
+      "variety": "1st Season Subscription",
+      "spec_id": 2097052,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 4,
+        "psa_5": 8,
+        "psa_6": 6,
+        "psa_7": 22,
+        "psa_8": 46,
+        "psa_9": 129,
+        "psa_10": 297,
+        "psa_total": 512
+      },
+      "grade_totals": {
+        "total": 512,
+        "grade_total": 512
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Regirock EX-Holo-1st Season Subscription",
+      "base_name": "Regirock EX-Holo",
+      "variety": "1st Season Subscription",
+      "spec_id": 1974983,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 9,
+        "psa_7": 17,
+        "psa_8": 32,
+        "psa_9": 122,
+        "psa_10": 322,
+        "psa_total": 508
+      },
+      "grade_totals": {
+        "total": 508,
+        "grade_total": 508
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Registeel EX-Holo-1st Season Subscription",
+      "base_name": "Registeel EX-Holo",
+      "variety": "1st Season Subscription",
+      "spec_id": 2071983,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 5,
+        "psa_6": 5,
+        "psa_7": 20,
+        "psa_8": 41,
+        "psa_9": 190,
+        "psa_10": 203,
+        "psa_total": 465
+      },
+      "grade_totals": {
+        "total": 465,
+        "grade_total": 465
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Plusle-Holo-2,000 Exp Pts.",
+      "base_name": "Plusle-Holo",
+      "variety": "2,000 Exp Pts.",
+      "spec_id": 2056118,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 13,
+        "psa_6": 25,
+        "psa_7": 37,
+        "psa_8": 76,
+        "psa_9": 312,
+        "psa_10": 373,
+        "psa_total": 841
+      },
+      "grade_totals": {
+        "total": 842,
+        "grade_total": 841
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Minun-Holo-3,000 Exp Pts.",
+      "base_name": "Minun-Holo",
+      "variety": "3,000 Exp Pts.",
+      "spec_id": 2056116,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 10,
+        "psa_6": 21,
+        "psa_7": 24,
+        "psa_8": 63,
+        "psa_9": 242,
+        "psa_10": 377,
+        "psa_total": 742
+      },
+      "grade_totals": {
+        "total": 742,
+        "grade_total": 742
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Celebi EX-Holo-5,000 Exp Pts.",
+      "base_name": "Celebi EX-Holo",
+      "variety": "5,000 Exp Pts.",
+      "spec_id": 2056120,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 7,
+        "psa_5": 19,
+        "psa_6": 24,
+        "psa_7": 43,
+        "psa_8": 61,
+        "psa_9": 175,
+        "psa_10": 342,
+        "psa_total": 675
+      },
+      "grade_totals": {
+        "total": 675,
+        "grade_total": 675
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Mew EX-Holo-7,000 Exp Pts.",
+      "base_name": "Mew EX-Holo",
+      "variety": "7,000 Exp Pts.",
+      "spec_id": 1975933,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 13,
+        "psa_6": 28,
+        "psa_7": 31,
+        "psa_8": 64,
+        "psa_9": 219,
+        "psa_10": 295,
+        "psa_total": 659
+      },
+      "grade_totals": {
+        "total": 659,
+        "grade_total": 659
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Pokemon Card Fan-Summer Battle Road",
+      "base_name": "Pokemon Card Fan",
+      "variety": "Summer Battle Road",
+      "spec_id": 2056123,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 7,
+        "psa_6": 10,
+        "psa_7": 8,
+        "psa_8": 47,
+        "psa_9": 90,
+        "psa_10": 54,
+        "psa_total": 220
+      },
+      "grade_totals": {
+        "total": 220,
+        "grade_total": 220
+      }
+    }
+  ]
+}

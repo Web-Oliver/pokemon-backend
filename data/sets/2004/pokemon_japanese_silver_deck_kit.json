@@ -1,0 +1,944 @@
+{
+  "year": "2004",
+  "set_name": "Pokemon Japanese Silver Deck Kit",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2004/pokemon-japanese-silver-deck-kit/123551",
+  "total_cards": 39,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 21,
+        "psa_2": 6,
+        "psa_3": 13,
+        "psa_4": 24,
+        "psa_5": 64,
+        "psa_6": 79,
+        "psa_7": 126,
+        "psa_8": 297,
+        "psa_9": 783,
+        "psa_10": 1107,
+        "psa_total": 2520
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2520
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Psyduck",
+      "base_name": "Psyduck",
+      "variety": "",
+      "spec_id": 2839590,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 16,
+        "psa_10": 38,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "001",
+      "card_name": "Psyduck-1st Edition",
+      "base_name": "Psyduck",
+      "variety": "1st Edition",
+      "spec_id": 5168454,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 20,
+        "psa_9": 46,
+        "psa_10": 48,
+        "psa_total": 124
+      },
+      "grade_totals": {
+        "total": 124,
+        "grade_total": 124
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Magikarp",
+      "base_name": "Magikarp",
+      "variety": "",
+      "spec_id": 5168575,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 12,
+        "psa_10": 22,
+        "psa_total": 34
+      },
+      "grade_totals": {
+        "total": 34,
+        "grade_total": 34
+      }
+    },
+    {
+      "pokemon_number": "002",
+      "card_name": "Magikarp-1st Edition",
+      "base_name": "Magikarp",
+      "variety": "1st Edition",
+      "spec_id": 4632570,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 8,
+        "psa_9": 36,
+        "psa_10": 40,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 86,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Dark Golduck",
+      "base_name": "Dark Golduck",
+      "variety": "",
+      "spec_id": 5168576,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 10,
+        "psa_10": 18,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "003",
+      "card_name": "Dark Golduck-1st Edition",
+      "base_name": "Dark Golduck",
+      "variety": "1st Edition",
+      "spec_id": 2526218,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 27,
+        "psa_10": 28,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Dark Gyarados",
+      "base_name": "Dark Gyarados",
+      "variety": "",
+      "spec_id": 2493382,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 6,
+        "psa_8": 10,
+        "psa_9": 19,
+        "psa_10": 50,
+        "psa_total": 91
+      },
+      "grade_totals": {
+        "total": 91,
+        "grade_total": 91
+      }
+    },
+    {
+      "pokemon_number": "004",
+      "card_name": "Dark Gyarados-1st Edition",
+      "base_name": "Dark Gyarados",
+      "variety": "1st Edition",
+      "spec_id": 2493594,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 12,
+        "psa_9": 71,
+        "psa_10": 69,
+        "psa_total": 165
+      },
+      "grade_totals": {
+        "total": 165,
+        "grade_total": 165
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Magnemite",
+      "base_name": "Magnemite",
+      "variety": "",
+      "spec_id": 5168578,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 8,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "005",
+      "card_name": "Magnemite-1st Edition",
+      "base_name": "Magnemite",
+      "variety": "1st Edition",
+      "spec_id": 5168457,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 21,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Dark Magneton",
+      "base_name": "Dark Magneton",
+      "variety": "",
+      "spec_id": 5168579,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 22,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "006",
+      "card_name": "Dark Magneton-1st Edition",
+      "base_name": "Dark Magneton",
+      "variety": "1st Edition",
+      "spec_id": 2526240,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 19,
+        "psa_10": 23,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Rattata",
+      "base_name": "Rattata",
+      "variety": "",
+      "spec_id": 5168580,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 0,
+        "psa_10": 4,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "007",
+      "card_name": "Rattata-1st Edition",
+      "base_name": "Rattata",
+      "variety": "1st Edition",
+      "spec_id": 5168461,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 4,
+        "psa_total": 8
+      },
+      "grade_totals": {
+        "total": 8,
+        "grade_total": 8
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Dratini",
+      "base_name": "Dratini",
+      "variety": "",
+      "spec_id": 5168581,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 10,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "008",
+      "card_name": "Dratini-1st Edition",
+      "base_name": "Dratini",
+      "variety": "1st Edition",
+      "spec_id": 5168463,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 12,
+        "psa_10": 24,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Dratini",
+      "base_name": "Dratini",
+      "variety": "",
+      "spec_id": 2839603,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 15,
+        "psa_total": 18
+      },
+      "grade_totals": {
+        "total": 18,
+        "grade_total": 18
+      }
+    },
+    {
+      "pokemon_number": "009",
+      "card_name": "Dratini-1st Edition",
+      "base_name": "Dratini",
+      "variety": "1st Edition",
+      "spec_id": 5168464,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 19,
+        "psa_10": 28,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Rocket's Articuno EX-Holo",
+      "base_name": "Rocket's Articuno EX-Holo",
+      "variety": "",
+      "spec_id": 2416888,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 11,
+        "psa_6": 14,
+        "psa_7": 26,
+        "psa_8": 37,
+        "psa_9": 51,
+        "psa_10": 69,
+        "psa_total": 217
+      },
+      "grade_totals": {
+        "total": 217,
+        "grade_total": 217
+      }
+    },
+    {
+      "pokemon_number": "010",
+      "card_name": "Rocket's Articuno EX-Holo-1st Edition",
+      "base_name": "Rocket's Articuno EX-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2099790,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 3,
+        "psa_5": 17,
+        "psa_6": 22,
+        "psa_7": 40,
+        "psa_8": 70,
+        "psa_9": 111,
+        "psa_10": 135,
+        "psa_total": 408
+      },
+      "grade_totals": {
+        "total": 408,
+        "grade_total": 408
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Dark Dragonair",
+      "base_name": "Dark Dragonair",
+      "variety": "",
+      "spec_id": 5168582,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 11,
+        "psa_10": 23,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "011",
+      "card_name": "Dark Dragonair-1st Edition",
+      "base_name": "Dark Dragonair",
+      "variety": "1st Edition",
+      "spec_id": 5168467,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 24,
+        "psa_10": 55,
+        "psa_total": 80
+      },
+      "grade_totals": {
+        "total": 80,
+        "grade_total": 80
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Dark Dragonair",
+      "base_name": "Dark Dragonair",
+      "variety": "",
+      "spec_id": 2786994,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 11,
+        "psa_10": 28,
+        "psa_total": 45
+      },
+      "grade_totals": {
+        "total": 45,
+        "grade_total": 45
+      }
+    },
+    {
+      "pokemon_number": "012",
+      "card_name": "Dark Dragonair-1st Edition",
+      "base_name": "Dark Dragonair",
+      "variety": "1st Edition",
+      "spec_id": 2493596,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 29,
+        "psa_10": 50,
+        "psa_total": 88
+      },
+      "grade_totals": {
+        "total": 88,
+        "grade_total": 88
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Dark Dragonite",
+      "base_name": "Dark Dragonite",
+      "variety": "",
+      "spec_id": 2493385,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 8,
+        "psa_9": 19,
+        "psa_10": 24,
+        "psa_total": 56
+      },
+      "grade_totals": {
+        "total": 56,
+        "grade_total": 56
+      }
+    },
+    {
+      "pokemon_number": "013",
+      "card_name": "Dark Dragonite-1st Edition",
+      "base_name": "Dark Dragonite",
+      "variety": "1st Edition",
+      "spec_id": 2380463,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 31,
+        "psa_10": 48,
+        "psa_total": 87
+      },
+      "grade_totals": {
+        "total": 87,
+        "grade_total": 87
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Dark Dragonite-Holo",
+      "base_name": "Dark Dragonite-Holo",
+      "variety": "",
+      "spec_id": 2173088,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 7,
+        "psa_5": 13,
+        "psa_6": 16,
+        "psa_7": 19,
+        "psa_8": 44,
+        "psa_9": 50,
+        "psa_10": 45,
+        "psa_total": 203
+      },
+      "grade_totals": {
+        "total": 203,
+        "grade_total": 203
+      }
+    },
+    {
+      "pokemon_number": "014",
+      "card_name": "Dark Dragonite-Holo-1st Edition",
+      "base_name": "Dark Dragonite-Holo",
+      "variety": "1st Edition",
+      "spec_id": 2109057,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 1,
+        "psa_3": 4,
+        "psa_4": 4,
+        "psa_5": 11,
+        "psa_6": 13,
+        "psa_7": 20,
+        "psa_8": 46,
+        "psa_9": 99,
+        "psa_10": 87,
+        "psa_total": 289
+      },
+      "grade_totals": {
+        "total": 289,
+        "grade_total": 289
+      }
+    },
+    {
+      "pokemon_number": "015",
+      "card_name": "Energy Search-1st Edition",
+      "base_name": "Energy Search",
+      "variety": "1st Edition",
+      "spec_id": 5168469,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "016",
+      "card_name": "Potion-1st Edition",
+      "base_name": "Potion",
+      "variety": "1st Edition",
+      "spec_id": 5168471,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 2,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Rocket's Poke Ball",
+      "base_name": "Rocket's Poke Ball",
+      "variety": "",
+      "spec_id": 5168585,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 9,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "017",
+      "card_name": "Rocket's Poké Ball-1st Edition",
+      "base_name": "Rocket's Poké Ball",
+      "variety": "1st Edition",
+      "spec_id": 5168473,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 10,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Rocket's Admin.",
+      "base_name": "Rocket's Admin.",
+      "variety": "",
+      "spec_id": 5168586,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 8,
+        "psa_total": 10
+      },
+      "grade_totals": {
+        "total": 10,
+        "grade_total": 10
+      }
+    },
+    {
+      "pokemon_number": "018",
+      "card_name": "Rocket's Admin.-1st Edition",
+      "base_name": "Rocket's Admin.",
+      "variety": "1st Edition",
+      "spec_id": 2526182,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 7,
+        "psa_10": 13,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Rocket's Mission",
+      "base_name": "Rocket's Mission",
+      "variety": "",
+      "spec_id": 5168587,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 5,
+        "psa_total": 9
+      },
+      "grade_totals": {
+        "total": 9,
+        "grade_total": 9
+      }
+    },
+    {
+      "pokemon_number": "019",
+      "card_name": "Rocket's Mission-1st Edition",
+      "base_name": "Rocket's Mission",
+      "variety": "1st Edition",
+      "spec_id": 5168475,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 10,
+        "psa_10": 9,
+        "psa_total": 19
+      },
+      "grade_totals": {
+        "total": 19,
+        "grade_total": 19
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "R Energy",
+      "base_name": "R Energy",
+      "variety": "",
+      "spec_id": 5168588,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 3,
+        "psa_10": 1,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "020",
+      "card_name": "R Energy-1st Edition",
+      "base_name": "R Energy",
+      "variety": "1st Edition",
+      "spec_id": 2698530,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 12,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    }
+  ]
+}

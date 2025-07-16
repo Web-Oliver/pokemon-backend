@@ -1,0 +1,56 @@
+{
+  "year": "2001",
+  "set_name": "Pokemon Game Movie",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2001/pokemon-game-movie/57928",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 105,
+        "psa_2": 54,
+        "psa_3": 95,
+        "psa_4": 241,
+        "psa_5": 757,
+        "psa_6": 1100,
+        "psa_7": 1353,
+        "psa_8": 4973,
+        "psa_9": 6727,
+        "psa_10": 969,
+        "psa_total": 16375
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 16375
+      }
+    },
+    {
+      "pokemon_number": "34",
+      "card_name": "Entei-Reverse Foil-Pokemon 3 Movie Promo",
+      "base_name": "Entei-Reverse Foil",
+      "variety": "Pokemon 3 Movie Promo",
+      "spec_id": 525143,
+      "psa_grades": {
+        "psa_1": 105,
+        "psa_2": 54,
+        "psa_3": 95,
+        "psa_4": 241,
+        "psa_5": 757,
+        "psa_6": 1100,
+        "psa_7": 1353,
+        "psa_8": 4973,
+        "psa_9": 6727,
+        "psa_10": 969,
+        "psa_total": 16375
+      },
+      "grade_totals": {
+        "total": 16397,
+        "grade_total": 16375
+      }
+    }
+  ]
+}

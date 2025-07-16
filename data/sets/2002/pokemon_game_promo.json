@@ -1,0 +1,104 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Game Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-game-promo/57941",
+  "total_cards": 4,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 11,
+        "psa_3": 20,
+        "psa_4": 38,
+        "psa_5": 87,
+        "psa_6": 80,
+        "psa_7": 107,
+        "psa_8": 231,
+        "psa_9": 559,
+        "psa_10": 485,
+        "psa_total": 1628
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1628
+      }
+    },
+    {
+      "pokemon_number": "51",
+      "card_name": "Rapidash-Black Star-No Pokemon Center NY",
+      "base_name": "Rapidash",
+      "variety": "Black Star-No Pokemon Center NY",
+      "spec_id": 2361958,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 3,
+        "psa_3": 4,
+        "psa_4": 11,
+        "psa_5": 25,
+        "psa_6": 16,
+        "psa_7": 17,
+        "psa_8": 31,
+        "psa_9": 41,
+        "psa_10": 29,
+        "psa_total": 178
+      },
+      "grade_totals": {
+        "total": 178,
+        "grade_total": 178
+      }
+    },
+    {
+      "pokemon_number": "51",
+      "card_name": "Rapidash-Black Star-Pokemon Center NY",
+      "base_name": "Rapidash",
+      "variety": "Black Star-Pokemon Center NY",
+      "spec_id": 866709,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 6,
+        "psa_5": 9,
+        "psa_6": 18,
+        "psa_7": 28,
+        "psa_8": 72,
+        "psa_9": 301,
+        "psa_10": 329,
+        "psa_total": 763
+      },
+      "grade_totals": {
+        "total": 764,
+        "grade_total": 763
+      }
+    },
+    {
+      "pokemon_number": "53",
+      "card_name": "Suicune-Black Star",
+      "base_name": "Suicune",
+      "variety": "Black Star",
+      "spec_id": 527152,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 8,
+        "psa_3": 16,
+        "psa_4": 21,
+        "psa_5": 53,
+        "psa_6": 46,
+        "psa_7": 62,
+        "psa_8": 128,
+        "psa_9": 217,
+        "psa_10": 127,
+        "psa_total": 687
+      },
+      "grade_totals": {
+        "total": 689,
+        "grade_total": 687
+      }
+    }
+  ]
+}

@@ -1,0 +1,824 @@
+{
+  "year": "2016",
+  "set_name": "Pokemon XY Generations Radiant Collection",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2016/pokemon-xy-generations-radiant-collection/134532",
+  "total_cards": 75,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 67,
+        "psa_2": 41,
+        "psa_3": 107,
+        "psa_4": 231,
+        "psa_5": 681,
+        "psa_6": 1782,
+        "psa_7": 4607,
+        "psa_8": 12204,
+        "psa_9": 12316,
+        "psa_10": 2433,
+        "psa_total": 34476
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 34476
+      }
+    },
+    {
+      "pokemon_number": "RC1",
+      "card_name": "Chikorita",
+      "base_name": "Chikorita",
+      "variety": "",
+      "spec_id": 2722232,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 7,
+        "psa_8": 19,
+        "psa_9": 31,
+        "psa_10": 8,
+        "psa_total": 67
+      },
+      "grade_totals": {
+        "total": 67,
+        "grade_total": 67
+      }
+    },
+    {
+      "pokemon_number": "RC2",
+      "card_name": "Shroomish",
+      "base_name": "Shroomish",
+      "variety": "",
+      "spec_id": 4834628,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 13,
+        "psa_9": 8,
+        "psa_10": 2,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "RC3",
+      "card_name": "Charmander",
+      "base_name": "Charmander",
+      "variety": "",
+      "spec_id": 2291402,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 11,
+        "psa_7": 45,
+        "psa_8": 117,
+        "psa_9": 184,
+        "psa_10": 42,
+        "psa_total": 405
+      },
+      "grade_totals": {
+        "total": 405,
+        "grade_total": 405
+      }
+    },
+    {
+      "pokemon_number": "RC4",
+      "card_name": "Charmeleon",
+      "base_name": "Charmeleon",
+      "variety": "",
+      "spec_id": 2291400,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 18,
+        "psa_7": 40,
+        "psa_8": 124,
+        "psa_9": 169,
+        "psa_10": 41,
+        "psa_total": 401
+      },
+      "grade_totals": {
+        "total": 403,
+        "grade_total": 401
+      }
+    },
+    {
+      "pokemon_number": "RC5",
+      "card_name": "Charizard",
+      "base_name": "Charizard",
+      "variety": "",
+      "spec_id": 2279797,
+      "psa_grades": {
+        "psa_1": 17,
+        "psa_2": 8,
+        "psa_3": 17,
+        "psa_4": 37,
+        "psa_5": 122,
+        "psa_6": 302,
+        "psa_7": 826,
+        "psa_8": 2220,
+        "psa_9": 2429,
+        "psa_10": 411,
+        "psa_total": 6389
+      },
+      "grade_totals": {
+        "total": 6415,
+        "grade_total": 6389
+      }
+    },
+    {
+      "pokemon_number": "RC6",
+      "card_name": "Flareon EX",
+      "base_name": "Flareon EX",
+      "variety": "",
+      "spec_id": 2292274,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 2,
+        "psa_3": 7,
+        "psa_4": 19,
+        "psa_5": 53,
+        "psa_6": 124,
+        "psa_7": 337,
+        "psa_8": 888,
+        "psa_9": 914,
+        "psa_10": 176,
+        "psa_total": 2526
+      },
+      "grade_totals": {
+        "total": 2531,
+        "grade_total": 2526
+      }
+    },
+    {
+      "pokemon_number": "RC7",
+      "card_name": "Snorunt",
+      "base_name": "Snorunt",
+      "variety": "",
+      "spec_id": 4834629,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 15,
+        "psa_10": 5,
+        "psa_total": 24
+      },
+      "grade_totals": {
+        "total": 24,
+        "grade_total": 24
+      }
+    },
+    {
+      "pokemon_number": "RC8",
+      "card_name": "Froslass",
+      "base_name": "Froslass",
+      "variety": "",
+      "spec_id": 2382014,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 7,
+        "psa_7": 14,
+        "psa_8": 44,
+        "psa_9": 58,
+        "psa_10": 8,
+        "psa_total": 132
+      },
+      "grade_totals": {
+        "total": 133,
+        "grade_total": 132
+      }
+    },
+    {
+      "pokemon_number": "RC9",
+      "card_name": "Raichu",
+      "base_name": "Raichu",
+      "variety": "",
+      "spec_id": 2542595,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 26,
+        "psa_9": 50,
+        "psa_10": 7,
+        "psa_total": 90
+      },
+      "grade_totals": {
+        "total": 90,
+        "grade_total": 90
+      }
+    },
+    {
+      "pokemon_number": "RC10",
+      "card_name": "Dedenne",
+      "base_name": "Dedenne",
+      "variety": "",
+      "spec_id": 2309213,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 27,
+        "psa_8": 93,
+        "psa_9": 83,
+        "psa_10": 12,
+        "psa_total": 224
+      },
+      "grade_totals": {
+        "total": 227,
+        "grade_total": 224
+      }
+    },
+    {
+      "pokemon_number": "RC11",
+      "card_name": "Wobbuffet",
+      "base_name": "Wobbuffet",
+      "variety": "",
+      "spec_id": 2291424,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 5,
+        "psa_10": 6,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "RC12",
+      "card_name": "Gulpin",
+      "base_name": "Gulpin",
+      "variety": "",
+      "spec_id": 2840917,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 9,
+        "psa_10": 4,
+        "psa_total": 20
+      },
+      "grade_totals": {
+        "total": 20,
+        "grade_total": 20
+      }
+    },
+    {
+      "pokemon_number": "RC13",
+      "card_name": "Jirachi",
+      "base_name": "Jirachi",
+      "variety": "",
+      "spec_id": 2318480,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 7,
+        "psa_6": 35,
+        "psa_7": 71,
+        "psa_8": 187,
+        "psa_9": 234,
+        "psa_10": 25,
+        "psa_total": 560
+      },
+      "grade_totals": {
+        "total": 564,
+        "grade_total": 560
+      }
+    },
+    {
+      "pokemon_number": "RC14",
+      "card_name": "Espurr",
+      "base_name": "Espurr",
+      "variety": "",
+      "spec_id": 4834630,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 12,
+        "psa_9": 11,
+        "psa_10": 8,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "RC15",
+      "card_name": "Meowstic",
+      "base_name": "Meowstic",
+      "variety": "",
+      "spec_id": 2289907,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 16,
+        "psa_8": 38,
+        "psa_9": 55,
+        "psa_10": 12,
+        "psa_total": 126
+      },
+      "grade_totals": {
+        "total": 127,
+        "grade_total": 126
+      }
+    },
+    {
+      "pokemon_number": "RC16",
+      "card_name": "Yveltal",
+      "base_name": "Yveltal",
+      "variety": "",
+      "spec_id": 2291425,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 15,
+        "psa_8": 45,
+        "psa_9": 45,
+        "psa_10": 14,
+        "psa_total": 122
+      },
+      "grade_totals": {
+        "total": 122,
+        "grade_total": 122
+      }
+    },
+    {
+      "pokemon_number": "RC17",
+      "card_name": "Flabebe",
+      "base_name": "Flabebe",
+      "variety": "",
+      "spec_id": 8538755,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 5
+      },
+      "grade_totals": {
+        "total": 5,
+        "grade_total": 5
+      }
+    },
+    {
+      "pokemon_number": "RC17",
+      "card_name": "Flabébé",
+      "base_name": "Flabébé",
+      "variety": "",
+      "spec_id": 4834631,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "RC18",
+      "card_name": "Floette",
+      "base_name": "Floette",
+      "variety": "",
+      "spec_id": 2360064,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 8,
+        "psa_8": 38,
+        "psa_9": 51,
+        "psa_10": 12,
+        "psa_total": 110
+      },
+      "grade_totals": {
+        "total": 112,
+        "grade_total": 110
+      }
+    },
+    {
+      "pokemon_number": "RC19",
+      "card_name": "Swirlix",
+      "base_name": "Swirlix",
+      "variety": "",
+      "spec_id": 2305668,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 13,
+        "psa_8": 35,
+        "psa_9": 35,
+        "psa_10": 8,
+        "psa_total": 97
+      },
+      "grade_totals": {
+        "total": 98,
+        "grade_total": 97
+      }
+    },
+    {
+      "pokemon_number": "RC20",
+      "card_name": "Slurpuff",
+      "base_name": "Slurpuff",
+      "variety": "",
+      "spec_id": 2318420,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 10,
+        "psa_8": 21,
+        "psa_9": 49,
+        "psa_10": 8,
+        "psa_total": 93
+      },
+      "grade_totals": {
+        "total": 94,
+        "grade_total": 93
+      }
+    },
+    {
+      "pokemon_number": "RC21",
+      "card_name": "Sylveon EX",
+      "base_name": "Sylveon EX",
+      "variety": "",
+      "spec_id": 2297986,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 17,
+        "psa_5": 33,
+        "psa_6": 102,
+        "psa_7": 242,
+        "psa_8": 681,
+        "psa_9": 596,
+        "psa_10": 123,
+        "psa_total": 1804
+      },
+      "grade_totals": {
+        "total": 1809,
+        "grade_total": 1804
+      }
+    },
+    {
+      "pokemon_number": "RC22",
+      "card_name": "Diancie",
+      "base_name": "Diancie",
+      "variety": "",
+      "spec_id": 2321209,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 13,
+        "psa_8": 46,
+        "psa_9": 65,
+        "psa_10": 23,
+        "psa_total": 151
+      },
+      "grade_totals": {
+        "total": 153,
+        "grade_total": 151
+      }
+    },
+    {
+      "pokemon_number": "RC23",
+      "card_name": "Swablu",
+      "base_name": "Swablu",
+      "variety": "",
+      "spec_id": 2840919,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 7,
+        "psa_9": 6,
+        "psa_10": 4,
+        "psa_total": 22
+      },
+      "grade_totals": {
+        "total": 22,
+        "grade_total": 22
+      }
+    },
+    {
+      "pokemon_number": "RC24",
+      "card_name": "Altaria",
+      "base_name": "Altaria",
+      "variety": "",
+      "spec_id": 2444032,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 6,
+        "psa_7": 29,
+        "psa_8": 72,
+        "psa_9": 84,
+        "psa_10": 17,
+        "psa_total": 211
+      },
+      "grade_totals": {
+        "total": 212,
+        "grade_total": 211
+      }
+    },
+    {
+      "pokemon_number": "RC25",
+      "card_name": "Fletchling",
+      "base_name": "Fletchling",
+      "variety": "",
+      "spec_id": 4834632,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 12,
+        "psa_9": 13,
+        "psa_10": 3,
+        "psa_total": 32
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 32
+      }
+    },
+    {
+      "pokemon_number": "RC26",
+      "card_name": "Floral Crown",
+      "base_name": "Floral Crown",
+      "variety": "",
+      "spec_id": 4834633,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 13,
+        "psa_9": 4,
+        "psa_10": 1,
+        "psa_total": 23
+      },
+      "grade_totals": {
+        "total": 23,
+        "grade_total": 23
+      }
+    },
+    {
+      "pokemon_number": "RC27",
+      "card_name": "Wally",
+      "base_name": "Wally",
+      "variety": "",
+      "spec_id": 2344534,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 8,
+        "psa_7": 15,
+        "psa_8": 36,
+        "psa_9": 72,
+        "psa_10": 18,
+        "psa_total": 151
+      },
+      "grade_totals": {
+        "total": 151,
+        "grade_total": 151
+      }
+    },
+    {
+      "pokemon_number": "RC28",
+      "card_name": "Full Art/Flareon EX",
+      "base_name": "Full Art/Flareon EX",
+      "variety": "",
+      "spec_id": 2289910,
+      "psa_grades": {
+        "psa_1": 13,
+        "psa_2": 10,
+        "psa_3": 31,
+        "psa_4": 38,
+        "psa_5": 139,
+        "psa_6": 367,
+        "psa_7": 825,
+        "psa_8": 2105,
+        "psa_9": 1729,
+        "psa_10": 274,
+        "psa_total": 5532
+      },
+      "grade_totals": {
+        "total": 5555,
+        "grade_total": 5532
+      }
+    },
+    {
+      "pokemon_number": "RC29",
+      "card_name": "Full Art/Pikachu",
+      "base_name": "Full Art/Pikachu",
+      "variety": "",
+      "spec_id": 2281035,
+      "psa_grades": {
+        "psa_1": 8,
+        "psa_2": 4,
+        "psa_3": 11,
+        "psa_4": 35,
+        "psa_5": 84,
+        "psa_6": 191,
+        "psa_7": 629,
+        "psa_8": 1852,
+        "psa_9": 1992,
+        "psa_10": 431,
+        "psa_total": 5239
+      },
+      "grade_totals": {
+        "total": 5256,
+        "grade_total": 5239
+      }
+    },
+    {
+      "pokemon_number": "RC30",
+      "card_name": "Full Art/Gardevoir EX",
+      "base_name": "Full Art/Gardevoir EX",
+      "variety": "",
+      "spec_id": 2281034,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 3,
+        "psa_3": 8,
+        "psa_4": 15,
+        "psa_5": 31,
+        "psa_6": 108,
+        "psa_7": 290,
+        "psa_8": 718,
+        "psa_9": 664,
+        "psa_10": 114,
+        "psa_total": 1955
+      },
+      "grade_totals": {
+        "total": 1960,
+        "grade_total": 1955
+      }
+    },
+    {
+      "pokemon_number": "RC31",
+      "card_name": "Full Art/M Gardevoir EX",
+      "base_name": "Full Art/M Gardevoir EX",
+      "variety": "",
+      "spec_id": 2290025,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 4,
+        "psa_3": 4,
+        "psa_4": 23,
+        "psa_5": 56,
+        "psa_6": 156,
+        "psa_7": 381,
+        "psa_8": 934,
+        "psa_9": 1042,
+        "psa_10": 311,
+        "psa_total": 2916
+      },
+      "grade_totals": {
+        "total": 2928,
+        "grade_total": 2916
+      }
+    },
+    {
+      "pokemon_number": "RC32",
+      "card_name": "Full Art/Sylveon EX",
+      "base_name": "Full Art/Sylveon EX",
+      "variety": "",
+      "spec_id": 2281022,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 8,
+        "psa_3": 21,
+        "psa_4": 35,
+        "psa_5": 115,
+        "psa_6": 290,
+        "psa_7": 658,
+        "psa_8": 1591,
+        "psa_9": 1422,
+        "psa_10": 279,
+        "psa_total": 4430
+      },
+      "grade_totals": {
+        "total": 4455,
+        "grade_total": 4430
+      }
+    }
+  ]
+}

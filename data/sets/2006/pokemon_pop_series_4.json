@@ -1,0 +1,632 @@
+{
+  "year": "2006",
+  "set_name": "Pokemon Pop Series 4",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2006/pokemon-pop-series-4/98861",
+  "total_cards": 52,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 28,
+        "psa_2": 18,
+        "psa_3": 18,
+        "psa_4": 60,
+        "psa_5": 151,
+        "psa_6": 237,
+        "psa_7": 373,
+        "psa_8": 646,
+        "psa_9": 852,
+        "psa_10": 264,
+        "psa_total": 2649
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 2649
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Chimecho",
+      "base_name": "Chimecho",
+      "variety": "",
+      "spec_id": 2765836,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 8,
+        "psa_9": 30,
+        "psa_10": 6,
+        "psa_total": 52
+      },
+      "grade_totals": {
+        "total": 52,
+        "grade_total": 52
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Deoxys",
+      "base_name": "Deoxys",
+      "variety": "",
+      "spec_id": 2607269,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 7,
+        "psa_9": 18,
+        "psa_10": 4,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "2",
+      "card_name": "Deoxys-Holo",
+      "base_name": "Deoxys-Holo",
+      "variety": "",
+      "spec_id": 1965598,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 3,
+        "psa_3": 1,
+        "psa_4": 11,
+        "psa_5": 29,
+        "psa_6": 50,
+        "psa_7": 78,
+        "psa_8": 112,
+        "psa_9": 76,
+        "psa_10": 6,
+        "psa_total": 372
+      },
+      "grade_totals": {
+        "total": 376,
+        "grade_total": 372
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Flygon",
+      "base_name": "Flygon",
+      "variety": "",
+      "spec_id": 2298682,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 20,
+        "psa_9": 24,
+        "psa_10": 3,
+        "psa_total": 53
+      },
+      "grade_totals": {
+        "total": 53,
+        "grade_total": 53
+      }
+    },
+    {
+      "pokemon_number": "3",
+      "card_name": "Flygon-Holo",
+      "base_name": "Flygon-Holo",
+      "variety": "",
+      "spec_id": 1827379,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 10,
+        "psa_6": 14,
+        "psa_7": 66,
+        "psa_8": 87,
+        "psa_9": 35,
+        "psa_10": 3,
+        "psa_total": 224
+      },
+      "grade_totals": {
+        "total": 224,
+        "grade_total": 224
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Mew",
+      "base_name": "Mew",
+      "variety": "",
+      "spec_id": 2299940,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 8,
+        "psa_8": 16,
+        "psa_9": 28,
+        "psa_10": 6,
+        "psa_total": 70
+      },
+      "grade_totals": {
+        "total": 70,
+        "grade_total": 70
+      }
+    },
+    {
+      "pokemon_number": "4",
+      "card_name": "Mew-Holo",
+      "base_name": "Mew-Holo",
+      "variety": "",
+      "spec_id": 2108895,
+      "psa_grades": {
+        "psa_1": 11,
+        "psa_2": 6,
+        "psa_3": 8,
+        "psa_4": 13,
+        "psa_5": 42,
+        "psa_6": 79,
+        "psa_7": 89,
+        "psa_8": 144,
+        "psa_9": 69,
+        "psa_10": 8,
+        "psa_total": 469
+      },
+      "grade_totals": {
+        "total": 472,
+        "grade_total": 469
+      }
+    },
+    {
+      "pokemon_number": "5",
+      "card_name": "Sceptile",
+      "base_name": "Sceptile",
+      "variety": "",
+      "spec_id": 2301631,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 6,
+        "psa_9": 21,
+        "psa_10": 3,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Combusken",
+      "base_name": "Combusken",
+      "variety": "",
+      "spec_id": 2298031,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 9,
+        "psa_10": 4,
+        "psa_total": 17
+      },
+      "grade_totals": {
+        "total": 17,
+        "grade_total": 17
+      }
+    },
+    {
+      "pokemon_number": "6",
+      "card_name": "Combusken-Holo",
+      "base_name": "Combusken-Holo",
+      "variety": "",
+      "spec_id": 4056629,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 9,
+        "psa_8": 12,
+        "psa_9": 5,
+        "psa_10": 0,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "7",
+      "card_name": "Grovyle",
+      "base_name": "Grovyle",
+      "variety": "",
+      "spec_id": 2299431,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 2,
+        "psa_9": 3,
+        "psa_10": 5,
+        "psa_total": 15
+      },
+      "grade_totals": {
+        "total": 15,
+        "grade_total": 15
+      }
+    },
+    {
+      "pokemon_number": "8",
+      "card_name": "Heal Energy",
+      "base_name": "Heal Energy",
+      "variety": "",
+      "spec_id": 4645619,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 2,
+        "psa_total": 11
+      },
+      "grade_totals": {
+        "total": 11,
+        "grade_total": 11
+      }
+    },
+    {
+      "pokemon_number": "9",
+      "card_name": "Pokemon Fan Club",
+      "base_name": "Pokemon Fan Club",
+      "variety": "",
+      "spec_id": 2301579,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 5,
+        "psa_6": 4,
+        "psa_7": 9,
+        "psa_8": 30,
+        "psa_9": 75,
+        "psa_10": 36,
+        "psa_total": 160
+      },
+      "grade_totals": {
+        "total": 160,
+        "grade_total": 160
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Scramble Energy",
+      "base_name": "Scramble Energy",
+      "variety": "",
+      "spec_id": 2765843,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 2,
+        "psa_9": 6,
+        "psa_10": 6,
+        "psa_total": 16
+      },
+      "grade_totals": {
+        "total": 16,
+        "grade_total": 16
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Mudkip",
+      "base_name": "Mudkip",
+      "variety": "",
+      "spec_id": 2601786,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 33,
+        "psa_10": 10,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Mudkip-Holo",
+      "base_name": "Mudkip-Holo",
+      "variety": "",
+      "spec_id": 2259736,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 7,
+        "psa_6": 10,
+        "psa_7": 9,
+        "psa_8": 9,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 48
+      },
+      "grade_totals": {
+        "total": 48,
+        "grade_total": 48
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Pidgey",
+      "base_name": "Pidgey",
+      "variety": "",
+      "spec_id": 2601784,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 1,
+        "psa_9": 20,
+        "psa_10": 8,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Pikachu",
+      "base_name": "Pikachu",
+      "variety": "",
+      "spec_id": 2230221,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 6,
+        "psa_6": 7,
+        "psa_7": 11,
+        "psa_8": 36,
+        "psa_9": 99,
+        "psa_10": 48,
+        "psa_total": 215
+      },
+      "grade_totals": {
+        "total": 215,
+        "grade_total": 215
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Pikachu-Holo",
+      "base_name": "Pikachu-Holo",
+      "variety": "",
+      "spec_id": 2146576,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 7,
+        "psa_5": 19,
+        "psa_6": 27,
+        "psa_7": 47,
+        "psa_8": 36,
+        "psa_9": 18,
+        "psa_10": 1,
+        "psa_total": 163
+      },
+      "grade_totals": {
+        "total": 164,
+        "grade_total": 163
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Squirtle",
+      "base_name": "Squirtle",
+      "variety": "",
+      "spec_id": 2224384,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 26,
+        "psa_9": 69,
+        "psa_10": 33,
+        "psa_total": 143
+      },
+      "grade_totals": {
+        "total": 144,
+        "grade_total": 143
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Treecko",
+      "base_name": "Treecko",
+      "variety": "",
+      "spec_id": 2601787,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 3,
+        "psa_9": 24,
+        "psa_10": 11,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Wobbuffet",
+      "base_name": "Wobbuffet",
+      "variety": "",
+      "spec_id": 4108103,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 10,
+        "psa_10": 8,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Wobbuffet-Holo",
+      "base_name": "Wobbuffet-Holo",
+      "variety": "",
+      "spec_id": 1792873,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 3,
+        "psa_8": 11,
+        "psa_9": 13,
+        "psa_10": 0,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 31,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Deoxys EX",
+      "base_name": "Deoxys EX",
+      "variety": "",
+      "spec_id": 2434910,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 3,
+        "psa_6": 8,
+        "psa_7": 9,
+        "psa_8": 22,
+        "psa_9": 50,
+        "psa_10": 19,
+        "psa_total": 116
+      },
+      "grade_totals": {
+        "total": 117,
+        "grade_total": 116
+      }
+    },
+    {
+      "pokemon_number": "17",
+      "card_name": "Deoxys EX-Holo",
+      "base_name": "Deoxys EX-Holo",
+      "variety": "",
+      "spec_id": 1935779,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 5,
+        "psa_10": 1,
+        "psa_total": 6
+      },
+      "grade_totals": {
+        "total": 6,
+        "grade_total": 6
+      }
+    }
+  ]
+}

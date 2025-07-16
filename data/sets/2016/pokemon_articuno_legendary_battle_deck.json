@@ -1,0 +1,56 @@
+{
+  "year": "2016",
+  "set_name": "Pokemon Articuno Legendary Battle Deck",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2016/pokemon-articuno-legendary-battle-deck/170435",
+  "total_cards": 2,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1
+      }
+    },
+    {
+      "pokemon_number": "31",
+      "card_name": "Kyurem",
+      "base_name": "Kyurem",
+      "variety": "",
+      "spec_id": 2838899,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 0,
+        "psa_10": 0,
+        "psa_total": 1
+      },
+      "grade_totals": {
+        "total": 1,
+        "grade_total": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "year": "1996",
+  "total_sets": 4,
+  "set_links": [
+    {
+      "set_name": "Pokemon Japanese Basic",
+      "url": "https://www.psacard.com/pop/tcg-cards/1996/pokemon-japanese-basic/55428",
+      "total_items": "Grade",
+      "total_graded": "677",
+      "id": "55428"
+    },
+    {
+      "set_name": "Pokemon Japanese Coin Promo",
+      "url": "https://www.psacard.com/pop/tcg-cards/1996/pokemon-japanese-coin-promo/161658",
+      "total_items": "Grade",
+      "total_graded": "0",
+      "id": "161658"
+    },
+    {
+      "set_name": "Pokemon Japanese Corocoro Comics Promo",
+      "url": "https://www.psacard.com/pop/tcg-cards/1996/pokemon-japanese-corocoro-comics-promo/79576",
+      "total_items": "Grade",
+      "total_graded": "2",
+      "id": "79576"
+    },
+    {
+      "set_name": "Pokemon Japanese Promo",
+      "url": "https://www.psacard.com/pop/tcg-cards/1996/pokemon-japanese-promo/61006",
+      "total_items": "Grade",
+      "total_graded": "0",
+      "id": "61006"
+    }
+  ]
+}

@@ -1,0 +1,2552 @@
+{
+  "year": "1998",
+  "set_name": "Pokemon Japanese Gym",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1998/pokemon-japanese-gym/58310",
+  "total_cards": 106,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 183,
+        "psa_2": 179,
+        "psa_3": 370,
+        "psa_4": 874,
+        "psa_5": 1827,
+        "psa_6": 2782,
+        "psa_7": 3814,
+        "psa_8": 9526,
+        "psa_9": 18641,
+        "psa_10": 7316,
+        "psa_total": 45514
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 45514
+      }
+    },
+    {
+      "pokemon_number": "1",
+      "card_name": "Erika's Bulbasaur",
+      "base_name": "Erika's Bulbasaur",
+      "variety": "",
+      "spec_id": 2183691,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 5,
+        "psa_5": 9,
+        "psa_6": 17,
+        "psa_7": 21,
+        "psa_8": 55,
+        "psa_9": 90,
+        "psa_10": 31,
+        "psa_total": 232
+      },
+      "grade_totals": {
+        "total": 232,
+        "grade_total": 232
+      }
+    },
+    {
+      "pokemon_number": "19",
+      "card_name": "LT. Surge's Rattata",
+      "base_name": "LT. Surge's Rattata",
+      "variety": "",
+      "spec_id": 2183549,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 9,
+        "psa_9": 16,
+        "psa_10": 12,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "20",
+      "card_name": "LT. Surge's Raticate",
+      "base_name": "LT. Surge's Raticate",
+      "variety": "",
+      "spec_id": 2183557,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 20,
+        "psa_10": 7,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "21",
+      "card_name": "LT. Surge's Spearow",
+      "base_name": "LT. Surge's Spearow",
+      "variety": "",
+      "spec_id": 2183551,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 12,
+        "psa_9": 15,
+        "psa_10": 21,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "22",
+      "card_name": "LT. Surge's Fearow-Holo",
+      "base_name": "LT. Surge's Fearow-Holo",
+      "variety": "",
+      "spec_id": 1828584,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 7,
+        "psa_3": 10,
+        "psa_4": 37,
+        "psa_5": 65,
+        "psa_6": 105,
+        "psa_7": 147,
+        "psa_8": 453,
+        "psa_9": 767,
+        "psa_10": 262,
+        "psa_total": 1859
+      },
+      "grade_totals": {
+        "total": 1863,
+        "grade_total": 1859
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "LT. Surge's Pikachu-LV.10",
+      "base_name": "LT. Surge's Pikachu",
+      "variety": "LV.10",
+      "spec_id": 544422,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 5,
+        "psa_3": 4,
+        "psa_4": 22,
+        "psa_5": 30,
+        "psa_6": 45,
+        "psa_7": 39,
+        "psa_8": 116,
+        "psa_9": 315,
+        "psa_10": 173,
+        "psa_total": 750
+      },
+      "grade_totals": {
+        "total": 751,
+        "grade_total": 750
+      }
+    },
+    {
+      "pokemon_number": "27",
+      "card_name": "Brock's Sandshrew",
+      "base_name": "Brock's Sandshrew",
+      "variety": "",
+      "spec_id": 2183679,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 8,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 27,
+        "psa_10": 12,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "28",
+      "card_name": "Brock's Sandslash",
+      "base_name": "Brock's Sandslash",
+      "variety": "",
+      "spec_id": 2183543,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 8,
+        "psa_9": 14,
+        "psa_10": 9,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "35",
+      "card_name": "Erika's Clefairy",
+      "base_name": "Erika's Clefairy",
+      "variety": "",
+      "spec_id": 2183558,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 12,
+        "psa_9": 41,
+        "psa_10": 14,
+        "psa_total": 71
+      },
+      "grade_totals": {
+        "total": 71,
+        "grade_total": 71
+      }
+    },
+    {
+      "pokemon_number": "36",
+      "card_name": "Erika's Clefable-Holo",
+      "base_name": "Erika's Clefable-Holo",
+      "variety": "",
+      "spec_id": 544424,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 6,
+        "psa_3": 14,
+        "psa_4": 24,
+        "psa_5": 70,
+        "psa_6": 110,
+        "psa_7": 129,
+        "psa_8": 400,
+        "psa_9": 791,
+        "psa_10": 272,
+        "psa_total": 1816
+      },
+      "grade_totals": {
+        "total": 1823,
+        "grade_total": 1816
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Brock's Vulpix",
+      "base_name": "Brock's Vulpix",
+      "variety": "",
+      "spec_id": 2183516,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 7,
+        "psa_9": 5,
+        "psa_10": 2,
+        "psa_total": 14
+      },
+      "grade_totals": {
+        "total": 14,
+        "grade_total": 14
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Brock's Vulpix-LV.10",
+      "base_name": "Brock's Vulpix",
+      "variety": "LV.10",
+      "spec_id": 4314878,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 8,
+        "psa_8": 19,
+        "psa_9": 35,
+        "psa_10": 16,
+        "psa_total": 84
+      },
+      "grade_totals": {
+        "total": 84,
+        "grade_total": 84
+      }
+    },
+    {
+      "pokemon_number": "37",
+      "card_name": "Brock's Vulpix-LV.16",
+      "base_name": "Brock's Vulpix",
+      "variety": "LV.16",
+      "spec_id": 4314884,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 15,
+        "psa_9": 26,
+        "psa_10": 16,
+        "psa_total": 69
+      },
+      "grade_totals": {
+        "total": 69,
+        "grade_total": 69
+      }
+    },
+    {
+      "pokemon_number": "38",
+      "card_name": "Brock's Ninetales-Holo",
+      "base_name": "Brock's Ninetales-Holo",
+      "variety": "",
+      "spec_id": 544425,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 2,
+        "psa_3": 19,
+        "psa_4": 36,
+        "psa_5": 85,
+        "psa_6": 127,
+        "psa_7": 186,
+        "psa_8": 473,
+        "psa_9": 863,
+        "psa_10": 339,
+        "psa_total": 2135
+      },
+      "grade_totals": {
+        "total": 2138,
+        "grade_total": 2135
+      }
+    },
+    {
+      "pokemon_number": "39",
+      "card_name": "Erika's Jigglypuff",
+      "base_name": "Erika's Jigglypuff",
+      "variety": "",
+      "spec_id": 2183553,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 1,
+        "psa_7": 7,
+        "psa_8": 16,
+        "psa_9": 40,
+        "psa_10": 20,
+        "psa_total": 93
+      },
+      "grade_totals": {
+        "total": 93,
+        "grade_total": 93
+      }
+    },
+    {
+      "pokemon_number": "41",
+      "card_name": "Brock's Zubat",
+      "base_name": "Brock's Zubat",
+      "variety": "",
+      "spec_id": 2183686,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 4,
+        "psa_9": 16,
+        "psa_10": 11,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "42",
+      "card_name": "Brock's Golbat",
+      "base_name": "Brock's Golbat",
+      "variety": "",
+      "spec_id": 2183695,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 14,
+        "psa_10": 7,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Erika's Oddish",
+      "base_name": "Erika's Oddish",
+      "variety": "",
+      "spec_id": 2183687,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 4
+      },
+      "grade_totals": {
+        "total": 4,
+        "grade_total": 4
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Erika's Oddish-LV.10",
+      "base_name": "Erika's Oddish",
+      "variety": "LV.10",
+      "spec_id": 4314918,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 28,
+        "psa_10": 10,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "43",
+      "card_name": "Erika's Oddish-LV.15",
+      "base_name": "Erika's Oddish",
+      "variety": "LV.15",
+      "spec_id": 4314916,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 6,
+        "psa_9": 15,
+        "psa_10": 7,
+        "psa_total": 35
+      },
+      "grade_totals": {
+        "total": 35,
+        "grade_total": 35
+      }
+    },
+    {
+      "pokemon_number": "44",
+      "card_name": "Erika's Gloom",
+      "base_name": "Erika's Gloom",
+      "variety": "",
+      "spec_id": 2183696,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 4,
+        "psa_9": 22,
+        "psa_10": 9,
+        "psa_total": 45
+      },
+      "grade_totals": {
+        "total": 45,
+        "grade_total": 45
+      }
+    },
+    {
+      "pokemon_number": "45",
+      "card_name": "Erika's Vileplume-Holo",
+      "base_name": "Erika's Vileplume-Holo",
+      "variety": "",
+      "spec_id": 544426,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 6,
+        "psa_3": 8,
+        "psa_4": 34,
+        "psa_5": 72,
+        "psa_6": 130,
+        "psa_7": 136,
+        "psa_8": 419,
+        "psa_9": 1085,
+        "psa_10": 414,
+        "psa_total": 2309
+      },
+      "grade_totals": {
+        "total": 2312,
+        "grade_total": 2309
+      }
+    },
+    {
+      "pokemon_number": "46",
+      "card_name": "Erika's Paras",
+      "base_name": "Erika's Paras",
+      "variety": "",
+      "spec_id": 2183688,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 8,
+        "psa_8": 6,
+        "psa_9": 16,
+        "psa_10": 6,
+        "psa_total": 39
+      },
+      "grade_totals": {
+        "total": 39,
+        "grade_total": 39
+      }
+    },
+    {
+      "pokemon_number": "49",
+      "card_name": "Sabrina's Venomoth",
+      "base_name": "Sabrina's Venomoth",
+      "variety": "",
+      "spec_id": 2052633,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "50",
+      "card_name": "Brock's Diglett",
+      "base_name": "Brock's Diglett",
+      "variety": "",
+      "spec_id": 2183680,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 16,
+        "psa_9": 21,
+        "psa_10": 3,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "54",
+      "card_name": "Misty's Psyduck",
+      "base_name": "Misty's Psyduck",
+      "variety": "",
+      "spec_id": 2183529,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 3,
+        "psa_6": 7,
+        "psa_7": 15,
+        "psa_8": 26,
+        "psa_9": 73,
+        "psa_10": 36,
+        "psa_total": 167
+      },
+      "grade_totals": {
+        "total": 167,
+        "grade_total": 167
+      }
+    },
+    {
+      "pokemon_number": "55",
+      "card_name": "Misty's Golduck-Holo",
+      "base_name": "Misty's Golduck-Holo",
+      "variety": "",
+      "spec_id": 2013556,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 13,
+        "psa_3": 14,
+        "psa_4": 38,
+        "psa_5": 79,
+        "psa_6": 117,
+        "psa_7": 163,
+        "psa_8": 509,
+        "psa_9": 808,
+        "psa_10": 210,
+        "psa_total": 1960
+      },
+      "grade_totals": {
+        "total": 1963,
+        "grade_total": 1960
+      }
+    },
+    {
+      "pokemon_number": "56",
+      "card_name": "Brock's Mankey",
+      "base_name": "Brock's Mankey",
+      "variety": "",
+      "spec_id": 2183681,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 11,
+        "psa_9": 23,
+        "psa_10": 16,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "57",
+      "card_name": "Brock's Primeape",
+      "base_name": "Brock's Primeape",
+      "variety": "",
+      "spec_id": 2183545,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 4,
+        "psa_9": 14,
+        "psa_10": 9,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "60",
+      "card_name": "Misty's Poliwag",
+      "base_name": "Misty's Poliwag",
+      "variety": "",
+      "spec_id": 2183531,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 30,
+        "psa_10": 10,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "61",
+      "card_name": "Misty's Poliwhirl",
+      "base_name": "Misty's Poliwhirl",
+      "variety": "",
+      "spec_id": 2183540,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 7,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 17,
+        "psa_10": 7,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "69",
+      "card_name": "Erika's Bellsprout",
+      "base_name": "Erika's Bellsprout",
+      "variety": "",
+      "spec_id": 2183689,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 0,
+        "psa_total": 2
+      },
+      "grade_totals": {
+        "total": 2,
+        "grade_total": 2
+      }
+    },
+    {
+      "pokemon_number": "69",
+      "card_name": "Erika's Bellsprout-LV.13",
+      "base_name": "Erika's Bellsprout",
+      "variety": "LV.13",
+      "spec_id": 3678705,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 2,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 14,
+        "psa_10": 11,
+        "psa_total": 38
+      },
+      "grade_totals": {
+        "total": 38,
+        "grade_total": 38
+      }
+    },
+    {
+      "pokemon_number": "69",
+      "card_name": "Erika's Bellsprout-LV.15",
+      "base_name": "Erika's Bellsprout",
+      "variety": "LV.15",
+      "spec_id": 3678706,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 5,
+        "psa_8": 7,
+        "psa_9": 19,
+        "psa_10": 19,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "70",
+      "card_name": "Erika's Weepinbell",
+      "base_name": "Erika's Weepinbell",
+      "variety": "",
+      "spec_id": 2183698,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 27,
+        "psa_10": 7,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 47,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "71",
+      "card_name": "Erika's Victreebel",
+      "base_name": "Erika's Victreebel",
+      "variety": "",
+      "spec_id": 2183704,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 4,
+        "psa_7": 6,
+        "psa_8": 13,
+        "psa_9": 27,
+        "psa_10": 21,
+        "psa_total": 73
+      },
+      "grade_totals": {
+        "total": 73,
+        "grade_total": 73
+      }
+    },
+    {
+      "pokemon_number": "72",
+      "card_name": "Misty's Tentacool",
+      "base_name": "Misty's Tentacool",
+      "variety": "",
+      "spec_id": 2183541,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 11,
+        "psa_9": 20,
+        "psa_10": 15,
+        "psa_total": 52
+      },
+      "grade_totals": {
+        "total": 52,
+        "grade_total": 52
+      }
+    },
+    {
+      "pokemon_number": "73",
+      "card_name": "Misty's Tentacruel-Holo",
+      "base_name": "Misty's Tentacruel-Holo",
+      "variety": "",
+      "spec_id": 1828690,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 8,
+        "psa_3": 12,
+        "psa_4": 28,
+        "psa_5": 53,
+        "psa_6": 94,
+        "psa_7": 135,
+        "psa_8": 345,
+        "psa_9": 725,
+        "psa_10": 303,
+        "psa_total": 1706
+      },
+      "grade_totals": {
+        "total": 1711,
+        "grade_total": 1706
+      }
+    },
+    {
+      "pokemon_number": "74",
+      "card_name": "Brock's Geodude",
+      "base_name": "Brock's Geodude",
+      "variety": "",
+      "spec_id": 2183683,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 4,
+        "psa_10": 3,
+        "psa_total": 7
+      },
+      "grade_totals": {
+        "total": 7,
+        "grade_total": 7
+      }
+    },
+    {
+      "pokemon_number": "74",
+      "card_name": "Brock's Geodude-LV.13",
+      "base_name": "Brock's Geodude",
+      "variety": "LV.13",
+      "spec_id": 4314876,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 1,
+        "psa_8": 11,
+        "psa_9": 21,
+        "psa_10": 12,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "74",
+      "card_name": "Brock's Geodude-LV.15",
+      "base_name": "Brock's Geodude",
+      "variety": "LV.15",
+      "spec_id": 4314874,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 27,
+        "psa_10": 15,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "75",
+      "card_name": "Brock's Graveler",
+      "base_name": "Brock's Graveler",
+      "variety": "",
+      "spec_id": 2183547,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 18,
+        "psa_10": 10,
+        "psa_total": 42
+      },
+      "grade_totals": {
+        "total": 42,
+        "grade_total": 42
+      }
+    },
+    {
+      "pokemon_number": "76",
+      "card_name": "Brock's Golem",
+      "base_name": "Brock's Golem",
+      "variety": "",
+      "spec_id": 1789727,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 15,
+        "psa_9": 23,
+        "psa_10": 13,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 65,
+        "grade_total": 65
+      }
+    },
+    {
+      "pokemon_number": "81",
+      "card_name": "LT. Surge's Magnemite-LV.10",
+      "base_name": "LT. Surge's Magnemite",
+      "variety": "LV.10",
+      "spec_id": 2183675,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 5,
+        "psa_9": 22,
+        "psa_10": 9,
+        "psa_total": 45
+      },
+      "grade_totals": {
+        "total": 45,
+        "grade_total": 45
+      }
+    },
+    {
+      "pokemon_number": "81",
+      "card_name": "LT. Surge's Magnemite-LV.12",
+      "base_name": "LT. Surge's Magnemite",
+      "variety": "LV.12",
+      "spec_id": 4759739,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 15,
+        "psa_10": 6,
+        "psa_total": 33
+      },
+      "grade_totals": {
+        "total": 33,
+        "grade_total": 33
+      }
+    },
+    {
+      "pokemon_number": "82",
+      "card_name": "LT. Surge's Magneton-Holo",
+      "base_name": "LT. Surge's Magneton-Holo",
+      "variety": "",
+      "spec_id": 1789902,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 10,
+        "psa_3": 7,
+        "psa_4": 23,
+        "psa_5": 60,
+        "psa_6": 103,
+        "psa_7": 144,
+        "psa_8": 378,
+        "psa_9": 744,
+        "psa_10": 294,
+        "psa_total": 1766
+      },
+      "grade_totals": {
+        "total": 1770,
+        "grade_total": 1766
+      }
+    },
+    {
+      "pokemon_number": "84",
+      "card_name": "Blaine's Doduo",
+      "base_name": "Blaine's Doduo",
+      "variety": "",
+      "spec_id": 2286585,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 30,
+        "psa_10": 23,
+        "psa_total": 75
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 75
+      }
+    },
+    {
+      "pokemon_number": "86",
+      "card_name": "Misty's Seel",
+      "base_name": "Misty's Seel",
+      "variety": "",
+      "spec_id": 2183532,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 23,
+        "psa_10": 19,
+        "psa_total": 59
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 59
+      }
+    },
+    {
+      "pokemon_number": "87",
+      "card_name": "Misty's Dewgong",
+      "base_name": "Misty's Dewgong",
+      "variety": "",
+      "spec_id": 2183542,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 5,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 11,
+        "psa_9": 17,
+        "psa_10": 10,
+        "psa_total": 49
+      },
+      "grade_totals": {
+        "total": 49,
+        "grade_total": 49
+      }
+    },
+    {
+      "pokemon_number": "95",
+      "card_name": "Brock's Onix",
+      "base_name": "Brock's Onix",
+      "variety": "",
+      "spec_id": 544427,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 3,
+        "psa_8": 9,
+        "psa_9": 27,
+        "psa_10": 14,
+        "psa_total": 65
+      },
+      "grade_totals": {
+        "total": 66,
+        "grade_total": 65
+      }
+    },
+    {
+      "pokemon_number": "100",
+      "card_name": "LT. Surge's Voltorb",
+      "base_name": "LT. Surge's Voltorb",
+      "variety": "",
+      "spec_id": 2183677,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 3,
+        "psa_6": 0,
+        "psa_7": 2,
+        "psa_8": 4,
+        "psa_9": 20,
+        "psa_10": 11,
+        "psa_total": 41
+      },
+      "grade_totals": {
+        "total": 41,
+        "grade_total": 41
+      }
+    },
+    {
+      "pokemon_number": "102",
+      "card_name": "Erika's Exeggcute",
+      "base_name": "Erika's Exeggcute",
+      "variety": "",
+      "spec_id": 2183699,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 13,
+        "psa_10": 5,
+        "psa_total": 31
+      },
+      "grade_totals": {
+        "total": 32,
+        "grade_total": 31
+      }
+    },
+    {
+      "pokemon_number": "103",
+      "card_name": "Erika's Exeggutor",
+      "base_name": "Erika's Exeggutor",
+      "variety": "",
+      "spec_id": 2183702,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 10,
+        "psa_9": 18,
+        "psa_10": 8,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "107",
+      "card_name": "Rocket's Hitmonchan-Holo",
+      "base_name": "Rocket's Hitmonchan-Holo",
+      "variety": "",
+      "spec_id": 1828776,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 6,
+        "psa_3": 12,
+        "psa_4": 33,
+        "psa_5": 63,
+        "psa_6": 117,
+        "psa_7": 173,
+        "psa_8": 345,
+        "psa_9": 756,
+        "psa_10": 348,
+        "psa_total": 1856
+      },
+      "grade_totals": {
+        "total": 1858,
+        "grade_total": 1856
+      }
+    },
+    {
+      "pokemon_number": "108",
+      "card_name": "Brock's Lickitung",
+      "base_name": "Brock's Lickitung",
+      "variety": "",
+      "spec_id": 2183559,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 6,
+        "psa_9": 21,
+        "psa_10": 12,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "111",
+      "card_name": "Brock's Rhyhorn",
+      "base_name": "Brock's Rhyhorn",
+      "variety": "",
+      "spec_id": 2829093,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 23,
+        "psa_10": 19,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "112",
+      "card_name": "Brock's Rhydon-Holo",
+      "base_name": "Brock's Rhydon-Holo",
+      "variety": "",
+      "spec_id": 1828775,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 3,
+        "psa_3": 15,
+        "psa_4": 38,
+        "psa_5": 76,
+        "psa_6": 108,
+        "psa_7": 159,
+        "psa_8": 415,
+        "psa_9": 787,
+        "psa_10": 264,
+        "psa_total": 1869
+      },
+      "grade_totals": {
+        "total": 1871,
+        "grade_total": 1869
+      }
+    },
+    {
+      "pokemon_number": "114",
+      "card_name": "Erika's Tangela",
+      "base_name": "Erika's Tangela",
+      "variety": "",
+      "spec_id": 2183690,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 13,
+        "psa_10": 11,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "116",
+      "card_name": "Misty's Horsea",
+      "base_name": "Misty's Horsea",
+      "variety": "",
+      "spec_id": 2183534,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 0,
+        "psa_9": 1,
+        "psa_10": 2,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "116",
+      "card_name": "Misty's Horsea-LV.10",
+      "base_name": "Misty's Horsea",
+      "variety": "LV.10",
+      "spec_id": 3678616,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 7,
+        "psa_7": 4,
+        "psa_8": 9,
+        "psa_9": 21,
+        "psa_10": 10,
+        "psa_total": 58
+      },
+      "grade_totals": {
+        "total": 58,
+        "grade_total": 58
+      }
+    },
+    {
+      "pokemon_number": "116",
+      "card_name": "Misty's Horsea-LV.16",
+      "base_name": "Misty's Horsea",
+      "variety": "LV.16",
+      "spec_id": 3678618,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 5,
+        "psa_7": 4,
+        "psa_8": 7,
+        "psa_9": 20,
+        "psa_10": 10,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "117",
+      "card_name": "Misty's Seadra-Holo",
+      "base_name": "Misty's Seadra-Holo",
+      "variety": "",
+      "spec_id": 544429,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 7,
+        "psa_3": 10,
+        "psa_4": 26,
+        "psa_5": 44,
+        "psa_6": 94,
+        "psa_7": 145,
+        "psa_8": 325,
+        "psa_9": 731,
+        "psa_10": 211,
+        "psa_total": 1597
+      },
+      "grade_totals": {
+        "total": 1598,
+        "grade_total": 1597
+      }
+    },
+    {
+      "pokemon_number": "118",
+      "card_name": "Misty's Goldeen",
+      "base_name": "Misty's Goldeen",
+      "variety": "",
+      "spec_id": 2183535,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 6,
+        "psa_9": 29,
+        "psa_10": 8,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    },
+    {
+      "pokemon_number": "120",
+      "card_name": "Misty's Staryu",
+      "base_name": "Misty's Staryu",
+      "variety": "",
+      "spec_id": 2183536,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 14,
+        "psa_9": 31,
+        "psa_10": 10,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "122",
+      "card_name": "Mr. Mime",
+      "base_name": "Mr. Mime",
+      "variety": "",
+      "spec_id": 544430,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 0,
+        "psa_6": 0,
+        "psa_7": 0,
+        "psa_8": 1,
+        "psa_9": 1,
+        "psa_10": 1,
+        "psa_total": 3
+      },
+      "grade_totals": {
+        "total": 3,
+        "grade_total": 3
+      }
+    },
+    {
+      "pokemon_number": "123",
+      "card_name": "Rocket's Scyther-Holo",
+      "base_name": "Rocket's Scyther-Holo",
+      "variety": "",
+      "spec_id": 544431,
+      "psa_grades": {
+        "psa_1": 10,
+        "psa_2": 7,
+        "psa_3": 19,
+        "psa_4": 42,
+        "psa_5": 105,
+        "psa_6": 162,
+        "psa_7": 252,
+        "psa_8": 509,
+        "psa_9": 1051,
+        "psa_10": 352,
+        "psa_total": 2509
+      },
+      "grade_totals": {
+        "total": 2515,
+        "grade_total": 2509
+      }
+    },
+    {
+      "pokemon_number": "125",
+      "card_name": "LT. Surge's Electabuzz-Holo",
+      "base_name": "LT. Surge's Electabuzz-Holo",
+      "variety": "",
+      "spec_id": 544432,
+      "psa_grades": {
+        "psa_1": 6,
+        "psa_2": 10,
+        "psa_3": 5,
+        "psa_4": 25,
+        "psa_5": 58,
+        "psa_6": 100,
+        "psa_7": 140,
+        "psa_8": 343,
+        "psa_9": 680,
+        "psa_10": 373,
+        "psa_total": 1740
+      },
+      "grade_totals": {
+        "total": 1744,
+        "grade_total": 1740
+      }
+    },
+    {
+      "pokemon_number": "129",
+      "card_name": "Misty's Magikarp",
+      "base_name": "Misty's Magikarp",
+      "variety": "",
+      "spec_id": 2183539,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 11,
+        "psa_7": 9,
+        "psa_8": 29,
+        "psa_9": 60,
+        "psa_10": 37,
+        "psa_total": 155
+      },
+      "grade_totals": {
+        "total": 155,
+        "grade_total": 155
+      }
+    },
+    {
+      "pokemon_number": "130",
+      "card_name": "Misty's Gyarados-Holo",
+      "base_name": "Misty's Gyarados-Holo",
+      "variety": "",
+      "spec_id": 544433,
+      "psa_grades": {
+        "psa_1": 16,
+        "psa_2": 12,
+        "psa_3": 41,
+        "psa_4": 74,
+        "psa_5": 135,
+        "psa_6": 214,
+        "psa_7": 314,
+        "psa_8": 717,
+        "psa_9": 1225,
+        "psa_10": 474,
+        "psa_total": 3222
+      },
+      "grade_totals": {
+        "total": 3231,
+        "grade_total": 3222
+      }
+    },
+    {
+      "pokemon_number": "133",
+      "card_name": "LT. Surge's Eevee",
+      "base_name": "LT. Surge's Eevee",
+      "variety": "",
+      "spec_id": 2183561,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 8,
+        "psa_6": 3,
+        "psa_7": 9,
+        "psa_8": 37,
+        "psa_9": 120,
+        "psa_10": 43,
+        "psa_total": 226
+      },
+      "grade_totals": {
+        "total": 227,
+        "grade_total": 226
+      }
+    },
+    {
+      "pokemon_number": "135",
+      "card_name": "LT. Surge's Jolteon",
+      "base_name": "LT. Surge's Jolteon",
+      "variety": "",
+      "spec_id": 2262923,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 5,
+        "psa_5": 12,
+        "psa_6": 16,
+        "psa_7": 12,
+        "psa_8": 52,
+        "psa_9": 113,
+        "psa_10": 44,
+        "psa_total": 256
+      },
+      "grade_totals": {
+        "total": 256,
+        "grade_total": 256
+      }
+    },
+    {
+      "pokemon_number": "146",
+      "card_name": "Rocket's Moltres-Holo",
+      "base_name": "Rocket's Moltres-Holo",
+      "variety": "",
+      "spec_id": 2183525,
+      "psa_grades": {
+        "psa_1": 14,
+        "psa_2": 11,
+        "psa_3": 26,
+        "psa_4": 67,
+        "psa_5": 144,
+        "psa_6": 183,
+        "psa_7": 294,
+        "psa_8": 650,
+        "psa_9": 1227,
+        "psa_10": 397,
+        "psa_total": 3013
+      },
+      "grade_totals": {
+        "total": 3015,
+        "grade_total": 3013
+      }
+    },
+    {
+      "pokemon_number": "147",
+      "card_name": "Erika's Dratini",
+      "base_name": "Erika's Dratini",
+      "variety": "",
+      "spec_id": 544435,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 13,
+        "psa_8": 28,
+        "psa_9": 25,
+        "psa_10": 17,
+        "psa_total": 92
+      },
+      "grade_totals": {
+        "total": 92,
+        "grade_total": 92
+      }
+    },
+    {
+      "pokemon_number": "148",
+      "card_name": "Erika's Dragonair-Holo",
+      "base_name": "Erika's Dragonair-Holo",
+      "variety": "",
+      "spec_id": 1828657,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 10,
+        "psa_3": 14,
+        "psa_4": 41,
+        "psa_5": 101,
+        "psa_6": 153,
+        "psa_7": 237,
+        "psa_8": 569,
+        "psa_9": 1013,
+        "psa_10": 362,
+        "psa_total": 2505
+      },
+      "grade_totals": {
+        "total": 2512,
+        "grade_total": 2505
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Brock",
+      "base_name": "Brock",
+      "variety": "",
+      "spec_id": 2180968,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 14,
+        "psa_9": 18,
+        "psa_10": 13,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Brock's Protection",
+      "base_name": "Brock's Protection",
+      "variety": "",
+      "spec_id": 2180969,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 6,
+        "psa_9": 16,
+        "psa_10": 5,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Brock's Training Method",
+      "base_name": "Brock's Training Method",
+      "variety": "",
+      "spec_id": 2183924,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 3,
+        "psa_8": 5,
+        "psa_9": 15,
+        "psa_10": 8,
+        "psa_total": 37
+      },
+      "grade_totals": {
+        "total": 37,
+        "grade_total": 37
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Celadon City Gym",
+      "base_name": "Celadon City Gym",
+      "variety": "",
+      "spec_id": 2183926,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 6,
+        "psa_7": 1,
+        "psa_8": 3,
+        "psa_9": 16,
+        "psa_10": 1,
+        "psa_total": 30
+      },
+      "grade_totals": {
+        "total": 30,
+        "grade_total": 30
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Cerulean City Gym",
+      "base_name": "Cerulean City Gym",
+      "variety": "",
+      "spec_id": 2180902,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 7,
+        "psa_9": 8,
+        "psa_10": 5,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Chaos Gym",
+      "base_name": "Chaos Gym",
+      "variety": "",
+      "spec_id": 2262953,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 4,
+        "psa_8": 10,
+        "psa_9": 13,
+        "psa_10": 9,
+        "psa_total": 40
+      },
+      "grade_totals": {
+        "total": 40,
+        "grade_total": 40
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Charity",
+      "base_name": "Charity",
+      "variety": "",
+      "spec_id": 2262924,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 4,
+        "psa_6": 5,
+        "psa_7": 7,
+        "psa_8": 24,
+        "psa_9": 38,
+        "psa_10": 16,
+        "psa_total": 96
+      },
+      "grade_totals": {
+        "total": 96,
+        "grade_total": 96
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Energy Flow-Trainer",
+      "base_name": "Energy Flow",
+      "variety": "Trainer",
+      "spec_id": 2183910,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 8,
+        "psa_9": 11,
+        "psa_10": 4,
+        "psa_total": 27
+      },
+      "grade_totals": {
+        "total": 27,
+        "grade_total": 27
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Erika-Trainer",
+      "base_name": "Erika",
+      "variety": "Trainer",
+      "spec_id": 2180958,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 4,
+        "psa_5": 8,
+        "psa_6": 10,
+        "psa_7": 7,
+        "psa_8": 32,
+        "psa_9": 44,
+        "psa_10": 22,
+        "psa_total": 129
+      },
+      "grade_totals": {
+        "total": 129,
+        "grade_total": 129
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Erika's Kindness-Trainer",
+      "base_name": "Erika's Kindness",
+      "variety": "Trainer",
+      "spec_id": 2180961,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 8,
+        "psa_7": 6,
+        "psa_8": 25,
+        "psa_9": 57,
+        "psa_10": 29,
+        "psa_total": 131
+      },
+      "grade_totals": {
+        "total": 131,
+        "grade_total": 131
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Erika's Maids-Trainer",
+      "base_name": "Erika's Maids",
+      "variety": "Trainer",
+      "spec_id": 2183916,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 15,
+        "psa_9": 42,
+        "psa_10": 13,
+        "psa_total": 85
+      },
+      "grade_totals": {
+        "total": 85,
+        "grade_total": 85
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Erika's Perfume-Trainer",
+      "base_name": "Erika's Perfume",
+      "variety": "Trainer",
+      "spec_id": 2183917,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 2,
+        "psa_7": 4,
+        "psa_8": 8,
+        "psa_9": 25,
+        "psa_10": 15,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Good Manners-Trainer",
+      "base_name": "Good Manners",
+      "variety": "Trainer",
+      "spec_id": 2180904,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 6,
+        "psa_7": 4,
+        "psa_8": 12,
+        "psa_9": 37,
+        "psa_10": 19,
+        "psa_total": 86
+      },
+      "grade_totals": {
+        "total": 87,
+        "grade_total": 86
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "LT. Surge-Trainer",
+      "base_name": "LT. Surge",
+      "variety": "Trainer",
+      "spec_id": 2180978,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 8,
+        "psa_6": 7,
+        "psa_7": 6,
+        "psa_8": 18,
+        "psa_9": 21,
+        "psa_10": 17,
+        "psa_total": 80
+      },
+      "grade_totals": {
+        "total": 81,
+        "grade_total": 80
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "LT. Surge's Secret Plan-Trainer",
+      "base_name": "LT. Surge's Secret Plan",
+      "variety": "Trainer",
+      "spec_id": 2180983,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 5,
+        "psa_8": 5,
+        "psa_9": 20,
+        "psa_10": 5,
+        "psa_total": 44
+      },
+      "grade_totals": {
+        "total": 44,
+        "grade_total": 44
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "LT. Surge's Treaty-Trainer",
+      "base_name": "LT. Surge's Treaty",
+      "variety": "Trainer",
+      "spec_id": 2180903,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 0,
+        "psa_8": 4,
+        "psa_9": 17,
+        "psa_10": 8,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Minion of Team Rocket-Trainer",
+      "base_name": "Minion of Team Rocket",
+      "variety": "Trainer",
+      "spec_id": 2495180,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 2,
+        "psa_6": 2,
+        "psa_7": 6,
+        "psa_8": 10,
+        "psa_9": 25,
+        "psa_10": 11,
+        "psa_total": 60
+      },
+      "grade_totals": {
+        "total": 60,
+        "grade_total": 60
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Misty-Trainer",
+      "base_name": "Misty",
+      "variety": "Trainer",
+      "spec_id": 2180963,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 3,
+        "psa_5": 9,
+        "psa_6": 17,
+        "psa_7": 13,
+        "psa_8": 22,
+        "psa_9": 67,
+        "psa_10": 24,
+        "psa_total": 158
+      },
+      "grade_totals": {
+        "total": 158,
+        "grade_total": 158
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Misty's Duel-Trainer",
+      "base_name": "Misty's Duel",
+      "variety": "Trainer",
+      "spec_id": 2183911,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 3,
+        "psa_4": 1,
+        "psa_5": 7,
+        "psa_6": 8,
+        "psa_7": 20,
+        "psa_8": 26,
+        "psa_9": 69,
+        "psa_10": 56,
+        "psa_total": 192
+      },
+      "grade_totals": {
+        "total": 192,
+        "grade_total": 192
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Misty's Tears-Trainer",
+      "base_name": "Misty's Tears",
+      "variety": "Trainer",
+      "spec_id": 848235,
+      "psa_grades": {
+        "psa_1": 58,
+        "psa_2": 29,
+        "psa_3": 86,
+        "psa_4": 156,
+        "psa_5": 307,
+        "psa_6": 428,
+        "psa_7": 524,
+        "psa_8": 1246,
+        "psa_9": 2219,
+        "psa_10": 889,
+        "psa_total": 5943
+      },
+      "grade_totals": {
+        "total": 5961,
+        "grade_total": 5943
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Misty's Wish-Trainer",
+      "base_name": "Misty's Wish",
+      "variety": "Trainer",
+      "spec_id": 2180965,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 3,
+        "psa_4": 0,
+        "psa_5": 12,
+        "psa_6": 15,
+        "psa_7": 20,
+        "psa_8": 56,
+        "psa_9": 82,
+        "psa_10": 43,
+        "psa_total": 233
+      },
+      "grade_totals": {
+        "total": 233,
+        "grade_total": 233
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Misty's Wrath-Trainer",
+      "base_name": "Misty's Wrath",
+      "variety": "Trainer",
+      "spec_id": 2183920,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 9,
+        "psa_7": 13,
+        "psa_8": 32,
+        "psa_9": 94,
+        "psa_10": 45,
+        "psa_total": 204
+      },
+      "grade_totals": {
+        "total": 205,
+        "grade_total": 204
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Narrow Gym-Trainer",
+      "base_name": "Narrow Gym",
+      "variety": "Trainer",
+      "spec_id": 2183912,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 0,
+        "psa_5": 2,
+        "psa_6": 1,
+        "psa_7": 0,
+        "psa_8": 5,
+        "psa_9": 11,
+        "psa_10": 2,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "No Removal Gym-Trainer",
+      "base_name": "No Removal Gym",
+      "variety": "Trainer",
+      "spec_id": 2180988,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 3,
+        "psa_6": 1,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 10,
+        "psa_10": 6,
+        "psa_total": 29
+      },
+      "grade_totals": {
+        "total": 29,
+        "grade_total": 29
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Pewter City Gym-Trainer",
+      "base_name": "Pewter City Gym",
+      "variety": "Trainer",
+      "spec_id": 2180901,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 4,
+        "psa_7": 4,
+        "psa_8": 5,
+        "psa_9": 8,
+        "psa_10": 2,
+        "psa_total": 26
+      },
+      "grade_totals": {
+        "total": 26,
+        "grade_total": 26
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Recall-Trainer",
+      "base_name": "Recall",
+      "variety": "Trainer",
+      "spec_id": 2183913,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 5,
+        "psa_6": 4,
+        "psa_7": 7,
+        "psa_8": 12,
+        "psa_9": 24,
+        "psa_10": 8,
+        "psa_total": 64
+      },
+      "grade_totals": {
+        "total": 64,
+        "grade_total": 64
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Resistance Gym-Trainer",
+      "base_name": "Resistance Gym",
+      "variety": "Trainer",
+      "spec_id": 2180972,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 6,
+        "psa_9": 7,
+        "psa_10": 5,
+        "psa_total": 28
+      },
+      "grade_totals": {
+        "total": 28,
+        "grade_total": 28
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Rocket's Training Gym-Trainer",
+      "base_name": "Rocket's Training Gym",
+      "variety": "Trainer",
+      "spec_id": 2183467,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 6,
+        "psa_7": 2,
+        "psa_8": 11,
+        "psa_9": 26,
+        "psa_10": 7,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Secret Mission-Trainer",
+      "base_name": "Secret Mission",
+      "variety": "Trainer",
+      "spec_id": 2180966,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 3,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 9,
+        "psa_9": 12,
+        "psa_10": 6,
+        "psa_total": 36
+      },
+      "grade_totals": {
+        "total": 36,
+        "grade_total": 36
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "The Rocket's Trap-Holo",
+      "base_name": "The Rocket's Trap-Holo",
+      "variety": "",
+      "spec_id": 1828833,
+      "psa_grades": {
+        "psa_1": 7,
+        "psa_2": 5,
+        "psa_3": 7,
+        "psa_4": 20,
+        "psa_5": 55,
+        "psa_6": 80,
+        "psa_7": 122,
+        "psa_8": 284,
+        "psa_9": 526,
+        "psa_10": 222,
+        "psa_total": 1328
+      },
+      "grade_totals": {
+        "total": 1329,
+        "grade_total": 1328
+      }
+    },
+    {
+      "pokemon_number": "",
+      "card_name": "Vermilion City Gym-Trainer",
+      "base_name": "Vermilion City Gym",
+      "variety": "Trainer",
+      "spec_id": 2183922,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 0,
+        "psa_7": 1,
+        "psa_8": 5,
+        "psa_9": 8,
+        "psa_10": 5,
+        "psa_total": 21
+      },
+      "grade_totals": {
+        "total": 21,
+        "grade_total": 21
+      }
+    }
+  ]
+}

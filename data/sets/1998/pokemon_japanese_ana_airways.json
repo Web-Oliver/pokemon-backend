@@ -1,0 +1,80 @@
+{
+  "year": "1998",
+  "set_name": "Pokemon Japanese Ana Airways",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/1998/pokemon-japanese-ana-airways/54859",
+  "total_cards": 3,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 9,
+        "psa_2": 11,
+        "psa_3": 29,
+        "psa_4": 50,
+        "psa_5": 114,
+        "psa_6": 159,
+        "psa_7": 108,
+        "psa_8": 200,
+        "psa_9": 587,
+        "psa_10": 265,
+        "psa_total": 1532
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 1532
+      }
+    },
+    {
+      "pokemon_number": "25",
+      "card_name": "Flying Pikachu-Ana-Plane on Right",
+      "base_name": "Flying Pikachu",
+      "variety": "Ana-Plane on Right",
+      "spec_id": 525465,
+      "psa_grades": {
+        "psa_1": 5,
+        "psa_2": 6,
+        "psa_3": 18,
+        "psa_4": 32,
+        "psa_5": 63,
+        "psa_6": 99,
+        "psa_7": 58,
+        "psa_8": 104,
+        "psa_9": 313,
+        "psa_10": 163,
+        "psa_total": 861
+      },
+      "grade_totals": {
+        "total": 863,
+        "grade_total": 861
+      }
+    },
+    {
+      "pokemon_number": "149",
+      "card_name": "Flying Dragonite-All Nippon Airways",
+      "base_name": "Flying Dragonite",
+      "variety": "All Nippon Airways",
+      "spec_id": 525466,
+      "psa_grades": {
+        "psa_1": 4,
+        "psa_2": 5,
+        "psa_3": 11,
+        "psa_4": 18,
+        "psa_5": 51,
+        "psa_6": 60,
+        "psa_7": 50,
+        "psa_8": 96,
+        "psa_9": 274,
+        "psa_10": 102,
+        "psa_total": 671
+      },
+      "grade_totals": {
+        "total": 672,
+        "grade_total": 671
+      }
+    }
+  ]
+}

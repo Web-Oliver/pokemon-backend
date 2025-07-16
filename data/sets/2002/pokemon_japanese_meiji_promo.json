@@ -1,0 +1,416 @@
+{
+  "year": "2002",
+  "set_name": "Pokemon Japanese Meiji Promo",
+  "set_url": "https://www.psacard.com/pop/tcg-cards/2002/pokemon-japanese-meiji-promo/163660",
+  "total_cards": 17,
+  "cards": [
+    {
+      "pokemon_number": "N/A",
+      "card_name": "TOTAL POPULATION",
+      "base_name": "TOTAL POPULATION",
+      "variety": "",
+      "spec_id": 0,
+      "psa_grades": {
+        "psa_1": 20,
+        "psa_2": 21,
+        "psa_3": 21,
+        "psa_4": 35,
+        "psa_5": 59,
+        "psa_6": 52,
+        "psa_7": 107,
+        "psa_8": 294,
+        "psa_9": 266,
+        "psa_10": 78,
+        "psa_total": 954
+      },
+      "grade_totals": {
+        "total": 0,
+        "grade_total": 954
+      }
+    },
+    {
+      "pokemon_number": "01",
+      "card_name": "Houndoom VS Pikachu",
+      "base_name": "Houndoom VS Pikachu",
+      "variety": "",
+      "spec_id": 2748882,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 4,
+        "psa_6": 8,
+        "psa_7": 9,
+        "psa_8": 28,
+        "psa_9": 4,
+        "psa_10": 0,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "02",
+      "card_name": "Tyranitar VS Steelix",
+      "base_name": "Tyranitar VS Steelix",
+      "variety": "",
+      "spec_id": 2776638,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 1,
+        "psa_3": 2,
+        "psa_4": 4,
+        "psa_5": 4,
+        "psa_6": 2,
+        "psa_7": 5,
+        "psa_8": 15,
+        "psa_9": 26,
+        "psa_10": 4,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "03",
+      "card_name": "Heracross VS Ursaring",
+      "base_name": "Heracross VS Ursaring",
+      "variety": "",
+      "spec_id": 2776636,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 4,
+        "psa_4": 6,
+        "psa_5": 5,
+        "psa_6": 2,
+        "psa_7": 7,
+        "psa_8": 17,
+        "psa_9": 15,
+        "psa_10": 5,
+        "psa_total": 63
+      },
+      "grade_totals": {
+        "total": 63,
+        "grade_total": 63
+      }
+    },
+    {
+      "pokemon_number": "04",
+      "card_name": "Scizor VS Entei",
+      "base_name": "Scizor VS Entei",
+      "variety": "",
+      "spec_id": 2748883,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 3,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 4,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 21,
+        "psa_9": 7,
+        "psa_10": 3,
+        "psa_total": 54
+      },
+      "grade_totals": {
+        "total": 54,
+        "grade_total": 54
+      }
+    },
+    {
+      "pokemon_number": "05",
+      "card_name": "Espeon VS Mewtwo",
+      "base_name": "Espeon VS Mewtwo",
+      "variety": "",
+      "spec_id": 2748884,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 0,
+        "psa_3": 2,
+        "psa_4": 3,
+        "psa_5": 8,
+        "psa_6": 1,
+        "psa_7": 8,
+        "psa_8": 13,
+        "psa_9": 21,
+        "psa_10": 4,
+        "psa_total": 61
+      },
+      "grade_totals": {
+        "total": 61,
+        "grade_total": 61
+      }
+    },
+    {
+      "pokemon_number": "06",
+      "card_name": "Blastoise VS Steelix",
+      "base_name": "Blastoise VS Steelix",
+      "variety": "",
+      "spec_id": 2776628,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 0,
+        "psa_7": 6,
+        "psa_8": 9,
+        "psa_9": 19,
+        "psa_10": 5,
+        "psa_total": 47
+      },
+      "grade_totals": {
+        "total": 48,
+        "grade_total": 47
+      }
+    },
+    {
+      "pokemon_number": "07",
+      "card_name": "Feraligatr VS Blastoise",
+      "base_name": "Feraligatr VS Blastoise",
+      "variety": "",
+      "spec_id": 2776640,
+      "psa_grades": {
+        "psa_1": 1,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 2,
+        "psa_6": 3,
+        "psa_7": 2,
+        "psa_8": 15,
+        "psa_9": 22,
+        "psa_10": 6,
+        "psa_total": 55
+      },
+      "grade_totals": {
+        "total": 55,
+        "grade_total": 55
+      }
+    },
+    {
+      "pokemon_number": "08",
+      "card_name": "Typhlosion VS Feraligatr",
+      "base_name": "Typhlosion VS Feraligatr",
+      "variety": "",
+      "spec_id": 2748886,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 1,
+        "psa_8": 18,
+        "psa_9": 26,
+        "psa_10": 5,
+        "psa_total": 59
+      },
+      "grade_totals": {
+        "total": 59,
+        "grade_total": 59
+      }
+    },
+    {
+      "pokemon_number": "09",
+      "card_name": "Skarmory VS Typhlosion",
+      "base_name": "Skarmory VS Typhlosion",
+      "variety": "",
+      "spec_id": 2776642,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 0,
+        "psa_4": 3,
+        "psa_5": 2,
+        "psa_6": 6,
+        "psa_7": 5,
+        "psa_8": 31,
+        "psa_9": 8,
+        "psa_10": 0,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 58,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "10",
+      "card_name": "Quilava VS Croconaw",
+      "base_name": "Quilava VS Croconaw",
+      "variety": "",
+      "spec_id": 2802707,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 1,
+        "psa_7": 5,
+        "psa_8": 19,
+        "psa_9": 14,
+        "psa_10": 2,
+        "psa_total": 51
+      },
+      "grade_totals": {
+        "total": 51,
+        "grade_total": 51
+      }
+    },
+    {
+      "pokemon_number": "11",
+      "card_name": "Hitmonlee VS Skarmory",
+      "base_name": "Hitmonlee VS Skarmory",
+      "variety": "",
+      "spec_id": 2810073,
+      "psa_grades": {
+        "psa_1": 0,
+        "psa_2": 2,
+        "psa_3": 3,
+        "psa_4": 2,
+        "psa_5": 6,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 19,
+        "psa_9": 20,
+        "psa_10": 7,
+        "psa_total": 68
+      },
+      "grade_totals": {
+        "total": 68,
+        "grade_total": 68
+      }
+    },
+    {
+      "pokemon_number": "12",
+      "card_name": "Feraligatr VS Tyranitar",
+      "base_name": "Feraligatr VS Tyranitar",
+      "variety": "",
+      "spec_id": 2776626,
+      "psa_grades": {
+        "psa_1": 3,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 0,
+        "psa_5": 6,
+        "psa_6": 5,
+        "psa_7": 16,
+        "psa_8": 29,
+        "psa_9": 2,
+        "psa_10": 0,
+        "psa_total": 62
+      },
+      "grade_totals": {
+        "total": 62,
+        "grade_total": 62
+      }
+    },
+    {
+      "pokemon_number": "13",
+      "card_name": "Charizard VS Lugia",
+      "base_name": "Charizard VS Lugia",
+      "variety": "",
+      "spec_id": 2748891,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 2,
+        "psa_3": 1,
+        "psa_4": 1,
+        "psa_5": 4,
+        "psa_6": 6,
+        "psa_7": 8,
+        "psa_8": 16,
+        "psa_9": 19,
+        "psa_10": 13,
+        "psa_total": 72
+      },
+      "grade_totals": {
+        "total": 72,
+        "grade_total": 72
+      }
+    },
+    {
+      "pokemon_number": "14",
+      "card_name": "Houndoom VS Pikachu",
+      "base_name": "Houndoom VS Pikachu",
+      "variety": "",
+      "spec_id": 2748887,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 1,
+        "psa_3": 0,
+        "psa_4": 1,
+        "psa_5": 0,
+        "psa_6": 3,
+        "psa_7": 6,
+        "psa_8": 13,
+        "psa_9": 22,
+        "psa_10": 9,
+        "psa_total": 57
+      },
+      "grade_totals": {
+        "total": 57,
+        "grade_total": 57
+      }
+    },
+    {
+      "pokemon_number": "15",
+      "card_name": "Charizard VS Lugia",
+      "base_name": "Charizard VS Lugia",
+      "variety": "",
+      "spec_id": 2748892,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 0,
+        "psa_4": 2,
+        "psa_5": 4,
+        "psa_6": 3,
+        "psa_7": 9,
+        "psa_8": 13,
+        "psa_9": 27,
+        "psa_10": 13,
+        "psa_total": 74
+      },
+      "grade_totals": {
+        "total": 75,
+        "grade_total": 74
+      }
+    },
+    {
+      "pokemon_number": "16",
+      "card_name": "Scizor VS Entei",
+      "base_name": "Scizor VS Entei",
+      "variety": "",
+      "spec_id": 2701451,
+      "psa_grades": {
+        "psa_1": 2,
+        "psa_2": 0,
+        "psa_3": 1,
+        "psa_4": 2,
+        "psa_5": 1,
+        "psa_6": 3,
+        "psa_7": 7,
+        "psa_8": 18,
+        "psa_9": 14,
+        "psa_10": 2,
+        "psa_total": 50
+      },
+      "grade_totals": {
+        "total": 50,
+        "grade_total": 50
+      }
+    }
+  ]
+}
