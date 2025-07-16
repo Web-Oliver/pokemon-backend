@@ -163,3 +163,6 @@ test-results/
 
 # Zone identifiers (Windows)
 *.Zone.Identifier
+
+# Data files
+data/
