@@ -1,9 +1,13 @@
 const PsaGradedCardRepository = require('../repositories/PsaGradedCardRepository');
 const RawCardRepository = require('../repositories/RawCardRepository');
 const SealedProductRepository = require('../repositories/SealedProductRepository');
+const CardRepository = require('../repositories/CardRepository');
+const SetRepository = require('../repositories/SetRepository');
+const CardMarketReferenceProductRepository = require('../repositories/CardMarketReferenceProductRepository');
 const CollectionService = require('../services/domain/CollectionService');
 const ImageManager = require('../services/shared/imageManager');
 const SaleService = require('../services/shared/saleService');
+const SearchFactory = require('../services/search/SearchFactory');
 
 /**
  * Dependency Injection Container
@@ -40,6 +44,9 @@ class Container {
     this.registerSingleton('psaGradedCardRepository', () => new PsaGradedCardRepository());
     this.registerSingleton('rawCardRepository', () => new RawCardRepository());
     this.registerSingleton('sealedProductRepository', () => new SealedProductRepository());
+    this.registerSingleton('cardRepository', () => new CardRepository());
+    this.registerSingleton('setRepository', () => new SetRepository());
+    this.registerSingleton('cardMarketReferenceProductRepository', () => new CardMarketReferenceProductRepository());
 
     // Register domain services
     this.registerTransient('psaGradedCardService', () => {
@@ -69,6 +76,16 @@ class Container {
         saleService: this.resolve('saleService'),
         enableImageManagement: true,
         enableSaleTracking: true
+      });
+    });
+
+    // Register search services
+    this.registerSingleton('searchFactory', () => {
+      return new SearchFactory(this, {
+        enableCaching: true,
+        defaultMaxResults: 50,
+        enableFuzzySearch: true,
+        enableScoring: true
       });
     });
 

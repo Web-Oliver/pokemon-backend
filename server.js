@@ -29,7 +29,8 @@ app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
 // Routes
 app.use('/api/status', require('./routes/status'));
-app.use('/api/search', require('./routes/hierarchicalSearch'));
+app.use('/api/search', require('./routes/unifiedSearch')); // New unified search architecture
+app.use('/api/search-legacy', require('./routes/hierarchicalSearch')); // Legacy hierarchical search (for backward compatibility)
 app.use('/api/sets', require('./routes/sets'));
 app.use('/api/cards', require('./routes/cards'));
 app.use('/api/cardmarket-ref-products', require('./routes/cardMarketRefProducts'));
