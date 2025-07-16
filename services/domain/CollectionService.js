@@ -92,10 +92,12 @@ class CollectionService {
         sold: false,
         dateAdded: new Date(),
         priceHistory: data.myPrice
-          ? [{
-            price: data.myPrice,
-            dateUpdated: new Date(),
-          }]
+          ? [
+              {
+                price: data.myPrice,
+                dateUpdated: new Date(),
+              },
+            ]
           : [],
       };
 
@@ -154,7 +156,7 @@ class CollectionService {
       const item = await this.repository.findById(id);
 
       // Delete associated images if enabled
-      if (this.options.enableImageManagement && item.images && item.images.length > 0) {
+      if (this.options.enableImageManagement && item && item.images && item.images.length > 0) {
         try {
           await this.options.imageManager.deleteImageFiles(item.images);
         } catch (imageError) {
@@ -388,6 +390,19 @@ class CollectionService {
       }));
 
       return await this.repository.bulkWrite(operations);
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  /**
+   * Gets total value of items matching filters
+   * @param {Object} filters - Query filters
+   * @returns {Promise<number>} - Total value
+   */
+  async getTotalValue(filters = {}) {
+    try {
+      return await this.repository.getTotalValue(filters);
     } catch (error) {
       throw error;
     }

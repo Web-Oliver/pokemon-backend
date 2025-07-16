@@ -9,7 +9,6 @@ const { ValidationError } = require('../../middleware/errorHandler');
  * Following DRY principles by centralizing common search logic.
  */
 class SearchUtilities {
-
   /**
    * Normalizes search query for consistent processing
    * @param {string} query - Raw search query
@@ -168,7 +167,12 @@ class SearchUtilities {
       // Starts with
       conditions.push({
         $cond: {
-          if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `^${escapedQuery}` } },
+          if: {
+            $regexMatch: {
+              input: { $toLower: `$${field}` },
+              regex: `^${escapedQuery}`,
+            },
+          },
           then: weight * 0.8,
           else: 0,
         },
@@ -177,7 +181,12 @@ class SearchUtilities {
       // Contains
       conditions.push({
         $cond: {
-          if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: escapedQuery } },
+          if: {
+            $regexMatch: {
+              input: { $toLower: `$${field}` },
+              regex: escapedQuery,
+            },
+          },
           then: weight * 0.6,
           else: 0,
         },
@@ -186,7 +195,12 @@ class SearchUtilities {
       // Word boundary
       conditions.push({
         $cond: {
-          if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${escapedQuery}\\b` } },
+          if: {
+            $regexMatch: {
+              input: { $toLower: `$${field}` },
+              regex: `\\b${escapedQuery}\\b`,
+            },
+          },
           then: weight * 0.4,
           else: 0,
         },
@@ -200,7 +214,12 @@ class SearchUtilities {
       if (primaryField) {
         conditions.push({
           $cond: {
-            if: { $regexMatch: { input: { $toLower: `$${primaryField}` }, regex: escapedQuery } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: `$${primaryField}` },
+                regex: escapedQuery,
+              },
+            },
             then: { $divide: [20, { $strLenCP: `$${primaryField}` }] },
             else: 0,
           },
@@ -236,7 +255,12 @@ class SearchUtilities {
         // Word boundary match
         conditions.push({
           $cond: {
-            if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${escapedWord}\\b` } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: `$${field}` },
+                regex: `\\b${escapedWord}\\b`,
+              },
+            },
             then: (baseWeight * wordWeight) / queryWords.length,
             else: 0,
           },
@@ -344,12 +368,7 @@ class SearchUtilities {
    * @returns {Array} - Formatted suggestions
    */
   static formatSearchSuggestions(results, config = {}) {
-    const {
-      textField = 'name',
-      secondaryTextField = null,
-      metadataFields = [],
-      maxSuggestions = 10,
-    } = config;
+    const { textField = 'name', secondaryTextField = null, metadataFields = [], maxSuggestions = 10 } = config;
 
     return results.slice(0, maxSuggestions).map((result) => {
       const suggestion = {
@@ -404,7 +423,7 @@ class SearchUtilities {
       if (!inThrottle) {
         func.apply(this, args);
         inThrottle = true;
-        setTimeout(() => inThrottle = false, limit);
+        setTimeout(() => (inThrottle = false), limit);
       }
     };
   }
@@ -470,20 +489,13 @@ class SearchUtilities {
       return text;
     }
 
-    const {
-      highlightStart = '<mark>',
-      highlightEnd = '</mark>',
-      caseSensitive = false,
-    } = options;
+    const { highlightStart = '<mark>', highlightEnd = '</mark>', caseSensitive = false } = options;
 
     const normalizedQuery = this.normalizeQuery(query);
     const escapedQuery = this.escapeRegex(normalizedQuery);
     const flags = caseSensitive ? 'g' : 'gi';
 
-    return text.replace(
-      new RegExp(`(${escapedQuery})`, flags),
-      `${highlightStart}$1${highlightEnd}`,
-    );
+    return text.replace(new RegExp(`(${escapedQuery})`, flags), `${highlightStart}$1${highlightEnd}`);
   }
 
   /**
@@ -503,8 +515,7 @@ class SearchUtilities {
     } = options;
 
     const normalizedQuery = this.normalizeQuery(query);
-    const words = normalizedQuery.split(' ').filter((word) =>
-      word.length >= minLength && !stopWords.includes(word));
+    const words = normalizedQuery.split(' ').filter((word) => word.length >= minLength && !stopWords.includes(word));
 
     return [...new Set(words)]; // Remove duplicates
   }

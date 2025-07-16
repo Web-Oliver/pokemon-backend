@@ -13,53 +13,44 @@ function formatItemForFacebook(data, category) {
   let price = '';
 
   switch (category) {
-  case 'SealedProduct':
-    formattedName = formatSealedProductName(data.name, data.setName);
-    const isJapaneseSealed = isJapaneseSet(data.setName);
+    case 'SealedProduct':
+      formattedName = formatSealedProductName(data.name, data.setName);
+      const isJapaneseSealed = isJapaneseSet(data.setName);
 
-    price = data.myPrice ? `${Math.round(parseFloat(data.myPrice.toString()))} Kr.` : 'N/A';
-    return `* ${isJapaneseSealed ? 'Japanese ' : ''}${formattedName} Sealed - ${price}`;
+      price = data.myPrice ? `${Math.round(parseFloat(data.myPrice.toString()))} Kr.` : 'N/A';
+      return `* ${isJapaneseSealed ? 'Japanese ' : ''}${formattedName} Sealed - ${price}`;
 
-  case 'PsaGradedCard':
-    if (data.cardId && data.cardId.setId) {
-      const cardName = formatCardName(
-        data.cardId.cardName,
-        data.cardId.pokemonNumber,
-        data.cardId.variety,
-      );
-      const setName = getShortenedSetName(data.cardId.setId.setName);
-      const isJapanese = isJapaneseSet(data.cardId.setId.setName);
-      const year = data.cardId.setId.releaseYear || new Date().getFullYear();
+    case 'PsaGradedCard':
+      if (data.cardId && data.cardId.setId) {
+        const cardName = formatCardName(data.cardId.cardName, data.cardId.pokemonNumber, data.cardId.variety);
+        const setName = getShortenedSetName(data.cardId.setId.setName);
+        const isJapanese = isJapaneseSet(data.cardId.setId.setName);
+        const year = data.cardId.setId.releaseYear || new Date().getFullYear();
 
-      formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} `
-          + `${cardName} PSA ${data.grade}`;
-    } else {
-      formattedName = `PSA Graded Card ${data.grade}`;
-    }
-    price = data.myPrice ? `${Math.round(parseFloat(data.myPrice.toString()))} Kr.` : 'N/A';
-    return `* ${formattedName} - ${price}`;
+        formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} ` + `${cardName} PSA ${data.grade}`;
+      } else {
+        formattedName = `PSA Graded Card ${data.grade}`;
+      }
+      price = data.myPrice ? `${Math.round(parseFloat(data.myPrice.toString()))} Kr.` : 'N/A';
+      return `* ${formattedName} - ${price}`;
 
-  case 'RawCard':
-    if (data.cardId && data.cardId.setId) {
-      const cardName = formatCardName(
-        data.cardId.cardName,
-        data.cardId.pokemonNumber,
-        data.cardId.variety,
-      );
-      const setName = getShortenedSetName(data.cardId.setId.setName);
-      const isJapanese = isJapaneseSet(data.cardId.setId.setName);
-      const year = data.cardId.setId.releaseYear || new Date().getFullYear();
+    case 'RawCard':
+      if (data.cardId && data.cardId.setId) {
+        const cardName = formatCardName(data.cardId.cardName, data.cardId.pokemonNumber, data.cardId.variety);
+        const setName = getShortenedSetName(data.cardId.setId.setName);
+        const isJapanese = isJapaneseSet(data.cardId.setId.setName);
+        const year = data.cardId.setId.releaseYear || new Date().getFullYear();
 
-      formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} ${cardName}`;
-    } else {
-      formattedName = 'Raw Card';
-    }
-    price = data.myPrice ? `${Math.round(parseFloat(data.myPrice.toString()))} Kr.` : 'N/A';
-    return `* ${formattedName} - ${price}`;
+        formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} ${cardName}`;
+      } else {
+        formattedName = 'Raw Card';
+      }
+      price = data.myPrice ? `${Math.round(parseFloat(data.myPrice.toString()))} Kr.` : 'N/A';
+      return `* ${formattedName} - ${price}`;
 
-  default:
-    console.error(`Unknown category: ${category}`);
-    return '';
+    default:
+      console.error(`Unknown category: ${category}`);
+      return '';
   }
 }
 

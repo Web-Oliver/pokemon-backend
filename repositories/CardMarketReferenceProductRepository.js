@@ -30,9 +30,12 @@ class CardMarketReferenceProductRepository extends BaseRepository {
    */
   async findByCategory(category, options = {}) {
     try {
-      return await this.findAll({
-        category: new RegExp(category, 'i'),
-      }, options);
+      return await this.findAll(
+        {
+          category: new RegExp(category, 'i'),
+        },
+        options,
+      );
     } catch (error) {
       throw error;
     }
@@ -46,9 +49,12 @@ class CardMarketReferenceProductRepository extends BaseRepository {
    */
   async findBySetName(setName, options = {}) {
     try {
-      return await this.findAll({
-        setName: new RegExp(setName, 'i'),
-      }, options);
+      return await this.findAll(
+        {
+          setName: new RegExp(setName, 'i'),
+        },
+        options,
+      );
     } catch (error) {
       throw error;
     }
@@ -61,12 +67,15 @@ class CardMarketReferenceProductRepository extends BaseRepository {
    */
   async findAvailable(options = {}) {
     try {
-      return await this.findAll({
-        available: { $gt: 0 },
-      }, {
-        ...options,
-        sort: { available: -1, price: 1 },
-      });
+      return await this.findAll(
+        {
+          available: { $gt: 0 },
+        },
+        {
+          ...options,
+          sort: { available: -1, price: 1 },
+        },
+      );
     } catch (error) {
       throw error;
     }
@@ -204,23 +213,104 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             score: {
               $add: [
                 // Exact name match
-                { $cond: { if: { $eq: [{ $toLower: '$name' }, query.toLowerCase()] }, then: 100, else: 0 } },
+                {
+                  $cond: {
+                    if: { $eq: [{ $toLower: '$name' }, query.toLowerCase()] },
+                    then: 100,
+                    else: 0,
+                  },
+                },
                 // Exact set name match
-                { $cond: { if: { $eq: [{ $toLower: '$setName' }, query.toLowerCase()] }, then: 80, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $eq: [{ $toLower: '$setName' }, query.toLowerCase()],
+                    },
+                    then: 80,
+                    else: 0,
+                  },
+                },
                 // Name starts with
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$name' }, regex: `^${query.toLowerCase()}` } }, then: 70, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$name' },
+                        regex: `^${query.toLowerCase()}`,
+                      },
+                    },
+                    then: 70,
+                    else: 0,
+                  },
+                },
                 // Set name starts with
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$setName' }, regex: `^${query.toLowerCase()}` } }, then: 60, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$setName' },
+                        regex: `^${query.toLowerCase()}`,
+                      },
+                    },
+                    then: 60,
+                    else: 0,
+                  },
+                },
                 // Name contains
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$name' }, regex: query.toLowerCase() } }, then: 50, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$name' },
+                        regex: query.toLowerCase(),
+                      },
+                    },
+                    then: 50,
+                    else: 0,
+                  },
+                },
                 // Set name contains
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$setName' }, regex: query.toLowerCase() } }, then: 40, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$setName' },
+                        regex: query.toLowerCase(),
+                      },
+                    },
+                    then: 40,
+                    else: 0,
+                  },
+                },
                 // Category contains
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$category' }, regex: query.toLowerCase() } }, then: 30, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$category' },
+                        regex: query.toLowerCase(),
+                      },
+                    },
+                    then: 30,
+                    else: 0,
+                  },
+                },
                 // Price score (lower prices get higher scores)
-                { $cond: { if: { $gt: ['$priceNumeric', 0] }, then: { $divide: [1000, '$priceNumeric'] }, else: 0 } },
+                {
+                  $cond: {
+                    if: { $gt: ['$priceNumeric', 0] },
+                    then: { $divide: [1000, '$priceNumeric'] },
+                    else: 0,
+                  },
+                },
                 // Availability score
-                { $cond: { if: { $gt: ['$available', 0] }, then: { $divide: ['$available', 100] }, else: 0 } },
+                {
+                  $cond: {
+                    if: { $gt: ['$available', 0] },
+                    then: { $divide: ['$available', 100] },
+                    else: 0,
+                  },
+                },
               ],
             },
           },
@@ -334,11 +424,24 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             maxPrice: { $max: { $toDouble: '$price' } },
             uniqueCategories: { $addToSet: '$category' },
             uniqueSetNames: { $addToSet: '$setName' },
-            availableProducts: { $sum: { $cond: [{ $gt: ['$available', 0] }, 1, 0] } },
+            availableProducts: {
+              $sum: { $cond: [{ $gt: ['$available', 0] }, 1, 0] },
+            },
             recentlyUpdated: {
               $sum: {
                 $cond: [
-                  { $gt: ['$lastUpdated', { $dateSubtract: { startDate: '$$NOW', unit: 'day', amount: 7 } }] },
+                  {
+                    $gt: [
+                      '$lastUpdated',
+                      {
+                        $dateSubtract: {
+                          startDate: '$$NOW',
+                          unit: 'day',
+                          amount: 7,
+                        },
+                      },
+                    ],
+                  },
                   1,
                   0,
                 ],
@@ -353,7 +456,9 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             availabilityPercentage: {
               $cond: {
                 if: { $gt: ['$totalProducts', 0] },
-                then: { $multiply: [{ $divide: ['$availableProducts', '$totalProducts'] }, 100] },
+                then: {
+                  $multiply: [{ $divide: ['$availableProducts', '$totalProducts'] }, 100],
+                },
                 else: 0,
               },
             },
@@ -402,8 +507,12 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             averagePrice: { $avg: '$priceNumeric' },
             minPrice: { $min: '$priceNumeric' },
             maxPrice: { $max: '$priceNumeric' },
-            priceRange: { $subtract: [{ $max: '$priceNumeric' }, { $min: '$priceNumeric' }] },
-            availableProducts: { $sum: { $cond: [{ $gt: ['$available', 0] }, 1, 0] } },
+            priceRange: {
+              $subtract: [{ $max: '$priceNumeric' }, { $min: '$priceNumeric' }],
+            },
+            availableProducts: {
+              $sum: { $cond: [{ $gt: ['$available', 0] }, 1, 0] },
+            },
           },
         },
         {
@@ -491,12 +600,15 @@ class CardMarketReferenceProductRepository extends BaseRepository {
 
       dateThreshold.setDate(dateThreshold.getDate() - days);
 
-      return await this.findAll({
-        lastUpdated: { $gte: dateThreshold },
-      }, {
-        ...options,
-        sort: { lastUpdated: -1 },
-      });
+      return await this.findAll(
+        {
+          lastUpdated: { $gte: dateThreshold },
+        },
+        {
+          ...options,
+          sort: { lastUpdated: -1 },
+        },
+      );
     } catch (error) {
       throw error;
     }
@@ -510,12 +622,15 @@ class CardMarketReferenceProductRepository extends BaseRepository {
    */
   async getLowStockProducts(threshold = 5, options = {}) {
     try {
-      return await this.findAll({
-        available: { $gt: 0, $lte: threshold },
-      }, {
-        ...options,
-        sort: { available: 1, price: 1 },
-      });
+      return await this.findAll(
+        {
+          available: { $gt: 0, $lte: threshold },
+        },
+        {
+          ...options,
+          sort: { available: 1, price: 1 },
+        },
+      );
     } catch (error) {
       throw error;
     }
@@ -532,20 +647,20 @@ class CardMarketReferenceProductRepository extends BaseRepository {
       let priceRange;
 
       switch (tier.toLowerCase()) {
-      case 'low':
-        priceRange = { min: 0, max: 50 };
-        break;
-      case 'medium':
-        priceRange = { min: 50, max: 200 };
-        break;
-      case 'high':
-        priceRange = { min: 200, max: 500 };
-        break;
-      case 'premium':
-        priceRange = { min: 500, max: Number.MAX_SAFE_INTEGER };
-        break;
-      default:
-        throw new ValidationError(`Unknown price tier: ${tier}`);
+        case 'low':
+          priceRange = { min: 0, max: 50 };
+          break;
+        case 'medium':
+          priceRange = { min: 50, max: 200 };
+          break;
+        case 'high':
+          priceRange = { min: 200, max: 500 };
+          break;
+        case 'premium':
+          priceRange = { min: 500, max: Number.MAX_SAFE_INTEGER };
+          break;
+        default:
+          throw new ValidationError(`Unknown price tier: ${tier}`);
       }
 
       return await this.findByPriceRange(priceRange.min, priceRange.max, options);

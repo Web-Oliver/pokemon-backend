@@ -20,16 +20,24 @@ const validateDataIntegrity = async () => {
 
     if (duplicateCardNames.length > 0) {
       console.log(`   ⚠️  Found ${duplicateCardNames.length} duplicate card names in same sets`);
-      checks.push({ type: 'warning', message: `${duplicateCardNames.length} duplicate card names found` });
+      checks.push({
+        type: 'warning',
+        message: `${duplicateCardNames.length} duplicate card names found`,
+      });
     } else {
       console.log('   ✅ No duplicate card names in same sets');
     }
 
-    const cardsWithoutSets = await Card.countDocuments({ setId: { $exists: false } });
+    const cardsWithoutSets = await Card.countDocuments({
+      setId: { $exists: false },
+    });
 
     if (cardsWithoutSets > 0) {
       console.log(`   ❌ Found ${cardsWithoutSets} cards without associated sets`);
-      checks.push({ type: 'error', message: `${cardsWithoutSets} cards without sets` });
+      checks.push({
+        type: 'error',
+        message: `${cardsWithoutSets} cards without sets`,
+      });
     } else {
       console.log('   ✅ All cards have associated sets');
     }
@@ -51,7 +59,10 @@ const validateDataIntegrity = async () => {
 
     if (invalidSetCount > 0) {
       console.log(`   ❌ Found ${invalidSetCount} cards referencing non-existent sets`);
-      checks.push({ type: 'error', message: `${invalidSetCount} cards with invalid set references` });
+      checks.push({
+        type: 'error',
+        message: `${invalidSetCount} cards with invalid set references`,
+      });
     } else {
       console.log('   ✅ All card set references are valid');
     }
@@ -73,13 +84,19 @@ const validateDataIntegrity = async () => {
 
     if (emptySetCount > 0) {
       console.log(`   ⚠️  Found ${emptySetCount} sets without any cards`);
-      checks.push({ type: 'warning', message: `${emptySetCount} empty sets found` });
+      checks.push({
+        type: 'warning',
+        message: `${emptySetCount} empty sets found`,
+      });
     } else {
       console.log('   ✅ All sets have cards');
     }
   } catch (error) {
     console.error('   ❌ Error during data integrity checks:', error);
-    checks.push({ type: 'error', message: `Integrity check failed: ${error.message}` });
+    checks.push({
+      type: 'error',
+      message: `Integrity check failed: ${error.message}`,
+    });
   }
 
   const hasErrors = checks.some((check) => check.type === 'error');

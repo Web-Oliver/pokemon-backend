@@ -7,7 +7,6 @@ const { calculateExpectedCounts } = require('./utils/dataVerification/countCalcu
 const { verifyDatabaseCounts } = require('./utils/dataVerification/dbVerifier');
 const { generateVerificationReport, displayProcessedFiles } = require('./utils/dataVerification/verificationReporter');
 
-
 // Main verification function
 const verifyDataImport = async () => {
   console.log('='.repeat(80));

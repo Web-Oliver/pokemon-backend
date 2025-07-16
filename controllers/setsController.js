@@ -49,9 +49,7 @@ const getSetsWithPagination = asyncHandler(async (req, res) => {
       includeScore: true,
       threshold: 0.4,
       minMatchCharLength: 1,
-      keys: [
-        { name: 'setName', weight: 1.0 },
-      ],
+      keys: [{ name: 'setName', weight: 1.0 }],
     };
 
     const fuse = new Fuse(allSets, fuseOptions);

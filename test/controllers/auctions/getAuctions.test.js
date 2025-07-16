@@ -29,8 +29,16 @@ describe('Auctions GET operations', () => {
     });
 
     it('should filter by isActive', async () => {
-      await new Auction({ topText: 'Active', bottomText: 'Auction', isActive: true }).save();
-      await new Auction({ topText: 'Inactive', bottomText: 'Auction', isActive: false }).save();
+      await new Auction({
+        topText: 'Active',
+        bottomText: 'Auction',
+        isActive: true,
+      }).save();
+      await new Auction({
+        topText: 'Inactive',
+        bottomText: 'Auction',
+        isActive: false,
+      }).save();
 
       const res = await request(app).get('/auctions?isActive=true');
 
@@ -42,7 +50,10 @@ describe('Auctions GET operations', () => {
 
   describe('GET /auctions/:id', () => {
     it('should return specific auction', async () => {
-      const auction = await new Auction({ topText: 'Test', bottomText: 'Auction' }).save();
+      const auction = await new Auction({
+        topText: 'Test',
+        bottomText: 'Auction',
+      }).save();
 
       const res = await request(app).get(`/auctions/${auction._id}`);
 

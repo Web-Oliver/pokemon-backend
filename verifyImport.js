@@ -9,7 +9,10 @@ async function verifyImport() {
     // Get all collection names
     const collections = await mongoose.connection.db.listCollections().toArray();
 
-    console.log('Available collections:', collections.map((c) => c.name));
+    console.log(
+      'Available collections:',
+      collections.map((c) => c.name),
+    );
 
     // Count documents in each collection
     for (const collection of collections) {

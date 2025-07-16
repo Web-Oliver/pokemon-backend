@@ -23,15 +23,15 @@ const emptySetsToRemove = [
   { name: 'Pokemon Japanese Design Contest Promo', year: 2009 },
   { name: 'Pokemon Japanese Coin Promo', year: 2010 },
   { name: 'Pokemon Japanese Coin Promo', year: 2011 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2014 },
+  { name: "Pokemon McDonald's Collection", year: 2014 },
   { name: 'Pokemon Promo', year: 2011 },
   { name: 'Pokemon Promo', year: 2014 },
   { name: 'Pokemon Japanese Promo Tropical Mega Battle', year: 2001 },
   { name: 'Pokemon Japanese Coin Promo', year: 2013 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2015 },
+  { name: "Pokemon McDonald's Collection", year: 2015 },
   { name: 'Pokemon Promo', year: 2015 },
   { name: 'Pokemon Promo', year: 2018 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2016 },
+  { name: "Pokemon McDonald's Collection", year: 2016 },
   { name: 'Pokemon Japanese Coin Promo', year: 2012 },
   { name: 'Pokemon Pop Series 1', year: 2007 },
   { name: 'Pokemon Promo Pokken Tournament', year: 2015 },
@@ -40,9 +40,9 @@ const emptySetsToRemove = [
   { name: 'Pokemon Promo', year: 2010 },
   { name: 'Pokemon World Championships Promo', year: 2015 },
   { name: 'Pokemon World Championship Promo', year: 2013 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2017 },
+  { name: "Pokemon McDonald's Collection", year: 2017 },
   { name: 'Pokemon World Championships Promo', year: 2016 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2012 },
+  { name: "Pokemon McDonald's Collection", year: 2012 },
   { name: 'Pokemon Promo', year: 2007 },
   { name: 'Pokemon Promo Pokken Tournament', year: 2017 },
   { name: 'Pokemon Japanese Coin Promo', year: 2004 },
@@ -57,7 +57,8 @@ const emptySetsToRemove = [
 ];
 
 function normalizeSetName(name) {
-  return name.toLowerCase()
+  return name
+    .toLowerCase()
     .replace(/[^a-z0-9\s]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
@@ -110,7 +111,7 @@ async function removeEmptySetsFromAllSetsFiles() {
         console.log('  ⚠️  Skipping - not a valid all_sets file');
       } else {
         const originalCount = data.set_links.length;
-        const fileYear = parseInt(data.year);
+        const fileYear = parseInt(data.year, 10);
 
         // Filter out empty sets
         const filteredSetLinks = data.set_links.filter((setLink) => {
@@ -134,7 +135,7 @@ async function removeEmptySetsFromAllSetsFiles() {
         const removedCount = originalCount - filteredSetLinks.length;
 
         if (removedCount > 0) {
-        // Update the data
+          // Update the data
           data.set_links = filteredSetLinks;
           data.total_sets = filteredSetLinks.length;
 

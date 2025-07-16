@@ -7,11 +7,7 @@ const {
   deleteAuction,
 } = require('./auctionCrudOperations');
 
-const {
-  addItemToAuction,
-  removeItemFromAuction,
-  markItemAsSold,
-} = require('./auctionItemOperations');
+const { addItemToAuction, removeItemFromAuction, markItemAsSold } = require('./auctionItemOperations');
 
 module.exports = {
   getAllAuctions,

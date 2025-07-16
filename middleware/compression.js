@@ -55,30 +55,30 @@ const setCacheHeaders = (req, res, next) => {
     if (req.url.includes('/auctions') && ['POST', 'PUT', 'DELETE', 'PATCH'].includes(req.method)) {
       res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache',
-        'Expires': '0',
+        Pragma: 'no-cache',
+        Expires: '0',
       });
     }
     // NO CACHE for auction data to ensure real-time updates
     else if (req.url.includes('/auctions')) {
       res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
-        'Pragma': 'no-cache',
-        'Expires': '0',
+        Pragma: 'no-cache',
+        Expires: '0',
       });
     }
     // Short cache for search results only
     else if (req.url.includes('/search')) {
       res.set({
         'Cache-Control': 'public, max-age=60', // 1 minute
-        'Vary': 'Accept-Encoding',
+        Vary: 'Accept-Encoding',
       });
     }
     // Moderate cache for other less dynamic data
     else {
       res.set({
         'Cache-Control': 'public, max-age=300', // 5 minutes
-        'Vary': 'Accept-Encoding',
+        Vary: 'Accept-Encoding',
       });
     }
   }

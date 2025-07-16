@@ -13,24 +13,24 @@ const populateAuctionItems = async (auction) => {
       let populatedItem = null;
 
       switch (item.itemCategory) {
-      case 'SealedProduct':
-        populatedItem = await SealedProduct.findById(item.itemId);
-        break;
-      case 'PsaGradedCard':
-        populatedItem = await PsaGradedCard.findById(item.itemId).populate({
-          path: 'cardId',
-          populate: { path: 'setId' },
-        });
-        break;
-      case 'RawCard':
-        populatedItem = await RawCard.findById(item.itemId).populate({
-          path: 'cardId',
-          populate: { path: 'setId' },
-        });
-        break;
-      default:
-        console.error(`Unknown itemCategory: ${item.itemCategory}`);
-        throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
+        case 'SealedProduct':
+          populatedItem = await SealedProduct.findById(item.itemId);
+          break;
+        case 'PsaGradedCard':
+          populatedItem = await PsaGradedCard.findById(item.itemId).populate({
+            path: 'cardId',
+            populate: { path: 'setId' },
+          });
+          break;
+        case 'RawCard':
+          populatedItem = await RawCard.findById(item.itemId).populate({
+            path: 'cardId',
+            populate: { path: 'setId' },
+          });
+          break;
+        default:
+          console.error(`Unknown itemCategory: ${item.itemCategory}`);
+          throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
       }
 
       if (populatedItem) {
@@ -79,17 +79,17 @@ const validateAuctionItems = async (items) => {
     let collectionItem = null;
 
     switch (item.itemCategory) {
-    case 'SealedProduct':
-      collectionItem = await SealedProduct.findById(item.itemId);
-      break;
-    case 'PsaGradedCard':
-      collectionItem = await PsaGradedCard.findById(item.itemId);
-      break;
-    case 'RawCard':
-      collectionItem = await RawCard.findById(item.itemId);
-      break;
-    default:
-      throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
+      case 'SealedProduct':
+        collectionItem = await SealedProduct.findById(item.itemId);
+        break;
+      case 'PsaGradedCard':
+        collectionItem = await PsaGradedCard.findById(item.itemId);
+        break;
+      case 'RawCard':
+        collectionItem = await RawCard.findById(item.itemId);
+        break;
+      default:
+        throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
     }
 
     if (!collectionItem) {
@@ -117,17 +117,17 @@ const validateAndFindItem = async (itemId, itemCategory) => {
   let collectionItem = null;
 
   switch (itemCategory) {
-  case 'SealedProduct':
-    collectionItem = await SealedProduct.findById(itemId);
-    break;
-  case 'PsaGradedCard':
-    collectionItem = await PsaGradedCard.findById(itemId);
-    break;
-  case 'RawCard':
-    collectionItem = await RawCard.findById(itemId);
-    break;
-  default:
-    throw new Error(`Unknown itemCategory: ${itemCategory}`);
+    case 'SealedProduct':
+      collectionItem = await SealedProduct.findById(itemId);
+      break;
+    case 'PsaGradedCard':
+      collectionItem = await PsaGradedCard.findById(itemId);
+      break;
+    case 'RawCard':
+      collectionItem = await RawCard.findById(itemId);
+      break;
+    default:
+      throw new Error(`Unknown itemCategory: ${itemCategory}`);
   }
 
   if (!collectionItem) {
@@ -150,25 +150,26 @@ const calculateAuctionTotalValue = async (auction) => {
       let collectionItem = null;
 
       switch (item.itemCategory) {
-      case 'SealedProduct':
-        collectionItem = await SealedProduct.findById(item.itemId);
-        break;
-      case 'PsaGradedCard':
-        collectionItem = await PsaGradedCard.findById(item.itemId);
-        break;
-      case 'RawCard':
-        collectionItem = await RawCard.findById(item.itemId);
-        break;
-      default:
-        console.error(`Unknown itemCategory: ${item.itemCategory}`);
-        throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
+        case 'SealedProduct':
+          collectionItem = await SealedProduct.findById(item.itemId);
+          break;
+        case 'PsaGradedCard':
+          collectionItem = await PsaGradedCard.findById(item.itemId);
+          break;
+        case 'RawCard':
+          collectionItem = await RawCard.findById(item.itemId);
+          break;
+        default:
+          console.error(`Unknown itemCategory: ${item.itemCategory}`);
+          throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
       }
 
       if (collectionItem && collectionItem.myPrice) {
         // Handle Decimal128 conversion
-        const price = typeof collectionItem.myPrice === 'number'
-          ? collectionItem.myPrice
-          : parseFloat(collectionItem.myPrice.toString());
+        const price =
+          typeof collectionItem.myPrice === 'number'
+            ? collectionItem.myPrice
+            : parseFloat(collectionItem.myPrice.toString());
 
         if (!isNaN(price)) {
           totalValue += price;

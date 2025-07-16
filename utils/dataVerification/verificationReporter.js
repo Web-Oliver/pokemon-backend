@@ -13,8 +13,8 @@ const generateVerificationReport = (expectedCounts, actualCounts, importResults)
     console.log('  Verification Status: PASS');
   } else {
     console.log(
-      '  Verification Status: FAIL (Discrepancy: '
-      + `${Math.abs(expectedCounts.expectedSets - actualCounts.actualSets)})`,
+      '  Verification Status: FAIL (Discrepancy: ' +
+        `${Math.abs(expectedCounts.expectedSets - actualCounts.actualSets)})`,
     );
     overallStatus = 'FAIL';
   }
@@ -28,8 +28,8 @@ const generateVerificationReport = (expectedCounts, actualCounts, importResults)
     console.log('  Verification Status: PASS');
   } else {
     console.log(
-      '  Verification Status: FAIL (Discrepancy: '
-      + `${Math.abs(expectedCounts.expectedCards - actualCounts.actualCards)})`,
+      '  Verification Status: FAIL (Discrepancy: ' +
+        `${Math.abs(expectedCounts.expectedCards - actualCounts.actualCards)})`,
     );
     overallStatus = 'FAIL';
   }
@@ -43,8 +43,8 @@ const generateVerificationReport = (expectedCounts, actualCounts, importResults)
     console.log('  Verification Status: PASS');
   } else {
     console.log(
-      '  Verification Status: FAIL (Discrepancy: '
-      + `${Math.abs(expectedCounts.expectedCardMarketProducts - actualCounts.actualCardMarketProducts)})`,
+      '  Verification Status: FAIL (Discrepancy: ' +
+        `${Math.abs(expectedCounts.expectedCardMarketProducts - actualCounts.actualCardMarketProducts)})`,
     );
     overallStatus = 'FAIL';
   }

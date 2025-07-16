@@ -76,7 +76,9 @@ const validateReferenceData = async (referenceData) => {
 
     if (!card) {
       console.log('Card not found with query:', JSON.stringify(cardQuery, null, 2));
-      throw new Error(`Card not found: ${cardName} in set ${setName}. This card may not exist in the reference database or the details don't match exactly.`);
+      throw new Error(
+        `Card not found: ${cardName} in set ${setName}. This card may not exist in the reference database or the details don't match exactly.`,
+      );
     }
 
     console.log('Card found:', card._id);
@@ -157,9 +159,7 @@ const validateUserSpecificFields = (data, itemType) => {
   console.log('Data to validate:', JSON.stringify(data, null, 2));
   console.log('Item type:', itemType);
 
-  const referenceFields = [
-    'cardName', 'setName', 'pokemonNumber', 'variety', 'baseName', 'year', 'psaTotalGraded',
-  ];
+  const referenceFields = ['cardName', 'setName', 'pokemonNumber', 'variety', 'baseName', 'year', 'psaTotalGraded'];
 
   const userSpecificFields = ['myPrice', 'images', 'dateAdded', 'sold', 'priceHistory', 'cardId', 'setId'];
 

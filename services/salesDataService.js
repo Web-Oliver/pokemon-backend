@@ -7,14 +7,14 @@ const RawCard = require('../models/RawCard');
  */
 function getDisplayCategory(itemType) {
   switch (itemType) {
-  case 'sealedProduct':
-    return 'Sealed Product';
-  case 'psaGradedCard':
-    return 'PSA Graded Card';
-  case 'rawCard':
-    return 'Raw Card';
-  default:
-    return 'Unknown';
+    case 'sealedProduct':
+      return 'Sealed Product';
+    case 'psaGradedCard':
+      return 'PSA Graded Card';
+    case 'rawCard':
+      return 'Raw Card';
+    default:
+      return 'Unknown';
   }
 }
 
@@ -39,34 +39,49 @@ async function fetchSalesData(filter, category) {
     ]);
 
     salesData = [
-      ...sealedProducts.map((item) => ({ ...item.toObject(), itemType: 'sealedProduct' })),
-      ...psaCards.map((item) => ({ ...item.toObject(), itemType: 'psaGradedCard' })),
+      ...sealedProducts.map((item) => ({
+        ...item.toObject(),
+        itemType: 'sealedProduct',
+      })),
+      ...psaCards.map((item) => ({
+        ...item.toObject(),
+        itemType: 'psaGradedCard',
+      })),
       ...rawCards.map((item) => ({ ...item.toObject(), itemType: 'rawCard' })),
     ];
   } else {
     // Fetch from specific category
     switch (category) {
-    case 'sealedProducts':
-      salesData = await SealedProduct.find(filter);
-      salesData = salesData.map((item) => ({ ...item.toObject(), itemType: 'sealedProduct' }));
-      break;
-    case 'psaGradedCards':
-      salesData = await PsaGradedCard.find(filter).populate({
-        path: 'cardId',
-        populate: { path: 'setId' },
-      });
-      salesData = salesData.map((item) => ({ ...item.toObject(), itemType: 'psaGradedCard' }));
-      break;
-    case 'rawCards':
-      salesData = await RawCard.find(filter).populate({
-        path: 'cardId',
-        populate: { path: 'setId' },
-      });
-      salesData = salesData.map((item) => ({ ...item.toObject(), itemType: 'rawCard' }));
-      break;
-    default:
-      salesData = [];
-      break;
+      case 'sealedProducts':
+        salesData = await SealedProduct.find(filter);
+        salesData = salesData.map((item) => ({
+          ...item.toObject(),
+          itemType: 'sealedProduct',
+        }));
+        break;
+      case 'psaGradedCards':
+        salesData = await PsaGradedCard.find(filter).populate({
+          path: 'cardId',
+          populate: { path: 'setId' },
+        });
+        salesData = salesData.map((item) => ({
+          ...item.toObject(),
+          itemType: 'psaGradedCard',
+        }));
+        break;
+      case 'rawCards':
+        salesData = await RawCard.find(filter).populate({
+          path: 'cardId',
+          populate: { path: 'setId' },
+        });
+        salesData = salesData.map((item) => ({
+          ...item.toObject(),
+          itemType: 'rawCard',
+        }));
+        break;
+      default:
+        salesData = [];
+        break;
     }
   }
 
@@ -76,8 +91,9 @@ async function fetchSalesData(filter, category) {
     category: getDisplayCategory(item.itemType),
   }));
 
-  return transformedData.sort((a, b) =>
-    new Date(b.saleDetails?.dateSold || 0) - new Date(a.saleDetails?.dateSold || 0));
+  return transformedData.sort(
+    (a, b) => new Date(b.saleDetails?.dateSold || 0) - new Date(a.saleDetails?.dateSold || 0),
+  );
 }
 
 /**

@@ -9,15 +9,17 @@ const mongoose = require('mongoose');
  * Consolidates duplicate schema definitions to ensure consistency
  * and simplify maintenance.
  */
-const priceHistorySchema = [{
-  price: {
-    type: mongoose.Types.Decimal128,
-    required: true,
+const priceHistorySchema = [
+  {
+    price: {
+      type: mongoose.Types.Decimal128,
+      required: true,
+    },
+    dateUpdated: {
+      type: Date,
+      default: Date.now,
+    },
   },
-  dateUpdated: {
-    type: Date,
-    default: Date.now,
-  },
-}];
+];
 
 module.exports = priceHistorySchema;

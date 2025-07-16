@@ -209,7 +209,12 @@ class SearchPipelineBuilder {
       rules.startsWith.fields.forEach((field) => {
         scoreConditions.push({
           $cond: {
-            if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: `$${field}` },
+                regex: `^${this.escapeRegex(normalizedQuery)}`,
+              },
+            },
             then: rules.startsWith.weight,
             else: 0,
           },
@@ -222,7 +227,12 @@ class SearchPipelineBuilder {
       rules.contains.fields.forEach((field) => {
         scoreConditions.push({
           $cond: {
-            if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: this.escapeRegex(normalizedQuery) } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: `$${field}` },
+                regex: this.escapeRegex(normalizedQuery),
+              },
+            },
             then: rules.contains.weight,
             else: 0,
           },
@@ -235,7 +245,12 @@ class SearchPipelineBuilder {
       rules.wordBoundary.fields.forEach((field) => {
         scoreConditions.push({
           $cond: {
-            if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${this.escapeRegex(normalizedQuery)}\\b` } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: `$${field}` },
+                regex: `\\b${this.escapeRegex(normalizedQuery)}\\b`,
+              },
+            },
             then: rules.wordBoundary.weight,
             else: 0,
           },
@@ -249,8 +264,15 @@ class SearchPipelineBuilder {
 
       scoreConditions.push({
         $cond: {
-          if: { $regexMatch: { input: { $toLower: `$${primaryField}` }, regex: this.escapeRegex(normalizedQuery) } },
-          then: { $divide: [rules.lengthPenalty.weight, { $strLenCP: `$${primaryField}` }] },
+          if: {
+            $regexMatch: {
+              input: { $toLower: `$${primaryField}` },
+              regex: this.escapeRegex(normalizedQuery),
+            },
+          },
+          then: {
+            $divide: [rules.lengthPenalty.weight, { $strLenCP: `$${primaryField}` }],
+          },
           else: 0,
         },
       });
@@ -295,7 +317,12 @@ class SearchPipelineBuilder {
         // Word boundary match
         scoreConditions.push({
           $cond: {
-            if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${this.escapeRegex(word)}\\b` } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: `$${field}` },
+                regex: `\\b${this.escapeRegex(word)}\\b`,
+              },
+            },
             then: weight * wordWeight,
             else: 0,
           },
@@ -304,7 +331,12 @@ class SearchPipelineBuilder {
         // Partial word match
         scoreConditions.push({
           $cond: {
-            if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: this.escapeRegex(word) } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: `$${field}` },
+                regex: this.escapeRegex(word),
+              },
+            },
             then: (weight * wordWeight) / 2,
             else: 0,
           },

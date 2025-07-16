@@ -14,28 +14,28 @@ require('dotenv').config();
 const inspectDatabase = async () => {
   try {
     console.log('🔍 Inspecting database contents...');
-    
+
     // Connect to MongoDB
     const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/pokemon-collection';
     await mongoose.connect(mongoUri);
     console.log('✅ Connected to MongoDB');
-    
+
     // Count all collections
     const [psaCount, rawCount, sealedCount, cardCount, setCount] = await Promise.all([
       PsaGradedCard.countDocuments(),
       RawCard.countDocuments(),
       SealedProduct.countDocuments(),
       Card.countDocuments(),
-      Set.countDocuments()
+      Set.countDocuments(),
     ]);
-    
+
     console.log('\n📊 COLLECTION COUNTS:');
     console.log(`PSA Graded Cards: ${psaCount}`);
     console.log(`Raw Cards: ${rawCount}`);
     console.log(`Sealed Products: ${sealedCount}`);
     console.log(`Reference Cards: ${cardCount}`);
     console.log(`Reference Sets: ${setCount}`);
-    
+
     // Sample some PSA cards with populated data
     if (psaCount > 0) {
       console.log('\n🎯 PSA GRADED CARDS SAMPLE:');
@@ -48,7 +48,7 @@ const inspectDatabase = async () => {
           },
         })
         .limit(5);
-      
+
       psaCards.forEach((card, index) => {
         console.log(`\n--- PSA Card ${index + 1} ---`);
         console.log(`ID: ${card._id}`);
@@ -60,7 +60,7 @@ const inspectDatabase = async () => {
         console.log(`Images: ${card.images?.length || 0}`);
       });
     }
-    
+
     // Sample some raw cards
     if (rawCount > 0) {
       console.log('\n🎯 RAW CARDS SAMPLE:');
@@ -73,7 +73,7 @@ const inspectDatabase = async () => {
           },
         })
         .limit(3);
-      
+
       rawCards.forEach((card, index) => {
         console.log(`\n--- Raw Card ${index + 1} ---`);
         console.log(`ID: ${card._id}`);
@@ -84,12 +84,12 @@ const inspectDatabase = async () => {
         console.log(`Set Name: ${card.cardId?.setId?.setName || 'NULL'}`);
       });
     }
-    
+
     // Sample some sealed products
     if (sealedCount > 0) {
       console.log('\n🎯 SEALED PRODUCTS SAMPLE:');
       const sealedProducts = await SealedProduct.find().limit(3);
-      
+
       sealedProducts.forEach((product, index) => {
         console.log(`\n--- Sealed Product ${index + 1} ---`);
         console.log(`ID: ${product._id}`);
@@ -99,14 +99,12 @@ const inspectDatabase = async () => {
         console.log(`Price: ${product.myPrice}`);
       });
     }
-    
+
     // Sample reference cards
     if (cardCount > 0) {
       console.log('\n🎯 REFERENCE CARDS SAMPLE:');
-      const cards = await Card.find()
-        .populate('setId')
-        .limit(3);
-      
+      const cards = await Card.find().populate('setId').limit(3);
+
       cards.forEach((card, index) => {
         console.log(`\n--- Reference Card ${index + 1} ---`);
         console.log(`ID: ${card._id}`);
@@ -116,7 +114,6 @@ const inspectDatabase = async () => {
         console.log(`Set Name: ${card.setId?.setName || 'NULL'}`);
       });
     }
-    
   } catch (error) {
     console.error('❌ Error inspecting database:', error);
     process.exit(1);

@@ -4,7 +4,11 @@ const activityTrackingPlugin = require('../plugins/activityTracking');
 const { saleDetailsSchema, priceHistorySchema, sealedProductTransform } = require('./schemas/shared');
 
 const sealedProductSchema = new mongoose.Schema({
-  productId: { type: Schema.Types.ObjectId, ref: 'CardMarketReferenceProduct', required: true },
+  productId: {
+    type: Schema.Types.ObjectId,
+    ref: 'CardMarketReferenceProduct',
+    required: true,
+  },
   category: {
     type: String,
     required: true,
@@ -41,7 +45,6 @@ sealedProductSchema.plugin(activityTrackingPlugin, {
     trackImageUpdates: true,
   },
 });
-
 
 // Apply shared transform function for JSON responses
 sealedProductSchema.set('toJSON', {

@@ -21,10 +21,12 @@ const getAllPsaMetadataFiles = () => {
 
       if (stat.isDirectory()) {
         findMetadataFiles(fullPath);
-      } else if (entry.endsWith('.json')
-                      && !entry.includes('Zone.Identifier')
-                      && entry.includes('_all_sets.json')
-                      && !entry.includes('_TEST.json')) {
+      } else if (
+        entry.endsWith('.json') &&
+        !entry.includes('Zone.Identifier') &&
+        entry.includes('_all_sets.json') &&
+        !entry.includes('_TEST.json')
+      ) {
         metadataFiles.push(fullPath);
       }
     }
@@ -54,10 +56,12 @@ const getAllPsaIndividualFiles = () => {
 
       if (stat.isDirectory()) {
         findJsonFiles(fullPath);
-      } else if (entry.endsWith('.json')
-                      && !entry.includes('Zone.Identifier')
-                      && !entry.includes('_all_sets.json')
-                      && !entry.includes('_TEST.json')) {
+      } else if (
+        entry.endsWith('.json') &&
+        !entry.includes('Zone.Identifier') &&
+        !entry.includes('_all_sets.json') &&
+        !entry.includes('_TEST.json')
+      ) {
         psaFiles.push(fullPath);
       }
     }

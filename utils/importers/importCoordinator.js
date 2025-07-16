@@ -1,6 +1,11 @@
 const { importSetMetadata, importCardData } = require('./psaDataImporter');
 const { importCardMarketData } = require('./cardMarketImporter');
-const { getAllPsaFiles, getAllPsaMetadataFiles, getAllPsaIndividualFiles, getAllSealedProductFiles } = require('./fileUtils');
+const {
+  getAllPsaFiles,
+  getAllPsaMetadataFiles,
+  getAllPsaIndividualFiles,
+  getAllSealedProductFiles,
+} = require('./fileUtils');
 
 const importAllData = async (options = {}) => {
   const {
@@ -43,7 +48,9 @@ const importAllData = async (options = {}) => {
 
       const totalPsaFiles = metadataFiles.length + individualFiles.length;
 
-      console.log(`Found ${totalPsaFiles} PSA files to import (${metadataFiles.length} metadata + ${individualFiles.length} individual)`);
+      console.log(
+        `Found ${totalPsaFiles} PSA files to import (${metadataFiles.length} metadata + ${individualFiles.length} individual)`,
+      );
       totalResults.psaFiles = totalPsaFiles;
 
       // Phase 1: Import set metadata from *_all_sets.json files
@@ -110,7 +117,9 @@ const importAllData = async (options = {}) => {
         }
       });
 
-      console.log(`Phase 2 completed: ${totalResults.setsUpdated} sets updated, ${totalResults.cardsProcessed} cards processed`);
+      console.log(
+        `Phase 2 completed: ${totalResults.setsUpdated} sets updated, ${totalResults.cardsProcessed} cards processed`,
+      );
     }
 
     // Import Sealed Product data as CardMarket reference products

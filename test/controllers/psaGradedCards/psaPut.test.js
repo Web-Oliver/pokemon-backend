@@ -26,9 +26,7 @@ describe('PUT /psa-graded-cards/:id', () => {
         condition: 'Near Mint',
       };
 
-      const res = await request(app)
-        .put(`/psa-graded-cards/${cardId}`)
-        .send(updates);
+      const res = await request(app).put(`/psa-graded-cards/${cardId}`).send(updates);
 
       expect(res.status).to.equal(200);
       expect(res.body).to.have.property('success', true);
@@ -39,9 +37,7 @@ describe('PUT /psa-graded-cards/:id', () => {
       const fakeId = '507f1f77bcf86cd799439011';
       const updates = { myPrice: 600 };
 
-      const res = await request(app)
-        .put(`/psa-graded-cards/${fakeId}`)
-        .send(updates);
+      const res = await request(app).put(`/psa-graded-cards/${fakeId}`).send(updates);
 
       expect(res.status).to.equal(404);
       expect(res.body).to.have.property('success', false);
@@ -58,9 +54,7 @@ describe('PUT /psa-graded-cards/:id', () => {
         source: 'Facebook',
       };
 
-      const res = await request(app)
-        .put(`/psa-graded-cards/${cardId}/sell`)
-        .send(saleData);
+      const res = await request(app).put(`/psa-graded-cards/${cardId}/sell`).send(saleData);
 
       expect(res.status).to.equal(200);
       expect(res.body).to.have.property('success', true);
@@ -72,9 +66,7 @@ describe('PUT /psa-graded-cards/:id', () => {
       const fakeId = '507f1f77bcf86cd799439011';
       const saleData = { actualSoldPrice: 650 };
 
-      const res = await request(app)
-        .put(`/psa-graded-cards/${fakeId}/sell`)
-        .send(saleData);
+      const res = await request(app).put(`/psa-graded-cards/${fakeId}/sell`).send(saleData);
 
       expect(res.status).to.equal(404);
       expect(res.body).to.have.property('success', false);

@@ -30,10 +30,7 @@ async function cleanupSealedProducts() {
 
   // Find items that are likely personal collection items (have price history or different prices)
   const personalItems = await SealedProduct.find({
-    $or: [
-      { priceHistory: { $exists: true, $ne: [] } },
-      { $expr: { $ne: ['$myPrice', '$cardMarketPrice'] } },
-    ],
+    $or: [{ priceHistory: { $exists: true, $ne: [] } }, { $expr: { $ne: ['$myPrice', '$cardMarketPrice'] } }],
   });
 
   console.log(`Personal collection items found: ${personalItems.length}`);
@@ -41,30 +38,28 @@ async function cleanupSealedProducts() {
   if (personalItems.length > 0) {
     console.log('\n📋 Personal collection items:');
     personalItems.forEach((item, index) => {
-      console.log(`${index + 1}. ${item.name} - Set: ${item.setName} - My Price: ${item.myPrice} - CM Price: ${item.cardMarketPrice}`);
+      console.log(
+        `${index + 1}. ${item.name} - Set: ${item.setName} - My Price: ${item.myPrice} - CM Price: ${item.cardMarketPrice}`,
+      );
     });
   }
 
   // Find items that are likely reference data (no price history and same prices)
   const referenceItems = await SealedProduct.find({
-    $and: [
-      { priceHistory: { $size: 0 } },
-      { $expr: { $eq: ['$myPrice', '$cardMarketPrice'] } },
-    ],
+    $and: [{ priceHistory: { $size: 0 } }, { $expr: { $eq: ['$myPrice', '$cardMarketPrice'] } }],
   });
 
   console.log(`Reference data items found: ${referenceItems.length}`);
 
   if (referenceItems.length > 0) {
     console.log('\n⚠️  WARNING: About to delete reference data items from personal collection');
-    console.log('This will remove items that appear to be reference data incorrectly imported into personal collection.');
+    console.log(
+      'This will remove items that appear to be reference data incorrectly imported into personal collection.',
+    );
 
     // Delete reference data items
     const deleteResult = await SealedProduct.deleteMany({
-      $and: [
-        { priceHistory: { $size: 0 } },
-        { $expr: { $eq: ['$myPrice', '$cardMarketPrice'] } },
-      ],
+      $and: [{ priceHistory: { $size: 0 } }, { $expr: { $eq: ['$myPrice', '$cardMarketPrice'] } }],
     });
 
     console.log(`✅ Deleted ${deleteResult.deletedCount} reference data items from SealedProduct collection`);
@@ -84,10 +79,7 @@ async function cleanupPsaGradedCards() {
 
   // Find items that are likely personal collection items
   const personalItems = await PsaGradedCard.find({
-    $or: [
-      { priceHistory: { $exists: true, $ne: [] } },
-      { myPrice: { $exists: true } },
-    ],
+    $or: [{ priceHistory: { $exists: true, $ne: [] } }, { myPrice: { $exists: true } }],
   });
 
   console.log(`Personal collection items found: ${personalItems.length}`);
@@ -95,26 +87,22 @@ async function cleanupPsaGradedCards() {
   if (personalItems.length > 0) {
     console.log('\n📋 Personal PSA graded cards:');
     personalItems.forEach((item, index) => {
-      console.log(`${index + 1}. ${item.cardId?.cardName || 'Unknown'} - Grade: ${item.grade} - My Price: ${item.myPrice}`);
+      console.log(
+        `${index + 1}. ${item.cardId?.cardName || 'Unknown'} - Grade: ${item.grade} - My Price: ${item.myPrice}`,
+      );
     });
   }
 
   // Check if there are items without myPrice (likely reference data)
   const referenceItems = await PsaGradedCard.find({
-    $and: [
-      { priceHistory: { $size: 0 } },
-      { myPrice: { $exists: false } },
-    ],
+    $and: [{ priceHistory: { $size: 0 } }, { myPrice: { $exists: false } }],
   });
 
   console.log(`Potential reference data items: ${referenceItems.length}`);
 
   if (referenceItems.length > 0) {
     const deleteResult = await PsaGradedCard.deleteMany({
-      $and: [
-        { priceHistory: { $size: 0 } },
-        { myPrice: { $exists: false } },
-      ],
+      $and: [{ priceHistory: { $size: 0 } }, { myPrice: { $exists: false } }],
     });
 
     console.log(`✅ Deleted ${deleteResult.deletedCount} reference data items from PsaGradedCard collection`);
@@ -134,10 +122,7 @@ async function cleanupRawCards() {
 
   // Find items that are likely personal collection items
   const personalItems = await RawCard.find({
-    $or: [
-      { priceHistory: { $exists: true, $ne: [] } },
-      { myPrice: { $exists: true } },
-    ],
+    $or: [{ priceHistory: { $exists: true, $ne: [] } }, { myPrice: { $exists: true } }],
   });
 
   console.log(`Personal collection items found: ${personalItems.length}`);
@@ -145,26 +130,22 @@ async function cleanupRawCards() {
   if (personalItems.length > 0) {
     console.log('\n📋 Personal raw cards:');
     personalItems.forEach((item, index) => {
-      console.log(`${index + 1}. ${item.cardId?.cardName || 'Unknown'} - Condition: ${item.condition} - My Price: ${item.myPrice}`);
+      console.log(
+        `${index + 1}. ${item.cardId?.cardName || 'Unknown'} - Condition: ${item.condition} - My Price: ${item.myPrice}`,
+      );
     });
   }
 
   // Check if there are items without myPrice (likely reference data)
   const referenceItems = await RawCard.find({
-    $and: [
-      { priceHistory: { $size: 0 } },
-      { myPrice: { $exists: false } },
-    ],
+    $and: [{ priceHistory: { $size: 0 } }, { myPrice: { $exists: false } }],
   });
 
   console.log(`Potential reference data items: ${referenceItems.length}`);
 
   if (referenceItems.length > 0) {
     const deleteResult = await RawCard.deleteMany({
-      $and: [
-        { priceHistory: { $size: 0 } },
-        { myPrice: { $exists: false } },
-      ],
+      $and: [{ priceHistory: { $size: 0 } }, { myPrice: { $exists: false } }],
     });
 
     console.log(`✅ Deleted ${deleteResult.deletedCount} reference data items from RawCard collection`);

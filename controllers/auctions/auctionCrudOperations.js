@@ -67,17 +67,8 @@ const updateAuction = asyncHandler(async (req, res) => {
     throw new ValidationError('Invalid ObjectId format');
   }
 
-  const {
-    topText,
-    bottomText,
-    auctionDate,
-    status,
-    generatedFacebookPost,
-    isActive,
-    items,
-    totalValue,
-    soldValue,
-  } = req.body;
+  const { topText, bottomText, auctionDate, status, generatedFacebookPost, isActive, items, totalValue, soldValue } =
+    req.body;
 
   const updateData = {};
 
@@ -114,11 +105,7 @@ const updateAuction = asyncHandler(async (req, res) => {
     updateData.items = items;
   }
 
-  const updatedAuction = await Auction.findByIdAndUpdate(
-    req.params.id,
-    updateData,
-    { new: true, runValidators: true },
-  );
+  const updatedAuction = await Auction.findByIdAndUpdate(req.params.id, updateData, { new: true, runValidators: true });
 
   if (!updatedAuction) {
     throw new NotFoundError('Auction not found');

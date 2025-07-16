@@ -18,11 +18,13 @@ const applyPostPopulationFilters = (cards, filters) => {
 
   if (setName) {
     filteredCards = filteredCards.filter((card) =>
-      card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase()));
+      card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase()),
+    );
   }
   if (cardName) {
     filteredCards = filteredCards.filter((card) =>
-      card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase()));
+      card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase()),
+    );
   }
 
   return filteredCards;
@@ -31,14 +33,13 @@ const applyPostPopulationFilters = (cards, filters) => {
 const findAllRawCards = async (filters) => {
   const query = buildQuery(filters);
 
-  const rawCards = await RawCard.find(query)
-    .populate({
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-        model: 'Set',
-      },
-    });
+  const rawCards = await RawCard.find(query).populate({
+    path: 'cardId',
+    populate: {
+      path: 'setId',
+      model: 'Set',
+    },
+  });
 
   return applyPostPopulationFilters(rawCards, filters);
 };
@@ -48,14 +49,13 @@ const findRawCardById = async (id) => {
     throw new Error('Invalid ObjectId format');
   }
 
-  const rawCard = await RawCard.findById(id)
-    .populate({
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-        model: 'Set',
-      },
-    });
+  const rawCard = await RawCard.findById(id).populate({
+    path: 'cardId',
+    populate: {
+      path: 'setId',
+      model: 'Set',
+    },
+  });
 
   if (!rawCard) {
     throw new Error('Raw card not found');

@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
   },
   filename(req, file, cb) {
     // Generate unique filename with timestamp
-    const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1E9)}`;
+    const uniqueSuffix = `${Date.now()}-${Math.round(Math.random() * 1e9)}`;
     // Use 'image' as consistent fieldname instead of file.fieldname which can be 'images[0]', 'images[1]', etc.
     const fieldname = file.fieldname.startsWith('images') ? 'image' : file.fieldname;
 
@@ -91,7 +91,14 @@ const uploadFlexible = (req, res, next) => {
   uploadAny(req, res, (err) => {
     console.log(`[UPLOAD] Received ${req.files ? req.files.length : 0} files`);
     console.log(`[UPLOAD] Request body keys: ${Object.keys(req.body)}`);
-    console.log('[UPLOAD] Files:', req.files?.map((f) => ({ fieldname: f.fieldname, originalname: f.originalname, size: f.size })));
+    console.log(
+      '[UPLOAD] Files:',
+      req.files?.map((f) => ({
+        fieldname: f.fieldname,
+        originalname: f.originalname,
+        size: f.size,
+      })),
+    );
 
     if (err instanceof multer.MulterError) {
       console.log(`[UPLOAD] Multer error: ${err.code} - ${err.message}`);
@@ -120,7 +127,10 @@ const uploadFlexible = (req, res, next) => {
     }));
 
     console.log(`[UPLOAD] Sending response with ${uploadedFiles.length} files`);
-    console.log('[UPLOAD] Response data:', uploadedFiles.map((f) => ({ filename: f.filename, path: f.path })));
+    console.log(
+      '[UPLOAD] Response data:',
+      uploadedFiles.map((f) => ({ filename: f.filename, path: f.path })),
+    );
 
     res.status(200).json({
       status: 'success',
@@ -174,10 +184,8 @@ const cleanupImages = async (req, res, next) => {
             reason: 'Image is associated with a product',
           });
         } else {
-        // Remove leading slash if present to get filename
-          const filename = imagePath.startsWith('/uploads/')
-            ? imagePath.replace('/uploads/', '')
-            : imagePath;
+          // Remove leading slash if present to get filename
+          const filename = imagePath.startsWith('/uploads/') ? imagePath.replace('/uploads/', '') : imagePath;
 
           const fullPath = path.join(uploadsDir, filename);
 
@@ -196,7 +204,9 @@ const cleanupImages = async (req, res, next) => {
       }
     }
 
-    console.log(`[CLEANUP] Cleanup completed: ${deletedFiles.length} deleted, ${skippedFiles.length} skipped, ${errors.length} errors`);
+    console.log(
+      `[CLEANUP] Cleanup completed: ${deletedFiles.length} deleted, ${skippedFiles.length} skipped, ${errors.length} errors`,
+    );
 
     res.status(200).json({
       status: 'success',
@@ -249,10 +259,8 @@ const cleanupAllOrphanedImages = async (req, res, next) => {
             reason: 'Image is associated with a product',
           });
         } else {
-        // Remove leading slash if present to get filename
-          const filename = imagePath.startsWith('/uploads/')
-            ? imagePath.replace('/uploads/', '')
-            : imagePath;
+          // Remove leading slash if present to get filename
+          const filename = imagePath.startsWith('/uploads/') ? imagePath.replace('/uploads/', '') : imagePath;
 
           const fullPath = path.join(uploadsDir, filename);
 
@@ -269,7 +277,9 @@ const cleanupAllOrphanedImages = async (req, res, next) => {
       }
     }
 
-    console.log(`[CLEANUP ALL] Cleanup completed: ${deletedFiles.length} deleted, ${skippedFiles.length} skipped, ${errors.length} errors`);
+    console.log(
+      `[CLEANUP ALL] Cleanup completed: ${deletedFiles.length} deleted, ${skippedFiles.length} skipped, ${errors.length} errors`,
+    );
 
     res.status(200).json({
       status: 'success',

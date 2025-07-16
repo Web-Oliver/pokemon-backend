@@ -33,7 +33,7 @@ const importSetMetadata = async (filePath) => {
         if (existingSetByUrl) {
           console.log(`Set already exists with URL: ${setLink.url}, skipping...`);
         } else {
-        // Clean the set name first - remove problematic characters
+          // Clean the set name first - remove problematic characters
           function cleanSetName(name) {
             return name
               .replace(/[|\/\\&]/g, ' ') // Replace |, /, \, & with space
@@ -48,9 +48,11 @@ const importSetMetadata = async (filePath) => {
           let finalSetName = cleanSetName(setLink.set_name);
 
           // Always make promo sets unique by year to avoid conflicts
-          if (finalSetName.toLowerCase().includes('promo')
-            || finalSetName.toLowerCase().includes('black star')
-            || finalSetName.toLowerCase().includes('world championships')) {
+          if (
+            finalSetName.toLowerCase().includes('promo') ||
+            finalSetName.toLowerCase().includes('black star') ||
+            finalSetName.toLowerCase().includes('world championships')
+          ) {
             finalSetName = `${finalSetName} (${data.year})`;
           }
 
@@ -106,27 +108,43 @@ const importCardData = async (filePath) => {
     // Skip summary files (*_all_sets.json)
     if (data.set_links && Array.isArray(data.set_links)) {
       console.log(`Skipping summary file ${filePath}`);
-      return { success: true, setsUpdated: 0, cardsProcessed: 0, skippedCards: 0 };
+      return {
+        success: true,
+        setsUpdated: 0,
+        cardsProcessed: 0,
+        skippedCards: 0,
+      };
     }
 
     // Skip files that don't have individual set data structure
     if (!data.set_name || !data.cards) {
       console.log(`Skipping file ${filePath} - not a valid set data file`);
-      return { success: true, setsUpdated: 0, cardsProcessed: 0, skippedCards: 0 };
+      return {
+        success: true,
+        setsUpdated: 0,
+        cardsProcessed: 0,
+        skippedCards: 0,
+      };
     }
 
     const setData = data;
 
     // Check TOTAL POPULATION entry to filter out low population sets
-    const totalPopCard = setData.cards.find((card) =>
-      card.card_name === 'TOTAL POPULATION' && card.base_name === 'TOTAL POPULATION');
+    const totalPopCard = setData.cards.find(
+      (card) => card.card_name === 'TOTAL POPULATION' && card.base_name === 'TOTAL POPULATION',
+    );
 
     if (totalPopCard) {
       const totalGraded = totalPopCard.psa_grades?.psa_total || totalPopCard.grade_totals?.grade_total || 0;
 
       if (totalGraded < 200) {
         console.log(`Skipping low population set ${setData.set_name}: only ${totalGraded} total graded cards`);
-        return { success: true, setsUpdated: 0, cardsProcessed: 0, skippedCards: 0 };
+        return {
+          success: true,
+          setsUpdated: 0,
+          cardsProcessed: 0,
+          skippedCards: 0,
+        };
       }
     }
 
@@ -136,22 +154,28 @@ const importCardData = async (filePath) => {
 
       if (!existingSet) {
         console.log(`Set not found for URL ${setData.set_url}, skipping card data import`);
-        return { success: true, setsUpdated: 0, cardsProcessed: 0, skippedCards: 0 };
+        return {
+          success: true,
+          setsUpdated: 0,
+          cardsProcessed: 0,
+          skippedCards: 0,
+        };
       }
 
       // Find total population card for this set
-      const totalPopCard = setData.cards.find((card) => card.card_name === 'TOTAL POPULATION'
-                || card.base_name === 'TOTAL POPULATION');
+      const setTotalPopCard = setData.cards.find(
+        (card) => card.card_name === 'TOTAL POPULATION' || card.base_name === 'TOTAL POPULATION',
+      );
 
       // Update Set with PSA population data only (totalCardsInSet will be updated in Phase 3)
       await Set.findOneAndUpdate(
         { setUrl: setData.set_url },
         {
-          totalPsaPopulation: totalPopCard?.grade_totals?.grade_total || totalPopCard?.psa_grades?.psa_total || 0,
+          totalPsaPopulation: setTotalPopCard?.grade_totals?.grade_total || setTotalPopCard?.psa_grades?.psa_total || 0,
         },
       );
 
-      const psaTotal = totalPopCard?.grade_totals?.grade_total || totalPopCard?.psa_grades?.psa_total || 0;
+      const psaTotal = setTotalPopCard?.grade_totals?.grade_total || setTotalPopCard?.psa_grades?.psa_total || 0;
 
       console.log(`Set updated with card data: ${setData.set_name} (${psaTotal} PSA total)`);
       setsUpdated++;
@@ -159,8 +183,7 @@ const importCardData = async (filePath) => {
       // Process cards for this set
       const cardPromises = setData.cards.map(async (cardData, i) => {
         // Skip total population cards only
-        const isTotalPop = cardData.card_name === 'TOTAL POPULATION'
-                                 || cardData.base_name === 'TOTAL POPULATION';
+        const isTotalPop = cardData.card_name === 'TOTAL POPULATION' || cardData.base_name === 'TOTAL POPULATION';
 
         if (!isTotalPop) {
           try {

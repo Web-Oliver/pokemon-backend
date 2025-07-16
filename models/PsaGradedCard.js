@@ -25,7 +25,6 @@ psaGradedCardSchema.plugin(activityTrackingPlugin, {
   },
 });
 
-
 // Apply shared transform function for JSON responses
 psaGradedCardSchema.set('toJSON', {
   transform: collectionItemTransform,

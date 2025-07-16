@@ -141,7 +141,12 @@ class SaleService {
       model.countDocuments(baseQuery),
       model.aggregate([
         { $match: baseQuery },
-        { $group: { _id: null, total: { $sum: '$saleDetails.actualSoldPrice' } } },
+        {
+          $group: {
+            _id: null,
+            total: { $sum: '$saleDetails.actualSoldPrice' },
+          },
+        },
       ]),
     ]);
 

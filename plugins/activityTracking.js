@@ -26,12 +26,7 @@ function activityTrackingPlugin(schema, options = {}) {
     throw new Error('activityTrackingPlugin requires an itemType option');
   }
 
-  const {
-    trackCreation = true,
-    trackSales = true,
-    trackPriceUpdates = true,
-    trackImageUpdates = true,
-  } = config;
+  const { trackCreation = true, trackSales = true, trackPriceUpdates = true, trackImageUpdates = true } = config;
 
   // Store flags for middleware context
   schema.add({
@@ -70,7 +65,10 @@ function activityTrackingPlugin(schema, options = {}) {
             // Track new item creation
             await ActivityService.logCardAdded(doc, itemType);
             console.log(`[ACTIVITY TRACKING] ${itemType} creation tracked:`, doc._id);
-          } else if (trackSales && (this._activityTracking.isSaleUpdate || (this.isModified && this.isModified('sold') && doc.sold === true))) {
+          } else if (
+            trackSales &&
+            (this._activityTracking.isSaleUpdate || (this.isModified && this.isModified('sold') && doc.sold === true))
+          ) {
             // Track sale completion via save() method
             console.log(`[ACTIVITY TRACKING] ${itemType} Post-save - Sale detected via save()`);
             console.log('  - doc.sold:', doc.sold);

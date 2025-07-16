@@ -77,9 +77,7 @@ describe('PUT /sealed-products/:id', () => {
         myPrice: 160,
       };
 
-      const res = await request(app)
-        .put(`/sealed-products/${productId}`)
-        .send(updates);
+      const res = await request(app).put(`/sealed-products/${productId}`).send(updates);
 
       expect(res.status).to.equal(200);
       expect(res.body).to.have.property('success', true);
@@ -90,9 +88,7 @@ describe('PUT /sealed-products/:id', () => {
       const fakeId = '507f1f77bcf86cd799439011';
       const updates = { myPrice: 160 };
 
-      const res = await request(app)
-        .put(`/sealed-products/${fakeId}`)
-        .send(updates);
+      const res = await request(app).put(`/sealed-products/${fakeId}`).send(updates);
 
       expect(res.status).to.equal(404);
       expect(res.body).to.have.property('success', false);
@@ -118,9 +114,7 @@ describe('PUT /sealed-products/:id', () => {
         trackingNumber: 'TRACK123',
       };
 
-      const res = await request(app)
-        .post(`/sealed-products/${productId}/mark-sold`)
-        .send(saleData);
+      const res = await request(app).post(`/sealed-products/${productId}/mark-sold`).send(saleData);
 
       expect(res.status).to.equal(200);
       expect(res.body).to.have.property('success', true);
@@ -146,9 +140,7 @@ describe('PUT /sealed-products/:id', () => {
         buyerEmail: 'john@example.com',
       };
 
-      const res = await request(app)
-        .post(`/sealed-products/${fakeId}/mark-sold`)
-        .send(saleData);
+      const res = await request(app).post(`/sealed-products/${fakeId}/mark-sold`).send(saleData);
 
       expect(res.status).to.equal(404);
       expect(res.body).to.have.property('success', false);

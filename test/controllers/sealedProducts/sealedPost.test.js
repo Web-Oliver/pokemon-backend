@@ -62,9 +62,7 @@ describe('POST /sealed-products', () => {
         images: [],
       };
 
-      const res = await request(app)
-        .post('/sealed-products')
-        .send(newProduct);
+      const res = await request(app).post('/sealed-products').send(newProduct);
 
       expect(res.status).to.equal(201);
       expect(res.body).to.have.property('success', true);
@@ -80,9 +78,7 @@ describe('POST /sealed-products', () => {
         // Missing setName, category, and myPrice
       };
 
-      const res = await request(app)
-        .post('/sealed-products')
-        .send(incompleteProduct);
+      const res = await request(app).post('/sealed-products').send(incompleteProduct);
 
       expect(res.status).to.equal(400);
       expect(res.body).to.have.property('success', false);
@@ -97,9 +93,7 @@ describe('POST /sealed-products', () => {
         images: [],
       };
 
-      const res = await request(app)
-        .post('/sealed-products')
-        .send(invalidProduct);
+      const res = await request(app).post('/sealed-products').send(invalidProduct);
 
       expect(res.status).to.equal(400);
       expect(res.body).to.have.property('success', false);

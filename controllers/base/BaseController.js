@@ -14,7 +14,6 @@ const container = require('../../container');
  * - Dependency Inversion: Depends on abstractions (services) not implementations
  */
 class BaseController {
-
   /**
    * Initialize BaseController
    *
@@ -55,11 +54,14 @@ class BaseController {
 
     try {
       // Use the service to get all items
-      const results = await this.service.getAll({}, {
-        populate: this.options.defaultPopulate,
-        sort: this.options.defaultSort,
-        limit: parseInt(req.query.limit, 10) || this.options.defaultLimit,
-      });
+      const results = await this.service.getAll(
+        {},
+        {
+          populate: this.options.defaultPopulate,
+          sort: this.options.defaultSort,
+          limit: parseInt(req.query.limit, 10) || this.options.defaultLimit,
+        },
+      );
 
       console.log(`Found ${results.length} ${this.options.pluralName}`);
       console.log(`=== GET ALL ${this.options.entityName.toUpperCase()}S END ===`);

@@ -33,9 +33,7 @@ describe('POST /psa-graded-cards', () => {
         images: [],
       };
 
-      const res = await request(app)
-        .post('/psa-graded-cards')
-        .send(newCard);
+      const res = await request(app).post('/psa-graded-cards').send(newCard);
 
       expect(res.status).to.equal(201);
       expect(res.body).to.have.property('success', true);
@@ -51,9 +49,7 @@ describe('POST /psa-graded-cards', () => {
         // Missing cardName, setName, and myPrice
       };
 
-      const res = await request(app)
-        .post('/psa-graded-cards')
-        .send(incompleteCard);
+      const res = await request(app).post('/psa-graded-cards').send(incompleteCard);
 
       expect(res.status).to.equal(400);
       expect(res.body).to.have.property('success', false);
@@ -68,9 +64,7 @@ describe('POST /psa-graded-cards', () => {
         images: [],
       };
 
-      const res = await request(app)
-        .post('/psa-graded-cards')
-        .send(invalidCard);
+      const res = await request(app).post('/psa-graded-cards').send(invalidCard);
 
       expect(res.status).to.equal(400);
       expect(res.body).to.have.property('success', false);

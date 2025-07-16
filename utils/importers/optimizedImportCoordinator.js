@@ -1,6 +1,11 @@
 const { importSetMetadata, importCardData } = require('./psaDataImporter');
 const { importCardMarketData } = require('./cardMarketImporter');
-const { getAllPsaFiles, getAllPsaMetadataFiles, getAllPsaIndividualFiles, getAllSealedProductFiles } = require('./fileUtils');
+const {
+  getAllPsaFiles,
+  getAllPsaMetadataFiles,
+  getAllPsaIndividualFiles,
+  getAllSealedProductFiles,
+} = require('./fileUtils');
 
 /**
  * OPTIMIZED IMPORT COORDINATOR WITH CONTEXT7 BEST PRACTICES
@@ -79,7 +84,9 @@ const importAllDataOptimized = async (options = {}) => {
 
       const totalPsaFiles = metadataFiles.length + individualFiles.length;
 
-      console.log(`📊 Found ${totalPsaFiles} PSA files to import (${metadataFiles.length} metadata + ${individualFiles.length} individual)`);
+      console.log(
+        `📊 Found ${totalPsaFiles} PSA files to import (${metadataFiles.length} metadata + ${individualFiles.length} individual)`,
+      );
       totalResults.psaFiles = totalPsaFiles;
 
       // Phase 1: OPTIMIZED Import set metadata with batching
@@ -190,7 +197,9 @@ const importAllDataOptimized = async (options = {}) => {
 
       totalResults.setsUpdated = totalSetsUpdated;
       totalResults.cardsProcessed = totalCardsProcessed;
-      console.log(`✅ Phase 2 completed: ${totalResults.setsUpdated} sets updated, ${totalResults.cardsProcessed} cards processed`);
+      console.log(
+        `✅ Phase 2 completed: ${totalResults.setsUpdated} sets updated, ${totalResults.cardsProcessed} cards processed`,
+      );
 
       totalResults.performanceMetrics.phases.psaImport = Date.now() - phaseStartTime;
     }
@@ -367,7 +376,9 @@ const importAllDataOptimized = async (options = {}) => {
       const mongoose = require('mongoose');
       const validSetIds = new Set(allSetsRecheck.map((set) => set._id.toString()));
       const orphanedCount = await Card.countDocuments({
-        setId: { $nin: Array.from(validSetIds).map((id) => new mongoose.Types.ObjectId(id)) },
+        setId: {
+          $nin: Array.from(validSetIds).map((id) => new mongoose.Types.ObjectId(id)),
+        },
       });
 
       console.log(`Pass ${pass} - Sets corrected: ${issuesFound}, Orphaned cards: ${orphanedCount}`);
@@ -396,16 +407,24 @@ const importAllDataOptimized = async (options = {}) => {
     console.log('📊 Performance Summary:');
     console.log(`   Total Time: ${(totalTime / 1000).toFixed(2)} seconds`);
     console.log(`   PSA Files Processed: ${totalResults.psaFiles}`);
-    console.log(`   Sets Created: ${totalResults.setsCreated} (${totalResults.performanceMetrics.throughput.setsPerSecond}/sec)`);
-    console.log(`   Cards Processed: ${totalResults.cardsProcessed} (${totalResults.performanceMetrics.throughput.cardsPerSecond}/sec)`);
-    console.log(`   Sealed Products: ${totalResults.sealedProductsProcessed} (${totalResults.performanceMetrics.throughput.productsPerSecond}/sec)`);
+    console.log(
+      `   Sets Created: ${totalResults.setsCreated} (${totalResults.performanceMetrics.throughput.setsPerSecond}/sec)`,
+    );
+    console.log(
+      `   Cards Processed: ${totalResults.cardsProcessed} (${totalResults.performanceMetrics.throughput.cardsPerSecond}/sec)`,
+    );
+    console.log(
+      `   Sealed Products: ${totalResults.sealedProductsProcessed} (${totalResults.performanceMetrics.throughput.productsPerSecond}/sec)`,
+    );
     console.log(`   Errors: ${totalResults.errors.length}`);
 
     if (totalResults.performanceMetrics.phases.psaImport) {
       console.log(`   PSA Import: ${(totalResults.performanceMetrics.phases.psaImport / 1000).toFixed(2)}s`);
     }
     if (totalResults.performanceMetrics.phases.sealedProductImport) {
-      console.log(`   Sealed Products: ${(totalResults.performanceMetrics.phases.sealedProductImport / 1000).toFixed(2)}s`);
+      console.log(
+        `   Sealed Products: ${(totalResults.performanceMetrics.phases.sealedProductImport / 1000).toFixed(2)}s`,
+      );
     }
     console.log(`   Card Count Update: ${(totalResults.performanceMetrics.phases.cardCountUpdate / 1000).toFixed(2)}s`);
     console.log(`   Verification: ${(totalResults.performanceMetrics.phases.verification / 1000).toFixed(2)}s`);

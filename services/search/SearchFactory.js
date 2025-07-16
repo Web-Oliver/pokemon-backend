@@ -352,7 +352,10 @@ class SearchFactory {
       const searchPromises = types.map(async (type) => {
         try {
           const strategy = this.getStrategy(type, options);
-          const typeResults = await strategy.search(query, { ...options, limit });
+          const typeResults = await strategy.search(query, {
+            ...options,
+            limit,
+          });
 
           return {
             type,
@@ -381,7 +384,7 @@ class SearchFactory {
           data: result.results,
           count: result.count,
           success: result.success,
-          ...result.error && { error: result.error },
+          ...(result.error && { error: result.error }),
         };
       });
 
@@ -407,7 +410,10 @@ class SearchFactory {
       const suggestionPromises = types.map(async (type) => {
         try {
           const strategy = this.getStrategy(type, options);
-          const suggestions = await strategy.suggest(query, { ...options, limit });
+          const suggestions = await strategy.suggest(query, {
+            ...options,
+            limit,
+          });
 
           return {
             type,
@@ -436,7 +442,7 @@ class SearchFactory {
           data: result.suggestions,
           count: result.count,
           success: result.success,
-          ...result.error && { error: result.error },
+          ...(result.error && { error: result.error }),
         };
       });
 

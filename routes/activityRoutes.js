@@ -116,8 +116,8 @@ router.get('/', validateActivityFilters, async (req, res, next) => {
     console.log('[ACTIVITY API] GET /activities - Query:', req.query);
 
     const options = {
-      limit: parseInt(req.query.limit) || 50,
-      offset: parseInt(req.query.offset) || 0,
+      limit: parseInt(req.query.limit, 10) || 50,
+      offset: parseInt(req.query.offset, 10) || 0,
       type: req.query.type,
       entityType: req.query.entityType,
       entityId: req.query.entityId,
@@ -172,8 +172,10 @@ router.get('/types', (req, res) => {
   const activityTypes = Object.entries(ACTIVITY_TYPES).map(([key, value]) => ({
     key,
     value,
-    label: key.split('_').map((word) =>
-      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '),
+    label: key
+      .split('_')
+      .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' '),
   }));
 
   const priorities = Object.entries(ACTIVITY_PRIORITIES).map(([key, value]) => ({
@@ -204,7 +206,7 @@ router.get('/types', (req, res) => {
  */
 router.get('/recent', async (req, res, next) => {
   try {
-    const limit = parseInt(req.query.limit) || 10;
+    const limit = parseInt(req.query.limit, 10) || 10;
 
     console.log('[ACTIVITY API] GET /activities/recent - Limit:', limit);
 

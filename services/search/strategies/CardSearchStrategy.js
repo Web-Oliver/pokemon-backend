@@ -317,7 +317,12 @@ class CardSearchStrategy extends BaseSearchStrategy {
             // Card name starts with query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$cardName' },
+                    regex: `^${this.escapeRegex(normalizedQuery)}`,
+                  },
+                },
                 then: 70,
                 else: 0,
               },
@@ -325,7 +330,12 @@ class CardSearchStrategy extends BaseSearchStrategy {
             // Base name starts with query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$baseName' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$baseName' },
+                    regex: `^${this.escapeRegex(normalizedQuery)}`,
+                  },
+                },
                 then: 60,
                 else: 0,
               },
@@ -333,7 +343,12 @@ class CardSearchStrategy extends BaseSearchStrategy {
             // Card name contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$cardName' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 50,
                 else: 0,
               },
@@ -341,7 +356,12 @@ class CardSearchStrategy extends BaseSearchStrategy {
             // Base name contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$baseName' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$baseName' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 40,
                 else: 0,
               },
@@ -349,7 +369,12 @@ class CardSearchStrategy extends BaseSearchStrategy {
             // Variety contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$variety' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$variety' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 30,
                 else: 0,
               },
@@ -357,25 +382,37 @@ class CardSearchStrategy extends BaseSearchStrategy {
             // Pokemon number contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$pokemonNumber' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$pokemonNumber' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 25,
                 else: 0,
               },
             },
             // Popularity score (if enabled)
-            ...this.options.enablePopularityScoring
-              ? [{
-                $cond: {
-                  if: { $gt: ['$psaTotalGradedForCard', 0] },
-                  then: { $divide: ['$psaTotalGradedForCard', 1000] },
-                  else: 0,
-                },
-              }]
-              : [],
+            ...(this.options.enablePopularityScoring
+              ? [
+                  {
+                    $cond: {
+                      if: { $gt: ['$psaTotalGradedForCard', 0] },
+                      then: { $divide: ['$psaTotalGradedForCard', 1000] },
+                      else: 0,
+                    },
+                  },
+                ]
+              : []),
             // Length-based relevance score (shorter matches are more relevant)
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$cardName' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: { $divide: [20, { $strLenCP: '$cardName' }] },
                 else: 0,
               },
@@ -477,7 +514,12 @@ class CardSearchStrategy extends BaseSearchStrategy {
         // Exact word match in card name
         {
           $cond: {
-            if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: `\\b${this.escapeRegex(word)}\\b` } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: '$cardName' },
+                regex: `\\b${this.escapeRegex(word)}\\b`,
+              },
+            },
             then: 20 * wordWeight,
             else: 0,
           },
@@ -485,7 +527,12 @@ class CardSearchStrategy extends BaseSearchStrategy {
         // Exact word match in base name
         {
           $cond: {
-            if: { $regexMatch: { input: { $toLower: '$baseName' }, regex: `\\b${this.escapeRegex(word)}\\b` } },
+            if: {
+              $regexMatch: {
+                input: { $toLower: '$baseName' },
+                regex: `\\b${this.escapeRegex(word)}\\b`,
+              },
+            },
             then: 15 * wordWeight,
             else: 0,
           },
@@ -499,10 +546,7 @@ class CardSearchStrategy extends BaseSearchStrategy {
     return {
       $addFields: {
         score: {
-          $add: [
-            ...baseScoring.$addFields.score.$add,
-            ...scoreConditions,
-          ],
+          $add: [...baseScoring.$addFields.score.$add, ...scoreConditions],
         },
       },
     };

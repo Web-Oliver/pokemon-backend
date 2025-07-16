@@ -21,11 +21,13 @@ const applyPostPopulationFilters = (cards, filters) => {
 
   if (setName) {
     filteredCards = filteredCards.filter((card) =>
-      card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase()));
+      card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase()),
+    );
   }
   if (cardName) {
     filteredCards = filteredCards.filter((card) =>
-      card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase()));
+      card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase()),
+    );
   }
 
   return filteredCards;
@@ -34,14 +36,13 @@ const applyPostPopulationFilters = (cards, filters) => {
 const findAllPsaGradedCards = async (filters) => {
   const query = buildQuery(filters);
 
-  const psaGradedCards = await PsaGradedCard.find(query)
-    .populate({
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-        model: 'Set',
-      },
-    });
+  const psaGradedCards = await PsaGradedCard.find(query).populate({
+    path: 'cardId',
+    populate: {
+      path: 'setId',
+      model: 'Set',
+    },
+  });
 
   return applyPostPopulationFilters(psaGradedCards, filters);
 };
@@ -51,14 +52,13 @@ const findPsaGradedCardById = async (id) => {
     throw new Error('Invalid ObjectId format');
   }
 
-  const psaGradedCard = await PsaGradedCard.findById(id)
-    .populate({
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-        model: 'Set',
-      },
-    });
+  const psaGradedCard = await PsaGradedCard.findById(id).populate({
+    path: 'cardId',
+    populate: {
+      path: 'setId',
+      model: 'Set',
+    },
+  });
 
   if (!psaGradedCard) {
     throw new Error('PSA graded card not found');

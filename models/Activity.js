@@ -47,194 +47,199 @@ const ACTIVITY_STATUS = {
 };
 
 // Context7 Activity Schema with Premium Features
-const activitySchema = new mongoose.Schema({
-  // Core Activity Information
-  type: {
-    type: String,
-    enum: Object.values(ACTIVITY_TYPES),
-    required: true,
-    index: true,
-  },
-
-  title: {
-    type: String,
-    required: true,
-    maxLength: 200,
-    trim: true,
-  },
-
-  description: {
-    type: String,
-    required: true,
-    maxLength: 500,
-    trim: true,
-  },
-
-  details: {
-    type: String,
-    maxLength: 1000,
-    trim: true,
-  },
-
-  // Context7 Premium Metadata
-  priority: {
-    type: String,
-    enum: Object.values(ACTIVITY_PRIORITIES),
-    default: ACTIVITY_PRIORITIES.MEDIUM,
-    index: true,
-  },
-
-  status: {
-    type: String,
-    enum: Object.values(ACTIVITY_STATUS),
-    default: ACTIVITY_STATUS.ACTIVE,
-    index: true,
-  },
-
-  // Entity References - Context7 Relationship Tracking
-  entityType: {
-    type: String,
-    enum: ['psa_card', 'raw_card', 'sealed_product', 'auction', 'collection', 'system'],
-    index: true,
-  },
-
-  entityId: {
-    type: mongoose.Schema.Types.ObjectId,
-    index: true,
-  },
-
-  // Context7 Rich Data Structure
-  metadata: {
-    // Item-specific data
-    cardName: String,
-    setName: String,
-    grade: String,
-    condition: String,
-    category: String,
-
-    // Price tracking
-    previousPrice: mongoose.Schema.Types.Decimal128,
-    newPrice: mongoose.Schema.Types.Decimal128,
-    priceChange: mongoose.Schema.Types.Decimal128,
-    priceChangePercentage: Number,
-
-    // Auction data
-    auctionTitle: String,
-    itemCount: Number,
-    estimatedValue: mongoose.Schema.Types.Decimal128,
-
-    // Sale information
-    salePrice: mongoose.Schema.Types.Decimal128,
-    paymentMethod: String,
-    source: String,
-    buyerName: String,
-
-    // Milestone data
-    milestoneType: String,
-    milestoneValue: Number,
-    milestoneUnit: String,
-
-    // Additional context
-    badges: [String],
-    tags: [String],
-    color: {
+const activitySchema = new mongoose.Schema(
+  {
+    // Core Activity Information
+    type: {
       type: String,
-      default: 'indigo',
+      enum: Object.values(ACTIVITY_TYPES),
+      required: true,
+      index: true,
     },
-    icon: String,
+
+    title: {
+      type: String,
+      required: true,
+      maxLength: 200,
+      trim: true,
+    },
+
+    description: {
+      type: String,
+      required: true,
+      maxLength: 500,
+      trim: true,
+    },
+
+    details: {
+      type: String,
+      maxLength: 1000,
+      trim: true,
+    },
+
+    // Context7 Premium Metadata
+    priority: {
+      type: String,
+      enum: Object.values(ACTIVITY_PRIORITIES),
+      default: ACTIVITY_PRIORITIES.MEDIUM,
+      index: true,
+    },
+
+    status: {
+      type: String,
+      enum: Object.values(ACTIVITY_STATUS),
+      default: ACTIVITY_STATUS.ACTIVE,
+      index: true,
+    },
+
+    // Entity References - Context7 Relationship Tracking
+    entityType: {
+      type: String,
+      enum: ['psa_card', 'raw_card', 'sealed_product', 'auction', 'collection', 'system'],
+      index: true,
+    },
+
+    entityId: {
+      type: mongoose.Schema.Types.ObjectId,
+      index: true,
+    },
+
+    // Context7 Rich Data Structure
+    metadata: {
+      // Item-specific data
+      cardName: String,
+      setName: String,
+      grade: String,
+      condition: String,
+      category: String,
+
+      // Price tracking
+      previousPrice: mongoose.Schema.Types.Decimal128,
+      newPrice: mongoose.Schema.Types.Decimal128,
+      priceChange: mongoose.Schema.Types.Decimal128,
+      priceChangePercentage: Number,
+
+      // Auction data
+      auctionTitle: String,
+      itemCount: Number,
+      estimatedValue: mongoose.Schema.Types.Decimal128,
+
+      // Sale information
+      salePrice: mongoose.Schema.Types.Decimal128,
+      paymentMethod: String,
+      source: String,
+      buyerName: String,
+
+      // Milestone data
+      milestoneType: String,
+      milestoneValue: Number,
+      milestoneUnit: String,
+
+      // Additional context
+      badges: [String],
+      tags: [String],
+      color: {
+        type: String,
+        default: 'indigo',
+      },
+      icon: String,
+    },
+
+    // Context7 Timeline Features
+    timestamp: {
+      type: Date,
+      default: Date.now,
+      index: true,
+    },
+
+    relativeTime: {
+      type: String, // "2 hours ago", "1 day ago", etc.
+      default: 'just now',
+    },
+
+    // Context7 User Context
+    userAgent: String,
+    ipAddress: String,
+    sessionId: String,
+
+    // Context7 Analytics
+    isRead: {
+      type: Boolean,
+      default: false,
+      index: true,
+    },
+
+    readAt: Date,
+
+    // Context7 Archival System
+    isArchived: {
+      type: Boolean,
+      default: false,
+      index: true,
+    },
+
+    archivedAt: Date,
+
+    // Context7 Performance Optimization
+    searchVector: String, // For full-text search optimization
   },
+  {
+    timestamps: {
+      createdAt: 'createdAt',
+      updatedAt: 'updatedAt',
+    },
+    // Context7 Advanced Indexing
+    collection: 'activities',
+    // Context7 Transform for Dynamic Fields
+    toJSON: {
+      virtuals: true,
+      transform(doc, ret) {
+        // Calculate relative time dynamically for every JSON response
+        const now = new Date();
+        const diff = now - ret.timestamp;
+        const minutes = Math.floor(diff / 60000);
+        const hours = Math.floor(diff / 3600000);
+        const days = Math.floor(diff / 86400000);
+        const weeks = Math.floor(days / 7);
+        const months = Math.floor(days / 30);
 
-  // Context7 Timeline Features
-  timestamp: {
-    type: Date,
-    default: Date.now,
-    index: true,
-  },
+        if (minutes < 1) {
+          ret.relativeTime = 'just now';
+        } else if (minutes < 60) {
+          ret.relativeTime = `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+        } else if (hours < 24) {
+          ret.relativeTime = `${hours} hour${hours > 1 ? 's' : ''} ago`;
+        } else if (days < 7) {
+          ret.relativeTime = `${days} day${days > 1 ? 's' : ''} ago`;
+        } else if (weeks < 4) {
+          ret.relativeTime = `${weeks} week${weeks > 1 ? 's' : ''} ago`;
+        } else if (months < 12) {
+          ret.relativeTime = `${months} month${months > 1 ? 's' : ''} ago`;
+        } else {
+          ret.relativeTime = new Date(ret.timestamp).toLocaleDateString();
+        }
 
-  relativeTime: {
-    type: String, // "2 hours ago", "1 day ago", etc.
-    default: 'just now',
-  },
-
-  // Context7 User Context
-  userAgent: String,
-  ipAddress: String,
-  sessionId: String,
-
-  // Context7 Analytics
-  isRead: {
-    type: Boolean,
-    default: false,
-    index: true,
-  },
-
-  readAt: Date,
-
-  // Context7 Archival System
-  isArchived: {
-    type: Boolean,
-    default: false,
-    index: true,
-  },
-
-  archivedAt: Date,
-
-  // Context7 Performance Optimization
-  searchVector: String, // For full-text search optimization
-
-}, {
-  timestamps: {
-    createdAt: 'createdAt',
-    updatedAt: 'updatedAt',
-  },
-  // Context7 Advanced Indexing
-  collection: 'activities',
-  // Context7 Transform for Dynamic Fields
-  toJSON: {
-    virtuals: true,
-    transform(doc, ret) {
-      // Calculate relative time dynamically for every JSON response
-      const now = new Date();
-      const diff = now - ret.timestamp;
-      const minutes = Math.floor(diff / 60000);
-      const hours = Math.floor(diff / 3600000);
-      const days = Math.floor(diff / 86400000);
-      const weeks = Math.floor(days / 7);
-      const months = Math.floor(days / 30);
-
-      if (minutes < 1) {
-        ret.relativeTime = 'just now';
-      } else if (minutes < 60) {
-        ret.relativeTime = `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
-      } else if (hours < 24) {
-        ret.relativeTime = `${hours} hour${hours > 1 ? 's' : ''} ago`;
-      } else if (days < 7) {
-        ret.relativeTime = `${days} day${days > 1 ? 's' : ''} ago`;
-      } else if (weeks < 4) {
-        ret.relativeTime = `${weeks} week${weeks > 1 ? 's' : ''} ago`;
-      } else if (months < 12) {
-        ret.relativeTime = `${months} month${months > 1 ? 's' : ''} ago`;
-      } else {
-        ret.relativeTime = new Date(ret.timestamp).toLocaleDateString();
-      }
-
-      return ret;
+        return ret;
+      },
     },
   },
-});
+);
 
 // Context7 Premium Indexes for Performance
 activitySchema.index({ type: 1, timestamp: -1 });
 activitySchema.index({ entityType: 1, entityId: 1 });
 activitySchema.index({ priority: 1, status: 1 });
 activitySchema.index({ timestamp: -1, isArchived: 1 });
-activitySchema.index({
-  title: 'text',
-  description: 'text',
-  details: 'text',
-}, {
-  name: 'activity_text_search',
-});
+activitySchema.index(
+  {
+    title: 'text',
+    description: 'text',
+    details: 'text',
+  },
+  {
+    name: 'activity_text_search',
+  },
+);
 
 // Context7 Virtual Fields for Enhanced UX
 activitySchema.virtual('formattedTimestamp').get(function () {
@@ -306,9 +311,12 @@ activitySchema.pre('save', function (next) {
     this.details,
     this.metadata?.cardName,
     this.metadata?.setName,
-    ...this.metadata?.tags || [],
-    ...this.metadata?.badges || [],
-  ].filter(Boolean).join(' ').toLowerCase();
+    ...(this.metadata?.tags || []),
+    ...(this.metadata?.badges || []),
+  ]
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
 
   next();
 });
@@ -324,10 +332,7 @@ activitySchema.statics.createActivity = async function (activityData) {
 activitySchema.statics.getRecentActivities = async function (limit = 50, filters = {}) {
   const query = { status: ACTIVITY_STATUS.ACTIVE, ...filters };
 
-  return this.find(query)
-    .sort({ timestamp: -1 })
-    .limit(limit)
-    .lean();
+  return this.find(query).sort({ timestamp: -1 }).limit(limit).lean();
 };
 
 activitySchema.statics.getActivitiesByTimeRange = async function (startDate, endDate, filters = {}) {
@@ -345,7 +350,9 @@ activitySchema.statics.getActivitiesByEntity = async function (entityType, entit
     entityType,
     entityId,
     status: ACTIVITY_STATUS.ACTIVE,
-  }).sort({ timestamp: -1 }).lean();
+  })
+    .sort({ timestamp: -1 })
+    .lean();
 };
 
 activitySchema.statics.searchActivities = async function (searchTerm, filters = {}) {

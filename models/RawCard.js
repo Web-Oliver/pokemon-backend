@@ -25,7 +25,6 @@ rawCardSchema.plugin(activityTrackingPlugin, {
   },
 });
 
-
 // Apply shared transform function for JSON responses
 rawCardSchema.set('toJSON', {
   transform: collectionItemTransform,

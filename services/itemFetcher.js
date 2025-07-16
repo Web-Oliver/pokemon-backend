@@ -19,27 +19,27 @@ async function fetchItemById(itemId, itemCategory) {
   let fetchedItem = null;
 
   switch (itemCategory) {
-  case 'SealedProduct':
-    fetchedItem = await SealedProduct.findById(itemId);
-    break;
-  case 'PsaGradedCard':
-    fetchedItem = await PsaGradedCard.findById(itemId).populate({
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-      },
-    });
-    break;
-  case 'RawCard':
-    fetchedItem = await RawCard.findById(itemId).populate({
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-      },
-    });
-    break;
-  default:
-    throw new ValidationError(`Unknown itemCategory: ${itemCategory}`);
+    case 'SealedProduct':
+      fetchedItem = await SealedProduct.findById(itemId);
+      break;
+    case 'PsaGradedCard':
+      fetchedItem = await PsaGradedCard.findById(itemId).populate({
+        path: 'cardId',
+        populate: {
+          path: 'setId',
+        },
+      });
+      break;
+    case 'RawCard':
+      fetchedItem = await RawCard.findById(itemId).populate({
+        path: 'cardId',
+        populate: {
+          path: 'setId',
+        },
+      });
+      break;
+    default:
+      throw new ValidationError(`Unknown itemCategory: ${itemCategory}`);
   }
 
   if (!fetchedItem) {

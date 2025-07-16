@@ -35,10 +35,12 @@ const errorHandler = (err, req, res, next) => {
   if (err.name === 'ValidationError') {
     statusCode = 400;
     message = 'Validation Error';
-  } else if (err.code === 11000) { // Duplicate key error
+  } else if (err.code === 11000) {
+    // Duplicate key error
     statusCode = 409;
     message = 'Duplicate entry';
-  } else if (err.name === 'CastError') { // Invalid ObjectId
+  } else if (err.name === 'CastError') {
+    // Invalid ObjectId
     statusCode = 400;
     message = 'Invalid ID format';
   }

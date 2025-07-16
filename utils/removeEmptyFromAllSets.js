@@ -82,8 +82,7 @@ async function removeEmptyFromAllSets() {
     if (testData.pokemon_sets) {
       const originalTestCount = testData.pokemon_sets.length;
 
-      testData.pokemon_sets = testData.pokemon_sets.filter((set) =>
-        set.total_graded !== '0' && set.total_graded !== 0);
+      testData.pokemon_sets = testData.pokemon_sets.filter((set) => set.total_graded !== '0' && set.total_graded !== 0);
       const newTestCount = testData.pokemon_sets.length;
 
       testData.total_pokemon_sets = newTestCount;

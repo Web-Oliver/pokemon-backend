@@ -8,7 +8,6 @@ const path = require('path');
  * Handles deletion of image files with robust error handling and logging.
  */
 class ImageManager {
-
   /**
    * Deletes multiple image files from the filesystem
    *

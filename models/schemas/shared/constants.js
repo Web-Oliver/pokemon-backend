@@ -69,9 +69,11 @@ const COMMON_PATTERNS = {
   },
 
   // Array of strings for images
-  imagesArray: [{
-    type: String,
-  }],
+  imagesArray: [
+    {
+      type: String,
+    },
+  ],
 };
 
 module.exports = {

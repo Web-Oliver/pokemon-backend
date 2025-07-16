@@ -41,9 +41,12 @@ class PsaGradedCardRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of PSA graded cards
    */
   async findByGradeRange(minGrade, maxGrade, options = {}) {
-    return await this.findAll({
-      grade: { $gte: minGrade, $lte: maxGrade },
-    }, options);
+    return await this.findAll(
+      {
+        grade: { $gte: minGrade, $lte: maxGrade },
+      },
+      options,
+    );
   }
 
   /**
@@ -82,9 +85,12 @@ class PsaGradedCardRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of PSA graded cards
    */
   async findByPriceRange(minPrice, maxPrice, options = {}) {
-    return await this.findAll({
-      myPrice: { $gte: minPrice, $lte: maxPrice },
-    }, options);
+    return await this.findAll(
+      {
+        myPrice: { $gte: minPrice, $lte: maxPrice },
+      },
+      options,
+    );
   }
 
   /**
@@ -99,7 +105,11 @@ class PsaGradedCardRepository extends BaseRepository {
           totalCards: { $sum: 1 },
           totalValue: { $sum: { $toDouble: '$myPrice' } },
           soldCards: { $sum: { $cond: [{ $eq: ['$sold', true] }, 1, 0] } },
-          soldValue: { $sum: { $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0] } },
+          soldValue: {
+            $sum: {
+              $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0],
+            },
+          },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
           gradeDistribution: {
             $push: '$grade',
@@ -122,15 +132,17 @@ class PsaGradedCardRepository extends BaseRepository {
 
     const result = await this.aggregate(pipeline);
 
-    return result[0] || {
-      totalCards: 0,
-      totalValue: 0,
-      soldCards: 0,
-      soldValue: 0,
-      avgPrice: 0,
-      unsoldCards: 0,
-      gradeDistribution: [],
-    };
+    return (
+      result[0] || {
+        totalCards: 0,
+        totalValue: 0,
+        soldCards: 0,
+        soldValue: 0,
+        avgPrice: 0,
+        unsoldCards: 0,
+        gradeDistribution: [],
+      }
+    );
   }
 
   /**
@@ -175,9 +187,12 @@ class PsaGradedCardRepository extends BaseRepository {
 
     cutoffDate.setDate(cutoffDate.getDate() - days);
 
-    return await this.findAll({
-      'priceHistory.dateUpdated': { $gte: cutoffDate },
-    }, options);
+    return await this.findAll(
+      {
+        'priceHistory.dateUpdated': { $gte: cutoffDate },
+      },
+      options,
+    );
   }
 
   /**

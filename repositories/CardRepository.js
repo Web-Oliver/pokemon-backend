@@ -67,11 +67,55 @@ class CardRepository extends BaseRepository {
           $addFields: {
             score: {
               $add: [
-                { $cond: { if: { $eq: [{ $toLower: '$cardName' }, query.toLowerCase()] }, then: 100, else: 0 } },
-                { $cond: { if: { $eq: [{ $toLower: '$baseName' }, query.toLowerCase()] }, then: 90, else: 0 } },
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: `^${query.toLowerCase()}` } }, then: 80, else: 0 } },
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$baseName' }, regex: `^${query.toLowerCase()}` } }, then: 70, else: 0 } },
-                { $cond: { if: { $gt: ['$psaTotalGradedForCard', 0] }, then: { $divide: ['$psaTotalGradedForCard', 1000] }, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $eq: [{ $toLower: '$cardName' }, query.toLowerCase()],
+                    },
+                    then: 100,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: {
+                      $eq: [{ $toLower: '$baseName' }, query.toLowerCase()],
+                    },
+                    then: 90,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$cardName' },
+                        regex: `^${query.toLowerCase()}`,
+                      },
+                    },
+                    then: 80,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$baseName' },
+                        regex: `^${query.toLowerCase()}`,
+                      },
+                    },
+                    then: 70,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: { $gt: ['$psaTotalGradedForCard', 0] },
+                    then: { $divide: ['$psaTotalGradedForCard', 1000] },
+                    else: 0,
+                  },
+                },
               ],
             },
           },
@@ -248,7 +292,9 @@ class CardRepository extends BaseRepository {
             avgPsaPopulation: { $avg: '$psaTotalGradedForCard' },
             maxPsaPopulation: { $max: '$psaTotalGradedForCard' },
             minPsaPopulation: { $min: '$psaTotalGradedForCard' },
-            cardsWithGrading: { $sum: { $cond: [{ $gt: ['$psaTotalGradedForCard', 0] }, 1, 0] } },
+            cardsWithGrading: {
+              $sum: { $cond: [{ $gt: ['$psaTotalGradedForCard', 0] }, 1, 0] },
+            },
             psaGradeBreakdown: {
               $push: {
                 psa_1: '$psaGrades.psa_1',
@@ -287,7 +333,9 @@ class CardRepository extends BaseRepository {
             totalPsaPopulation: { $sum: '$psaTotalGradedForCard' },
             avgPsaPopulation: { $avg: '$psaTotalGradedForCard' },
             maxPsaPopulation: { $max: '$psaTotalGradedForCard' },
-            cardsWithGrading: { $sum: { $cond: [{ $gt: ['$psaTotalGradedForCard', 0] }, 1, 0] } },
+            cardsWithGrading: {
+              $sum: { $cond: [{ $gt: ['$psaTotalGradedForCard', 0] }, 1, 0] },
+            },
             uniqueSets: { $addToSet: '$setId' },
             totalPsaGrades: {
               $sum: {
@@ -313,7 +361,9 @@ class CardRepository extends BaseRepository {
             gradingPercentage: {
               $cond: {
                 if: { $gt: ['$totalCards', 0] },
-                then: { $multiply: [{ $divide: ['$cardsWithGrading', '$totalCards'] }, 100] },
+                then: {
+                  $multiply: [{ $divide: ['$cardsWithGrading', '$totalCards'] }, 100],
+                },
                 else: 0,
               },
             },
@@ -387,7 +437,9 @@ class CardRepository extends BaseRepository {
 
       // Set name filter
       if (filters.setName) {
-        matchConditions.push({ 'setInfo.setName': new RegExp(filters.setName, 'i') });
+        matchConditions.push({
+          'setInfo.setName': new RegExp(filters.setName, 'i'),
+        });
       }
 
       // Year filter
@@ -407,14 +459,18 @@ class CardRepository extends BaseRepository {
 
       // PSA population filter
       if (filters.minPsaPopulation) {
-        matchConditions.push({ psaTotalGradedForCard: { $gte: filters.minPsaPopulation } });
+        matchConditions.push({
+          psaTotalGradedForCard: { $gte: filters.minPsaPopulation },
+        });
       }
 
       // PSA grade filter
       if (filters.psaGrade) {
         const gradeField = `psaGrades.psa_${filters.psaGrade}`;
 
-        matchConditions.push({ [gradeField]: { $gte: filters.minGradeCount || 1 } });
+        matchConditions.push({
+          [gradeField]: { $gte: filters.minGradeCount || 1 },
+        });
       }
 
       // Add match stage
@@ -430,11 +486,55 @@ class CardRepository extends BaseRepository {
           $addFields: {
             score: {
               $add: [
-                { $cond: { if: { $eq: [{ $toLower: '$cardName' }, query.toLowerCase()] }, then: 100, else: 0 } },
-                { $cond: { if: { $eq: [{ $toLower: '$baseName' }, query.toLowerCase()] }, then: 90, else: 0 } },
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: `^${query.toLowerCase()}` } }, then: 80, else: 0 } },
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$baseName' }, regex: `^${query.toLowerCase()}` } }, then: 70, else: 0 } },
-                { $cond: { if: { $gt: ['$psaTotalGradedForCard', 0] }, then: { $divide: ['$psaTotalGradedForCard', 1000] }, else: 0 } },
+                {
+                  $cond: {
+                    if: {
+                      $eq: [{ $toLower: '$cardName' }, query.toLowerCase()],
+                    },
+                    then: 100,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: {
+                      $eq: [{ $toLower: '$baseName' }, query.toLowerCase()],
+                    },
+                    then: 90,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$cardName' },
+                        regex: `^${query.toLowerCase()}`,
+                      },
+                    },
+                    then: 80,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: {
+                      $regexMatch: {
+                        input: { $toLower: '$baseName' },
+                        regex: `^${query.toLowerCase()}`,
+                      },
+                    },
+                    then: 70,
+                    else: 0,
+                  },
+                },
+                {
+                  $cond: {
+                    if: { $gt: ['$psaTotalGradedForCard', 0] },
+                    then: { $divide: ['$psaTotalGradedForCard', 1000] },
+                    else: 0,
+                  },
+                },
               ],
             },
           },

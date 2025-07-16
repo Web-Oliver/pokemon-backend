@@ -118,11 +118,7 @@ class BaseRepository {
    * @returns {Promise<Object>} - Object containing data, count, and pagination info
    */
   async findWithPagination(filters = {}, options = {}) {
-    const {
-      page = 1,
-      limit = this.options.defaultLimit,
-      ...queryOptions
-    } = options;
+    const { page = 1, limit = this.options.defaultLimit, ...queryOptions } = options;
 
     const skip = (page - 1) * limit;
     const data = await this.findAll(filters, { ...queryOptions, limit, skip });

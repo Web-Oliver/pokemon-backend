@@ -29,22 +29,22 @@ const compareCountsAndReport = (expected, actual) => {
   const cardMarketDiff = actual.actualCardMarketProducts - expected.expectedCardMarketProducts;
 
   console.log(
-    `   Sets: Expected ${expected.expectedSets}, Got ${actual.actualSets} `
-    + `(${setsDiff >= 0 ? '+' : ''}${setsDiff})`,
+    `   Sets: Expected ${expected.expectedSets}, Got ${actual.actualSets} ` +
+      `(${setsDiff >= 0 ? '+' : ''}${setsDiff})`,
   );
   console.log(
-    `   Cards: Expected ${expected.expectedCards}, Got ${actual.actualCards} `
-    + `(${cardsDiff >= 0 ? '+' : ''}${cardsDiff})`,
+    `   Cards: Expected ${expected.expectedCards}, Got ${actual.actualCards} ` +
+      `(${cardsDiff >= 0 ? '+' : ''}${cardsDiff})`,
   );
   console.log(
-    `   CardMarket Products: Expected ${expected.expectedCardMarketProducts}, `
-    + `Got ${actual.actualCardMarketProducts} (${cardMarketDiff >= 0 ? '+' : ''}${cardMarketDiff})`,
+    `   CardMarket Products: Expected ${expected.expectedCardMarketProducts}, ` +
+      `Got ${actual.actualCardMarketProducts} (${cardMarketDiff >= 0 ? '+' : ''}${cardMarketDiff})`,
   );
 
-  const allMatching
-    = actual.actualSets === expected.expectedSets
-    && actual.actualCards === expected.expectedCards
-    && actual.actualCardMarketProducts === expected.expectedCardMarketProducts;
+  const allMatching =
+    actual.actualSets === expected.expectedSets &&
+    actual.actualCards === expected.expectedCards &&
+    actual.actualCardMarketProducts === expected.expectedCardMarketProducts;
 
   if (allMatching) {
     console.log('\n✅ All counts match! Data import verification successful.');

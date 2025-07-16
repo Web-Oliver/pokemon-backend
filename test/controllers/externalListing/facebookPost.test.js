@@ -24,18 +24,18 @@ describe('POST /api/generate-facebook-post', () => {
 
   describe('when given valid items', () => {
     it('should generate Facebook post for sealed product', async () => {
-      const items = [{
-        itemId: testData.sealedProduct._id,
-        itemCategory: 'SealedProduct',
-      }];
+      const items = [
+        {
+          itemId: testData.sealedProduct._id,
+          itemCategory: 'SealedProduct',
+        },
+      ];
 
-      const res = await request(app)
-        .post('/api/generate-facebook-post')
-        .send({
-          items,
-          topText: 'Check out these items!',
-          bottomText: 'Contact me for more info!',
-        });
+      const res = await request(app).post('/api/generate-facebook-post').send({
+        items,
+        topText: 'Check out these items!',
+        bottomText: 'Contact me for more info!',
+      });
 
       expect(res.status).to.equal(200);
       expect(res.body).to.have.property('status', 'success');
@@ -45,18 +45,18 @@ describe('POST /api/generate-facebook-post', () => {
     });
 
     it('should generate Facebook post for PSA graded card', async () => {
-      const items = [{
-        itemId: testData.psaCard._id,
-        itemCategory: 'PsaGradedCard',
-      }];
+      const items = [
+        {
+          itemId: testData.psaCard._id,
+          itemCategory: 'PsaGradedCard',
+        },
+      ];
 
-      const res = await request(app)
-        .post('/api/generate-facebook-post')
-        .send({
-          items,
-          topText: 'Amazing PSA cards!',
-          bottomText: 'Don\'t miss out!',
-        });
+      const res = await request(app).post('/api/generate-facebook-post').send({
+        items,
+        topText: 'Amazing PSA cards!',
+        bottomText: "Don't miss out!",
+      });
 
       expect(res.status).to.equal(200);
       expect(res.body.data.facebookPost).to.include('PSA CARDS:');
@@ -64,18 +64,18 @@ describe('POST /api/generate-facebook-post', () => {
     });
 
     it('should generate Facebook post for raw card', async () => {
-      const items = [{
-        itemId: testData.rawCard._id,
-        itemCategory: 'RawCard',
-      }];
+      const items = [
+        {
+          itemId: testData.rawCard._id,
+          itemCategory: 'RawCard',
+        },
+      ];
 
-      const res = await request(app)
-        .post('/api/generate-facebook-post')
-        .send({
-          items,
-          topText: 'Raw cards for sale!',
-          bottomText: 'Get them while they last!',
-        });
+      const res = await request(app).post('/api/generate-facebook-post').send({
+        items,
+        topText: 'Raw cards for sale!',
+        bottomText: 'Get them while they last!',
+      });
 
       expect(res.status).to.equal(200);
       expect(res.body.data.facebookPost).to.include('RAW CARDS:');
@@ -84,12 +84,10 @@ describe('POST /api/generate-facebook-post', () => {
 
   describe('when given invalid input', () => {
     it('should return 400 for missing items', async () => {
-      const res = await request(app)
-        .post('/api/generate-facebook-post')
-        .send({
-          topText: 'Test',
-          bottomText: 'Test',
-        });
+      const res = await request(app).post('/api/generate-facebook-post').send({
+        topText: 'Test',
+        bottomText: 'Test',
+      });
 
       expect(res.status).to.equal(400);
       expect(res.body).to.have.property('success', false);
@@ -100,7 +98,12 @@ describe('POST /api/generate-facebook-post', () => {
       const res = await request(app)
         .post('/api/generate-facebook-post')
         .send({
-          items: [{ itemId: testData.sealedProduct._id, itemCategory: 'SealedProduct' }],
+          items: [
+            {
+              itemId: testData.sealedProduct._id,
+              itemCategory: 'SealedProduct',
+            },
+          ],
           bottomText: 'Test',
         });
 
@@ -112,7 +115,12 @@ describe('POST /api/generate-facebook-post', () => {
       const res = await request(app)
         .post('/api/generate-facebook-post')
         .send({
-          items: [{ itemId: testData.sealedProduct._id, itemCategory: 'InvalidCategory' }],
+          items: [
+            {
+              itemId: testData.sealedProduct._id,
+              itemCategory: 'InvalidCategory',
+            },
+          ],
           topText: 'Test',
           bottomText: 'Test',
         });

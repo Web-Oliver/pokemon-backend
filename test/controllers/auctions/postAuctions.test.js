@@ -18,9 +18,7 @@ describe('POST /auctions', () => {
   });
 
   it('should create auction with required fields', async () => {
-    const res = await request(app)
-      .post('/auctions')
-      .send({ topText: 'New', bottomText: 'Auction' });
+    const res = await request(app).post('/auctions').send({ topText: 'New', bottomText: 'Auction' });
 
     expect(res.status).to.equal(201);
     expect(res.body.topText).to.equal('New');
@@ -28,9 +26,7 @@ describe('POST /auctions', () => {
   });
 
   it('should return 400 for missing required fields', async () => {
-    const res = await request(app)
-      .post('/auctions')
-      .send({ topText: 'Only top' });
+    const res = await request(app).post('/auctions').send({ topText: 'Only top' });
 
     expect(res.status).to.equal(400);
   });

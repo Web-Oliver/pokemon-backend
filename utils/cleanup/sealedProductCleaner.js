@@ -8,10 +8,7 @@ const analyzeSealedProducts = async () => {
   console.log(`Total sealed products: ${totalCount}`);
 
   const personalItems = await SealedProduct.find({
-    $or: [
-      { priceHistory: { $exists: true, $ne: [] } },
-      { $expr: { $ne: ['$myPrice', '$cardMarketPrice'] } },
-    ],
+    $or: [{ priceHistory: { $exists: true, $ne: [] } }, { $expr: { $ne: ['$myPrice', '$cardMarketPrice'] } }],
   });
 
   console.log(`Personal collection items found: ${personalItems.length}`);
@@ -20,8 +17,8 @@ const analyzeSealedProducts = async () => {
     console.log('\n📋 Personal collection items:');
     personalItems.forEach((item, index) => {
       console.log(
-        `${index + 1}. ${item.name} - Set: ${item.setName} - `
-        + `My Price: ${item.myPrice} - CM Price: ${item.cardMarketPrice}`,
+        `${index + 1}. ${item.name} - Set: ${item.setName} - ` +
+          `My Price: ${item.myPrice} - CM Price: ${item.cardMarketPrice}`,
       );
     });
   }

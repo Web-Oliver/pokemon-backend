@@ -22,10 +22,7 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
 
     // Add fuzzy pattern matches for better partial matching
     fuzzyPatterns.forEach((pattern) => {
-      nameConditions.push(
-        { name: pattern },
-        { setName: pattern },
-      );
+      nameConditions.push({ name: pattern }, { setName: pattern });
     });
 
     query.$or = nameConditions;
@@ -60,10 +57,7 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
 
     // If we already have an $or condition, combine them
     if (query.$or) {
-      query.$and = [
-        { $or: query.$or },
-        { $or: setNameConditions },
-      ];
+      query.$and = [{ $or: query.$or }, { $or: setNameConditions }];
       delete query.$or;
     } else {
       query.$or = setNameConditions;
@@ -105,7 +99,9 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
             // Exact match bonuses
             {
               $cond: {
-                if: { $eq: [{ $toLower: '$name' }, originalQuery.toLowerCase()] },
+                if: {
+                  $eq: [{ $toLower: '$name' }, originalQuery.toLowerCase()],
+                },
                 then: 50,
                 else: 0,
               },
@@ -113,7 +109,14 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
             // Starts with bonuses
             {
               $cond: {
-                if: { $eq: [{ $indexOfCP: [{ $toLower: '$name' }, originalQuery.toLowerCase()] }, 0] },
+                if: {
+                  $eq: [
+                    {
+                      $indexOfCP: [{ $toLower: '$name' }, originalQuery.toLowerCase()],
+                    },
+                    0,
+                  ],
+                },
                 then: 30,
                 else: 0,
               },
@@ -121,7 +124,13 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
             // Contains bonuses with normalized matching
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$name' }, regex: normalizedQuery, options: 'i' } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$name' },
+                    regex: normalizedQuery,
+                    options: 'i',
+                  },
+                },
                 then: 20,
                 else: 0,
               },
@@ -129,7 +138,13 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
             // Set name bonuses
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$setName' }, regex: normalizedQuery, options: 'i' } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$setName' },
+                    regex: normalizedQuery,
+                    options: 'i',
+                  },
+                },
                 then: 15,
                 else: 0,
               },
@@ -223,7 +238,6 @@ const getCardMarketRefProductById = asyncHandler(async (req, res) => {
 
   res.status(200).json(product);
 });
-
 
 module.exports = {
   getAllCardMarketRefProducts,

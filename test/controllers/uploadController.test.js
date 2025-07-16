@@ -23,8 +23,7 @@ describe('Upload Controller', () => {
 
   describe('POST /upload/single', () => {
     it('should return 400 when no file is uploaded', async () => {
-      const res = await request(app)
-        .post('/upload/single');
+      const res = await request(app).post('/upload/single');
 
       expect(res.status).to.equal(400);
       expect(res.body.message).to.equal('No file uploaded');
@@ -39,9 +38,7 @@ describe('Upload Controller', () => {
       }
       fs.writeFileSync(testFilePath, 'test content');
 
-      const res = await request(app)
-        .post('/upload/single')
-        .attach('image', testFilePath);
+      const res = await request(app).post('/upload/single').attach('image', testFilePath);
 
       expect(res.status).to.equal(400);
       expect(res.body.message).to.include('Only image files are allowed');
@@ -55,8 +52,7 @@ describe('Upload Controller', () => {
 
   describe('POST /upload/multiple', () => {
     it('should return 400 when no files are uploaded', async () => {
-      const res = await request(app)
-        .post('/upload/multiple');
+      const res = await request(app).post('/upload/multiple');
 
       expect(res.status).to.equal(400);
       expect(res.body.message).to.equal('No files uploaded');
@@ -71,9 +67,7 @@ describe('Upload Controller', () => {
       }
       fs.writeFileSync(testFilePath, 'test content');
 
-      const res = await request(app)
-        .post('/upload/multiple')
-        .attach('images', testFilePath);
+      const res = await request(app).post('/upload/multiple').attach('images', testFilePath);
 
       expect(res.status).to.equal(400);
       expect(res.body.message).to.include('Only image files are allowed');

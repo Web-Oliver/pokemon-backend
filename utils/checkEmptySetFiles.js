@@ -23,15 +23,15 @@ const emptySets = [
   { name: 'Pokemon Japanese Design Contest Promo', year: 2009 },
   { name: 'Pokemon Japanese Coin Promo', year: 2010 },
   { name: 'Pokemon Japanese Coin Promo', year: 2011 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2014 },
+  { name: "Pokemon McDonald's Collection", year: 2014 },
   { name: 'Pokemon Promo', year: 2011 },
   { name: 'Pokemon Promo', year: 2014 },
   { name: 'Pokemon Japanese Promo Tropical Mega Battle', year: 2001 },
   { name: 'Pokemon Japanese Coin Promo', year: 2013 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2015 },
+  { name: "Pokemon McDonald's Collection", year: 2015 },
   { name: 'Pokemon Promo', year: 2015 },
   { name: 'Pokemon Promo', year: 2018 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2016 },
+  { name: "Pokemon McDonald's Collection", year: 2016 },
   { name: 'Pokemon Japanese Coin Promo', year: 2012 },
   { name: 'Pokemon Pop Series 1', year: 2007 },
   { name: 'Pokemon Promo Pokken Tournament', year: 2015 },
@@ -40,9 +40,9 @@ const emptySets = [
   { name: 'Pokemon Promo', year: 2010 },
   { name: 'Pokemon World Championships Promo', year: 2015 },
   { name: 'Pokemon World Championship Promo', year: 2013 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2017 },
+  { name: "Pokemon McDonald's Collection", year: 2017 },
   { name: 'Pokemon World Championships Promo', year: 2016 },
-  { name: 'Pokemon McDonald\'s Collection', year: 2012 },
+  { name: "Pokemon McDonald's Collection", year: 2012 },
   { name: 'Pokemon Promo', year: 2007 },
   { name: 'Pokemon Promo Pokken Tournament', year: 2017 },
   { name: 'Pokemon Japanese Coin Promo', year: 2004 },
@@ -77,7 +77,8 @@ function findJsonFiles(dir, files = []) {
 }
 
 function normalizeSetName(name) {
-  return name.toLowerCase()
+  return name
+    .toLowerCase()
     .replace(/[^a-z0-9\s]/g, '')
     .replace(/\s+/g, ' ')
     .trim();
@@ -112,9 +113,9 @@ async function checkEmptySetFiles() {
             foundFile = filePath;
             if (data.cards && Array.isArray(data.cards)) {
               // Count non-TOTAL_POPULATION cards
-              const nonTotalCards = data.cards.filter((card) =>
-                card.card_name !== 'TOTAL POPULATION'
-                && card.base_name !== 'TOTAL POPULATION');
+              const nonTotalCards = data.cards.filter(
+                (card) => card.card_name !== 'TOTAL POPULATION' && card.base_name !== 'TOTAL POPULATION',
+              );
 
               cardCount = nonTotalCards.length;
               hasCards = cardCount > 0;

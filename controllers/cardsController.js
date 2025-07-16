@@ -25,7 +25,6 @@ const getAllCards = asyncHandler(async (req, res) => {
   res.status(200).json({ success: true, data: cards });
 });
 
-
 const getCardById = asyncHandler(async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
     throw new ValidationError('Invalid ObjectId format');
@@ -51,11 +50,7 @@ const getCardsBySetId = asyncHandler(async (req, res) => {
   const query = { setId };
 
   if (q) {
-    query.$or = [
-      { cardName: new RegExp(q, 'i') },
-      { baseName: new RegExp(q, 'i') },
-      { variety: new RegExp(q, 'i') },
-    ];
+    query.$or = [{ cardName: new RegExp(q, 'i') }, { baseName: new RegExp(q, 'i') }, { variety: new RegExp(q, 'i') }];
   }
   if (pokemonNumber) {
     query.pokemonNumber = pokemonNumber;
@@ -187,10 +182,7 @@ const searchBestMatch = asyncHandler(async (req, res) => {
       ];
     }
 
-    const cards = await Card.find(basicQuery)
-      .populate('setId', 'setName year')
-      .limit(15)
-      .lean();
+    const cards = await Card.find(basicQuery).populate('setId', 'setName year').limit(15).lean();
 
     res.status(200).json({ success: true, data: cards });
   }

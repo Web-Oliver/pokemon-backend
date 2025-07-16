@@ -24,8 +24,9 @@ const addItemToAuction = asyncHandler(async (req, res) => {
   }
 
   // Check if item already exists in auction
-  const existingItem = auction.items.find((item) =>
-    item.itemId.toString() === itemId && item.itemCategory === itemCategory);
+  const existingItem = auction.items.find(
+    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory,
+  );
 
   if (existingItem) {
     throw new ValidationError('Item already exists in this auction');
@@ -58,8 +59,9 @@ const removeItemFromAuction = asyncHandler(async (req, res) => {
     throw new NotFoundError('Auction not found');
   }
 
-  const itemIndex = auction.items.findIndex((item) =>
-    item.itemId.toString() === itemId && item.itemCategory === itemCategory);
+  const itemIndex = auction.items.findIndex(
+    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory,
+  );
 
   if (itemIndex === -1) {
     throw new NotFoundError('Item not found in this auction');
@@ -97,8 +99,9 @@ const markItemAsSold = asyncHandler(async (req, res) => {
     throw new NotFoundError('Auction not found');
   }
 
-  const itemIndex = auction.items.findIndex((item) =>
-    item.itemId.toString() === itemId && item.itemCategory === itemCategory);
+  const itemIndex = auction.items.findIndex(
+    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory,
+  );
 
   if (itemIndex === -1) {
     throw new NotFoundError('Item not found in this auction');

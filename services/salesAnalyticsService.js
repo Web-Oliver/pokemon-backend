@@ -66,12 +66,14 @@ function generateGraphData(salesData) {
     }
   });
 
-  return Array.from(salesByDate.entries()).map(([date, data]) => ({
-    date,
-    sales: Math.round(data.sales * 100) / 100,
-    profit: Math.round(data.profit * 100) / 100,
-    itemCount: data.itemCount,
-  })).sort((a, b) => new Date(a.date) - new Date(b.date));
+  return Array.from(salesByDate.entries())
+    .map(([date, data]) => ({
+      date,
+      sales: Math.round(data.sales * 100) / 100,
+      profit: Math.round(data.profit * 100) / 100,
+      itemCount: data.itemCount,
+    }))
+    .sort((a, b) => new Date(a.date) - new Date(b.date));
 }
 
 module.exports = {

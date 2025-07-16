@@ -128,20 +128,18 @@ describe('Raw Cards Controller', () => {
 
   describe('POST /raw-cards', () => {
     it('should create raw card with valid reference data', async () => {
-      const res = await request(app)
-        .post('/raw-cards')
-        .send({
-          cardName: testCard.cardName,
-          setName: testSet.setName,
-          pokemonNumber: testCard.pokemonNumber,
-          variety: testCard.variety,
-          baseName: testCard.baseName,
-          year: testSet.year,
-          psaTotalGraded: testCard.psaTotalGradedForCard,
-          condition: 'Near Mint',
-          myPrice: 100,
-          images: [],
-        });
+      const res = await request(app).post('/raw-cards').send({
+        cardName: testCard.cardName,
+        setName: testSet.setName,
+        pokemonNumber: testCard.pokemonNumber,
+        variety: testCard.variety,
+        baseName: testCard.baseName,
+        year: testSet.year,
+        psaTotalGraded: testCard.psaTotalGradedForCard,
+        condition: 'Near Mint',
+        myPrice: 100,
+        images: [],
+      });
 
       expect(res.status).to.equal(201);
       expect(res.body).to.have.property('success', true);
@@ -151,27 +149,23 @@ describe('Raw Cards Controller', () => {
     });
 
     it('should return 400 for missing required fields', async () => {
-      const res = await request(app)
-        .post('/raw-cards')
-        .send({
-          cardName: testCard.cardName,
-          // Missing setName, condition, and myPrice
-        });
+      const res = await request(app).post('/raw-cards').send({
+        cardName: testCard.cardName,
+        // Missing setName, condition, and myPrice
+      });
 
       expect(res.status).to.equal(400);
       expect(res.body).to.have.property('success', false);
     });
 
     it('should return 400 for invalid reference data', async () => {
-      const res = await request(app)
-        .post('/raw-cards')
-        .send({
-          cardName: 'Invalid Card Name',
-          setName: 'Invalid Set Name',
-          condition: 'Near Mint',
-          myPrice: 100,
-          images: [],
-        });
+      const res = await request(app).post('/raw-cards').send({
+        cardName: 'Invalid Card Name',
+        setName: 'Invalid Set Name',
+        condition: 'Near Mint',
+        myPrice: 100,
+        images: [],
+      });
 
       expect(res.status).to.equal(400);
       expect(res.body).to.have.property('success', false);
@@ -187,9 +181,7 @@ describe('Raw Cards Controller', () => {
         myPrice: 100,
       }).save();
 
-      const res = await request(app)
-        .put(`/raw-cards/${card._id}`)
-        .send({ myPrice: 150 });
+      const res = await request(app).put(`/raw-cards/${card._id}`).send({ myPrice: 150 });
 
       expect(res.status).to.equal(200);
       expect(res.body).to.have.property('success', true);
@@ -197,9 +189,7 @@ describe('Raw Cards Controller', () => {
     });
 
     it('should return 404 for non-existent card', async () => {
-      const res = await request(app)
-        .put(`/raw-cards/${new mongoose.Types.ObjectId()}`)
-        .send({ myPrice: 150 });
+      const res = await request(app).put(`/raw-cards/${new mongoose.Types.ObjectId()}`).send({ myPrice: 150 });
 
       expect(res.status).to.equal(404);
     });

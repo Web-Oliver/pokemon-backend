@@ -1,6 +1,7 @@
 # Hierarchical Search Functionality - PRESERVED AND ENHANCED
 
 ## Overview
+
 The hierarchical search functionality has been **PRESERVED** and **ENHANCED** in the unified search system. Users can still:
 
 1. Search for a set first
@@ -10,11 +11,13 @@ The hierarchical search functionality has been **PRESERVED** and **ENHANCED** in
 ## API Endpoints (New Unified System)
 
 ### Step 1: Search for Sets
+
 ```bash
 GET /api/search/sets?query=Base&limit=10
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -44,11 +47,13 @@ GET /api/search/sets?query=Base&limit=10
 ```
 
 ### Step 2: Search for Cards within Selected Set
+
 ```bash
 GET /api/search/cards?query=Charizard&setName=Pokemon Game Base&limit=10
 ```
 
 **Response:**
+
 ```json
 {
   "success": true,
@@ -80,17 +85,20 @@ GET /api/search/cards?query=Charizard&setName=Pokemon Game Base&limit=10
 ## Enhanced Features (Better than Legacy)
 
 ### 1. **Set Context Filtering**
+
 - ✅ **WORKS**: Cards are properly filtered by set name
 - ✅ **ENHANCED**: Case-insensitive partial matching
 - ✅ **ENHANCED**: Better fuzzy search algorithms
 
 ### 2. **Rich Card Information**
+
 - ✅ **setInfo**: Complete set information included
 - ✅ **psaGrades**: PSA population data
 - ✅ **score**: Relevance scoring
 - ✅ **Enhanced**: Better popularity-based scoring
 
 ### 3. **Multiple Search Options**
+
 - ✅ **setName**: Filter by set name (string)
 - ✅ **setId**: Filter by set ID (ObjectId)
 - ✅ **year**: Filter by year
@@ -110,7 +118,7 @@ const cardResults = await fetch(`/api/search/cards?query=Charizard&setName=${sel
 const cards = await cardResults.json();
 
 // Step 3: Display cards with full context
-cards.data.forEach(card => {
+cards.data.forEach((card) => {
   console.log(`${card.cardName} from ${card.setInfo.setName} (${card.setInfo.year})`);
   console.log(`PSA 10 Population: ${card.psaGrades.psa_10}`);
 });
@@ -118,26 +126,28 @@ cards.data.forEach(card => {
 
 ## Comparison: Legacy vs Unified
 
-| Feature | Legacy (`/api/search-legacy`) | Unified (`/api/search/*`) |
-|---------|------------------------------|---------------------------|
-| Set Search | ✅ Working | ✅ **Enhanced** |
-| Card Search with Set Filter | ❌ **BROKEN** | ✅ **FIXED** |
-| Set Context Propagation | ❌ Inconsistent | ✅ **Reliable** |
-| Response Format | Inconsistent | ✅ **Standardized** |
-| Error Handling | Basic | ✅ **Robust** |
-| Performance | Good | ✅ **Better** |
-| Fuzzy Search | Basic | ✅ **Advanced** |
-| Caching | None | ✅ **Built-in** |
+| Feature                     | Legacy (`/api/search-legacy`) | Unified (`/api/search/*`) |
+| --------------------------- | ----------------------------- | ------------------------- |
+| Set Search                  | ✅ Working                    | ✅ **Enhanced**           |
+| Card Search with Set Filter | ❌ **BROKEN**                 | ✅ **FIXED**              |
+| Set Context Propagation     | ❌ Inconsistent               | ✅ **Reliable**           |
+| Response Format             | Inconsistent                  | ✅ **Standardized**       |
+| Error Handling              | Basic                         | ✅ **Robust**             |
+| Performance                 | Good                          | ✅ **Better**             |
+| Fuzzy Search                | Basic                         | ✅ **Advanced**           |
+| Caching                     | None                          | ✅ **Built-in**           |
 
 ## Migration Guide for Frontend
 
 ### Old API (REMOVED)
+
 ```javascript
 // DON'T USE - This was broken
 const response = await fetch('/api/search-legacy/?type=cards&q=Charizard&setContext=Pokemon Game Base');
 ```
 
 ### New API (RECOMMENDED)
+
 ```javascript
 // USE THIS - This works reliably
 const response = await fetch('/api/search/cards?query=Charizard&setName=Pokemon Game Base');
@@ -157,8 +167,9 @@ const response = await fetch('/api/search/cards?query=Charizard&setName=Pokemon 
 **ALL HIERARCHICAL SEARCH FUNCTIONALITY IS PRESERVED AND ENHANCED**
 
 The unified search system provides the **SAME USER WORKFLOW** (search set → search cards) but with:
+
 - ✅ Fixed bugs (set context filtering)
-- ✅ Better performance 
+- ✅ Better performance
 - ✅ Richer data
 - ✅ More reliable results
 

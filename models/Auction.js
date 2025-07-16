@@ -29,30 +29,32 @@ const auctionSchema = new mongoose.Schema({
     type: Boolean,
     default: true,
   },
-  items: [{
-    itemId: {
-      type: Schema.Types.ObjectId,
-      required: true,
-      refPath: 'items.itemCategory',
+  items: [
+    {
+      itemId: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        refPath: 'items.itemCategory',
+      },
+      itemCategory: {
+        type: String,
+        required: true,
+        enum: ['SealedProduct', 'PsaGradedCard', 'RawCard'],
+      },
+      sold: {
+        type: Boolean,
+        default: false,
+      },
+      soldPrice: {
+        type: Number,
+        required: false,
+      },
+      soldDate: {
+        type: Date,
+        required: false,
+      },
     },
-    itemCategory: {
-      type: String,
-      required: true,
-      enum: ['SealedProduct', 'PsaGradedCard', 'RawCard'],
-    },
-    sold: {
-      type: Boolean,
-      default: false,
-    },
-    soldPrice: {
-      type: Number,
-      required: false,
-    },
-    soldDate: {
-      type: Date,
-      required: false,
-    },
-  }],
+  ],
   totalValue: {
     type: Number,
     required: false,
@@ -81,7 +83,6 @@ auctionSchema.plugin(activityTrackingPlugin, {
     trackImageUpdates: false,
   },
 });
-
 
 const Auction = mongoose.model('Auction', auctionSchema);
 

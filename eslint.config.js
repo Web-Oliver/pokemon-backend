@@ -1,4 +1,5 @@
 import { defineConfig } from 'eslint/config';
+import prettierConfig from 'eslint-config-prettier';
 
 export default defineConfig([
   {
@@ -58,30 +59,30 @@ export default defineConfig([
       'no-unmodified-loop-condition': 'error',
       'no-unreachable-loop': 'error',
       'no-unused-private-class-members': 'error',
-      'no-use-before-define': ['error', { 'functions': false, 'classes': true, 'variables': true }],
+      'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
       'require-atomic-updates': 'error',
 
       // Suggestions
       'accessor-pairs': 'error',
       'arrow-body-style': ['error', 'as-needed'],
       'block-scoped-var': 'error',
-      'camelcase': ['error', { 'properties': 'never' }],
-      'curly': ['error', 'all'],
+      camelcase: ['error', { properties: 'never' }],
+      curly: ['error', 'all'],
       'default-case': 'warn', // Warn instead of error for missing default cases
       'default-case-last': 'error',
       'dot-notation': 'error',
-      'eqeqeq': ['error', 'always'],
+      eqeqeq: ['error', 'always'],
       'func-names': ['error', 'as-needed'],
       'func-style': 'off', // Allow both declarations and expressions
       'grouped-accessor-pairs': 'error',
       'guard-for-in': 'error',
       'logical-assignment-operators': 'error',
-      'new-cap': ['error', { 'newIsCap': true, 'capIsNew': false }],
+      'new-cap': ['error', { newIsCap: true, capIsNew: false }],
       'no-alert': 'error',
       'no-array-constructor': 'error',
       'no-bitwise': 'error',
       'no-caller': 'error',
-      'no-console': 'warn',
+      'no-console': 'off',
       'no-continue': 'error',
       'no-else-return': 'error',
       'no-empty-function': 'error',
@@ -131,7 +132,7 @@ export default defineConfig([
       'operator-assignment': 'error',
       'prefer-arrow-callback': 'error',
       'prefer-const': 'error',
-      'prefer-destructuring': ['error', { 'object': true, 'array': false }],
+      'prefer-destructuring': ['error', { object: true, array: false }],
       'prefer-exponentiation-operator': 'error',
       'prefer-numeric-literals': 'error',
       'prefer-object-spread': 'error',
@@ -140,14 +141,14 @@ export default defineConfig([
       'prefer-rest-params': 'error',
       'prefer-spread': 'error',
       'prefer-template': 'error',
-      'radix': 'error',
+      radix: 'error',
       'require-await': 'warn', // Warn instead of error for missing await
       'sort-vars': 'error',
       'spaced-comment': 'error',
-      'strict': ['error', 'global'],
+      strict: ['error', 'global'],
       'symbol-description': 'error',
       'vars-on-top': 'error',
-      'yoda': 'error',
+      yoda: 'error',
 
       // Layout & Formatting
       'array-bracket-newline': ['error', 'consistent'],
@@ -168,7 +169,7 @@ export default defineConfig([
       'function-paren-newline': ['error', 'consistent'],
       'generator-star-spacing': 'error',
       'implicit-arrow-linebreak': 'off', // Allow flexible arrow function formatting
-      'indent': ['error', 2],
+      indent: ['error', 2],
       'jsx-quotes': ['error', 'prefer-double'],
       'key-spacing': 'error',
       'keyword-spacing': 'error',
@@ -176,36 +177,40 @@ export default defineConfig([
       'linebreak-style': ['error', 'unix'],
       'lines-around-comment': 'error',
       'lines-between-class-members': 'error',
-      'max-len': ['error', { 'code': 120, 'tabWidth': 2, 'ignoreComments': true, 'ignoreUrls': true }],
+      'max-len': ['error', { code: 120, tabWidth: 2, ignoreComments: true, ignoreUrls: true }],
       'max-statements-per-line': 'off', // Allow multiple statements for test setup
       'multiline-ternary': ['error', 'always-multiline'],
       'new-parens': 'error',
-      'newline-per-chained-call': ['error', { 'ignoreChainWithDepth': 3 }],
-      'no-extra-parens': ['error', 'all', { 'nestedBinaryExpressions': false }],
+      'newline-per-chained-call': ['error', { ignoreChainWithDepth: 3 }],
+      'no-extra-parens': ['error', 'all', { nestedBinaryExpressions: false }],
       'no-mixed-spaces-and-tabs': 'error',
       'no-multi-spaces': 'error',
-      'no-multiple-empty-lines': ['error', { 'max': 2 }],
+      'no-multiple-empty-lines': ['error', { max: 2 }],
       'no-tabs': 'error',
       'no-trailing-spaces': 'error',
       'no-whitespace-before-property': 'error',
       'nonblock-statement-body-position': 'error',
-      'object-curly-newline': ['error', { 'consistent': true }],
+      'object-curly-newline': ['error', { consistent: true }],
       'object-curly-spacing': ['error', 'always'],
-      'object-property-newline': ['error', { 'allowAllPropertiesOnSameLine': true }],
+      'object-property-newline': ['error', { allowAllPropertiesOnSameLine: true }],
       'operator-linebreak': ['error', 'before'],
       'padded-blocks': ['error', 'never'],
       'padding-line-between-statements': [
         'error',
-        { 'blankLine': 'always', 'prev': ['const', 'let', 'var'], 'next': '*' },
-        { 'blankLine': 'any', 'prev': ['const', 'let', 'var'], 'next': ['const', 'let', 'var'] },
+        { blankLine: 'always', prev: ['const', 'let', 'var'], next: '*' },
+        {
+          blankLine: 'any',
+          prev: ['const', 'let', 'var'],
+          next: ['const', 'let', 'var'],
+        },
       ],
-      'quotes': ['error', 'single'],
+      quotes: ['error', 'single'],
       'rest-spread-spacing': 'error',
-      'semi': ['error', 'always'],
+      semi: ['error', 'always'],
       'semi-spacing': 'error',
       'semi-style': 'error',
       'space-before-blocks': 'error',
-      'space-before-function-paren': ['error', { 'anonymous': 'always', 'named': 'never', 'asyncArrow': 'always' }],
+      'space-before-function-paren': ['error', { anonymous: 'always', named: 'never', asyncArrow: 'always' }],
       'space-in-parens': 'error',
       'space-infix-ops': 'error',
       'space-unary-ops': 'error',
@@ -241,8 +246,10 @@ export default defineConfig([
       'no-unused-expressions': 'off', // Chai assertions use unused expressions
       'prefer-arrow-callback': 'off', // Mocha works better with function expressions
       'func-names': 'off', // Allow anonymous functions in tests
-      'max-len': ['error', { 'code': 120 }], // Allow longer lines in tests
+      'max-len': ['error', { code: 120 }], // Allow longer lines in tests
       'require-atomic-updates': 'off', // Often false positives in test code
     },
   },
+  // Disable ESLint rules that conflict with Prettier (must be last)
+  prettierConfig,
 ]);

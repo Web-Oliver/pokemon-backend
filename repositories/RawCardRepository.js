@@ -40,9 +40,12 @@ class RawCardRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of raw cards
    */
   async findByConditions(conditions, options = {}) {
-    return await this.findAll({
-      condition: { $in: conditions },
-    }, options);
+    return await this.findAll(
+      {
+        condition: { $in: conditions },
+      },
+      options,
+    );
   }
 
   /**
@@ -81,9 +84,12 @@ class RawCardRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of raw cards
    */
   async findByPriceRange(minPrice, maxPrice, options = {}) {
-    return await this.findAll({
-      myPrice: { $gte: minPrice, $lte: maxPrice },
-    }, options);
+    return await this.findAll(
+      {
+        myPrice: { $gte: minPrice, $lte: maxPrice },
+      },
+      options,
+    );
   }
 
   /**
@@ -98,7 +104,11 @@ class RawCardRepository extends BaseRepository {
           totalCards: { $sum: 1 },
           totalValue: { $sum: { $toDouble: '$myPrice' } },
           soldCards: { $sum: { $cond: [{ $eq: ['$sold', true] }, 1, 0] } },
-          soldValue: { $sum: { $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0] } },
+          soldValue: {
+            $sum: {
+              $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0],
+            },
+          },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
           conditionDistribution: {
             $push: '$condition',
@@ -121,15 +131,17 @@ class RawCardRepository extends BaseRepository {
 
     const result = await this.aggregate(pipeline);
 
-    return result[0] || {
-      totalCards: 0,
-      totalValue: 0,
-      soldCards: 0,
-      soldValue: 0,
-      avgPrice: 0,
-      unsoldCards: 0,
-      conditionDistribution: [],
-    };
+    return (
+      result[0] || {
+        totalCards: 0,
+        totalValue: 0,
+        soldCards: 0,
+        soldValue: 0,
+        avgPrice: 0,
+        unsoldCards: 0,
+        conditionDistribution: [],
+      }
+    );
   }
 
   /**
@@ -174,9 +186,12 @@ class RawCardRepository extends BaseRepository {
 
     cutoffDate.setDate(cutoffDate.getDate() - days);
 
-    return await this.findAll({
-      'priceHistory.dateUpdated': { $gte: cutoffDate },
-    }, options);
+    return await this.findAll(
+      {
+        'priceHistory.dateUpdated': { $gte: cutoffDate },
+      },
+      options,
+    );
   }
 
   /**
@@ -267,13 +282,12 @@ class RawCardRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of raw cards needing condition assessment
    */
   async findNeedingConditionAssessment(options = {}) {
-    return await this.findAll({
-      $or: [
-        { condition: { $exists: false } },
-        { condition: null },
-        { condition: '' },
-      ],
-    }, options);
+    return await this.findAll(
+      {
+        $or: [{ condition: { $exists: false } }, { condition: null }, { condition: '' }],
+      },
+      options,
+    );
   }
 }
 

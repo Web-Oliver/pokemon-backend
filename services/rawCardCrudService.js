@@ -5,7 +5,6 @@ const mongoose = require('mongoose');
 const { validateReferenceData, validateUserSpecificFields } = require('./referenceDataValidator');
 const ImageManager = require('./shared/imageManager');
 
-
 const validateCreateData = (data) => {
   const { cardName, setName, myPrice, condition } = data;
 
@@ -81,7 +80,8 @@ const createRawCard = async (data) => {
 
     console.log('Reference data validation passed');
 
-    const { cardName, setName, pokemonNumber, variety, baseName, year, myPrice, condition, images, psaTotalGraded } = data;
+    const { cardName, setName, pokemonNumber, variety, baseName, year, myPrice, condition, images, psaTotalGraded } =
+      data;
 
     // Use the validated card ID from reference data validation
     const { cardId } = validationResult;
@@ -93,10 +93,12 @@ const createRawCard = async (data) => {
       condition,
       myPrice,
       images: images || [],
-      priceHistory: [{
-        price: myPrice,
-        dateUpdated: new Date(),
-      }],
+      priceHistory: [
+        {
+          price: myPrice,
+          dateUpdated: new Date(),
+        },
+      ],
     };
 
     const rawCard = new RawCard(rawCardData);
@@ -197,11 +199,10 @@ const updateRawCard = async (id, updateData) => {
 
   console.log('[RAW UPDATE] Final dataToUpdate:', JSON.stringify(dataToUpdate, null, 2));
 
-  const updatedCard = await RawCard.findByIdAndUpdate(
-    id,
-    dataToUpdate,
-    { new: true, runValidators: true },
-  ).populate({
+  const updatedCard = await RawCard.findByIdAndUpdate(id, dataToUpdate, {
+    new: true,
+    runValidators: true,
+  }).populate({
     path: 'cardId',
     populate: {
       path: 'setId',

@@ -47,7 +47,9 @@ const validateSealedProductReferenceData = async (referenceData) => {
     });
 
     if (!refProduct) {
-      throw new Error(`Sealed product not found in reference database: ${name} from ${setName} (${category}). This product may not exist in the reference database or the details don't match exactly.`);
+      throw new Error(
+        `Sealed product not found in reference database: ${name} from ${setName} (${category}). This product may not exist in the reference database or the details don't match exactly.`,
+      );
     }
 
     console.log('Reference product found:', refProduct._id);
@@ -123,10 +125,12 @@ const createSealedProduct = async (data) => {
     images: userSpecificData.images,
     availability: refProduct.available || 1,
     cardMarketPrice: refProduct ? parseFloat(refProduct.price.replace(/[€]/g, '').replace(',', '.')) : 0,
-    priceHistory: [{
-      price: userSpecificData.myPrice,
-      dateUpdated: new Date(),
-    }],
+    priceHistory: [
+      {
+        price: userSpecificData.myPrice,
+        dateUpdated: new Date(),
+      },
+    ],
   };
 
   console.log('Creating sealed product with data:', JSON.stringify(sealedProductData, null, 2));

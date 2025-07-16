@@ -30,19 +30,21 @@
 30
 31
 |
- Component 
+Component
 |
- Primary Responsibility 
+Primary Responsibility
 |
- Advanced Features 
+Advanced Features
 |
 32
 |
------------
-|
-----------------------
-|
--------------------
+
+---
+
+## |
+
+## |
+
 |
 33
 |
@@ -50,9 +52,9 @@
 Controllers
 **
 |
- HTTP request handling, input validation, response formatting 
+HTTP request handling, input validation, response formatting
 |
- Modular sub-controllers for complex domains 
+Modular sub-controllers for complex domains
 |
 34
 |
@@ -60,9 +62,9 @@ Controllers
 Services
 **
 |
- Business logic implementation, data processing, external integrations 
+Business logic implementation, data processing, external integrations
 |
- Query/CRUD separation, analytics services 
+Query/CRUD separation, analytics services
 |
 35
 |
@@ -70,9 +72,9 @@ Services
 Models
 **
 |
- MongoDB schema definitions, data validation, relationships 
+MongoDB schema definitions, data validation, relationships
 |
- Polymorphic references, transform functions 
+Polymorphic references, transform functions
 |
 36
 |
@@ -80,9 +82,9 @@ Models
 Middleware
 **
 |
- Request compression, error handling, search caching 
+Request compression, error handling, search caching
 |
- Request deduplication, performance monitoring 
+Request deduplication, performance monitoring
 |
 37
 |
@@ -90,9 +92,9 @@ Middleware
 Routes
 **
 |
- API endpoint routing and parameter handling 
+API endpoint routing and parameter handling
 |
- Versioned routing with middleware composition 
+Versioned routing with middleware composition
 |
 38
 |
@@ -100,9 +102,9 @@ Routes
 Utils
 **
 |
- Data import coordination, name formatting, error handling utilities 
+Data import coordination, name formatting, error handling utilities
 |
- Multi-phase import system, platform formatters 
+Multi-phase import system, platform formatters
 |
 39
 
@@ -110,27 +112,29 @@ Utils
 41
 42
 |
- Category 
+Category
 |
- Technology 
+Technology
 |
- Version 
+Version
 |
- Purpose 
+Purpose
 |
- Configuration Notes 
+Configuration Notes
 |
 43
 |
-----------
-|
-------------
-|
----------
-|
----------
-|
--------------------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 44
 |
@@ -138,13 +142,13 @@ Utils
 Runtime
 **
 |
- Node.js 
+Node.js
 |
- Latest LTS 
+Latest LTS
 |
- JavaScript runtime environment 
+JavaScript runtime environment
 |
- Development & production deployment 
+Development & production deployment
 |
 45
 |
@@ -152,13 +156,13 @@ Runtime
 Web Framework
 **
 |
- Express.js 
+Express.js
 |
- 5.1.0 
+5.1.0
 |
- HTTP server and middleware 
+HTTP server and middleware
 |
- 200MB body limit, 50K parameter limit 
+200MB body limit, 50K parameter limit
 |
 46
 |
@@ -166,13 +170,13 @@ Web Framework
 Database
 **
 |
- MongoDB 
+MongoDB
 |
- Latest 
+Latest
 |
- Document database for flexible schema 
+Document database for flexible schema
 |
- Text search indexes, compound indexes 
+Text search indexes, compound indexes
 |
 47
 |
@@ -180,13 +184,13 @@ Database
 ODM
 **
 |
- Mongoose 
+Mongoose
 |
- 8.16.1 
+8.16.1
 |
- MongoDB object modeling and validation 
+MongoDB object modeling and validation
 |
- Schema transforms, middleware hooks 
+Schema transforms, middleware hooks
 |
 48
 |
@@ -194,13 +198,13 @@ ODM
 Search
 **
 |
- Fuse.js 
+Fuse.js
 |
- 7.1.0 
+7.1.0
 |
- Fuzzy search and text matching 
+Fuzzy search and text matching
 |
- Weighted scoring, threshold tuning 
+Weighted scoring, threshold tuning
 |
 49
 |
@@ -208,13 +212,13 @@ Search
 Caching
 **
 |
- node-cache 
+node-cache
 |
- 5.1.2 
+5.1.2
 |
- In-memory caching for search results 
+In-memory caching for search results
 |
- 5-minute TTL, hit rate tracking 
+5-minute TTL, hit rate tracking
 |
 50
 |
@@ -222,13 +226,13 @@ Caching
 File Upload
 **
 |
- Multer 
+Multer
 |
- 2.0.1 
+2.0.1
 |
- Multipart form data handling 
+Multipart form data handling
 |
- Large file support (200MB) 
+Large file support (200MB)
 |
 51
 |
@@ -236,13 +240,13 @@ File Upload
 Performance
 **
 |
- compression 
+compression
 |
- 1.7.4 
+1.7.4
 |
- Gzip response compression 
+Gzip response compression
 |
- Intelligent binary detection 
+Intelligent binary detection
 |
 52
 |
@@ -250,13 +254,13 @@ Performance
 Security
 **
 |
- cors 
+cors
 |
- 2.8.5 
+2.8.5
 |
- Cross-origin resource sharing 
+Cross-origin resource sharing
 |
- Development CORS configuration 
+Development CORS configuration
 |
 53
 |
@@ -264,13 +268,13 @@ Security
 Configuration
 **
 |
- dotenv 
+dotenv
 |
- 17.0.1 
+17.0.1
 |
- Environment variable management 
+Environment variable management
 |
- Environment-aware configuration 
+Environment-aware configuration
 |
 54
 
@@ -288,7 +292,7 @@ Configuration
 66
 67#### **Sets Collection**
 68
-69```javascript
+69`javascript
 70{
 71  setName: String (required, unique),      // "Base Set", "Jungle", etc.
 72  year: Number (required),                 // 1998, 1999, etc.
@@ -296,7 +300,7 @@ Configuration
 74  totalCardsInSet: Number (required),      // Total cards in set
 75  totalPsaPopulation: Number (required)    // Total PSA graded cards
 76}
-77```
+77`
 78
 79**Indexes:**
 80- Unique index on `setName`
@@ -304,7 +308,7 @@ Configuration
 82
 83#### **Cards Collection**
 84
-85```javascript
+85`javascript
 86{
 87  setId: ObjectId (required),              // Reference to Sets collection
 88  pokemonNumber: String,                   // Card number in set
@@ -316,20 +320,20 @@ Configuration
 94  },
 95  psaTotalGradedForCard: Number (required)
 96}
-97```
+97`
 98
 99**Indexes:**
 100- **Unique Compound**: `{setId, cardName, pokemonNumber, variety}` - Prevents duplicate cards
 101- **Text Search Index**: `{cardName, baseName, pokemonNumber, variety}` with weights:
-102  - `cardName`: 10 (highest priority)
-103  - `baseName`: 8
-104  - `pokemonNumber`: 5
-105  - `variety`: 3
+102 - `cardName`: 10 (highest priority)
+103 - `baseName`: 8
+104 - `pokemonNumber`: 5
+105 - `variety`: 3
 106- **Query Optimization**: `{setId: 1, cardName: 1}`, `{setId: 1, pokemonNumber: 1}`
 107
 108#### **PsaGradedCards Collection**
 109
-110```javascript
+110`javascript
 111{
 112  cardId: ObjectId (required),             // Reference to Cards collection
 113  grade: String (required),                // PSA grade (1-10)
@@ -360,7 +364,7 @@ Configuration
 138    dateOfSale: Date
 139  }
 140}
-141```
+141`
 142
 143**Schema Features:**
 144- **Transform Functions**: Automatic Decimal128 to Number conversion in JSON responses
@@ -369,7 +373,7 @@ Configuration
 147
 148#### **RawCards Collection**
 149
-150```javascript
+150`javascript
 151{
 152  cardId: ObjectId (required),             // Reference to Cards collection
 153  condition: String (required),            // Card condition
@@ -381,11 +385,11 @@ Configuration
 159  sold: Boolean,
 160  saleDetails: {...}                       // Same structure as PSA cards
 161}
-162```
+162`
 163
 164#### **CardMarketReferenceProducts Collection**
 165
-166```javascript
+166`javascript
 167{
 168  name: String (required),                 // Product name
 169  setName: String (required),              // Associated Pokemon set
@@ -395,17 +399,17 @@ Configuration
 173  url: String (required),                  // CardMarket URL
 174  lastUpdated: Date                        // Data freshness tracking
 175}
-176```
+176`
 177
 178**Indexes:**
 179- **Unique Compound**: `{name, setName, category}` - Prevents duplicate products
 180- **Text Search Index**: `{name, setName}` with weights:
-181  - `name`: 10
-182  - `setName`: 5
+181 - `name`: 10
+182 - `setName`: 5
 183
 184#### **SealedProducts Collection**
 185
-186```javascript
+186`javascript
 187{
 188  productId: ObjectId (required),          // Reference to CardMarketReferenceProducts
 189  category: String (enum),                 // Booster Box, ETB, etc.
@@ -421,11 +425,11 @@ Configuration
 199  sold: Boolean,
 200  saleDetails: {...}
 201}
-202```
+202`
 203
 204#### **Auctions Collection - Polymorphic Design**
 205
-206```javascript
+206`javascript
 207{
 208  topText: String (required),              // Auction description header
 209  bottomText: String (required),           // Auction description footer
@@ -444,7 +448,7 @@ Configuration
 222  createdAt: Date,
 223  updatedAt: Date
 224}
-225```
+225`
 226
 227**Advanced Features:**
 228- **Polymorphic References**: `refPath` configuration enables dynamic model referencing
@@ -453,7 +457,7 @@ Configuration
 231
 232### **Data Models and Relationships**
 233
-234```mermaid
+234`mermaid
 235graph TD
 236    A[Set] -->|1:Many| B[Card]
 237    B -->|1:Many| C[PsaGradedCard]
@@ -462,7 +466,7 @@ Configuration
 240    G[Auction] -->|Many:Many| C
 241    G -->|Many:Many| D
 242    G -->|Many:Many| F
-243```
+243`
 244
 245**Key Relationships:**
 246- **Set → Cards**: One-to-many relationship tracking cards within sets
@@ -474,7 +478,7 @@ Configuration
 252
 253#### **Card Creation Process**
 254
-255```mermaid
+255`mermaid
 256sequenceDiagram
 257    participant Client
 258    participant Controller
@@ -492,18 +496,13 @@ Configuration
 270    Database-->>Service: Return Created Item
 271    Service-->>Controller: Populated Response
 272    Controller-->>Client: Success Response
-273```
+273`
 274
-275**Process Steps:**
-2761. **Validation**: Input validation → Reference data verification
-2772. **Find-or-Create**: Automatic Set/Card creation if non-existent
-2783. **Population**: Link collection item to Card/Set references
-2794. **Price Tracking**: Initialize price history
-2805. **Response**: Return populated item with full relationship data
+275**Process Steps:** 2761. **Validation**: Input validation → Reference data verification 2772. **Find-or-Create**: Automatic Set/Card creation if non-existent 2783. **Population**: Link collection item to Card/Set references 2794. **Price Tracking**: Initialize price history 2805. **Response**: Return populated item with full relationship data
 281
 282#### **Search Data Flow**
 283
-284```mermaid
+284`mermaid
 285sequenceDiagram
 286    participant Client
 287    participant Cache
@@ -520,23 +519,12 @@ Configuration
 298    Fuzzy-->>Search: Scored Results
 299    Search->>Cache: Store Results
 300    Search-->>Client: Final Response
-301```
+301`
 302
-303**Process Steps:**
-3041. **Cache Check**: Search cache lookup (5-minute TTL)
-3052. **Database Query**: MongoDB aggregation with text search
-3063. **Population**: Mongoose population of references
-3074. **Fuzzy Processing**: Fuse.js scoring and ranking
-3085. **Post-Processing**: Filtering and final scoring
-3096. **Cache Store**: Store results for future requests
-3107. **Response**: Return with cache metadata
+303**Process Steps:** 3041. **Cache Check**: Search cache lookup (5-minute TTL) 3052. **Database Query**: MongoDB aggregation with text search 3063. **Population**: Mongoose population of references 3074. **Fuzzy Processing**: Fuse.js scoring and ranking 3085. **Post-Processing**: Filtering and final scoring 3096. **Cache Store**: Store results for future requests 3107. **Response**: Return with cache metadata
 311
 312#### **Sales Tracking Flow**
-313
-3141. **Sale Initiation**: Mark item as sold with sale details
-3152. **Price History**: Record final sale price
-3163. **Analytics Update**: Update sales metrics
-3174. **Auction Sync**: Update auction sold values if applicable
+313 3141. **Sale Initiation**: Mark item as sold with sale details 3152. **Price History**: Record final sale price 3163. **Analytics Update**: Update sales metrics 3174. **Auction Sync**: Update auction sold values if applicable
 318
 319### **Caching Strategy**
 320
@@ -550,12 +538,12 @@ Configuration
 328- General API responses: 1 minute
 329
 330**Cache Key Strategy:**
-331```javascript
+331``javascript
 332const createCacheKey = (req) => {
 333  const { q, limit, category, setId, setName, year, pokemonNumber } = req.query;
 334  return `${req.route.path}:${JSON.stringify({ q, limit, category, setId, setName, year, pokemonNumber })}`;
 335};
-336```
+336``
 337
 338**Statistics Tracking**: Hit rate, miss count, performance metrics
 339
@@ -563,14 +551,14 @@ Configuration
 341
 342#### **Cache Performance**
 343
-344```javascript
+344`javascript
 345// Example cache configuration
 346{
 347  stdTTL: 300,        // 5-minute default TTL
 348  checkperiod: 60,    // Check for expired keys every minute
 349  useClones: false    // Performance optimization
 350}
-351```
+351`
 352
 353**Performance Monitoring:**
 354- Real-time hit rate calculation
@@ -596,7 +584,7 @@ Configuration
 374#### **Advanced Mongoose Patterns**
 375
 376**Transform Functions for Decimal128:**
-377```javascript
+377`javascript
 378psaGradedCardSchema.set('toJSON', {
 379  transform(doc, ret) {
 380    if (ret.myPrice?.$numberDecimal) {
@@ -608,7 +596,7 @@ Configuration
 386    }));
 387  }
 388});
-389```
+389`
 390
 391#### **Data Integrity Measures**
 392
@@ -623,7 +611,7 @@ Configuration
 401#### **Multi-Field Text Search**
 402
 403**Index Configuration:**
-404```javascript
+404`javascript
 405cardSchema.index({
 406  cardName: 'text',
 407  baseName: 'text', 
@@ -632,7 +620,7 @@ Configuration
 410}, {
 411  weights: { cardName: 10, baseName: 8, pokemonNumber: 5, variety: 3 }
 412});
-413```
+413`
 414
 415**Indexing Features:**
 416- **Weighted Relevance**: CardName highest priority, variety lowest
@@ -655,31 +643,23 @@ Configuration
 433
 434#### **Middleware Stack (Execution Order)**
 435
-436**Performance Middleware:**
-4371. **Custom Compression**: 1KB threshold, level 6 compression
-438   ```javascript
+436**Performance Middleware:** 4371. **Custom Compression**: 1KB threshold, level 6 compression
+438 `javascript
 439   // Intelligent compression with binary type detection
 440   filter: (req, res) => {
 441     const contentType = res.getHeader('content-type');
 442     const binaryTypes = ['image/', 'video/', 'audio/', 'application/pdf'];
 443     return !binaryTypes.some(type => contentType?.startsWith(type));
 444   }
-445   ```
-4462. **Cache Headers**: 5 min API, 1 min search
+445   ` 4462. **Cache Headers**: 5 min API, 1 min search
 447
-448**Standard Middleware:**
-4493. **CORS**: Cross-origin resource sharing
-4504. **JSON Parsing**: `express.json({ limit: '200mb' })`
-4515. **URL Encoding**: `express.urlencoded({ limit: '200mb', extended: true, parameterLimit: 50000 })`
+448**Standard Middleware:** 4493. **CORS**: Cross-origin resource sharing 4504. **JSON Parsing**: `express.json({ limit: '200mb' })` 4515. **URL Encoding**: `express.urlencoded({ limit: '200mb', extended: true, parameterLimit: 50000 })`
 452
-453**Static File Serving:**
-4546. **Uploads**: `/uploads` serves uploaded images
+453**Static File Serving:** 4546. **Uploads**: `/uploads` serves uploaded images
 455
-456**Route Handlers:**
-4577. **API Routes**: Versioned routes with `/api/` prefix
+456**Route Handlers:** 4577. **API Routes**: Versioned routes with `/api/` prefix
 458
-459**Error Handling:**
-4608. **Centralized Error Middleware**: Executed last
+459**Error Handling:** 4608. **Centralized Error Middleware**: Executed last
 461
 462#### **Routing Structure**
 463
@@ -700,104 +680,106 @@ Configuration
 478
 479
 |
- Method 
+Method
 |
- Endpoint 
+Endpoint
 |
- Purpose 
+Purpose
 |
- Parameters 
+Parameters
 |
- Response 
+Response
 |
 480
 |
---------
-|
-----------
-|
----------
-|
-------------
-|
-----------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 481
 |
- GET 
+GET
 |
 `/api/cards`
 |
- Get cards with filtering 
+Get cards with filtering
 |
 `setId`
-, 
+,
 `cardName`
-, 
+,
 `baseName`
 |
- Card array with pagination 
+Card array with pagination
 |
 482
 |
- GET 
+GET
 |
 `/api/cards/search`
 |
- Fuzzy search cards 
+Fuzzy search cards
 |
 `q`
- (required), 
+(required),
 `limit`
-, 
+,
 `setName`
 |
- Search results with scoring 
+Search results with scoring
 |
 483
 |
- GET 
+GET
 |
 `/api/cards/suggestions`
 |
- Search autocomplete 
+Search autocomplete
 |
 `q`
- (required), 
+(required),
 `limit`
 |
- Suggestion array 
+Suggestion array
 |
 484
 |
- GET 
+GET
 |
 `/api/cards/search-best-match`
 |
- Advanced search with scoring 
+Advanced search with scoring
 |
 `q`
- (required) 
+(required)
 |
- Best match with relevance 
+Best match with relevance
 |
 485
 |
- GET 
+GET
 |
 `/api/cards/:id`
 |
- Get specific card 
+Get specific card
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Single card with population 
+Single card with population
 |
 486
 
 487**Search Response Format:**
-488```javascript
+488`javascript
 489{
 490  "success": true,
 491  "data": [...],
@@ -814,7 +796,7 @@ Configuration
 502    }
 503  }
 504}
-505```
+505`
 506
 507**Advanced Search Features:**
 508- **Multi-Stage Processing**: MongoDB text search → Fuse.js fuzzy matching
@@ -831,7 +813,7 @@ Configuration
 519- **Sorting**: `sort_by` (relevance, name, year), `order` (asc, desc)
 520
 521**Complex Search Examples:**
-522```bash
+522`bash
 523# Multi-field search with filters
 524GET /api/cards/search?q=charizard&setName=Base Set&limit=10
 525
@@ -840,10 +822,10 @@ Configuration
 528
 529# Autocomplete suggestions
 530GET /api/cards/suggestions?q=char&limit=5
-531```
+531`
 532
 533**Search Result Structure:**
-534```javascript
+534`javascript
 535{
 536  "data": [{
 537    "_id": "ObjectId",
@@ -860,76 +842,78 @@ Configuration
 548    "algorithm": "hybrid"   // Text + Fuzzy
 549  }
 550}
-551```
+551`
 552
 553#### **Sets API (`/api/sets`)**
 554
 555
 |
- Method 
+Method
 |
- Endpoint 
+Endpoint
 |
- Purpose 
+Purpose
 |
- Parameters 
+Parameters
 |
- Response 
+Response
 |
 556
 |
---------
-|
-----------
-|
----------
-|
-------------
-|
-----------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 557
 |
- GET 
+GET
 |
 `/api/sets`
 |
- Get all sets 
+Get all sets
 |
- None 
+None
 |
- Complete sets array 
+Complete sets array
 |
 558
 |
- GET 
+GET
 |
 `/api/sets/paginated`
 |
- Get sets with pagination 
+Get sets with pagination
 |
 `page`
-, 
+,
 `limit`
-, 
+,
 `year`
-, 
+,
 `search`
 |
- Paginated sets 
+Paginated sets
 |
 559
 |
- GET 
+GET
 |
 `/api/sets/:id`
 |
- Get specific set 
+Get specific set
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Single set 
+Single set
 |
 560
 
@@ -937,114 +921,116 @@ Configuration
 562
 563
 |
- Method 
+Method
 |
- Endpoint 
+Endpoint
 |
- Purpose 
+Purpose
 |
- Parameters 
+Parameters
 |
- Response 
+Response
 |
 564
 |
---------
-|
-----------
-|
----------
-|
-------------
-|
-----------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 565
 |
- GET 
+GET
 |
 `/api/psa-graded-cards`
 |
- Get PSA cards 
+Get PSA cards
 |
 `grade`
-, 
+,
 `setName`
-, 
+,
 `cardName`
-, 
+,
 `sold`
 |
- PSA cards array 
+PSA cards array
 |
 566
 |
- GET 
+GET
 |
 `/api/psa-graded-cards/:id`
 |
- Get specific PSA card 
+Get specific PSA card
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Single PSA card 
+Single PSA card
 |
 567
 |
- POST 
+POST
 |
 `/api/psa-graded-cards`
 |
- Create PSA card 
+Create PSA card
 |
- Card data in body 
+Card data in body
 |
- Created PSA card 
+Created PSA card
 |
 568
 |
- PUT 
+PUT
 |
 `/api/psa-graded-cards/:id`
 |
- Update PSA card 
+Update PSA card
 |
 `id`
-, update data 
+, update data
 |
- Updated PSA card 
+Updated PSA card
 |
 569
 |
- DELETE 
+DELETE
 |
 `/api/psa-graded-cards/:id`
 |
- Delete PSA card 
+Delete PSA card
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Deletion confirmation 
+Deletion confirmation
 |
 570
 |
- PATCH 
+PATCH
 |
 `/api/psa-graded-cards/:id/mark-sold`
 |
- Mark as sold 
+Mark as sold
 |
 `id`
-, sale details 
+, sale details
 |
- Updated PSA card 
+Updated PSA card
 |
 571
 
 572**Create/Update Request Body:**
-573```javascript
+573`javascript
 574{
 575  "cardId": "ObjectId",
 576  "grade": "10",
@@ -1052,7 +1038,7 @@ Configuration
 578  "images": ["url1", "url2"],
 579  "condition": "Mint"  // For raw cards
 580}
-581```
+581`
 582
 583#### **Raw Cards API (`/api/raw-cards`)**
 584
@@ -1062,107 +1048,109 @@ Configuration
 588
 589
 |
- Method 
+Method
 |
- Endpoint 
+Endpoint
 |
- Purpose 
+Purpose
 |
- Parameters 
+Parameters
 |
- Response 
+Response
 |
 590
 |
---------
-|
-----------
-|
----------
-|
-------------
-|
-----------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 591
 |
- GET 
+GET
 |
 `/api/sealed-products`
 |
- Get sealed products 
+Get sealed products
 |
 `category`
-, 
+,
 `setName`
-, 
+,
 `sold`
 |
- Products array 
+Products array
 |
 592
 |
- GET 
+GET
 |
 `/api/sealed-products/:id`
 |
- Get specific product 
+Get specific product
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Single product 
+Single product
 |
 593
 |
- POST 
+POST
 |
 `/api/sealed-products`
 |
- Create product 
+Create product
 |
- Product data 
+Product data
 |
- Created product 
+Created product
 |
 594
 |
- PUT 
+PUT
 |
 `/api/sealed-products/:id`
 |
- Update product 
+Update product
 |
 `id`
-, update data 
+, update data
 |
- Updated product 
+Updated product
 |
 595
 |
- DELETE 
+DELETE
 |
 `/api/sealed-products/:id`
 |
- Delete product 
+Delete product
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Deletion confirmation 
+Deletion confirmation
 |
 596
 |
- PATCH 
+PATCH
 |
 `/api/sealed-products/:id/mark-sold`
 |
- Mark as sold 
+Mark as sold
 |
 `id`
-, sale details 
+, sale details
 |
- Updated product 
+Updated product
 |
 597
 
@@ -1170,214 +1158,218 @@ Configuration
 599
 600
 |
- Method 
+Method
 |
- Endpoint 
+Endpoint
 |
- Purpose 
+Purpose
 |
- Parameters 
+Parameters
 |
- Response 
+Response
 |
 601
 |
---------
-|
-----------
-|
----------
-|
-------------
-|
-----------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 602
 |
- GET 
+GET
 |
 `/api/auctions`
 |
- Get auctions 
+Get auctions
 |
 `status`
- filter 
+filter
 |
- Auctions array 
+Auctions array
 |
 603
 |
- GET 
+GET
 |
 `/api/auctions/:id`
 |
- Get specific auction 
+Get specific auction
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Auction with populated items 
+Auction with populated items
 |
 604
 |
- POST 
+POST
 |
 `/api/auctions`
 |
- Create auction 
+Create auction
 |
- Auction data 
+Auction data
 |
- Created auction 
+Created auction
 |
 605
 |
- PUT 
+PUT
 |
 `/api/auctions/:id`
 |
- Update auction 
+Update auction
 |
 `id`
-, update data 
+, update data
 |
- Updated auction 
+Updated auction
 |
 606
 |
- DELETE 
+DELETE
 |
 `/api/auctions/:id`
 |
- Delete auction 
+Delete auction
 |
 `id`
- (ObjectId) 
+(ObjectId)
 |
- Deletion confirmation 
+Deletion confirmation
 |
 607
 |
- POST 
+POST
 |
 `/api/auctions/:id/items`
 |
- Add item to auction 
+Add item to auction
 |
 `id`
-, item data 
+, item data
 |
- Updated auction 
+Updated auction
 |
 608
 |
- DELETE 
+DELETE
 |
 `/api/auctions/:id/items`
 |
- Remove item 
+Remove item
 |
 `id`
-, 
+,
 `itemId`
 |
- Updated auction 
+Updated auction
 |
 609
 |
- PATCH 
+PATCH
 |
 `/api/auctions/:id/items/sold`
 |
- Mark item sold 
+Mark item sold
 |
 `id`
-, sale data 
+, sale data
 |
- Updated auction 
+Updated auction
 |
 610
 
 611**Polymorphic Item Management:**
-612```javascript
+612`javascript
 613// Add item request
 614{
 615  "itemId": "ObjectId",
 616  "itemCategory": "PsaGradedCard", // or "RawCard", "SealedProduct"
 617  "startingPrice": 25.00
 618}
-619```
+619`
 620
 621#### **Sales API (`/api/sales`)**
 622
 623
 |
- Method 
+Method
 |
- Endpoint 
+Endpoint
 |
- Purpose 
+Purpose
 |
- Parameters 
+Parameters
 |
- Response 
+Response
 |
 624
 |
---------
-|
-----------
-|
----------
-|
-------------
-|
-----------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 625
 |
- GET 
+GET
 |
 `/api/sales`
 |
- Get sales data 
+Get sales data
 |
 `startDate`
-, 
+,
 `endDate`
-, 
+,
 `category`
 |
- Sales array 
+Sales array
 |
 626
 |
- GET 
+GET
 |
 `/api/sales/summary`
 |
- Get sales summary 
+Get sales summary
 |
- Date range filters 
+Date range filters
 |
- Aggregated metrics 
+Aggregated metrics
 |
 627
 |
- GET 
+GET
 |
 `/api/sales/graph-data`
 |
- Get graph data 
+Get graph data
 |
- Date range filters 
+Date range filters
 |
- Time-series data 
+Time-series data
 |
 628
 
 629**Sales Summary Response:**
-630```javascript
+630`javascript
 631{
 632  "totalRevenue": 1250.00,
 633  "totalProfit": 340.50,
@@ -1389,83 +1381,85 @@ Configuration
 639    "sealedProduct": { "count": 10, "revenue": 150.00 }
 640  }
 641}
-642```
+642`
 643
 644#### **Upload API (`/api/upload`)**
 645
 646
 |
- Method 
+Method
 |
- Endpoint 
+Endpoint
 |
- Purpose 
+Purpose
 |
- Parameters 
+Parameters
 |
- Response 
+Response
 |
 647
 |
---------
-|
-----------
-|
----------
-|
-------------
-|
-----------
+
+---
+
+## |
+
+## |
+
+## |
+
+## |
+
 |
 648
 |
- POST 
+POST
 |
 `/api/upload/image`
 |
- Upload single image 
+Upload single image
 |
 `image`
- (file) 
+(file)
 |
- Image URL 
+Image URL
 |
 649
 |
- POST 
+POST
 |
 `/api/upload/images`
 |
- Upload multiple images 
+Upload multiple images
 |
 `images`
- (files) 
+(files)
 |
- Image URLs array 
+Image URLs array
 |
 650
 |
- DELETE 
+DELETE
 |
 `/api/upload/cleanup`
 |
- Cleanup specific images 
+Cleanup specific images
 |
- Image URLs 
+Image URLs
 |
- Cleanup result 
+Cleanup result
 |
 651
 |
- DELETE 
+DELETE
 |
 `/api/upload/cleanup-all`
 |
- Cleanup orphaned images 
+Cleanup orphaned images
 |
- None 
+None
 |
- Cleanup summary 
+Cleanup summary
 |
 652
 
@@ -1488,7 +1482,7 @@ Configuration
 669
 670#### **Standard Error Response Format**
 671
-672```javascript
+672`javascript
 673{
 674  "success": false,
 675  "status": "error",
@@ -1496,7 +1490,7 @@ Configuration
 677  "details": "Additional technical details (optional)",
 678  "stack": "Stack trace (development only)"
 679}
-680```
+680`
 681
 682#### **HTTP Status Codes**
 683
@@ -1522,13 +1516,10 @@ Configuration
 703
 704#### **Card Collection Management Process**
 705
-706**Reference Data Validation:**
-7071. Verify card exists in PSA database
-7082. Validate set information consistency
-7093. Ensure data consistency across references
+706**Reference Data Validation:** 7071. Verify card exists in PSA database 7082. Validate set information consistency 7093. Ensure data consistency across references
 710
 711**Find-or-Create Logic:**
-712```javascript
+712`javascript
 713const findOrCreateCard = async (cardData) => {
 714  // 1. Find or create Set
 715  let set = await Set.findOne({ setName });
@@ -1548,7 +1539,7 @@ Configuration
 729  
 730  return card._id;
 731};
-732```
+732`
 733
 734**Price History Tracking:**
 735- Automatic price change detection
@@ -1565,7 +1556,7 @@ Configuration
 746#### **Advanced Search Algorithm**
 747
 748**Fuzzy Search with Weighted Scoring:**
-749```javascript
+749`javascript
 750const fuzzySearchAlgorithm = {
 751  exactMatchBonus: {
 752    cardName: 100,
@@ -1582,14 +1573,14 @@ Configuration
 763    return (1 - fuseScore) * 100 + exactBonus + (popularityScore * 0.1);
 764  }
 765};
-766```
+766`
 767
 768### **Search Logic and Algorithms (Expanded)**
 769
 770#### **Multi-Layer Search Architecture**
 771
 772**Tier 1: MongoDB Text Search**
-773```javascript
+773`javascript
 774// Optimized aggregation pipeline with early filtering
 775const pipeline = [
 776  { $match: { $text: { $search: query } } },
@@ -1603,7 +1594,7 @@ Configuration
 784  { $match: setNameFilter }, // Post-lookup filtering
 785  { $limit: maxResults }
 786];
-787```
+787`
 788
 789**Tier 2: Fuse.js Fuzzy Processing**
 790- **Weighted Scoring**: CardName (40%), BaseName (30%), Variety (20%), SetName (10%)
@@ -1617,11 +1608,7 @@ Configuration
 798
 799#### **Search Query Processing**
 800
-801**Raw Query Transformation:**
-8021. **Tokenization**: Split query into individual terms
-8032. **Normalization**: Lowercase, trim whitespace
-8043. **Stop Word Filtering**: Remove common words (future enhancement)
-8054. **Synonym Expansion**: Pokemon-specific synonyms (future enhancement)
+801**Raw Query Transformation:** 8021. **Tokenization**: Split query into individual terms 8032. **Normalization**: Lowercase, trim whitespace 8043. **Stop Word Filtering**: Remove common words (future enhancement) 8054. **Synonym Expansion**: Pokemon-specific synonyms (future enhancement)
 806
 807**Core Search Algorithms:**
 808- **Keyword Matching**: Direct field matching with weights
@@ -1630,7 +1617,7 @@ Configuration
 811- **Relevance Ranking**: Combined scoring algorithm
 812
 813**Filter Application:**
-814```javascript
+814`javascript
 815const applyFilters = (results, filters) => {
 816  return results.filter(item => {
 817    if (filters.setName && item.setId?.setName !== filters.setName) return false;
@@ -1639,7 +1626,7 @@ Configuration
 820    return true;
 821  });
 822};
-823```
+823`
 824
 825**Pagination Logic:**
 826- **Offset Calculation**: `(page - 1) * limit`
@@ -1649,7 +1636,7 @@ Configuration
 830#### **Search Performance Optimizations**
 831
 832**Request Deduplication:**
-833```javascript
+833`javascript
 834async deduplicateRequest(key, requestFn) {
 835  if (this.requestDeduplication.has(key)) {
 836    return this.requestDeduplication.get(key);
@@ -1664,7 +1651,7 @@ Configuration
 845    this.requestDeduplication.delete(key);
 846  }
 847}
-848```
+848`
 849
 850**Parallel Search Execution:**
 851- Global search runs card and product searches concurrently
@@ -1673,10 +1660,7 @@ Configuration
 854
 855#### **Auction Management Process**
 856
-857**Auction Creation:**
-8581. Draft status initialization
-8592. Item validation and addition
-8603. Value calculation and verification
+857**Auction Creation:** 8581. Draft status initialization 8592. Item validation and addition 8603. Value calculation and verification
 861
 862**Item Management:**
 863- Polymorphic item addition (PSA/Raw/Sealed)
@@ -1690,7 +1674,7 @@ Configuration
 871
 872#### **Sales Analytics Engine**
 873
-874```javascript
+874`javascript
 875const salesAnalytics = {
 876  revenueCalculation: (sales) => {
 877    return sales.reduce((total, sale) => 
@@ -1714,7 +1698,7 @@ Configuration
 895    return dailySales;
 896  }
 897};
-898```
+898`
 899
 900**Advanced Analytics Features:**
 901- **Cross-Category Analysis**: Multi-collection sales aggregation
@@ -1726,7 +1710,7 @@ Configuration
 907
 908#### **Search Deduplication Algorithm**
 909
-910```javascript
+910``javascript
 911const searchDeduplication = {
 912  pendingSearches: new Map(),
 913  
@@ -1750,11 +1734,11 @@ Configuration
 931    }
 932  }
 933};
-934```
+934``
 935
 936#### **Price History Management**
 937
-938```javascript
+938`javascript
 939const priceHistoryManager = {
 940  shouldUpdateHistory: (currentPrice, newPrice) => {
 941    return parseFloat(currentPrice) !== parseFloat(newPrice);
@@ -1767,7 +1751,7 @@ Configuration
 948    }];
 949  }
 950};
-951```
+951`
 952
 953### **Event Handling**
 954
@@ -1796,7 +1780,7 @@ Configuration
 977
 978Located in `/utils/dataImporter.js` with modular structure:
 979
-980```javascript
+980`javascript
 981const importCoordinator = {
 982  importAllData: async (options = {}) => {
 983    const results = {
@@ -1825,7 +1809,7 @@ Configuration
 1006    return results;
 1007  }
 1008};
-1009```
+1009`
 1010
 1011#### **Three-Phase Import Process**
 1012
@@ -1859,7 +1843,7 @@ Configuration
 1040
 1041### **Testing Infrastructure**
 1042
-1043```javascript
+1043`javascript
 1044const testDataImport = async () => {
 1045  const mongoServer = await MongoMemoryServer.create();
 1046  
@@ -1874,7 +1858,7 @@ Configuration
 1055  await verifyImportResults();
 1056  await mongoServer.stop();
 1057};
-1058```
+1058`
 1059
 1060### **Manual Process Scripts**
 1061
@@ -1891,26 +1875,22 @@ Configuration
 1072- **Redis Integration**: Job state management and monitoring
 1073- **Worker Processes**: Separate worker instances for job processing
 1074
-1075**Scheduled Jobs (Recommended):**
-10761. **CardMarket Price Updates** (Daily at 2 AM)
-1077   - Fetch latest pricing data
-1078   - Update reference product prices
-1079   - Trigger price change notifications
-1080
-10812. **PSA Population Refresh** (Weekly on Sundays)
-1082   - Update PSA grade distribution data
-1083   - Recalculate popularity scores
-1084   - Sync with PSA database changes
-1085
-10863. **Sales Analytics Aggregation** (Nightly at midnight)
-1087   - Generate daily sales summaries
-1088   - Update trend calculations
-1089   - Prepare dashboard metrics
-1090
-10914. **Database Cleanup Operations** (Monthly)
-1092   - Remove orphaned images
-1093   - Clean up expired cache entries
-1094   - Archive old log files
+1075**Scheduled Jobs (Recommended):** 10761. **CardMarket Price Updates** (Daily at 2 AM)
+1077 - Fetch latest pricing data
+1078 - Update reference product prices
+1079 - Trigger price change notifications
+1080 10812. **PSA Population Refresh** (Weekly on Sundays)
+1082 - Update PSA grade distribution data
+1083 - Recalculate popularity scores
+1084 - Sync with PSA database changes
+1085 10863. **Sales Analytics Aggregation** (Nightly at midnight)
+1087 - Generate daily sales summaries
+1088 - Update trend calculations
+1089 - Prepare dashboard metrics
+1090 10914. **Database Cleanup Operations** (Monthly)
+1092 - Remove orphaned images
+1093 - Clean up expired cache entries
+1094 - Archive old log files
 1095
 1096**Job Monitoring Features:**
 1097- Failed job retry mechanisms with exponential backoff
@@ -1927,7 +1907,7 @@ Configuration
 1108#### **Application Logging**
 1109
 1110**Current Logging Patterns:**
-1111```javascript
+1111`javascript
 1112// Standard logging patterns found across services
 1113console.log('='.repeat(80));
 1114console.log('PROCESS BOUNDARY MARKER');
@@ -1943,7 +1923,7 @@ Configuration
 1124  cardId: result._id,
 1125  timestamp: new Date().toISOString()
 1126});
-1127```
+1127`
 1128
 1129#### **Logging Categories**
 1130
@@ -1973,7 +1953,7 @@ Configuration
 1154
 1155The `/api/health` endpoint provides comprehensive system status:
 1156
-1157```javascript
+1157`javascript
 1158{
 1159  "status": "healthy",
 1160  "timestamp": "2024-01-01T12:00:00.000Z",
@@ -1992,12 +1972,12 @@ Configuration
 1173    "percentage": 35.3
 1174  }
 1175}
-1176```
+1176`
 1177
 1178#### **Cache Performance Metrics**
 1179
 1180**Real-time Statistics:**
-1181```javascript
+1181`javascript
 1182const cacheStats = {
 1183  hits: number,
 1184  misses: number,
@@ -2008,7 +1988,7 @@ Configuration
 1189    count: "entries"
 1190  }
 1191};
-1192```
+1192`
 1193
 1194**Performance Features:**
 1195- Real-time hit rate calculation
@@ -2037,12 +2017,7 @@ Configuration
 1218### **Monitoring Recommendations**
 1219
 1220**Enhanced Observability Stack:**
-1221
-12221. **Structured Logging**: Winston or Pino for structured JSON logs
-12232. **Application Monitoring**: New Relic, DataDog, or similar APM tools
-12243. **Database Monitoring**: MongoDB Atlas monitoring or custom metrics
-12254. **Performance Metrics**: Request timing, throughput monitoring
-12265. **Business Metrics**: Collection growth, sales trends, user activity
+1221 12221. **Structured Logging**: Winston or Pino for structured JSON logs 12232. **Application Monitoring**: New Relic, DataDog, or similar APM tools 12243. **Database Monitoring**: MongoDB Atlas monitoring or custom metrics 12254. **Performance Metrics**: Request timing, throughput monitoring 12265. **Business Metrics**: Collection growth, sales trends, user activity
 1227
 1228**Metrics to Track:**
 1229- Request latency percentiles (P50, P95, P99)
@@ -2061,7 +2036,7 @@ Configuration
 1242
 1243Centralized error processing in `/middleware/errorHandler.js`:
 1244
-1245```javascript
+1245``javascript
 1246const errorHandler = (error, req, res, next) => {
 1247  // Mongoose-specific error handling
 1248  if (error.name === 'ValidationError') {
@@ -2091,13 +2066,13 @@ Configuration
 1272    stack: process.env.NODE_ENV === 'development' ? error.stack : undefined
 1273  });
 1274};
-1275```
+1275``
 1276
 1277#### **Async Handler Wrapper**
 1278
 1279Consistent error handling for async operations:
 1280
-1281```javascript
+1281`javascript
 1282const asyncHandler = (fn) => (req, res, next) => {
 1283  Promise.resolve(fn(req, res, next)).catch(next);
 1284};
@@ -2107,13 +2082,13 @@ Configuration
 1288  const card = await cardService.findById(req.params.id);
 1289  res.json({ success: true, data: card });
 1290}));
-1291```
+1291`
 1292
 1293### **Specific Error Cases**
 1294
 1295#### **Database Errors**
 1296
-1297```javascript
+1297`javascript
 1298// MongoDB connection errors
 1299mongoose.connection.on('error', (error) => {
 1300  console.error('MongoDB connection error:', error);
@@ -2131,11 +2106,11 @@ Configuration
 1312    throw new AppError('Database connection lost', 503);
 1313  }
 1314};
-1315```
+1315`
 1316
 1317#### **Validation Errors**
 1318
-1319```javascript
+1319`javascript
 1320// Custom validation error class
 1321class ValidationError extends Error {
 1322  constructor(message, field = null) {
@@ -2150,11 +2125,11 @@ Configuration
 1331if (!mongoose.Types.ObjectId.isValid(cardId)) {
 1332  throw new ValidationError('Invalid card ID format', 'cardId');
 1333}
-1334```
+1334`
 1335
 1336#### **Business Logic Errors**
 1337
-1338```javascript
+1338``javascript
 1339// Reference data validation
 1340const validateReferenceData = async (cardData) => {
 1341  const existingCard = await Card.findOne({
@@ -2168,7 +2143,7 @@ Configuration
 1349    );
 1350  }
 1351};
-1352```
+1352``
 1353
 1354### **Resilience Features**
 1355
@@ -2176,7 +2151,7 @@ Configuration
 1357
 1358Prevents duplicate concurrent operations:
 1359
-1360```javascript
+1360`javascript
 1361const pendingRequests = new Map();
 1362
 1363const deduplicateRequest = async (key, operation) => {
@@ -2193,13 +2168,13 @@ Configuration
 1374    pendingRequests.delete(key);
 1375  }
 1376};
-1377```
+1377`
 1378
 1379#### **Cache Fallback Strategy**
 1380
 1381Graceful degradation when cache is unavailable:
 1382
-1383```javascript
+1383`javascript
 1384const getCachedData = async (key, fetchFunction) => {
 1385  try {
 1386    const cached = cache.get(key);
@@ -2218,13 +2193,13 @@ Configuration
 1399  
 1400  return data;
 1401};
-1402```
+1402`
 1403
 1404#### **Database Connection Resilience**
 1405
 1406Environment-aware connection handling:
 1407
-1408```javascript
+1408`javascript
 1409const connectToDatabase = async () => {
 1410  try {
 1411    await mongoose.connect(process.env.MONGO_URI);
@@ -2239,11 +2214,11 @@ Configuration
 1420    throw error;
 1421  }
 1422};
-1423```
+1423`
 1424
 1425### **Custom Error Class Hierarchy**
 1426
-1427```javascript
+1427`javascript
 1428class AppError extends Error {
 1429  constructor(message, statusCode) {
 1430    super(message);
@@ -2263,7 +2238,7 @@ Configuration
 1444    super(message, 404);
 1445  }
 1446}
-1447```
+1447`
 1448
 1449### **Circuit Breakers/Retries**
 1450
@@ -2276,13 +2251,7 @@ Configuration
 1457- Timeout handling for long-running operations
 1458
 1459### **Recommendations for Enhanced Resilience**
-1460
-14611. **Circuit Breakers**: Use libraries like opossum for external API calls
-14622. **Retry Logic**: Exponential backoff for transient failures
-14633. **Rate Limiting**: Express-rate-limit for API protection
-14644. **Timeout Handling**: Request timeouts for all operations
-14655. **Health Checks**: Deep health monitoring with dependency checks
-14666. **Graceful Shutdown**: Proper cleanup on process termination
+1460 14611. **Circuit Breakers**: Use libraries like opossum for external API calls 14622. **Retry Logic**: Exponential backoff for transient failures 14633. **Rate Limiting**: Express-rate-limit for API protection 14644. **Timeout Handling**: Request timeouts for all operations 14655. **Health Checks**: Deep health monitoring with dependency checks 14666. **Graceful Shutdown**: Proper cleanup on process termination
 1467
 1468---
 1469
@@ -2290,7 +2259,7 @@ Configuration
 1471
 1472### **Overall Directory Structure**
 1473
-1474```
+1474`
 1475pokemon-collection-backend/
 1476├── config/                   # Configuration files
 1477│   └── db.js                # Database connection configuration
@@ -2358,7 +2327,7 @@ Configuration
 1539├── eslint.config.js         # ESLint configuration
 1540├── package.json             # Dependencies and scripts
 1541└── server.js               # Application entry point
-1542```
+1542`
 1543
 1544### **Module Responsibilities**
 1545
@@ -2373,41 +2342,36 @@ Configuration
 1554- **Response Formatting**: Standardized success/error response formats
 1555
 1556**Controller Sub-Modules** (Auctions Example):
-1557```
+1557`
 1558controllers/auctions/
 1559├── index.js                 # Main controller orchestration
 1560├── auctionCrudOperations.js # Basic CRUD handlers
 1561├── auctionItemHelpers.js    # Item manipulation utilities
 1562└── auctionItemOperations.js # Complex item business logic
-1563```
+1563`
 1564
 1565#### **Services Directory**
 1566
 1567**Primary Responsibility**: Business logic implementation, data processing
 1568
 1569**Service Categories**:
-1570
-15711. **Query Services**: Read-only operations with optimized queries
-1572   - `psaGradedCardQueryService.js`
-1573   - `rawCardQueryService.js`
-1574
-15752. **CRUD Services**: Write operations with validation
-1576   - `psaGradedCardCrudService.js`
-1577   - `rawCardCrudService.js`
-1578   - `sealedProductCrudService.js`
-1579
-15803. **Analytics Services**: Business intelligence and reporting
-1581   - `salesAnalyticsService.js`
-1582   - `salesDataService.js`
-1583
-15844. **Formatting Services**: External platform integration
-1585   - `dbaFormatter.js`
-1586   - `facebookPostFormatter.js`
-1587
-15885. **Utility Services**: Cross-cutting concerns
-1589   - `itemFetcher.js`
-1590   - `referenceDataValidator.js`
-1591   - `searchService.js`
+1570 15711. **Query Services**: Read-only operations with optimized queries
+1572 - `psaGradedCardQueryService.js`
+1573 - `rawCardQueryService.js`
+1574 15752. **CRUD Services**: Write operations with validation
+1576 - `psaGradedCardCrudService.js`
+1577 - `rawCardCrudService.js`
+1578 - `sealedProductCrudService.js`
+1579 15803. **Analytics Services**: Business intelligence and reporting
+1581 - `salesAnalyticsService.js`
+1582 - `salesDataService.js`
+1583 15844. **Formatting Services**: External platform integration
+1585 - `dbaFormatter.js`
+1586 - `facebookPostFormatter.js`
+1587 15885. **Utility Services**: Cross-cutting concerns
+1589 - `itemFetcher.js`
+1590 - `referenceDataValidator.js`
+1591 - `searchService.js`
 1592
 1593#### **Models Directory**
 1594
@@ -2475,7 +2439,7 @@ Configuration
 1656
 1657#### **Request Flow**
 1658
-1659```mermaid
+1659`mermaid
 1660sequenceDiagram
 1661    participant Client
 1662    participant Route
@@ -2494,53 +2458,47 @@ Configuration
 1675    Service-->>Controller: Business Result
 1676    Controller-->>Route: HTTP Response
 1677    Route-->>Client: JSON Response
-1678```
+1678`
 1679
 1680#### **Inter-Service Communication**
 1681
 1682**Direct Function Calls**: Services communicate via direct method imports
-1683```javascript
+1683`javascript
 1684// Example: Controller using multiple services
 1685const psaService = require('../services/psaGradedCardCrudService');
 1686const searchService = require('../services/searchService');
 1687const analytics = require('../services/salesAnalyticsService');
-1688```
+1688`
 1689
 1690**Shared Utilities**: Common functions accessed across modules
-1691```javascript
+1691`javascript
 1692// Example: Multiple controllers using name shortener
 1693const { shortenForDBA } = require('../utils/nameShortener');
-1694```
+1694`
 1695
 1696#### **Dependency Injection Patterns**
 1697
 1698**Model Dependencies**: Services depend on models, not controllers
-1699```javascript
+1699`javascript
 1700// Service layer model usage
 1701const PsaGradedCard = require('../models/PsaGradedCard');
 1702const Card = require('../models/Card');
-1703```
+1703`
 1704
 1705**Configuration Dependencies**: Centralized configuration access
-1706```javascript
+1706`javascript
 1707// Database configuration usage
 1708const connectDB = require('../config/db');
-1709```
+1709`
 1710
 1711### **Entry Points**
 1712
 1713#### **Main Application Entry: `server.js`**
 1714
-1715**Bootstrap Process:**
-17161. **Environment Setup**: Load environment variables via dotenv
-17172. **Database Connection**: Establish MongoDB connection
-17183. **Middleware Configuration**: Apply compression, CORS, parsing
-17194. **Route Registration**: Mount all API routes
-17205. **Error Handling**: Apply global error middleware
-17216. **Server Startup**: Start Express server on configured port
+1715**Bootstrap Process:** 17161. **Environment Setup**: Load environment variables via dotenv 17172. **Database Connection**: Establish MongoDB connection 17183. **Middleware Configuration**: Apply compression, CORS, parsing 17194. **Route Registration**: Mount all API routes 17205. **Error Handling**: Apply global error middleware 17216. **Server Startup**: Start Express server on configured port
 1722
 1723**Server Configuration:**
-1724```javascript
+1724`javascript
 1725// Core application setup
 1726const express = require('express');
 1727const cors = require('cors');
@@ -2557,7 +2515,7 @@ Configuration
 1738
 1739// Error handling
 1740app.use(require('./middleware/errorHandler'));
-1741```
+1741`
 1742
 1743#### **Database Entry: `config/db.js`**
 1744
@@ -2572,7 +2530,7 @@ Configuration
 1753#### **Environment Configuration: `.env`**
 1754
 1755**Configuration Categories:**
-1756```bash
+1756`bash
 1757# Database
 1758MONGO_URI=mongodb://localhost:27017/pokemon-collection
 1759
@@ -2587,12 +2545,12 @@ Configuration
 1768# Cache
 1769SEARCH_CACHE_TTL=300
 1770CACHE_CHECK_PERIOD=60
-1771```
+1771`
 1772
 1773#### **ESLint Configuration: `eslint.config.js`**
 1774
 1775**Comprehensive Rule Set** (200+ rules):
-1776```javascript
+1776`javascript
 1777{
 1778  files: ['**/*.js'],
 1779  rules: {
@@ -2603,10 +2561,10 @@ Configuration
 1784    'no-var': 'error'               // Modern JavaScript practices
 1785  }
 1786}
-1787```
+1787`
 1788
 1789**Environment-Specific Overrides:**
-1790```javascript
+1790`javascript
 1791{
 1792  files: ['test/**/*.js'],
 1793  rules: {
@@ -2615,12 +2573,12 @@ Configuration
 1796    'prefer-arrow-callback': 'off'   // Mocha context binding
 1797  }
 1798}
-1799```
+1799`
 1800
 1801#### **Package Configuration: `package.json`**
 1802
 1803**Script Categories:**
-1804```json
+1804`json
 1805{
 1806  "scripts": {
 1807    "start": "nodemon server.js",           // Development server
@@ -2631,7 +2589,7 @@ Configuration
 1812    "lint:fix": "eslint . --fix"            // Automatic fixes
 1813  }
 1814}
-1815```
+1815`
 1816
 1817---
 1818
@@ -2642,23 +2600,23 @@ Configuration
 1823#### **Modular Configuration System**
 1824
 1825**Rarity Mapping**: 50+ rarity variant standardizations
-1826```javascript
+1826`javascript
 1827RARITY_VARIANTS = {
 1828  'holofoil': 'HOLO',
 1829  'first edition': '1ST EDITION',
 1830  'shadowless': 'SHADOWLESS',
 1831  'secret rare': 'SECRET RARE'
 1832}
-1833```
+1833`
 1834
 1835**Set Name Mappings**: Comprehensive Pokemon set abbreviations
-1836```javascript
+1836`javascript
 1837SET_NAMES = {
 1838  'Base Set': 'Base',
 1839  'Neo Genesis': 'Neo Gen',
 1840  'Team Rocket': 'Rocket'
 1841}
-1842```
+1842`
 1843
 1844#### **Platform-Specific Formatters**
 1845
@@ -2678,13 +2636,13 @@ Configuration
 1859
 1860#### **Multi-Platform Optimization**
 1861
-1862```javascript
+1862`javascript
 1863const formatters = {
 1864  dba: (name) => shortenName(name, DBA_CHAR_LIMIT),
 1865  facebook: (name) => formatWithEmojis(name),
 1866  standard: (name) => cleanFormat(name)
 1867};
-1868```
+1868`
 1869
 1870**Configuration Categories**:
 1871- **Character Limit Handling**: Platform-specific restrictions
@@ -2717,7 +2675,7 @@ Configuration
 1898
 1899#### **Parallel Processing Features**
 1900
-1901```javascript
+1901`javascript
 1902const totalResults = {
 1903  psaFiles: 0,
 1904  sealedProductFiles: 0,
@@ -2727,7 +2685,7 @@ Configuration
 1908  sealedProductsProcessed: 0,
 1909  errors: []
 1910};
-1911```
+1911`
 1912
 1913**Advanced Features**:
 1914- Concurrent PSA and CardMarket data processing
@@ -2756,7 +2714,7 @@ Configuration
 1937
 1938### **Test Organization & Hierarchy**
 1939
-1940```
+1940`
 1941test/
 1942├── controllers/
 1943│   ├── auctions/          # Auction system tests
@@ -2764,7 +2722,7 @@ Configuration
 1945│   ├── sales/             # Sales analytics tests
 1946│   ├── psaGradedCards/    # PSA card management tests
 1947│   └── helpers/           # Reusable test utilities
-1948```
+1948`
 1949
 1950### **Test Categories**
 1951
@@ -2776,10 +2734,10 @@ Configuration
 1957### **Test Data Management**
 1958
 1959**MongoDB Memory Server**: In-memory testing for complete isolation
-1960```javascript
+1960`javascript
 1961// Mocha configuration with extended timeouts for database operations
 1962"test": "NODE_ENV=test mocha test --timeout 10000 --recursive --exit"
-1963```
+1963`
 1964
 1965**Features**:
 1966- Fixture system organized by entity type
@@ -2822,7 +2780,7 @@ Configuration
 2003
 2004#### **Request Deduplication System**
 2005
-2006```javascript
+2006`javascript
 2007async deduplicateRequest(key, requestFn) {
 2008  if (this.requestDeduplication.has(key)) {
 2009    return this.requestDeduplication.get(key);
@@ -2837,7 +2795,7 @@ Configuration
 2018    this.requestDeduplication.delete(key);
 2019  }
 2020}
-2021```
+2021`
 2022
 2023**Features**:
 2024- In-flight request tracking
@@ -2846,7 +2804,7 @@ Configuration
 2027
 2028#### **CORS & Body Parsing Configuration**
 2029
-2030```javascript
+2030`javascript
 2031app.use(cors());
 2032app.use(express.json({ limit: '200mb' }));
 2033app.use(express.urlencoded({ 
@@ -2854,15 +2812,15 @@ Configuration
 2035  extended: true, 
 2036  parameterLimit: 50000 
 2037}));
-2038```
+2038`
 2039
 2040### **Static File Serving & Upload Management**
 2041
 2042#### **Upload Directory Configuration**
 2043
-2044```javascript
+2044`javascript
 2045app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
-2046```
+2046`
 2047
 2048**Upload API Features**:
 2049- Single and multiple image upload endpoints

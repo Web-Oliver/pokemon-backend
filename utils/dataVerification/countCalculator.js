@@ -14,10 +14,12 @@ const calculatePsaCounts = (dir, stats, dataDir) => {
 
     if (stat.isDirectory()) {
       calculatePsaCounts(fullPath, stats, dataDir);
-    } else if (entry.endsWith('.json')
-                    && !entry.includes('Zone.Identifier')
-                    && !entry.includes('_all_sets.json')
-                    && !entry.includes('_TEST.json')) {
+    } else if (
+      entry.endsWith('.json') &&
+      !entry.includes('Zone.Identifier') &&
+      !entry.includes('_all_sets.json') &&
+      !entry.includes('_TEST.json')
+    ) {
       try {
         const data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
 
@@ -29,9 +31,12 @@ const calculatePsaCounts = (dir, stats, dataDir) => {
         stats.processedFiles.push(path.relative(dataDir, fullPath));
         stats.expectedSets++;
 
-        const cardCount = data.cards.filter((card) => card.card_name !== 'TOTAL POPULATION'
-                      && card.base_name !== 'TOTAL POPULATION'
-                      && card.pokemon_number !== 'N/A').length;
+        const cardCount = data.cards.filter(
+          (card) =>
+            card.card_name !== 'TOTAL POPULATION' &&
+            card.base_name !== 'TOTAL POPULATION' &&
+            card.pokemon_number !== 'N/A',
+        ).length;
 
         stats.expectedCards += cardCount;
       } catch (error) {
@@ -54,9 +59,7 @@ const calculateCardMarketCounts = (dir, stats, dataDir) => {
 
     if (stat.isDirectory()) {
       calculateCardMarketCounts(fullPath, stats, dataDir);
-    } else if (entry.endsWith('.json')
-                    && !entry.includes('Zone.Identifier')
-                    && !entry.includes('progress')) {
+    } else if (entry.endsWith('.json') && !entry.includes('Zone.Identifier') && !entry.includes('progress')) {
       try {
         const data = JSON.parse(fs.readFileSync(fullPath, 'utf8'));
         const products = data.products || [];

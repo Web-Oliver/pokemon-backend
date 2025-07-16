@@ -349,7 +349,12 @@ class SetSearchStrategy extends BaseSearchStrategy {
             // Set name starts with query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$setName' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$setName' },
+                    regex: `^${this.escapeRegex(normalizedQuery)}`,
+                  },
+                },
                 then: 80,
                 else: 0,
               },
@@ -357,7 +362,12 @@ class SetSearchStrategy extends BaseSearchStrategy {
             // Set name contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$setName' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$setName' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 60,
                 else: 0,
               },
@@ -365,7 +375,12 @@ class SetSearchStrategy extends BaseSearchStrategy {
             // Word boundary match (higher relevance for complete words)
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$setName' }, regex: `\\b${this.escapeRegex(normalizedQuery)}\\b` } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$setName' },
+                    regex: `\\b${this.escapeRegex(normalizedQuery)}\\b`,
+                  },
+                },
                 then: 40,
                 else: 0,
               },
@@ -397,7 +412,12 @@ class SetSearchStrategy extends BaseSearchStrategy {
             // Length-based relevance score (shorter matches are more relevant)
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$setName' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$setName' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: { $divide: [50, { $strLenCP: '$setName' }] },
                 else: 0,
               },
@@ -439,7 +459,9 @@ class SetSearchStrategy extends BaseSearchStrategy {
       pipeline.push({
         $addFields: {
           actualCardCount: { $size: '$cardStats' },
-          cardCountDifference: { $subtract: ['$totalCardsInSet', { $size: '$cardStats' }] },
+          cardCountDifference: {
+            $subtract: ['$totalCardsInSet', { $size: '$cardStats' }],
+          },
         },
       });
     }

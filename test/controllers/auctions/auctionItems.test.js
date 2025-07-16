@@ -20,7 +20,10 @@ describe('Auction items operations', () => {
 
   describe('POST /auctions/:id/items', () => {
     it('should add item to auction', async () => {
-      const auction = await new Auction({ topText: 'Test', bottomText: 'Auction' }).save();
+      const auction = await new Auction({
+        topText: 'Test',
+        bottomText: 'Auction',
+      }).save();
       const product = await new SealedProduct({
         name: 'Product',
         setName: 'Set',
@@ -39,11 +42,15 @@ describe('Auction items operations', () => {
     });
 
     it('should return 400 for invalid category', async () => {
-      const auction = await new Auction({ topText: 'Test', bottomText: 'Auction' }).save();
+      const auction = await new Auction({
+        topText: 'Test',
+        bottomText: 'Auction',
+      }).save();
 
-      const res = await request(app)
-        .post(`/auctions/${auction._id}/items`)
-        .send({ itemId: new mongoose.Types.ObjectId(), itemCategory: 'Invalid' });
+      const res = await request(app).post(`/auctions/${auction._id}/items`).send({
+        itemId: new mongoose.Types.ObjectId(),
+        itemCategory: 'Invalid',
+      });
 
       expect(res.status).to.equal(400);
     });
@@ -66,9 +73,10 @@ describe('Auction items operations', () => {
         items: [{ itemId: product._id, itemCategory: 'SealedProduct' }],
       }).save();
 
-      const res = await request(app)
-        .delete(`/auctions/${auction._id}/items`)
-        .send({ itemId: product._id.toString(), itemCategory: 'SealedProduct' });
+      const res = await request(app).delete(`/auctions/${auction._id}/items`).send({
+        itemId: product._id.toString(),
+        itemCategory: 'SealedProduct',
+      });
 
       expect(res.status).to.equal(200);
       expect(res.body.items).to.have.length(0);
@@ -92,13 +100,11 @@ describe('Auction items operations', () => {
         items: [{ itemId: product._id, itemCategory: 'SealedProduct' }],
       }).save();
 
-      const res = await request(app)
-        .patch(`/auctions/${auction._id}/items/sold`)
-        .send({
-          itemId: product._id.toString(),
-          itemCategory: 'SealedProduct',
-          soldPrice: 100,
-        });
+      const res = await request(app).patch(`/auctions/${auction._id}/items/sold`).send({
+        itemId: product._id.toString(),
+        itemCategory: 'SealedProduct',
+        soldPrice: 100,
+      });
 
       expect(res.status).to.equal(200);
       expect(res.body.items[0].sold).to.be.true;

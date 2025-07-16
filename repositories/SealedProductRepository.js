@@ -36,9 +36,12 @@ class SealedProductRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of sealed products
    */
   async findByCategories(categories, options = {}) {
-    return await this.findAll({
-      category: { $in: categories },
-    }, options);
+    return await this.findAll(
+      {
+        category: { $in: categories },
+      },
+      options,
+    );
   }
 
   /**
@@ -87,9 +90,12 @@ class SealedProductRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of sealed products
    */
   async findByPriceRange(minPrice, maxPrice, options = {}) {
-    return await this.findAll({
-      myPrice: { $gte: minPrice, $lte: maxPrice },
-    }, options);
+    return await this.findAll(
+      {
+        myPrice: { $gte: minPrice, $lte: maxPrice },
+      },
+      options,
+    );
   }
 
   /**
@@ -99,9 +105,12 @@ class SealedProductRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of sealed products
    */
   async findByAvailability(minAvailability, options = {}) {
-    return await this.findAll({
-      availability: { $gte: minAvailability },
-    }, options);
+    return await this.findAll(
+      {
+        availability: { $gte: minAvailability },
+      },
+      options,
+    );
   }
 
   /**
@@ -116,7 +125,11 @@ class SealedProductRepository extends BaseRepository {
           totalProducts: { $sum: 1 },
           totalValue: { $sum: { $toDouble: '$myPrice' } },
           soldProducts: { $sum: { $cond: [{ $eq: ['$sold', true] }, 1, 0] } },
-          soldValue: { $sum: { $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0] } },
+          soldValue: {
+            $sum: {
+              $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0],
+            },
+          },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
           categoryDistribution: {
             $push: '$category',
@@ -143,16 +156,18 @@ class SealedProductRepository extends BaseRepository {
 
     const result = await this.aggregate(pipeline);
 
-    return result[0] || {
-      totalProducts: 0,
-      totalValue: 0,
-      soldProducts: 0,
-      soldValue: 0,
-      avgPrice: 0,
-      unsoldProducts: 0,
-      categoryDistribution: [],
-      setDistribution: [],
-    };
+    return (
+      result[0] || {
+        totalProducts: 0,
+        totalValue: 0,
+        soldProducts: 0,
+        soldValue: 0,
+        avgPrice: 0,
+        unsoldProducts: 0,
+        categoryDistribution: [],
+        setDistribution: [],
+      }
+    );
   }
 
   /**
@@ -234,9 +249,12 @@ class SealedProductRepository extends BaseRepository {
 
     cutoffDate.setDate(cutoffDate.getDate() - days);
 
-    return await this.findAll({
-      'priceHistory.dateUpdated': { $gte: cutoffDate },
-    }, options);
+    return await this.findAll(
+      {
+        'priceHistory.dateUpdated': { $gte: cutoffDate },
+      },
+      options,
+    );
   }
 
   /**
@@ -246,13 +264,16 @@ class SealedProductRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of matching sealed products
    */
   async search(searchTerm, options = {}) {
-    return await this.findAll({
-      $or: [
-        { name: { $regex: searchTerm, $options: 'i' } },
-        { setName: { $regex: searchTerm, $options: 'i' } },
-        { category: { $regex: searchTerm, $options: 'i' } },
-      ],
-    }, options);
+    return await this.findAll(
+      {
+        $or: [
+          { name: { $regex: searchTerm, $options: 'i' } },
+          { setName: { $regex: searchTerm, $options: 'i' } },
+          { category: { $regex: searchTerm, $options: 'i' } },
+        ],
+      },
+      options,
+    );
   }
 
   /**
@@ -262,10 +283,13 @@ class SealedProductRepository extends BaseRepository {
    * @returns {Promise<Array>} - Array of sealed products with low availability
    */
   async findLowAvailability(threshold = 10, options = {}) {
-    return await this.findAll({
-      availability: { $lte: threshold },
-      sold: false,
-    }, options);
+    return await this.findAll(
+      {
+        availability: { $lte: threshold },
+        sold: false,
+      },
+      options,
+    );
   }
 
   /**
@@ -289,7 +313,9 @@ class SealedProductRepository extends BaseRepository {
             $multiply: [
               {
                 $divide: [
-                  { $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }] },
+                  {
+                    $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }],
+                  },
                   { $toDouble: '$cardMarketPrice' },
                 ],
               },
@@ -332,7 +358,9 @@ class SealedProductRepository extends BaseRepository {
             $multiply: [
               {
                 $divide: [
-                  { $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }] },
+                  {
+                    $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }],
+                  },
                   { $toDouble: '$cardMarketPrice' },
                 ],
               },

@@ -64,8 +64,8 @@ app.get('/api/health', (req, res) => {
       misses: cacheStats.misses,
     },
     memory: {
-      used: Math.round(process.memoryUsage().heapUsed / 1024 / 1024 * 100) / 100,
-      total: Math.round(process.memoryUsage().heapTotal / 1024 / 1024 * 100) / 100,
+      used: Math.round((process.memoryUsage().heapUsed / 1024 / 1024) * 100) / 100,
+      total: Math.round((process.memoryUsage().heapTotal / 1024 / 1024) * 100) / 100,
     },
   });
 });

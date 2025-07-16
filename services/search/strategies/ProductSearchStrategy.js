@@ -326,7 +326,12 @@ class ProductSearchStrategy extends BaseSearchStrategy {
             // Product name starts with query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$name' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$name' },
+                    regex: `^${this.escapeRegex(normalizedQuery)}`,
+                  },
+                },
                 then: 70,
                 else: 0,
               },
@@ -334,7 +339,12 @@ class ProductSearchStrategy extends BaseSearchStrategy {
             // Set name starts with query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$setName' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$setName' },
+                    regex: `^${this.escapeRegex(normalizedQuery)}`,
+                  },
+                },
                 then: 60,
                 else: 0,
               },
@@ -342,7 +352,12 @@ class ProductSearchStrategy extends BaseSearchStrategy {
             // Product name contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$name' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 50,
                 else: 0,
               },
@@ -350,7 +365,12 @@ class ProductSearchStrategy extends BaseSearchStrategy {
             // Set name contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$setName' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$setName' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 40,
                 else: 0,
               },
@@ -358,51 +378,66 @@ class ProductSearchStrategy extends BaseSearchStrategy {
             // Category contains query
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$category' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$category' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 30,
                 else: 0,
               },
             },
             // Price-based scoring (if enabled) - lower prices get higher scores
-            ...this.options.enablePriceScoring
-              ? [{
-                $cond: {
-                  if: { $and: [{ $ne: ['$price', ''] }, { $ne: ['$price', null] }] },
-                  then: {
-                    $multiply: [
-                      this.options.priceWeight,
-                      {
-                        $cond: {
-                          if: { $gt: [{ $toDouble: '$price' }, 0] },
-                          then: { $divide: [1000, { $toDouble: '$price' }] },
-                          else: 0,
-                        },
+            ...(this.options.enablePriceScoring
+              ? [
+                  {
+                    $cond: {
+                      if: {
+                        $and: [{ $ne: ['$price', ''] }, { $ne: ['$price', null] }],
                       },
-                    ],
+                      then: {
+                        $multiply: [
+                          this.options.priceWeight,
+                          {
+                            $cond: {
+                              if: { $gt: [{ $toDouble: '$price' }, 0] },
+                              then: {
+                                $divide: [1000, { $toDouble: '$price' }],
+                              },
+                              else: 0,
+                            },
+                          },
+                        ],
+                      },
+                      else: 0,
+                    },
                   },
-                  else: 0,
-                },
-              }]
-              : [],
+                ]
+              : []),
             // Availability-based scoring (if enabled) - higher availability gets higher scores
-            ...this.options.enableAvailabilityScoring
-              ? [{
-                $cond: {
-                  if: { $gt: ['$available', 0] },
-                  then: {
-                    $multiply: [
-                      this.options.availabilityWeight,
-                      { $divide: ['$available', 100] },
-                    ],
+            ...(this.options.enableAvailabilityScoring
+              ? [
+                  {
+                    $cond: {
+                      if: { $gt: ['$available', 0] },
+                      then: {
+                        $multiply: [this.options.availabilityWeight, { $divide: ['$available', 100] }],
+                      },
+                      else: 0,
+                    },
                   },
-                  else: 0,
-                },
-              }]
-              : [],
+                ]
+              : []),
             // Length-based relevance score (shorter matches are more relevant)
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$name' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: { $divide: [20, { $strLenCP: '$name' }] },
                 else: 0,
               },

@@ -49,46 +49,53 @@ class Container {
     this.registerSingleton('cardMarketReferenceProductRepository', () => new CardMarketReferenceProductRepository());
 
     // Register domain services
-    this.registerTransient('psaGradedCardService', () => new CollectionService(
-      this.resolve('psaGradedCardRepository'),
-      {
-        entityName: 'PsaGradedCard',
-        imageManager: this.resolve('imageManager'),
-        saleService: this.resolve('saleService'),
-        enableImageManagement: true,
-        enableSaleTracking: true,
-      },
-    ));
+    this.registerTransient(
+      'psaGradedCardService',
+      () =>
+        new CollectionService(this.resolve('psaGradedCardRepository'), {
+          entityName: 'PsaGradedCard',
+          imageManager: this.resolve('imageManager'),
+          saleService: this.resolve('saleService'),
+          enableImageManagement: true,
+          enableSaleTracking: true,
+        }),
+    );
 
-    this.registerTransient('rawCardService', () => new CollectionService(
-      this.resolve('rawCardRepository'),
-      {
-        entityName: 'RawCard',
-        imageManager: this.resolve('imageManager'),
-        saleService: this.resolve('saleService'),
-        enableImageManagement: true,
-        enableSaleTracking: true,
-      },
-    ));
+    this.registerTransient(
+      'rawCardService',
+      () =>
+        new CollectionService(this.resolve('rawCardRepository'), {
+          entityName: 'RawCard',
+          imageManager: this.resolve('imageManager'),
+          saleService: this.resolve('saleService'),
+          enableImageManagement: true,
+          enableSaleTracking: true,
+        }),
+    );
 
-    this.registerTransient('sealedProductService', () => new CollectionService(
-      this.resolve('sealedProductRepository'),
-      {
-        entityName: 'SealedProduct',
-        imageManager: this.resolve('imageManager'),
-        saleService: this.resolve('saleService'),
-        enableImageManagement: true,
-        enableSaleTracking: true,
-      },
-    ));
+    this.registerTransient(
+      'sealedProductService',
+      () =>
+        new CollectionService(this.resolve('sealedProductRepository'), {
+          entityName: 'SealedProduct',
+          imageManager: this.resolve('imageManager'),
+          saleService: this.resolve('saleService'),
+          enableImageManagement: true,
+          enableSaleTracking: true,
+        }),
+    );
 
     // Register search services
-    this.registerSingleton('searchFactory', () => new SearchFactory(this, {
-      enableCaching: true,
-      defaultMaxResults: 50,
-      enableFuzzySearch: true,
-      enableScoring: true,
-    }));
+    this.registerSingleton(
+      'searchFactory',
+      () =>
+        new SearchFactory(this, {
+          enableCaching: true,
+          defaultMaxResults: 50,
+          enableFuzzySearch: true,
+          enableScoring: true,
+        }),
+    );
 
     this.initialized = true;
   }

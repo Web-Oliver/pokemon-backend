@@ -50,7 +50,12 @@ const generateFacebookPost = asyncHandler(async (req, res) => {
 
   const fetchResults = await Promise.all(fetchPromises);
 
-  fetchedItems.push(...fetchResults.map((result) => ({ data: result.data, category: result.category })));
+  fetchedItems.push(
+    ...fetchResults.map((result) => ({
+      data: result.data,
+      category: result.category,
+    })),
+  );
 
   // Group items by category
   const groupedItems = {
@@ -63,17 +68,17 @@ const generateFacebookPost = asyncHandler(async (req, res) => {
     const formattedItem = facebookFormatter.formatItemForFacebook(data, category);
 
     switch (category) {
-    case 'SealedProduct':
-      groupedItems.sealedProducts.push(formattedItem);
-      break;
-    case 'PsaGradedCard':
-      groupedItems.psaGradedCards.push(formattedItem);
-      break;
-    case 'RawCard':
-      groupedItems.rawCards.push(formattedItem);
-      break;
-    default:
-      throw new Error(`Unknown category: ${category}`);
+      case 'SealedProduct':
+        groupedItems.sealedProducts.push(formattedItem);
+        break;
+      case 'PsaGradedCard':
+        groupedItems.psaGradedCards.push(formattedItem);
+        break;
+      case 'RawCard':
+        groupedItems.rawCards.push(formattedItem);
+        break;
+      default:
+        throw new Error(`Unknown category: ${category}`);
     }
   });
 

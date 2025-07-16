@@ -1,11 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {
-  getAllCards,
-  getCardById,
-  getCardsBySetId,
-  searchBestMatch,
-} = require('../controllers/cardsController');
+const { getAllCards, getCardById, getCardsBySetId, searchBestMatch } = require('../controllers/cardsController');
 const { searchCacheMiddleware } = require('../middleware/searchCache');
 
 router.get('/', getAllCards);

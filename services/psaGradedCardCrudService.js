@@ -5,11 +5,15 @@ const mongoose = require('mongoose');
 const { validateReferenceData, validateUserSpecificFields } = require('./referenceDataValidator');
 const ImageManager = require('./shared/imageManager');
 
-
 const validateCreateData = (data) => {
   const { cardName, setName, grade, myPrice } = data;
 
-  console.log('Validating PSA graded card data:', { cardName, setName, grade, myPrice });
+  console.log('Validating PSA graded card data:', {
+    cardName,
+    setName,
+    grade,
+    myPrice,
+  });
 
   if (!cardName || !setName || !grade || !myPrice) {
     throw new Error('cardName, setName, grade, and myPrice are required');
@@ -121,7 +125,15 @@ const createPsaGradedCard = async (data) => {
 
     // Validate that the reference card exists in the database
     // This ensures users can only select real cards from the dropdown
-    const referenceData = { cardName, setName, pokemonNumber, variety, baseName, year, psaTotalGraded };
+    const referenceData = {
+      cardName,
+      setName,
+      pokemonNumber,
+      variety,
+      baseName,
+      year,
+      psaTotalGraded,
+    };
     const validation = await validateReferenceData(referenceData);
 
     console.log('Reference card validation passed, using card ID:', validation.cardId);
@@ -132,10 +144,12 @@ const createPsaGradedCard = async (data) => {
       grade,
       myPrice,
       images: images || [],
-      priceHistory: [{
-        price: myPrice,
-        dateUpdated: new Date(),
-      }],
+      priceHistory: [
+        {
+          price: myPrice,
+          dateUpdated: new Date(),
+        },
+      ],
     };
 
     console.log('PSA collection item data to save:', JSON.stringify(psaGradedCardData, null, 2));
@@ -247,11 +261,10 @@ const updatePsaGradedCard = async (id, updateData) => {
 
   console.log('[PSA UPDATE] Final dataToUpdate:', JSON.stringify(dataToUpdate, null, 2));
 
-  const updatedCard = await PsaGradedCard.findByIdAndUpdate(
-    id,
-    dataToUpdate,
-    { new: true, runValidators: true },
-  ).populate({
+  const updatedCard = await PsaGradedCard.findByIdAndUpdate(id, dataToUpdate, {
+    new: true,
+    runValidators: true,
+  }).populate({
     path: 'cardId',
     populate: {
       path: 'setId',

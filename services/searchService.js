@@ -45,7 +45,8 @@ class SearchUtility {
     });
 
     // All permutations of words (for order-independent matching)
-    if (words.length > 1 && words.length <= 4) { // Limit to prevent explosion
+    if (words.length > 1 && words.length <= 4) {
+      // Limit to prevent explosion
       const permutations = this.generatePermutations(words);
 
       permutations.forEach((perm) => {

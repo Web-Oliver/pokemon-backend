@@ -14,13 +14,8 @@
  * @returns {Function} - Transform function for schema.set('toJSON')
  */
 function createDecimal128Transform(options = {}) {
-  const {
-    priceFields = ['myPrice'],
-    nestedPriceFields = [
-      'saleDetails.actualSoldPrice',
-      'priceHistory.price',
-    ],
-  } = options;
+  const { priceFields = ['myPrice'], nestedPriceFields = ['saleDetails.actualSoldPrice', 'priceHistory.price'] } =
+    options;
 
   return function transform(doc, ret) {
     // Convert main price fields
@@ -83,10 +78,7 @@ function convertDecimal128ToNumber(value) {
  */
 const collectionItemTransform = createDecimal128Transform({
   priceFields: ['myPrice'],
-  nestedPriceFields: [
-    'saleDetails.actualSoldPrice',
-    'priceHistory.price',
-  ],
+  nestedPriceFields: ['saleDetails.actualSoldPrice', 'priceHistory.price'],
 });
 
 /**
@@ -95,10 +87,7 @@ const collectionItemTransform = createDecimal128Transform({
  */
 const sealedProductTransform = createDecimal128Transform({
   priceFields: ['myPrice', 'cardMarketPrice'],
-  nestedPriceFields: [
-    'saleDetails.actualSoldPrice',
-    'priceHistory.price',
-  ],
+  nestedPriceFields: ['saleDetails.actualSoldPrice', 'priceHistory.price'],
 });
 
 /**

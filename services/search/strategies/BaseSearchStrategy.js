@@ -72,7 +72,10 @@ class BaseSearchStrategy {
    * @returns {Array} - Fuse.js keys configuration
    */
   getFuseKeys() {
-    return this.options.searchFields.map((field) => ({ name: field, weight: 1 }));
+    return this.options.searchFields.map((field) => ({
+      name: field,
+      weight: 1,
+    }));
   }
 
   /**
@@ -161,7 +164,7 @@ class BaseSearchStrategy {
     const mongoScore = result.score || 0;
 
     // Weight: 40% Fuse.js relevance, 30% MongoDB score, 30% custom factors
-    return (relevanceScore * 0.4) + (mongoScore * 0.3) + (this.calculateCustomScore(result, query) * 0.3);
+    return relevanceScore * 0.4 + mongoScore * 0.3 + this.calculateCustomScore(result, query) * 0.3;
   }
 
   /**
@@ -366,7 +369,12 @@ class BaseSearchStrategy {
             // Starts with score
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$name' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$name' },
+                    regex: `^${this.escapeRegex(normalizedQuery)}`,
+                  },
+                },
                 then: 75,
                 else: 0,
               },
@@ -374,7 +382,12 @@ class BaseSearchStrategy {
             // Contains score
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$name' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: 50,
                 else: 0,
               },
@@ -382,7 +395,12 @@ class BaseSearchStrategy {
             // Length-based score (shorter matches are more relevant)
             {
               $cond: {
-                if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
+                if: {
+                  $regexMatch: {
+                    input: { $toLower: '$name' },
+                    regex: this.escapeRegex(normalizedQuery),
+                  },
+                },
                 then: { $divide: [100, { $strLenCP: '$name' }] },
                 else: 0,
               },
@@ -469,7 +487,12 @@ class BaseSearchStrategy {
   getSupportedOptions() {
     return {
       query: { type: 'string', required: true },
-      limit: { type: 'number', min: 1, max: 100, default: this.options.maxResults },
+      limit: {
+        type: 'number',
+        min: 1,
+        max: 100,
+        default: this.options.maxResults,
+      },
       page: { type: 'number', min: 1, default: 1 },
       sort: { type: 'object', default: this.options.defaultSort },
       filters: { type: 'object', default: {} },

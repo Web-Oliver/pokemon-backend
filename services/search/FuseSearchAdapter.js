@@ -170,16 +170,16 @@ class FuseSearchAdapter {
     let relevanceScore = 1 - fuseScore; // Convert Fuse.js score to relevance (higher = better)
 
     // Boost exact matches
-    const hasExactMatch = matches.some((match) =>
-      match.value && match.value.toLowerCase() === query.toLowerCase());
+    const hasExactMatch = matches.some((match) => match.value && match.value.toLowerCase() === query.toLowerCase());
 
     if (hasExactMatch) {
       relevanceScore *= 1.5;
     }
 
     // Boost prefix matches
-    const hasPrefixMatch = matches.some((match) =>
-      match.value && match.value.toLowerCase().startsWith(query.toLowerCase()));
+    const hasPrefixMatch = matches.some(
+      (match) => match.value && match.value.toLowerCase().startsWith(query.toLowerCase()),
+    );
 
     if (hasPrefixMatch) {
       relevanceScore *= 1.3;
@@ -257,12 +257,12 @@ class FuseSearchAdapter {
 
         // Apply highlights in reverse order to maintain indices
         indices.reverse().forEach(([start, end]) => {
-          highlighted
-            = highlighted.substring(0, start)
-            + highlightTags.pre
-            + highlighted.substring(start, end + 1)
-            + highlightTags.post
-            + highlighted.substring(end + 1);
+          highlighted =
+            highlighted.substring(0, start) +
+            highlightTags.pre +
+            highlighted.substring(start, end + 1) +
+            highlightTags.post +
+            highlighted.substring(end + 1);
         });
 
         highlights[field] = highlighted;

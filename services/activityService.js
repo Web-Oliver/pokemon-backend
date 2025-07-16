@@ -116,8 +116,10 @@ class ActivityService {
       };
 
       // For high-priority activities, create immediately
-      if (activityData.priority === ACTIVITY_PRIORITIES.HIGH
-          || activityData.priority === ACTIVITY_PRIORITIES.CRITICAL) {
+      if (
+        activityData.priority === ACTIVITY_PRIORITIES.HIGH ||
+        activityData.priority === ACTIVITY_PRIORITIES.CRITICAL
+      ) {
         return await Activity.createActivity(enrichedData);
       }
 
@@ -152,27 +154,29 @@ class ActivityService {
     const cardName = cardData.cardName || cardData.cardId?.cardName || 'Unknown Card';
     const setName = cardData.setName || cardData.cardId?.setId?.setName || 'Unknown Set';
 
-    let title; let description; let badges = [];
+    let title;
+    let description;
+    let badges = [];
 
     switch (cardType) {
-    case 'psa':
-      title = `Added new PSA ${cardData.grade} ${cardName}`;
-      description = `${setName} - Added to collection with price tracking`;
-      badges = [`PSA Grade ${cardData.grade}`];
-      break;
-    case 'raw':
-      title = `Added new ${cardName}`;
-      description = `${setName} - ${cardData.condition} condition`;
-      badges = [cardData.condition, 'Raw Card'];
-      break;
-    case 'sealed':
-      title = `Added new ${cardData.name || cardName}`;
-      description = `${setName} - ${cardData.category} product`;
-      badges = [cardData.category];
-      break;
-    default:
-      title = `Added new ${cardName}`;
-      description = `${setName} - Added to collection`;
+      case 'psa':
+        title = `Added new PSA ${cardData.grade} ${cardName}`;
+        description = `${setName} - Added to collection with price tracking`;
+        badges = [`PSA Grade ${cardData.grade}`];
+        break;
+      case 'raw':
+        title = `Added new ${cardName}`;
+        description = `${setName} - ${cardData.condition} condition`;
+        badges = [cardData.condition, 'Raw Card'];
+        break;
+      case 'sealed':
+        title = `Added new ${cardData.name || cardName}`;
+        description = `${setName} - ${cardData.category} product`;
+        badges = [cardData.category];
+        break;
+      default:
+        title = `Added new ${cardName}`;
+        description = `${setName} - Added to collection`;
     }
 
     return this.createActivity({
@@ -295,9 +299,7 @@ class ActivityService {
     const title = `Price ${isIncrease ? 'increased' : 'decreased'} for ${cardName}`;
     const description = `Market price ${isIncrease ? 'increased' : 'decreased'} by ${Math.abs(priceChangePercentage).toFixed(1)}% - Updated price history`;
 
-    const badges = [
-      `${isIncrease ? '+' : ''}${priceChangePercentage.toFixed(1)}% ${isIncrease ? '↗' : '↘'}`,
-    ];
+    const badges = [`${isIncrease ? '+' : ''}${priceChangePercentage.toFixed(1)}% ${isIncrease ? '↗' : '↘'}`];
 
     return this.createActivity({
       type: ACTIVITY_TYPES.PRICE_UPDATE,
@@ -372,9 +374,7 @@ class ActivityService {
     }
 
     const title = `Updated auction "${auctionData.topText || 'Auction'}"`;
-    const description = changes.length > 0
-      ? `Auction modified: ${changes.join(', ')}`
-      : 'Auction details updated';
+    const description = changes.length > 0 ? `Auction modified: ${changes.join(', ')}` : 'Auction details updated';
 
     return this.createActivity({
       type: ACTIVITY_TYPES.AUCTION_UPDATED,
@@ -490,32 +490,35 @@ class ActivityService {
 
   // Context7 Milestone Activities
   static async logMilestone(milestoneType, milestoneData) {
-    let title; let description; let details; let badges = [];
+    let title;
+    let description;
+    let details;
+    let badges = [];
 
     switch (milestoneType) {
-    case 'collection_count':
-      title = 'Collection milestone reached!';
-      description = `Your collection has reached ${milestoneData.count} cards`;
-      details = 'Congratulations on this achievement!';
-      badges = ['🎉 Milestone'];
-      break;
-    case 'portfolio_value':
-      title = 'Portfolio value milestone!';
-      description = `Total collection value exceeded ${milestoneData.value} kr.`;
-      details = 'Fantastic portfolio growth!';
-      badges = ['💰 Value Goal'];
-      break;
-    case 'grading_milestone':
-      title = 'Grading milestone achieved!';
-      description = `Reached ${milestoneData.count} PSA graded cards`;
-      details = 'Building an impressive graded collection!';
-      badges = ['⭐ Grading Goal'];
-      break;
-    default:
-      title = 'Milestone achieved!';
-      description = 'Collection goal reached';
-      details = 'Keep up the great work!';
-      badges = ['🎯 Achievement'];
+      case 'collection_count':
+        title = 'Collection milestone reached!';
+        description = `Your collection has reached ${milestoneData.count} cards`;
+        details = 'Congratulations on this achievement!';
+        badges = ['🎉 Milestone'];
+        break;
+      case 'portfolio_value':
+        title = 'Portfolio value milestone!';
+        description = `Total collection value exceeded ${milestoneData.value} kr.`;
+        details = 'Fantastic portfolio growth!';
+        badges = ['💰 Value Goal'];
+        break;
+      case 'grading_milestone':
+        title = 'Grading milestone achieved!';
+        description = `Reached ${milestoneData.count} PSA graded cards`;
+        details = 'Building an impressive graded collection!';
+        badges = ['⭐ Grading Goal'];
+        break;
+      default:
+        title = 'Milestone achieved!';
+        description = 'Collection goal reached';
+        details = 'Keep up the great work!';
+        badges = ['🎯 Achievement'];
     }
 
     return this.createActivity({
@@ -537,16 +540,7 @@ class ActivityService {
 
   // Context7 Query Methods
   static async getActivities(options = {}) {
-    const {
-      limit = 50,
-      offset = 0,
-      type,
-      entityType,
-      entityId,
-      priority,
-      dateRange,
-      search,
-    } = options;
+    const { limit = 50, offset = 0, type, entityType, entityId, priority, dateRange, search } = options;
 
     const query = { status: 'active' };
 
@@ -570,18 +564,18 @@ class ActivityService {
       let startDate;
 
       switch (dateRange) {
-      case 'today':
-        startDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
-        break;
-      case 'week':
-        startDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-        break;
-      case 'month':
-        startDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
-        break;
-      case 'quarter':
-        startDate = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
-        break;
+        case 'today':
+          startDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+          break;
+        case 'week':
+          startDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+          break;
+        case 'month':
+          startDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
+          break;
+        case 'quarter':
+          startDate = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
+          break;
       }
 
       if (startDate) {
@@ -595,11 +589,7 @@ class ActivityService {
     }
 
     // Get activities with pagination
-    const activities = await Activity.find(query)
-      .sort({ timestamp: -1 })
-      .skip(offset)
-      .limit(limit)
-      .lean();
+    const activities = await Activity.find(query).sort({ timestamp: -1 }).skip(offset).limit(limit).lean();
 
     const total = await Activity.countDocuments(query);
 
@@ -618,17 +608,17 @@ class ActivityService {
     const thisWeek = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
     const thisMonth = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
 
-    const [
-      totalActivities,
-      todayActivities,
-      weekActivities,
-      monthActivities,
-      recentActivity,
-    ] = await Promise.all([
+    const [totalActivities, todayActivities, weekActivities, monthActivities, recentActivity] = await Promise.all([
       Activity.countDocuments({ status: 'active' }),
       Activity.countDocuments({ status: 'active', timestamp: { $gte: today } }),
-      Activity.countDocuments({ status: 'active', timestamp: { $gte: thisWeek } }),
-      Activity.countDocuments({ status: 'active', timestamp: { $gte: thisMonth } }),
+      Activity.countDocuments({
+        status: 'active',
+        timestamp: { $gte: thisWeek },
+      }),
+      Activity.countDocuments({
+        status: 'active',
+        timestamp: { $gte: thisMonth },
+      }),
       Activity.findOne({ status: 'active' }).sort({ timestamp: -1 }).lean(),
     ]);
 

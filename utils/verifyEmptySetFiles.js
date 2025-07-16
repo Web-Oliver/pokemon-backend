@@ -25,8 +25,20 @@ async function verifyEmptySetFiles() {
     // Common patterns for individual set files
     const possiblePaths = [
       path.join(__dirname, 'data', 'sets', year, `${setId}.json`),
-      path.join(__dirname, 'data', 'sets', year, `${removedSet.setName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.json`),
-      path.join(__dirname, 'data', 'sets', year, `${removedSet.setName.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase()}_${setId}.json`),
+      path.join(
+        __dirname,
+        'data',
+        'sets',
+        year,
+        `${removedSet.setName.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}.json`,
+      ),
+      path.join(
+        __dirname,
+        'data',
+        'sets',
+        year,
+        `${removedSet.setName.replace(/[^a-zA-Z0-9]/g, '_').toLowerCase()}_${setId}.json`,
+      ),
     ];
 
     // Also search for any file containing this set ID
