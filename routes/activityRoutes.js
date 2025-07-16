@@ -1,9 +1,9 @@
 /**
  * Activity Routes - Context7 Premium API Endpoints
- * 
+ *
  * RESTful API routes for activity management following Context7 patterns.
  * Provides comprehensive CRUD operations, filtering, search, and analytics.
- * 
+ *
  * Features:
  * - RESTful endpoint design
  * - Advanced filtering and pagination
@@ -20,79 +20,79 @@ const { Activity, ACTIVITY_TYPES, ACTIVITY_PRIORITIES } = require('../models/Act
 // Context7 Error Handler Middleware
 const handleActivityError = (error, req, res, next) => {
   console.error('[ACTIVITY API] Error:', error);
-  
+
   if (error.name === 'ValidationError') {
     return res.status(400).json({
       success: false,
       error: 'Validation Error',
       message: error.message,
-      details: error.errors
+      details: error.errors,
     });
   }
-  
+
   if (error.name === 'CastError') {
     return res.status(400).json({
       success: false,
       error: 'Invalid ID',
-      message: 'Invalid activity ID format'
+      message: 'Invalid activity ID format',
     });
   }
-  
+
   res.status(500).json({
     success: false,
     error: 'Internal Server Error',
-    message: 'An unexpected error occurred while processing activities'
+    message: 'An unexpected error occurred while processing activities',
   });
 };
 
 // Context7 Request Validation Middleware
 const validateActivityFilters = (req, res, next) => {
   const { type, priority, dateRange, limit, offset } = req.query;
-  
+
   // Validate activity type
   if (type && !Object.values(ACTIVITY_TYPES).includes(type)) {
     return res.status(400).json({
       success: false,
       error: 'Invalid Filter',
-      message: `Invalid activity type. Must be one of: ${Object.values(ACTIVITY_TYPES).join(', ')}`
+      message: `Invalid activity type. Must be one of: ${Object.values(ACTIVITY_TYPES).join(', ')}`,
     });
   }
-  
+
   // Validate priority
   if (priority && !Object.values(ACTIVITY_PRIORITIES).includes(priority)) {
     return res.status(400).json({
       success: false,
-      error: 'Invalid Filter', 
-      message: `Invalid priority. Must be one of: ${Object.values(ACTIVITY_PRIORITIES).join(', ')}`
+      error: 'Invalid Filter',
+      message: `Invalid priority. Must be one of: ${Object.values(ACTIVITY_PRIORITIES).join(', ')}`,
     });
   }
-  
+
   // Validate date range
   if (dateRange && !['today', 'week', 'month', 'quarter', 'all'].includes(dateRange)) {
     return res.status(400).json({
       success: false,
       error: 'Invalid Filter',
-      message: 'Invalid date range. Must be one of: today, week, month, quarter, all'
+      message: 'Invalid date range. Must be one of: today, week, month, quarter, all',
     });
   }
-  
+
   // Validate pagination
   if (limit && (isNaN(limit) || limit < 1 || limit > 100)) {
     return res.status(400).json({
       success: false,
       error: 'Invalid Pagination',
-      message: 'Limit must be a number between 1 and 100'
+      message: 'Limit must be a number between 1 and 100',
     });
   }
-  
+
   if (offset && (isNaN(offset) || offset < 0)) {
     return res.status(400).json({
       success: false,
       error: 'Invalid Pagination',
-      message: 'Offset must be a number greater than or equal to 0'
+      message: 'Offset must be a number greater than or equal to 0',
     });
   }
-  
+
   next();
 };
 
@@ -114,7 +114,7 @@ const validateActivityFilters = (req, res, next) => {
 router.get('/', validateActivityFilters, async (req, res, next) => {
   try {
     console.log('[ACTIVITY API] GET /activities - Query:', req.query);
-    
+
     const options = {
       limit: parseInt(req.query.limit) || 50,
       offset: parseInt(req.query.offset) || 0,
@@ -123,11 +123,11 @@ router.get('/', validateActivityFilters, async (req, res, next) => {
       entityId: req.query.entityId,
       priority: req.query.priority,
       dateRange: req.query.dateRange,
-      search: req.query.search
+      search: req.query.search,
     };
-    
+
     const result = await ActivityService.getActivities(options);
-    
+
     res.json({
       success: true,
       data: result.activities,
@@ -137,10 +137,9 @@ router.get('/', validateActivityFilters, async (req, res, next) => {
         offset: result.offset,
         hasMore: result.hasMore,
         page: Math.floor(result.offset / result.limit) + 1,
-        totalPages: Math.ceil(result.total / result.limit)
-      }
+        totalPages: Math.ceil(result.total / result.limit),
+      },
     });
-    
   } catch (error) {
     next(error);
   }
@@ -153,14 +152,13 @@ router.get('/', validateActivityFilters, async (req, res, next) => {
 router.get('/stats', async (req, res, next) => {
   try {
     console.log('[ACTIVITY API] GET /activities/stats');
-    
+
     const stats = await ActivityService.getActivityStats();
-    
+
     res.json({
       success: true,
-      data: stats
+      data: stats,
     });
-    
   } catch (error) {
     next(error);
   }
@@ -174,30 +172,29 @@ router.get('/types', (req, res) => {
   const activityTypes = Object.entries(ACTIVITY_TYPES).map(([key, value]) => ({
     key,
     value,
-    label: key.split('_').map(word => 
-      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
-    ).join(' ')
+    label: key.split('_').map((word) =>
+      word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' '),
   }));
-  
+
   const priorities = Object.entries(ACTIVITY_PRIORITIES).map(([key, value]) => ({
     key,
     value,
-    label: key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()
+    label: key.charAt(0).toUpperCase() + key.slice(1).toLowerCase(),
   }));
-  
+
   res.json({
     success: true,
     data: {
       types: activityTypes,
-      priorities: priorities,
+      priorities,
       dateRanges: [
         { value: 'today', label: 'Today' },
         { value: 'week', label: 'This Week' },
         { value: 'month', label: 'This Month' },
         { value: 'quarter', label: 'This Quarter' },
-        { value: 'all', label: 'All Time' }
-      ]
-    }
+        { value: 'all', label: 'All Time' },
+      ],
+    },
   });
 });
 
@@ -208,15 +205,15 @@ router.get('/types', (req, res) => {
 router.get('/recent', async (req, res, next) => {
   try {
     const limit = parseInt(req.query.limit) || 10;
+
     console.log('[ACTIVITY API] GET /activities/recent - Limit:', limit);
-    
+
     const activities = await Activity.getRecentActivities(limit);
-    
+
     res.json({
       success: true,
-      data: activities
+      data: activities,
     });
-    
   } catch (error) {
     next(error);
   }
@@ -229,15 +226,15 @@ router.get('/recent', async (req, res, next) => {
 router.get('/entity/:entityType/:entityId', async (req, res, next) => {
   try {
     const { entityType, entityId } = req.params;
+
     console.log(`[ACTIVITY API] GET /activities/entity/${entityType}/${entityId}`);
-    
+
     const activities = await Activity.getActivitiesByEntity(entityType, entityId);
-    
+
     res.json({
       success: true,
-      data: activities
+      data: activities,
     });
-    
   } catch (error) {
     next(error);
   }
@@ -250,34 +247,40 @@ router.get('/entity/:entityType/:entityId', async (req, res, next) => {
 router.get('/search', async (req, res, next) => {
   try {
     const { q: searchTerm, ...filters } = req.query;
-    
+
     if (!searchTerm || searchTerm.trim().length < 2) {
       return res.status(400).json({
         success: false,
         error: 'Invalid Search',
-        message: 'Search term must be at least 2 characters long'
+        message: 'Search term must be at least 2 characters long',
       });
     }
-    
+
     console.log('[ACTIVITY API] GET /activities/search - Term:', searchTerm);
-    
+
     // Convert query filters
     const queryFilters = {};
-    if (filters.type) queryFilters.type = filters.type;
-    if (filters.priority) queryFilters.priority = filters.priority;
-    if (filters.entityType) queryFilters.entityType = filters.entityType;
-    
+
+    if (filters.type) {
+      queryFilters.type = filters.type;
+    }
+    if (filters.priority) {
+      queryFilters.priority = filters.priority;
+    }
+    if (filters.entityType) {
+      queryFilters.entityType = filters.entityType;
+    }
+
     const activities = await Activity.searchActivities(searchTerm.trim(), queryFilters);
-    
+
     res.json({
       success: true,
       data: activities,
       meta: {
         searchTerm: searchTerm.trim(),
-        resultCount: activities.length
-      }
+        resultCount: activities.length,
+      },
     });
-    
   } catch (error) {
     next(error);
   }
@@ -290,23 +293,23 @@ router.get('/search', async (req, res, next) => {
 router.get('/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
-    console.log('[ACTIVITY API] GET /activities/' + id);
-    
+
+    console.log(`[ACTIVITY API] GET /activities/${id}`);
+
     const activity = await Activity.findById(id).lean();
-    
+
     if (!activity) {
       return res.status(404).json({
         success: false,
         error: 'Activity Not Found',
-        message: 'The requested activity could not be found'
+        message: 'The requested activity could not be found',
       });
     }
-    
+
     res.json({
       success: true,
-      data: activity
+      data: activity,
     });
-    
   } catch (error) {
     next(error);
   }
@@ -319,26 +322,25 @@ router.get('/:id', async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   try {
     console.log('[ACTIVITY API] POST /activities - Body:', req.body);
-    
+
     const activityData = req.body;
-    
+
     // Validate required fields
     if (!activityData.type || !activityData.title || !activityData.description) {
       return res.status(400).json({
         success: false,
         error: 'Missing Required Fields',
-        message: 'Activity must have type, title, and description'
+        message: 'Activity must have type, title, and description',
       });
     }
-    
+
     const activity = await ActivityService.createActivity(activityData);
-    
+
     res.status(201).json({
       success: true,
       data: activity,
-      message: 'Activity created successfully'
+      message: 'Activity created successfully',
     });
-    
   } catch (error) {
     next(error);
   }
@@ -351,26 +353,26 @@ router.post('/', async (req, res, next) => {
 router.patch('/:id/read', async (req, res, next) => {
   try {
     const { id } = req.params;
-    console.log('[ACTIVITY API] PATCH /activities/' + id + '/read');
-    
+
+    console.log(`[ACTIVITY API] PATCH /activities/${id}/read`);
+
     const activity = await Activity.findById(id);
-    
+
     if (!activity) {
       return res.status(404).json({
         success: false,
         error: 'Activity Not Found',
-        message: 'The requested activity could not be found'
+        message: 'The requested activity could not be found',
       });
     }
-    
+
     await activity.markAsRead();
-    
+
     res.json({
       success: true,
       data: activity,
-      message: 'Activity marked as read'
+      message: 'Activity marked as read',
     });
-    
   } catch (error) {
     next(error);
   }
@@ -383,25 +385,25 @@ router.patch('/:id/read', async (req, res, next) => {
 router.delete('/:id', async (req, res, next) => {
   try {
     const { id } = req.params;
-    console.log('[ACTIVITY API] DELETE /activities/' + id);
-    
+
+    console.log(`[ACTIVITY API] DELETE /activities/${id}`);
+
     const activity = await Activity.findById(id);
-    
+
     if (!activity) {
       return res.status(404).json({
         success: false,
         error: 'Activity Not Found',
-        message: 'The requested activity could not be found'
+        message: 'The requested activity could not be found',
       });
     }
-    
+
     await activity.archive();
-    
+
     res.json({
       success: true,
-      message: 'Activity archived successfully'
+      message: 'Activity archived successfully',
     });
-    
   } catch (error) {
     next(error);
   }
@@ -414,18 +416,18 @@ router.delete('/:id', async (req, res, next) => {
 router.post('/archive-old', async (req, res, next) => {
   try {
     const { daysOld = 90 } = req.body;
+
     console.log('[ACTIVITY API] POST /activities/archive-old - Days:', daysOld);
-    
+
     const result = await ActivityService.archiveOldActivities(daysOld);
-    
+
     res.json({
       success: true,
       data: {
-        archivedCount: result.modifiedCount
+        archivedCount: result.modifiedCount,
       },
-      message: `Archived ${result.modifiedCount} old activities`
+      message: `Archived ${result.modifiedCount} old activities`,
     });
-    
   } catch (error) {
     next(error);
   }

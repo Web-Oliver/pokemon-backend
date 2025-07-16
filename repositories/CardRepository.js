@@ -4,11 +4,11 @@ const { ValidationError } = require('../middleware/errorHandler');
 
 /**
  * Card Repository
- * 
+ *
  * Specialized repository for Card model operations.
  * Extends BaseRepository with card-specific search and query methods.
- * 
- * IMPORTANT: This handles the Card model (official Pokemon cards) which 
+ *
+ * IMPORTANT: This handles the Card model (official Pokemon cards) which
  * references the Set model. This is different from CardMarketReferenceProduct.
  */
 class CardRepository extends BaseRepository {
@@ -20,9 +20,9 @@ class CardRepository extends BaseRepository {
       entityName: 'Card',
       defaultPopulate: {
         path: 'setId',
-        model: 'Set'
+        model: 'Set',
       },
-      defaultSort: { psaTotalGradedForCard: -1, cardName: 1 }
+      defaultSort: { psaTotalGradedForCard: -1, cardName: 1 },
     });
   }
 
@@ -41,14 +41,14 @@ class CardRepository extends BaseRepository {
             from: 'sets',
             localField: 'setId',
             foreignField: '_id',
-            as: 'setInfo'
-          }
+            as: 'setInfo',
+          },
         },
         {
           $unwind: {
             path: '$setInfo',
-            preserveNullAndEmptyArrays: true
-          }
+            preserveNullAndEmptyArrays: true,
+          },
         },
         // Text search across multiple fields
         {
@@ -58,9 +58,9 @@ class CardRepository extends BaseRepository {
               { baseName: { $regex: query, $options: 'i' } },
               { pokemonNumber: { $regex: query, $options: 'i' } },
               { variety: { $regex: query, $options: 'i' } },
-              { 'setInfo.setName': { $regex: query, $options: 'i' } }
-            ]
-          }
+              { 'setInfo.setName': { $regex: query, $options: 'i' } },
+            ],
+          },
         },
         // Add scoring
         {
@@ -71,23 +71,23 @@ class CardRepository extends BaseRepository {
                 { $cond: { if: { $eq: [{ $toLower: '$baseName' }, query.toLowerCase()] }, then: 90, else: 0 } },
                 { $cond: { if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: `^${query.toLowerCase()}` } }, then: 80, else: 0 } },
                 { $cond: { if: { $regexMatch: { input: { $toLower: '$baseName' }, regex: `^${query.toLowerCase()}` } }, then: 70, else: 0 } },
-                { $cond: { if: { $gt: ['$psaTotalGradedForCard', 0] }, then: { $divide: ['$psaTotalGradedForCard', 1000] }, else: 0 } }
-              ]
-            }
-          }
+                { $cond: { if: { $gt: ['$psaTotalGradedForCard', 0] }, then: { $divide: ['$psaTotalGradedForCard', 1000] }, else: 0 } },
+              ],
+            },
+          },
         },
         // Sort by score and popularity
         {
           $sort: {
             score: -1,
             psaTotalGradedForCard: -1,
-            cardName: 1
-          }
+            cardName: 1,
+          },
         },
         // Apply limit
         {
-          $limit: options.limit || 50
-        }
+          $limit: options.limit || 50,
+        },
       ];
 
       return await this.aggregate(pipeline);
@@ -124,23 +124,23 @@ class CardRepository extends BaseRepository {
             from: 'sets',
             localField: 'setId',
             foreignField: '_id',
-            as: 'setInfo'
-          }
+            as: 'setInfo',
+          },
         },
         {
           $unwind: {
             path: '$setInfo',
-            preserveNullAndEmptyArrays: true
-          }
+            preserveNullAndEmptyArrays: true,
+          },
         },
         {
           $match: {
-            'setInfo.setName': new RegExp(setName, 'i')
-          }
+            'setInfo.setName': new RegExp(setName, 'i'),
+          },
         },
         {
-          $sort: options.sort || this.options.defaultSort
-        }
+          $sort: options.sort || this.options.defaultSort,
+        },
       ];
 
       if (options.limit) {
@@ -196,8 +196,8 @@ class CardRepository extends BaseRepository {
         {
           ...options,
           sort: { psaTotalGradedForCard: -1 },
-          limit
-        }
+          limit,
+        },
       );
     } catch (error) {
       throw error;
@@ -223,8 +223,8 @@ class CardRepository extends BaseRepository {
         { [gradeField]: { $gte: minCount } },
         {
           ...options,
-          sort: { [gradeField]: -1, ...this.options.defaultSort }
-        }
+          sort: { [gradeField]: -1, ...this.options.defaultSort },
+        },
       );
     } catch (error) {
       throw error;
@@ -239,7 +239,7 @@ class CardRepository extends BaseRepository {
   async getCardStatsBySet(setId) {
     try {
       const stats = await this.aggregate([
-        { $match: { setId: setId } },
+        { $match: { setId } },
         {
           $group: {
             _id: '$setId',
@@ -260,11 +260,11 @@ class CardRepository extends BaseRepository {
                 psa_7: '$psaGrades.psa_7',
                 psa_8: '$psaGrades.psa_8',
                 psa_9: '$psaGrades.psa_9',
-                psa_10: '$psaGrades.psa_10'
-              }
-            }
-          }
-        }
+                psa_10: '$psaGrades.psa_10',
+              },
+            },
+          },
+        },
       ]);
 
       return stats[0] || {};
@@ -292,14 +292,20 @@ class CardRepository extends BaseRepository {
             totalPsaGrades: {
               $sum: {
                 $add: [
-                  '$psaGrades.psa_1', '$psaGrades.psa_2', '$psaGrades.psa_3',
-                  '$psaGrades.psa_4', '$psaGrades.psa_5', '$psaGrades.psa_6',
-                  '$psaGrades.psa_7', '$psaGrades.psa_8', '$psaGrades.psa_9',
-                  '$psaGrades.psa_10'
-                ]
-              }
-            }
-          }
+                  '$psaGrades.psa_1',
+                  '$psaGrades.psa_2',
+                  '$psaGrades.psa_3',
+                  '$psaGrades.psa_4',
+                  '$psaGrades.psa_5',
+                  '$psaGrades.psa_6',
+                  '$psaGrades.psa_7',
+                  '$psaGrades.psa_8',
+                  '$psaGrades.psa_9',
+                  '$psaGrades.psa_10',
+                ],
+              },
+            },
+          },
         },
         {
           $addFields: {
@@ -308,10 +314,10 @@ class CardRepository extends BaseRepository {
               $cond: {
                 if: { $gt: ['$totalCards', 0] },
                 then: { $multiply: [{ $divide: ['$cardsWithGrading', '$totalCards'] }, 100] },
-                else: 0
-              }
-            }
-          }
+                else: 0,
+              },
+            },
+          },
         },
         {
           $project: {
@@ -323,9 +329,9 @@ class CardRepository extends BaseRepository {
             cardsWithGrading: 1,
             uniqueSetCount: 1,
             gradingPercentage: { $round: ['$gradingPercentage', 2] },
-            totalPsaGrades: 1
-          }
-        }
+            totalPsaGrades: 1,
+          },
+        },
       ]);
 
       return stats[0] || {};
@@ -348,15 +354,15 @@ class CardRepository extends BaseRepository {
             from: 'sets',
             localField: 'setId',
             foreignField: '_id',
-            as: 'setInfo'
-          }
+            as: 'setInfo',
+          },
         },
         {
           $unwind: {
             path: '$setInfo',
-            preserveNullAndEmptyArrays: true
-          }
-        }
+            preserveNullAndEmptyArrays: true,
+          },
+        },
       ];
 
       // Build match conditions
@@ -369,8 +375,8 @@ class CardRepository extends BaseRepository {
             { cardName: { $regex: query, $options: 'i' } },
             { baseName: { $regex: query, $options: 'i' } },
             { pokemonNumber: { $regex: query, $options: 'i' } },
-            { variety: { $regex: query, $options: 'i' } }
-          ]
+            { variety: { $regex: query, $options: 'i' } },
+          ],
         });
       }
 
@@ -407,13 +413,14 @@ class CardRepository extends BaseRepository {
       // PSA grade filter
       if (filters.psaGrade) {
         const gradeField = `psaGrades.psa_${filters.psaGrade}`;
+
         matchConditions.push({ [gradeField]: { $gte: filters.minGradeCount || 1 } });
       }
 
       // Add match stage
       if (matchConditions.length > 0) {
         pipeline.push({
-          $match: matchConditions.length > 1 ? { $and: matchConditions } : matchConditions[0]
+          $match: matchConditions.length > 1 ? { $and: matchConditions } : matchConditions[0],
         });
       }
 
@@ -427,18 +434,18 @@ class CardRepository extends BaseRepository {
                 { $cond: { if: { $eq: [{ $toLower: '$baseName' }, query.toLowerCase()] }, then: 90, else: 0 } },
                 { $cond: { if: { $regexMatch: { input: { $toLower: '$cardName' }, regex: `^${query.toLowerCase()}` } }, then: 80, else: 0 } },
                 { $cond: { if: { $regexMatch: { input: { $toLower: '$baseName' }, regex: `^${query.toLowerCase()}` } }, then: 70, else: 0 } },
-                { $cond: { if: { $gt: ['$psaTotalGradedForCard', 0] }, then: { $divide: ['$psaTotalGradedForCard', 1000] }, else: 0 } }
-              ]
-            }
-          }
+                { $cond: { if: { $gt: ['$psaTotalGradedForCard', 0] }, then: { $divide: ['$psaTotalGradedForCard', 1000] }, else: 0 } },
+              ],
+            },
+          },
         });
       }
 
       // Sort
-      const sortStage = query ? 
-        { $sort: { score: -1, psaTotalGradedForCard: -1, cardName: 1 } } :
-        { $sort: filters.sort || this.options.defaultSort };
-      
+      const sortStage = query
+        ? { $sort: { score: -1, psaTotalGradedForCard: -1, cardName: 1 } }
+        : { $sort: filters.sort || this.options.defaultSort };
+
       pipeline.push(sortStage);
 
       // Limit
@@ -461,10 +468,10 @@ class CardRepository extends BaseRepository {
   async getSuggestions(query, options = {}) {
     try {
       const results = await this.searchWithSetInfo(query, {
-        limit: options.limit || 10
+        limit: options.limit || 10,
       });
 
-      return results.map(card => ({
+      return results.map((card) => ({
         id: card._id,
         text: card.cardName,
         secondaryText: card.baseName !== card.cardName ? card.baseName : null,
@@ -473,8 +480,8 @@ class CardRepository extends BaseRepository {
           variety: card.variety,
           setName: card.setInfo?.setName,
           year: card.setInfo?.year,
-          totalGraded: card.psaTotalGradedForCard
-        }
+          totalGraded: card.psaTotalGradedForCard,
+        },
       }));
     } catch (error) {
       throw error;

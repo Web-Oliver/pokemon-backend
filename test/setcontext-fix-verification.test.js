@@ -3,22 +3,21 @@ const { expect } = require('chai');
 const app = require('../server');
 
 describe('SetContext Bug Fix Verification', () => {
-  
   describe('Unified Search Fix Verification', () => {
     it('✅ Set search should work (was already working)', async () => {
       const response = await request(app)
         .get('/api/search/sets')
         .query({
           query: 'Base',
-          limit: 10
+          limit: 10,
         });
 
       expect(response.status).to.equal(200);
       expect(response.body.success).to.equal(true);
       expect(response.body.data).to.be.an('array');
-      
+
       console.log(`✅ Set search: Found ${response.body.count} sets`);
-      console.log('   Sample sets:', response.body.results?.slice(0, 3).map(s => s.setName));
+      console.log('   Sample sets:', response.body.results?.slice(0, 3).map((s) => s.setName));
     });
 
     it('✅ Card search WITHOUT setContext should work (was already working)', async () => {
@@ -26,15 +25,15 @@ describe('SetContext Bug Fix Verification', () => {
         .get('/api/search/cards')
         .query({
           query: 'Char',
-          limit: 10
+          limit: 10,
         });
 
       expect(response.status).to.equal(200);
       expect(response.body.success).to.equal(true);
       expect(response.body.data).to.be.an('array');
-      
+
       console.log(`✅ Card search without setContext: Found ${response.body.data.length} cards`);
-      console.log('   Sample cards:', response.body.data?.slice(0, 3).map(c => c.cardName));
+      console.log('   Sample cards:', response.body.data?.slice(0, 3).map((c) => c.cardName));
     });
 
     it('🔧 Card search WITH setContext should now work (BUG WAS HERE - NOW FIXED)', async () => {
@@ -44,21 +43,21 @@ describe('SetContext Bug Fix Verification', () => {
         .query({
           query: 'Char',
           setName: 'Pokemon Game Base',
-          limit: 10
+          limit: 10,
         });
 
       expect(response.status).to.equal(200);
       expect(response.body.success).to.equal(true);
       expect(response.body.data).to.be.an('array');
-      
+
       console.log(`🔧 FIXED: Card search with setContext: Found ${response.body.data.length} cards`);
       if (response.body.data.length > 0) {
-        console.log('   Sample cards:', response.body.data?.slice(0, 3).map(c => ({ 
-          cardName: c.cardName, 
-          setName: c.setInfo?.setName 
+        console.log('   Sample cards:', response.body.data?.slice(0, 3).map((c) => ({
+          cardName: c.cardName,
+          setName: c.setInfo?.setName,
         })));
       }
-      
+
       // The fix should return results for sets that match the setContext
       // If no results, that's fine as long as the filtering is working (not throwing errors)
       expect(response.body.data).to.be.an('array');
@@ -71,18 +70,18 @@ describe('SetContext Bug Fix Verification', () => {
           type: 'cards',
           q: 'Pika',
           setContext: 'Base',
-          limit: 10
+          limit: 10,
         });
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
       expect(response.body.setContext).toBe('Base');
-      
+
       console.log(`🔧 FIXED: Pika search with Base context: Found ${response.body.count} cards`);
       if (response.body.count > 0) {
-        console.log('   Sample cards:', response.body.results?.slice(0, 3).map(c => ({ 
-          cardName: c.cardName, 
-          setName: c.setInfo?.setName 
+        console.log('   Sample cards:', response.body.results?.slice(0, 3).map((c) => ({
+          cardName: c.cardName,
+          setName: c.setInfo?.setName,
         })));
       }
     });
@@ -96,13 +95,13 @@ describe('SetContext Bug Fix Verification', () => {
           type: 'cards',
           q: 'Pikachu',
           setContext: 'NonExistentSet12345',
-          limit: 10
+          limit: 10,
         });
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
       expect(response.body.count).toBe(0);
-      
+
       console.log('✅ Non-existent set context handled gracefully');
     });
 
@@ -113,12 +112,12 @@ describe('SetContext Bug Fix Verification', () => {
           type: 'cards',
           q: 'Pikachu',
           setContext: '',
-          limit: 10
+          limit: 10,
         });
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
-      
+
       console.log('✅ Empty setContext handled gracefully');
     });
 
@@ -128,13 +127,13 @@ describe('SetContext Bug Fix Verification', () => {
         .query({
           type: 'cards',
           q: 'Char',
-          setContext: 'pokemon game base',  // lowercase
-          limit: 10
+          setContext: 'pokemon game base', // lowercase
+          limit: 10,
         });
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
-      
+
       console.log('✅ Case-insensitive set matching works');
     });
 
@@ -144,13 +143,13 @@ describe('SetContext Bug Fix Verification', () => {
         .query({
           type: 'cards',
           q: 'Char',
-          setContext: 'Base',  // partial match for various Base sets
-          limit: 10
+          setContext: 'Base', // partial match for various Base sets
+          limit: 10,
         });
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
-      
+
       console.log('✅ Partial set name matching works');
     });
   });
@@ -162,7 +161,7 @@ describe('SetContext Bug Fix Verification', () => {
         .query({
           type: 'cards',
           q: 'Char',
-          limit: 10
+          limit: 10,
         });
 
       const withEmptyContext = await request(app)
@@ -171,14 +170,14 @@ describe('SetContext Bug Fix Verification', () => {
           type: 'cards',
           q: 'Char',
           setContext: '',
-          limit: 10
+          limit: 10,
         });
 
       expect(withoutContext.status).toBe(200);
       expect(withEmptyContext.status).toBe(200);
       expect(withoutContext.body.success).toBe(true);
       expect(withEmptyContext.body.success).toBe(true);
-      
+
       console.log('✅ Backwards compatibility maintained');
     });
   });
@@ -191,18 +190,19 @@ describe('SetContext Bug Fix Verification', () => {
           type: 'cards',
           q: 'Char',
           setContext: 'Base',
-          limit: 5
+          limit: 5,
         });
 
       expect(response.status).toBe(200);
       expect(response.body.success).toBe(true);
-      
+
       if (response.body.count > 0) {
         const firstResult = response.body.results[0];
+
         expect(firstResult).toHaveProperty('setInfo');
         expect(firstResult.setInfo).toHaveProperty('setName');
       }
-      
+
       console.log('✅ setInfo properly included in results');
     });
 
@@ -213,7 +213,7 @@ describe('SetContext Bug Fix Verification', () => {
           type: 'cards',
           q: 'Char',
           setContext: 'Base',
-          limit: 5
+          limit: 5,
         });
 
       expect(response.status).toBe(200);
@@ -222,11 +222,11 @@ describe('SetContext Bug Fix Verification', () => {
       expect(response.body.meta).toHaveProperty('contextApplied');
       expect(response.body.meta.contextApplied).toHaveProperty('set');
       expect(response.body.meta.contextApplied.set).toBe(true);
-      
+
       console.log('✅ Proper meta information included');
     });
   });
-  
+
   describe('Summary', () => {
     it('Summary of fix', () => {
       console.log(`

@@ -3,10 +3,10 @@ const { NotFoundError, ValidationError } = require('../../middleware/errorHandle
 
 /**
  * Base Repository Class
- * 
+ *
  * Provides common data access patterns for all repositories.
  * Implements the Repository pattern to abstract data access from business logic.
- * 
+ *
  * Following SOLID principles:
  * - Single Responsibility: Handles only data access operations
  * - Open/Closed: Extensible for specific repository needs
@@ -25,7 +25,7 @@ class BaseRepository {
       defaultSort: options.defaultSort || { dateAdded: -1 },
       defaultLimit: options.defaultLimit || 1000,
       entityName: options.entityName || model.modelName,
-      ...options
+      ...options,
     };
   }
 
@@ -41,15 +41,16 @@ class BaseRepository {
     }
 
     let query = this.model.findById(id);
-    
+
     // Apply population if specified
     const populate = options.populate || this.options.defaultPopulate;
+
     if (populate) {
       query = query.populate(populate);
     }
 
     const document = await query;
-    
+
     if (!document) {
       throw new NotFoundError(`${this.options.entityName} not found`);
     }
@@ -69,7 +70,7 @@ class BaseRepository {
       sort = this.options.defaultSort,
       limit = this.options.defaultLimit,
       skip = 0,
-      select = null
+      select = null,
     } = options;
 
     let query = this.model.find(filters);
@@ -136,8 +137,8 @@ class BaseRepository {
         totalCount,
         totalPages,
         hasNextPage: page < totalPages,
-        hasPrevPage: page > 1
-      }
+        hasPrevPage: page > 1,
+      },
     };
   }
 
@@ -154,6 +155,7 @@ class BaseRepository {
 
       // Apply population if specified
       const populate = options.populate || this.options.defaultPopulate;
+
       if (populate) {
         return await this.findById(savedDocument._id, { populate });
       }
@@ -183,17 +185,18 @@ class BaseRepository {
       const updateOptions = {
         new: true,
         runValidators: true,
-        ...options
+        ...options,
       };
 
       const document = await this.model.findByIdAndUpdate(id, data, updateOptions);
-      
+
       if (!document) {
         throw new NotFoundError(`${this.options.entityName} not found`);
       }
 
       // Apply population if specified
       const populate = options.populate || this.options.defaultPopulate;
+
       if (populate) {
         return await this.findById(document._id, { populate });
       }
@@ -218,7 +221,7 @@ class BaseRepository {
     }
 
     const document = await this.model.findByIdAndDelete(id);
-    
+
     if (!document) {
       throw new NotFoundError(`${this.options.entityName} not found`);
     }
@@ -234,8 +237,9 @@ class BaseRepository {
    */
   async findOne(filters = {}, options = {}) {
     let query = this.model.findOne(filters);
-    
+
     const populate = options.populate || this.options.defaultPopulate;
+
     if (populate) {
       query = query.populate(populate);
     }
@@ -253,7 +257,7 @@ class BaseRepository {
   async updateMany(filters, data, options = {}) {
     const updateOptions = {
       runValidators: true,
-      ...options
+      ...options,
     };
 
     return await this.model.updateMany(filters, data, updateOptions);
@@ -275,6 +279,7 @@ class BaseRepository {
    */
   async exists(filters) {
     const count = await this.model.countDocuments(filters);
+
     return count > 0;
   }
 
@@ -295,8 +300,9 @@ class BaseRepository {
    */
   createStream(filters = {}, options = {}) {
     let query = this.model.find(filters);
-    
+
     const populate = options.populate || this.options.defaultPopulate;
+
     if (populate) {
       query = query.populate(populate);
     }

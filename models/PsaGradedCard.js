@@ -21,14 +21,14 @@ psaGradedCardSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: true,
-    trackImageUpdates: true
-  }
+    trackImageUpdates: true,
+  },
 });
 
 
 // Apply shared transform function for JSON responses
 psaGradedCardSchema.set('toJSON', {
-  transform: collectionItemTransform
+  transform: collectionItemTransform,
 });
 
 const PsaGradedCard = mongoose.model('PsaGradedCard', psaGradedCardSchema);

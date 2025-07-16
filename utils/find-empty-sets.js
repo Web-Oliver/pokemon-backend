@@ -8,6 +8,7 @@ const Card = require('./models/Card');
 const connectDB = async () => {
   try {
     const mongoURI = process.env.MONGO_URI || 'mongodb://localhost:27017/pokemon-collection';
+
     await mongoose.connect(mongoURI);
     console.log('✅ Connected to MongoDB');
   } catch (error) {
@@ -29,14 +30,14 @@ const findEmptySets = async () => {
           from: 'cards',
           localField: '_id',
           foreignField: 'setId',
-          as: 'cards'
-        }
+          as: 'cards',
+        },
       },
       // Filter sets with no cards
       {
         $match: {
-          cards: { $size: 0 }
-        }
+          cards: { $size: 0 },
+        },
       },
       // Project only needed fields
       {
@@ -45,16 +46,16 @@ const findEmptySets = async () => {
           year: 1,
           totalCardsInSet: 1,
           totalPsaPopulation: 1,
-          cardCount: { $size: '$cards' }
-        }
+          cardCount: { $size: '$cards' },
+        },
       },
       // Sort by year and set name
       {
         $sort: {
           year: 1,
-          setName: 1
-        }
-      }
+          setName: 1,
+        },
+      },
     ];
 
     // Execute aggregation
@@ -64,7 +65,7 @@ const findEmptySets = async () => {
     const totalSetsCount = await Set.countDocuments();
 
     // Display results
-    console.log(`📊 **RESULTS:**`);
+    console.log('📊 **RESULTS:**');
     console.log(`Total sets in database: ${totalSetsCount}`);
     console.log(`Sets with no cards: ${emptySets.length}`);
     console.log(`Percentage of empty sets: ${((emptySets.length / totalSetsCount) * 100).toFixed(2)}%\n`);
@@ -72,18 +73,18 @@ const findEmptySets = async () => {
     if (emptySets.length > 0) {
       console.log('📝 **EMPTY SETS DETAILS:**');
       console.log('─'.repeat(80));
-      console.log('SET NAME'.padEnd(40) + 'YEAR'.padEnd(8) + 'TOTAL CARDS'.padEnd(15) + 'PSA POP');
+      console.log(`${'SET NAME'.padEnd(40) + 'YEAR'.padEnd(8) + 'TOTAL CARDS'.padEnd(15)}PSA POP`);
       console.log('─'.repeat(80));
-      
+
       emptySets.forEach((set, index) => {
         const setName = (set.setName || 'Unknown').padEnd(40);
         const year = (set.year || 'N/A').toString().padEnd(8);
         const totalCards = (set.totalCardsInSet || 0).toString().padEnd(15);
         const psaPop = (set.totalPsaPopulation || 0).toString();
-        
+
         console.log(`${setName}${year}${totalCards}${psaPop}`);
       });
-      
+
       console.log('─'.repeat(80));
     } else {
       console.log('✅ All sets have at least one card!');
@@ -91,7 +92,7 @@ const findEmptySets = async () => {
 
     // Additional statistics
     console.log('\n📈 **ADDITIONAL STATS:**');
-    
+
     // Get sets with card counts
     const setCardCounts = await Set.aggregate([
       {
@@ -99,14 +100,14 @@ const findEmptySets = async () => {
           from: 'cards',
           localField: '_id',
           foreignField: 'setId',
-          as: 'cards'
-        }
+          as: 'cards',
+        },
       },
       {
         $project: {
           setName: 1,
-          cardCount: { $size: '$cards' }
-        }
+          cardCount: { $size: '$cards' },
+        },
       },
       {
         $group: {
@@ -114,22 +115,22 @@ const findEmptySets = async () => {
           totalSets: { $sum: 1 },
           setsWithCards: {
             $sum: {
-              $cond: { if: { $gt: ['$cardCount', 0] }, then: 1, else: 0 }
-            }
+              $cond: { if: { $gt: ['$cardCount', 0] }, then: 1, else: 0 },
+            },
           },
           totalCards: { $sum: '$cardCount' },
-          avgCardsPerSet: { $avg: '$cardCount' }
-        }
-      }
+          avgCardsPerSet: { $avg: '$cardCount' },
+        },
+      },
     ]);
 
     if (setCardCounts.length > 0) {
       const stats = setCardCounts[0];
+
       console.log(`Sets with cards: ${stats.setsWithCards}`);
       console.log(`Total cards across all sets: ${stats.totalCards}`);
       console.log(`Average cards per set: ${stats.avgCardsPerSet.toFixed(2)}`);
     }
-
   } catch (error) {
     console.error('❌ Error finding empty sets:', error);
   }
@@ -139,7 +140,7 @@ const findEmptySets = async () => {
 const main = async () => {
   await connectDB();
   await findEmptySets();
-  
+
   console.log('\n🏁 Analysis complete!');
   process.exit(0);
 };
@@ -152,7 +153,7 @@ process.on('SIGINT', async () => {
 });
 
 // Run the script
-main().catch(error => {
+main().catch((error) => {
   console.error('❌ Script failed:', error);
   process.exit(1);
 });

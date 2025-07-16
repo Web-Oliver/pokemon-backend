@@ -2,10 +2,10 @@ const express = require('express');
 
 /**
  * CRUD Route Factory
- * 
+ *
  * Creates standardized CRUD routes for resources to eliminate duplication
  * and ensure consistency across the API.
- * 
+ *
  * Following DRY and SOLID principles:
  * - Eliminates route definition duplication
  * - Provides consistent API patterns
@@ -14,7 +14,7 @@ const express = require('express');
 
 /**
  * Creates a complete CRUD router for a resource
- * 
+ *
  * @param {Object} controller - Controller instance with CRUD methods
  * @param {Object} options - Configuration options
  * @param {boolean} options.includeMarkAsSold - Include POST /:id/mark-sold route
@@ -30,7 +30,7 @@ function createCRUDRoutes(controller, options = {}) {
     middleware = [],
     routeMiddleware = {},
     customRoutes = [],
-    routeOptions = {}
+    routeOptions = {},
   } = options;
 
   const router = express.Router();
@@ -42,41 +42,47 @@ function createCRUDRoutes(controller, options = {}) {
 
   // GET / - Get all entities
   const getAllMiddleware = routeMiddleware.getAll || [];
+
   router.get('/', ...getAllMiddleware, controller.getAllSealedProducts || controller.getAllPsaGradedCards || controller.getAllRawCards || controller.getAll);
 
   // GET /:id - Get single entity by ID
   const getByIdMiddleware = routeMiddleware.getById || [];
+
   router.get('/:id', ...getByIdMiddleware, controller.getSealedProductById || controller.getPsaGradedCardById || controller.getRawCardById || controller.getById);
 
   // POST / - Create new entity
   const createMiddleware = routeMiddleware.create || [];
+
   router.post('/', ...createMiddleware, controller.createSealedProduct || controller.createPsaGradedCard || controller.createRawCard || controller.create);
 
   // PUT /:id - Update entity by ID
   const updateMiddleware = routeMiddleware.update || [];
+
   router.put('/:id', ...updateMiddleware, controller.updateSealedProduct || controller.updatePsaGradedCard || controller.updateRawCard || controller.update);
 
   // DELETE /:id - Delete entity by ID
   const deleteMiddleware = routeMiddleware.delete || [];
+
   router.delete('/:id', ...deleteMiddleware, controller.deleteSealedProduct || controller.deletePsaGradedCard || controller.deleteRawCard || controller.delete);
 
   // POST /:id/mark-sold - Mark entity as sold (conditional)
   if (includeMarkAsSold && controller.markAsSold) {
     const markAsSoldMiddleware = routeMiddleware.markAsSold || [];
+
     router.post('/:id/mark-sold', ...markAsSoldMiddleware, controller.markAsSold);
   }
 
   // Add custom routes
-  customRoutes.forEach(route => {
+  customRoutes.forEach((route) => {
     const {
       method = 'get',
       path,
       handler,
-      middleware: routeSpecificMiddleware = []
+      middleware: routeSpecificMiddleware = [],
     } = route;
 
     const handlerFunction = typeof handler === 'string' ? controller[handler] : handler;
-    
+
     if (handlerFunction) {
       router[method.toLowerCase()](path, ...routeSpecificMiddleware, handlerFunction);
     } else {
@@ -89,7 +95,7 @@ function createCRUDRoutes(controller, options = {}) {
 
 /**
  * Creates a read-only router for a resource (GET routes only)
- * 
+ *
  * @param {Object} controller - Controller instance with read methods
  * @param {Object} options - Configuration options
  * @returns {express.Router} - Configured Express router
@@ -98,7 +104,7 @@ function createReadOnlyRoutes(controller, options = {}) {
   const {
     middleware = [],
     routeMiddleware = {},
-    customRoutes = []
+    customRoutes = [],
   } = options;
 
   const router = express.Router();
@@ -110,23 +116,25 @@ function createReadOnlyRoutes(controller, options = {}) {
 
   // GET / - Get all entities
   const getAllMiddleware = routeMiddleware.getAll || [];
+
   router.get('/', ...getAllMiddleware, controller.getAll);
 
   // GET /:id - Get single entity by ID
   const getByIdMiddleware = routeMiddleware.getById || [];
+
   router.get('/:id', ...getByIdMiddleware, controller.getById);
 
   // Add custom routes
-  customRoutes.forEach(route => {
+  customRoutes.forEach((route) => {
     const {
       method = 'get',
       path,
       handler,
-      middleware: routeSpecificMiddleware = []
+      middleware: routeSpecificMiddleware = [],
     } = route;
 
     const handlerFunction = typeof handler === 'string' ? controller[handler] : handler;
-    
+
     if (handlerFunction) {
       router[method.toLowerCase()](path, ...routeSpecificMiddleware, handlerFunction);
     } else {
@@ -140,7 +148,7 @@ function createReadOnlyRoutes(controller, options = {}) {
 /**
  * Creates a collection item router (cards, sealed products)
  * with standard CRUD operations plus mark-as-sold functionality
- * 
+ *
  * @param {Object} controller - Controller instance
  * @param {Object} options - Configuration options
  * @returns {express.Router} - Configured Express router
@@ -148,14 +156,14 @@ function createReadOnlyRoutes(controller, options = {}) {
 function createCollectionItemRoutes(controller, options = {}) {
   return createCRUDRoutes(controller, {
     includeMarkAsSold: true,
-    ...options
+    ...options,
   });
 }
 
 /**
  * Creates a reference data router (sets, reference products)
  * with read-only operations plus search functionality
- * 
+ *
  * @param {Object} controller - Controller instance
  * @param {Object} options - Configuration options
  * @returns {express.Router} - Configured Express router
@@ -166,7 +174,7 @@ function createReferenceDataRoutes(controller, options = {}) {
 
 /**
  * Creates a router with search capabilities
- * 
+ *
  * @param {Object} controller - Controller instance
  * @param {Object} options - Configuration options
  * @param {Array} options.searchRoutes - Search route configurations
@@ -174,27 +182,27 @@ function createReferenceDataRoutes(controller, options = {}) {
  */
 function createSearchableRoutes(controller, options = {}) {
   const { searchRoutes = [] } = options;
-  
+
   const router = createReadOnlyRoutes(controller, options);
-  
+
   // Add search routes
-  searchRoutes.forEach(route => {
+  searchRoutes.forEach((route) => {
     const {
       path = '/search',
       handler = 'search',
       method = 'get',
-      middleware: routeSpecificMiddleware = []
+      middleware: routeSpecificMiddleware = [],
     } = route;
-    
+
     const handlerFunction = typeof handler === 'string' ? controller[handler] : handler;
-    
+
     if (handlerFunction) {
       router[method.toLowerCase()](path, ...routeSpecificMiddleware, handlerFunction);
     } else {
       console.warn(`Search handler ${handler} not found on controller`);
     }
   });
-  
+
   return router;
 }
 
@@ -207,17 +215,17 @@ const ROUTE_PRESETS = {
     includeMarkAsSold: true,
     middleware: [],
     routeMiddleware: {},
-    customRoutes: []
+    customRoutes: [],
   },
-  
+
   // Reference data (sets, reference products)
   REFERENCE_DATA: {
     includeMarkAsSold: false,
     middleware: [],
     routeMiddleware: {},
-    customRoutes: []
+    customRoutes: [],
   },
-  
+
   // Activity/audit logs
   ACTIVITY_LOG: {
     includeMarkAsSold: false,
@@ -225,10 +233,10 @@ const ROUTE_PRESETS = {
     routeMiddleware: {},
     customRoutes: [
       { method: 'get', path: '/stats', handler: 'getStats' },
-      { method: 'post', path: '/:id/read', handler: 'markAsRead' }
-    ]
+      { method: 'post', path: '/:id/read', handler: 'markAsRead' },
+    ],
   },
-  
+
   // Analytics/reporting
   ANALYTICS: {
     includeMarkAsSold: false,
@@ -236,9 +244,9 @@ const ROUTE_PRESETS = {
     routeMiddleware: {},
     customRoutes: [
       { method: 'get', path: '/summary', handler: 'getSummary' },
-      { method: 'get', path: '/export', handler: 'exportData' }
-    ]
-  }
+      { method: 'get', path: '/export', handler: 'exportData' },
+    ],
+  },
 };
 
 module.exports = {
@@ -247,5 +255,5 @@ module.exports = {
   createCollectionItemRoutes,
   createReferenceDataRoutes,
   createSearchableRoutes,
-  ROUTE_PRESETS
+  ROUTE_PRESETS,
 };

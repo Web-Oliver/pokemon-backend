@@ -3,14 +3,14 @@ const { ValidationError, NotFoundError } = require('../../utils/errorHandler');
 
 /**
  * Sale Service
- * 
+ *
  * Centralizes sale processing logic to eliminate duplication across controllers.
  * Handles marking items as sold with consistent validation and data structure.
  */
 class SaleService {
   /**
    * Marks an item as sold with sale details
-   * 
+   *
    * @param {Object} model - Mongoose model (PsaGradedCard, RawCard, SealedProduct)
    * @param {string} itemId - Item ID to mark as sold
    * @param {Object} saleDetails - Sale details object
@@ -38,6 +38,7 @@ class SaleService {
 
     // Find the item
     const item = await model.findById(itemId);
+
     if (!item) {
       throw new NotFoundError(`${model.modelName} not found`);
     }
@@ -70,7 +71,7 @@ class SaleService {
 
   /**
    * Marks a card as sold with card-specific population
-   * 
+   *
    * @param {Object} model - Card model (PsaGradedCard, RawCard)
    * @param {string} itemId - Card ID to mark as sold
    * @param {Object} saleDetails - Sale details object
@@ -90,7 +91,7 @@ class SaleService {
 
   /**
    * Marks a sealed product as sold with product-specific population
-   * 
+   *
    * @param {Object} model - SealedProduct model
    * @param {string} itemId - Product ID to mark as sold
    * @param {Object} saleDetails - Sale details object
@@ -98,7 +99,7 @@ class SaleService {
    */
   static async markSealedProductAsSold(model, itemId, saleDetails) {
     const populateOptions = {
-      path: 'productId'
+      path: 'productId',
     };
 
     return await this.markAsSold(model, itemId, saleDetails, populateOptions);
@@ -106,53 +107,53 @@ class SaleService {
 
   /**
    * Validates sale details structure
-   * 
+   *
    * @param {Object} saleDetails - Sale details to validate
    * @returns {boolean} - True if valid, throws error if invalid
    */
   static validateSaleDetails(saleDetails) {
     const required = ['paymentMethod', 'actualSoldPrice', 'deliveryMethod', 'source'];
-    
+
     for (const field of required) {
       if (!saleDetails[field]) {
         throw new ValidationError(`Missing required field: ${field}`);
       }
     }
-    
+
     if (typeof saleDetails.actualSoldPrice !== 'number' || saleDetails.actualSoldPrice <= 0) {
       throw new ValidationError('actualSoldPrice must be a positive number');
     }
-    
+
     return true;
   }
 
   /**
    * Gets sale statistics for an item type
-   * 
+   *
    * @param {Object} model - Mongoose model
    * @param {Object} filters - Optional filters
    * @returns {Promise<Object>} - Sale statistics
    */
   static async getSaleStatistics(model, filters = {}) {
     const baseQuery = { sold: true, ...filters };
-    
+
     const [totalSold, totalRevenue] = await Promise.all([
       model.countDocuments(baseQuery),
       model.aggregate([
         { $match: baseQuery },
-        { $group: { _id: null, total: { $sum: '$saleDetails.actualSoldPrice' } } }
-      ])
+        { $group: { _id: null, total: { $sum: '$saleDetails.actualSoldPrice' } } },
+      ]),
     ]);
 
     return {
       totalSold,
-      totalRevenue: totalRevenue[0]?.total || 0
+      totalRevenue: totalRevenue[0]?.total || 0,
     };
   }
 
   /**
    * Finds items sold within a date range
-   * 
+   *
    * @param {Object} model - Mongoose model
    * @param {Date} startDate - Start date
    * @param {Date} endDate - End date
@@ -163,8 +164,8 @@ class SaleService {
       sold: true,
       'saleDetails.dateSold': {
         $gte: startDate,
-        $lte: endDate
-      }
+        $lte: endDate,
+      },
     });
   }
 }

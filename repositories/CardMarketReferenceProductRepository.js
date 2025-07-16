@@ -4,10 +4,10 @@ const { ValidationError } = require('../middleware/errorHandler');
 
 /**
  * CardMarketReferenceProduct Repository
- * 
+ *
  * Specialized repository for CardMarketReferenceProduct model operations.
  * Extends BaseRepository with product-specific search and query methods.
- * 
+ *
  * IMPORTANT: This handles CardMarketReferenceProduct which has a setName field
  * that is NOT the same as the Set model. This setName is for product grouping.
  */
@@ -18,7 +18,7 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   constructor() {
     super(CardMarketReferenceProduct, {
       entityName: 'CardMarketReferenceProduct',
-      defaultSort: { available: -1, price: 1 }
+      defaultSort: { available: -1, price: 1 },
     });
   }
 
@@ -31,7 +31,7 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   async findByCategory(category, options = {}) {
     try {
       return await this.findAll({
-        category: new RegExp(category, 'i')
+        category: new RegExp(category, 'i'),
       }, options);
     } catch (error) {
       throw error;
@@ -47,7 +47,7 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   async findBySetName(setName, options = {}) {
     try {
       return await this.findAll({
-        setName: new RegExp(setName, 'i')
+        setName: new RegExp(setName, 'i'),
       }, options);
     } catch (error) {
       throw error;
@@ -62,10 +62,10 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   async findAvailable(options = {}) {
     try {
       return await this.findAll({
-        available: { $gt: 0 }
+        available: { $gt: 0 },
       }, {
         ...options,
-        sort: { available: -1, price: 1 }
+        sort: { available: -1, price: 1 },
       });
     } catch (error) {
       throw error;
@@ -93,17 +93,17 @@ class CardMarketReferenceProductRepository extends BaseRepository {
       const pipeline = [
         {
           $addFields: {
-            priceNumeric: { $toDouble: '$price' }
-          }
+            priceNumeric: { $toDouble: '$price' },
+          },
         },
         {
           $match: {
-            priceNumeric: { $gte: minPrice, $lte: maxPrice }
-          }
+            priceNumeric: { $gte: minPrice, $lte: maxPrice },
+          },
         },
         {
-          $sort: options.sort || { priceNumeric: 1 }
-        }
+          $sort: options.sort || { priceNumeric: 1 },
+        },
       ];
 
       if (options.limit) {
@@ -130,8 +130,8 @@ class CardMarketReferenceProductRepository extends BaseRepository {
       // Add price conversion for filtering
       pipeline.push({
         $addFields: {
-          priceNumeric: { $toDouble: '$price' }
-        }
+          priceNumeric: { $toDouble: '$price' },
+        },
       });
 
       // Text search
@@ -140,22 +140,22 @@ class CardMarketReferenceProductRepository extends BaseRepository {
           $or: [
             { name: { $regex: query, $options: 'i' } },
             { setName: { $regex: query, $options: 'i' } },
-            { category: { $regex: query, $options: 'i' } }
-          ]
+            { category: { $regex: query, $options: 'i' } },
+          ],
         });
       }
 
       // Category filter
       if (filters.category) {
         matchConditions.push({
-          category: new RegExp(filters.category, 'i')
+          category: new RegExp(filters.category, 'i'),
         });
       }
 
       // Set name filter
       if (filters.setName) {
         matchConditions.push({
-          setName: new RegExp(filters.setName, 'i')
+          setName: new RegExp(filters.setName, 'i'),
         });
       }
 
@@ -164,36 +164,36 @@ class CardMarketReferenceProductRepository extends BaseRepository {
         matchConditions.push({
           priceNumeric: {
             $gte: filters.priceRange.min,
-            $lte: filters.priceRange.max
-          }
+            $lte: filters.priceRange.max,
+          },
         });
       }
 
       // Availability filter
       if (filters.availableOnly) {
         matchConditions.push({
-          available: { $gt: 0 }
+          available: { $gt: 0 },
         });
       }
 
       // Minimum availability filter
       if (filters.minAvailable) {
         matchConditions.push({
-          available: { $gte: filters.minAvailable }
+          available: { $gte: filters.minAvailable },
         });
       }
 
       // Last updated filter
       if (filters.lastUpdatedAfter) {
         matchConditions.push({
-          lastUpdated: { $gte: new Date(filters.lastUpdatedAfter) }
+          lastUpdated: { $gte: new Date(filters.lastUpdatedAfter) },
         });
       }
 
       // Add match stage
       if (matchConditions.length > 0) {
         pipeline.push({
-          $match: matchConditions.length > 1 ? { $and: matchConditions } : matchConditions[0]
+          $match: matchConditions.length > 1 ? { $and: matchConditions } : matchConditions[0],
         });
       }
 
@@ -220,18 +220,18 @@ class CardMarketReferenceProductRepository extends BaseRepository {
                 // Price score (lower prices get higher scores)
                 { $cond: { if: { $gt: ['$priceNumeric', 0] }, then: { $divide: [1000, '$priceNumeric'] }, else: 0 } },
                 // Availability score
-                { $cond: { if: { $gt: ['$available', 0] }, then: { $divide: ['$available', 100] }, else: 0 } }
-              ]
-            }
-          }
+                { $cond: { if: { $gt: ['$available', 0] }, then: { $divide: ['$available', 100] }, else: 0 } },
+              ],
+            },
+          },
         });
       }
 
       // Sort
-      const sortStage = query ? 
-        { $sort: { score: -1, available: -1, priceNumeric: 1 } } :
-        { $sort: filters.sort || this.options.defaultSort };
-      
+      const sortStage = query
+        ? { $sort: { score: -1, available: -1, priceNumeric: 1 } }
+        : { $sort: filters.sort || this.options.defaultSort };
+
       pipeline.push(sortStage);
 
       // Limit
@@ -257,11 +257,11 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             _id: '$category',
             count: { $sum: 1 },
             totalAvailable: { $sum: '$available' },
-            averagePrice: { $avg: { $toDouble: '$price' } }
-          }
+            averagePrice: { $avg: { $toDouble: '$price' } },
+          },
         },
         {
-          $sort: { count: -1 }
+          $sort: { count: -1 },
         },
         {
           $project: {
@@ -269,9 +269,9 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             count: 1,
             totalAvailable: 1,
             averagePrice: { $round: ['$averagePrice', 2] },
-            _id: 0
-          }
-        }
+            _id: 0,
+          },
+        },
       ]);
 
       return categories;
@@ -293,11 +293,11 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             count: { $sum: 1 },
             totalAvailable: { $sum: '$available' },
             averagePrice: { $avg: { $toDouble: '$price' } },
-            categories: { $addToSet: '$category' }
-          }
+            categories: { $addToSet: '$category' },
+          },
         },
         {
-          $sort: { count: -1 }
+          $sort: { count: -1 },
         },
         {
           $project: {
@@ -306,9 +306,9 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             totalAvailable: 1,
             averagePrice: { $round: ['$averagePrice', 2] },
             categoryCount: { $size: '$categories' },
-            _id: 0
-          }
-        }
+            _id: 0,
+          },
+        },
       ]);
 
       return setNames;
@@ -340,11 +340,11 @@ class CardMarketReferenceProductRepository extends BaseRepository {
                 $cond: [
                   { $gt: ['$lastUpdated', { $dateSubtract: { startDate: '$$NOW', unit: 'day', amount: 7 } }] },
                   1,
-                  0
-                ]
-              }
-            }
-          }
+                  0,
+                ],
+              },
+            },
+          },
         },
         {
           $addFields: {
@@ -354,10 +354,10 @@ class CardMarketReferenceProductRepository extends BaseRepository {
               $cond: {
                 if: { $gt: ['$totalProducts', 0] },
                 then: { $multiply: [{ $divide: ['$availableProducts', '$totalProducts'] }, 100] },
-                else: 0
-              }
-            }
-          }
+                else: 0,
+              },
+            },
+          },
         },
         {
           $project: {
@@ -371,9 +371,9 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             uniqueSetNameCount: 1,
             availableProducts: 1,
             availabilityPercentage: { $round: ['$availabilityPercentage', 2] },
-            recentlyUpdated: 1
-          }
-        }
+            recentlyUpdated: 1,
+          },
+        },
       ]);
 
       return stats[0] || {};
@@ -391,8 +391,8 @@ class CardMarketReferenceProductRepository extends BaseRepository {
       const analysis = await this.aggregate([
         {
           $addFields: {
-            priceNumeric: { $toDouble: '$price' }
-          }
+            priceNumeric: { $toDouble: '$price' },
+          },
         },
         {
           $group: {
@@ -403,8 +403,8 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             minPrice: { $min: '$priceNumeric' },
             maxPrice: { $max: '$priceNumeric' },
             priceRange: { $subtract: [{ $max: '$priceNumeric' }, { $min: '$priceNumeric' }] },
-            availableProducts: { $sum: { $cond: [{ $gt: ['$available', 0] }, 1, 0] } }
-          }
+            availableProducts: { $sum: { $cond: [{ $gt: ['$available', 0] }, 1, 0] } },
+          },
         },
         {
           $addFields: {
@@ -412,20 +412,20 @@ class CardMarketReferenceProductRepository extends BaseRepository {
               $cond: {
                 if: { $gt: ['$productCount', 0] },
                 then: { $divide: ['$availableProducts', '$productCount'] },
-                else: 0
-              }
+                else: 0,
+              },
             },
             priceVolatility: {
               $cond: {
                 if: { $gt: ['$averagePrice', 0] },
                 then: { $divide: ['$priceRange', '$averagePrice'] },
-                else: 0
-              }
-            }
-          }
+                else: 0,
+              },
+            },
+          },
         },
         {
-          $sort: { averagePrice: -1 }
+          $sort: { averagePrice: -1 },
         },
         {
           $project: {
@@ -438,9 +438,9 @@ class CardMarketReferenceProductRepository extends BaseRepository {
             priceRange: { $round: ['$priceRange', 2] },
             availabilityRate: { $round: ['$availabilityRate', 4] },
             priceVolatility: { $round: ['$priceVolatility', 4] },
-            _id: 0
-          }
-        }
+            _id: 0,
+          },
+        },
       ]);
 
       return analysis;
@@ -458,10 +458,10 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   async getSuggestions(query, options = {}) {
     try {
       const results = await this.searchAdvanced(query, {
-        limit: options.limit || 10
+        limit: options.limit || 10,
       });
 
-      return results.map(product => ({
+      return results.map((product) => ({
         id: product._id,
         text: product.name,
         secondaryText: product.setName,
@@ -471,8 +471,8 @@ class CardMarketReferenceProductRepository extends BaseRepository {
           priceNumeric: product.priceNumeric,
           available: product.available,
           setName: product.setName,
-          isAvailable: product.available > 0
-        }
+          isAvailable: product.available > 0,
+        },
       }));
     } catch (error) {
       throw error;
@@ -488,13 +488,14 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   async getRecentlyUpdated(days = 7, options = {}) {
     try {
       const dateThreshold = new Date();
+
       dateThreshold.setDate(dateThreshold.getDate() - days);
 
       return await this.findAll({
-        lastUpdated: { $gte: dateThreshold }
+        lastUpdated: { $gte: dateThreshold },
       }, {
         ...options,
-        sort: { lastUpdated: -1 }
+        sort: { lastUpdated: -1 },
       });
     } catch (error) {
       throw error;
@@ -510,10 +511,10 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   async getLowStockProducts(threshold = 5, options = {}) {
     try {
       return await this.findAll({
-        available: { $gt: 0, $lte: threshold }
+        available: { $gt: 0, $lte: threshold },
       }, {
         ...options,
-        sort: { available: 1, price: 1 }
+        sort: { available: 1, price: 1 },
       });
     } catch (error) {
       throw error;
@@ -529,22 +530,22 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   async getProductsByPriceTier(tier, options = {}) {
     try {
       let priceRange;
-      
+
       switch (tier.toLowerCase()) {
-        case 'low':
-          priceRange = { min: 0, max: 50 };
-          break;
-        case 'medium':
-          priceRange = { min: 50, max: 200 };
-          break;
-        case 'high':
-          priceRange = { min: 200, max: 500 };
-          break;
-        case 'premium':
-          priceRange = { min: 500, max: Number.MAX_SAFE_INTEGER };
-          break;
-        default:
-          throw new ValidationError(`Unknown price tier: ${tier}`);
+      case 'low':
+        priceRange = { min: 0, max: 50 };
+        break;
+      case 'medium':
+        priceRange = { min: 50, max: 200 };
+        break;
+      case 'high':
+        priceRange = { min: 200, max: 500 };
+        break;
+      case 'premium':
+        priceRange = { min: 500, max: Number.MAX_SAFE_INTEGER };
+        break;
+      default:
+        throw new ValidationError(`Unknown price tier: ${tier}`);
       }
 
       return await this.findByPriceRange(priceRange.min, priceRange.max, options);

@@ -4,10 +4,10 @@ const { ValidationError } = require('../middleware/errorHandler');
 
 /**
  * Set Repository
- * 
+ *
  * Specialized repository for Set model operations.
  * Extends BaseRepository with set-specific search and query methods.
- * 
+ *
  * IMPORTANT: This handles the Set model (official Pokemon card sets)
  * which is different from CardMarketReferenceProduct.setName field.
  */
@@ -18,7 +18,7 @@ class SetRepository extends BaseRepository {
   constructor() {
     super(Set, {
       entityName: 'Set',
-      defaultSort: { year: -1, setName: 1 }
+      defaultSort: { year: -1, setName: 1 },
     });
   }
 
@@ -58,7 +58,7 @@ class SetRepository extends BaseRepository {
       }
 
       return await this.findAll({
-        year: { $gte: startYear, $lte: endYear }
+        year: { $gte: startYear, $lte: endYear },
       }, options);
     } catch (error) {
       throw error;
@@ -74,7 +74,7 @@ class SetRepository extends BaseRepository {
   async findBySetName(setName, options = {}) {
     try {
       return await this.findAll({
-        setName: new RegExp(setName, 'i')
+        setName: new RegExp(setName, 'i'),
       }, options);
     } catch (error) {
       throw error;
@@ -94,10 +94,10 @@ class SetRepository extends BaseRepository {
       }
 
       return await this.findAll({
-        totalPsaPopulation: { $gte: minPopulation }
+        totalPsaPopulation: { $gte: minPopulation },
       }, {
         ...options,
-        sort: { totalPsaPopulation: -1, ...this.options.defaultSort }
+        sort: { totalPsaPopulation: -1, ...this.options.defaultSort },
       });
     } catch (error) {
       throw error;
@@ -122,7 +122,7 @@ class SetRepository extends BaseRepository {
       }
 
       return await this.findAll({
-        totalCardsInSet: { $gte: minCards, $lte: maxCards }
+        totalCardsInSet: { $gte: minCards, $lte: maxCards },
       }, options);
     } catch (error) {
       throw error;
@@ -143,7 +143,7 @@ class SetRepository extends BaseRepository {
       // Text search
       if (query) {
         matchConditions.push({
-          setName: { $regex: query, $options: 'i' }
+          setName: { $regex: query, $options: 'i' },
         });
       }
 
@@ -157,15 +157,15 @@ class SetRepository extends BaseRepository {
         matchConditions.push({
           year: {
             $gte: filters.yearRange.start,
-            $lte: filters.yearRange.end
-          }
+            $lte: filters.yearRange.end,
+          },
         });
       }
 
       // PSA population filter
       if (filters.minPsaPopulation) {
         matchConditions.push({
-          totalPsaPopulation: { $gte: filters.minPsaPopulation }
+          totalPsaPopulation: { $gte: filters.minPsaPopulation },
         });
       }
 
@@ -174,15 +174,15 @@ class SetRepository extends BaseRepository {
         matchConditions.push({
           totalPsaPopulation: {
             $gte: filters.psaPopulationRange.min,
-            $lte: filters.psaPopulationRange.max
-          }
+            $lte: filters.psaPopulationRange.max,
+          },
         });
       }
 
       // Card count filter
       if (filters.minCardCount) {
         matchConditions.push({
-          totalCardsInSet: { $gte: filters.minCardCount }
+          totalCardsInSet: { $gte: filters.minCardCount },
         });
       }
 
@@ -191,15 +191,15 @@ class SetRepository extends BaseRepository {
         matchConditions.push({
           totalCardsInSet: {
             $gte: filters.cardCountRange.min,
-            $lte: filters.cardCountRange.max
-          }
+            $lte: filters.cardCountRange.max,
+          },
         });
       }
 
       // Add match stage
       if (matchConditions.length > 0) {
         pipeline.push({
-          $match: matchConditions.length > 1 ? { $and: matchConditions } : matchConditions[0]
+          $match: matchConditions.length > 1 ? { $and: matchConditions } : matchConditions[0],
         });
       }
 
@@ -220,18 +220,18 @@ class SetRepository extends BaseRepository {
                 // Popularity score
                 { $cond: { if: { $gt: ['$totalPsaPopulation', 0] }, then: { $divide: ['$totalPsaPopulation', 10000] }, else: 0 } },
                 // Length penalty
-                { $cond: { if: { $regexMatch: { input: { $toLower: '$setName' }, regex: query.toLowerCase() } }, then: { $divide: [50, { $strLenCP: '$setName' }] }, else: 0 } }
-              ]
-            }
-          }
+                { $cond: { if: { $regexMatch: { input: { $toLower: '$setName' }, regex: query.toLowerCase() } }, then: { $divide: [50, { $strLenCP: '$setName' }] }, else: 0 } },
+              ],
+            },
+          },
         });
       }
 
       // Sort
-      const sortStage = query ? 
-        { $sort: { score: -1, totalPsaPopulation: -1, year: -1 } } :
-        { $sort: filters.sort || this.options.defaultSort };
-      
+      const sortStage = query
+        ? { $sort: { score: -1, totalPsaPopulation: -1, year: -1 } }
+        : { $sort: filters.sort || this.options.defaultSort };
+
       pipeline.push(sortStage);
 
       // Limit
@@ -258,8 +258,8 @@ class SetRepository extends BaseRepository {
             from: 'cards',
             localField: '_id',
             foreignField: 'setId',
-            as: 'cards'
-          }
+            as: 'cards',
+          },
         },
         {
           $addFields: {
@@ -269,14 +269,14 @@ class SetRepository extends BaseRepository {
               $cond: {
                 if: { $gt: ['$totalCardsInSet', 0] },
                 then: { $multiply: [{ $divide: [{ $size: '$cards' }, '$totalCardsInSet'] }, 100] },
-                else: 0
-              }
-            }
-          }
+                else: 0,
+              },
+            },
+          },
         },
         {
-          $sort: options.sort || this.options.defaultSort
-        }
+          $sort: options.sort || this.options.defaultSort,
+        },
       ];
 
       if (options.limit) {
@@ -306,14 +306,14 @@ class SetRepository extends BaseRepository {
             averagePsaPopulation: { $avg: '$totalPsaPopulation' },
             minYear: { $min: '$year' },
             maxYear: { $max: '$year' },
-            yearRange: { $push: '$year' }
-          }
+            yearRange: { $push: '$year' },
+          },
         },
         {
           $addFields: {
             uniqueYears: { $setUnion: ['$yearRange', []] },
-            yearSpan: { $subtract: ['$maxYear', '$minYear'] }
-          }
+            yearSpan: { $subtract: ['$maxYear', '$minYear'] },
+          },
         },
         {
           $project: {
@@ -326,9 +326,9 @@ class SetRepository extends BaseRepository {
             minYear: 1,
             maxYear: 1,
             yearSpan: 1,
-            uniqueYearCount: { $size: '$uniqueYears' }
-          }
-        }
+            uniqueYearCount: { $size: '$uniqueYears' },
+          },
+        },
       ]);
 
       return stats[0] || {};
@@ -349,11 +349,11 @@ class SetRepository extends BaseRepository {
             _id: '$year',
             setCount: { $sum: 1 },
             totalCards: { $sum: '$totalCardsInSet' },
-            totalPsaPopulation: { $sum: '$totalPsaPopulation' }
-          }
+            totalPsaPopulation: { $sum: '$totalPsaPopulation' },
+          },
         },
         {
-          $sort: { _id: -1 }
+          $sort: { _id: -1 },
         },
         {
           $project: {
@@ -361,9 +361,9 @@ class SetRepository extends BaseRepository {
             setCount: 1,
             totalCards: 1,
             totalPsaPopulation: 1,
-            _id: 0
-          }
-        }
+            _id: 0,
+          },
+        },
       ]);
 
       return years;
@@ -380,46 +380,46 @@ class SetRepository extends BaseRepository {
   async getSetsByEra(era) {
     try {
       let yearRange;
-      
+
       switch (era.toLowerCase()) {
-        case 'wizards':
-        case 'wizards era':
-          yearRange = { start: 1996, end: 2000 };
-          break;
-        case 'e-card':
-        case 'e-card era':
-          yearRange = { start: 2001, end: 2003 };
-          break;
-        case 'ex':
-        case 'ex era':
-          yearRange = { start: 2004, end: 2006 };
-          break;
-        case 'diamond & pearl':
-        case 'diamond & pearl era':
-          yearRange = { start: 2007, end: 2010 };
-          break;
-        case 'black & white':
-        case 'black & white era':
-          yearRange = { start: 2011, end: 2013 };
-          break;
-        case 'xy':
-        case 'xy era':
-          yearRange = { start: 2014, end: 2016 };
-          break;
-        case 'sun & moon':
-        case 'sun & moon era':
-          yearRange = { start: 2017, end: 2019 };
-          break;
-        case 'sword & shield':
-        case 'sword & shield era':
-          yearRange = { start: 2020, end: 2022 };
-          break;
-        case 'scarlet & violet':
-        case 'scarlet & violet era':
-          yearRange = { start: 2023, end: new Date().getFullYear() };
-          break;
-        default:
-          throw new ValidationError(`Unknown era: ${era}`);
+      case 'wizards':
+      case 'wizards era':
+        yearRange = { start: 1996, end: 2000 };
+        break;
+      case 'e-card':
+      case 'e-card era':
+        yearRange = { start: 2001, end: 2003 };
+        break;
+      case 'ex':
+      case 'ex era':
+        yearRange = { start: 2004, end: 2006 };
+        break;
+      case 'diamond & pearl':
+      case 'diamond & pearl era':
+        yearRange = { start: 2007, end: 2010 };
+        break;
+      case 'black & white':
+      case 'black & white era':
+        yearRange = { start: 2011, end: 2013 };
+        break;
+      case 'xy':
+      case 'xy era':
+        yearRange = { start: 2014, end: 2016 };
+        break;
+      case 'sun & moon':
+      case 'sun & moon era':
+        yearRange = { start: 2017, end: 2019 };
+        break;
+      case 'sword & shield':
+      case 'sword & shield era':
+        yearRange = { start: 2020, end: 2022 };
+        break;
+      case 'scarlet & violet':
+      case 'scarlet & violet era':
+        yearRange = { start: 2023, end: new Date().getFullYear() };
+        break;
+      default:
+        throw new ValidationError(`Unknown era: ${era}`);
       }
 
       return await this.findByYearRange(yearRange.start, yearRange.end);
@@ -443,8 +443,8 @@ class SetRepository extends BaseRepository {
         {
           ...options,
           sort: { totalPsaPopulation: -1 },
-          limit
-        }
+          limit,
+        },
       );
     } catch (error) {
       throw error;
@@ -466,8 +466,8 @@ class SetRepository extends BaseRepository {
         {
           ...options,
           sort: { totalCardsInSet: -1 },
-          limit
-        }
+          limit,
+        },
       );
     } catch (error) {
       throw error;
@@ -483,10 +483,10 @@ class SetRepository extends BaseRepository {
   async getSuggestions(query, options = {}) {
     try {
       const results = await this.searchAdvanced(query, {
-        limit: options.limit || 10
+        limit: options.limit || 10,
       });
 
-      return results.map(set => ({
+      return results.map((set) => ({
         id: set._id,
         text: set.setName,
         secondaryText: set.year ? `${set.year}` : null,
@@ -495,8 +495,8 @@ class SetRepository extends BaseRepository {
           totalCards: set.totalCardsInSet,
           totalPsaPopulation: set.totalPsaPopulation,
           setUrl: set.setUrl,
-          era: this.classifyEra(set.year)
-        }
+          era: this.classifyEra(set.year),
+        },
       }));
     } catch (error) {
       throw error;
@@ -509,18 +509,38 @@ class SetRepository extends BaseRepository {
    * @returns {string} - Era classification
    */
   classifyEra(year) {
-    if (!year) return 'Unknown';
-    
-    if (year >= 1996 && year <= 2000) return 'Wizards Era';
-    if (year >= 2001 && year <= 2003) return 'e-Card Era';
-    if (year >= 2004 && year <= 2006) return 'Ex Era';
-    if (year >= 2007 && year <= 2010) return 'Diamond & Pearl Era';
-    if (year >= 2011 && year <= 2013) return 'Black & White Era';
-    if (year >= 2014 && year <= 2016) return 'XY Era';
-    if (year >= 2017 && year <= 2019) return 'Sun & Moon Era';
-    if (year >= 2020 && year <= 2022) return 'Sword & Shield Era';
-    if (year >= 2023) return 'Scarlet & Violet Era';
-    
+    if (!year) {
+      return 'Unknown';
+    }
+
+    if (year >= 1996 && year <= 2000) {
+      return 'Wizards Era';
+    }
+    if (year >= 2001 && year <= 2003) {
+      return 'e-Card Era';
+    }
+    if (year >= 2004 && year <= 2006) {
+      return 'Ex Era';
+    }
+    if (year >= 2007 && year <= 2010) {
+      return 'Diamond & Pearl Era';
+    }
+    if (year >= 2011 && year <= 2013) {
+      return 'Black & White Era';
+    }
+    if (year >= 2014 && year <= 2016) {
+      return 'XY Era';
+    }
+    if (year >= 2017 && year <= 2019) {
+      return 'Sun & Moon Era';
+    }
+    if (year >= 2020 && year <= 2022) {
+      return 'Sword & Shield Era';
+    }
+    if (year >= 2023) {
+      return 'Scarlet & Violet Era';
+    }
+
     return 'Unknown Era';
   }
 
@@ -544,12 +564,12 @@ class SetRepository extends BaseRepository {
                   { case: { $and: [{ $gte: ['$year', 2014] }, { $lte: ['$year', 2016] }] }, then: 'XY Era' },
                   { case: { $and: [{ $gte: ['$year', 2017] }, { $lte: ['$year', 2019] }] }, then: 'Sun & Moon Era' },
                   { case: { $and: [{ $gte: ['$year', 2020] }, { $lte: ['$year', 2022] }] }, then: 'Sword & Shield Era' },
-                  { case: { $gte: ['$year', 2023] }, then: 'Scarlet & Violet Era' }
+                  { case: { $gte: ['$year', 2023] }, then: 'Scarlet & Violet Era' },
                 ],
-                default: 'Unknown Era'
-              }
-            }
-          }
+                default: 'Unknown Era',
+              },
+            },
+          },
         },
         {
           $group: {
@@ -560,11 +580,11 @@ class SetRepository extends BaseRepository {
             averageCardsPerSet: { $avg: '$totalCardsInSet' },
             averagePsaPopulation: { $avg: '$totalPsaPopulation' },
             minYear: { $min: '$year' },
-            maxYear: { $max: '$year' }
-          }
+            maxYear: { $max: '$year' },
+          },
         },
         {
-          $sort: { minYear: 1 }
+          $sort: { minYear: 1 },
         },
         {
           $project: {
@@ -575,9 +595,9 @@ class SetRepository extends BaseRepository {
             averageCardsPerSet: { $round: ['$averageCardsPerSet', 2] },
             averagePsaPopulation: { $round: ['$averagePsaPopulation', 2] },
             yearRange: { $concat: [{ $toString: '$minYear' }, ' - ', { $toString: '$maxYear' }] },
-            _id: 0
-          }
-        }
+            _id: 0,
+          },
+        },
       ]);
 
       return stats;

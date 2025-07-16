@@ -10,23 +10,24 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
 
   // Handle search query (support both 'q' and 'search' for compatibility)
   const searchQuery = q || search;
+
   if (searchQuery) {
     // Use advanced SearchUtility for better fuzzy matching
     const fuzzyPatterns = SearchUtility.createMongoRegexPatterns(searchQuery);
     const nameConditions = [
       { $text: { $search: searchQuery } }, // Text search
       { name: { $regex: searchQuery, $options: 'i' } }, // Basic regex for backward compatibility
-      { setName: { $regex: searchQuery, $options: 'i' } } // Set name search
+      { setName: { $regex: searchQuery, $options: 'i' } }, // Set name search
     ];
-    
+
     // Add fuzzy pattern matches for better partial matching
-    fuzzyPatterns.forEach(pattern => {
+    fuzzyPatterns.forEach((pattern) => {
       nameConditions.push(
         { name: pattern },
-        { setName: pattern }
+        { setName: pattern },
       );
     });
-    
+
     query.$or = nameConditions;
   }
 
@@ -35,33 +36,33 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
     // Only apply if no search query is provided to avoid conflicts
     const fuzzyPatterns = SearchUtility.createMongoRegexPatterns(name);
     const nameConditions = [
-      { name: { $regex: name, $options: 'i' } } // Basic regex for backward compatibility
+      { name: { $regex: name, $options: 'i' } }, // Basic regex for backward compatibility
     ];
-    
+
     // Add fuzzy pattern matches
-    fuzzyPatterns.forEach(pattern => {
+    fuzzyPatterns.forEach((pattern) => {
       nameConditions.push({ name: pattern });
     });
-    
+
     query.$or = nameConditions;
   }
   if (setName && !searchQuery) {
     // Only apply if no search query is provided to avoid conflicts
     const fuzzyPatterns = SearchUtility.createMongoRegexPatterns(setName);
     const setNameConditions = [
-      { setName: { $regex: setName, $options: 'i' } } // Basic regex for backward compatibility
+      { setName: { $regex: setName, $options: 'i' } }, // Basic regex for backward compatibility
     ];
-    
+
     // Add fuzzy pattern matches
-    fuzzyPatterns.forEach(pattern => {
+    fuzzyPatterns.forEach((pattern) => {
       setNameConditions.push({ setName: pattern });
     });
-    
+
     // If we already have an $or condition, combine them
     if (query.$or) {
       query.$and = [
         { $or: query.$or },
-        { $or: setNameConditions }
+        { $or: setNameConditions },
       ];
       delete query.$or;
     } else {
@@ -95,7 +96,7 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
   if (searchQuery || name || setName) {
     const originalQuery = searchQuery || name || setName;
     const normalizedQuery = SearchUtility.normalizeQuery(originalQuery);
-    
+
     pipeline.push({
       $addFields: {
         textScore: { $ifNull: [{ $meta: 'textScore' }, 0] },
@@ -106,36 +107,36 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
               $cond: {
                 if: { $eq: [{ $toLower: '$name' }, originalQuery.toLowerCase()] },
                 then: 50,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Starts with bonuses
             {
               $cond: {
                 if: { $eq: [{ $indexOfCP: [{ $toLower: '$name' }, originalQuery.toLowerCase()] }, 0] },
                 then: 30,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Contains bonuses with normalized matching
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$name' }, regex: normalizedQuery, options: 'i' } },
                 then: 20,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Set name bonuses
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$setName' }, regex: normalizedQuery, options: 'i' } },
                 then: 15,
-                else: 0
-              }
-            }
-          ]
-        }
-      }
+                else: 0,
+              },
+            },
+          ],
+        },
+      },
     });
 
     // Add combined scoring
@@ -150,38 +151,40 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
               $cond: {
                 if: { $gt: ['$available', 0] },
                 then: { $multiply: ['$available', 2] },
-                else: 0
-              }
-            }
-          ]
-        }
-      }
+                else: 0,
+              },
+            },
+          ],
+        },
+      },
     });
 
     // Sort by combined score
     pipeline.push({
       $sort: {
         combinedScore: -1,
-        name: 1
-      }
+        name: 1,
+      },
     });
   } else {
     // Default sorting when no search query
     pipeline.push({
       $sort: {
-        name: 1
-      }
+        name: 1,
+      },
     });
   }
 
   // If no pagination requested (no limit), return old format for backward compatibility
   if (limitNum === 0) {
     const products = await CardMarketReferenceProduct.aggregate(pipeline);
+
     return res.status(200).json(products);
   }
 
   // Pagination requested - get total count first
   const totalPipeline = [...pipeline];
+
   totalPipeline.push({ $count: 'total' });
   const totalResult = await CardMarketReferenceProduct.aggregate(totalPipeline);
   const totalProducts = totalResult[0]?.total || 0;

@@ -3,7 +3,7 @@ const psaGradedCardController = require('../controllers/psaGradedCardsController
 
 /**
  * PSA Graded Cards Routes
- * 
+ *
  * Uses the generic CRUD route factory to create standardized routes
  * for PSA graded card operations. This eliminates route definition duplication
  * and ensures consistency across the API.
@@ -21,7 +21,7 @@ const router = createCollectionItemRoutes(psaGradedCardController, {
   customRoutes: [
     // Custom routes specific to PSA graded cards can be added here
     // { method: 'get', path: '/stats', handler: 'getStats' }
-  ]
+  ],
 });
 
 module.exports = router;

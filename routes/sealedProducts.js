@@ -3,7 +3,7 @@ const sealedProductController = require('../controllers/sealedProductsController
 
 /**
  * Sealed Products Routes
- * 
+ *
  * Uses the generic CRUD route factory to create standardized routes
  * for sealed product operations. This eliminates route definition duplication
  * and ensures consistency across the API.
@@ -21,7 +21,7 @@ const router = createCollectionItemRoutes(sealedProductController, {
   customRoutes: [
     // Custom routes specific to sealed products can be added here
     // { method: 'get', path: '/stats', handler: 'getStats' }
-  ]
+  ],
 });
 
 module.exports = router;

@@ -7,10 +7,10 @@ const SetSearchStrategy = require('./strategies/SetSearchStrategy');
 
 /**
  * Search Factory
- * 
+ *
  * Factory pattern implementation for creating search strategies.
  * Provides centralized strategy resolution and configuration management.
- * 
+ *
  * Following SOLID principles:
  * - Single Responsibility: Creates and configures search strategies
  * - Open/Closed: Open for extension (new strategies), closed for modification
@@ -30,12 +30,12 @@ class SearchFactory {
       defaultMaxResults: options.defaultMaxResults || 50,
       enableFuzzySearch: options.enableFuzzySearch !== false,
       enableScoring: options.enableScoring !== false,
-      ...options
+      ...options,
     };
-    
+
     // Strategy registry
     this.strategies = new Map();
-    
+
     // Initialize strategy registry
     this.initializeStrategies();
   }
@@ -54,8 +54,8 @@ class SearchFactory {
         enableScoring: this.options.enableScoring,
         enableSetContext: true,
         enablePopularityScoring: true,
-        minQueryLength: 1
-      }
+        minQueryLength: 1,
+      },
     });
 
     // Register product search strategy
@@ -69,8 +69,8 @@ class SearchFactory {
         enablePriceScoring: true,
         enableAvailabilityScoring: true,
         enableCategoryFiltering: true,
-        minQueryLength: 2
-      }
+        minQueryLength: 2,
+      },
     });
 
     // Register set search strategy
@@ -84,8 +84,8 @@ class SearchFactory {
         enableYearFiltering: true,
         enableCardCountMetrics: true,
         enablePsaPopulationMetrics: true,
-        minQueryLength: 1
-      }
+        minQueryLength: 1,
+      },
     });
   }
 
@@ -104,6 +104,7 @@ class SearchFactory {
 
       // Get strategy configuration
       const strategyConfig = this.strategies.get(type.toLowerCase());
+
       if (!strategyConfig) {
         throw new ValidationError(`Unknown search type: ${type}`);
       }
@@ -114,7 +115,7 @@ class SearchFactory {
       // Merge options
       const mergedOptions = {
         ...strategyConfig.options,
-        ...options
+        ...options,
       };
 
       // Create strategy instance
@@ -122,7 +123,6 @@ class SearchFactory {
       const strategy = new StrategyClass(...dependencies, mergedOptions);
 
       return strategy;
-
     } catch (error) {
       throw error;
     }
@@ -136,15 +136,15 @@ class SearchFactory {
    */
   createStrategies(types, options = {}) {
     const strategies = new Map();
-    
-    types.forEach(type => {
+
+    types.forEach((type) => {
       try {
         strategies.set(type, this.createStrategy(type, options));
       } catch (error) {
         console.warn(`Failed to create strategy for type '${type}':`, error.message);
       }
     });
-    
+
     return strategies;
   }
 
@@ -156,15 +156,15 @@ class SearchFactory {
    */
   getStrategy(type, options = {}) {
     const cacheKey = this.buildCacheKey(type, options);
-    
+
     // Check cache if enabled
     if (this.options.enableCaching && this.cache && this.cache.has(cacheKey)) {
       return this.cache.get(cacheKey);
     }
-    
+
     // Create new strategy
     const strategy = this.createStrategy(type, options);
-    
+
     // Cache if enabled
     if (this.options.enableCaching) {
       if (!this.cache) {
@@ -172,7 +172,7 @@ class SearchFactory {
       }
       this.cache.set(cacheKey, strategy);
     }
-    
+
     return strategy;
   }
 
@@ -184,7 +184,7 @@ class SearchFactory {
   registerStrategy(type, config) {
     // Validate strategy configuration
     this.validateStrategyConfig(config);
-    
+
     // Register strategy
     this.strategies.set(type.toLowerCase(), config);
   }
@@ -195,17 +195,18 @@ class SearchFactory {
    */
   unregisterStrategy(type) {
     this.strategies.delete(type.toLowerCase());
-    
+
     // Clear cache if enabled
     if (this.options.enableCaching && this.cache) {
       // Remove cached strategies for this type
       const keysToDelete = [];
+
       for (const [key] of this.cache) {
         if (key.startsWith(`${type}:`)) {
           keysToDelete.push(key);
         }
       }
-      keysToDelete.forEach(key => this.cache.delete(key));
+      keysToDelete.forEach((key) => this.cache.delete(key));
     }
   }
 
@@ -242,6 +243,7 @@ class SearchFactory {
    */
   getSupportedOptions(type) {
     const strategy = this.createStrategy(type);
+
     return strategy.getSupportedOptions();
   }
 
@@ -254,6 +256,7 @@ class SearchFactory {
    */
   validateSearchInput(type, query, options = {}) {
     const strategy = this.createStrategy(type);
+
     strategy.validateSearchInput(query, options);
   }
 
@@ -263,8 +266,9 @@ class SearchFactory {
    * @returns {Array} - Array of resolved dependencies
    */
   resolveDependencies(dependencies) {
-    return dependencies.map(dep => {
+    return dependencies.map((dep) => {
       const resolved = this.container.resolve(dep);
+
       if (!resolved) {
         throw new Error(`Failed to resolve dependency: ${dep}`);
       }
@@ -303,6 +307,7 @@ class SearchFactory {
    */
   buildCacheKey(type, options) {
     const optionsHash = JSON.stringify(options);
+
     return `${type}:${optionsHash}`;
   }
 
@@ -327,7 +332,7 @@ class SearchFactory {
     return {
       enabled: true,
       size: this.cache.size,
-      keys: Array.from(this.cache.keys())
+      keys: Array.from(this.cache.keys()),
     };
   }
 
@@ -342,18 +347,18 @@ class SearchFactory {
     try {
       const results = {};
       const limit = Math.floor((options.limit || 50) / types.length);
-      
+
       // Create search promises for each type
-      const searchPromises = types.map(async type => {
+      const searchPromises = types.map(async (type) => {
         try {
           const strategy = this.getStrategy(type, options);
           const typeResults = await strategy.search(query, { ...options, limit });
-          
+
           return {
             type,
             results: typeResults,
             count: typeResults.length,
-            success: true
+            success: true,
           };
         } catch (error) {
           console.warn(`Search failed for type '${type}':`, error.message);
@@ -362,7 +367,7 @@ class SearchFactory {
             results: [],
             count: 0,
             success: false,
-            error: error.message
+            error: error.message,
           };
         }
       });
@@ -371,17 +376,16 @@ class SearchFactory {
       const searchResults = await Promise.all(searchPromises);
 
       // Group results by type
-      searchResults.forEach(result => {
+      searchResults.forEach((result) => {
         results[result.type] = {
           data: result.results,
           count: result.count,
           success: result.success,
-          ...(result.error && { error: result.error })
+          ...result.error && { error: result.error },
         };
       });
 
       return results;
-
     } catch (error) {
       throw error;
     }
@@ -398,18 +402,18 @@ class SearchFactory {
     try {
       const results = {};
       const limit = Math.floor((options.limit || 20) / types.length);
-      
+
       // Create suggestion promises for each type
-      const suggestionPromises = types.map(async type => {
+      const suggestionPromises = types.map(async (type) => {
         try {
           const strategy = this.getStrategy(type, options);
           const suggestions = await strategy.suggest(query, { ...options, limit });
-          
+
           return {
             type,
             suggestions,
             count: suggestions.length,
-            success: true
+            success: true,
           };
         } catch (error) {
           console.warn(`Suggestions failed for type '${type}':`, error.message);
@@ -418,7 +422,7 @@ class SearchFactory {
             suggestions: [],
             count: 0,
             success: false,
-            error: error.message
+            error: error.message,
           };
         }
       });
@@ -427,17 +431,16 @@ class SearchFactory {
       const suggestionResults = await Promise.all(suggestionPromises);
 
       // Group results by type
-      suggestionResults.forEach(result => {
+      suggestionResults.forEach((result) => {
         results[result.type] = {
           data: result.suggestions,
           count: result.count,
           success: result.success,
-          ...(result.error && { error: result.error })
+          ...result.error && { error: result.error },
         };
       });
 
       return results;
-
     } catch (error) {
       throw error;
     }

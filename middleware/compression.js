@@ -56,7 +56,7 @@ const setCacheHeaders = (req, res, next) => {
       res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         'Pragma': 'no-cache',
-        'Expires': '0'
+        'Expires': '0',
       });
     }
     // NO CACHE for auction data to ensure real-time updates
@@ -64,7 +64,7 @@ const setCacheHeaders = (req, res, next) => {
       res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         'Pragma': 'no-cache',
-        'Expires': '0'
+        'Expires': '0',
       });
     }
     // Short cache for search results only

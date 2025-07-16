@@ -187,45 +187,47 @@ const importAllData = async (options = {}) => {
 
     // Phase 3.5: Multiple verification passes to ensure all cards are properly assigned
     console.log('\nPhase 3.5: Running multiple verification passes...');
-    
+
     for (let pass = 1; pass <= 3; pass++) {
       console.log(`\n--- Verification Pass ${pass}/3 ---`);
-      
+
       // Re-check all sets and cards
       const allSetsRecheck = await Set.find({});
       let issuesFound = 0;
-      
+
       for (const set of allSetsRecheck) {
         const cardCount = await Card.countDocuments({ setId: set._id });
-        
+
         if (cardCount !== set.totalCardsInSet) {
           console.log(`Pass ${pass} - Fixing: ${set.setName} (${set.totalCardsInSet} -> ${cardCount})`);
           await Set.findByIdAndUpdate(set._id, { totalCardsInSet: cardCount });
           issuesFound++;
         }
       }
-      
+
       // Check for orphaned cards
       const allCards = await Card.find({});
       const validSetIds = new Set();
-      allSetsRecheck.forEach(setDoc => validSetIds.add(setDoc._id.toString()));
-      
+
+      allSetsRecheck.forEach((setDoc) => validSetIds.add(setDoc._id.toString()));
+
       let orphanedCount = 0;
+
       for (const card of allCards) {
         if (!validSetIds.has(card.setId.toString())) {
           orphanedCount++;
         }
       }
-      
+
       console.log(`Pass ${pass} - Sets corrected: ${issuesFound}, Orphaned cards: ${orphanedCount}`);
-      
+
       // If no issues found, break early
       if (issuesFound === 0 && orphanedCount === 0) {
         console.log(`Pass ${pass} - All checks passed! Data integrity verified.`);
         break;
       }
     }
-    
+
     console.log('Phase 3.5 completed: Multiple verification passes finished');
 
     console.log('\nAll data import completed');

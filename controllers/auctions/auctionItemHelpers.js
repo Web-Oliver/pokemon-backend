@@ -19,13 +19,13 @@ const populateAuctionItems = async (auction) => {
       case 'PsaGradedCard':
         populatedItem = await PsaGradedCard.findById(item.itemId).populate({
           path: 'cardId',
-          populate: { path: 'setId' }
+          populate: { path: 'setId' },
         });
         break;
       case 'RawCard':
         populatedItem = await RawCard.findById(item.itemId).populate({
           path: 'cardId',
-          populate: { path: 'setId' }
+          populate: { path: 'setId' },
         });
         break;
       default:
@@ -166,10 +166,10 @@ const calculateAuctionTotalValue = async (auction) => {
 
       if (collectionItem && collectionItem.myPrice) {
         // Handle Decimal128 conversion
-        const price = typeof collectionItem.myPrice === 'number' 
+        const price = typeof collectionItem.myPrice === 'number'
           ? collectionItem.myPrice
           : parseFloat(collectionItem.myPrice.toString());
-        
+
         if (!isNaN(price)) {
           totalValue += price;
         }

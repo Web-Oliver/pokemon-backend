@@ -2,7 +2,7 @@ const BaseController = require('./base/BaseController');
 
 /**
  * Raw Card Controller
- * 
+ *
  * Extends BaseController to provide CRUD operations for raw cards.
  * Uses dependency injection and repository pattern for improved architecture.
  */
@@ -16,9 +16,9 @@ class RawCardController extends BaseController {
         path: 'cardId',
         populate: {
           path: 'setId',
-          model: 'Set'
-        }
-      }
+          model: 'Set',
+        },
+      },
     });
   }
 

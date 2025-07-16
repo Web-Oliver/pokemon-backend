@@ -2,13 +2,14 @@ const { ValidationError } = require('../../middleware/errorHandler');
 
 /**
  * Search Utilities
- * 
+ *
  * Shared utilities for search operations across all search strategies.
  * Provides common search functionality, query processing, and helper methods.
- * 
+ *
  * Following DRY principles by centralizing common search logic.
  */
 class SearchUtilities {
+
   /**
    * Normalizes search query for consistent processing
    * @param {string} query - Raw search query
@@ -18,7 +19,7 @@ class SearchUtilities {
     if (!query || typeof query !== 'string') {
       return '';
     }
-    
+
     return query
       .trim()
       .toLowerCase()
@@ -35,7 +36,7 @@ class SearchUtilities {
     if (!string || typeof string !== 'string') {
       return '';
     }
-    
+
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
@@ -47,55 +48,56 @@ class SearchUtilities {
    */
   static createFuzzyPatterns(query, options = {}) {
     const normalizedQuery = this.normalizeQuery(query);
+
     if (!normalizedQuery) {
       return [];
     }
-    
+
     const patterns = [];
     const escapedQuery = this.escapeRegex(normalizedQuery);
-    
+
     // Exact match (highest priority)
     patterns.push({
       pattern: new RegExp(`^${escapedQuery}$`, 'i'),
       weight: 100,
-      type: 'exact'
+      type: 'exact',
     });
-    
+
     // Starts with match
     patterns.push({
       pattern: new RegExp(`^${escapedQuery}`, 'i'),
       weight: 80,
-      type: 'startsWith'
+      type: 'startsWith',
     });
-    
+
     // Contains match
     patterns.push({
       pattern: new RegExp(escapedQuery, 'i'),
       weight: 60,
-      type: 'contains'
+      type: 'contains',
     });
-    
+
     // Word boundary match
     patterns.push({
       pattern: new RegExp(`\\b${escapedQuery}\\b`, 'i'),
       weight: 40,
-      type: 'wordBoundary'
+      type: 'wordBoundary',
     });
-    
+
     // Fuzzy match (if enabled and query is long enough)
     if (options.enableFuzzy !== false && normalizedQuery.length > 2) {
       const fuzzyPattern = normalizedQuery
         .split('')
-        .map(char => this.escapeRegex(char))
+        .map((char) => this.escapeRegex(char))
         .join('.*?');
-      
+
       patterns.push({
         pattern: new RegExp(fuzzyPattern, 'i'),
         weight: 30,
-        type: 'fuzzy'
+        type: 'fuzzy',
       });
     }
-    
+
     return patterns;
   }
 
@@ -107,7 +109,8 @@ class SearchUtilities {
    */
   static createMongoRegexPatterns(query, options = {}) {
     const fuzzyPatterns = this.createFuzzyPatterns(query, options);
-    return fuzzyPatterns.map(pattern => pattern.pattern);
+
+    return fuzzyPatterns.map((pattern) => pattern.pattern);
   }
 
   /**
@@ -121,16 +124,16 @@ class SearchUtilities {
     if (!query || !fields || !Array.isArray(fields)) {
       return {};
     }
-    
+
     const patterns = this.createMongoRegexPatterns(query, options);
     const conditions = [];
-    
-    fields.forEach(field => {
-      patterns.forEach(pattern => {
+
+    fields.forEach((field) => {
+      patterns.forEach((pattern) => {
         conditions.push({ [field]: pattern });
       });
     });
-    
+
     return conditions.length > 0 ? { $or: conditions } : {};
   }
 
@@ -143,13 +146,14 @@ class SearchUtilities {
    */
   static buildScoringConditions(query, fieldWeights = {}, options = {}) {
     const normalizedQuery = this.normalizeQuery(query);
+
     if (!normalizedQuery) {
       return [];
     }
-    
+
     const escapedQuery = this.escapeRegex(normalizedQuery);
     const conditions = [];
-    
+
     // Score different match types for each field
     Object.entries(fieldWeights).forEach(([field, weight]) => {
       // Exact match
@@ -157,52 +161,53 @@ class SearchUtilities {
         $cond: {
           if: { $eq: [{ $toLower: `$${field}` }, normalizedQuery] },
           then: weight * 1.0,
-          else: 0
-        }
+          else: 0,
+        },
       });
-      
+
       // Starts with
       conditions.push({
         $cond: {
           if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `^${escapedQuery}` } },
           then: weight * 0.8,
-          else: 0
-        }
+          else: 0,
+        },
       });
-      
+
       // Contains
       conditions.push({
         $cond: {
           if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: escapedQuery } },
           then: weight * 0.6,
-          else: 0
-        }
+          else: 0,
+        },
       });
-      
+
       // Word boundary
       conditions.push({
         $cond: {
           if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${escapedQuery}\\b` } },
           then: weight * 0.4,
-          else: 0
-        }
+          else: 0,
+        },
       });
     });
-    
+
     // Add length penalty (shorter matches are more relevant)
     if (options.enableLengthPenalty !== false) {
       const primaryField = options.primaryField || Object.keys(fieldWeights)[0];
+
       if (primaryField) {
         conditions.push({
           $cond: {
             if: { $regexMatch: { input: { $toLower: `$${primaryField}` }, regex: escapedQuery } },
             then: { $divide: [20, { $strLenCP: `$${primaryField}` }] },
-            else: 0
-          }
+            else: 0,
+          },
         });
       }
     }
-    
+
     return conditions;
   }
 
@@ -214,31 +219,31 @@ class SearchUtilities {
    */
   static buildMultiWordScoringConditions(query, fieldWeights = {}) {
     const normalizedQuery = this.normalizeQuery(query);
-    const queryWords = normalizedQuery.split(' ').filter(word => word.length > 0);
-    
+    const queryWords = normalizedQuery.split(' ').filter((word) => word.length > 0);
+
     if (queryWords.length <= 1) {
       return [];
     }
-    
+
     const conditions = [];
-    
+
     // Score each word with decreasing weight
     queryWords.forEach((word, index) => {
       const wordWeight = queryWords.length - index; // Earlier words have higher weight
       const escapedWord = this.escapeRegex(word);
-      
+
       Object.entries(fieldWeights).forEach(([field, baseWeight]) => {
         // Word boundary match
         conditions.push({
           $cond: {
             if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${escapedWord}\\b` } },
             then: (baseWeight * wordWeight) / queryWords.length,
-            else: 0
-          }
+            else: 0,
+          },
         });
       });
     });
-    
+
     return conditions;
   }
 
@@ -281,15 +286,17 @@ class SearchUtilities {
    */
   static buildPaginationStages(options = {}) {
     const stages = [];
-    
+
     if (options.page && options.limit) {
       const skip = (options.page - 1) * options.limit;
+
       stages.push({ $skip: skip });
     }
-    
+
     const limit = options.limit || 50;
+
     stages.push({ $limit: limit });
-    
+
     return stages;
   }
 
@@ -300,6 +307,7 @@ class SearchUtilities {
    */
   static buildSortStage(options = {}) {
     const sort = options.sort || { score: -1 };
+
     return sort ? { $sort: sort } : null;
   }
 
@@ -310,21 +318,21 @@ class SearchUtilities {
    * @returns {Array} - Processed search results
    */
   static processSearchResults(results, options = {}) {
-    return results.map(result => {
+    return results.map((result) => {
       // Convert Mongoose document to plain object
       const processed = result.toObject ? result.toObject() : result;
-      
+
       // Remove internal fields
       if (options.removeInternalFields !== false) {
         delete processed.__v;
         delete processed.score;
       }
-      
+
       // Add computed fields
       if (options.addComputedFields) {
         processed.searchRelevance = result.score || 0;
       }
-      
+
       return processed;
     });
   }
@@ -340,30 +348,30 @@ class SearchUtilities {
       textField = 'name',
       secondaryTextField = null,
       metadataFields = [],
-      maxSuggestions = 10
+      maxSuggestions = 10,
     } = config;
-    
-    return results.slice(0, maxSuggestions).map(result => {
+
+    return results.slice(0, maxSuggestions).map((result) => {
       const suggestion = {
         id: result._id,
-        text: result[textField]
+        text: result[textField],
       };
-      
+
       // Add secondary text if specified
       if (secondaryTextField && result[secondaryTextField]) {
         suggestion.secondaryText = result[secondaryTextField];
       }
-      
+
       // Add metadata fields
       if (metadataFields.length > 0) {
         suggestion.metadata = {};
-        metadataFields.forEach(field => {
+        metadataFields.forEach((field) => {
           if (result[field] !== undefined) {
             suggestion.metadata[field] = result[field];
           }
         });
       }
-      
+
       return suggestion;
     });
   }
@@ -376,6 +384,7 @@ class SearchUtilities {
    */
   static debounce(func, delay = 300) {
     let timeoutId;
+
     return function (...args) {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => func.apply(this, args), delay);
@@ -390,6 +399,7 @@ class SearchUtilities {
    */
   static throttle(func, limit = 1000) {
     let inThrottle;
+
     return function (...args) {
       if (!inThrottle) {
         func.apply(this, args);
@@ -410,39 +420,41 @@ class SearchUtilities {
     if (!query || !text) {
       return 0;
     }
-    
+
     const normalizedQuery = this.normalizeQuery(query);
     const normalizedText = this.normalizeQuery(text);
-    
+
     let score = 0;
-    
+
     // Exact match
     if (normalizedText === normalizedQuery) {
       score += 100;
     }
-    
+
     // Starts with
     if (normalizedText.startsWith(normalizedQuery)) {
       score += 80;
     }
-    
+
     // Contains
     if (normalizedText.includes(normalizedQuery)) {
       score += 60;
     }
-    
+
     // Word boundary match
     const wordBoundaryRegex = new RegExp(`\\b${this.escapeRegex(normalizedQuery)}\\b`, 'i');
+
     if (wordBoundaryRegex.test(normalizedText)) {
       score += 40;
     }
-    
+
     // Length penalty (shorter texts are more relevant)
     if (score > 0) {
       const lengthPenalty = Math.max(0, 100 - normalizedText.length);
+
       score += lengthPenalty / 10;
     }
-    
+
     return Math.min(100, score);
   }
 
@@ -457,20 +469,20 @@ class SearchUtilities {
     if (!text || !query) {
       return text;
     }
-    
+
     const {
       highlightStart = '<mark>',
       highlightEnd = '</mark>',
-      caseSensitive = false
+      caseSensitive = false,
     } = options;
-    
+
     const normalizedQuery = this.normalizeQuery(query);
     const escapedQuery = this.escapeRegex(normalizedQuery);
     const flags = caseSensitive ? 'g' : 'gi';
-    
+
     return text.replace(
       new RegExp(`(${escapedQuery})`, flags),
-      `${highlightStart}$1${highlightEnd}`
+      `${highlightStart}$1${highlightEnd}`,
     );
   }
 
@@ -484,17 +496,16 @@ class SearchUtilities {
     if (!query || typeof query !== 'string') {
       return [];
     }
-    
+
     const {
       minLength = 2,
-      stopWords = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by']
+      stopWords = ['the', 'and', 'or', 'but', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by'],
     } = options;
-    
+
     const normalizedQuery = this.normalizeQuery(query);
-    const words = normalizedQuery.split(' ').filter(word => 
-      word.length >= minLength && !stopWords.includes(word)
-    );
-    
+    const words = normalizedQuery.split(' ').filter((word) =>
+      word.length >= minLength && !stopWords.includes(word));
+
     return [...new Set(words)]; // Remove duplicates
   }
 
@@ -507,6 +518,7 @@ class SearchUtilities {
   static buildCacheKey(query, options = {}) {
     const normalizedQuery = this.normalizeQuery(query);
     const optionsString = JSON.stringify(options);
+
     return `search:${normalizedQuery}:${optionsString}`;
   }
 
@@ -519,19 +531,19 @@ class SearchUtilities {
     if (typeof options !== 'object' || options === null) {
       throw new ValidationError('Search options must be an object');
     }
-    
+
     if (options.limit && (typeof options.limit !== 'number' || options.limit < 1 || options.limit > 100)) {
       throw new ValidationError('Limit must be a number between 1 and 100');
     }
-    
+
     if (options.page && (typeof options.page !== 'number' || options.page < 1)) {
       throw new ValidationError('Page must be a number greater than 0');
     }
-    
+
     if (options.sort && typeof options.sort !== 'object') {
       throw new ValidationError('Sort must be an object');
     }
-    
+
     if (options.filters && typeof options.filters !== 'object') {
       throw new ValidationError('Filters must be an object');
     }
@@ -549,8 +561,8 @@ class SearchUtilities {
       ...options,
       filters: {
         ...defaults.filters,
-        ...options.filters
-      }
+        ...options.filters,
+      },
     };
   }
 }

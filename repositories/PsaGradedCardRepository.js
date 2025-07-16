@@ -3,7 +3,7 @@ const PsaGradedCard = require('../models/PsaGradedCard');
 
 /**
  * PSA Graded Card Repository
- * 
+ *
  * Handles data access operations specific to PSA graded cards.
  * Extends BaseRepository to provide common CRUD operations
  * plus PSA-specific query methods.
@@ -16,10 +16,10 @@ class PsaGradedCardRepository extends BaseRepository {
         path: 'cardId',
         populate: {
           path: 'setId',
-          model: 'Set'
-        }
+          model: 'Set',
+        },
       },
-      defaultSort: { dateAdded: -1 }
+      defaultSort: { dateAdded: -1 },
     });
   }
 
@@ -42,7 +42,7 @@ class PsaGradedCardRepository extends BaseRepository {
    */
   async findByGradeRange(minGrade, maxGrade, options = {}) {
     return await this.findAll({
-      grade: { $gte: minGrade, $lte: maxGrade }
+      grade: { $gte: minGrade, $lte: maxGrade },
     }, options);
   }
 
@@ -83,7 +83,7 @@ class PsaGradedCardRepository extends BaseRepository {
    */
   async findByPriceRange(minPrice, maxPrice, options = {}) {
     return await this.findAll({
-      myPrice: { $gte: minPrice, $lte: maxPrice }
+      myPrice: { $gte: minPrice, $lte: maxPrice },
     }, options);
   }
 
@@ -102,9 +102,9 @@ class PsaGradedCardRepository extends BaseRepository {
           soldValue: { $sum: { $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0] } },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
           gradeDistribution: {
-            $push: '$grade'
-          }
-        }
+            $push: '$grade',
+          },
+        },
       },
       {
         $project: {
@@ -115,12 +115,13 @@ class PsaGradedCardRepository extends BaseRepository {
           soldValue: { $round: ['$soldValue', 2] },
           avgPrice: { $round: ['$avgPrice', 2] },
           unsoldCards: { $subtract: ['$totalCards', '$soldCards'] },
-          gradeDistribution: 1
-        }
-      }
+          gradeDistribution: 1,
+        },
+      },
     ];
 
     const result = await this.aggregate(pipeline);
+
     return result[0] || {
       totalCards: 0,
       totalValue: 0,
@@ -128,7 +129,7 @@ class PsaGradedCardRepository extends BaseRepository {
       soldValue: 0,
       avgPrice: 0,
       unsoldCards: 0,
-      gradeDistribution: []
+      gradeDistribution: [],
     };
   }
 
@@ -143,11 +144,11 @@ class PsaGradedCardRepository extends BaseRepository {
           _id: '$grade',
           count: { $sum: 1 },
           totalValue: { $sum: { $toDouble: '$myPrice' } },
-          avgPrice: { $avg: { $toDouble: '$myPrice' } }
-        }
+          avgPrice: { $avg: { $toDouble: '$myPrice' } },
+        },
       },
       {
-        $sort: { _id: 1 }
+        $sort: { _id: 1 },
       },
       {
         $project: {
@@ -155,9 +156,9 @@ class PsaGradedCardRepository extends BaseRepository {
           count: 1,
           totalValue: { $round: ['$totalValue', 2] },
           avgPrice: { $round: ['$avgPrice', 2] },
-          _id: 0
-        }
-      }
+          _id: 0,
+        },
+      },
     ];
 
     return await this.aggregate(pipeline);
@@ -171,10 +172,11 @@ class PsaGradedCardRepository extends BaseRepository {
    */
   async findWithRecentPriceChanges(days = 30, options = {}) {
     const cutoffDate = new Date();
+
     cutoffDate.setDate(cutoffDate.getDate() - days);
 
     return await this.findAll({
-      'priceHistory.dateUpdated': { $gte: cutoffDate }
+      'priceHistory.dateUpdated': { $gte: cutoffDate },
     }, options);
   }
 
@@ -186,42 +188,42 @@ class PsaGradedCardRepository extends BaseRepository {
    */
   async search(searchTerm, options = {}) {
     const populate = options.populate || this.options.defaultPopulate;
-    
+
     const pipeline = [
       {
         $lookup: {
           from: 'cards',
           localField: 'cardId',
           foreignField: '_id',
-          as: 'card'
-        }
+          as: 'card',
+        },
       },
       {
-        $unwind: '$card'
+        $unwind: '$card',
       },
       {
         $lookup: {
           from: 'sets',
           localField: 'card.setId',
           foreignField: '_id',
-          as: 'set'
-        }
+          as: 'set',
+        },
       },
       {
-        $unwind: '$set'
+        $unwind: '$set',
       },
       {
         $match: {
           $or: [
             { 'card.cardName': { $regex: searchTerm, $options: 'i' } },
             { 'card.baseName': { $regex: searchTerm, $options: 'i' } },
-            { 'set.setName': { $regex: searchTerm, $options: 'i' } }
-          ]
-        }
+            { 'set.setName': { $regex: searchTerm, $options: 'i' } },
+          ],
+        },
       },
       {
-        $sort: { dateAdded: -1 }
-      }
+        $sort: { dateAdded: -1 },
+      },
     ];
 
     return await this.aggregate(pipeline);

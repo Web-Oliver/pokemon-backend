@@ -21,14 +21,14 @@ rawCardSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: true,
-    trackImageUpdates: true
-  }
+    trackImageUpdates: true,
+  },
 });
 
 
 // Apply shared transform function for JSON responses
 rawCardSchema.set('toJSON', {
-  transform: collectionItemTransform
+  transform: collectionItemTransform,
 });
 
 const RawCard = mongoose.model('RawCard', rawCardSchema);

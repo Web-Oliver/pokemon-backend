@@ -78,8 +78,8 @@ auctionSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: false,
-    trackImageUpdates: false
-  }
+    trackImageUpdates: false,
+  },
 });
 
 

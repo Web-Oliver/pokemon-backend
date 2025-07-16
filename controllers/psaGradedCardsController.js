@@ -2,7 +2,7 @@ const BaseController = require('./base/BaseController');
 
 /**
  * PSA Graded Card Controller
- * 
+ *
  * Extends BaseController to provide CRUD operations for PSA graded cards.
  * Uses dependency injection and repository pattern for improved architecture.
  */
@@ -16,9 +16,9 @@ class PsaGradedCardController extends BaseController {
         path: 'cardId',
         populate: {
           path: 'setId',
-          model: 'Set'
-        }
-      }
+          model: 'Set',
+        },
+      },
     });
   }
 

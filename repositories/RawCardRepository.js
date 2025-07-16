@@ -3,7 +3,7 @@ const RawCard = require('../models/RawCard');
 
 /**
  * Raw Card Repository
- * 
+ *
  * Handles data access operations specific to raw cards.
  * Extends BaseRepository to provide common CRUD operations
  * plus raw card-specific query methods.
@@ -16,10 +16,10 @@ class RawCardRepository extends BaseRepository {
         path: 'cardId',
         populate: {
           path: 'setId',
-          model: 'Set'
-        }
+          model: 'Set',
+        },
       },
-      defaultSort: { dateAdded: -1 }
+      defaultSort: { dateAdded: -1 },
     });
   }
 
@@ -41,7 +41,7 @@ class RawCardRepository extends BaseRepository {
    */
   async findByConditions(conditions, options = {}) {
     return await this.findAll({
-      condition: { $in: conditions }
+      condition: { $in: conditions },
     }, options);
   }
 
@@ -82,7 +82,7 @@ class RawCardRepository extends BaseRepository {
    */
   async findByPriceRange(minPrice, maxPrice, options = {}) {
     return await this.findAll({
-      myPrice: { $gte: minPrice, $lte: maxPrice }
+      myPrice: { $gte: minPrice, $lte: maxPrice },
     }, options);
   }
 
@@ -101,9 +101,9 @@ class RawCardRepository extends BaseRepository {
           soldValue: { $sum: { $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0] } },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
           conditionDistribution: {
-            $push: '$condition'
-          }
-        }
+            $push: '$condition',
+          },
+        },
       },
       {
         $project: {
@@ -114,12 +114,13 @@ class RawCardRepository extends BaseRepository {
           soldValue: { $round: ['$soldValue', 2] },
           avgPrice: { $round: ['$avgPrice', 2] },
           unsoldCards: { $subtract: ['$totalCards', '$soldCards'] },
-          conditionDistribution: 1
-        }
-      }
+          conditionDistribution: 1,
+        },
+      },
     ];
 
     const result = await this.aggregate(pipeline);
+
     return result[0] || {
       totalCards: 0,
       totalValue: 0,
@@ -127,7 +128,7 @@ class RawCardRepository extends BaseRepository {
       soldValue: 0,
       avgPrice: 0,
       unsoldCards: 0,
-      conditionDistribution: []
+      conditionDistribution: [],
     };
   }
 
@@ -142,11 +143,11 @@ class RawCardRepository extends BaseRepository {
           _id: '$condition',
           count: { $sum: 1 },
           totalValue: { $sum: { $toDouble: '$myPrice' } },
-          avgPrice: { $avg: { $toDouble: '$myPrice' } }
-        }
+          avgPrice: { $avg: { $toDouble: '$myPrice' } },
+        },
       },
       {
-        $sort: { count: -1 }
+        $sort: { count: -1 },
       },
       {
         $project: {
@@ -154,9 +155,9 @@ class RawCardRepository extends BaseRepository {
           count: 1,
           totalValue: { $round: ['$totalValue', 2] },
           avgPrice: { $round: ['$avgPrice', 2] },
-          _id: 0
-        }
-      }
+          _id: 0,
+        },
+      },
     ];
 
     return await this.aggregate(pipeline);
@@ -170,10 +171,11 @@ class RawCardRepository extends BaseRepository {
    */
   async findWithRecentPriceChanges(days = 30, options = {}) {
     const cutoffDate = new Date();
+
     cutoffDate.setDate(cutoffDate.getDate() - days);
 
     return await this.findAll({
-      'priceHistory.dateUpdated': { $gte: cutoffDate }
+      'priceHistory.dateUpdated': { $gte: cutoffDate },
     }, options);
   }
 
@@ -185,29 +187,29 @@ class RawCardRepository extends BaseRepository {
    */
   async search(searchTerm, options = {}) {
     const populate = options.populate || this.options.defaultPopulate;
-    
+
     const pipeline = [
       {
         $lookup: {
           from: 'cards',
           localField: 'cardId',
           foreignField: '_id',
-          as: 'card'
-        }
+          as: 'card',
+        },
       },
       {
-        $unwind: '$card'
+        $unwind: '$card',
       },
       {
         $lookup: {
           from: 'sets',
           localField: 'card.setId',
           foreignField: '_id',
-          as: 'set'
-        }
+          as: 'set',
+        },
       },
       {
-        $unwind: '$set'
+        $unwind: '$set',
       },
       {
         $match: {
@@ -215,13 +217,13 @@ class RawCardRepository extends BaseRepository {
             { 'card.cardName': { $regex: searchTerm, $options: 'i' } },
             { 'card.baseName': { $regex: searchTerm, $options: 'i' } },
             { 'set.setName': { $regex: searchTerm, $options: 'i' } },
-            { condition: { $regex: searchTerm, $options: 'i' } }
-          ]
-        }
+            { condition: { $regex: searchTerm, $options: 'i' } },
+          ],
+        },
       },
       {
-        $sort: { dateAdded: -1 }
-      }
+        $sort: { dateAdded: -1 },
+      },
     ];
 
     return await this.aggregate(pipeline);
@@ -240,20 +242,20 @@ class RawCardRepository extends BaseRepository {
           from: 'cards',
           localField: 'cardId',
           foreignField: '_id',
-          as: 'card'
-        }
+          as: 'card',
+        },
       },
       {
-        $unwind: '$card'
+        $unwind: '$card',
       },
       {
         $match: {
-          'card.setId': setId
-        }
+          'card.setId': setId,
+        },
       },
       {
-        $sort: { dateAdded: -1 }
-      }
+        $sort: { dateAdded: -1 },
+      },
     ];
 
     return await this.aggregate(pipeline);
@@ -269,8 +271,8 @@ class RawCardRepository extends BaseRepository {
       $or: [
         { condition: { $exists: false } },
         { condition: null },
-        { condition: '' }
-      ]
+        { condition: '' },
+      ],
     }, options);
   }
 }

@@ -4,10 +4,10 @@ const SaleService = require('../shared/saleService');
 
 /**
  * Collection Service
- * 
+ *
  * Provides business logic for collection management operations.
  * Uses repository pattern for data access and dependency injection for services.
- * 
+ *
  * Following SOLID principles:
  * - Single Responsibility: Handles collection item business logic
  * - Open/Closed: Extensible for new collection types
@@ -27,7 +27,7 @@ class CollectionService {
       saleService: options.saleService || SaleService,
       enableImageManagement: options.enableImageManagement !== false,
       enableSaleTracking: options.enableSaleTracking !== false,
-      ...options
+      ...options,
     };
   }
 
@@ -40,6 +40,7 @@ class CollectionService {
   async getAll(filters = {}, options = {}) {
     try {
       const items = await this.repository.findAll(filters, options);
+
       return items;
     } catch (error) {
       throw error;
@@ -90,10 +91,12 @@ class CollectionService {
         ...data,
         sold: false,
         dateAdded: new Date(),
-        priceHistory: data.myPrice ? [{
-          price: data.myPrice,
-          dateUpdated: new Date()
-        }] : []
+        priceHistory: data.myPrice
+          ? [{
+            price: data.myPrice,
+            dateUpdated: new Date(),
+          }]
+          : [],
       };
 
       // Create the item
@@ -126,8 +129,8 @@ class CollectionService {
           ...existingItem.priceHistory,
           {
             price: data.myPrice,
-            dateUpdated: new Date()
-          }
+            dateUpdated: new Date(),
+          },
         ];
       }
 
@@ -195,8 +198,8 @@ class CollectionService {
         sold: true,
         saleDetails: {
           ...saleDetails,
-          dateSold: new Date()
-        }
+          dateSold: new Date(),
+        },
       };
 
       // Update the item
@@ -239,8 +242,8 @@ class CollectionService {
           buyerAddress: null,
           buyerPhoneNumber: null,
           buyerEmail: null,
-          trackingNumber: null
-        }
+          trackingNumber: null,
+        },
       };
 
       // Update the item
@@ -377,11 +380,11 @@ class CollectionService {
    */
   async bulkUpdate(updates) {
     try {
-      const operations = updates.map(update => ({
+      const operations = updates.map((update) => ({
         updateOne: {
           filter: { _id: update.id },
-          update: { $set: update.data }
-        }
+          update: { $set: update.data },
+        },
       }));
 
       return await this.repository.bulkWrite(operations);

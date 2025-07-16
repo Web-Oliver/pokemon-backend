@@ -11,11 +11,11 @@ const SearchFactory = require('../services/search/SearchFactory');
 
 /**
  * Dependency Injection Container
- * 
+ *
  * Provides centralized dependency management for the application.
  * Implements the Dependency Injection pattern to reduce coupling
  * and improve testability.
- * 
+ *
  * Following SOLID principles:
  * - Single Responsibility: Manages dependencies only
  * - Open/Closed: Extensible for new dependencies
@@ -49,45 +49,40 @@ class Container {
     this.registerSingleton('cardMarketReferenceProductRepository', () => new CardMarketReferenceProductRepository());
 
     // Register domain services
-    this.registerTransient('psaGradedCardService', () => {
-      return new CollectionService(this.resolve('psaGradedCardRepository'), {
+    this.registerTransient('psaGradedCardService', () => new CollectionService(
+      this.resolve('psaGradedCardRepository'),
+      {
         entityName: 'PsaGradedCard',
         imageManager: this.resolve('imageManager'),
         saleService: this.resolve('saleService'),
         enableImageManagement: true,
-        enableSaleTracking: true
-      });
-    });
+        enableSaleTracking: true,
+      },
+    ));
 
-    this.registerTransient('rawCardService', () => {
-      return new CollectionService(this.resolve('rawCardRepository'), {
-        entityName: 'RawCard',
-        imageManager: this.resolve('imageManager'),
-        saleService: this.resolve('saleService'),
-        enableImageManagement: true,
-        enableSaleTracking: true
-      });
-    });
+    this.registerTransient('rawCardService', () => new CollectionService(this.resolve('rawCardRepository'), {
+      entityName: 'RawCard',
+      imageManager: this.resolve('imageManager'),
+      saleService: this.resolve('saleService'),
+      enableImageManagement: true,
+      enableSaleTracking: true,
+    }));
 
-    this.registerTransient('sealedProductService', () => {
-      return new CollectionService(this.resolve('sealedProductRepository'), {
-        entityName: 'SealedProduct',
-        imageManager: this.resolve('imageManager'),
-        saleService: this.resolve('saleService'),
-        enableImageManagement: true,
-        enableSaleTracking: true
-      });
-    });
+    this.registerTransient('sealedProductService', () => new CollectionService(this.resolve('sealedProductRepository'), {
+      entityName: 'SealedProduct',
+      imageManager: this.resolve('imageManager'),
+      saleService: this.resolve('saleService'),
+      enableImageManagement: true,
+      enableSaleTracking: true,
+    }));
 
     // Register search services
-    this.registerSingleton('searchFactory', () => {
-      return new SearchFactory(this, {
-        enableCaching: true,
-        defaultMaxResults: 50,
-        enableFuzzySearch: true,
-        enableScoring: true
-      });
-    });
+    this.registerSingleton('searchFactory', () => new SearchFactory(this, {
+      enableCaching: true,
+      defaultMaxResults: 50,
+      enableFuzzySearch: true,
+      enableScoring: true,
+    }));
 
     this.initialized = true;
   }
@@ -100,7 +95,7 @@ class Container {
   registerSingleton(name, factory) {
     this.dependencies.set(name, {
       factory,
-      type: 'singleton'
+      type: 'singleton',
     });
   }
 
@@ -112,7 +107,7 @@ class Container {
   registerTransient(name, factory) {
     this.dependencies.set(name, {
       factory,
-      type: 'transient'
+      type: 'transient',
     });
   }
 
@@ -127,6 +122,7 @@ class Container {
     }
 
     const dependency = this.dependencies.get(name);
+
     if (!dependency) {
       throw new Error(`Dependency '${name}' not found`);
     }
@@ -188,7 +184,7 @@ class Container {
       totalDependencies: this.dependencies.size,
       singletons: this.singletons.size,
       transients: this.dependencies.size - this.singletons.size,
-      initialized: this.initialized
+      initialized: this.initialized,
     };
   }
 }

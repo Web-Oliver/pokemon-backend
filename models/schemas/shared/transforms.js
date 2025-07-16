@@ -1,13 +1,13 @@
 /**
  * Schema Transform Functions
- * 
+ *
  * Shared transform functions for converting data types in JSON responses.
  * Eliminates duplication of Decimal128 conversion logic across models.
  */
 
 /**
  * Creates a transform function for converting Decimal128 to numbers
- * 
+ *
  * @param {Object} options - Transform options
  * @param {Array} options.priceFields - Array of price field names to convert
  * @param {Array} options.nestedPriceFields - Array of nested price field paths
@@ -18,23 +18,23 @@ function createDecimal128Transform(options = {}) {
     priceFields = ['myPrice'],
     nestedPriceFields = [
       'saleDetails.actualSoldPrice',
-      'priceHistory.price'
-    ]
+      'priceHistory.price',
+    ],
   } = options;
 
   return function transform(doc, ret) {
     // Convert main price fields
-    priceFields.forEach(field => {
+    priceFields.forEach((field) => {
       if (ret[field]) {
         ret[field] = convertDecimal128ToNumber(ret[field]);
       }
     });
 
     // Convert nested price fields
-    nestedPriceFields.forEach(fieldPath => {
+    nestedPriceFields.forEach((fieldPath) => {
       const fieldParts = fieldPath.split('.');
       let current = ret;
-      
+
       // Navigate to the nested field
       for (let i = 0; i < fieldParts.length - 1; i++) {
         if (current[fieldParts[i]]) {
@@ -43,12 +43,12 @@ function createDecimal128Transform(options = {}) {
           return; // Field doesn't exist
         }
       }
-      
+
       const finalField = fieldParts[fieldParts.length - 1];
-      
+
       // Handle array fields (like priceHistory)
       if (Array.isArray(current)) {
-        current.forEach(item => {
+        current.forEach((item) => {
           if (item[finalField]) {
             item[finalField] = convertDecimal128ToNumber(item[finalField]);
           }
@@ -64,7 +64,7 @@ function createDecimal128Transform(options = {}) {
 
 /**
  * Converts a Decimal128 value to a number
- * 
+ *
  * @param {*} value - Value to convert
  * @returns {number} - Converted number value
  */
@@ -85,8 +85,8 @@ const collectionItemTransform = createDecimal128Transform({
   priceFields: ['myPrice'],
   nestedPriceFields: [
     'saleDetails.actualSoldPrice',
-    'priceHistory.price'
-  ]
+    'priceHistory.price',
+  ],
 });
 
 /**
@@ -97,8 +97,8 @@ const sealedProductTransform = createDecimal128Transform({
   priceFields: ['myPrice', 'cardMarketPrice'],
   nestedPriceFields: [
     'saleDetails.actualSoldPrice',
-    'priceHistory.price'
-  ]
+    'priceHistory.price',
+  ],
 });
 
 /**
@@ -107,7 +107,7 @@ const sealedProductTransform = createDecimal128Transform({
  */
 const auctionTransform = createDecimal128Transform({
   priceFields: ['totalValue', 'soldValue'],
-  nestedPriceFields: []
+  nestedPriceFields: [],
 });
 
 /**
@@ -116,7 +116,7 @@ const auctionTransform = createDecimal128Transform({
  */
 const cardMarketTransform = createDecimal128Transform({
   priceFields: ['price', 'cardMarketPrice'],
-  nestedPriceFields: []
+  nestedPriceFields: [],
 });
 
 module.exports = {
@@ -125,5 +125,5 @@ module.exports = {
   collectionItemTransform,
   sealedProductTransform,
   auctionTransform,
-  cardMarketTransform
+  cardMarketTransform,
 };

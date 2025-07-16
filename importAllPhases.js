@@ -16,35 +16,37 @@ const LOG_FILE_NAME = 'IMPORTALLPHASES.json';
  * @param {object} [details={}] - Optional object with additional details for the log entry.
  */
 function logAndCapture(type, message, details = {}) {
-    const logEntry = {
-        timestamp: new Date().toISOString(),
-        type: type.toUpperCase(),
-        message: message,
-        details: details
-    };
-    logEntries.push(logEntry);
+  const logEntry = {
+    timestamp: new Date().toISOString(),
+    type: type.toUpperCase(),
+    message,
+    details,
+  };
 
-    // Also output to console for real-time feedback
-    switch (type.toLowerCase()) {
-        case 'error':
-            console.error(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
-            break;
-        case 'warn':
-            console.warn(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
-            break;
-        case 'debug':
-            console.debug(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
-            break;
-        default:
-            console.log(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
-            break;
-    }
+  logEntries.push(logEntry);
+
+  // Also output to console for real-time feedback
+  switch (type.toLowerCase()) {
+  case 'error':
+    console.error(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
+    break;
+  case 'warn':
+    console.warn(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
+    break;
+  case 'debug':
+    console.debug(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
+    break;
+  default:
+    console.log(`[${logEntry.type}] ${logEntry.message}`, Object.keys(details).length > 0 ? details : '');
+    break;
+  }
 }
 
 function writeLogFile() {
-    const logFilePath = path.join(__dirname, LOG_FILE_NAME);
-    fs.writeFileSync(logFilePath, JSON.stringify(logEntries, null, 2), 'utf8');
-    console.log(`\nImport log written to ${logFilePath}`);
+  const logFilePath = path.join(__dirname, LOG_FILE_NAME);
+
+  fs.writeFileSync(logFilePath, JSON.stringify(logEntries, null, 2), 'utf8');
+  console.log(`\nImport log written to ${logFilePath}`);
 }
 // --- END Custom Logging Setup ---
 
@@ -62,11 +64,11 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
   logAndCapture('INFO', `Deleted ${cardsResult.deletedCount} cards`, { deletedCount: cardsResult.deletedCount, collection: 'cards' });
 
   const cardMarketResult = await mongoose.connection.db.collection('cardmarketreferenceproducts').deleteMany({});
-  
+
   logAndCapture('INFO', `Deleted ${cardMarketResult.deletedCount} card market products`, { deletedCount: cardMarketResult.deletedCount, collection: 'cardmarketreferenceproducts' });
-  
+
   const sealedProductsResult = await mongoose.connection.db.collection('sealedproducts').deleteMany({});
-  
+
   logAndCapture('INFO', `Deleted ${sealedProductsResult.deletedCount} sealed products`, { deletedCount: sealedProductsResult.deletedCount, collection: 'sealedproducts' });
 
   // Wait a moment for database operations to complete
@@ -83,7 +85,7 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
     remainingSets,
     remainingCards,
     remainingCardMarket,
-    remainingSealedProducts
+    remainingSealedProducts,
   });
 
   logAndCapture('INFO', 'Phase 0 completed: Database cleared');
@@ -124,7 +126,7 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
         setId: set._id,
         expected: set.totalCardsInSet,
         actual: actualCardCount,
-        issue: 'zero_cards_in_db'
+        issue: 'zero_cards_in_db',
       });
       logAndCapture('ERROR', `Discrepancy found for set '${set.setName}' (ID: ${set._id}): Expected ${set.totalCardsInSet} cards, found ${actualCardCount}. (Zero actual cards in DB)`, {
         setName: set.setName,
@@ -132,7 +134,7 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
         databaseTotalCardsInSet: set.totalCardsInSet,
         actualCardsInDatabase: actualCardCount,
         match: false,
-        issue: 'zero_cards_in_db'
+        issue: 'zero_cards_in_db',
       });
     } else if (actualCardCount !== set.totalCardsInSet) {
       setsWithDiscrepancies++;
@@ -141,7 +143,7 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
         setId: set._id,
         expected: set.totalCardsInSet,
         actual: actualCardCount,
-        issue: 'count_mismatch'
+        issue: 'count_mismatch',
       });
       logAndCapture('WARN', `Discrepancy found for set '${set.setName}' (ID: ${set._id}): Expected ${set.totalCardsInSet} cards, found ${actualCardCount}.`, {
         setName: set.setName,
@@ -149,7 +151,7 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
         databaseTotalCardsInSet: set.totalCardsInSet,
         actualCardsInDatabase: actualCardCount,
         match: false,
-        issue: 'count_mismatch'
+        issue: 'count_mismatch',
       });
     } else {
       // Log successful matches as well for comprehensive output
@@ -157,7 +159,7 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
         setName: set.setName,
         databaseTotalCardsInSet: set.totalCardsInSet,
         actualCardsInDatabase: actualCardCount,
-        match: true
+        match: true,
       });
       // You can uncomment this if you want to store all verified matches in discrepancyDetails
       // discrepancyDetails.push({
@@ -179,17 +181,18 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
     logAndCapture('WARN', `Sets with card count discrepancies (excluding zero-card errors): ${setsWithDiscrepancies}`, { count: setsWithDiscrepancies, type: 'discrepancy_error' });
   }
   if (setsWithZeroActualCards === 0 && setsWithDiscrepancies === 0) {
-    logAndCapture('INFO', `All sets verified successfully with matching card counts.`);
+    logAndCapture('INFO', 'All sets verified successfully with matching card counts.');
   } else {
-    logAndCapture('WARN', `Issues found during card count verification. Please review warnings/errors above.`, { issuesFound: true });
+    logAndCapture('WARN', 'Issues found during card count verification. Please review warnings/errors above.', { issuesFound: true });
   }
   logAndCapture('INFO', 'Phase 4 completed: Comprehensive Card Count Verification.');
 
   // Phase 5: Final comprehensive integrity check with cleanup
   logAndCapture('INFO', '\n=== Phase 5: Final Integrity Check & Cleanup ===');
-  
+
   // Remove any remaining empty sets
   const emptySets = await SetModel.find({ totalCardsInSet: 0 });
+
   if (emptySets.length > 0) {
     logAndCapture('INFO', `Found ${emptySets.length} empty sets to remove`);
     for (const emptySet of emptySets) {
@@ -197,41 +200,43 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
       logAndCapture('INFO', `Removed empty set: ${emptySet.setName} (${emptySet.year})`);
     }
   }
-  
+
   // Final count verification
   const finalSets = await SetModel.find({});
   const finalCards = await Card.find({});
-  
+
   logAndCapture('INFO', `Final counts: ${finalSets.length} sets, ${finalCards.length} cards`);
-  
+
   // Check for any remaining orphaned cards
   const finalValidSetIds = new Set();
-  finalSets.forEach(setDoc => finalValidSetIds.add(setDoc._id.toString()));
-  
+
+  finalSets.forEach((setDoc) => finalValidSetIds.add(setDoc._id.toString()));
+
   let finalOrphanedCount = 0;
+
   for (const card of finalCards) {
     if (!finalValidSetIds.has(card.setId.toString())) {
       finalOrphanedCount++;
     }
   }
-  
+
   if (finalOrphanedCount > 0) {
     logAndCapture('ERROR', `Found ${finalOrphanedCount} orphaned cards after cleanup`);
   } else {
     logAndCapture('INFO', 'No orphaned cards found - data integrity perfect!');
   }
-  
+
   logAndCapture('INFO', 'Phase 5 completed: Final integrity check finished');
 
   console.log('\n🎉 IMPORT COMPLETED SUCCESSFULLY!');
   await mongoose.disconnect();
   process.exit(0);
-
 }).catch(async (err) => {
   logAndCapture('ERROR', 'Error during import process:', { error: err.message, stack: err.stack });
   console.log('\n❌ IMPORT FAILED!');
   await mongoose.disconnect();
   process.exit(1);
-}).finally(() => {
-  writeLogFile();
-});
+})
+  .finally(() => {
+    writeLogFile();
+  });

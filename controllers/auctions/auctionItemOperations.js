@@ -32,10 +32,10 @@ const addItemToAuction = asyncHandler(async (req, res) => {
   }
 
   auction.items.push({ itemId, itemCategory });
-  
+
   // Recalculate total value after adding item
   auction.totalValue = await calculateAuctionTotalValue(auction);
-  
+
   const updatedAuction = await auction.save();
 
   res.status(200).json(updatedAuction);
@@ -66,15 +66,15 @@ const removeItemFromAuction = asyncHandler(async (req, res) => {
   }
 
   auction.items.splice(itemIndex, 1);
-  
+
   // Recalculate total value after removing item
   auction.totalValue = await calculateAuctionTotalValue(auction);
-  
+
   // Also recalculate sold value in case the removed item was sold
   auction.soldValue = auction.items
     .filter((item) => item.sold)
     .reduce((total, item) => total + (item.soldPrice || 0), 0);
-  
+
   const updatedAuction = await auction.save();
 
   res.status(200).json(updatedAuction);

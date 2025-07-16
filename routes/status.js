@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     const [cardCount, setCount, productCount] = await Promise.all([
       Card.countDocuments(),
       Set.countDocuments(),
-      CardMarketReferenceProduct.countDocuments()
+      CardMarketReferenceProduct.countDocuments(),
     ]);
 
     res.json({
@@ -19,15 +19,15 @@ router.get('/', async (req, res) => {
         cards: cardCount,
         sets: setCount,
         products: productCount,
-        timestamp: new Date().toISOString()
-      }
+        timestamp: new Date().toISOString(),
+      },
     });
   } catch (error) {
     console.error('Status check error:', error);
     res.status(500).json({
       success: false,
       message: 'Failed to get database status',
-      error: error.message
+      error: error.message,
     });
   }
 });

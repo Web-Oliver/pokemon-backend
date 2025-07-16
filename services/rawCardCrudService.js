@@ -134,6 +134,7 @@ const updateRawCard = async (id, updateData) => {
   }
 
   const existingCard = await RawCard.findById(id);
+
   if (!existingCard) {
     throw new Error('Raw card not found');
   }
@@ -156,12 +157,12 @@ const updateRawCard = async (id, updateData) => {
     const newImages = images || [];
 
     // Find images that were removed (in old but not in new)
-    const removedImages = oldImages.filter(oldImg => !newImages.includes(oldImg));
-    
+    const removedImages = oldImages.filter((oldImg) => !newImages.includes(oldImg));
+
     if (removedImages.length > 0) {
       console.log('[RAW UPDATE] Images to delete:', removedImages);
       // Delete removed images from filesystem (async, don't wait)
-      ImageManager.deleteImageFiles(removedImages).catch(error => {
+      ImageManager.deleteImageFiles(removedImages).catch((error) => {
         console.error('[RAW UPDATE] Error during image cleanup:', error);
       });
     }
@@ -174,10 +175,11 @@ const updateRawCard = async (id, updateData) => {
     console.log('[RAW UPDATE] Frontend sent priceHistory:', priceHistory.length, 'entries');
     // Frontend is managing price history - use their complete array
     dataToUpdate.priceHistory = priceHistory;
-    
+
     // Set myPrice to the most recent price from history
     if (priceHistory.length > 0) {
       const latestPrice = priceHistory[priceHistory.length - 1].price;
+
       dataToUpdate.myPrice = latestPrice;
       console.log('[RAW UPDATE] Using latest price from history:', latestPrice);
     }

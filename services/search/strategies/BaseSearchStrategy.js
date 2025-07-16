@@ -3,10 +3,10 @@ const FuseSearchAdapter = require('../FuseSearchAdapter');
 
 /**
  * Base Search Strategy
- * 
+ *
  * Abstract base class for all search strategies following the Strategy pattern.
  * Provides common search interface and shared utilities for concrete implementations.
- * 
+ *
  * Following SOLID principles:
  * - Single Responsibility: Defines search contract and common utilities
  * - Open/Closed: Open for extension via inheritance, closed for modification
@@ -24,7 +24,7 @@ class BaseSearchStrategy {
     if (new.target === BaseSearchStrategy) {
       throw new Error('BaseSearchStrategy cannot be instantiated directly');
     }
-    
+
     this.repository = repository;
     this.options = {
       maxResults: options.maxResults || 50,
@@ -35,9 +35,9 @@ class BaseSearchStrategy {
       enableFuseSearch: options.enableFuseSearch !== false,
       fuseThreshold: options.fuseThreshold || 0.6,
       hybridSearch: options.hybridSearch !== false,
-      ...options
+      ...options,
     };
-    
+
     // Initialize Fuse.js adapter if enabled
     this.fuseAdapter = null;
     if (this.options.enableFuseSearch) {
@@ -60,9 +60,10 @@ class BaseSearchStrategy {
    */
   initializeFuseAdapter() {
     const entityType = this.getSearchType();
+
     this.fuseAdapter = FuseSearchAdapter.createFor(entityType, {
       threshold: this.options.fuseThreshold,
-      keys: this.getFuseKeys()
+      keys: this.getFuseKeys(),
     });
   }
 
@@ -71,7 +72,7 @@ class BaseSearchStrategy {
    * @returns {Array} - Fuse.js keys configuration
    */
   getFuseKeys() {
-    return this.options.searchFields.map(field => ({ name: field, weight: 1 }));
+    return this.options.searchFields.map((field) => ({ name: field, weight: 1 }));
   }
 
   /**
@@ -89,7 +90,7 @@ class BaseSearchStrategy {
       // Get broader dataset for Fuse.js processing
       const mongoResults = await this.performMongoSearch(query, {
         ...options,
-        limit: Math.min((options.limit || 20) * 3, 200) // Get 3x results for Fuse.js filtering
+        limit: Math.min((options.limit || 20) * 3, 200), // Get 3x results for Fuse.js filtering
       });
 
       // If no mongo results, return empty
@@ -104,12 +105,11 @@ class BaseSearchStrategy {
       const fuseResults = this.fuseAdapter.search(query, {
         limit: options.limit || 20,
         exactMatch: options.exactMatch,
-        prefixMatch: options.prefixMatch
+        prefixMatch: options.prefixMatch,
       });
 
       // Return processed results
       return this.processHybridResults(fuseResults, query, options);
-
     } catch (error) {
       console.warn('Hybrid search failed, falling back to MongoDB search:', error);
       return await this.performMongoSearch(query, options);
@@ -125,6 +125,7 @@ class BaseSearchStrategy {
   async performMongoSearch(query, options = {}) {
     const pipeline = this.buildSearchPipeline(query, options);
     const results = await this.repository.aggregate(pipeline);
+
     return this.processResults(results, query, options);
   }
 
@@ -136,14 +137,14 @@ class BaseSearchStrategy {
    * @returns {Array} - Processed hybrid results
    */
   processHybridResults(fuseResults, query, options = {}) {
-    return fuseResults.map(result => {
+    return fuseResults.map((result) => {
       // Combine MongoDB and Fuse.js scoring
       const combinedScore = this.calculateCombinedScore(result, query);
-      
+
       return {
         ...result,
         searchScore: combinedScore,
-        searchMethod: 'hybrid'
+        searchMethod: 'hybrid',
       };
     });
   }
@@ -232,28 +233,29 @@ class BaseSearchStrategy {
   createFuzzyPatterns(query) {
     const normalizedQuery = this.normalizeQuery(query);
     const patterns = [];
-    
+
     // Exact match (highest priority)
     patterns.push(new RegExp(`^${this.escapeRegex(normalizedQuery)}$`, 'i'));
-    
+
     // Starts with match
     patterns.push(new RegExp(`^${this.escapeRegex(normalizedQuery)}`, 'i'));
-    
+
     // Contains match
     patterns.push(new RegExp(this.escapeRegex(normalizedQuery), 'i'));
-    
+
     // Word boundary match
     patterns.push(new RegExp(`\\b${this.escapeRegex(normalizedQuery)}\\b`, 'i'));
-    
+
     // Fuzzy match (if enabled)
     if (this.options.enableFuzzySearch && normalizedQuery.length > 2) {
       const fuzzyPattern = normalizedQuery
         .split('')
-        .map(char => this.escapeRegex(char))
+        .map((char) => this.escapeRegex(char))
         .join('.*?');
+
       patterns.push(new RegExp(fuzzyPattern, 'i'));
     }
-    
+
     return patterns;
   }
 
@@ -275,13 +277,13 @@ class BaseSearchStrategy {
   buildSearchConditions(query, fields) {
     const patterns = this.createFuzzyPatterns(query);
     const conditions = [];
-    
-    fields.forEach(field => {
-      patterns.forEach(pattern => {
+
+    fields.forEach((field) => {
+      patterns.forEach((pattern) => {
         conditions.push({ [field]: pattern });
       });
     });
-    
+
     return { $or: conditions };
   }
 
@@ -293,36 +295,40 @@ class BaseSearchStrategy {
    */
   buildSearchPipeline(query, options = {}) {
     const pipeline = [];
-    
+
     // Add match stage
     const matchConditions = this.buildMatchConditions(query, options);
+
     if (matchConditions && Object.keys(matchConditions).length > 0) {
       pipeline.push({ $match: matchConditions });
     }
-    
+
     // Add scoring stage (if enabled)
     if (this.options.enableScoring) {
       pipeline.push(this.buildScoringStage(query, options));
     }
-    
+
     // Add lookup stages (if needed)
     const lookupStages = this.buildLookupStages(options);
+
     if (lookupStages.length > 0) {
       pipeline.push(...lookupStages);
     }
-    
+
     // Add sorting
     const sortStage = this.buildSortStage(options);
+
     if (sortStage) {
       pipeline.push(sortStage);
     }
-    
+
     // Add pagination
     const paginationStages = this.buildPaginationStages(options);
+
     if (paginationStages.length > 0) {
       pipeline.push(...paginationStages);
     }
-    
+
     return pipeline;
   }
 
@@ -344,7 +350,7 @@ class BaseSearchStrategy {
    */
   buildScoringStage(query, options = {}) {
     const normalizedQuery = this.normalizeQuery(query);
-    
+
     return {
       $addFields: {
         score: {
@@ -354,36 +360,36 @@ class BaseSearchStrategy {
               $cond: {
                 if: { $eq: [{ $toLower: '$name' }, normalizedQuery] },
                 then: 100,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Starts with score
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$name' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
                 then: 75,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Contains score
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
                 then: 50,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Length-based score (shorter matches are more relevant)
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
                 then: { $divide: [100, { $strLenCP: '$name' }] },
-                else: 0
-              }
-            }
-          ]
-        }
-      }
+                else: 0,
+              },
+            },
+          ],
+        },
+      },
     };
   }
 
@@ -403,6 +409,7 @@ class BaseSearchStrategy {
    */
   buildSortStage(options = {}) {
     const sort = options.sort || this.options.defaultSort;
+
     return sort ? { $sort: sort } : null;
   }
 
@@ -413,15 +420,17 @@ class BaseSearchStrategy {
    */
   buildPaginationStages(options = {}) {
     const stages = [];
-    
+
     if (options.page && options.limit) {
       const skip = (options.page - 1) * options.limit;
+
       stages.push({ $skip: skip });
     }
-    
+
     const limit = options.limit || this.options.maxResults;
+
     stages.push({ $limit: limit });
-    
+
     return stages;
   }
 
@@ -433,14 +442,14 @@ class BaseSearchStrategy {
    * @returns {Array} - Processed search results
    */
   processResults(results, query, options = {}) {
-    return results.map(result => {
+    return results.map((result) => {
       // Convert Mongoose document to plain object
       const processed = result.toObject ? result.toObject() : result;
-      
+
       // Remove internal fields
       delete processed.__v;
       delete processed._id;
-      
+
       return processed;
     });
   }
@@ -463,7 +472,7 @@ class BaseSearchStrategy {
       limit: { type: 'number', min: 1, max: 100, default: this.options.maxResults },
       page: { type: 'number', min: 1, default: 1 },
       sort: { type: 'object', default: this.options.defaultSort },
-      filters: { type: 'object', default: {} }
+      filters: { type: 'object', default: {} },
     };
   }
 }

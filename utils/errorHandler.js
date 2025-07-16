@@ -49,9 +49,9 @@ const errorHandler = (err, req, res, next) => {
   });
 };
 
-module.exports = { 
-  errorHandler, 
-  ValidationError, 
-  NotFoundError, 
-  ConflictError 
+module.exports = {
+  errorHandler,
+  ValidationError,
+  NotFoundError,
+  ConflictError,
 };

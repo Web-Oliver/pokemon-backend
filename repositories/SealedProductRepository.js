@@ -3,7 +3,7 @@ const SealedProduct = require('../models/SealedProduct');
 
 /**
  * Sealed Product Repository
- * 
+ *
  * Handles data access operations specific to sealed products.
  * Extends BaseRepository to provide common CRUD operations
  * plus sealed product-specific query methods.
@@ -13,9 +13,9 @@ class SealedProductRepository extends BaseRepository {
     super(SealedProduct, {
       entityName: 'SealedProduct',
       defaultPopulate: {
-        path: 'productId'
+        path: 'productId',
       },
-      defaultSort: { dateAdded: -1 }
+      defaultSort: { dateAdded: -1 },
     });
   }
 
@@ -37,7 +37,7 @@ class SealedProductRepository extends BaseRepository {
    */
   async findByCategories(categories, options = {}) {
     return await this.findAll({
-      category: { $in: categories }
+      category: { $in: categories },
     }, options);
   }
 
@@ -88,7 +88,7 @@ class SealedProductRepository extends BaseRepository {
    */
   async findByPriceRange(minPrice, maxPrice, options = {}) {
     return await this.findAll({
-      myPrice: { $gte: minPrice, $lte: maxPrice }
+      myPrice: { $gte: minPrice, $lte: maxPrice },
     }, options);
   }
 
@@ -100,7 +100,7 @@ class SealedProductRepository extends BaseRepository {
    */
   async findByAvailability(minAvailability, options = {}) {
     return await this.findAll({
-      availability: { $gte: minAvailability }
+      availability: { $gte: minAvailability },
     }, options);
   }
 
@@ -119,12 +119,12 @@ class SealedProductRepository extends BaseRepository {
           soldValue: { $sum: { $cond: [{ $eq: ['$sold', true] }, { $toDouble: '$myPrice' }, 0] } },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
           categoryDistribution: {
-            $push: '$category'
+            $push: '$category',
           },
           setDistribution: {
-            $push: '$setName'
-          }
-        }
+            $push: '$setName',
+          },
+        },
       },
       {
         $project: {
@@ -136,12 +136,13 @@ class SealedProductRepository extends BaseRepository {
           avgPrice: { $round: ['$avgPrice', 2] },
           unsoldProducts: { $subtract: ['$totalProducts', '$soldProducts'] },
           categoryDistribution: 1,
-          setDistribution: 1
-        }
-      }
+          setDistribution: 1,
+        },
+      },
     ];
 
     const result = await this.aggregate(pipeline);
+
     return result[0] || {
       totalProducts: 0,
       totalValue: 0,
@@ -150,7 +151,7 @@ class SealedProductRepository extends BaseRepository {
       avgPrice: 0,
       unsoldProducts: 0,
       categoryDistribution: [],
-      setDistribution: []
+      setDistribution: [],
     };
   }
 
@@ -166,11 +167,11 @@ class SealedProductRepository extends BaseRepository {
           count: { $sum: 1 },
           totalValue: { $sum: { $toDouble: '$myPrice' } },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
-          soldCount: { $sum: { $cond: [{ $eq: ['$sold', true] }, 1, 0] } }
-        }
+          soldCount: { $sum: { $cond: [{ $eq: ['$sold', true] }, 1, 0] } },
+        },
       },
       {
-        $sort: { count: -1 }
+        $sort: { count: -1 },
       },
       {
         $project: {
@@ -180,9 +181,9 @@ class SealedProductRepository extends BaseRepository {
           avgPrice: { $round: ['$avgPrice', 2] },
           soldCount: 1,
           unsoldCount: { $subtract: ['$count', '$soldCount'] },
-          _id: 0
-        }
-      }
+          _id: 0,
+        },
+      },
     ];
 
     return await this.aggregate(pipeline);
@@ -200,11 +201,11 @@ class SealedProductRepository extends BaseRepository {
           count: { $sum: 1 },
           totalValue: { $sum: { $toDouble: '$myPrice' } },
           avgPrice: { $avg: { $toDouble: '$myPrice' } },
-          soldCount: { $sum: { $cond: [{ $eq: ['$sold', true] }, 1, 0] } }
-        }
+          soldCount: { $sum: { $cond: [{ $eq: ['$sold', true] }, 1, 0] } },
+        },
       },
       {
-        $sort: { count: -1 }
+        $sort: { count: -1 },
       },
       {
         $project: {
@@ -214,9 +215,9 @@ class SealedProductRepository extends BaseRepository {
           avgPrice: { $round: ['$avgPrice', 2] },
           soldCount: 1,
           unsoldCount: { $subtract: ['$count', '$soldCount'] },
-          _id: 0
-        }
-      }
+          _id: 0,
+        },
+      },
     ];
 
     return await this.aggregate(pipeline);
@@ -230,10 +231,11 @@ class SealedProductRepository extends BaseRepository {
    */
   async findWithRecentPriceChanges(days = 30, options = {}) {
     const cutoffDate = new Date();
+
     cutoffDate.setDate(cutoffDate.getDate() - days);
 
     return await this.findAll({
-      'priceHistory.dateUpdated': { $gte: cutoffDate }
+      'priceHistory.dateUpdated': { $gte: cutoffDate },
     }, options);
   }
 
@@ -248,8 +250,8 @@ class SealedProductRepository extends BaseRepository {
       $or: [
         { name: { $regex: searchTerm, $options: 'i' } },
         { setName: { $regex: searchTerm, $options: 'i' } },
-        { category: { $regex: searchTerm, $options: 'i' } }
-      ]
+        { category: { $regex: searchTerm, $options: 'i' } },
+      ],
     }, options);
   }
 
@@ -262,7 +264,7 @@ class SealedProductRepository extends BaseRepository {
   async findLowAvailability(threshold = 10, options = {}) {
     return await this.findAll({
       availability: { $lte: threshold },
-      sold: false
+      sold: false,
     }, options);
   }
 
@@ -278,8 +280,8 @@ class SealedProductRepository extends BaseRepository {
         $match: {
           sold: false,
           cardMarketPrice: { $exists: true, $ne: null },
-          myPrice: { $exists: true, $ne: null }
-        }
+          myPrice: { $exists: true, $ne: null },
+        },
       },
       {
         $addFields: {
@@ -288,22 +290,22 @@ class SealedProductRepository extends BaseRepository {
               {
                 $divide: [
                   { $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }] },
-                  { $toDouble: '$cardMarketPrice' }
-                ]
+                  { $toDouble: '$cardMarketPrice' },
+                ],
               },
-              100
-            ]
-          }
-        }
+              100,
+            ],
+          },
+        },
       },
       {
         $match: {
-          profitPercentage: { $gte: profitMargin }
-        }
+          profitPercentage: { $gte: profitMargin },
+        },
       },
       {
-        $sort: { profitPercentage: -1 }
-      }
+        $sort: { profitPercentage: -1 },
+      },
     ];
 
     return await this.aggregate(pipeline);
@@ -318,26 +320,26 @@ class SealedProductRepository extends BaseRepository {
       {
         $match: {
           cardMarketPrice: { $exists: true, $ne: null },
-          myPrice: { $exists: true, $ne: null }
-        }
+          myPrice: { $exists: true, $ne: null },
+        },
       },
       {
         $addFields: {
           profitAmount: {
-            $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }]
+            $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }],
           },
           profitPercentage: {
             $multiply: [
               {
                 $divide: [
                   { $subtract: [{ $toDouble: '$myPrice' }, { $toDouble: '$cardMarketPrice' }] },
-                  { $toDouble: '$cardMarketPrice' }
-                ]
+                  { $toDouble: '$cardMarketPrice' },
+                ],
               },
-              100
-            ]
-          }
-        }
+              100,
+            ],
+          },
+        },
       },
       {
         $group: {
@@ -347,11 +349,11 @@ class SealedProductRepository extends BaseRepository {
           avgProfitPercentage: { $avg: '$profitPercentage' },
           totalProfitAmount: { $sum: '$profitAmount' },
           maxProfitAmount: { $max: '$profitAmount' },
-          minProfitAmount: { $min: '$profitAmount' }
-        }
+          minProfitAmount: { $min: '$profitAmount' },
+        },
       },
       {
-        $sort: { avgProfitPercentage: -1 }
+        $sort: { avgProfitPercentage: -1 },
       },
       {
         $project: {
@@ -362,9 +364,9 @@ class SealedProductRepository extends BaseRepository {
           totalProfitAmount: { $round: ['$totalProfitAmount', 2] },
           maxProfitAmount: { $round: ['$maxProfitAmount', 2] },
           minProfitAmount: { $round: ['$minProfitAmount', 2] },
-          _id: 0
-        }
-      }
+          _id: 0,
+        },
+      },
     ];
 
     return await this.aggregate(pipeline);

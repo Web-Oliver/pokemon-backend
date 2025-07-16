@@ -3,14 +3,15 @@ const path = require('path');
 
 /**
  * Image Management Service
- * 
+ *
  * Centralizes image file operations to ensure consistency and prevent duplication.
  * Handles deletion of image files with robust error handling and logging.
  */
 class ImageManager {
+
   /**
    * Deletes multiple image files from the filesystem
-   * 
+   *
    * @param {Array<string>} imageUrls - Array of image URLs to delete
    * @returns {Promise<void>}
    */
@@ -27,8 +28,9 @@ class ImageManager {
         // Assuming images are stored as relative paths like "/uploads/images/filename.jpg"
         if (imageUrl && imageUrl.startsWith('/uploads/')) {
           const filePath = path.join(__dirname, '..', '..', imageUrl);
+
           console.log('[IMAGE CLEANUP] Attempting to delete:', filePath);
-          
+
           // Check if file exists before trying to delete
           try {
             await fs.access(filePath);
@@ -55,7 +57,7 @@ class ImageManager {
 
   /**
    * Deletes a single image file from the filesystem
-   * 
+   *
    * @param {string} imageUrl - Image URL to delete
    * @returns {Promise<void>}
    */
@@ -65,7 +67,7 @@ class ImageManager {
 
   /**
    * Validates if an image URL is valid for deletion
-   * 
+   *
    * @param {string} imageUrl - Image URL to validate
    * @returns {boolean} - True if valid, false otherwise
    */
@@ -75,7 +77,7 @@ class ImageManager {
 
   /**
    * Gets the file path for an image URL
-   * 
+   *
    * @param {string} imageUrl - Image URL
    * @returns {string} - File path
    */

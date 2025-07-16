@@ -2,7 +2,7 @@ const BaseController = require('./base/BaseController');
 
 /**
  * Sealed Product Controller
- * 
+ *
  * Extends BaseController to provide CRUD operations for sealed products.
  * Uses dependency injection and repository pattern for improved architecture.
  */
@@ -13,8 +13,8 @@ class SealedProductController extends BaseController {
       pluralName: 'sealedProducts',
       includeMarkAsSold: true,
       defaultPopulate: {
-        path: 'productId'
-      }
+        path: 'productId',
+      },
     });
   }
 

@@ -38,14 +38,14 @@ sealedProductSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: true,
-    trackImageUpdates: true
-  }
+    trackImageUpdates: true,
+  },
 });
 
 
 // Apply shared transform function for JSON responses
 sealedProductSchema.set('toJSON', {
-  transform: sealedProductTransform
+  transform: sealedProductTransform,
 });
 
 const SealedProduct = mongoose.model('SealedProduct', sealedProductSchema);

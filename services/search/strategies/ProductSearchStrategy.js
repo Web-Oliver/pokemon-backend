@@ -3,11 +3,11 @@ const { ValidationError } = require('../../../middleware/errorHandler');
 
 /**
  * Product Search Strategy
- * 
+ *
  * Specialized search strategy for CardMarketReferenceProduct model searches.
  * Handles sealed product-specific search patterns including category filtering,
  * price scoring, availability tracking, and set-based product grouping.
- * 
+ *
  * IMPORTANT: This searches CardMarketReferenceProduct which has a setName field
  * that is NOT the same as the Set model. CardMarketReferenceProduct.setName is
  * used for product grouping and is different from the official Pokemon sets.
@@ -31,7 +31,7 @@ class ProductSearchStrategy extends BaseSearchStrategy {
       minQueryLength: options.minQueryLength || 2,
       priceWeight: options.priceWeight || 10,
       availabilityWeight: options.availabilityWeight || 5,
-      ...options
+      ...options,
     });
   }
 
@@ -45,19 +45,17 @@ class ProductSearchStrategy extends BaseSearchStrategy {
     try {
       // Validate input
       this.validateSearchInput(query, options);
-      
+
       // Apply minimum query length
       if (query.trim().length < this.options.minQueryLength) {
         return [];
       }
-      
+
       // Use hybrid search if enabled, otherwise MongoDB search
       if (this.options.enableFuseSearch && this.options.hybridSearch) {
         return await this.performHybridSearch(query, options);
-      } else {
-        return await this.performMongoSearch(query, options);
       }
-      
+      return await this.performMongoSearch(query, options);
     } catch (error) {
       throw error;
     }
@@ -73,18 +71,18 @@ class ProductSearchStrategy extends BaseSearchStrategy {
     try {
       // Validate input
       this.validateSearchInput(query, options);
-      
+
       // Get suggestions with limited results
       const suggestionOptions = {
         ...options,
         limit: Math.min(options.limit || 10, 20),
-        sort: { score: -1, available: -1 }
+        sort: { score: -1, available: -1 },
       };
-      
+
       const suggestions = await this.search(query, suggestionOptions);
-      
+
       // Format suggestions for autocomplete
-      return suggestions.map(product => ({
+      return suggestions.map((product) => ({
         id: product._id,
         text: product.name,
         secondaryText: product.setName,
@@ -92,10 +90,9 @@ class ProductSearchStrategy extends BaseSearchStrategy {
           category: product.category,
           price: product.price,
           available: product.available,
-          setName: product.setName
-        }
+          setName: product.setName,
+        },
       }));
-      
     } catch (error) {
       throw error;
     }
@@ -112,18 +109,17 @@ class ProductSearchStrategy extends BaseSearchStrategy {
     try {
       // Validate input
       this.validateSearchInput(query, options);
-      
+
       // Add category filter to options
       const categoryOptions = {
         ...options,
         filters: {
           ...options.filters,
-          category: category
-        }
+          category,
+        },
       };
-      
+
       return await this.search(query, categoryOptions);
-      
     } catch (error) {
       throw error;
     }
@@ -140,18 +136,17 @@ class ProductSearchStrategy extends BaseSearchStrategy {
     try {
       // Validate input
       this.validateSearchInput(query, options);
-      
+
       // Add set name filter to options
       const setOptions = {
         ...options,
         filters: {
           ...options.filters,
-          setName: setName
-        }
+          setName,
+        },
       };
-      
+
       return await this.search(query, setOptions);
-      
     } catch (error) {
       throw error;
     }
@@ -169,26 +164,25 @@ class ProductSearchStrategy extends BaseSearchStrategy {
     try {
       // Validate input
       this.validateSearchInput(query, options);
-      
+
       if (minPrice < 0 || maxPrice < 0) {
         throw new ValidationError('Price values must be non-negative');
       }
-      
+
       if (minPrice > maxPrice) {
         throw new ValidationError('Minimum price cannot be greater than maximum price');
       }
-      
+
       // Add price range filter to options
       const priceOptions = {
         ...options,
         filters: {
           ...options.filters,
-          priceRange: { min: minPrice, max: maxPrice }
-        }
+          priceRange: { min: minPrice, max: maxPrice },
+        },
       };
-      
+
       return await this.search(query, priceOptions);
-      
     } catch (error) {
       throw error;
     }
@@ -203,11 +197,10 @@ class ProductSearchStrategy extends BaseSearchStrategy {
       const categories = await this.repository.aggregate([
         { $group: { _id: '$category', count: { $sum: 1 } } },
         { $sort: { count: -1 } },
-        { $project: { category: '$_id', count: 1, _id: 0 } }
+        { $project: { category: '$_id', count: 1, _id: 0 } },
       ]);
-      
+
       return categories;
-      
     } catch (error) {
       throw error;
     }
@@ -222,11 +215,10 @@ class ProductSearchStrategy extends BaseSearchStrategy {
       const setNames = await this.repository.aggregate([
         { $group: { _id: '$setName', count: { $sum: 1 } } },
         { $sort: { count: -1 } },
-        { $project: { setName: '$_id', count: 1, _id: 0 } }
+        { $project: { setName: '$_id', count: 1, _id: 0 } },
       ]);
-      
+
       return setNames;
-      
     } catch (error) {
       throw error;
     }
@@ -240,63 +232,64 @@ class ProductSearchStrategy extends BaseSearchStrategy {
    */
   buildMatchConditions(query, options = {}) {
     const conditions = [];
-    
+
     // Apply category filter if provided
     if (options.filters && options.filters.category) {
       conditions.push({
-        category: new RegExp(this.escapeRegex(options.filters.category), 'i')
+        category: new RegExp(this.escapeRegex(options.filters.category), 'i'),
       });
     }
-    
+
     // Apply set name filter if provided
     if (options.filters && options.filters.setName) {
       conditions.push({
-        setName: new RegExp(this.escapeRegex(options.filters.setName), 'i')
+        setName: new RegExp(this.escapeRegex(options.filters.setName), 'i'),
       });
     }
-    
+
     // Apply price range filter if provided
     if (options.filters && options.filters.priceRange) {
       const priceConditions = [];
-      
+
       // Convert price string to number for comparison
       priceConditions.push({
         $expr: {
           $and: [
             { $gte: [{ $toDouble: '$price' }, options.filters.priceRange.min] },
-            { $lte: [{ $toDouble: '$price' }, options.filters.priceRange.max] }
-          ]
-        }
+            { $lte: [{ $toDouble: '$price' }, options.filters.priceRange.max] },
+          ],
+        },
       });
-      
+
       conditions.push({ $or: priceConditions });
     }
-    
+
     // Apply availability filter if provided
     if (options.filters && options.filters.availableOnly) {
       conditions.push({
-        available: { $gt: 0 }
+        available: { $gt: 0 },
       });
     }
-    
+
     // Apply minimum availability filter if provided
     if (options.filters && options.filters.minAvailable) {
       conditions.push({
-        available: { $gte: options.filters.minAvailable }
+        available: { $gte: options.filters.minAvailable },
       });
     }
-    
+
     // Apply last updated filter if provided
     if (options.filters && options.filters.lastUpdatedAfter) {
       conditions.push({
-        lastUpdated: { $gte: new Date(options.filters.lastUpdatedAfter) }
+        lastUpdated: { $gte: new Date(options.filters.lastUpdatedAfter) },
       });
     }
-    
+
     // Build search conditions for text fields
     const textConditions = this.buildSearchConditions(query, this.options.searchFields);
+
     conditions.push(textConditions);
-    
+
     // Combine all conditions
     return conditions.length > 1 ? { $and: conditions } : conditions[0];
   }
@@ -309,7 +302,7 @@ class ProductSearchStrategy extends BaseSearchStrategy {
    */
   buildScoringStage(query, options = {}) {
     const normalizedQuery = this.normalizeQuery(query);
-    
+
     return {
       $addFields: {
         score: {
@@ -319,96 +312,100 @@ class ProductSearchStrategy extends BaseSearchStrategy {
               $cond: {
                 if: { $eq: [{ $toLower: '$name' }, normalizedQuery] },
                 then: 100,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Exact set name match
             {
               $cond: {
                 if: { $eq: [{ $toLower: '$setName' }, normalizedQuery] },
                 then: 80,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Product name starts with query
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$name' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
                 then: 70,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Set name starts with query
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$setName' }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
                 then: 60,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Product name contains query
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
                 then: 50,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Set name contains query
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$setName' }, regex: this.escapeRegex(normalizedQuery) } },
                 then: 40,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Category contains query
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$category' }, regex: this.escapeRegex(normalizedQuery) } },
                 then: 30,
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Price-based scoring (if enabled) - lower prices get higher scores
-            ...(this.options.enablePriceScoring ? [{
-              $cond: {
-                if: { $and: [{ $ne: ['$price', ''] }, { $ne: ['$price', null] }] },
-                then: {
-                  $multiply: [
-                    this.options.priceWeight,
-                    {
-                      $cond: {
-                        if: { $gt: [{ $toDouble: '$price' }, 0] },
-                        then: { $divide: [1000, { $toDouble: '$price' }] },
-                        else: 0
-                      }
-                    }
-                  ]
+            ...this.options.enablePriceScoring
+              ? [{
+                $cond: {
+                  if: { $and: [{ $ne: ['$price', ''] }, { $ne: ['$price', null] }] },
+                  then: {
+                    $multiply: [
+                      this.options.priceWeight,
+                      {
+                        $cond: {
+                          if: { $gt: [{ $toDouble: '$price' }, 0] },
+                          then: { $divide: [1000, { $toDouble: '$price' }] },
+                          else: 0,
+                        },
+                      },
+                    ],
+                  },
+                  else: 0,
                 },
-                else: 0
-              }
-            }] : []),
+              }]
+              : [],
             // Availability-based scoring (if enabled) - higher availability gets higher scores
-            ...(this.options.enableAvailabilityScoring ? [{
-              $cond: {
-                if: { $gt: ['$available', 0] },
-                then: {
-                  $multiply: [
-                    this.options.availabilityWeight,
-                    { $divide: ['$available', 100] }
-                  ]
+            ...this.options.enableAvailabilityScoring
+              ? [{
+                $cond: {
+                  if: { $gt: ['$available', 0] },
+                  then: {
+                    $multiply: [
+                      this.options.availabilityWeight,
+                      { $divide: ['$available', 100] },
+                    ],
+                  },
+                  else: 0,
                 },
-                else: 0
-              }
-            }] : []),
+              }]
+              : [],
             // Length-based relevance score (shorter matches are more relevant)
             {
               $cond: {
                 if: { $regexMatch: { input: { $toLower: '$name' }, regex: this.escapeRegex(normalizedQuery) } },
                 then: { $divide: [20, { $strLenCP: '$name' }] },
-                else: 0
-              }
+                else: 0,
+              },
             },
             // Recency score (more recently updated products get slight boost)
             {
@@ -417,15 +414,15 @@ class ProductSearchStrategy extends BaseSearchStrategy {
                 then: {
                   $divide: [
                     { $subtract: ['$lastUpdated', new Date('2020-01-01')] },
-                    86400000000 // Convert to days and scale down
-                  ]
+                    86400000000, // Convert to days and scale down
+                  ],
                 },
-                else: 0
-              }
-            }
-          ]
-        }
-      }
+                else: 0,
+              },
+            },
+          ],
+        },
+      },
     };
   }
 
@@ -437,29 +434,29 @@ class ProductSearchStrategy extends BaseSearchStrategy {
    * @returns {Array} - Processed search results
    */
   processResults(results, query, options = {}) {
-    return results.map(result => {
+    return results.map((result) => {
       // Convert to plain object
       const processed = result.toObject ? result.toObject() : result;
-      
+
       // Format price as number
       if (processed.price) {
         processed.priceNumeric = parseFloat(processed.price) || 0;
       }
-      
+
       // Add computed fields
       processed.displayName = this.buildDisplayName(processed);
       processed.searchRelevance = processed.score || 0;
       processed.isAvailable = processed.available > 0;
-      
+
       // Format last updated
       if (processed.lastUpdated) {
         processed.lastUpdatedFormatted = new Date(processed.lastUpdated).toLocaleDateString();
       }
-      
+
       // Clean up internal fields
       delete processed.score;
       delete processed.__v;
-      
+
       return processed;
     });
   }
@@ -471,15 +468,15 @@ class ProductSearchStrategy extends BaseSearchStrategy {
    */
   buildDisplayName(product) {
     let displayName = product.name;
-    
+
     if (product.setName && product.setName !== product.name) {
       displayName += ` - ${product.setName}`;
     }
-    
+
     if (product.category) {
       displayName += ` (${product.category})`;
     }
-    
+
     return displayName;
   }
 
@@ -499,7 +496,7 @@ class ProductSearchStrategy extends BaseSearchStrategy {
     return [
       { name: 'name', weight: 3 },
       { name: 'setName', weight: 2 },
-      { name: 'category', weight: 1.5 }
+      { name: 'category', weight: 1.5 },
     ];
   }
 
@@ -511,23 +508,24 @@ class ProductSearchStrategy extends BaseSearchStrategy {
    */
   calculateCustomScore(result, query) {
     let score = 0;
-    
+
     // Price scoring (lower prices get higher scores)
     if (result.priceNumeric && result.priceNumeric > 0) {
       score += Math.min(20, 1000 / result.priceNumeric);
     }
-    
+
     // Availability scoring
     if (result.available && result.available > 0) {
       score += Math.min(20, result.available / 10);
     }
-    
+
     // Recent update scoring
     if (result.lastUpdated) {
       const daysSinceUpdate = (Date.now() - new Date(result.lastUpdated).getTime()) / (1000 * 60 * 60 * 24);
+
       score += Math.max(0, 10 - daysSinceUpdate);
     }
-    
+
     return Math.min(100, score);
   }
 
@@ -547,14 +545,14 @@ class ProductSearchStrategy extends BaseSearchStrategy {
             type: 'object',
             properties: {
               min: { type: 'number', minimum: 0 },
-              max: { type: 'number', minimum: 0 }
-            }
+              max: { type: 'number', minimum: 0 },
+            },
           },
           availableOnly: { type: 'boolean' },
           minAvailable: { type: 'number', minimum: 0 },
-          lastUpdatedAfter: { type: 'string', format: 'date-time' }
-        }
-      }
+          lastUpdatedAfter: { type: 'string', format: 'date-time' },
+        },
+      },
     };
   }
 }

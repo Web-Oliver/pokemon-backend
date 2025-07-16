@@ -2,11 +2,11 @@ const { ValidationError } = require('../../middleware/errorHandler');
 
 /**
  * Search Pipeline Builder
- * 
+ *
  * Builder pattern implementation for creating MongoDB aggregation pipelines.
  * Provides reusable pipeline components and fluent interface for building
  * complex search queries while eliminating code duplication.
- * 
+ *
  * Following SOLID principles:
  * - Single Responsibility: Builds MongoDB aggregation pipelines
  * - Open/Closed: Extensible for new pipeline components
@@ -25,7 +25,7 @@ class SearchPipelineBuilder {
       enableScoring: options.enableScoring !== false,
       maxPipelineStages: options.maxPipelineStages || 50,
       defaultLimit: options.defaultLimit || 100,
-      ...options
+      ...options,
     };
   }
 
@@ -61,12 +61,12 @@ class SearchPipelineBuilder {
 
     const normalizedQuery = this.normalizeQuery(query);
     const fuzzyPatterns = this.createFuzzyPatterns(normalizedQuery, options);
-    
+
     const conditions = [];
-    
+
     // Build conditions for each field and pattern combination
-    fields.forEach(field => {
-      fuzzyPatterns.forEach(pattern => {
+    fields.forEach((field) => {
+      fuzzyPatterns.forEach((pattern) => {
         conditions.push({ [field]: pattern });
       });
     });
@@ -93,10 +93,10 @@ class SearchPipelineBuilder {
 
     this.pipeline.push({
       $match: {
-        [field]: new RegExp(pattern, flags)
-      }
+        [field]: new RegExp(pattern, flags),
+      },
     });
-    
+
     return this;
   }
 
@@ -119,8 +119,8 @@ class SearchPipelineBuilder {
         from,
         localField,
         foreignField,
-        as
-      }
+        as,
+      },
     };
 
     // Add pipeline if provided
@@ -152,8 +152,8 @@ class SearchPipelineBuilder {
     const unwindStage = {
       $unwind: {
         path: path.startsWith('$') ? path : `$${path}`,
-        preserveNullAndEmptyArrays: options.preserveNullAndEmptyArrays || false
-      }
+        preserveNullAndEmptyArrays: options.preserveNullAndEmptyArrays || false,
+      },
     };
 
     // Add includeArrayIndex if specified
@@ -186,59 +186,59 @@ class SearchPipelineBuilder {
       contains: { weight: 60, fields: ['name'] },
       wordBoundary: { weight: 40, fields: ['name'] },
       lengthPenalty: { enabled: true, weight: 20 },
-      fuzzyMatch: { enabled: true, weight: 30 }
+      fuzzyMatch: { enabled: true, weight: 30 },
     };
 
     const rules = { ...defaultRules, ...scoringRules };
 
     // Exact match scoring
     if (rules.exactMatch && rules.exactMatch.fields) {
-      rules.exactMatch.fields.forEach(field => {
+      rules.exactMatch.fields.forEach((field) => {
         scoreConditions.push({
           $cond: {
             if: { $eq: [{ $toLower: `$${field}` }, normalizedQuery] },
             then: rules.exactMatch.weight,
-            else: 0
-          }
+            else: 0,
+          },
         });
       });
     }
 
     // Starts with scoring
     if (rules.startsWith && rules.startsWith.fields) {
-      rules.startsWith.fields.forEach(field => {
+      rules.startsWith.fields.forEach((field) => {
         scoreConditions.push({
           $cond: {
             if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `^${this.escapeRegex(normalizedQuery)}` } },
             then: rules.startsWith.weight,
-            else: 0
-          }
+            else: 0,
+          },
         });
       });
     }
 
     // Contains scoring
     if (rules.contains && rules.contains.fields) {
-      rules.contains.fields.forEach(field => {
+      rules.contains.fields.forEach((field) => {
         scoreConditions.push({
           $cond: {
             if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: this.escapeRegex(normalizedQuery) } },
             then: rules.contains.weight,
-            else: 0
-          }
+            else: 0,
+          },
         });
       });
     }
 
     // Word boundary scoring
     if (rules.wordBoundary && rules.wordBoundary.fields) {
-      rules.wordBoundary.fields.forEach(field => {
+      rules.wordBoundary.fields.forEach((field) => {
         scoreConditions.push({
           $cond: {
             if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${this.escapeRegex(normalizedQuery)}\\b` } },
             then: rules.wordBoundary.weight,
-            else: 0
-          }
+            else: 0,
+          },
         });
       });
     }
@@ -246,12 +246,13 @@ class SearchPipelineBuilder {
     // Length penalty scoring
     if (rules.lengthPenalty && rules.lengthPenalty.enabled) {
       const primaryField = rules.lengthPenalty.field || 'name';
+
       scoreConditions.push({
         $cond: {
           if: { $regexMatch: { input: { $toLower: `$${primaryField}` }, regex: this.escapeRegex(normalizedQuery) } },
           then: { $divide: [rules.lengthPenalty.weight, { $strLenCP: `$${primaryField}` }] },
-          else: 0
-        }
+          else: 0,
+        },
       });
     }
 
@@ -263,9 +264,9 @@ class SearchPipelineBuilder {
     this.pipeline.push({
       $addFields: {
         score: {
-          $add: scoreConditions
-        }
-      }
+          $add: scoreConditions,
+        },
+      },
     });
 
     return this;
@@ -289,24 +290,24 @@ class SearchPipelineBuilder {
     // Multi-word scoring
     queryWords.forEach((word, index) => {
       const wordWeight = queryWords.length - index; // Earlier words have higher weight
-      
+
       Object.entries(fieldWeights).forEach(([field, weight]) => {
         // Word boundary match
         scoreConditions.push({
           $cond: {
             if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: `\\b${this.escapeRegex(word)}\\b` } },
             then: weight * wordWeight,
-            else: 0
-          }
+            else: 0,
+          },
         });
-        
+
         // Partial word match
         scoreConditions.push({
           $cond: {
             if: { $regexMatch: { input: { $toLower: `$${field}` }, regex: this.escapeRegex(word) } },
             then: (weight * wordWeight) / 2,
-            else: 0
-          }
+            else: 0,
+          },
         });
       });
     });
@@ -314,9 +315,9 @@ class SearchPipelineBuilder {
     this.pipeline.push({
       $addFields: {
         score: {
-          $add: scoreConditions
-        }
-      }
+          $add: scoreConditions,
+        },
+      },
     });
 
     return this;
@@ -380,9 +381,10 @@ class SearchPipelineBuilder {
     }
 
     const skip = (page - 1) * limit;
+
     this.skip(skip);
     this.limit(limit);
-    
+
     return this;
   }
 
@@ -452,7 +454,7 @@ class SearchPipelineBuilder {
       throw new ValidationError('Stages must be an array');
     }
 
-    stages.forEach(stage => this.addStage(stage));
+    stages.forEach((stage) => this.addStage(stage));
     return this;
   }
 
@@ -482,8 +484,8 @@ class SearchPipelineBuilder {
     // Move $match stages to the beginning
     const matchStages = [];
     const otherStages = [];
-    
-    this.pipeline.forEach(stage => {
+
+    this.pipeline.forEach((stage) => {
       if (stage.$match) {
         matchStages.push(stage);
       } else {
@@ -493,7 +495,8 @@ class SearchPipelineBuilder {
 
     // Combine multiple $match stages
     if (matchStages.length > 1) {
-      const combinedMatch = { $and: matchStages.map(stage => stage.$match) };
+      const combinedMatch = { $and: matchStages.map((stage) => stage.$match) };
+
       this.pipeline = [{ $match: combinedMatch }, ...otherStages];
     } else {
       this.pipeline = [...matchStages, ...otherStages];
@@ -522,11 +525,13 @@ class SearchPipelineBuilder {
       }
 
       const stageKeys = Object.keys(stage);
+
       if (stageKeys.length !== 1) {
         throw new ValidationError(`Invalid stage at index ${index}: must have exactly one key`);
       }
 
       const stageType = stageKeys[0];
+
       if (!stageType.startsWith('$')) {
         throw new ValidationError(`Invalid stage at index ${index}: stage type must start with '$'`);
       }
@@ -580,28 +585,29 @@ class SearchPipelineBuilder {
    */
   createFuzzyPatterns(query, options = {}) {
     const patterns = [];
-    
+
     // Exact match
     patterns.push(new RegExp(`^${this.escapeRegex(query)}$`, 'i'));
-    
+
     // Starts with
     patterns.push(new RegExp(`^${this.escapeRegex(query)}`, 'i'));
-    
+
     // Contains
     patterns.push(new RegExp(this.escapeRegex(query), 'i'));
-    
+
     // Word boundary
     patterns.push(new RegExp(`\\b${this.escapeRegex(query)}\\b`, 'i'));
-    
+
     // Fuzzy match (if enabled and query is long enough)
     if (options.enableFuzzy && query.length > 2) {
       const fuzzyPattern = query
         .split('')
-        .map(char => this.escapeRegex(char))
+        .map((char) => this.escapeRegex(char))
         .join('.*?');
+
       patterns.push(new RegExp(fuzzyPattern, 'i'));
     }
-    
+
     return patterns;
   }
 

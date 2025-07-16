@@ -26,17 +26,17 @@ const createCacheKey = (req) => {
   const route = req.route.path;
 
   // CRITICAL FIX: Include setContext and categoryContext for hierarchical search caching
-  return `${route}:${JSON.stringify({ 
-    q, 
-    limit, 
-    category, 
-    setId, 
-    setName, 
-    setContext,    // ✅ ADDED: For hierarchical search
-    categoryContext, // ✅ ADDED: For hierarchical search  
-    type,          // ✅ ADDED: Search type (sets, cards, products)
-    year, 
-    pokemonNumber 
+  return `${route}:${JSON.stringify({
+    q,
+    limit,
+    category,
+    setId,
+    setName,
+    setContext, // ✅ ADDED: For hierarchical search
+    categoryContext, // ✅ ADDED: For hierarchical search
+    type, // ✅ ADDED: Search type (sets, cards, products)
+    year,
+    pokemonNumber,
   })}`;
 };
 

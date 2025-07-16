@@ -17,11 +17,11 @@ mongoose.connect(process.env.MONGO_URI).then(async () => {
   console.log(`  Deleted ${cardsResult.deletedCount} cards`);
 
   const cardMarketResult = await mongoose.connection.db.collection('cardmarketreferenceproducts').deleteMany({});
-  
+
   console.log(`  Deleted ${cardMarketResult.deletedCount} card market products`);
-  
+
   const sealedProductsResult = await mongoose.connection.db.collection('sealedproducts').deleteMany({});
-  
+
   console.log(`  Deleted ${sealedProductsResult.deletedCount} sealed products`);
 
   // Wait a moment for database operations to complete

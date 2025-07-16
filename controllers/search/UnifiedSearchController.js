@@ -3,11 +3,11 @@ const container = require('../../container');
 
 /**
  * Unified Search Controller
- * 
+ *
  * Modern search controller using the new search architecture.
  * Provides unified search functionality across all models using
  * the Strategy pattern and dependency injection.
- * 
+ *
  * Following SOLID principles and replacing the old hierarchical search.
  */
 class UnifiedSearchController {
@@ -22,56 +22,55 @@ class UnifiedSearchController {
    */
   search = asyncHandler(async (req, res) => {
     console.log('=== UNIFIED SEARCH START ===');
-    
+
     try {
       const { query, types, limit, page, sort, filters } = req.query;
-      
+
       // Validate query
       if (!query || typeof query !== 'string') {
         throw new ValidationError('Query parameter is required and must be a string');
       }
-      
+
       // Parse types (default to all if not specified)
-      const searchTypes = types ? types.split(',').map(t => t.trim()) : ['cards', 'products', 'sets'];
-      
+      const searchTypes = types ? types.split(',').map((t) => t.trim()) : ['cards', 'products', 'sets'];
+
       // Parse options
       const options = {
         limit: limit ? parseInt(limit) : 20,
         page: page ? parseInt(page) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
-        filters: filters ? JSON.parse(filters) : {}
+        filters: filters ? JSON.parse(filters) : {},
       };
-      
+
       console.log('Search parameters:', {
         query,
         types: searchTypes,
-        options
+        options,
       });
-      
+
       // Perform search across multiple types
       const results = await this.searchFactory.searchMultiple(query, searchTypes, options);
-      
+
       // Calculate total count
       const totalCount = Object.values(results).reduce((sum, result) => sum + result.count, 0);
-      
+
       console.log('Search results:', {
         totalCount,
         resultsByType: Object.entries(results).map(([type, result]) => ({
           type,
           count: result.count,
-          success: result.success
-        }))
+          success: result.success,
+        })),
       });
-      
+
       console.log('=== UNIFIED SEARCH END ===');
-      
+
       res.status(200).json({
         success: true,
         query,
         totalCount,
-        results
+        results,
       });
-      
     } catch (error) {
       console.error('=== UNIFIED SEARCH ERROR ===');
       console.error('Error:', error.message);
@@ -88,48 +87,47 @@ class UnifiedSearchController {
    */
   suggest = asyncHandler(async (req, res) => {
     console.log('=== UNIFIED SUGGEST START ===');
-    
+
     try {
       const { query, types, limit } = req.query;
-      
+
       // Validate query
       if (!query || typeof query !== 'string') {
         throw new ValidationError('Query parameter is required and must be a string');
       }
-      
+
       // Parse types (default to all if not specified)
-      const searchTypes = types ? types.split(',').map(t => t.trim()) : ['cards', 'products', 'sets'];
-      
+      const searchTypes = types ? types.split(',').map((t) => t.trim()) : ['cards', 'products', 'sets'];
+
       // Parse options
       const options = {
-        limit: limit ? parseInt(limit) : 5
+        limit: limit ? parseInt(limit) : 5,
       };
-      
+
       console.log('Suggest parameters:', {
         query,
         types: searchTypes,
-        options
+        options,
       });
-      
+
       // Get suggestions across multiple types
       const suggestions = await this.searchFactory.suggestMultiple(query, searchTypes, options);
-      
+
       console.log('Suggestions results:', {
         resultsByType: Object.entries(suggestions).map(([type, result]) => ({
           type,
           count: result.count,
-          success: result.success
-        }))
+          success: result.success,
+        })),
       });
-      
+
       console.log('=== UNIFIED SUGGEST END ===');
-      
+
       res.status(200).json({
         success: true,
         query,
-        suggestions
+        suggestions,
       });
-      
     } catch (error) {
       console.error('=== UNIFIED SUGGEST ERROR ===');
       console.error('Error:', error.message);
@@ -146,50 +144,62 @@ class UnifiedSearchController {
    */
   searchCards = asyncHandler(async (req, res) => {
     console.log('=== CARD SEARCH START ===');
-    
+
     try {
       const { query, setId, setName, year, pokemonNumber, variety, minPsaPopulation, limit, page, sort } = req.query;
-      
+
       // Validate query
       if (!query || typeof query !== 'string') {
         throw new ValidationError('Query parameter is required and must be a string');
       }
-      
+
       // Build filters
       const filters = {};
-      if (setId) filters.setId = setId;
-      if (setName) filters.setName = setName;
-      if (year) filters.year = parseInt(year);
-      if (pokemonNumber) filters.pokemonNumber = pokemonNumber;
-      if (variety) filters.variety = variety;
-      if (minPsaPopulation) filters.minPsaPopulation = parseInt(minPsaPopulation);
-      
+
+      if (setId) {
+        filters.setId = setId;
+      }
+      if (setName) {
+        filters.setName = setName;
+      }
+      if (year) {
+        filters.year = parseInt(year);
+      }
+      if (pokemonNumber) {
+        filters.pokemonNumber = pokemonNumber;
+      }
+      if (variety) {
+        filters.variety = variety;
+      }
+      if (minPsaPopulation) {
+        filters.minPsaPopulation = parseInt(minPsaPopulation);
+      }
+
       // Parse options
       const options = {
         limit: limit ? parseInt(limit) : 20,
         page: page ? parseInt(page) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
-        filters
+        filters,
       };
-      
+
       console.log('Card search parameters:', { query, options });
-      
+
       // Get card search strategy
       const cardStrategy = this.searchFactory.getStrategy('cards');
-      
+
       // Perform search
       const results = await cardStrategy.search(query, options);
-      
+
       console.log(`Found ${results.length} cards`);
       console.log('=== CARD SEARCH END ===');
-      
+
       res.status(200).json({
         success: true,
         query,
         count: results.length,
-        data: results
+        data: results,
       });
-      
     } catch (error) {
       console.error('=== CARD SEARCH ERROR ===');
       console.error('Error:', error.message);
@@ -206,53 +216,59 @@ class UnifiedSearchController {
    */
   searchProducts = asyncHandler(async (req, res) => {
     console.log('=== PRODUCT SEARCH START ===');
-    
+
     try {
       const { query, category, setName, minPrice, maxPrice, availableOnly, limit, page, sort } = req.query;
-      
+
       // Validate query
       if (!query || typeof query !== 'string') {
         throw new ValidationError('Query parameter is required and must be a string');
       }
-      
+
       // Build filters
       const filters = {};
-      if (category) filters.category = category;
-      if (setName) filters.setName = setName;
+
+      if (category) {
+        filters.category = category;
+      }
+      if (setName) {
+        filters.setName = setName;
+      }
       if (minPrice && maxPrice) {
         filters.priceRange = {
           min: parseFloat(minPrice),
-          max: parseFloat(maxPrice)
+          max: parseFloat(maxPrice),
         };
       }
-      if (availableOnly === 'true') filters.availableOnly = true;
-      
+      if (availableOnly === 'true') {
+        filters.availableOnly = true;
+      }
+
       // Parse options
       const options = {
         limit: limit ? parseInt(limit) : 20,
         page: page ? parseInt(page) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
-        filters
+        filters,
       };
-      
+
       console.log('Product search parameters:', { query, options });
-      
+
       // Get product search strategy
       const productStrategy = this.searchFactory.getStrategy('products');
-      
+
       // Perform search
       const results = await productStrategy.search(query, options);
-      
+
       console.log(`Found ${results.length} products`);
       console.log('=== PRODUCT SEARCH END ===');
-      
+
       res.status(200).json({
         success: true,
         query,
         count: results.length,
-        data: results
+        data: results,
       });
-      
     } catch (error) {
       console.error('=== PRODUCT SEARCH ERROR ===');
       console.error('Error:', error.message);
@@ -269,53 +285,59 @@ class UnifiedSearchController {
    */
   searchSets = asyncHandler(async (req, res) => {
     console.log('=== SET SEARCH START ===');
-    
+
     try {
       const { query, year, minYear, maxYear, minPsaPopulation, minCardCount, limit, page, sort } = req.query;
-      
+
       // Validate query
       if (!query || typeof query !== 'string') {
         throw new ValidationError('Query parameter is required and must be a string');
       }
-      
+
       // Build filters
       const filters = {};
-      if (year) filters.year = parseInt(year);
+
+      if (year) {
+        filters.year = parseInt(year);
+      }
       if (minYear && maxYear) {
         filters.yearRange = {
           start: parseInt(minYear),
-          end: parseInt(maxYear)
+          end: parseInt(maxYear),
         };
       }
-      if (minPsaPopulation) filters.minPsaPopulation = parseInt(minPsaPopulation);
-      if (minCardCount) filters.minCardCount = parseInt(minCardCount);
-      
+      if (minPsaPopulation) {
+        filters.minPsaPopulation = parseInt(minPsaPopulation);
+      }
+      if (minCardCount) {
+        filters.minCardCount = parseInt(minCardCount);
+      }
+
       // Parse options
       const options = {
         limit: limit ? parseInt(limit) : 20,
         page: page ? parseInt(page) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
-        filters
+        filters,
       };
-      
+
       console.log('Set search parameters:', { query, options });
-      
+
       // Get set search strategy
       const setStrategy = this.searchFactory.getStrategy('sets');
-      
+
       // Perform search
       const results = await setStrategy.search(query, options);
-      
+
       console.log(`Found ${results.length} sets`);
       console.log('=== SET SEARCH END ===');
-      
+
       res.status(200).json({
         success: true,
         query,
         count: results.length,
-        data: results
+        data: results,
       });
-      
     } catch (error) {
       console.error('=== SET SEARCH ERROR ===');
       console.error('Error:', error.message);
@@ -333,16 +355,15 @@ class UnifiedSearchController {
   getSearchTypes = asyncHandler(async (req, res) => {
     try {
       const types = this.searchFactory.getRegisteredTypes();
-      
+
       res.status(200).json({
         success: true,
-        types: types.map(type => ({
+        types: types.map((type) => ({
           type,
           supported: this.searchFactory.isTypeSupported(type),
-          options: this.searchFactory.getSupportedOptions(type)
-        }))
+          options: this.searchFactory.getSupportedOptions(type),
+        })),
       });
-      
     } catch (error) {
       throw error;
     }
@@ -358,14 +379,13 @@ class UnifiedSearchController {
       const stats = {
         registeredTypes: this.searchFactory.getRegisteredTypes(),
         cacheStats: this.searchFactory.getCacheStats(),
-        containerStats: container.getStats()
+        containerStats: container.getStats(),
       };
-      
+
       res.status(200).json({
         success: true,
-        stats
+        stats,
       });
-      
     } catch (error) {
       throw error;
     }
@@ -382,5 +402,5 @@ module.exports = {
   searchProducts: unifiedSearchController.searchProducts,
   searchSets: unifiedSearchController.searchSets,
   getSearchTypes: unifiedSearchController.getSearchTypes,
-  getSearchStats: unifiedSearchController.getSearchStats
+  getSearchStats: unifiedSearchController.getSearchStats,
 };

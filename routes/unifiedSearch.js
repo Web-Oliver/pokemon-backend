@@ -4,11 +4,11 @@ const unifiedSearchController = require('../controllers/search/UnifiedSearchCont
 
 /**
  * Unified Search Routes
- * 
+ *
  * Modern search routes using the new search architecture.
  * Provides unified search functionality across all models using
  * the Strategy pattern and dependency injection.
- * 
+ *
  * These routes will replace the old hierarchical search routes.
  */
 

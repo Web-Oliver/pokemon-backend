@@ -28,39 +28,39 @@ const importSetMetadata = async (filePath) => {
       try {
         // Check if there's already a set with this exact URL (primary key)
         const existingSetByUrl = await Set.findOne({ setUrl: setLink.url });
-        
+
         // Skip if URL already exists (primary identifier)
         if (existingSetByUrl) {
           console.log(`Set already exists with URL: ${setLink.url}, skipping...`);
           continue;
         }
-        
+
         // Clean the set name first - remove problematic characters
         function cleanSetName(name) {
           return name
-            .replace(/[|\/\\&]/g, ' ')     // Replace |, /, \, & with space
-            .replace(/[-–—_]/g, ' ')       // Replace all dashes and underscores with space
-            .replace(/[()[\]]/g, '')       // Remove parentheses and brackets
-            .replace(/[.,:;!?]/g, '')      // Remove punctuation
-            .replace(/['""`]/g, '')        // Remove quotes
-            .replace(/\s+/g, ' ')          // Replace multiple spaces with single space
-            .trim();                       // Remove leading/trailing spaces
+            .replace(/[|\/\\&]/g, ' ') // Replace |, /, \, & with space
+            .replace(/[-–—_]/g, ' ') // Replace all dashes and underscores with space
+            .replace(/[()[\]]/g, '') // Remove parentheses and brackets
+            .replace(/[.,:;!?]/g, '') // Remove punctuation
+            .replace(/['""`]/g, '') // Remove quotes
+            .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+            .trim(); // Remove leading/trailing spaces
         }
 
         let finalSetName = cleanSetName(setLink.set_name);
 
         // Always make promo sets unique by year to avoid conflicts
-        if (finalSetName.toLowerCase().includes('promo') || 
-            finalSetName.toLowerCase().includes('black star') ||
-            finalSetName.toLowerCase().includes('world championships')) {
+        if (finalSetName.toLowerCase().includes('promo')
+            || finalSetName.toLowerCase().includes('black star')
+            || finalSetName.toLowerCase().includes('world championships')) {
           finalSetName = `${finalSetName} (${data.year})`;
         }
-        
+
         // Check if this unique name already exists
-        const existingSetByName = await Set.findOne({ 
-          setName: finalSetName
+        const existingSetByName = await Set.findOne({
+          setName: finalSetName,
         });
-        
+
         // If still a duplicate, add the ID
         if (existingSetByName) {
           finalSetName = `${cleanSetName(setLink.set_name)} (${data.year} ${setLink.id})`;
@@ -119,12 +119,12 @@ const importCardData = async (filePath) => {
     const setData = data;
 
     // Check TOTAL POPULATION entry to filter out low population sets
-    const totalPopCard = setData.cards.find(card => 
-      card.card_name === "TOTAL POPULATION" && card.base_name === "TOTAL POPULATION"
-    );
-    
+    const totalPopCard = setData.cards.find((card) =>
+      card.card_name === 'TOTAL POPULATION' && card.base_name === 'TOTAL POPULATION');
+
     if (totalPopCard) {
       const totalGraded = totalPopCard.psa_grades?.psa_total || totalPopCard.grade_totals?.grade_total || 0;
+
       if (totalGraded < 200) {
         console.log(`Skipping low population set ${setData.set_name}: only ${totalGraded} total graded cards`);
         return { success: true, setsUpdated: 0, cardsProcessed: 0, skippedCards: 0 };
@@ -153,6 +153,7 @@ const importCardData = async (filePath) => {
       );
 
       const psaTotal = totalPopCard?.grade_totals?.grade_total || totalPopCard?.psa_grades?.psa_total || 0;
+
       console.log(`Set updated with card data: ${setData.set_name} (${psaTotal} PSA total)`);
       setsUpdated++;
 

@@ -62,7 +62,7 @@ const getCardsBySetId = asyncHandler(async (req, res) => {
   }
 
   const skip = (parseInt(page, 10) - 1) * parseInt(limit, 10);
-  
+
   // Use aggregation to handle N/A pokemonNumber values properly
   const cards = await Card.aggregate([
     { $match: query },
@@ -71,36 +71,36 @@ const getCardsBySetId = asyncHandler(async (req, res) => {
         from: 'sets',
         localField: 'setId',
         foreignField: '_id',
-        as: 'setId'
-      }
+        as: 'setId',
+      },
     },
     { $unwind: { path: '$setId', preserveNullAndEmptyArrays: true } },
     {
       $addFields: {
         numericPokemonNumber: {
           $cond: {
-            if: { $eq: ["$pokemonNumber", "N/A"] },
-            then: 999999,  // Put N/A values at the end
-            else: { 
-              $convert: { 
-                input: "$pokemonNumber", 
-                to: "int", 
-                onError: 999999,  // Handle conversion errors
-                onNull: 999999 
-              } 
-            }
-          }
-        }
-      }
+            if: { $eq: ['$pokemonNumber', 'N/A'] },
+            then: 999999, // Put N/A values at the end
+            else: {
+              $convert: {
+                input: '$pokemonNumber',
+                to: 'int',
+                onError: 999999, // Handle conversion errors
+                onNull: 999999,
+              },
+            },
+          },
+        },
+      },
     },
     { $sort: { sortOrder: 1, numericPokemonNumber: 1, cardName: 1 } },
     { $skip: skip },
     { $limit: parseInt(limit, 10) },
     {
       $project: {
-        numericPokemonNumber: 0  // Remove the temporary field
-      }
-    }
+        numericPokemonNumber: 0, // Remove the temporary field
+      },
+    },
   ]);
   const totalCards = await Card.countDocuments(query);
   const totalPages = Math.ceil(totalCards / parseInt(limit, 10));
@@ -130,15 +130,15 @@ const searchBestMatch = asyncHandler(async (req, res) => {
 
     // Build filters for the unified search
     const filters = {};
-    
+
     if (pokemonNumber) {
       filters.pokemonNumber = pokemonNumber;
     }
-    
+
     if (setName) {
       filters.setName = setName;
     }
-    
+
     if (year) {
       filters.year = parseInt(year, 10);
     }
@@ -148,11 +148,11 @@ const searchBestMatch = asyncHandler(async (req, res) => {
       limit: 15,
       includeSetInfo: true,
       filters,
-      enhancedScoring: true // Enable PSA popularity scoring
+      enhancedScoring: true, // Enable PSA popularity scoring
     };
 
     let results;
-    
+
     if (!q) {
       // If no query, get popular cards with applied filters
       results = await cardStrategy.searchByPopularity(searchOptions);
@@ -161,30 +161,29 @@ const searchBestMatch = asyncHandler(async (req, res) => {
       results = await cardStrategy.search(q, searchOptions);
     }
 
-    res.status(200).json({ 
-      success: true, 
+    res.status(200).json({
+      success: true,
       data: results.data || results,
       meta: results.meta || {
         source: 'unified-search',
-        totalResults: (results.data || results).length
-      }
+        totalResults: (results.data || results).length,
+      },
     });
-
   } catch (error) {
     console.error('Search best match error:', error);
-    
+
     // Fallback to basic search if unified search fails
     const basicQuery = {};
-    
+
     if (pokemonNumber) {
       basicQuery.pokemonNumber = pokemonNumber;
     }
-    
+
     if (q) {
       basicQuery.$or = [
         { cardName: { $regex: q, $options: 'i' } },
         { baseName: { $regex: q, $options: 'i' } },
-        { variety: { $regex: q, $options: 'i' } }
+        { variety: { $regex: q, $options: 'i' } },
       ];
     }
 
