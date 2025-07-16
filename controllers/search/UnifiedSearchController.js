@@ -36,8 +36,8 @@ class UnifiedSearchController {
 
       // Parse options
       const options = {
-        limit: limit ? parseInt(limit) : 20,
-        page: page ? parseInt(page) : 1,
+        limit: limit ? parseInt(limit, 10) : 20,
+        page: page ? parseInt(page, 10) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
         filters: filters ? JSON.parse(filters) : {},
       };
@@ -101,7 +101,7 @@ class UnifiedSearchController {
 
       // Parse options
       const options = {
-        limit: limit ? parseInt(limit) : 5,
+        limit: limit ? parseInt(limit, 10) : 5,
       };
 
       console.log('Suggest parameters:', {
@@ -163,7 +163,7 @@ class UnifiedSearchController {
         filters.setName = setName;
       }
       if (year) {
-        filters.year = parseInt(year);
+        filters.year = parseInt(year, 10);
       }
       if (pokemonNumber) {
         filters.pokemonNumber = pokemonNumber;
@@ -172,13 +172,13 @@ class UnifiedSearchController {
         filters.variety = variety;
       }
       if (minPsaPopulation) {
-        filters.minPsaPopulation = parseInt(minPsaPopulation);
+        filters.minPsaPopulation = parseInt(minPsaPopulation, 10);
       }
 
       // Parse options
       const options = {
-        limit: limit ? parseInt(limit) : 20,
-        page: page ? parseInt(page) : 1,
+        limit: limit ? parseInt(limit, 10) : 20,
+        page: page ? parseInt(page, 10) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
         filters,
       };
@@ -246,8 +246,8 @@ class UnifiedSearchController {
 
       // Parse options
       const options = {
-        limit: limit ? parseInt(limit) : 20,
-        page: page ? parseInt(page) : 1,
+        limit: limit ? parseInt(limit, 10) : 20,
+        page: page ? parseInt(page, 10) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
         filters,
       };
@@ -298,25 +298,25 @@ class UnifiedSearchController {
       const filters = {};
 
       if (year) {
-        filters.year = parseInt(year);
+        filters.year = parseInt(year, 10);
       }
       if (minYear && maxYear) {
         filters.yearRange = {
-          start: parseInt(minYear),
-          end: parseInt(maxYear),
+          start: parseInt(minYear, 10),
+          end: parseInt(maxYear, 10),
         };
       }
       if (minPsaPopulation) {
-        filters.minPsaPopulation = parseInt(minPsaPopulation);
+        filters.minPsaPopulation = parseInt(minPsaPopulation, 10);
       }
       if (minCardCount) {
-        filters.minCardCount = parseInt(minCardCount);
+        filters.minCardCount = parseInt(minCardCount, 10);
       }
 
       // Parse options
       const options = {
-        limit: limit ? parseInt(limit) : 20,
-        page: page ? parseInt(page) : 1,
+        limit: limit ? parseInt(limit, 10) : 20,
+        page: page ? parseInt(page, 10) : 1,
         sort: sort ? JSON.parse(sort) : undefined,
         filters,
       };

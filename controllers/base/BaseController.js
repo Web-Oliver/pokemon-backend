@@ -58,7 +58,7 @@ class BaseController {
       const results = await this.service.getAll({}, {
         populate: this.options.defaultPopulate,
         sort: this.options.defaultSort,
-        limit: parseInt(req.query.limit) || this.options.defaultLimit,
+        limit: parseInt(req.query.limit, 10) || this.options.defaultLimit,
       });
 
       console.log(`Found ${results.length} ${this.options.pluralName}`);

@@ -173,23 +173,22 @@ const cleanupImages = async (req, res, next) => {
             path: imagePath,
             reason: 'Image is associated with a product',
           });
-          continue;
-        }
-
-        // Remove leading slash if present to get filename
-        const filename = imagePath.startsWith('/uploads/')
-          ? imagePath.replace('/uploads/', '')
-          : imagePath;
-
-        const fullPath = path.join(uploadsDir, filename);
-
-        // Check if file exists before attempting to delete
-        if (fs.existsSync(fullPath)) {
-          fs.unlinkSync(fullPath);
-          deletedFiles.push(imagePath);
-          console.log(`[CLEANUP] Deleted orphaned file: ${fullPath}`);
         } else {
-          console.log(`[CLEANUP] File not found: ${fullPath}`);
+        // Remove leading slash if present to get filename
+          const filename = imagePath.startsWith('/uploads/')
+            ? imagePath.replace('/uploads/', '')
+            : imagePath;
+
+          const fullPath = path.join(uploadsDir, filename);
+
+          // Check if file exists before attempting to delete
+          if (fs.existsSync(fullPath)) {
+            fs.unlinkSync(fullPath);
+            deletedFiles.push(imagePath);
+            console.log(`[CLEANUP] Deleted orphaned file: ${fullPath}`);
+          } else {
+            console.log(`[CLEANUP] File not found: ${fullPath}`);
+          }
         }
       } catch (error) {
         console.error(`[CLEANUP] Error processing file ${imagePath}:`, error);
@@ -249,21 +248,20 @@ const cleanupAllOrphanedImages = async (req, res, next) => {
             path: imagePath,
             reason: 'Image is associated with a product',
           });
-          continue;
-        }
-
+        } else {
         // Remove leading slash if present to get filename
-        const filename = imagePath.startsWith('/uploads/')
-          ? imagePath.replace('/uploads/', '')
-          : imagePath;
+          const filename = imagePath.startsWith('/uploads/')
+            ? imagePath.replace('/uploads/', '')
+            : imagePath;
 
-        const fullPath = path.join(uploadsDir, filename);
+          const fullPath = path.join(uploadsDir, filename);
 
-        // Check if file exists before attempting to delete
-        if (fs.existsSync(fullPath)) {
-          fs.unlinkSync(fullPath);
-          deletedFiles.push(imagePath);
-          console.log(`[CLEANUP ALL] Deleted orphaned file: ${fullPath}`);
+          // Check if file exists before attempting to delete
+          if (fs.existsSync(fullPath)) {
+            fs.unlinkSync(fullPath);
+            deletedFiles.push(imagePath);
+            console.log(`[CLEANUP ALL] Deleted orphaned file: ${fullPath}`);
+          }
         }
       } catch (error) {
         console.error(`[CLEANUP ALL] Error processing file ${imagePath}:`, error);

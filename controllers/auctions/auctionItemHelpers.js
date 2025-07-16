@@ -30,7 +30,7 @@ const populateAuctionItems = async (auction) => {
         break;
       default:
         console.error(`Unknown itemCategory: ${item.itemCategory}`);
-        return null;
+        throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
       }
 
       if (populatedItem) {
@@ -161,7 +161,7 @@ const calculateAuctionTotalValue = async (auction) => {
         break;
       default:
         console.error(`Unknown itemCategory: ${item.itemCategory}`);
-        continue;
+        throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
       }
 
       if (collectionItem && collectionItem.myPrice) {

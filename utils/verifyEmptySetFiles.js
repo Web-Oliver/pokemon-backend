@@ -67,33 +67,32 @@ async function verifyEmptySetFiles() {
     if (!foundFile) {
       console.log(`❓ File not found for: ${removedSet.setName} (ID: ${setId})`);
       fileNotFound++;
-      continue;
-    }
+    } else {
+      try {
+        const data = JSON.parse(fs.readFileSync(foundFile, 'utf8'));
 
-    try {
-      const data = JSON.parse(fs.readFileSync(foundFile, 'utf8'));
+        // Count cards in the set
+        let cardCount = 0;
 
-      // Count cards in the set
-      let cardCount = 0;
+        if (data.cards && Array.isArray(data.cards)) {
+          cardCount = data.cards.length;
+        } else if (data.pokemon_data && Array.isArray(data.pokemon_data)) {
+          cardCount = data.pokemon_data.length;
+        } else if (data.set_data && data.set_data.cards) {
+          cardCount = data.set_data.cards.length;
+        }
 
-      if (data.cards && Array.isArray(data.cards)) {
-        cardCount = data.cards.length;
-      } else if (data.pokemon_data && Array.isArray(data.pokemon_data)) {
-        cardCount = data.pokemon_data.length;
-      } else if (data.set_data && data.set_data.cards) {
-        cardCount = data.set_data.cards.length;
+        if (cardCount === 0) {
+          console.log(`✅ CONFIRMED EMPTY: ${removedSet.setName} (${cardCount} cards) - ${path.basename(foundFile)}`);
+          actuallyEmpty++;
+        } else {
+          console.log(`❌ NOT EMPTY: ${removedSet.setName} has ${cardCount} cards! - ${path.basename(foundFile)}`);
+          console.log(`   File: ${foundFile}`);
+          notEmpty++;
+        }
+      } catch (error) {
+        console.log(`❌ Error reading ${foundFile}: ${error.message}`);
       }
-
-      if (cardCount === 0) {
-        console.log(`✅ CONFIRMED EMPTY: ${removedSet.setName} (${cardCount} cards) - ${path.basename(foundFile)}`);
-        actuallyEmpty++;
-      } else {
-        console.log(`❌ NOT EMPTY: ${removedSet.setName} has ${cardCount} cards! - ${path.basename(foundFile)}`);
-        console.log(`   File: ${foundFile}`);
-        notEmpty++;
-      }
-    } catch (error) {
-      console.log(`❌ Error reading ${foundFile}: ${error.message}`);
     }
   }
 

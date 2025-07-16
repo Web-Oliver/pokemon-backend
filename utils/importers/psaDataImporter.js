@@ -32,51 +32,50 @@ const importSetMetadata = async (filePath) => {
         // Skip if URL already exists (primary identifier)
         if (existingSetByUrl) {
           console.log(`Set already exists with URL: ${setLink.url}, skipping...`);
-          continue;
-        }
-
+        } else {
         // Clean the set name first - remove problematic characters
-        function cleanSetName(name) {
-          return name
-            .replace(/[|\/\\&]/g, ' ') // Replace |, /, \, & with space
-            .replace(/[-–—_]/g, ' ') // Replace all dashes and underscores with space
-            .replace(/[()[\]]/g, '') // Remove parentheses and brackets
-            .replace(/[.,:;!?]/g, '') // Remove punctuation
-            .replace(/['""`]/g, '') // Remove quotes
-            .replace(/\s+/g, ' ') // Replace multiple spaces with single space
-            .trim(); // Remove leading/trailing spaces
-        }
+          function cleanSetName(name) {
+            return name
+              .replace(/[|\/\\&]/g, ' ') // Replace |, /, \, & with space
+              .replace(/[-–—_]/g, ' ') // Replace all dashes and underscores with space
+              .replace(/[()[\]]/g, '') // Remove parentheses and brackets
+              .replace(/[.,:;!?]/g, '') // Remove punctuation
+              .replace(/['""`]/g, '') // Remove quotes
+              .replace(/\s+/g, ' ') // Replace multiple spaces with single space
+              .trim(); // Remove leading/trailing spaces
+          }
 
-        let finalSetName = cleanSetName(setLink.set_name);
+          let finalSetName = cleanSetName(setLink.set_name);
 
-        // Always make promo sets unique by year to avoid conflicts
-        if (finalSetName.toLowerCase().includes('promo')
+          // Always make promo sets unique by year to avoid conflicts
+          if (finalSetName.toLowerCase().includes('promo')
             || finalSetName.toLowerCase().includes('black star')
             || finalSetName.toLowerCase().includes('world championships')) {
-          finalSetName = `${finalSetName} (${data.year})`;
+            finalSetName = `${finalSetName} (${data.year})`;
+          }
+
+          // Check if this unique name already exists
+          const existingSetByName = await Set.findOne({
+            setName: finalSetName,
+          });
+
+          // If still a duplicate, add the ID
+          if (existingSetByName) {
+            finalSetName = `${cleanSetName(setLink.set_name)} (${data.year} ${setLink.id})`;
+          }
+
+          // Create the set
+          await Set.create({
+            setName: finalSetName,
+            year: parseInt(data.year, 10),
+            setUrl: setLink.url,
+            totalCardsInSet: 0, // Will be updated in phase 2
+            totalPsaPopulation: 0, // Will be updated in phase 2
+          });
+
+          console.log(`Set metadata created: ${finalSetName} (${setLink.url})`);
+          setsProcessed++;
         }
-
-        // Check if this unique name already exists
-        const existingSetByName = await Set.findOne({
-          setName: finalSetName,
-        });
-
-        // If still a duplicate, add the ID
-        if (existingSetByName) {
-          finalSetName = `${cleanSetName(setLink.set_name)} (${data.year} ${setLink.id})`;
-        }
-
-        // Create the set
-        await Set.create({
-          setName: finalSetName,
-          year: parseInt(data.year, 10),
-          setUrl: setLink.url,
-          totalCardsInSet: 0, // Will be updated in phase 2
-          totalPsaPopulation: 0, // Will be updated in phase 2
-        });
-
-        console.log(`Set metadata created: ${finalSetName} (${setLink.url})`);
-        setsProcessed++;
       } catch (error) {
         console.error(`Error processing set ${setLink.set_name}:`, error.message);
       }

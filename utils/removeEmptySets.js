@@ -108,46 +108,45 @@ async function removeEmptySetsFromAllSetsFiles() {
 
       if (!data.set_links || !Array.isArray(data.set_links)) {
         console.log('  ⚠️  Skipping - not a valid all_sets file');
-        continue;
-      }
+      } else {
+        const originalCount = data.set_links.length;
+        const fileYear = parseInt(data.year);
 
-      const originalCount = data.set_links.length;
-      const fileYear = parseInt(data.year);
+        // Filter out empty sets
+        const filteredSetLinks = data.set_links.filter((setLink) => {
+          const setName = normalizeSetName(setLink.set_name);
 
-      // Filter out empty sets
-      const filteredSetLinks = data.set_links.filter((setLink) => {
-        const setName = normalizeSetName(setLink.set_name);
+          // Check if this set should be removed
+          const shouldRemove = emptySetsToRemove.some((emptySet) => {
+            const emptySetName = normalizeSetName(emptySet.name);
 
-        // Check if this set should be removed
-        const shouldRemove = emptySetsToRemove.some((emptySet) => {
-          const emptySetName = normalizeSetName(emptySet.name);
+            return emptySetName === setName && emptySet.year === fileYear;
+          });
 
-          return emptySetName === setName && emptySet.year === fileYear;
+          if (shouldRemove) {
+            console.log(`    ❌ Removing: ${setLink.set_name}`);
+            return false;
+          }
+
+          return true;
         });
 
-        if (shouldRemove) {
-          console.log(`    ❌ Removing: ${setLink.set_name}`);
-          return false;
-        }
+        const removedCount = originalCount - filteredSetLinks.length;
 
-        return true;
-      });
-
-      const removedCount = originalCount - filteredSetLinks.length;
-
-      if (removedCount > 0) {
+        if (removedCount > 0) {
         // Update the data
-        data.set_links = filteredSetLinks;
-        data.total_sets = filteredSetLinks.length;
+          data.set_links = filteredSetLinks;
+          data.total_sets = filteredSetLinks.length;
 
-        // Write back to file
-        fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+          // Write back to file
+          fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 
-        console.log(`  ✅ Modified: Removed ${removedCount} sets (${originalCount} → ${filteredSetLinks.length})`);
-        totalFilesModified++;
-        totalSetsRemoved += removedCount;
-      } else {
-        console.log('  ✅ No changes needed');
+          console.log(`  ✅ Modified: Removed ${removedCount} sets (${originalCount} → ${filteredSetLinks.length})`);
+          totalFilesModified++;
+          totalSetsRemoved += removedCount;
+        } else {
+          console.log('  ✅ No changes needed');
+        }
       }
     } catch (error) {
       console.log(`  ❌ Error processing ${filePath}: ${error.message}`);

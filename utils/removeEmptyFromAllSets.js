@@ -31,36 +31,35 @@ async function removeEmptyFromAllSets() {
 
       if (!data.set_links || !Array.isArray(data.set_links)) {
         console.log('   ⚠️  Skipping - not a valid all_sets file format');
-        continue;
+      } else {
+        const originalCount = data.set_links.length;
+
+        // Get IDs of empty sets to remove
+        const emptySetIds = new Set(emptySets.map((set) => set.id));
+
+        // Filter out empty sets
+        data.set_links = data.set_links.filter((setLink) => {
+          const shouldRemove = emptySetIds.has(setLink.id);
+
+          if (shouldRemove) {
+            console.log(`   🗑️  Removing: ${setLink.set_name} (ID: ${setLink.id})`);
+          }
+          return !shouldRemove;
+        });
+
+        const newCount = data.set_links.length;
+        const removedCount = originalCount - newCount;
+
+        // Update total_sets count
+        data.total_sets = newCount;
+
+        // Write back to file
+        fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
+
+        console.log(`   ✅ Removed ${removedCount} empty sets (${originalCount} → ${newCount})`);
+        totalRemoved += removedCount;
+        filesModified++;
       }
-
-      const originalCount = data.set_links.length;
-
-      // Get IDs of empty sets to remove
-      const emptySetIds = new Set(emptySets.map((set) => set.id));
-
-      // Filter out empty sets
-      data.set_links = data.set_links.filter((setLink) => {
-        const shouldRemove = emptySetIds.has(setLink.id);
-
-        if (shouldRemove) {
-          console.log(`   🗑️  Removing: ${setLink.set_name} (ID: ${setLink.id})`);
-        }
-        return !shouldRemove;
-      });
-
-      const newCount = data.set_links.length;
-      const removedCount = originalCount - newCount;
-
-      // Update total_sets count
-      data.total_sets = newCount;
-
-      // Write back to file
-      fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-
-      console.log(`   ✅ Removed ${removedCount} empty sets (${originalCount} → ${newCount})`);
-      totalRemoved += removedCount;
-      filesModified++;
     } catch (error) {
       console.log(`   ❌ Error processing ${filePath}: ${error.message}`);
     }
