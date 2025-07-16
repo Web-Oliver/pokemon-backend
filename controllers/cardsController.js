@@ -1,8 +1,7 @@
 const Card = require('../models/Card');
 const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
-const Fuse = require('fuse.js');
-const searchService = require('../services/searchService');
+const container = require('../container');
 
 const getAllCards = asyncHandler(async (req, res) => {
   const { setId, cardName, baseName } = req.query;
@@ -124,130 +123,78 @@ const getCardsBySetId = asyncHandler(async (req, res) => {
 const searchBestMatch = asyncHandler(async (req, res) => {
   const { q, pokemonNumber, setName, year } = req.query;
 
-  // Get all cards with set information
-  const pipeline = [
-    {
-      $lookup: {
-        from: 'sets',
-        localField: 'setId',
-        foreignField: '_id',
-        as: 'set',
-      },
-    },
-    { $unwind: '$set' },
-  ];
+  try {
+    // Use the unified search system for consistent results
+    const searchFactory = container.resolve('searchFactory');
+    const cardStrategy = searchFactory.getStrategy('cards');
 
-  // Apply basic filters first to reduce dataset
-  const preFilterStage = {};
-
-  if (pokemonNumber) {
-    preFilterStage.pokemonNumber = pokemonNumber;
-  }
-  
-  // CRITICAL FIX: Filter by set name and year AFTER lookup but before processing
-  const postLookupFilter = {};
-  if (setName) {
-    postLookupFilter['set.setName'] = new RegExp(setName, 'i');
-  }
-  if (year) {
-    postLookupFilter['set.year'] = parseInt(year, 10);
-  }
-
-  // Add pre-lookup filters
-  if (Object.keys(preFilterStage).length > 0) {
-    pipeline.splice(0, 0, { $match: preFilterStage }); // Add at beginning before lookup
-  }
-
-  // Add post-lookup filters
-  if (Object.keys(postLookupFilter).length > 0) {
-    pipeline.push({ $match: postLookupFilter });
-  }
-
-  const cards = await Card.aggregate(pipeline);
-
-  // If no search query, return with basic scoring
-  if (!q) {
-    const sortedCards = cards
-      .sort((a, b) => {
-        // Sort by PSA popularity
-        const aPopularity = (a.psaTotalGradedForCard || 0) + ((a.psaGrades?.psa_10 || 0) * 10);
-        const bPopularity = (b.psaTotalGradedForCard || 0) + ((b.psaGrades?.psa_10 || 0) * 10);
-
-        return bPopularity - aPopularity;
-      })
-      .slice(0, 15);
-
-    return res.status(200).json({ success: true, data: sortedCards });
-  }
-
-  // Configure Fuse.js for fuzzy searching
-  const fuseOptions = {
-    includeScore: true,
-    threshold: 0.4, // Lower = more strict matching
-    minMatchCharLength: 1,
-    keys: [
-      {
-        name: 'cardName',
-        weight: 0.4,
-      },
-      {
-        name: 'baseName',
-        weight: 0.3,
-      },
-      {
-        name: 'variety',
-        weight: 0.2,
-      },
-      {
-        name: 'set.setName',
-        weight: 0.1,
-      },
-    ],
-  };
-
-  const fuse = new Fuse(cards, fuseOptions);
-  const fuseResults = fuse.search(q);
-
-  // Enhance results with custom popularity scoring
-  const enhancedResults = fuseResults.map((result) => {
-    const card = result.item;
-    const fuseScore = result.score; // Lower is better for Fuse.js
-
-    // Calculate popularity score (higher is better)
-    const popularityScore
-      = ((card.psaGrades?.psa_10 || 0) * 10) // PSA 10s are highly valued
-      + ((card.psaGrades?.psa_9 || 0) * 5) // PSA 9s are also valuable
-      + ((card.psaTotalGradedForCard || 0) * 0.1); // General popularity
-
-    // Exact match bonuses
-    let exactMatchBonus = 0;
-
-    if (card.cardName?.toLowerCase() === q.toLowerCase()) {
-      exactMatchBonus += 100;
+    // Build filters for the unified search
+    const filters = {};
+    
+    if (pokemonNumber) {
+      filters.pokemonNumber = pokemonNumber;
     }
-    if (card.baseName?.toLowerCase() === q.toLowerCase()) {
-      exactMatchBonus += 50;
+    
+    if (setName) {
+      filters.setName = setName;
+    }
+    
+    if (year) {
+      filters.year = parseInt(year, 10);
     }
 
-    // Combined score: prioritize exact matches, then fuzzy relevance, then popularity
-    const combinedScore = exactMatchBonus + ((1 - fuseScore) * 100) + (popularityScore * 0.1);
-
-    return {
-      ...card,
-      fuseScore,
-      popularityScore,
-      exactMatchBonus,
-      combinedScore,
+    // Use unified search with enhanced filtering
+    const searchOptions = {
+      limit: 15,
+      includeSetInfo: true,
+      filters,
+      enhancedScoring: true // Enable PSA popularity scoring
     };
-  });
 
-  // Sort by combined score and limit results
-  const finalResults = enhancedResults
-    .sort((a, b) => b.combinedScore - a.combinedScore)
-    .slice(0, 15)
-    .map(({ fuseScore, popularityScore, exactMatchBonus, combinedScore, ...card }) => card);
+    let results;
+    
+    if (!q) {
+      // If no query, get popular cards with applied filters
+      results = await cardStrategy.searchByPopularity(searchOptions);
+    } else {
+      // Use unified search with query
+      results = await cardStrategy.search(q, searchOptions);
+    }
 
-  res.status(200).json({ success: true, data: finalResults });
+    res.status(200).json({ 
+      success: true, 
+      data: results.data || results,
+      meta: results.meta || {
+        source: 'unified-search',
+        totalResults: (results.data || results).length
+      }
+    });
+
+  } catch (error) {
+    console.error('Search best match error:', error);
+    
+    // Fallback to basic search if unified search fails
+    const basicQuery = {};
+    
+    if (pokemonNumber) {
+      basicQuery.pokemonNumber = pokemonNumber;
+    }
+    
+    if (q) {
+      basicQuery.$or = [
+        { cardName: { $regex: q, $options: 'i' } },
+        { baseName: { $regex: q, $options: 'i' } },
+        { variety: { $regex: q, $options: 'i' } }
+      ];
+    }
+
+    const cards = await Card.find(basicQuery)
+      .populate('setId', 'setName year')
+      .limit(15)
+      .lean();
+
+    res.status(200).json({ success: true, data: cards });
+  }
 });
 
 module.exports = {

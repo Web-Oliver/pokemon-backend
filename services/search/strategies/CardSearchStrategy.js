@@ -171,19 +171,8 @@ class CardSearchStrategy extends BaseSearchStrategy {
       });
     }
     
-    // Apply set name filter if provided
-    if (options.filters && options.filters.setName) {
-      conditions.push({
-        'setInfo.setName': new RegExp(this.escapeRegex(options.filters.setName), 'i')
-      });
-    }
-    
-    // Apply year filter if provided
-    if (options.filters && options.filters.year) {
-      conditions.push({
-        'setInfo.year': options.filters.year
-      });
-    }
+    // NOTE: setInfo-based filters moved to separate method to handle after lookup
+    // setName and year filtering now handled in buildSetFilterConditions after lookup
     
     // Apply Pokemon number filter if provided
     if (options.filters && options.filters.pokemonNumber) {
@@ -212,6 +201,79 @@ class CardSearchStrategy extends BaseSearchStrategy {
     
     // Combine all conditions
     return conditions.length > 1 ? { $and: conditions } : conditions[0];
+  }
+
+  /**
+   * Builds search pipeline with correct order for set filtering
+   * @param {string} query - Search query
+   * @param {Object} options - Search options
+   * @returns {Array} - MongoDB aggregation pipeline
+   */
+  buildSearchPipeline(query, options = {}) {
+    const pipeline = [];
+    
+    // Step 1: Add initial match conditions (excluding setInfo fields)
+    const initialMatchConditions = this.buildMatchConditions(query, options);
+    if (initialMatchConditions && Object.keys(initialMatchConditions).length > 0) {
+      pipeline.push({ $match: initialMatchConditions });
+    }
+    
+    // Step 2: Add lookup stages to get set information
+    const lookupStages = this.buildLookupStages(options);
+    if (lookupStages.length > 0) {
+      pipeline.push(...lookupStages);
+    }
+    
+    // Step 3: Add set-based filtering AFTER lookup
+    const setFilterConditions = this.buildSetFilterConditions(options);
+    if (setFilterConditions && Object.keys(setFilterConditions).length > 0) {
+      pipeline.push({ $match: setFilterConditions });
+    }
+    
+    // Step 4: Add scoring stage
+    if (this.options.enableScoring) {
+      pipeline.push(this.buildScoringStage(query, options));
+    }
+    
+    // Step 5: Add sorting
+    const sortStage = this.buildSortStage(options);
+    if (sortStage) {
+      pipeline.push(sortStage);
+    }
+    
+    // Step 6: Add pagination
+    const paginationStages = this.buildPaginationStages(options);
+    if (paginationStages.length > 0) {
+      pipeline.push(...paginationStages);
+    }
+    
+    return pipeline;
+  }
+
+  /**
+   * Builds set-based filter conditions (after lookup)
+   * @param {Object} options - Search options
+   * @returns {Object} - MongoDB match conditions for set fields
+   */
+  buildSetFilterConditions(options = {}) {
+    const conditions = [];
+    
+    // Apply set name filter if provided (after lookup)
+    if (options.filters && options.filters.setName) {
+      conditions.push({
+        'setInfo.setName': new RegExp(this.escapeRegex(options.filters.setName), 'i')
+      });
+    }
+    
+    // Apply year filter if provided (after lookup)
+    if (options.filters && options.filters.year) {
+      conditions.push({
+        'setInfo.year': options.filters.year
+      });
+    }
+    
+    // Combine all conditions
+    return conditions.length > 1 ? { $and: conditions } : (conditions.length === 1 ? conditions[0] : {});
   }
 
   /**

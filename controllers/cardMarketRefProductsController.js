@@ -2,7 +2,6 @@ const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct
 const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
 const Fuse = require('fuse.js');
-const searchService = require('../services/searchService');
 const { SearchUtility } = require('../services/searchService');
 
 const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
