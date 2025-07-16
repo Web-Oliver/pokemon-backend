@@ -1,6 +1,7 @@
 const SealedProduct = require('../models/SealedProduct');
 const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
 const sealedProductCrudService = require('../services/sealedProductCrudService');
+const SaleService = require('../services/shared/saleService');
 const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
 
@@ -115,43 +116,12 @@ const deleteSealedProduct = asyncHandler(async (req, res) => {
 });
 
 const markAsSold = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    throw new ValidationError('Invalid ObjectId format');
-  }
+  // Validate sale details
+  SaleService.validateSaleDetails(req.body);
+  
+  // Mark sealed product as sold using centralized service
+  const sealedProduct = await SaleService.markSealedProductAsSold(SealedProduct, req.params.id, req.body);
 
-  const {
-    paymentMethod,
-    actualSoldPrice,
-    deliveryMethod,
-    source,
-    buyerFullName,
-    buyerAddress,
-    buyerPhoneNumber,
-    buyerEmail,
-    trackingNumber,
-  } = req.body;
-
-  const sealedProduct = await SealedProduct.findById(req.params.id);
-
-  if (!sealedProduct) {
-    throw new NotFoundError('Sealed product not found');
-  }
-
-  sealedProduct.sold = true;
-  sealedProduct.saleDetails = {
-    paymentMethod,
-    actualSoldPrice,
-    deliveryMethod,
-    source,
-    dateSold: new Date(),
-    buyerFullName,
-    buyerAddress,
-    buyerPhoneNumber,
-    buyerEmail,
-    trackingNumber,
-  };
-
-  await sealedProduct.save();
   res.status(200).json({
     success: true,
     data: sealedProduct,

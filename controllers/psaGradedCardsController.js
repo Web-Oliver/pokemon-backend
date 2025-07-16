@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const PsaGradedCard = require('../models/PsaGradedCard');
 const psaQueryService = require('../services/psaGradedCardQueryService');
 const psaCrudService = require('../services/psaGradedCardCrudService');
+const SaleService = require('../services/shared/saleService');
 const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
 
 const getAllPsaGradedCards = asyncHandler(async (req, res) => {
@@ -111,52 +112,11 @@ const deletePsaGradedCard = asyncHandler(async (req, res) => {
 });
 
 const markAsSold = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    throw new ValidationError('Invalid ObjectId format');
-  }
-
-  const {
-    paymentMethod,
-    actualSoldPrice,
-    deliveryMethod,
-    source,
-    buyerFullName,
-    buyerAddress,
-    buyerPhoneNumber,
-    buyerEmail,
-    trackingNumber,
-  } = req.body;
-
-  const psaGradedCard = await PsaGradedCard.findById(req.params.id);
-
-  if (!psaGradedCard) {
-    throw new NotFoundError('PSA graded card not found');
-  }
-
-  psaGradedCard.sold = true;
-  psaGradedCard.saleDetails = {
-    paymentMethod,
-    actualSoldPrice,
-    deliveryMethod,
-    source,
-    dateSold: new Date(),
-    buyerFullName,
-    buyerAddress,
-    buyerPhoneNumber,
-    buyerEmail,
-    trackingNumber,
-  };
-
-  await psaGradedCard.save();
-
-  // Populate the response
-  await psaGradedCard.populate({
-    path: 'cardId',
-    populate: {
-      path: 'setId',
-      model: 'Set',
-    },
-  });
+  // Validate sale details
+  SaleService.validateSaleDetails(req.body);
+  
+  // Mark card as sold using centralized service
+  const psaGradedCard = await SaleService.markCardAsSold(PsaGradedCard, req.params.id, req.body);
 
   res.status(200).json({ success: true, data: psaGradedCard });
 });

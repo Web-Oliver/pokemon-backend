@@ -2,52 +2,9 @@ const RawCard = require('../models/RawCard');
 const Card = require('../models/Card');
 const Set = require('../models/Set');
 const mongoose = require('mongoose');
-const fs = require('fs').promises;
-const path = require('path');
 const { validateReferenceData, validateUserSpecificFields } = require('./referenceDataValidator');
+const ImageManager = require('./shared/imageManager');
 
-/**
- * Delete image files from the filesystem
- * @param {string[]} imageUrls - Array of image URLs to delete
- */
-const deleteImageFiles = async (imageUrls) => {
-  if (!imageUrls || imageUrls.length === 0) {
-    return;
-  }
-
-  console.log('[IMAGE CLEANUP] Starting deletion of', imageUrls.length, 'images');
-
-  for (const imageUrl of imageUrls) {
-    try {
-      // Convert URL to file path
-      // Assuming images are stored as relative paths like "/uploads/images/filename.jpg"
-      if (imageUrl && imageUrl.startsWith('/uploads/')) {
-        const filePath = path.join(__dirname, '..', imageUrl);
-        console.log('[IMAGE CLEANUP] Attempting to delete:', filePath);
-        
-        // Check if file exists before trying to delete
-        try {
-          await fs.access(filePath);
-          await fs.unlink(filePath);
-          console.log('[IMAGE CLEANUP] Successfully deleted:', filePath);
-        } catch (accessError) {
-          if (accessError.code === 'ENOENT') {
-            console.log('[IMAGE CLEANUP] File not found (already deleted):', filePath);
-          } else {
-            throw accessError;
-          }
-        }
-      } else {
-        console.log('[IMAGE CLEANUP] Skipping external/invalid URL:', imageUrl);
-      }
-    } catch (error) {
-      console.error('[IMAGE CLEANUP] Failed to delete image:', imageUrl, error);
-      // Continue with other images even if one fails
-    }
-  }
-
-  console.log('[IMAGE CLEANUP] Cleanup completed');
-};
 
 const validateCreateData = (data) => {
   const { cardName, setName, myPrice, condition } = data;
@@ -204,7 +161,7 @@ const updateRawCard = async (id, updateData) => {
     if (removedImages.length > 0) {
       console.log('[RAW UPDATE] Images to delete:', removedImages);
       // Delete removed images from filesystem (async, don't wait)
-      deleteImageFiles(removedImages).catch(error => {
+      ImageManager.deleteImageFiles(removedImages).catch(error => {
         console.error('[RAW UPDATE] Error during image cleanup:', error);
       });
     }

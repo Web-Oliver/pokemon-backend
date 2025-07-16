@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const RawCard = require('../models/RawCard');
 const rawCardQueryService = require('../services/rawCardQueryService');
 const rawCardCrudService = require('../services/rawCardCrudService');
+const SaleService = require('../services/shared/saleService');
 const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
 
 const getAllRawCards = asyncHandler(async (req, res) => {
@@ -106,52 +107,11 @@ const deleteRawCard = asyncHandler(async (req, res) => {
 });
 
 const markAsSold = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    throw new ValidationError('Invalid ObjectId format');
-  }
-
-  const {
-    paymentMethod,
-    actualSoldPrice,
-    deliveryMethod,
-    source,
-    buyerFullName,
-    buyerAddress,
-    buyerPhoneNumber,
-    buyerEmail,
-    trackingNumber,
-  } = req.body;
-
-  const rawCard = await RawCard.findById(req.params.id);
-
-  if (!rawCard) {
-    throw new NotFoundError('Raw card not found');
-  }
-
-  rawCard.sold = true;
-  rawCard.saleDetails = {
-    paymentMethod,
-    actualSoldPrice,
-    deliveryMethod,
-    source,
-    dateSold: new Date(),
-    buyerFullName,
-    buyerAddress,
-    buyerPhoneNumber,
-    buyerEmail,
-    trackingNumber,
-  };
-
-  await rawCard.save();
-
-  // Populate the response
-  await rawCard.populate({
-    path: 'cardId',
-    populate: {
-      path: 'setId',
-      model: 'Set',
-    },
-  });
+  // Validate sale details
+  SaleService.validateSaleDetails(req.body);
+  
+  // Mark card as sold using centralized service
+  const rawCard = await SaleService.markCardAsSold(RawCard, req.params.id, req.body);
 
   res.status(200).json({
     success: true,
