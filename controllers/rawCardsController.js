@@ -1,17 +1,14 @@
-const RawCard = require('../models/RawCard');
-const rawCardQueryService = require('../services/rawCardQueryService');
-const rawCardCrudService = require('../services/rawCardCrudService');
 const BaseController = require('./base/BaseController');
 
 /**
  * Raw Card Controller
  * 
  * Extends BaseController to provide CRUD operations for raw cards.
- * Uses the new architecture with significantly reduced code duplication.
+ * Uses dependency injection and repository pattern for improved architecture.
  */
 class RawCardController extends BaseController {
   constructor() {
-    super(RawCard, rawCardQueryService, rawCardCrudService, {
+    super('rawCardService', {
       entityName: 'RawCard',
       pluralName: 'rawCards',
       includeMarkAsSold: true,

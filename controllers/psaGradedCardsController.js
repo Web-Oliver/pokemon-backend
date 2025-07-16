@@ -1,17 +1,14 @@
-const PsaGradedCard = require('../models/PsaGradedCard');
-const psaQueryService = require('../services/psaGradedCardQueryService');
-const psaCrudService = require('../services/psaGradedCardCrudService');
 const BaseController = require('./base/BaseController');
 
 /**
  * PSA Graded Card Controller
  * 
  * Extends BaseController to provide CRUD operations for PSA graded cards.
- * Uses the new architecture with significantly reduced code duplication.
+ * Uses dependency injection and repository pattern for improved architecture.
  */
 class PsaGradedCardController extends BaseController {
   constructor() {
-    super(PsaGradedCard, psaQueryService, psaCrudService, {
+    super('psaGradedCardService', {
       entityName: 'PsaGradedCard',
       pluralName: 'psaGradedCards',
       includeMarkAsSold: true,

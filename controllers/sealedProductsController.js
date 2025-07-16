@@ -1,16 +1,14 @@
-const SealedProduct = require('../models/SealedProduct');
-const sealedProductCrudService = require('../services/sealedProductCrudService');
 const BaseController = require('./base/BaseController');
 
 /**
  * Sealed Product Controller
  * 
  * Extends BaseController to provide CRUD operations for sealed products.
- * Uses the new architecture with significantly reduced code duplication.
+ * Uses dependency injection and repository pattern for improved architecture.
  */
 class SealedProductController extends BaseController {
   constructor() {
-    super(SealedProduct, null, sealedProductCrudService, {
+    super('sealedProductService', {
       entityName: 'SealedProduct',
       pluralName: 'sealedProducts',
       includeMarkAsSold: true,
