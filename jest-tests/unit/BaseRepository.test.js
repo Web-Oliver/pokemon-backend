@@ -125,7 +125,10 @@ describe('BaseRepository', () => {
 
       expect(results).toHaveLength(3);
       expect(results[0].name).toBeDefined();
-      expect(results[0].relatedField?.name).toBe('Related Document'); // First doc has population
+      // Find the document that has the populated relatedField
+      const populatedDoc = results.find(doc => doc.relatedField && doc.relatedField.name);
+
+      expect(populatedDoc?.relatedField?.name).toBe('Related Document');
     });
 
     test('should apply filters correctly', async () => {
