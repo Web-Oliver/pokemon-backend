@@ -242,10 +242,15 @@ const updatePsaGradedCard = async (id, updateData) => {
 
     // Set myPrice to the most recent price from history
     if (priceHistory.length > 0) {
-      const latestPrice = priceHistory[priceHistory.length - 1].price;
+      const latestEntry = priceHistory[priceHistory.length - 1];
+      const latestPrice = latestEntry.price;
+      
+      console.log('[PSA UPDATE] Latest price history entry:', JSON.stringify(latestEntry, null, 2));
+      console.log('[PSA UPDATE] Latest price value:', latestPrice, 'Type:', typeof latestPrice);
 
+      // Let MongoDB handle the Decimal128 conversion by using the raw value
       dataToUpdate.myPrice = latestPrice;
-      console.log('[PSA UPDATE] Using latest price from history:', latestPrice);
+      console.log('[PSA UPDATE] Set dataToUpdate.myPrice to:', latestPrice, 'Type:', typeof latestPrice);
     }
   } else if (myPrice !== undefined) {
     console.log('[PSA UPDATE] Only myPrice provided, adding to existing history');

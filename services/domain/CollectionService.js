@@ -1,6 +1,7 @@
 const { ValidationError, NotFoundError } = require('../../middleware/errorHandler');
 const ImageManager = require('../shared/imageManager');
 const SaleService = require('../shared/saleService');
+const ActivityService = require('../activityService');
 
 /**
  * Collection Service
@@ -152,8 +153,40 @@ class CollectionService {
    */
   async delete(id) {
     try {
-      // Get the item first to handle cleanup
-      const item = await this.repository.findById(id);
+      // Get the item first to handle cleanup and activity tracking
+      // Use proper populate configuration based on entity type
+      const populateConfig = this.getDeletePopulateConfig();
+      const item = await this.repository.findById(id, { populate: populateConfig });
+
+      // Determine card type based on entity name and collection type
+      let cardType = 'raw'; // default
+      const entityName = this.options.entityName?.toLowerCase();
+      
+      if (entityName?.includes('psa') || entityName?.includes('graded')) {
+        cardType = 'psa';
+      } else if (entityName?.includes('sealed') || entityName?.includes('product')) {
+        cardType = 'sealed';
+      } else if (entityName?.includes('raw')) {
+        cardType = 'raw';
+      }
+
+      // Log deletion activity before actually deleting
+      if (item) {
+        try {
+          console.log(`[COLLECTION SERVICE] Logging deletion activity for ${this.options.entityName} ${id} (cardType: ${cardType})`);
+          console.log('[COLLECTION SERVICE] Item to delete:', {
+            id: item._id,
+            cardName: item.cardName || item.cardId?.cardName,
+            setName: item.setName || item.cardId?.setId?.setName
+          });
+          
+          const activity = await ActivityService.logCardDeleted(item, cardType);
+          console.log(`[COLLECTION SERVICE] Deletion activity created successfully:`, activity._id);
+        } catch (activityError) {
+          console.error(`[COLLECTION SERVICE] Failed to log deletion activity for ${this.options.entityName} ${id}:`, activityError);
+          // Don't let activity logging failures prevent deletion
+        }
+      }
 
       // Delete associated images if enabled
       if (this.options.enableImageManagement && item && item.images && item.images.length > 0) {
@@ -352,6 +385,38 @@ class CollectionService {
     } catch (error) {
       throw error;
     }
+  }
+
+  /**
+   * Gets populate configuration for deletion operations
+   * @returns {Object|string|null} - Populate configuration
+   */
+  getDeletePopulateConfig() {
+    const entityName = this.options.entityName?.toLowerCase();
+    
+    // Return appropriate populate configuration based on entity type
+    if (entityName?.includes('psa') || entityName?.includes('graded')) {
+      return {
+        path: 'cardId',
+        populate: {
+          path: 'setId',
+          model: 'Set',
+        },
+      };
+    } else if (entityName?.includes('raw')) {
+      return {
+        path: 'cardId',
+        populate: {
+          path: 'setId',
+          model: 'Set',
+        },
+      };
+    } else if (entityName?.includes('sealed') || entityName?.includes('product')) {
+      return 'productId';
+    }
+    
+    // Default: no population
+    return null;
   }
 
   /**

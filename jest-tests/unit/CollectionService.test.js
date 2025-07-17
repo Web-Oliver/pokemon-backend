@@ -314,7 +314,17 @@ describe('CollectionService', () => {
 
   describe('delete', () => {
     test('should delete item successfully', async () => {
-      const mockItem = { id: '123', name: 'Deleted Item', images: [] };
+      const mockItem = { 
+        _id: '123', 
+        name: 'Deleted Item', 
+        images: [],
+        cardId: {
+          cardName: 'Test Card',
+          setId: {
+            setName: 'Test Set'
+          }
+        }
+      };
       const mockDeletedItem = { id: '123', name: 'Deleted Item' };
 
       mockRepository.findById.mockResolvedValue(mockItem);
@@ -322,7 +332,7 @@ describe('CollectionService', () => {
 
       const result = await collectionService.delete('123');
 
-      expect(mockRepository.findById).toHaveBeenCalledWith('123');
+      expect(mockRepository.findById).toHaveBeenCalledWith('123', { populate: null });
       expect(mockRepository.delete).toHaveBeenCalledWith('123');
       expect(result).toEqual(mockDeletedItem);
     });

@@ -1,18 +1,4 @@
-const UnifiedSearchController = require('../../controllers/search/UnifiedSearchController');
 const { ValidationError } = require('../../middleware/errorHandler');
-
-// Mock the container before requiring
-jest.mock('../../container', () => ({
-  resolve: jest.fn(),
-  getStats: jest.fn(() => ({
-    totalDependencies: 10,
-    singletons: 5,
-    transients: 5,
-    initialized: true,
-  })),
-}));
-
-const mockContainer = require('../../container');
 
 // Mock search factory
 const mockSearchFactory = {
@@ -25,12 +11,31 @@ const mockSearchFactory = {
   getCacheStats: jest.fn(),
 };
 
+// Mock the container before requiring
+jest.mock('../../container', () => ({
+  resolve: jest.fn((dep) => {
+    if (dep === 'searchFactory') {
+      return mockSearchFactory;
+    }
+    throw new Error(`Unknown dependency: ${dep}`);
+  }),
+  getStats: jest.fn(() => ({
+    totalDependencies: 10,
+    singletons: 5,
+    transients: 5,
+    initialized: true,
+  })),
+}));
+
+const UnifiedSearchController = require('../../controllers/search/UnifiedSearchController');
+
 describe('UnifiedSearchController', () => {
   let mockRequest;
   let mockResponse;
   let mockStrategy;
 
   beforeEach(() => {
+
     // Mock Express request and response objects
     mockRequest = {
       query: {},
@@ -549,7 +554,7 @@ describe('UnifiedSearchController', () => {
       mockSearchFactory.getCacheStats.mockReturnValue(mockCacheStats);
       mockSearchFactory.getRegisteredTypes.mockReturnValue(mockRegisteredTypes);
 
-      await UnifiedSearchController.getSearchStats(mockRequest, mockResponse);
+      await controller.getSearchStats(mockRequest, mockResponse);
 
       expect(mockResponse.status).toHaveBeenCalledWith(200);
       expect(mockResponse.json).toHaveBeenCalledWith({

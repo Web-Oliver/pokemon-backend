@@ -513,6 +513,25 @@ describe('BaseRepository', () => {
     });
 
     test('should create a readable stream', (done) => {
+      // Mock the stream method on the query
+      const mockStreamData = [
+        { name: 'Stream Doc 1' },
+        { name: 'Stream Doc 2' },
+        { name: 'Stream Doc 3' },
+      ];
+
+      // Create a mock stream
+      const EventEmitter = require('events');
+      const mockStream = new EventEmitter();
+      
+      // Mock the find query to return a query object with stream method
+      const mockQuery = {
+        populate: jest.fn().mockReturnThis(),
+        stream: jest.fn().mockReturnValue(mockStream)
+      };
+      
+      jest.spyOn(TestModel, 'find').mockReturnValue(mockQuery);
+
       const stream = repository.createStream({ name: /^Stream/ });
       const documents = [];
 
@@ -527,6 +546,12 @@ describe('BaseRepository', () => {
       });
 
       stream.on('error', done);
+
+      // Simulate stream events
+      setTimeout(() => {
+        mockStreamData.forEach(doc => stream.emit('data', doc));
+        stream.emit('end');
+      }, 10);
     });
   });
 

@@ -275,6 +275,26 @@ describe('SearchFactory', () => {
       // Clear previous calls to get accurate count for this test
       MockCardSearchStrategy.mockClear();
       
+      // Create different mock instances for different options
+      const mockCardStrategy1 = {
+        search: jest.fn(),
+        suggest: jest.fn(),
+        getSupportedOptions: jest.fn(),
+        validateSearchInput: jest.fn(),
+      };
+      
+      const mockCardStrategy2 = {
+        search: jest.fn(),
+        suggest: jest.fn(),
+        getSupportedOptions: jest.fn(),
+        validateSearchInput: jest.fn(),
+      };
+      
+      // Mock to return different instances for different calls
+      MockCardSearchStrategy
+        .mockImplementationOnce(() => mockCardStrategy1)
+        .mockImplementationOnce(() => mockCardStrategy2);
+      
       const options1 = { option1: 'value1' };
       const options2 = { option1: 'value2' };
       

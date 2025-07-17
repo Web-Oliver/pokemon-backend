@@ -264,13 +264,31 @@ class ActivityService {
   }
 
   static async logCardDeleted(cardData, cardType) {
+    console.log('[ACTIVITY SERVICE] logCardDeleted called with:', {
+      cardDataId: cardData._id,
+      cardType,
+      cardData: {
+        cardName: cardData.cardName,
+        setName: cardData.setName,
+        cardId: cardData.cardId
+      }
+    });
+
     const cardName = cardData.cardName || cardData.cardId?.cardName || 'Unknown Card';
     const setName = cardData.setName || cardData.cardId?.setId?.setName || 'Unknown Set';
 
     const title = `Removed ${cardName}`;
     const description = `${setName} - Card removed from collection`;
 
-    return this.createActivity({
+    console.log('[ACTIVITY SERVICE] Creating deletion activity:', {
+      type: ACTIVITY_TYPES.CARD_DELETED,
+      title,
+      description,
+      entityType: `${cardType}_card`,
+      entityId: cardData._id
+    });
+
+    const activity = await this.createActivity({
       type: ACTIVITY_TYPES.CARD_DELETED,
       title,
       description,
@@ -285,6 +303,9 @@ class ActivityService {
         tags: [cardType, 'card_deleted', setName.toLowerCase().replace(/\s+/g, '_')],
       },
     });
+
+    console.log('[ACTIVITY SERVICE] Deletion activity created successfully:', activity._id);
+    return activity;
   }
 
   // Context7 Price Update Activities

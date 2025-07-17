@@ -134,10 +134,15 @@ describe('BaseController', () => {
 
     test('should handle service errors', async () => {
       const error = new Error('Service error');
-
       mockService.getAll.mockRejectedValue(error);
 
-      await expect(controller.getAll(mockRequest, mockResponse)).rejects.toThrow('Service error');
+      // Mock next function to capture error
+      const mockNext = jest.fn();
+      
+      // Call the controller method (asyncHandler will catch and call next)
+      await controller.getAll(mockRequest, mockResponse, mockNext);
+
+      expect(mockNext).toHaveBeenCalledWith(error);
       expect(console.error).toHaveBeenCalled();
     });
   });
@@ -164,11 +169,13 @@ describe('BaseController', () => {
 
     test('should handle service errors for getById', async () => {
       const error = new NotFoundError('Entity not found');
-
       mockService.getById.mockRejectedValue(error);
       mockRequest.params.id = '999';
 
-      await expect(controller.getById(mockRequest, mockResponse)).rejects.toThrow('Entity not found');
+      const mockNext = jest.fn();
+      await controller.getById(mockRequest, mockResponse, mockNext);
+
+      expect(mockNext).toHaveBeenCalledWith(error);
       expect(console.error).toHaveBeenCalled();
     });
   });
@@ -196,11 +203,13 @@ describe('BaseController', () => {
 
     test('should handle validation errors', async () => {
       const error = new ValidationError('Invalid data');
-
       mockService.create.mockRejectedValue(error);
       mockRequest.body = { invalid: 'data' };
 
-      await expect(controller.create(mockRequest, mockResponse)).rejects.toThrow('Invalid data');
+      const mockNext = jest.fn();
+      await controller.create(mockRequest, mockResponse, mockNext);
+
+      expect(mockNext).toHaveBeenCalledWith(error);
       expect(console.error).toHaveBeenCalled();
     });
   });
@@ -229,12 +238,14 @@ describe('BaseController', () => {
 
     test('should handle update errors', async () => {
       const error = new NotFoundError('Entity not found');
-
       mockService.update.mockRejectedValue(error);
       mockRequest.params.id = '999';
       mockRequest.body = { name: 'Updated' };
 
-      await expect(controller.update(mockRequest, mockResponse)).rejects.toThrow('Entity not found');
+      const mockNext = jest.fn();
+      await controller.update(mockRequest, mockResponse, mockNext);
+
+      expect(mockNext).toHaveBeenCalledWith(error);
       expect(console.error).toHaveBeenCalled();
     });
   });
@@ -258,11 +269,13 @@ describe('BaseController', () => {
 
     test('should handle delete errors', async () => {
       const error = new NotFoundError('Entity not found');
-
       mockService.delete.mockRejectedValue(error);
       mockRequest.params.id = '999';
 
-      await expect(controller.delete(mockRequest, mockResponse)).rejects.toThrow('Entity not found');
+      const mockNext = jest.fn();
+      await controller.delete(mockRequest, mockResponse, mockNext);
+
+      expect(mockNext).toHaveBeenCalledWith(error);
       expect(console.error).toHaveBeenCalled();
     });
   });
@@ -313,21 +326,23 @@ describe('BaseController', () => {
 
       mockRequest.params.id = '123';
 
-      await expect(
-        controllerWithoutSold.markAsSold(mockRequest, mockResponse)
-      ).rejects.toThrow('Mark as sold not supported for this resource');
+      const mockNext = jest.fn();
+      await controllerWithoutSold.markAsSold(mockRequest, mockResponse, mockNext);
+
+      expect(mockNext).toHaveBeenCalledWith(expect.any(NotFoundError));
+      expect(mockNext.mock.calls[0][0].message).toBe('Mark as sold not supported for this resource');
     });
 
     test('should handle markAsSold service errors', async () => {
       const error = new NotFoundError('Entity not found');
-
       mockService.markAsSold.mockRejectedValue(error);
       mockRequest.params.id = '999';
       mockRequest.body = { saleDetails: {} };
 
-      await expect(controller.markAsSold(mockRequest, mockResponse)).rejects.toThrow(
-        'Entity not found'
-      );
+      const mockNext = jest.fn();
+      await controller.markAsSold(mockRequest, mockResponse, mockNext);
+
+      expect(mockNext).toHaveBeenCalledWith(error);
       expect(console.error).toHaveBeenCalled();
     });
   });
@@ -352,12 +367,13 @@ describe('BaseController', () => {
 
     test('should log error messages for failed operations', async () => {
       const error = new Error('Service failure');
-
       mockService.getById.mockRejectedValue(error);
       mockRequest.params.id = '123';
 
-      await expect(controller.getById(mockRequest, mockResponse)).rejects.toThrow();
+      const mockNext = jest.fn();
+      await controller.getById(mockRequest, mockResponse, mockNext);
 
+      expect(mockNext).toHaveBeenCalledWith(error);
       expect(console.error).toHaveBeenCalledWith(
         '=== GET TESTENTITY BY ID ERROR ==='
       );

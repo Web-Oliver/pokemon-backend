@@ -166,10 +166,23 @@ const updateSealedProduct = async (id, data) => {
     throw new Error('Sealed product not found');
   }
 
-  const { myPrice, ...otherUpdates } = data;
+  const { myPrice, priceHistory, ...otherUpdates } = data;
 
-  // If price is being updated, add to price history
-  if (myPrice !== undefined) {
+  // Handle price and price history updates (matching PSA/Raw card pattern)
+  if (priceHistory && Array.isArray(priceHistory)) {
+    console.log('[SEALED UPDATE] Frontend sent priceHistory:', priceHistory.length, 'entries');
+    // Frontend is managing price history - use their complete array
+    sealedProduct.priceHistory = priceHistory;
+
+    // Set myPrice to the most recent price from history
+    if (priceHistory.length > 0) {
+      const latestPrice = priceHistory[priceHistory.length - 1].price;
+      sealedProduct.myPrice = latestPrice;
+      console.log('[SEALED UPDATE] Using latest price from history:', latestPrice);
+    }
+  } else if (myPrice !== undefined) {
+    console.log('[SEALED UPDATE] Only myPrice provided, adding to existing history');
+    // Only myPrice provided - add to existing history
     const currentPrice = sealedProduct.myPrice.toString
       ? parseFloat(sealedProduct.myPrice.toString())
       : parseFloat(sealedProduct.myPrice);
@@ -181,16 +194,13 @@ const updateSealedProduct = async (id, data) => {
         dateUpdated: new Date(),
       });
     }
+    sealedProduct.myPrice = myPrice;
   }
 
-  // Update fields
+  // Update other fields
   Object.keys(otherUpdates).forEach((key) => {
     sealedProduct[key] = otherUpdates[key];
   });
-
-  if (myPrice) {
-    sealedProduct.myPrice = myPrice;
-  }
 
   await sealedProduct.save();
 
