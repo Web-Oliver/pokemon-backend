@@ -193,6 +193,7 @@ const activitySchema = new mongoose.Schema(
     // Context7 Transform for Dynamic Fields
     toJSON: {
       virtuals: true,
+      // eslint-disable-next-line func-names
       transform(doc, ret) {
         // Calculate relative time dynamically for every JSON response
         const now = new Date();
@@ -242,6 +243,7 @@ activitySchema.index(
 );
 
 // Context7 Virtual Fields for Enhanced UX
+// eslint-disable-next-line func-names
 activitySchema.virtual('formattedTimestamp').get(function () {
   const now = new Date();
   const diff = now - this.timestamp;
@@ -267,6 +269,7 @@ activitySchema.virtual('formattedTimestamp').get(function () {
   return this.timestamp.toLocaleDateString();
 });
 
+// eslint-disable-next-line func-names
 activitySchema.virtual('colorClasses').get(function () {
   const colorMap = {
     emerald: {
@@ -300,6 +303,7 @@ activitySchema.virtual('colorClasses').get(function () {
 });
 
 // Context7 Premium Middleware for Auto-Updates
+// eslint-disable-next-line func-names
 activitySchema.pre('save', function (next) {
   // Update relative time
   this.relativeTime = this.formattedTimestamp;
@@ -322,6 +326,7 @@ activitySchema.pre('save', function (next) {
 });
 
 // Context7 Static Methods for Activity Management
+// eslint-disable-next-line func-names
 activitySchema.statics.createActivity = async function (activityData) {
   const activity = new this(activityData);
 
@@ -329,12 +334,14 @@ activitySchema.statics.createActivity = async function (activityData) {
   return activity;
 };
 
+// eslint-disable-next-line func-names
 activitySchema.statics.getRecentActivities = async function (limit = 50, filters = {}) {
   const query = { status: ACTIVITY_STATUS.ACTIVE, ...filters };
 
   return this.find(query).sort({ timestamp: -1 }).limit(limit).lean();
 };
 
+// eslint-disable-next-line func-names
 activitySchema.statics.getActivitiesByTimeRange = async function (startDate, endDate, filters = {}) {
   const query = {
     timestamp: { $gte: startDate, $lte: endDate },
@@ -345,6 +352,7 @@ activitySchema.statics.getActivitiesByTimeRange = async function (startDate, end
   return this.find(query).sort({ timestamp: -1 }).lean();
 };
 
+// eslint-disable-next-line func-names
 activitySchema.statics.getActivitiesByEntity = async function (entityType, entityId) {
   return this.find({
     entityType,
@@ -355,6 +363,7 @@ activitySchema.statics.getActivitiesByEntity = async function (entityType, entit
     .lean();
 };
 
+// eslint-disable-next-line func-names
 activitySchema.statics.searchActivities = async function (searchTerm, filters = {}) {
   const query = {
     $and: [
@@ -375,12 +384,14 @@ activitySchema.statics.searchActivities = async function (searchTerm, filters = 
 };
 
 // Context7 Instance Methods
+// eslint-disable-next-line func-names
 activitySchema.methods.markAsRead = function () {
   this.isRead = true;
   this.readAt = new Date();
   return this.save();
 };
 
+// eslint-disable-next-line func-names
 activitySchema.methods.archive = function () {
   this.isArchived = true;
   this.status = ACTIVITY_STATUS.ARCHIVED;

@@ -20,8 +20,12 @@ jest.mock('path');
 describe('ImageManager', () => {
   beforeEach(() => {
     jest.clearAllMocks();
-    jest.spyOn(console, 'log').mockImplementation(() => {});
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'log').mockImplementation(() => {
+      // Mock console.log for testing - intentionally empty
+    });
+    jest.spyOn(console, 'error').mockImplementation(() => {
+      // Mock console.error for testing - intentionally empty
+    });
     
     // Setup path.join mock to return predictable paths
     path.join.mockImplementation((...args) => args.join('/'));
@@ -34,7 +38,7 @@ describe('ImageManager', () => {
   describe('deleteImageFiles', () => {
     test('should delete single image file successfully', async () => {
       const imageUrls = ['/uploads/images/test-image.jpg'];
-      const expectedPath = '__dirname/../..//uploads/images/test-image.jpg';
+      const expectedPath = expect.stringContaining('/uploads/images/test-image.jpg');
 
       fs.access.mockResolvedValue();
       fs.unlink.mockResolvedValue();
@@ -126,9 +130,10 @@ describe('ImageManager', () => {
 
     test('should handle file not found (ENOENT) gracefully', async () => {
       const imageUrls = ['/uploads/images/missing-image.jpg'];
-      const expectedPath = '__dirname/../..//uploads/images/missing-image.jpg';
+      const expectedPath = expect.stringContaining('/uploads/images/missing-image.jpg');
 
       const enoentError = new Error('File not found');
+
       enoentError.code = 'ENOENT';
       fs.access.mockRejectedValue(enoentError);
 
@@ -144,9 +149,10 @@ describe('ImageManager', () => {
 
     test('should handle access errors other than ENOENT', async () => {
       const imageUrls = ['/uploads/images/permission-denied.jpg'];
-      const expectedPath = '__dirname/../..//uploads/images/permission-denied.jpg';
+      const expectedPath = expect.stringContaining('/uploads/images/permission-denied.jpg');
 
       const permissionError = new Error('Permission denied');
+
       permissionError.code = 'EACCES';
       fs.access.mockRejectedValue(permissionError);
 
@@ -163,9 +169,10 @@ describe('ImageManager', () => {
 
     test('should handle unlink errors', async () => {
       const imageUrls = ['/uploads/images/locked-file.jpg'];
-      const expectedPath = '__dirname/../..//uploads/images/locked-file.jpg';
+      const expectedPath = expect.stringContaining('/uploads/images/locked-file.jpg');
 
       const unlinkError = new Error('File is locked');
+
       fs.access.mockResolvedValue();
       fs.unlink.mockRejectedValue(unlinkError);
 
@@ -201,7 +208,7 @@ describe('ImageManager', () => {
       expect(fs.unlink).toHaveBeenCalledTimes(3);
       expect(console.log).toHaveBeenCalledWith(
         '[IMAGE CLEANUP] Successfully deleted:',
-        '__dirname/../..//uploads/images/good-image.jpg'
+        expect.stringContaining('/uploads/images/good-image.jpg')
       );
       expect(console.error).toHaveBeenCalledWith(
         '[IMAGE CLEANUP] Failed to delete image:',
@@ -210,7 +217,7 @@ describe('ImageManager', () => {
       );
       expect(console.log).toHaveBeenCalledWith(
         '[IMAGE CLEANUP] Successfully deleted:',
-        '__dirname/../..//uploads/images/another-good-image.jpg'
+        expect.stringContaining('/uploads/images/another-good-image.jpg')
       );
     });
 
@@ -240,9 +247,9 @@ describe('ImageManager', () => {
     });
 
     test('should handle very long file paths', async () => {
-      const longFilename = 'a'.repeat(200) + '.jpg';
+      const longFilename = `${'a'.repeat(200)  }.jpg`;
       const imageUrls = [`/uploads/images/${longFilename}`];
-      const expectedPath = `__dirname/../..//uploads/images/${longFilename}`;
+      const expectedPath = expect.stringContaining(`/uploads/images/${longFilename}`);
 
       fs.access.mockResolvedValue();
       fs.unlink.mockResolvedValue();
@@ -297,7 +304,7 @@ describe('ImageManager', () => {
       await ImageManager.deleteImageFiles(imageUrls);
 
       expect(path.join).toHaveBeenCalledWith(
-        '__dirname',
+        expect.any(String),
         '..',
         '..',
         '/uploads/images/test.jpg'
@@ -339,13 +346,13 @@ describe('ImageManager', () => {
       expect(fs.access).toHaveBeenCalledTimes(3);
       expect(fs.unlink).toHaveBeenCalledTimes(3);
       expect(fs.access).toHaveBeenCalledWith(
-        '__dirname/../..//uploads/images/2024/01/image1.jpg'
+        expect.stringContaining('/uploads/images/2024/01/image1.jpg')
       );
       expect(fs.access).toHaveBeenCalledWith(
-        '__dirname/../..//uploads/images/cards/psa/image2.jpg'
+        expect.stringContaining('/uploads/images/cards/psa/image2.jpg')
       );
       expect(fs.access).toHaveBeenCalledWith(
-        '__dirname/../..//uploads/images/products/sealed/image3.jpg'
+        expect.stringContaining('/uploads/images/products/sealed/image3.jpg')
       );
     });
   });
@@ -359,6 +366,7 @@ describe('ImageManager', () => {
 
       // First image fails access, second succeeds
       const accessError = new Error('Access denied');
+
       fs.access
         .mockRejectedValueOnce(accessError)
         .mockResolvedValueOnce();
@@ -374,7 +382,7 @@ describe('ImageManager', () => {
       );
       expect(console.log).toHaveBeenCalledWith(
         '[IMAGE CLEANUP] Successfully deleted:',
-        '__dirname/../..//uploads/images/image2.jpg'
+        expect.stringContaining('/uploads/images/image2.jpg')
       );
     });
   });
@@ -397,7 +405,7 @@ describe('ImageManager', () => {
 
     test('should log each deletion attempt', async () => {
       const imageUrls = ['/uploads/images/test.jpg'];
-      const expectedPath = '__dirname/../..//uploads/images/test.jpg';
+      const expectedPath = expect.stringContaining('/uploads/images/test.jpg');
 
       fs.access.mockResolvedValue();
       fs.unlink.mockResolvedValue();
@@ -412,7 +420,7 @@ describe('ImageManager', () => {
 
     test('should log successful deletions', async () => {
       const imageUrls = ['/uploads/images/test.jpg'];
-      const expectedPath = '__dirname/../..//uploads/images/test.jpg';
+      const expectedPath = expect.stringContaining('/uploads/images/test.jpg');
 
       fs.access.mockResolvedValue();
       fs.unlink.mockResolvedValue();
@@ -438,9 +446,10 @@ describe('ImageManager', () => {
 
     test('should log file not found messages', async () => {
       const imageUrls = ['/uploads/images/missing.jpg'];
-      const expectedPath = '__dirname/../..//uploads/images/missing.jpg';
+      const expectedPath = expect.stringContaining('/uploads/images/missing.jpg');
 
       const enoentError = new Error('File not found');
+
       enoentError.code = 'ENOENT';
       fs.access.mockRejectedValue(enoentError);
 

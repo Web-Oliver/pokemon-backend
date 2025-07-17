@@ -86,6 +86,7 @@ const searchCacheMiddleware =
       const originalJson = res.json;
 
       // Override json method to cache the response
+      // eslint-disable-next-line func-names
       res.json = function (data) {
         // Only cache successful responses
         if (res.statusCode === 200 && data.success !== false) {

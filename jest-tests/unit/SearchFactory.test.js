@@ -78,7 +78,9 @@ describe('SearchFactory', () => {
     });
 
     // Mock console methods
-    jest.spyOn(console, 'warn').mockImplementation(() => {});
+    jest.spyOn(console, 'warn').mockImplementation(() => {
+      // Mock console.warn for testing - intentionally empty
+    });
   });
 
   afterEach(() => {
@@ -304,6 +306,7 @@ describe('SearchFactory', () => {
       // Verify cache keys are different
       const key1 = searchFactory.buildCacheKey('cards', options1);
       const key2 = searchFactory.buildCacheKey('cards', options2);
+
       expect(key1).not.toBe(key2);
 
       expect(strategy1).not.toBe(strategy2);

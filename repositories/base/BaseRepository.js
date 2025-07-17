@@ -146,6 +146,7 @@ class BaseRepository {
    */
   async create(data, options = {}) {
     try {
+      // eslint-disable-next-line new-cap
       const document = new this.model(data);
       const savedDocument = await document.save();
 

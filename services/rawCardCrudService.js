@@ -186,9 +186,20 @@ const updateRawCard = async (id, updateData) => {
       console.log('[RAW UPDATE] Latest price history entry:', JSON.stringify(latestEntry, null, 2));
       console.log('[RAW UPDATE] Latest price value:', latestPrice, 'Type:', typeof latestPrice);
 
-      // Let MongoDB handle the Decimal128 conversion by using the raw value
-      dataToUpdate.myPrice = latestPrice;
-      console.log('[RAW UPDATE] Set dataToUpdate.myPrice to:', latestPrice, 'Type:', typeof latestPrice);
+      // Ensure proper numeric conversion for Decimal128
+      let priceValue;
+
+      if (typeof latestPrice === 'number') {
+        priceValue = latestPrice;
+      } else if (latestPrice && typeof latestPrice.toString === 'function') {
+        priceValue = parseFloat(latestPrice.toString());
+      } else {
+        priceValue = parseFloat(String(latestPrice));
+      }
+      
+      console.log('[RAW UPDATE] Converted price value:', priceValue, 'Type:', typeof priceValue);
+      dataToUpdate.myPrice = priceValue;
+      console.log('[RAW UPDATE] Set dataToUpdate.myPrice to:', priceValue);
     }
   } else if (myPrice !== undefined) {
     console.log('[RAW UPDATE] Only myPrice provided, adding to existing history');
@@ -204,20 +215,38 @@ const updateRawCard = async (id, updateData) => {
 
   console.log('[RAW UPDATE] Final dataToUpdate:', JSON.stringify(dataToUpdate, null, 2));
 
-  const updatedCard = await RawCard.findByIdAndUpdate(id, dataToUpdate, {
-    new: true,
-    runValidators: true,
-  }).populate({
+  // Get the existing card first
+
+  const cardToUpdate = await RawCard.findById(id);
+  if (!cardToUpdate) {
+    throw new Error('Raw card not found');
+  }
+
+  // Apply updates directly to the document (like sealed product service)
+  Object.keys(dataToUpdate).forEach((key) => {
+    if (key !== '$push') {
+      cardToUpdate[key] = dataToUpdate[key];
+    }
+  });
+
+  // Handle $push operations separately
+  if (dataToUpdate.$push) {
+    Object.keys(dataToUpdate.$push).forEach((arrayField) => {
+      cardToUpdate[arrayField].push(dataToUpdate.$push[arrayField]);
+    });
+  }
+
+  // Save the document
+  const updatedCard = await cardToUpdate.save();
+
+  // Populate after save
+  await updatedCard.populate({
     path: 'cardId',
     populate: {
       path: 'setId',
       model: 'Set',
     },
   });
-
-  if (!updatedCard) {
-    throw new Error('Raw card not found');
-  }
 
   console.log('[RAW UPDATE] Update successful, new price:', updatedCard.myPrice);
   console.log('[RAW UPDATE] New priceHistory length:', updatedCard.priceHistory?.length || 0);

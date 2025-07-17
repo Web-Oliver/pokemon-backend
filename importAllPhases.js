@@ -86,7 +86,9 @@ mongoose
     });
 
     // Wait a moment for database operations to complete
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => {
+      setTimeout(resolve, 1000);
+    });
 
     // Verify database is actually cleared
     const remainingSets = await mongoose.connection.db.collection('sets').countDocuments({});

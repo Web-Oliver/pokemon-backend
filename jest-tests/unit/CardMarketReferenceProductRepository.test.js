@@ -48,8 +48,12 @@ describe('CardMarketReferenceProductRepository', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    jest.spyOn(console, 'log').mockImplementation(() => {});
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'log').mockImplementation(() => {
+      // Mock console.log for testing - intentionally empty
+    });
+    jest.spyOn(console, 'error').mockImplementation(() => {
+      // Mock console.error for testing - intentionally empty
+    });
 
     repository = new CardMarketReferenceProductRepository();
 
@@ -81,12 +85,13 @@ describe('CardMarketReferenceProductRepository', () => {
   describe('findByCategory', () => {
     test('should find products by category', async () => {
       const categoryProducts = [mockProduct1, mockProduct3];
+
       mockFindAll.mockResolvedValue(categoryProducts);
 
       const result = await repository.findByCategory('Booster Box');
 
       expect(mockFindAll).toHaveBeenCalledWith(
-        { category: new RegExp('Booster Box', 'i') },
+        { category: /Booster Box/i },
         {}
       );
       expect(result).toEqual(categoryProducts);
@@ -94,12 +99,13 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should find products by category with options', async () => {
       const options = { limit: 10, sort: { price: 1 } };
+
       mockFindAll.mockResolvedValue([mockProduct1]);
 
       const result = await repository.findByCategory('Booster', options);
 
       expect(mockFindAll).toHaveBeenCalledWith(
-        { category: new RegExp('Booster', 'i') },
+        { category: /Booster/i },
         options
       );
       expect(result).toEqual([mockProduct1]);
@@ -107,6 +113,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle category search errors', async () => {
       const error = new Error('Database connection error');
+
       mockFindAll.mockRejectedValue(error);
 
       await expect(repository.findByCategory('Booster Box')).rejects.toThrow(
@@ -120,7 +127,7 @@ describe('CardMarketReferenceProductRepository', () => {
       await repository.findByCategory('booster box');
 
       expect(mockFindAll).toHaveBeenCalledWith(
-        { category: new RegExp('booster box', 'i') },
+        { category: /booster box/i },
         {}
       );
     });
@@ -129,12 +136,13 @@ describe('CardMarketReferenceProductRepository', () => {
   describe('findBySetName', () => {
     test('should find products by set name', async () => {
       const setProducts = [mockProduct1, mockProduct3];
+
       mockFindAll.mockResolvedValue(setProducts);
 
       const result = await repository.findBySetName('Base Set');
 
       expect(mockFindAll).toHaveBeenCalledWith(
-        { setName: new RegExp('Base Set', 'i') },
+        { setName: /Base Set/i },
         {}
       );
       expect(result).toEqual(setProducts);
@@ -146,7 +154,7 @@ describe('CardMarketReferenceProductRepository', () => {
       const result = await repository.findBySetName('Rocket');
 
       expect(mockFindAll).toHaveBeenCalledWith(
-        { setName: new RegExp('Rocket', 'i') },
+        { setName: /Rocket/i },
         {}
       );
       expect(result).toEqual([mockProduct2]);
@@ -154,18 +162,20 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle set name search with options', async () => {
       const options = { limit: 5, sort: { name: 1 } };
+
       mockFindAll.mockResolvedValue([mockProduct1]);
 
       await repository.findBySetName('Base', options);
 
       expect(mockFindAll).toHaveBeenCalledWith(
-        { setName: new RegExp('Base', 'i') },
+        { setName: /Base/i },
         options
       );
     });
 
     test('should handle set name search errors', async () => {
       const error = new Error('Search failed');
+
       mockFindAll.mockRejectedValue(error);
 
       await expect(repository.findBySetName('Base Set')).rejects.toThrow(
@@ -177,6 +187,7 @@ describe('CardMarketReferenceProductRepository', () => {
   describe('findAvailable', () => {
     test('should find available products only', async () => {
       const availableProducts = [mockProduct1, mockProduct2];
+
       mockFindAll.mockResolvedValue(availableProducts);
 
       const result = await repository.findAvailable();
@@ -190,6 +201,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should find available products with custom options', async () => {
       const options = { limit: 20 };
+
       mockFindAll.mockResolvedValue([mockProduct1]);
 
       const result = await repository.findAvailable(options);
@@ -203,6 +215,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle available products search errors', async () => {
       const error = new Error('Query failed');
+
       mockFindAll.mockRejectedValue(error);
 
       await expect(repository.findAvailable()).rejects.toThrow('Query failed');
@@ -215,6 +228,7 @@ describe('CardMarketReferenceProductRepository', () => {
         { ...mockProduct2, priceNumeric: 350 },
         { ...mockProduct1, priceNumeric: 12500 },
       ];
+
       mockAggregate.mockResolvedValue(priceRangeResults);
 
       const result = await repository.findByPriceRange(300, 15000);
@@ -239,6 +253,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should find products with custom sort options', async () => {
       const options = { sort: { available: -1 } };
+
       mockAggregate.mockResolvedValue([mockProduct1]);
 
       await repository.findByPriceRange(100, 1000, options);
@@ -262,6 +277,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should apply limit when provided', async () => {
       const options = { limit: 5 };
+
       mockAggregate.mockResolvedValue([mockProduct2]);
 
       await repository.findByPriceRange(0, 500, options);
@@ -301,6 +317,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle price range query errors', async () => {
       const error = new Error('Aggregation failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(repository.findByPriceRange(100, 500)).rejects.toThrow(
@@ -315,6 +332,7 @@ describe('CardMarketReferenceProductRepository', () => {
         { ...mockProduct1, priceNumeric: 12500, score: 150 },
         { ...mockProduct2, priceNumeric: 350, score: 80 },
       ];
+
       mockAggregate.mockResolvedValue(searchResults);
 
       const result = await repository.searchAdvanced('Base Set');
@@ -348,6 +366,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should perform advanced search with category filter', async () => {
       const filters = { category: 'Booster Box' };
+
       mockAggregate.mockResolvedValue([mockProduct1]);
 
       await repository.searchAdvanced('Base', filters);
@@ -364,7 +383,7 @@ describe('CardMarketReferenceProductRepository', () => {
                     { category: { $regex: 'Base', $options: 'i' } },
                   ],
                 },
-                { category: new RegExp('Booster Box', 'i') },
+                { category: /Booster Box/i },
               ],
             },
           }),
@@ -374,6 +393,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should perform advanced search with price range filter', async () => {
       const filters = { priceRange: { min: 100, max: 1000 } };
+
       mockAggregate.mockResolvedValue([mockProduct2]);
 
       await repository.searchAdvanced('Booster', filters);
@@ -394,6 +414,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should perform advanced search with availability filter', async () => {
       const filters = { availableOnly: true };
+
       mockAggregate.mockResolvedValue([mockProduct1, mockProduct2]);
 
       await repository.searchAdvanced('Pokemon', filters);
@@ -414,6 +435,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should perform advanced search with minimum availability filter', async () => {
       const filters = { minAvailable: 10 };
+
       mockAggregate.mockResolvedValue([mockProduct2]);
 
       await repository.searchAdvanced('Pack', filters);
@@ -435,6 +457,7 @@ describe('CardMarketReferenceProductRepository', () => {
     test('should perform advanced search with lastUpdatedAfter filter', async () => {
       const lastUpdatedAfter = new Date('2024-01-15');
       const filters = { lastUpdatedAfter: lastUpdatedAfter.toISOString() };
+
       mockAggregate.mockResolvedValue([mockProduct1, mockProduct2]);
 
       await repository.searchAdvanced('Set', filters);
@@ -455,6 +478,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should perform advanced search with limit', async () => {
       const filters = { limit: 5 };
+
       mockAggregate.mockResolvedValue([mockProduct1]);
 
       await repository.searchAdvanced('Charizard', filters);
@@ -468,6 +492,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should perform search without query (filters only)', async () => {
       const filters = { category: 'Theme Deck' };
+
       mockAggregate.mockResolvedValue([mockProduct3]);
 
       await repository.searchAdvanced('', filters);
@@ -483,6 +508,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle advanced search errors', async () => {
       const error = new Error('Advanced search failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(
@@ -513,6 +539,7 @@ describe('CardMarketReferenceProductRepository', () => {
           averagePrice: 4200.00,
         },
       ];
+
       mockAggregate.mockResolvedValue(mockCategories);
 
       const result = await repository.getCategories();
@@ -544,6 +571,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getCategories errors', async () => {
       const error = new Error('Categories aggregation failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(repository.getCategories()).rejects.toThrow(
@@ -570,6 +598,7 @@ describe('CardMarketReferenceProductRepository', () => {
           categoryCount: 4,
         },
       ];
+
       mockAggregate.mockResolvedValue(mockSetNames);
 
       const result = await repository.getSetNames();
@@ -603,6 +632,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getSetNames errors', async () => {
       const error = new Error('Set names aggregation failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(repository.getSetNames()).rejects.toThrow(
@@ -625,6 +655,7 @@ describe('CardMarketReferenceProductRepository', () => {
         availabilityPercentage: 72.00,
         recentlyUpdated: 45,
       };
+
       mockAggregate.mockResolvedValue([mockStats]);
 
       const result = await repository.getProductStatistics();
@@ -684,6 +715,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getProductStatistics errors', async () => {
       const error = new Error('Statistics aggregation failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(repository.getProductStatistics()).rejects.toThrow(
@@ -718,6 +750,7 @@ describe('CardMarketReferenceProductRepository', () => {
           priceVolatility: 1.7835,
         },
       ];
+
       mockAggregate.mockResolvedValue(mockAnalysis);
 
       const result = await repository.getProfitAnalysis();
@@ -775,6 +808,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getProfitAnalysis errors', async () => {
       const error = new Error('Profit analysis failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(repository.getProfitAnalysis()).rejects.toThrow(
@@ -789,6 +823,7 @@ describe('CardMarketReferenceProductRepository', () => {
         { ...mockProduct1, priceNumeric: 12500 },
         { ...mockProduct2, priceNumeric: 350 },
       ];
+
       mockAggregate.mockResolvedValue(searchResults);
 
       const result = await repository.getSuggestions('Base');
@@ -825,6 +860,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should get suggestions with custom limit', async () => {
       const options = { limit: 5 };
+
       mockAggregate.mockResolvedValue([mockProduct1]);
 
       await repository.getSuggestions('Charizard', options);
@@ -835,6 +871,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getSuggestions errors', async () => {
       const error = new Error('Suggestions search failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(repository.getSuggestions('Pokemon')).rejects.toThrow(
@@ -846,11 +883,13 @@ describe('CardMarketReferenceProductRepository', () => {
   describe('getRecentlyUpdated', () => {
     test('should get recently updated products', async () => {
       const recentProducts = [mockProduct2, mockProduct1];
+
       mockFindAll.mockResolvedValue(recentProducts);
 
       const result = await repository.getRecentlyUpdated(7);
 
       const expectedDateThreshold = new Date();
+
       expectedDateThreshold.setDate(expectedDateThreshold.getDate() - 7);
 
       expect(mockFindAll).toHaveBeenCalledWith(
@@ -866,6 +905,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should get recently updated products with custom days and options', async () => {
       const options = { limit: 20 };
+
       mockFindAll.mockResolvedValue([mockProduct1]);
 
       const result = await repository.getRecentlyUpdated(14, options);
@@ -884,6 +924,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getRecentlyUpdated errors', async () => {
       const error = new Error('Recent products query failed');
+
       mockFindAll.mockRejectedValue(error);
 
       await expect(repository.getRecentlyUpdated()).rejects.toThrow(
@@ -898,6 +939,7 @@ describe('CardMarketReferenceProductRepository', () => {
         { ...mockProduct1, available: 5 },
         { ...mockProduct3, available: 3 },
       ];
+
       mockFindAll.mockResolvedValue(lowStockProducts);
 
       const result = await repository.getLowStockProducts();
@@ -916,6 +958,7 @@ describe('CardMarketReferenceProductRepository', () => {
     test('should get low stock products with custom threshold', async () => {
       const threshold = 10;
       const options = { limit: 15 };
+
       mockFindAll.mockResolvedValue([mockProduct1]);
 
       const result = await repository.getLowStockProducts(threshold, options);
@@ -934,6 +977,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getLowStockProducts errors', async () => {
       const error = new Error('Low stock query failed');
+
       mockFindAll.mockRejectedValue(error);
 
       await expect(repository.getLowStockProducts()).rejects.toThrow(
@@ -945,6 +989,7 @@ describe('CardMarketReferenceProductRepository', () => {
   describe('getProductsByPriceTier', () => {
     test('should get products by low price tier', async () => {
       const lowTierProducts = [mockProduct2];
+
       mockAggregate.mockResolvedValue(lowTierProducts);
 
       const result = await repository.getProductsByPriceTier('low');
@@ -972,6 +1017,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should get products by premium price tier', async () => {
       const premiumProducts = [mockProduct1];
+
       mockAggregate.mockResolvedValue(premiumProducts);
 
       const result = await repository.getProductsByPriceTier('premium');
@@ -1002,6 +1048,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should get products by price tier with options', async () => {
       const options = { limit: 10, sort: { name: 1 } };
+
       mockAggregate.mockResolvedValue([mockProduct2]);
 
       await repository.getProductsByPriceTier('low', options);
@@ -1011,6 +1058,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle getProductsByPriceTier errors', async () => {
       const error = new Error('Price tier query failed');
+
       mockAggregate.mockRejectedValue(error);
 
       await expect(repository.getProductsByPriceTier('medium')).rejects.toThrow(
@@ -1039,6 +1087,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle aggregation pipeline failures', async () => {
       const pipelineError = new Error('Pipeline execution failed');
+
       mockAggregate.mockRejectedValue(pipelineError);
 
       await expect(repository.getCategories()).rejects.toThrow(
@@ -1048,10 +1097,12 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should handle invalid date ranges', async () => {
       const invalidDate = 'invalid-date';
+
       mockFindAll.mockResolvedValue([]);
 
       // Should not throw but should handle gracefully
       const result = await repository.getRecentlyUpdated(invalidDate);
+
       expect(result).toEqual([]);
     });
   });
@@ -1068,6 +1119,7 @@ describe('CardMarketReferenceProductRepository', () => {
 
       // Verify pipeline structure for performance
       const callArgs = mockAggregate.mock.calls[0][0];
+
       expect(callArgs).toEqual(
         expect.arrayContaining([
           expect.objectContaining({ $addFields: expect.any(Object) }),
@@ -1079,11 +1131,13 @@ describe('CardMarketReferenceProductRepository', () => {
 
     test('should apply appropriate limits for large datasets', async () => {
       const largeLimit = 1000;
+
       mockAggregate.mockResolvedValue([]);
 
       await repository.searchAdvanced('pokemon', { limit: largeLimit });
 
       const callArgs = mockAggregate.mock.calls[0][0];
+
       expect(callArgs).toEqual(
         expect.arrayContaining([
           { $limit: largeLimit },

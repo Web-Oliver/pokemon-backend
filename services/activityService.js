@@ -652,6 +652,38 @@ class ActivityService {
     };
   }
 
+  // Context7 Validation Methods
+  static validateActivityData(activityData) {
+    if (!activityData || typeof activityData !== 'object') {
+      return false;
+    }
+
+    // Check required fields
+    const requiredFields = ['type', 'title'];
+    for (const field of requiredFields) {
+      if (!activityData[field] || typeof activityData[field] !== 'string' || activityData[field].trim().length === 0) {
+        return false;
+      }
+    }
+
+    // Validate activity type
+    if (!Object.values(ACTIVITY_TYPES).includes(activityData.type)) {
+      return false;
+    }
+
+    // Validate priority if provided
+    if (activityData.priority && !Object.values(ACTIVITY_PRIORITIES).includes(activityData.priority)) {
+      return false;
+    }
+
+    // Validate entityId if provided
+    if (activityData.entityId && !mongoose.Types.ObjectId.isValid(activityData.entityId)) {
+      return false;
+    }
+
+    return true;
+  }
+
   // Context7 Maintenance Methods
   static async archiveOldActivities(daysOld = 90) {
     const cutoffDate = new Date(Date.now() - daysOld * 24 * 60 * 60 * 1000);

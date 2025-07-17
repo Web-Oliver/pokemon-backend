@@ -127,7 +127,21 @@ class CollectionService {
       const updateData = { ...data };
 
       // Handle price history updates
-      if (data.myPrice && data.myPrice !== existingItem.myPrice) {
+      if (data.priceHistory && Array.isArray(data.priceHistory)) {
+        console.log('[COLLECTION SERVICE] Frontend sent priceHistory:', data.priceHistory.length, 'entries');
+        // Frontend is managing price history - use their complete array
+        updateData.priceHistory = data.priceHistory;
+        
+        // Set myPrice to the most recent price from history
+        if (data.priceHistory.length > 0) {
+          const latestPrice = data.priceHistory[data.priceHistory.length - 1].price;
+
+          updateData.myPrice = latestPrice;
+          console.log('[COLLECTION SERVICE] Set myPrice to latest price from history:', latestPrice);
+        }
+      } else if (data.myPrice && data.myPrice !== existingItem.myPrice) {
+        console.log('[COLLECTION SERVICE] Only myPrice provided, adding to existing history');
+        // Only myPrice provided - add to existing history
         updateData.priceHistory = [
           ...existingItem.priceHistory,
           {
@@ -181,6 +195,7 @@ class CollectionService {
           });
           
           const activity = await ActivityService.logCardDeleted(item, cardType);
+
           console.log(`[COLLECTION SERVICE] Deletion activity created successfully:`, activity._id);
         } catch (activityError) {
           console.error(`[COLLECTION SERVICE] Failed to log deletion activity for ${this.options.entityName} ${id}:`, activityError);

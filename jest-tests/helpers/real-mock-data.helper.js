@@ -385,6 +385,7 @@ module.exports = {
           }
         ]
       });
+
       return auction;
     },
     

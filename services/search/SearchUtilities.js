@@ -159,7 +159,7 @@ class SearchUtilities {
       conditions.push({
         $cond: {
           if: { $eq: [{ $toLower: `$${field}` }, normalizedQuery] },
-          then: weight * 1.0,
+          then: Number(weight),
           else: 0,
         },
       });

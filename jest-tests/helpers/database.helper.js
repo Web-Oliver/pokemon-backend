@@ -8,6 +8,7 @@ let mongoServer = null;
  */
 async function setupTestDatabase() {
   if (!mongoServer) {
+    // eslint-disable-next-line require-atomic-updates
     mongoServer = await MongoMemoryServer.create();
     const mongoUri = mongoServer.getUri();
     
@@ -33,7 +34,9 @@ async function cleanDatabase() {
     const {collections} = mongoose.connection;
     
     for (const key in collections) {
-      await collections[key].deleteMany({});
+      if (Object.prototype.hasOwnProperty.call(collections, key)) {
+        await collections[key].deleteMany({});
+      }
     }
   }
 }
@@ -48,6 +51,7 @@ async function teardownTestDatabase() {
   
   if (mongoServer) {
     await mongoServer.stop();
+    // eslint-disable-next-line require-atomic-updates
     mongoServer = null;
   }
 }

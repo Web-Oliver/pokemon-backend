@@ -27,7 +27,7 @@ function formatItemForFacebook(data, category) {
         const isJapanese = isJapaneseSet(data.cardId.setId.setName);
         const year = data.cardId.setId.releaseYear || new Date().getFullYear();
 
-        formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} ` + `${cardName} PSA ${data.grade}`;
+        formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} ${cardName} PSA ${data.grade}`;
       } else {
         formattedName = `PSA Graded Card ${data.grade}`;
       }

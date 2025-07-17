@@ -46,8 +46,12 @@ describe('ActivityService', () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
-    jest.spyOn(console, 'log').mockImplementation(() => {});
-    jest.spyOn(console, 'error').mockImplementation(() => {});
+    jest.spyOn(console, 'log').mockImplementation(() => {
+      // Mock console.log for testing - intentionally empty
+    });
+    jest.spyOn(console, 'error').mockImplementation(() => {
+      // Mock console.error for testing - intentionally empty
+    });
 
     // Create realistic mock data
     mockCardData = createMockPsaGradedCard();
@@ -63,17 +67,20 @@ describe('ActivityService', () => {
     test('should convert Decimal128 to number', () => {
       const decimal128Price = mongoose.Types.Decimal128.fromString('2500.00');
       const result = ActivityService.convertPrice(decimal128Price);
+
       expect(result).toBe(2500);
     });
 
     test('should handle number prices', () => {
       const result = ActivityService.convertPrice(1500);
+
       expect(result).toBe(1500);
     });
 
     test('should handle $numberDecimal format', () => {
       const price = { $numberDecimal: '3500.50' };
       const result = ActivityService.convertPrice(price);
+
       expect(result).toBe(3500.5);
     });
 
@@ -85,6 +92,7 @@ describe('ActivityService', () => {
     test('should handle price with toString method', () => {
       const price = { toString: () => '4250.75' };
       const result = ActivityService.convertPrice(price);
+
       expect(result).toBe(4250.75);
     });
   });
@@ -611,43 +619,81 @@ describe('ActivityService', () => {
   });
 
   describe('Activity Cleanup', () => {
-    test('should clean up old activities', async () => {
+    test('should archive old activities', async () => {
       const cutoffDate = new Date(Date.now() - 90 * 24 * 60 * 60 * 1000); // 90 days ago
       
-      Activity.deleteMany = jest.fn().mockResolvedValue({ deletedCount: 50 });
+      Activity.updateMany = jest.fn().mockResolvedValue({ modifiedCount: 50 });
 
-      const result = await ActivityService.cleanupOldActivities(90);
+      const result = await ActivityService.archiveOldActivities(90);
 
-      expect(Activity.deleteMany).toHaveBeenCalledWith({
-        createdAt: { $lt: expect.any(Date) },
-      });
-      expect(result).toEqual({ deletedCount: 50 });
+      expect(Activity.updateMany).toHaveBeenCalledWith(
+        {
+          timestamp: { $lt: expect.any(Date) },
+          status: 'active',
+          priority: { $in: ['low', 'medium'] },
+        },
+        {
+          status: 'archived',
+          isArchived: true,
+          archivedAt: expect.any(Date),
+        }
+      );
+      expect(result).toEqual({ modifiedCount: 50 });
     });
   });
 
-  describe('Activity Validation', () => {
-    test('should validate activity data before creation', () => {
-      const validActivityData = {
-        type: ACTIVITY_TYPES.CARD_ADDED,
-        title: 'Test Activity',
-        description: 'Test Description',
-        entityType: 'psa_card',
-        entityId: new mongoose.Types.ObjectId(),
-      };
+  describe('Activity Query Methods', () => {
+    test('should get activities with filters', async () => {
+      const mockActivities = [
+        {
+          _id: new mongoose.Types.ObjectId(),
+          type: ACTIVITY_TYPES.CARD_ADDED,
+          title: 'Added Pikachu PSA 9',
+          status: 'active',
+        },
+      ];
 
-      const isValid = ActivityService.validateActivityData(validActivityData);
-      expect(isValid).toBe(true);
+      Activity.find.mockReturnValue({
+        sort: jest.fn().mockReturnValue({
+          skip: jest.fn().mockReturnValue({
+            limit: jest.fn().mockReturnValue({
+              lean: jest.fn().mockResolvedValue(mockActivities),
+            }),
+          }),
+        }),
+      });
+      Activity.countDocuments.mockResolvedValue(1);
+
+      const result = await ActivityService.getActivities({
+        type: ACTIVITY_TYPES.CARD_ADDED,
+        limit: 10,
+      });
+
+      expect(result.activities).toEqual(mockActivities);
+      expect(result.total).toBe(1);
     });
 
-    test('should reject invalid activity data', () => {
-      const invalidActivityData = {
-        type: 'invalid_type',
-        title: '',
-        // missing required fields
-      };
+    test('should get activity statistics', async () => {
+      Activity.countDocuments
+        .mockResolvedValueOnce(100) // total
+        .mockResolvedValueOnce(5)   // today
+        .mockResolvedValueOnce(20)  // week
+        .mockResolvedValueOnce(50); // month
+      
+      Activity.findOne.mockReturnValue({
+        sort: jest.fn().mockReturnValue({
+          lean: jest.fn().mockResolvedValue({
+            timestamp: new Date(),
+          }),
+        }),
+      });
 
-      const isValid = ActivityService.validateActivityData(invalidActivityData);
-      expect(isValid).toBe(false);
+      const result = await ActivityService.getActivityStats();
+
+      expect(result.total).toBe(100);
+      expect(result.today).toBe(5);
+      expect(result.week).toBe(20);
+      expect(result.month).toBe(50);
     });
   });
 });

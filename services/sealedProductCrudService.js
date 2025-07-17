@@ -177,6 +177,7 @@ const updateSealedProduct = async (id, data) => {
     // Set myPrice to the most recent price from history
     if (priceHistory.length > 0) {
       const latestPrice = priceHistory[priceHistory.length - 1].price;
+
       sealedProduct.myPrice = latestPrice;
       console.log('[SEALED UPDATE] Using latest price from history:', latestPrice);
     }

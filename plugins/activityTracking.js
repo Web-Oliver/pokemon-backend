@@ -38,6 +38,7 @@ function activityTrackingPlugin(schema, options = {}) {
   });
 
   // Pre-save hook: Mark new items and sale updates
+  // eslint-disable-next-line func-names
   schema.pre('save', function (next) {
     try {
       this._activityTracking.wasNew = this.isNew;
@@ -54,9 +55,11 @@ function activityTrackingPlugin(schema, options = {}) {
   });
 
   // Post-save hook: Track creation and sales
+  // eslint-disable-next-line func-names
   schema.post('save', function (doc) {
     try {
       // Use setImmediate for non-blocking activity tracking
+      // eslint-disable-next-line func-names
       setImmediate(async () => {
         try {
           const ActivityService = require('../services/activityService');
@@ -89,6 +92,7 @@ function activityTrackingPlugin(schema, options = {}) {
 
   // Pre-update hook: Store previous state for comparison
   if (trackPriceUpdates || trackImageUpdates) {
+    // eslint-disable-next-line func-names
     schema.pre('findOneAndUpdate', async function () {
       try {
         const docToUpdate = await this.model.findOne(this.getQuery());
@@ -107,6 +111,7 @@ function activityTrackingPlugin(schema, options = {}) {
 
   // Post-update hook: Track price changes and image updates
   if (trackPriceUpdates || trackImageUpdates) {
+    // eslint-disable-next-line func-names
     schema.post('findOneAndUpdate', async function (doc) {
       if (doc) {
         try {
@@ -121,6 +126,7 @@ function activityTrackingPlugin(schema, options = {}) {
             });
           }
 
+          // eslint-disable-next-line func-names
           setImmediate(async () => {
             try {
               const ActivityService = require('../services/activityService');
@@ -176,6 +182,7 @@ function activityTrackingPlugin(schema, options = {}) {
   }
 
   // Clean up internal tracking fields before saving to database
+  // eslint-disable-next-line func-names
   schema.pre('save', function (next) {
     if (this._activityTracking) {
       this._activityTracking = undefined;
