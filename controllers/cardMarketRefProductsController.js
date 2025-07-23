@@ -239,7 +239,127 @@ const getCardMarketRefProductById = asyncHandler(async (req, res) => {
   res.status(200).json(product);
 });
 
+/**
+ * Get distinct set names from CardMarket reference products
+ * @param {Object} req - Express request object  
+ * @param {Object} res - Express response object
+ */
+const getCardMarketSetNames = asyncHandler(async (req, res) => {
+  const { search, limit } = req.query;
+  const limitNum = parseInt(limit, 10) || 50;
+
+  // Build aggregation pipeline to get distinct set names
+  const pipeline = [];
+
+  // If search query provided, filter set names
+  if (search && search.trim()) {
+    pipeline.push({
+      $match: {
+        setName: { $regex: search.trim(), $options: 'i' }
+      }
+    });
+  }
+
+  // Group by setName to get distinct values with metadata
+  pipeline.push({
+    $group: {
+      _id: '$setName',
+      count: { $sum: 1 },
+      totalAvailable: { $sum: '$available' },
+      categories: { $addToSet: '$category' },
+      averagePrice: { $avg: { $toDouble: '$price' } }
+    }
+  });
+
+  // Add search scoring if query provided
+  if (search && search.trim()) {
+    const searchTerm = search.trim().toLowerCase();
+    pipeline.push({
+      $addFields: {
+        score: {
+          $add: [
+            // Exact match bonus
+            {
+              $cond: {
+                if: { $eq: [{ $toLower: '$_id' }, searchTerm] },
+                then: 100,
+                else: 0
+              }
+            },
+            // Starts with bonus  
+            {
+              $cond: {
+                if: {
+                  $eq: [
+                    { $indexOfCP: [{ $toLower: '$_id' }, searchTerm] },
+                    0
+                  ]
+                },
+                then: 80,
+                else: 0
+              }
+            },
+            // Contains bonus
+            {
+              $cond: {
+                if: {
+                  $gt: [
+                    { $indexOfCP: [{ $toLower: '$_id' }, searchTerm] },
+                    -1
+                  ]
+                },
+                then: 60,
+                else: 0
+              }
+            },
+            // Product count bonus (more products = higher relevance)
+            { $multiply: ['$count', 0.1] },
+            // Availability bonus
+            { $multiply: ['$totalAvailable', 0.01] }
+          ]
+        }
+      }
+    });
+
+    // Sort by score
+    pipeline.push({
+      $sort: { score: -1, _id: 1 }
+    });
+  } else {
+    // Sort by product count (most products first) when no search
+    pipeline.push({
+      $sort: { count: -1, _id: 1 }
+    });
+  }
+
+  // Limit results
+  pipeline.push({ $limit: limitNum });
+
+  // Project final format
+  pipeline.push({
+    $project: {
+      setName: '$_id',
+      count: 1,
+      totalAvailable: 1,
+      categoryCount: { $size: '$categories' },
+      averagePrice: { $round: ['$averagePrice', 2] },
+      score: { $ifNull: ['$score', 0] },
+      _id: 0
+    }
+  });
+
+  const setNames = await CardMarketReferenceProduct.aggregate(pipeline);
+
+  res.status(200).json({
+    success: true,
+    query: search || '',
+    count: setNames.length,
+    data: setNames
+  });
+});
+
 module.exports = {
   getAllCardMarketRefProducts,
   getCardMarketRefProductById,
+  getCardMarketSetNames,
 };

@@ -42,6 +42,7 @@ app.use('/api/activities', require('./routes/activityRoutes')); // Context7 Acti
 app.use('/api/export', require('./routes/export')); // Export functionality
 app.use('/api/import', require('./routes/import'));
 app.use('/api/upload', require('./routes/upload'));
+app.use('/api/dba-selection', require('./routes/dbaSelection')); // DBA selection tracking
 app.use('/api', require('./routes/externalListing'));
 
 // Root endpoint

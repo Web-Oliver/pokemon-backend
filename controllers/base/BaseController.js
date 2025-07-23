@@ -29,7 +29,7 @@ class BaseController {
       includeMarkAsSold: options.includeMarkAsSold !== false,
       defaultPopulate: options.defaultPopulate || null,
       defaultSort: options.defaultSort || { dateAdded: -1 },
-      defaultLimit: options.defaultLimit || 15,
+      defaultLimit: options.defaultLimit || 100,
       ...options,
     };
 
@@ -51,11 +51,29 @@ class BaseController {
    */
   getAll = asyncHandler(async (req, res) => {
     console.log(`=== GET ALL ${this.options.entityName.toUpperCase()}S START ===`);
+    console.log('Query parameters:', req.query);
 
     try {
-      // Use the service to get all items
+      // Extract filters from query parameters
+      const filters = {};
+      if (req.query.sold !== undefined) {
+        filters.sold = req.query.sold === 'true';
+      }
+      if (req.query.grade) {
+        filters.grade = req.query.grade;
+      }
+      if (req.query.condition) {
+        filters.condition = req.query.condition;
+      }
+      if (req.query.category) {
+        filters.category = req.query.category;
+      }
+      
+      console.log('Applied filters:', filters);
+
+      // Use the service to get all items with filters
       const results = await this.service.getAll(
-        {},
+        filters,
         {
           populate: this.options.defaultPopulate,
           sort: this.options.defaultSort,
