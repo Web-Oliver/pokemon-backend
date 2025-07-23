@@ -54,7 +54,16 @@ function getShortenedSetName(setName) {
     return '';
   }
 
-  const lowerSetName = setName.toLowerCase();
+  // Clean the set name by removing common prefixes first
+  let cleanedSetName = setName;
+  
+  // Remove "Pokemon Japanese " prefix (case-insensitive)
+  cleanedSetName = cleanedSetName.replace(/^pokemon japanese\s+/i, '');
+  
+  // Remove "Pokemon " prefix (case-insensitive)  
+  cleanedSetName = cleanedSetName.replace(/^pokemon\s+/i, '');
+
+  const lowerSetName = cleanedSetName.toLowerCase();
   let bestMatch = '';
   let bestMatchLength = 0;
 
@@ -68,8 +77,8 @@ function getShortenedSetName(setName) {
     }
   }
 
-  // Return best match or original if no match found
-  return bestMatch || setName;
+  // Return best match or cleaned name if no match found
+  return bestMatch || cleanedSetName;
 }
 
 /**
@@ -81,6 +90,14 @@ function getShortenedSetName(setName) {
  */
 function formatCardName(cardName, pokemonNumber, variety) {
   let formattedName = cardName || '';
+  
+  // Replace all dashes with spaces in card name
+  formattedName = formattedName.replace(/-/g, ' ');
+  
+  // Replace "1st Edition" with "1st Ed" in card name
+  formattedName = formattedName.replace(/1st Edition/gi, '1st Ed');
+  formattedName = formattedName.replace(/1ST EDITION/gi, '1st Ed');
+  formattedName = formattedName.replace(/First Edition/gi, '1st Ed');
 
   if (pokemonNumber && pokemonNumber !== 'N/A') {
     formattedName += ` #${pokemonNumber}`;
@@ -90,7 +107,9 @@ function formatCardName(cardName, pokemonNumber, variety) {
     const shortenedVariety = getShortenedVariety(variety);
 
     if (shortenedVariety) {
-      formattedName += ` ${shortenedVariety}`;
+      // Replace dashes with spaces in variety too
+      const cleanedVariety = shortenedVariety.replace(/-/g, ' ');
+      formattedName += ` ${cleanedVariety}`;
     }
   }
 

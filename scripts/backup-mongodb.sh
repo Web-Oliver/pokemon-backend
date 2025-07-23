@@ -6,7 +6,8 @@
 
 # Configuration
 DB_NAME="pokemon-collection"
-BACKUP_DIR="$(dirname "$0")/../backups"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BACKUP_DIR="${SCRIPT_DIR}/../backups"
 DATE=$(date +%Y%m%d_%H%M%S)
 BACKUP_PATH="${BACKUP_DIR}/${DATE}"
 LOG_FILE="${BACKUP_DIR}/backup_${DATE}.log"
@@ -52,8 +53,9 @@ warning() {
 # Create backup directory
 create_backup_dir() {
     log "Creating backup directory: $BACKUP_PATH"
-    mkdir -p "$BACKUP_PATH" || error_exit "Failed to create backup directory"
     mkdir -p "$BACKUP_DIR" || error_exit "Failed to create base backup directory"
+    mkdir -p "$BACKUP_PATH" || error_exit "Failed to create backup directory"
+    touch "$LOG_FILE" || error_exit "Failed to create log file"
 }
 
 # Test MongoDB connection
@@ -99,19 +101,22 @@ backup_collections() {
 # Create compressed archive
 create_archive() {
     log "Creating compressed archive..."
-    cd "$BACKUP_DIR" || error_exit "Failed to change to backup directory"
     
     ARCHIVE_NAME="${DATE}_pokemon_collection_backup.tar.gz"
+    ARCHIVE_PATH="${BACKUP_DIR}/${ARCHIVE_NAME}"
     
-    if tar -czf "$ARCHIVE_NAME" "$DATE" 2>> "$LOG_FILE"; then
+    # Change to parent directory and create archive
+    cd "$(dirname "$BACKUP_PATH")" || error_exit "Failed to change to backup parent directory"
+    
+    if tar -czf "$ARCHIVE_PATH" "$(basename "$BACKUP_PATH")" 2>> "$LOG_FILE"; then
         success "Archive created: $ARCHIVE_NAME"
         
         # Get archive size
-        ARCHIVE_SIZE=$(du -h "$ARCHIVE_NAME" | cut -f1)
+        ARCHIVE_SIZE=$(du -h "$ARCHIVE_PATH" | cut -f1)
         log "Archive size: $ARCHIVE_SIZE"
         
         # Remove uncompressed backup directory
-        rm -rf "$DATE"
+        rm -rf "$BACKUP_PATH"
         log "Removed uncompressed backup directory"
     else
         error_exit "Failed to create archive"
@@ -120,7 +125,7 @@ create_archive() {
 
 # Generate backup report
 generate_report() {
-    REPORT_FILE="${BACKUP_PATH}_report.txt"
+    REPORT_FILE="${BACKUP_DIR}/${DATE}_report.txt"
     
     cat > "$REPORT_FILE" << EOF
 Pokemon Collection Database Backup Report

@@ -17,10 +17,12 @@ const RARITY_VARIANTS = {
   'reverse hologram': 'REVERSE HOLO',
 
   // First edition variations
-  'first edition': '1ST EDITION',
-  '1st edition': '1ST EDITION',
-  'first ed': '1ST EDITION',
-  '1st ed': '1ST EDITION',
+  'first edition': '1st Ed',
+  '1st edition': '1st Ed',
+  'first ed': '1st Ed',
+  '1st ed': '1st Ed',
+  '1ST EDITION': '1st Ed',
+  '1st EDITION': '1st Ed',
 
   // Shadowless variations
   shadowless: 'SHADOWLESS',

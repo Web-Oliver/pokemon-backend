@@ -25,9 +25,12 @@ function formatItemForFacebook(data, category) {
         const cardName = formatCardName(data.cardId.cardName, data.cardId.pokemonNumber, data.cardId.variety);
         const setName = getShortenedSetName(data.cardId.setId.setName);
         const isJapanese = isJapaneseSet(data.cardId.setId.setName);
-        const year = data.cardId.setId.releaseYear || new Date().getFullYear();
 
-        formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} ${cardName} PSA ${data.grade}`;
+        if (isJapanese) {
+          formattedName = `Japanese ${setName} ${cardName} PSA ${data.grade}`;
+        } else {
+          formattedName = `${setName} ${cardName} PSA ${data.grade}`;
+        }
       } else {
         formattedName = `PSA Graded Card ${data.grade}`;
       }
@@ -39,9 +42,12 @@ function formatItemForFacebook(data, category) {
         const cardName = formatCardName(data.cardId.cardName, data.cardId.pokemonNumber, data.cardId.variety);
         const setName = getShortenedSetName(data.cardId.setId.setName);
         const isJapanese = isJapaneseSet(data.cardId.setId.setName);
-        const year = data.cardId.setId.releaseYear || new Date().getFullYear();
 
-        formattedName = `${year} ${isJapanese ? 'Japanese ' : ''}${setName} ${cardName}`;
+        if (isJapanese) {
+          formattedName = `Japanese ${setName} ${cardName}`;
+        } else {
+          formattedName = `${setName} ${cardName}`;
+        }
       } else {
         formattedName = 'Raw Card';
       }
