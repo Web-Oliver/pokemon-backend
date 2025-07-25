@@ -304,7 +304,7 @@ const postToDba = asyncHandler(async (req, res) => {
           itemCount: integrationResult.totalItemsProcessed,
           export: integrationResult.export,
           posting: integrationResult.posting,
-          dryRun: dryRun,
+          dryRun,
           timestamp: integrationResult.timestamp
         }
       });
@@ -317,7 +317,7 @@ const postToDba = asyncHandler(async (req, res) => {
         itemCount: integrationResult.totalItemsProcessed,
         export: integrationResult.export,
         posting: integrationResult.posting,
-        dryRun: dryRun,
+        dryRun,
         timestamp: integrationResult.timestamp
       }
     });
@@ -367,6 +367,7 @@ const testDbaIntegration = asyncHandler(async (req, res) => {
       const { id, type } = itemRequest;
 
       let item = null;
+
       switch (type) {
         case 'psa':
           item = await PsaGradedCard.findById(id).populate({

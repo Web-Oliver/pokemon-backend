@@ -1,0 +1,49 @@
+{
+  "mcpServers": {
+    "context7": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@context7/mcp-server"],
+      "env": []
+    },
+    "playwright": {
+      "type": "stdio", 
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-playwright"],
+      "env": []
+    }
+  },
+  "tools": {
+    "allowedCommands": [
+      "npm test:*",
+      "npm install:*", 
+      "find:*",
+      "node:*",
+      "curl:*",
+      "ls:*",
+      "grep:*",
+      "npm run build:*",
+      "rm:*",
+      "sed:*",
+      "npm run dev:*",
+      "tree:*",
+      "mkdir:*",
+      "timeout 5s npm start:*",
+      "npm start",
+      "pkill:*",
+      "timeout 10s npm start:*",
+      "npx tsc:*",
+      "npx eslint:*",
+      "npm run lint",
+      "npm run lint:*",
+      "npm run:*",
+      "timeout 30 npm test",
+      "npx prettier:*",
+      "npx jest:*",
+      "timeout 10 npm start",
+      "git add:*",
+      "git commit:*",
+      "git push:*"
+    ]
+  }
+}

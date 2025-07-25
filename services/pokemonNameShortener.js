@@ -186,6 +186,7 @@ class PokemonNameShortener {
     // Apply abbreviations
     Object.entries(POKEMON_ABBREVIATIONS).forEach(([fullForm, abbreviation]) => {
       const regex = new RegExp(fullForm, 'gi');
+
       if (regex.test(processedName)) {
         processedName = processedName.replace(regex, abbreviation);
         abbreviationsApplied.push(`${fullForm} → ${abbreviation}`);
@@ -230,6 +231,7 @@ class PokemonNameShortener {
    */
   getAbbreviationStats(name) {
     const result = this.shortenSetName(name);
+
     return {
       originalLength: result.originalName.length,
       shortenedLength: result.shortenedName.length,
@@ -259,6 +261,7 @@ function createPokemonNameShortener(config = {}) {
  */
 function quickShortenSetName(setName) {
   const shortener = new PokemonNameShortener();
+
   return shortener.shortenSetName(setName);
 }
 

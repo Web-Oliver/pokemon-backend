@@ -59,7 +59,7 @@ function activityTrackingPlugin(schema, options = {}) {
   schema.post('save', function (doc) {
     try {
       // Use setImmediate for non-blocking activity tracking
-      // eslint-disable-next-line func-names
+       
       setImmediate(async () => {
         try {
           const ActivityService = require('../services/activityService');
@@ -126,7 +126,7 @@ function activityTrackingPlugin(schema, options = {}) {
             });
           }
 
-          // eslint-disable-next-line func-names
+           
           setImmediate(async () => {
             try {
               const ActivityService = require('../services/activityService');

@@ -1,7 +1,7 @@
+const Logger = require('../Logger');
+
 const generateVerificationReport = (expectedCounts, actualCounts, importResults) => {
-  console.log('='.repeat(80));
-  console.log('VERIFICATION REPORT');
-  console.log('='.repeat(80));
+  Logger.section('VERIFICATION REPORT');
 
   let overallStatus = 'PASS';
 
@@ -51,9 +51,7 @@ const generateVerificationReport = (expectedCounts, actualCounts, importResults)
   console.log('');
 
   // Overall status
-  console.log('='.repeat(80));
-  console.log(`OVERALL VERIFICATION STATUS: ${overallStatus}`);
-  console.log('='.repeat(80));
+  Logger.section(`OVERALL VERIFICATION STATUS: ${overallStatus}`);
 
   // Display any import errors
   if (importResults.errors && importResults.errors.length > 0) {

@@ -110,6 +110,7 @@ const triggerManualBackup = asyncHandler(async (req, res) => {
   
   // Validate backup type
   const validTypes = ['manual', 'full', 'personal', 'reference'];
+
   if (!validTypes.includes(backupType)) {
     throw new ValidationError(`Invalid backup type. Must be one of: ${validTypes.join(', ')}`);
   }
@@ -174,6 +175,7 @@ const getBackupHistory = asyncHandler(async (req, res) => {
   
   // Limit results
   const limitNum = parseInt(limit, 10);
+
   if (limitNum > 0) {
     history = history.slice(0, limitNum);
   }

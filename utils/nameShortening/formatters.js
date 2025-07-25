@@ -109,6 +109,7 @@ function formatCardName(cardName, pokemonNumber, variety) {
     if (shortenedVariety) {
       // Replace dashes with spaces in variety too
       const cleanedVariety = shortenedVariety.replace(/-/g, ' ');
+
       formattedName += ` ${cleanedVariety}`;
     }
   }

@@ -2,6 +2,8 @@ const Card = require('../models/Card');
 const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
 const container = require('../container');
+const BaseController = require('./base/BaseController');
+const { pluginManager } = require('../plugins/PluginManager');
 
 const getAllCards = asyncHandler(async (req, res) => {
   const { setId, cardName, baseName } = req.query;
@@ -188,9 +190,135 @@ const searchBestMatch = asyncHandler(async (req, res) => {
   }
 });
 
+// Enhanced Cards Controller using BaseController with plugins
+class EnhancedCardsController extends BaseController {
+  constructor() {
+    super('cardService', {
+      entityName: 'Card',
+      pluralName: 'cards',
+      includeMarkAsSold: false,
+      enableCaching: true,
+      enablePlugins: true,
+      enableMetrics: true,
+      filterableFields: ['setId', 'cardName', 'baseName', 'pokemonNumber', 'year']
+    });
+
+    // Apply plugins specific to cards
+    pluginManager.applyPlugins(this, 'Card');
+
+    // Add custom card-specific plugin
+    this.addPlugin('cardSpecificEnhancements', {
+      beforeOperation: async (operation, data, context) => {
+        // Add card-specific validation or processing
+        if (operation === 'create' && data.pokemonNumber) {
+          // Validate Pokemon number format
+          if (!/^\d+$/.test(data.pokemonNumber)) {
+            const error = new Error('Pokemon number must be numeric');
+
+            error.statusCode = 400;
+            throw error;
+          }
+        }
+      },
+      
+      beforeResponse: (operation, data, context) => {
+        // Add card-specific metadata
+        if (data.data && Array.isArray(data.data)) {
+          data.meta = {
+            ...data.meta,
+            cardCount: data.data.length,
+            hasSetInfo: data.data.some(card => card.setId),
+            searchEnhanced: true
+          };
+        }
+        return data;
+      }
+    });
+  }
+
+  // Custom method for card-specific search
+  searchBestMatch = asyncHandler(async (req, res) => {
+    const operation = 'searchBestMatch';
+    const context = { req, res, operation };
+    
+    try {
+      await this.executeHooks('beforeOperation', operation, req.query, context);
+
+      const { q, pokemonNumber, setName, year } = req.query;
+      const searchFactory = container.resolve('searchFactory');
+      const cardStrategy = searchFactory.getStrategy('cards');
+
+      const filters = {};
+
+      if (pokemonNumber) filters.pokemonNumber = pokemonNumber;
+      if (setName) filters.setName = setName;
+      if (year) filters.year = parseInt(year, 10);
+
+      const searchOptions = {
+        limit: 15,
+        includeSetInfo: true,
+        filters,
+        enhancedScoring: true,
+      };
+
+      let results;
+
+      if (!q) {
+        results = await cardStrategy.searchByPopularity(searchOptions);
+      } else {
+        results = await cardStrategy.search(q, searchOptions);
+      }
+
+      await this.executeHooks('afterOperation', operation, results, context);
+
+      let responseData = {
+        success: true,
+        data: results.data || results,
+        meta: results.meta || {
+          source: 'unified-search',
+          totalResults: (results.data || results).length,
+        },
+      };
+
+      responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
+      res.status(200).json(responseData);
+
+    } catch (error) {
+      await this.executeHooks('onError', operation, error, context);
+      throw error;
+    }
+  });
+
+  // Get controller metrics
+  getControllerMetrics = asyncHandler(async (req, res) => {
+    const metrics = this.getMetrics();
+    
+    res.status(200).json({
+      success: true,
+      data: metrics
+    });
+  });
+}
+
+// Create enhanced controller instance
+const enhancedCardsController = new EnhancedCardsController();
+
 module.exports = {
+  // Legacy exports for backward compatibility
   getAllCards,
   getCardById,
   getCardsBySetId,
   searchBestMatch,
+  
+  // Enhanced controller exports
+  enhancedController: enhancedCardsController,
+  
+  // Enhanced methods
+  getAllCardsEnhanced: enhancedCardsController.getAll,
+  getCardByIdEnhanced: enhancedCardsController.getById,
+  createCardEnhanced: enhancedCardsController.create,
+  updateCardEnhanced: enhancedCardsController.update,
+  deleteCardEnhanced: enhancedCardsController.delete,
+  searchBestMatchEnhanced: enhancedCardsController.searchBestMatch,
+  getCardMetrics: enhancedCardsController.getControllerMetrics,
 };

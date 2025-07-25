@@ -91,6 +91,7 @@ class DbaExportService {
             .replace(/\bholo\b/gi, '')
             .replace(/\s+/g, ' ')
             .trim();
+
           parts.push(cleanCardName);
         }
         
@@ -114,7 +115,7 @@ class DbaExportService {
         const baseTitle = `Pokemon Kort ${shortenedSet} `;
         const remaining = this.config.maxTitleLength - baseTitle.length - 10; // Reserve space for suffix
         
-        let cardPart = cardName.substring(0, remaining) + '...';
+        const cardPart = `${cardName.substring(0, remaining)  }...`;
         let suffix = '';
         
         if (itemType === 'psa' && item.grade) {
@@ -127,7 +128,7 @@ class DbaExportService {
         
         // Final length check
         if (fullTitle.length > this.config.maxTitleLength) {
-          fullTitle = fullTitle.substring(0, this.config.maxTitleLength - 3) + '...';
+          fullTitle = `${fullTitle.substring(0, this.config.maxTitleLength - 3)  }...`;
         }
       }
       
@@ -149,7 +150,7 @@ class DbaExportService {
    */
   generateDescription(item, itemType, customPrefix = '') {
     try {
-      let description = customPrefix ? customPrefix + ' ' : '';
+      let description = customPrefix ? `${customPrefix  } ` : '';
       
       // Add full item details
       const setName = item.cardId?.setId?.setName || item.setName || '';
@@ -174,13 +175,13 @@ class DbaExportService {
       // For sealed products, don't add anything extra - just the name and standard text
       
       // Add standard Danish text
-      description += '. ' + this.config.defaultDescriptionTemplate.danish.standardText;
+      description += `. ${  this.config.defaultDescriptionTemplate.danish.standardText}`;
       
       return description.trim();
       
     } catch (error) {
       console.error('[DBA EXPORT] Error generating description:', error);
-      return 'Pokemon kort. ' + this.config.defaultDescriptionTemplate.danish.standardText;
+      return `Pokemon kort. ${  this.config.defaultDescriptionTemplate.danish.standardText}`;
     }
   }
 
@@ -209,6 +210,7 @@ class DbaExportService {
         // Process images - convert from /uploads/ paths to data/ folder
         const imagePaths = (item.images || []).map(imagePath => {
           const filename = path.basename(imagePath);
+
           return `${this.config.imageFolder}${filename}`;
         });
         
@@ -217,12 +219,12 @@ class DbaExportService {
         
         return {
           id: item._id || item.id,
-          title: title,
-          description: description,
+          title,
+          description,
           price: Math.round(price), // DBA expects integer prices
-          imagePaths: imagePaths,
+          imagePaths,
           originalImagePaths: item.images || [], // Keep original paths for copying
-          itemType: itemType,
+          itemType,
           metadata: {
             cardName: item.cardId?.cardName || item.cardName || item.name,
             setName: item.cardId?.setId?.setName || item.setName,
@@ -316,9 +318,11 @@ class DbaExportService {
       
       // Create metadata file with selected image filenames for ZIP creation
       const selectedImageFiles = [];
+
       dbaItems.forEach(item => {
         item.originalImagePaths.forEach(imagePath => {
           const filename = path.basename(imagePath);
+
           if (!selectedImageFiles.includes(filename)) {
             selectedImageFiles.push(filename);
           }
@@ -333,10 +337,12 @@ class DbaExportService {
       
       // Write JSON file
       const jsonFilePath = path.join(dataFolder, this.config.outputFileName);
+
       fs.writeFileSync(jsonFilePath, JSON.stringify(dbaPostData, null, 2), 'utf8');
       
       // Write metadata file for ZIP creation
       const metadataFilePath = path.join(dataFolder, 'export-metadata.json');
+
       fs.writeFileSync(metadataFilePath, JSON.stringify(metadataFile, null, 2), 'utf8');
       
       console.log(`[DBA EXPORT] Export completed successfully`);
@@ -346,10 +352,10 @@ class DbaExportService {
       return {
         success: true,
         itemCount: items.length,
-        jsonFilePath: jsonFilePath,
-        dataFolder: dataFolder,
+        jsonFilePath,
+        dataFolder,
         items: dbaPostData,
-        dbaItems: dbaItems, // Include original processed items with image paths
+        dbaItems, // Include original processed items with image paths
       };
       
     } catch (error) {
@@ -370,8 +376,10 @@ class DbaExportService {
     try {
       // Add JSON file
       const jsonPath = path.join(dataFolder, this.config.outputFileName);
+
       if (fs.existsSync(jsonPath)) {
         const jsonContent = fs.readFileSync(jsonPath, 'utf8');
+
         zip.file(this.config.outputFileName, jsonContent);
       }
       
@@ -382,6 +390,7 @@ class DbaExportService {
       if (fs.existsSync(metadataPath)) {
         const metadataContent = fs.readFileSync(metadataPath, 'utf8');
         const metadata = JSON.parse(metadataContent);
+
         selectedImageFiles = metadata.selectedImageFiles || [];
         console.log(`[DBA EXPORT] Found metadata with ${selectedImageFiles.length} selected images`);
       } else {
@@ -392,8 +401,10 @@ class DbaExportService {
       // Add only the images from selected items
       for (const filename of selectedImageFiles) {
         const filePath = path.join(dataFolder, filename);
+
         if (fs.existsSync(filePath) && fs.statSync(filePath).isFile()) {
           const fileContent = fs.readFileSync(filePath);
+
           zip.file(`data/${filename}`, fileContent);
           console.log(`[DBA EXPORT] Added selected image to ZIP: ${filename}`);
         } else {

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const activityTrackingPlugin = require('../plugins/activityTracking');
+const { queryOptimizationPlugin } = require('../plugins/queryOptimization');
 const { saleDetailsSchema, priceHistorySchema, collectionItemTransform } = require('./schemas/shared');
 
 const rawCardSchema = new mongoose.Schema({
@@ -23,6 +24,16 @@ rawCardSchema.plugin(activityTrackingPlugin, {
     trackPriceUpdates: true,
     trackImageUpdates: true,
   },
+});
+
+// Apply query optimization plugin
+rawCardSchema.plugin(queryOptimizationPlugin, {
+  entityType: 'RawCard',
+  enableLeanQueries: true,
+  enablePerformanceTracking: true,
+  enableAutomaticIndexing: true,
+  defaultLimit: 50,
+  maxLimit: 500,
 });
 
 // Apply shared transform function for JSON responses

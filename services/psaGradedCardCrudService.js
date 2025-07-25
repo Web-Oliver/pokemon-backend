@@ -4,47 +4,57 @@ const Set = require('../models/Set');
 const mongoose = require('mongoose');
 const { validateReferenceData, validateUserSpecificFields } = require('./referenceDataValidator');
 const ImageManager = require('./shared/imageManager');
+const ValidatorFactory = require('../utils/ValidatorFactory');
+const Logger = require('../utils/Logger');
 
 const validateCreateData = (data) => {
   const { cardName, setName, grade, myPrice } = data;
 
-  console.log('Validating PSA graded card data:', {
+  Logger.service('PsaGradedCard', 'validateCreateData', 'Starting validation', {
     cardName,
     setName,
     grade,
     myPrice,
   });
 
-  if (!cardName || !setName || !grade || !myPrice) {
-    throw new Error('cardName, setName, grade, and myPrice are required');
-  }
+  // Use ValidatorFactory for consistent validation
+  ValidatorFactory.required(cardName, 'Card name');
+  ValidatorFactory.required(setName, 'Set name');
+  ValidatorFactory.number(grade, 'Grade', { min: 1, max: 10, integer: true, required: true });
+  ValidatorFactory.price(myPrice, 'Price');
+
+  Logger.service('PsaGradedCard', 'validateCreateData', 'Validation completed successfully');
 };
 
 const findOrCreateCard = async (cardData) => {
+  const startTime = Date.now();
+  
   try {
-    console.log('=== FIND OR CREATE CARD START ===');
-    console.log('Card data input:', JSON.stringify(cardData, null, 2));
+    Logger.operationStart('CARD', 'FIND_OR_CREATE', {
+      cardName: cardData.cardName,
+      setName: cardData.setName
+    });
 
     const { cardName, setName, pokemonNumber, variety, baseName, year, psaTotalGraded } = cardData;
 
-    console.log('Searching for existing set:', setName);
+    Logger.database('FIND', 'sets', { setName });
     // First try to find or create the set
     let set = await Set.findOne({ setName });
 
     if (!set) {
-      console.log('Set not found, creating new set...');
+      Logger.database('CREATE', 'sets', { setName, year: year || new Date().getFullYear() });
       set = new Set({
         setName,
         year: year || new Date().getFullYear(),
         totalCards: 0,
       });
       await set.save();
-      console.log('New set created:', set._id);
+      Logger.service('PsaGradedCard', 'findOrCreateCard', 'New set created', { setId: set._id, setName });
     } else {
-      console.log('Existing set found:', set._id);
+      Logger.service('PsaGradedCard', 'findOrCreateCard', 'Existing set found', { setId: set._id, setName });
     }
 
-    console.log('Searching for existing card:', cardName, 'in set:', set._id);
+    Logger.database('FIND', 'cards', { cardName, setId: set._id });
     // Then try to find or create the card
     let card = await Card.findOne({
       cardName,
@@ -52,7 +62,6 @@ const findOrCreateCard = async (cardData) => {
     });
 
     if (!card) {
-      console.log('Card not found, creating new card...');
       const newCardData = {
         cardName,
         setId: set._id,
@@ -62,55 +71,76 @@ const findOrCreateCard = async (cardData) => {
         psaTotalGradedForCard: psaTotalGraded || 0, // Use reference data if available
       };
 
-      console.log('New card data:', JSON.stringify(newCardData, null, 2));
+      Logger.database('CREATE', 'cards', newCardData);
 
       card = new Card(newCardData);
       await card.save();
-      console.log('New card created:', card._id);
+      Logger.service('PsaGradedCard', 'findOrCreateCard', 'New card created', { cardId: card._id, cardName });
     } else {
-      console.log('Existing card found:', card._id);
+      Logger.service('PsaGradedCard', 'findOrCreateCard', 'Existing card found', { cardId: card._id, cardName });
       if (psaTotalGraded && card.psaTotalGradedForCard !== psaTotalGraded) {
-        console.log('Updating PSA total graded from', card.psaTotalGradedForCard, 'to', psaTotalGraded);
+        Logger.database('UPDATE', 'cards', { 
+          cardId: card._id, 
+          oldTotal: card.psaTotalGradedForCard, 
+          newTotal: psaTotalGraded 
+        });
         // Update existing card with new PSA total if it's different
         card.psaTotalGradedForCard = psaTotalGraded;
         await card.save();
-        console.log('Card updated with new PSA total');
+        Logger.service('PsaGradedCard', 'findOrCreateCard', 'Card updated with new PSA total');
       }
     }
 
-    console.log('=== FIND OR CREATE CARD END ===');
+    const duration = Date.now() - startTime;
+    Logger.performance('Find or Create Card', duration, {
+      cardName: cardData.cardName,
+      setName: cardData.setName
+    });
+    
+    Logger.operationSuccess('CARD', 'FIND_OR_CREATE', {
+      cardId: card._id,
+      cardName: cardData.cardName,
+      duration: `${duration}ms`
+    });
+    
     return card._id;
   } catch (error) {
-    console.error('=== FIND OR CREATE CARD ERROR ===');
-    console.error('Error in findOrCreateCard:', error);
-    console.error('Error type:', error.constructor.name);
-    console.error('Error message:', error.message);
-    console.error('Error stack:', error.stack);
+    const duration = Date.now() - startTime;
+    Logger.operationError('CARD', 'FIND_OR_CREATE', error, {
+      cardName: cardData.cardName,
+      setName: cardData.setName,
+      duration: `${duration}ms`
+    });
 
     if (error.errors) {
-      console.error('Mongoose validation errors:', error.errors);
+      Logger.error('PsaGradedCard', 'Mongoose validation errors in findOrCreateCard', error.errors);
     }
 
-    console.error('=== FIND OR CREATE CARD ERROR END ===');
     throw error;
   }
 };
 
 const createPsaGradedCard = async (data) => {
+  const startTime = Date.now();
+  
   try {
-    console.log('=== PSA GRADED CARD COLLECTION ITEM CREATION START ===');
-    console.log('Input data:', JSON.stringify(data, null, 2));
+    Logger.operationStart('PSA_CARD', 'CREATE', {
+      cardName: data.cardName,
+      setName: data.setName,
+      grade: data.grade,
+      price: data.myPrice
+    });
 
     validateCreateData(data);
-    console.log('Basic validation passed');
+    Logger.service('PsaGradedCard', 'createPsaGradedCard', 'Basic validation passed');
 
     // Validate user-specific fields
     validateUserSpecificFields(data, 'psa');
-    console.log('User-specific fields validation passed');
+    Logger.service('PsaGradedCard', 'createPsaGradedCard', 'User-specific fields validation passed');
 
     const { cardName, setName, pokemonNumber, variety, baseName, year, grade, myPrice, images, psaTotalGraded } = data;
 
-    console.log('Extracted fields:', {
+    Logger.service('PsaGradedCard', 'createPsaGradedCard', 'Extracted fields', {
       cardName,
       setName,
       pokemonNumber,
@@ -119,7 +149,7 @@ const createPsaGradedCard = async (data) => {
       year,
       grade,
       myPrice,
-      images: images ? images.length : 0,
+      imageCount: images ? images.length : 0,
       psaTotalGraded,
     });
 
@@ -136,7 +166,9 @@ const createPsaGradedCard = async (data) => {
     };
     const validation = await validateReferenceData(referenceData);
 
-    console.log('Reference card validation passed, using card ID:', validation.cardId);
+    Logger.service('PsaGradedCard', 'createPsaGradedCard', 'Reference card validation passed', { 
+      cardId: validation.cardId 
+    });
 
     // Create collection item that references the validated card
     const psaGradedCardData = {
@@ -152,15 +184,19 @@ const createPsaGradedCard = async (data) => {
       ],
     };
 
-    console.log('PSA collection item data to save:', JSON.stringify(psaGradedCardData, null, 2));
+    Logger.database('CREATE', 'psagradedcards', {
+      cardId: psaGradedCardData.cardId,
+      grade: psaGradedCardData.grade,
+      price: psaGradedCardData.myPrice
+    });
 
     const psaGradedCard = new PsaGradedCard(psaGradedCardData);
 
-    console.log('Saving PSA collection item...');
     await psaGradedCard.save();
-    console.log('PSA collection item saved successfully');
+    Logger.service('PsaGradedCard', 'createPsaGradedCard', 'PSA collection item saved successfully', {
+      psaCardId: psaGradedCard._id
+    });
 
-    console.log('Populating reference card data...');
     await psaGradedCard.populate({
       path: 'cardId',
       populate: {
@@ -168,34 +204,49 @@ const createPsaGradedCard = async (data) => {
         model: 'Set',
       },
     });
-    console.log('Reference card data populated successfully');
+    Logger.service('PsaGradedCard', 'createPsaGradedCard', 'Reference card data populated successfully');
 
-    console.log('=== PSA GRADED CARD COLLECTION ITEM CREATION END ===');
+    const duration = Date.now() - startTime;
+    Logger.performance('PSA Card Creation', duration, {
+      cardName: data.cardName,
+      grade: data.grade,
+      price: data.myPrice
+    });
+    
+    Logger.operationSuccess('PSA_CARD', 'CREATE', {
+      psaCardId: psaGradedCard._id,
+      cardName: data.cardName,
+      grade: data.grade,
+      duration: `${duration}ms`
+    });
+    
     return psaGradedCard;
   } catch (error) {
-    console.error('=== PSA GRADED CARD COLLECTION ITEM CREATION ERROR ===');
-    console.error('Error in createPsaGradedCard:', error);
-    console.error('Error type:', error.constructor.name);
-    console.error('Error message:', error.message);
-    console.error('Error stack:', error.stack);
+    const duration = Date.now() - startTime;
+    Logger.operationError('PSA_CARD', 'CREATE', error, {
+      cardName: data.cardName,
+      setName: data.setName,
+      grade: data.grade,
+      duration: `${duration}ms`
+    });
 
     if (error.errors) {
-      console.error('Mongoose validation errors:', error.errors);
+      Logger.error('PsaGradedCard', 'Mongoose validation errors in createPsaGradedCard', error.errors);
     }
 
-    console.error('=== PSA GRADED CARD COLLECTION ITEM CREATION ERROR END ===');
     throw error;
   }
 };
 
 const updatePsaGradedCard = async (id, updateData) => {
-  console.log('[PSA UPDATE] ===== UPDATE STARTED =====');
-  console.log('[PSA UPDATE] ID:', id);
-  console.log('[PSA UPDATE] updateData:', JSON.stringify(updateData, null, 2));
+  const startTime = Date.now();
+  
+  Logger.operationStart('PSA_CARD', 'UPDATE', {
+    psaCardId: id,
+    updateFields: Object.keys(updateData)
+  });
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw new Error('Invalid ObjectId format');
-  }
+  ValidatorFactory.objectId(id, 'PSA graded card ID');
 
   const existingCard = await PsaGradedCard.findById(id);
 
@@ -203,9 +254,12 @@ const updatePsaGradedCard = async (id, updateData) => {
     throw new Error('PSA graded card not found');
   }
 
-  console.log('[PSA UPDATE] Existing card found, current price:', existingCard.myPrice);
-  console.log('[PSA UPDATE] Existing priceHistory length:', existingCard.priceHistory?.length || 0);
-  console.log('[PSA UPDATE] Existing images:', existingCard.images?.length || 0);
+  Logger.service('PsaGradedCard', 'updatePsaGradedCard', 'Existing card found', {
+    psaCardId: id,
+    currentPrice: existingCard.myPrice,
+    priceHistoryLength: existingCard.priceHistory?.length || 0,
+    imageCount: existingCard.images?.length || 0
+  });
 
   // Extract price, images, and history handling from the update data
   const { myPrice, priceHistory, images, ...otherData } = updateData;
@@ -213,9 +267,10 @@ const updatePsaGradedCard = async (id, updateData) => {
 
   // Handle image updates and cleanup
   if (images !== undefined) {
-    console.log('[PSA UPDATE] Image update detected');
-    console.log('[PSA UPDATE] Old images:', existingCard.images?.length || 0);
-    console.log('[PSA UPDATE] New images:', images?.length || 0);
+    Logger.service('PsaGradedCard', 'updatePsaGradedCard', 'Image update detected', {
+      oldImageCount: existingCard.images?.length || 0,
+      newImageCount: images?.length || 0
+    });
 
     const oldImages = existingCard.images || [];
     const newImages = images || [];
@@ -224,10 +279,12 @@ const updatePsaGradedCard = async (id, updateData) => {
     const removedImages = oldImages.filter((oldImg) => !newImages.includes(oldImg));
 
     if (removedImages.length > 0) {
-      console.log('[PSA UPDATE] Images to delete:', removedImages);
+      Logger.service('PsaGradedCard', 'updatePsaGradedCard', 'Cleaning up removed images', {
+        removedCount: removedImages.length
+      });
       // Delete removed images from filesystem (async, don't wait)
       ImageManager.deleteImageFiles(removedImages).catch((error) => {
-        console.error('[PSA UPDATE] Error during image cleanup:', error);
+        Logger.error('PsaGradedCard', 'Error during image cleanup', error);
       });
     }
 
@@ -236,7 +293,9 @@ const updatePsaGradedCard = async (id, updateData) => {
 
   // Handle price and price history updates
   if (priceHistory && Array.isArray(priceHistory)) {
-    console.log('[PSA UPDATE] Frontend sent priceHistory:', priceHistory.length, 'entries');
+    Logger.service('PsaGradedCard', 'updatePsaGradedCard', 'Frontend sent complete price history', {
+      historyEntries: priceHistory.length
+    });
     // Frontend is managing price history - use their complete array
     dataToUpdate.priceHistory = priceHistory;
 
@@ -245,15 +304,18 @@ const updatePsaGradedCard = async (id, updateData) => {
       const latestEntry = priceHistory[priceHistory.length - 1];
       const latestPrice = latestEntry.price;
       
-      console.log('[PSA UPDATE] Latest price history entry:', JSON.stringify(latestEntry, null, 2));
-      console.log('[PSA UPDATE] Latest price value:', latestPrice, 'Type:', typeof latestPrice);
+      Logger.service('PsaGradedCard', 'updatePsaGradedCard', 'Setting price from latest history entry', {
+        latestPrice,
+        priceType: typeof latestPrice
+      });
 
       // Let MongoDB handle the Decimal128 conversion by using the raw value
       dataToUpdate.myPrice = latestPrice;
-      console.log('[PSA UPDATE] Set dataToUpdate.myPrice to:', latestPrice, 'Type:', typeof latestPrice);
     }
   } else if (myPrice !== undefined) {
-    console.log('[PSA UPDATE] Only myPrice provided, adding to existing history');
+    Logger.service('PsaGradedCard', 'updatePsaGradedCard', 'Only myPrice provided, adding to existing history', {
+      newPrice: myPrice
+    });
     // Only myPrice provided - add to existing history
     dataToUpdate.myPrice = myPrice;
     dataToUpdate.$push = {
@@ -264,7 +326,10 @@ const updatePsaGradedCard = async (id, updateData) => {
     };
   }
 
-  console.log('[PSA UPDATE] Final dataToUpdate:', JSON.stringify(dataToUpdate, null, 2));
+  Logger.database('UPDATE', 'psagradedcards', {
+    psaCardId: id,
+    updateFields: Object.keys(dataToUpdate)
+  });
 
   const updatedCard = await PsaGradedCard.findByIdAndUpdate(id, dataToUpdate, {
     new: true,
@@ -281,23 +346,42 @@ const updatePsaGradedCard = async (id, updateData) => {
     throw new Error('PSA graded card not found');
   }
 
-  console.log('[PSA UPDATE] Update successful, new price:', updatedCard.myPrice);
-  console.log('[PSA UPDATE] New priceHistory length:', updatedCard.priceHistory?.length || 0);
-  console.log('[PSA UPDATE] ===== UPDATE COMPLETED =====');
+  const duration = Date.now() - startTime;
+  Logger.performance('PSA Card Update', duration, {
+    psaCardId: id,
+    updateFields: Object.keys(updateData)
+  });
+
+  Logger.operationSuccess('PSA_CARD', 'UPDATE', {
+    psaCardId: id,
+    newPrice: updatedCard.myPrice,
+    priceHistoryLength: updatedCard.priceHistory?.length || 0,
+    duration: `${duration}ms`
+  });
 
   return updatedCard;
 };
 
 const deletePsaGradedCard = async (id) => {
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw new Error('Invalid ObjectId format');
-  }
+  const startTime = Date.now();
+  
+  Logger.operationStart('PSA_CARD', 'DELETE', { psaCardId: id });
+  
+  ValidatorFactory.objectId(id, 'PSA graded card ID');
 
   const deletedCard = await PsaGradedCard.findByIdAndDelete(id);
 
   if (!deletedCard) {
     throw new Error('PSA graded card not found');
   }
+
+  const duration = Date.now() - startTime;
+  Logger.performance('PSA Card Deletion', duration, { psaCardId: id });
+  
+  Logger.operationSuccess('PSA_CARD', 'DELETE', {
+    psaCardId: id,
+    duration: `${duration}ms`
+  });
 
   return deletedCard;
 };

@@ -3,12 +3,18 @@
  *
  * Comprehensive service for managing collection activities with Context7 patterns.
  * Provides automatic activity generation, rich data tracking, and premium features.
+ * Implements IActivityService interface contract for consistent behavior.
  *
  * Features:
  * - Auto-activity generation for all CRUD operations
  * - Rich metadata extraction and tracking
  * - Context7 timeline and analytics
  * - Premium filtering and search capabilities
+ * - Batch processing for performance optimization
+ * - Intelligent activity prioritization and queuing
+ *
+ * @implements {IActivityService}
+ * @see {@link module:services/interfaces/ServiceContracts~IActivityService}
  */
 
 const { Activity, ACTIVITY_TYPES, ACTIVITY_PRIORITIES } = require('../models/Activity');
@@ -56,8 +62,24 @@ const ACTIVITY_COLORS = {
   [ACTIVITY_TYPES.SYSTEM]: 'indigo',
 };
 
+/**
+ * Activity Service Implementation
+ * 
+ * Provides comprehensive activity tracking and management for the Pokemon Collection system.
+ * Uses batch processing for performance optimization and provides rich metadata tracking.
+ * 
+ * @class ActivityService
+ * @implements {IActivityService}
+ */
 class ActivityService {
-  // Context7 Helper - Convert Decimal128 to Number
+  /**
+   * Context7 Helper - Convert Decimal128 to Number
+   * Handles various price formats and converts them to standard numbers
+   * 
+   * @param {*} price - Price value in various formats (Decimal128, number, string)
+   * @returns {number|null} Converted price as number or null if invalid
+   * @static
+   */
   static convertPrice(price) {
     if (!price) {
       return null;
@@ -74,7 +96,15 @@ class ActivityService {
     return null;
   }
 
-  // Context7 Performance - Batch Activity Processing
+  /**
+   * Context7 Performance - Batch Activity Processing
+   * Processes queued activities in batches for optimal database performance
+   * 
+   * @returns {Promise<void>}
+   * @throws {DatabaseError} When batch processing fails
+   * @static
+   * @private
+   */
   static async processBatch() {
     if (activityQueue.length === 0) {
       return;
@@ -103,7 +133,24 @@ class ActivityService {
     }
   }
 
-  // Context7 Core Activity Creation - Optimized for Mongoose Post-Hooks
+  /**
+   * Context7 Core Activity Creation - Optimized for Mongoose Post-Hooks
+   * Creates activity records with intelligent batching and priority handling
+   * 
+   * @param {Object} activityData - Activity data to create
+   * @param {string} activityData.type - Activity type (must be valid ACTIVITY_TYPE)
+   * @param {string} activityData.title - Activity title (required)
+   * @param {string} activityData.description - Activity description
+   * @param {string} activityData.details - Detailed activity information
+   * @param {string} activityData.priority - Activity priority level
+   * @param {string} activityData.entityType - Type of entity involved
+   * @param {string} activityData.entityId - ID of entity involved (must be valid ObjectId)
+   * @param {Object} activityData.metadata - Additional activity metadata
+   * @returns {Promise<Object|null>} Created activity or queued confirmation, null on error
+   * @throws {ValidationError} When activity data is invalid
+   * @throws {DatabaseError} When database operation fails (for high priority activities)
+   * @static
+   */
   static async createActivity(activityData) {
     try {
       const enrichedData = {
@@ -149,7 +196,23 @@ class ActivityService {
     }
   }
 
-  // Context7 Card Activities
+  /**
+   * Context7 Card Activities - Logs card addition activity
+   * Creates detailed activity record when a card is added to collection
+   * 
+   * @param {Object} cardData - Card data object
+   * @param {string} cardData.cardName - Name of the card
+   * @param {string} cardData.setName - Name of the set
+   * @param {number} cardData.myPrice - Price of the card
+   * @param {string} cardData.grade - PSA grade (for PSA cards)
+   * @param {string} cardData.condition - Card condition (for raw cards)
+   * @param {string} cardData.category - Product category (for sealed products)
+   * @param {string} cardType - Type of card ('psa', 'raw', 'sealed')
+   * @returns {Promise<Object>} Created activity record
+   * @throws {ValidationError} When card data is invalid
+   * @throws {DatabaseError} When database operation fails
+   * @static
+   */
   static async logCardAdded(cardData, cardType) {
     const cardName = cardData.cardName || cardData.cardId?.cardName || 'Unknown Card';
     const setName = cardData.setName || cardData.cardId?.setId?.setName || 'Unknown Set';
@@ -660,6 +723,7 @@ class ActivityService {
 
     // Check required fields
     const requiredFields = ['type', 'title'];
+
     for (const field of requiredFields) {
       if (!activityData[field] || typeof activityData[field] !== 'string' || activityData[field].trim().length === 0) {
         return false;

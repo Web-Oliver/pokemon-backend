@@ -128,9 +128,97 @@ const getCacheStats = () => ({
 });
 
 const warmupCache = async (warmupQueries = []) => {
-  // This would be called during server startup to pre-populate cache
-  console.log(`Warming up cache with ${warmupQueries.length} queries...`);
-  // Implementation would depend on your specific warming strategy
+  console.log(`🔥 Warming up search cache with ${warmupQueries.length} queries...`);
+  
+  let warmedCount = 0;
+  const results = [];
+  
+  for (const query of warmupQueries) {
+    try {
+      const cacheKey = createCacheKey({
+        query: query.query || query,
+        route: { path: query.route || '/api/unified-search' }
+      });
+      
+      if (!searchCache.has(cacheKey) && query.mockResponse) {
+        searchCache.set(cacheKey, query.mockResponse, query.ttl || 300);
+        warmedCount++;
+        results.push({ query: query.query || query, success: true });
+      }
+    } catch (error) {
+      results.push({ 
+        query: query.query || query, 
+        success: false, 
+        error: error.message 
+      });
+    }
+  }
+  
+  console.log(`✅ Cache warmup completed: ${warmedCount}/${warmupQueries.length} queries cached`);
+  return { warmedCount, totalQueries: warmupQueries.length, results };
+};
+
+const invalidateCacheByPattern = (pattern) => {
+  const keys = searchCache.keys();
+  let invalidatedCount = 0;
+  
+  keys.forEach(key => {
+    if (typeof pattern === 'string' && key.includes(pattern)) {
+      searchCache.del(key);
+      invalidatedCount++;
+    } else if (pattern instanceof RegExp && pattern.test(key)) {
+      searchCache.del(key);
+      invalidatedCount++;
+    }
+  });
+  
+  console.log(`🗑️ Invalidated ${invalidatedCount} cache entries matching pattern:`, pattern);
+  return invalidatedCount;
+};
+
+const invalidateCacheByEntity = (entityType, entityId = null) => {
+  const patterns = [];
+  
+  switch (entityType) {
+    case 'card':
+    case 'cards':
+      patterns.push('/api/cards');
+      patterns.push('/api/unified-search');
+      if (entityId) {
+        patterns.push(`"setId":"${entityId}"`);
+      }
+      break;
+    case 'set':
+    case 'sets':
+      patterns.push('/api/sets');
+      patterns.push('/api/cards');
+      patterns.push('/api/unified-search');
+      if (entityId) {
+        patterns.push(`"setId":"${entityId}"`);
+        patterns.push(`"setName"`);
+      }
+      break;
+    case 'product':
+    case 'sealed-products':
+      patterns.push('/api/sealed-products');
+      patterns.push('/api/unified-search');
+      break;
+    case 'psa':
+    case 'psa-graded-cards':
+      patterns.push('/api/psa-graded-cards');
+      patterns.push('/api/unified-search');
+      break;
+    default:
+      patterns.push('/api/unified-search');
+  }
+  
+  let totalInvalidated = 0;
+
+  patterns.forEach(pattern => {
+    totalInvalidated += invalidateCacheByPattern(pattern);
+  });
+  
+  return totalInvalidated;
 };
 
 module.exports = {
@@ -138,5 +226,7 @@ module.exports = {
   clearSearchCache,
   getCacheStats,
   warmupCache,
+  invalidateCacheByPattern,
+  invalidateCacheByEntity,
   searchCache,
 };

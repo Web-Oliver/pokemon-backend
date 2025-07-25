@@ -274,6 +274,7 @@ const getCardMarketSetNames = asyncHandler(async (req, res) => {
   // Add search scoring if query provided
   if (search && search.trim()) {
     const searchTerm = search.trim().toLowerCase();
+
     pipeline.push({
       $addFields: {
         score: {

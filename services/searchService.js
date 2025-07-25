@@ -2,9 +2,23 @@ const Card = require('../models/Card');
 const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
 const { searchCache } = require('../middleware/searchCache');
 
-// Enhanced search utilities for word order and special character handling
+/**
+ * Enhanced search utilities for word order and special character handling
+ * Provides comprehensive search normalization and pattern matching capabilities
+ * 
+ * @class SearchUtility
+ * @implements {ISearchService}
+ */
 class SearchUtility {
-  // Normalize search query by removing special characters and handling word order
+  /**
+   * Normalize search query by removing special characters and handling word order
+   * Converts query to lowercase and removes special characters for consistent matching
+   * 
+   * @param {string} query - Raw search query
+   * @returns {string} Normalized search query
+   * @throws {ValidationError} When query is not a string
+   * @static
+   */
   static normalizeQuery(query) {
     if (!query || typeof query !== 'string') {
       return '';
@@ -20,7 +34,14 @@ class SearchUtility {
     return normalized;
   }
 
-  // Create fuzzy search patterns that ignore word order and special characters
+  /**
+   * Create fuzzy search patterns that ignore word order and special characters
+   * Generates multiple search patterns including permutations for flexible matching
+   * 
+   * @param {string} query - Normalized search query
+   * @returns {Array<string>} Array of search patterns for matching
+   * @static
+   */
   static createFuzzyPatterns(query) {
     const normalized = this.normalizeQuery(query);
 
@@ -57,7 +78,15 @@ class SearchUtility {
     return [...new Set(patterns)]; // Remove duplicates
   }
 
-  // Generate all permutations of words array
+  /**
+   * Generate all permutations of words array
+   * Creates all possible word order combinations for flexible search matching
+   * 
+   * @param {Array<string>} arr - Array of words to permute
+   * @returns {Array<Array<string>>} Array of word permutations
+   * @static
+   * @private
+   */
   static generatePermutations(arr) {
     if (arr.length <= 1) {
       return [arr];
@@ -78,7 +107,14 @@ class SearchUtility {
     return result;
   }
 
-  // Create MongoDB regex patterns for flexible matching
+  /**
+   * Create MongoDB regex patterns for flexible matching
+   * Converts search patterns to MongoDB-compatible regex patterns with proper escaping
+   * 
+   * @param {string} query - Search query to convert
+   * @returns {Array<RegExp>} Array of MongoDB regex patterns
+   * @static
+   */
   static createMongoRegexPatterns(query) {
     const patterns = this.createFuzzyPatterns(query);
     const regexPatterns = [];
@@ -100,7 +136,15 @@ class SearchUtility {
     return regexPatterns;
   }
 
-  // Score search results based on relevance to original query
+  /**
+   * Score search results based on relevance to original query
+   * Calculates relevance score using multiple factors: exact match, starts with, word matches, length similarity
+   * 
+   * @param {string} text - Text to score against query
+   * @param {string} originalQuery - Original search query
+   * @returns {number} Relevance score (higher is more relevant)
+   * @static
+   */
   static calculateRelevanceScore(text, originalQuery) {
     if (!text || !originalQuery) {
       return 0;

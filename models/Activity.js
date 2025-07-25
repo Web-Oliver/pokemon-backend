@@ -193,7 +193,7 @@ const activitySchema = new mongoose.Schema(
     // Context7 Transform for Dynamic Fields
     toJSON: {
       virtuals: true,
-      // eslint-disable-next-line func-names
+       
       transform(doc, ret) {
         // Calculate relative time dynamically for every JSON response
         const now = new Date();

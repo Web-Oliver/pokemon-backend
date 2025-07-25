@@ -198,6 +198,7 @@ class BackupService {
 
       // Create backup directory
       const backupDir = path.join(BACKUP_CONFIG.baseDir, backupType, backupId);
+
       await this.ensureDirectory(backupDir);
 
       // Perform collection counts and verification
@@ -283,8 +284,8 @@ class BackupService {
    * Based on Context7 MCP MongoDB documentation
    */
   async executeMongoDump(backupDir, collections, options = {}) {
-    const dbName = BACKUP_CONFIG.dbName;
-    const mongoUri = BACKUP_CONFIG.mongoUri;
+    const {dbName} = BACKUP_CONFIG;
+    const {mongoUri} = BACKUP_CONFIG;
     
     try {
       const results = [];
@@ -295,11 +296,12 @@ class BackupService {
       // Backup each collection individually for better control
       for (const collection of collections) {
         const collectionBackupDir = path.join(backupDir, collection);
+
         await this.ensureDirectory(collectionBackupDir);
         
         // Build mongodump command - don't add dbName to URI if it's already there
         const baseUri = mongoUri.includes(dbName) ? mongoUri : `${mongoUri}/${dbName}`;
-        let mongoDumpCmd = [
+        const mongoDumpCmd = [
           'mongodump',
           `--uri="${baseUri}"`,
           `--collection=${collection}`,
@@ -313,12 +315,14 @@ class BackupService {
             // Convert ObjectIds to proper format for mongodump
             const oidArray = referencedIds.cardIds.map(id => ({ "$oid": id.toString() }));
             const queryFilter = JSON.stringify({ _id: { $in: oidArray } });
+
             mongoDumpCmd.push(`--query='${queryFilter}'`);
             this.log('DEBUG', `Applying filter to cards collection`, { 
               cardCount: referencedIds.cardIds.length 
             });
           } else {
             const queryFilter = JSON.stringify({ _id: { $in: [] } });
+
             mongoDumpCmd.push(`--query='${queryFilter}'`);
           }
         } else if (collection === 'sets') {
@@ -326,12 +330,14 @@ class BackupService {
             // Convert ObjectIds to proper format for mongodump
             const oidArray = referencedIds.setIds.map(id => ({ "$oid": id.toString() }));
             const queryFilter = JSON.stringify({ _id: { $in: oidArray } });
+
             mongoDumpCmd.push(`--query='${queryFilter}'`);
             this.log('DEBUG', `Applying filter to sets collection`, { 
               setCount: referencedIds.setIds.length 
             });
           } else {
             const queryFilter = JSON.stringify({ _id: { $in: [] } });
+
             mongoDumpCmd.push(`--query='${queryFilter}'`);
           }
         } else if (collection === 'cardmarketreferenceproducts') {
@@ -339,17 +345,20 @@ class BackupService {
             // Convert ObjectIds to proper format for mongodump
             const oidArray = referencedIds.productIds.map(id => ({ "$oid": id.toString() }));
             const queryFilter = JSON.stringify({ _id: { $in: oidArray } });
+
             mongoDumpCmd.push(`--query='${queryFilter}'`);
             this.log('DEBUG', `Applying filter to cardmarketreferenceproducts collection`, { 
               productCount: referencedIds.productIds.length 
             });
           } else {
             const queryFilter = JSON.stringify({ _id: { $in: [] } });
+
             mongoDumpCmd.push(`--query='${queryFilter}'`);
           }
         }
 
         const finalCommand = mongoDumpCmd.join(' ');
+
         this.log('DEBUG', `Executing mongodump for collection: ${collection}`, { command: finalCommand });
 
         // Execute command synchronously for better error handling
@@ -398,6 +407,7 @@ class BackupService {
 
       // Check if any backups succeeded
       const successfulBackups = results.filter(r => r.success);
+
       if (successfulBackups.length === 0) {
         throw new Error('All collection backups failed');
       }
@@ -412,6 +422,7 @@ class BackupService {
 
       // Log filtering summary
       const filteredCollections = results.filter(r => r.isFiltered);
+
       if (filteredCollections.length > 0) {
         this.log('INFO', 'Applied selective filtering to reference collections', {
           filtered: filteredCollections.map(r => r.collection),
@@ -614,15 +625,17 @@ class BackupService {
       
       // Create compressed archive
       const tarCmd = `tar -czf "${archiveFile}" -C "${path.dirname(sourceDir)}" "${path.basename(sourceDir)}"`;
+
       execSync(tarCmd);
       
       // Verify archive was created
       if (fs.existsSync(archiveFile)) {
         const archiveSize = fs.statSync(archiveFile).size;
+
         this.log('INFO', 'Archive backup created successfully', {
           archiveId,
           archiveFile,
-          size: Math.round(archiveSize / 1024 / 1024) + 'MB'
+          size: `${Math.round(archiveSize / 1024 / 1024)  }MB`
         });
         
         // Remove uncompressed backup directory
@@ -633,9 +646,9 @@ class BackupService {
           archiveFile,
           archiveSize
         };
-      } else {
+      } 
         throw new Error('Archive file was not created');
-      }
+      
       
     } catch (error) {
       this.log('ERROR', 'Archive backup failed', { error: error.message });
@@ -649,6 +662,7 @@ class BackupService {
   async cleanupOldBackups(backupType) {
     try {
       const backupTypeDir = path.join(BACKUP_CONFIG.baseDir, backupType);
+
       if (!fs.existsSync(backupTypeDir)) return;
 
       const retention = BACKUP_CONFIG.retention[backupType] || 7;
@@ -662,6 +676,7 @@ class BackupService {
         
         for (const dirName of toDelete) {
           const dirPath = path.join(backupTypeDir, dirName);
+
           execSync(`rm -rf "${dirPath}"`);
           this.log('DEBUG', `Cleaned up old backup: ${dirName}`);
         }
@@ -714,6 +729,7 @@ class BackupService {
   generateBackupId(backupType) {
     const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
     const random = Math.random().toString(36).substr(2, 5);
+
     return `${backupType}-${timestamp}-${random}`;
   }
 
@@ -765,6 +781,7 @@ class BackupService {
       }
       
       const isConnected = mongoose.connection.readyState === 1;
+
       if (!isConnected) {
         throw new Error(`MongoDB connection not established. State: ${mongoose.connection.readyState}`);
       }
@@ -784,14 +801,17 @@ class BackupService {
 
   async saveBackupMetadata(backupDir, metadata) {
     const metadataFile = path.join(backupDir, 'backup-metadata.json');
+
     fs.writeFileSync(metadataFile, JSON.stringify(metadata, null, 2));
   }
 
   async loadBackupHistory() {
     const historyFile = path.join(BACKUP_CONFIG.baseDir, 'backup-history.json');
+
     if (fs.existsSync(historyFile)) {
       try {
         const history = JSON.parse(fs.readFileSync(historyFile, 'utf8'));
+
         this.backupHistory = history.slice(0, 100); // Keep last 100 entries
       } catch (error) {
         this.log('WARN', 'Failed to load backup history', { error: error.message });
@@ -802,6 +822,7 @@ class BackupService {
 
   async saveBackupHistory() {
     const historyFile = path.join(BACKUP_CONFIG.baseDir, 'backup-history.json');
+
     try {
       fs.writeFileSync(historyFile, JSON.stringify(this.backupHistory.slice(0, 100), null, 2));
     } catch (error) {

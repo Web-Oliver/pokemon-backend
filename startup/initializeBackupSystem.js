@@ -24,6 +24,7 @@ async function initializeBackupSystem() {
     
     // Start scheduled backups
     const result = backupService.startScheduledBackups();
+
     console.log('✅ Scheduled backups started');
     console.log('📅 Backup Schedules:');
     console.log('   - Daily (Personal collections): 2:00 AM');
@@ -32,6 +33,7 @@ async function initializeBackupSystem() {
     
     // Log backup configuration
     const status = backupService.getStatus();
+
     console.log('📊 Backup System Ready:');
     console.log(`   - Backup directory: ${status.config.directories.base}`);
     console.log(`   - Archive directory: ${status.config.directories.archive}`);

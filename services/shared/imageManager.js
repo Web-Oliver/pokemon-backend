@@ -6,13 +6,21 @@ const path = require('path');
  *
  * Centralizes image file operations to ensure consistency and prevent duplication.
  * Handles deletion of image files with robust error handling and logging.
+ * Implements IImageManager interface contract for consistent behavior.
+ *
+ * @class ImageManager
+ * @implements {IImageManager}
+ * @see {@link module:services/interfaces/ServiceContracts~IImageManager}
  */
 class ImageManager {
   /**
    * Deletes multiple image files from the filesystem
+   * Handles bulk deletion with individual error handling to prevent cascade failures
    *
-   * @param {Array<string>} imageUrls - Array of image URLs to delete
+   * @param {Array<string>} imageUrls - Array of image URLs to delete (must start with '/uploads/')
    * @returns {Promise<void>}
+   * @throws {FileSystemError} When file operations fail (non-blocking, continues with other files)
+   * @static
    */
   static async deleteImageFiles(imageUrls) {
     if (!imageUrls || imageUrls.length === 0) {
@@ -56,9 +64,12 @@ class ImageManager {
 
   /**
    * Deletes a single image file from the filesystem
+   * Convenience method that delegates to deleteImageFiles for consistent behavior
    *
-   * @param {string} imageUrl - Image URL to delete
+   * @param {string} imageUrl - Image URL to delete (must start with '/uploads/')
    * @returns {Promise<void>}
+   * @throws {FileSystemError} When file operation fails
+   * @static
    */
   static async deleteImageFile(imageUrl) {
     return await this.deleteImageFiles([imageUrl]);
@@ -66,9 +77,11 @@ class ImageManager {
 
   /**
    * Validates if an image URL is valid for deletion
+   * Checks if URL is a string and starts with '/uploads/' path
    *
    * @param {string} imageUrl - Image URL to validate
-   * @returns {boolean} - True if valid, false otherwise
+   * @returns {boolean} True if valid for deletion, false otherwise
+   * @static
    */
   static isValidImageUrl(imageUrl) {
     return imageUrl && typeof imageUrl === 'string' && imageUrl.startsWith('/uploads/');
@@ -76,9 +89,12 @@ class ImageManager {
 
   /**
    * Gets the file path for an image URL
+   * Converts relative URL to absolute filesystem path
    *
-   * @param {string} imageUrl - Image URL
-   * @returns {string} - File path
+   * @param {string} imageUrl - Image URL (should start with '/uploads/')
+   * @returns {string} Absolute file path
+   * @throws {ValidationError} When URL format is invalid
+   * @static
    */
   static getImageFilePath(imageUrl) {
     return path.join(__dirname, '..', '..', imageUrl);

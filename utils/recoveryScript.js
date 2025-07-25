@@ -53,6 +53,7 @@ class RecoveryService {
       
       // Find backup directory
       const backupDir = this.findBackupDirectory(backupId);
+
       if (!backupDir) {
         throw new Error(`Backup ${backupId} not found`);
       }
@@ -94,8 +95,10 @@ class RecoveryService {
 
     for (const type of backupTypes) {
       const typeDir = path.join(baseDir, type);
+
       if (fs.existsSync(typeDir)) {
         const backupDir = path.join(typeDir, backupId);
+
         if (fs.existsSync(backupDir)) {
           return backupDir;
         }
@@ -120,10 +123,12 @@ class RecoveryService {
 
     // Extract BSON data
     const tempBsonFile = path.join(RECOVERY_CONFIG.tempDir, 'psagradedcards.bson');
+
     execSync(`gunzip -c "${bsonFile}" > "${tempBsonFile}"`);
 
     // Convert BSON to JSON for processing
     const tempJsonFile = path.join(RECOVERY_CONFIG.tempDir, 'psagradedcards.json');
+
     execSync(`bsondump "${tempBsonFile}" > "${tempJsonFile}"`);
 
     // Read and process the JSON data
@@ -136,6 +141,7 @@ class RecoveryService {
       if (line.trim()) {
         try {
           const cardData = JSON.parse(line);
+
           await this.recoverSinglePsaGradedCard(cardData);
           this.stats.psaCardsRecovered++;
         } catch (error) {
@@ -158,6 +164,7 @@ class RecoveryService {
     
     // Find original card and set data from backup
     const originalCard = await this.findCardByBackupData(oldCardId);
+
     if (!originalCard) {
       throw new Error('Could not find matching card in current database');
     }
@@ -186,13 +193,14 @@ class RecoveryService {
         // Recursively convert arrays and objects
         if (Array.isArray(obj)) {
           return obj.map(convertExtendedJson);
-        } else {
+        } 
           const converted = {};
+
           for (const [key, value] of Object.entries(obj)) {
             converted[key] = convertExtendedJson(value);
           }
           return converted;
-        }
+        
       }
       
       return obj;
@@ -230,9 +238,11 @@ class RecoveryService {
 
     // Similar process as PSA cards but for raw cards
     const tempBsonFile = path.join(RECOVERY_CONFIG.tempDir, 'rawcards.bson');
+
     execSync(`gunzip -c "${bsonFile}" > "${tempBsonFile}"`);
 
     const tempJsonFile = path.join(RECOVERY_CONFIG.tempDir, 'rawcards.json');
+
     execSync(`bsondump "${tempBsonFile}" > "${tempJsonFile}"`);
 
     const jsonData = fs.readFileSync(tempJsonFile, 'utf8');
@@ -244,6 +254,7 @@ class RecoveryService {
       if (line.trim()) {
         try {
           const cardData = JSON.parse(line);
+
           await this.recoverSingleRawCard(cardData);
           this.stats.rawCardsRecovered++;
         } catch (error) {
@@ -263,6 +274,7 @@ class RecoveryService {
   async recoverSingleRawCard(originalCardData) {
     const oldCardId = originalCardData.cardId.$oid || originalCardData.cardId;
     const originalCard = await this.findCardByBackupData(oldCardId);
+
     if (!originalCard) {
       throw new Error('Could not find matching card in current database');
     }
@@ -290,13 +302,14 @@ class RecoveryService {
         
         if (Array.isArray(obj)) {
           return obj.map(convertExtendedJson);
-        } else {
+        } 
           const converted = {};
+
           for (const [key, value] of Object.entries(obj)) {
             converted[key] = convertExtendedJson(value);
           }
           return converted;
-        }
+        
       }
       
       return obj;
@@ -333,9 +346,11 @@ class RecoveryService {
 
     // Similar process for sealed products
     const tempBsonFile = path.join(RECOVERY_CONFIG.tempDir, 'sealedproducts.bson');
+
     execSync(`gunzip -c "${bsonFile}" > "${tempBsonFile}"`);
 
     const tempJsonFile = path.join(RECOVERY_CONFIG.tempDir, 'sealedproducts.json');
+
     execSync(`bsondump "${tempBsonFile}" > "${tempJsonFile}"`);
 
     const jsonData = fs.readFileSync(tempJsonFile, 'utf8');
@@ -347,6 +362,7 @@ class RecoveryService {
       if (line.trim()) {
         try {
           const productData = JSON.parse(line);
+
           await this.recoverSingleSealedProduct(productData);
           this.stats.sealedProductsRecovered++;
         } catch (error) {
@@ -418,10 +434,12 @@ class RecoveryService {
       
       // Find the original card details from backup
       let originalCardData = null;
+
       for (const line of lines) {
         if (line.trim()) {
           const cardData = JSON.parse(line);
           const cardId = cardData._id ? cardData._id.$oid : cardData._id;
+
           if (cardId === oldCardId) {
             originalCardData = cardData;
             break;
@@ -437,6 +455,7 @@ class RecoveryService {
         if (originalSetData) {
           // Handle MongoDB extended JSON format for year
           let yearValue;
+
           if (typeof originalSetData.year === 'object' && originalSetData.year.$numberInt) {
             yearValue = parseInt(originalSetData.year.$numberInt);
           } else {
@@ -465,9 +484,9 @@ class RecoveryService {
             
             if (currentCard) {
               return currentCard;
-            } else {
+            } 
               console.log(`❌ No match found for card: ${originalCardData.cardName} in set ${originalSetData.setName}`);
-            }
+            
           } else {
             console.log(`❌ No current set found for: ${originalSetData.setName} (${originalSetData.year})`);
           }
@@ -507,6 +526,7 @@ class RecoveryService {
         if (line.trim()) {
           const setData = JSON.parse(line);
           const setId = setData._id ? setData._id.$oid : setData._id;
+
           if (setId === oldSetId) {
             return setData;
           }
@@ -557,6 +577,7 @@ async function main() {
     console.log('✅ Connected to MongoDB');
 
     const recoveryService = new RecoveryService();
+
     await recoveryService.recoverFromBackup(backupId);
 
     await mongoose.disconnect();

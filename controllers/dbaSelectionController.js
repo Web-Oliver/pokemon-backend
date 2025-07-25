@@ -12,7 +12,7 @@ const SealedProduct = require('../models/SealedProduct');
 const getAllDbaSelections = asyncHandler(async (req, res) => {
   const { active, expiring } = req.query;
   
-  let query = {};
+  const query = {};
   
   if (active === 'true') {
     query.isActive = true;
@@ -28,6 +28,7 @@ const getAllDbaSelections = asyncHandler(async (req, res) => {
   
   if (expiring === 'true') {
     const expiringSoonDays = parseInt(req.query.days) || 10;
+
     selections = await DbaSelection.getExpiringSoon(expiringSoonDays);
   } else {
     selections = await DbaSelection.find(query).sort({ selectedDate: -1 });
@@ -97,6 +98,7 @@ const addToDbaSelection = asyncHandler(async (req, res) => {
     try {
       // Check if item exists
       let itemExists = false;
+
       switch (itemType) {
         case 'psa':
           itemExists = await PsaGradedCard.findById(itemId);
@@ -124,6 +126,7 @@ const addToDbaSelection = asyncHandler(async (req, res) => {
       
       // Create or reactivate DBA selection
       let selection;
+
       if (existingSelection) {
         // Reactivate existing selection
         existingSelection.isActive = true;

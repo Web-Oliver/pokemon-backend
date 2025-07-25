@@ -50,12 +50,14 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
     if (!set) {
         // Strategy 3: Remove Pokemon prefix and try again
         const withoutPokemon = mappedSetName.replace(/Pokemon\s+/i, '');
+
         set = await Set.findOne({ setName: { $regex: new RegExp(withoutPokemon, 'i') } });
     }
     
     if (!set) {
         // Strategy 4: Remove parentheses and try again
         const withoutParens = mappedSetName.replace(/\s*\([^)]*\)/g, '');
+
         set = await Set.findOne({ setName: { $regex: new RegExp(withoutParens, 'i') } });
     }
     
@@ -67,6 +69,7 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
         const similarSets = await Set.find({ 
             setName: { $regex: new RegExp(setName.split(' ').slice(-2).join('|'), 'i') } 
         }).limit(3);
+
         if (similarSets.length > 0) {
             console.log(`📝 Similar sets found:`);
             similarSets.forEach(s => console.log(`   - ${s.setName}`));
@@ -85,7 +88,7 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
         { 
             setId: set._id, 
             cardName: { $regex: new RegExp(`^${cardName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}$`, 'i') },
-            pokemonNumber: pokemonNumber 
+            pokemonNumber 
         },
         // Exact card name match
         { 
@@ -96,7 +99,7 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
         { 
             setId: set._id, 
             cardName: { $regex: new RegExp(cardName.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'i') },
-            pokemonNumber: pokemonNumber 
+            pokemonNumber 
         },
         // Partial card name match
         { 
@@ -122,6 +125,7 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
         console.log(`❌ Card not found: "${cardName}" in set "${setName}"`);
         console.log(`📝 Available cards in set (first 5):`);
         const sampleCards = await Card.find({ setId: set._id }).limit(5);
+
         sampleCards.forEach(c => console.log(`   - ${c.cardName} (#${c.pokemonNumber})`));
         return null;
     }
@@ -144,10 +148,10 @@ async function copyImageToPublicUploads(imagePath, newFileName) {
             fs.copyFileSync(sourceImagePath, targetImagePath);
             console.log(`📸 Image copied: ${path.basename(imagePath)} -> ${newFileName}`);
             return `/uploads/${newFileName}`;
-        } else {
+        } 
             console.log(`⚠️ Image not found: ${sourceImagePath}`);
             return null;
-        }
+        
     } catch (error) {
         console.log(`❌ Error copying image: ${error.message}`);
         return null;
@@ -161,6 +165,7 @@ async function importPsaCards() {
         
         // Read backup data
         const backupData = JSON.parse(fs.readFileSync('./collection-backup.json', 'utf8'));
+
         console.log(`📊 Found ${backupData.length} PSA cards to import`);
         
         let successCount = 0;
@@ -169,6 +174,7 @@ async function importPsaCards() {
         
         for (let i = 0; i < backupData.length; i++) {
             const cardData = backupData[i];
+
             console.log(`\n🔄 Processing card ${i + 1}/${backupData.length}: ${cardData.title}`);
             
             try {
@@ -198,6 +204,7 @@ async function importPsaCards() {
                 
                 // Process images
                 const processedImages = [];
+
                 if (cardData.imagePaths && cardData.imagePaths.length > 0) {
                     for (let j = 0; j < cardData.imagePaths.length; j++) {
                         const imagePath = cardData.imagePaths[j];
@@ -205,6 +212,7 @@ async function importPsaCards() {
                         const newFileName = `image-${Date.now()}-${Math.random().toString(36).substr(2, 9)}${imageExtension}`;
                         
                         const copiedImagePath = await copyImageToPublicUploads(imagePath, newFileName);
+
                         if (copiedImagePath) {
                             processedImages.push(copiedImagePath);
                         }
@@ -243,6 +251,7 @@ async function importPsaCards() {
         
         // Verify final count
         const finalCount = await PsaGradedCard.countDocuments({});
+
         console.log(`\n🎯 Total PSA cards in database: ${finalCount}`);
         
     } catch (error) {

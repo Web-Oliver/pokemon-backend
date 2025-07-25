@@ -201,8 +201,8 @@ class DbaPlaywrightService {
       return {
         success: true,
         message: 'Ad published successfully to DBA.dk',
-        title: title,
-        metadata: metadata,
+        title,
+        metadata,
         timestamp: new Date().toISOString()
       };
 
@@ -212,6 +212,7 @@ class DbaPlaywrightService {
       // Take screenshot for debugging
       try {
         const screenshotPath = path.join(__dirname, '../data', `dba-error-${Date.now()}.png`);
+
         await this.page.screenshot({ path: screenshotPath, fullPage: true });
         console.log(`[DBA PLAYWRIGHT] Error screenshot saved: ${screenshotPath}`);
       } catch (screenshotError) {
@@ -221,8 +222,8 @@ class DbaPlaywrightService {
       return {
         success: false,
         error: error.message,
-        title: title,
-        metadata: metadata,
+        title,
+        metadata,
         timestamp: new Date().toISOString()
       };
     }
@@ -236,6 +237,7 @@ class DbaPlaywrightService {
       // Validate image paths exist
       const validPaths = imagePaths.filter(imgPath => {
         const exists = fs.existsSync(imgPath);
+
         if (!exists) {
           console.warn(`[DBA PLAYWRIGHT] Image not found: ${imgPath}`);
         }
@@ -249,9 +251,11 @@ class DbaPlaywrightService {
 
       // Wait for and click the image upload button
       const fileChooserPromise = this.page.waitForEvent('filechooser');
+
       await this.page.getByRole('button', { name: 'Billeder' }).click();
       
       const fileChooser = await fileChooserPromise;
+
       await fileChooser.setFiles(validPaths);
       
       console.log(`[DBA PLAYWRIGHT] Uploaded ${validPaths.length} images`);
@@ -275,6 +279,7 @@ class DbaPlaywrightService {
       
       // Look for and click the Pokemon/Trading card category
       const categoryLocator = this.page.getByText('Samlerobjekter/Samlekort');
+
       await categoryLocator.click();
       
       console.log('[DBA PLAYWRIGHT] Category selected: Samlerobjekter/Samlekort');
@@ -293,18 +298,21 @@ class DbaPlaywrightService {
     try {
       // Fill title with human-like typing
       const titleField = this.page.getByRole('textbox', { name: 'Annonceoverskrift' });
+
       await titleField.fill(''); // Clear first
       await titleField.type(title, { delay: randomDelay(50, 150) });
       await this.page.waitForTimeout(randomDelay(300, 800));
 
       // Fill description with human-like typing
       const descField = this.page.getByRole('textbox', { name: 'Beskrivelse' });
+
       await descField.fill(''); // Clear first
       await descField.type(description, { delay: randomDelay(30, 100) });
       await this.page.waitForTimeout(randomDelay(400, 900));
 
       // Fill price
       const priceField = this.page.getByRole('spinbutton', { name: 'Pris' });
+
       await priceField.fill(price.toString());
       await this.page.waitForTimeout(randomDelay(300, 700));
 
@@ -389,15 +397,18 @@ class DbaPlaywrightService {
     
     for (let i = 0; i < adsArray.length; i++) {
       const ad = adsArray[i];
+
       console.log(`[DBA PLAYWRIGHT] Processing ad ${i + 1}/${adsArray.length}: ${ad.title}`);
       
       try {
         const result = await this.submitForm(ad);
+
         results.push(result);
         
         // Add delay between submissions (except for last ad)
         if (i < adsArray.length - 1) {
           const randomDelayMs = randomDelay(delayBetweenAds - 2000, delayBetweenAds + 3000);
+
           console.log(`[DBA PLAYWRIGHT] Waiting ${randomDelayMs/1000} seconds before next submission...`);
           await new Promise(resolve => setTimeout(resolve, randomDelayMs));
         }
@@ -424,6 +435,7 @@ class DbaPlaywrightService {
     try {
       if (this.page) {
         const screenshotPath = path.join(__dirname, '../data', filename);
+
         await this.page.screenshot({ path: screenshotPath, fullPage: true });
         console.log(`[DBA PLAYWRIGHT] Screenshot saved: ${screenshotPath}`);
         return screenshotPath;
@@ -440,8 +452,8 @@ class DbaPlaywrightService {
   async getStatus() {
     try {
       const status = {
-        browserInitialized: !!this.context,
-        pageAvailable: !!this.page,
+        browserInitialized: Boolean(this.context),
+        pageAvailable: Boolean(this.page),
         currentUrl: this.page ? await this.page.url().catch(() => null) : null,
         sessionPath: this.config.userDataDir,
         sessionExists: fs.existsSync(this.config.userDataDir),

@@ -2,6 +2,7 @@ const { ValidationError, NotFoundError } = require('../../middleware/errorHandle
 const ImageManager = require('../shared/imageManager');
 const SaleService = require('../shared/saleService');
 const ActivityService = require('../activityService');
+const ValidatorFactory = require('../../utils/ValidatorFactory');
 
 /**
  * Collection Service
@@ -233,8 +234,8 @@ class CollectionService {
         throw new ValidationError('Sale tracking is not enabled for this collection type');
       }
 
-      // Validate sale details
-      this.options.saleService.validateSaleDetails(saleDetails);
+      // Validate sale details using centralized validation
+      ValidatorFactory.saleDetails(saleDetails);
 
       // Get existing item
       const existingItem = await this.repository.findById(id);
@@ -440,17 +441,8 @@ class CollectionService {
    * @throws {ValidationError} - If validation fails
    */
   validateCreateData(data) {
-    if (!data) {
-      throw new ValidationError('Item data is required');
-    }
-
-    if (data.myPrice !== undefined && (typeof data.myPrice !== 'number' || data.myPrice < 0)) {
-      throw new ValidationError('Price must be a non-negative number');
-    }
-
-    if (data.images && !Array.isArray(data.images)) {
-      throw new ValidationError('Images must be an array');
-    }
+    // Use centralized validation instead of duplicated logic
+    ValidatorFactory.collectionItemData(data, this.options.entityName);
 
     // Entity-specific validations can be added in subclasses
   }

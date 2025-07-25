@@ -10,6 +10,7 @@ const path = require('path');
 const fs = require('fs');
 const { DbaExportService } = require('./dbaExportService');
 const { DbaPlaywrightService } = require('./dbaPlaywrightService');
+const Logger = require('../utils/Logger');
 
 /**
  * Configuration for DBA integration - using integrated Playwright
@@ -43,9 +44,18 @@ class DbaIntegrationService {
       dryRun = false 
     } = options;
     
+    const startTime = Date.now();
+    
     try {
-      console.log(`[DBA INTEGRATION] Starting export and post for ${items.length} items`);
-      console.log(`[DBA INTEGRATION] Using integrated Playwright service`);
+      Logger.operationStart('DBA', 'EXPORT_AND_POST', {
+        itemCount: items.length,
+        customDescription,
+        includeMetadata,
+        postDelay,
+        dryRun
+      });
+      
+      Logger.service('DbaIntegration', 'exportAndPostToDba', 'Using integrated Playwright service');
       
       // Step 1: Generate DBA export using existing service
       const exportResult = await this.dbaExportService.generateDbaExport(items, {
@@ -55,21 +65,31 @@ class DbaIntegrationService {
       
       if (!exportResult || !exportResult.success) {
         const errorMsg = exportResult ? JSON.stringify(exportResult) : 'null result';
-        console.error(`[DBA INTEGRATION] Export generation failed: ${errorMsg}`);
+
+        Logger.operationError('DBA', 'EXPORT_GENERATION', new Error(`Export generation failed: ${errorMsg}`), {
+          exportResult,
+          itemCount: items.length
+        });
         throw new Error(`DBA export generation failed: ${errorMsg}`);
       }
       
-      console.log(`[DBA INTEGRATION] Export generated successfully: ${exportResult.jsonFilePath}`);
+      Logger.service('DbaIntegration', 'exportAndPostToDba', 'Export generated successfully', {
+        jsonFilePath: exportResult.jsonFilePath,
+        itemCount: exportResult.itemCount
+      });
       
       // Step 2: Execute DBA automation using integrated Playwright service (unless dry run)  
       let postingResults = null;
+
       if (!dryRun) {
-        console.log('[DBA INTEGRATION] LIVE MODE - executing integrated Playwright automation');
+        Logger.service('DbaIntegration', 'exportAndPostToDba', 'LIVE MODE - executing integrated Playwright automation');
         try {
           postingResults = await this.executePlaywrightPosting(exportResult, postDelay);
         } catch (scriptError) {
-          console.error('[DBA INTEGRATION] Playwright execution failed:', scriptError);
-          console.error('[DBA INTEGRATION] Stack trace:', scriptError.stack);
+          Logger.operationError('DBA', 'PLAYWRIGHT_EXECUTION', scriptError, {
+            exportResult: exportResult.jsonFilePath,
+            postDelay
+          });
           // Don't crash the whole request - return error result instead
           postingResults = {
             success: false,
@@ -79,7 +99,7 @@ class DbaIntegrationService {
           };
         }
       } else {
-        console.log('[DBA INTEGRATION] Dry run mode - skipping actual posting');
+        Logger.service('DbaIntegration', 'exportAndPostToDba', 'Dry run mode - skipping actual posting');
         postingResults = {
           success: true,
           dryRun: true,
@@ -88,6 +108,21 @@ class DbaIntegrationService {
       }
       
       // Step 3: Return comprehensive result
+      const duration = Date.now() - startTime;
+      Logger.performance('DBA Export and Post', duration, {
+        itemCount: items.length,
+        exportSuccess: true,
+        postingSuccess: postingResults?.success || false,
+        dryRun
+      });
+      
+      Logger.operationSuccess('DBA', 'EXPORT_AND_POST', {
+        totalItemsProcessed: items.length,
+        exportPath: exportResult.jsonFilePath,
+        postingSuccess: postingResults?.success || false,
+        duration: `${duration}ms`
+      });
+      
       return {
         success: true,
         export: {
@@ -101,8 +136,12 @@ class DbaIntegrationService {
       };
       
     } catch (error) {
-      console.error('[DBA INTEGRATION] Integration failed:', error);
-      console.error('[DBA INTEGRATION] Error stack:', error.stack);
+      const duration = Date.now() - startTime;
+      Logger.operationError('DBA', 'EXPORT_AND_POST', error, {
+        itemCount: items.length,
+        duration: `${duration}ms`,
+        dryRun
+      });
       
       // Return a structured error response instead of throwing
       return {
@@ -129,8 +168,13 @@ class DbaIntegrationService {
    * @returns {Promise<Object>} - Posting results
    */
   async executePlaywrightPosting(exportResult, delay = this.config.defaultDelay) {
+    const startTime = Date.now();
+    
     try {
-      console.log(`[DBA INTEGRATION] Starting Playwright posting with ${delay}ms delay between posts`);
+      Logger.operationStart('DBA', 'PLAYWRIGHT_POSTING', {
+        exportPath: exportResult.jsonFilePath,
+        delay: `${delay}ms`
+      });
       
       // Initialize Playwright service if not already done
       if (!this.dbaPlaywrightService) {
@@ -142,7 +186,9 @@ class DbaIntegrationService {
       const jsonContent = fs.readFileSync(exportResult.jsonFilePath, 'utf8');
       const adsData = JSON.parse(jsonContent);
       
-      console.log(`[DBA INTEGRATION] Processing ${adsData.length} ads for posting`);
+      Logger.service('DbaIntegration', 'executePlaywrightPosting', 'Processing ads for posting', {
+        adsCount: adsData.length
+      });
       
       // Convert image paths to full paths
       const adsWithFullPaths = adsData.map(ad => ({
@@ -163,20 +209,37 @@ class DbaIntegrationService {
       const successful = results.filter(r => r.success).length;
       const failed = results.filter(r => !r.success).length;
       
-      console.log(`[DBA INTEGRATION] Posting completed: ${successful} successful, ${failed} failed`);
+      const duration = Date.now() - startTime;
+      Logger.performance('DBA Playwright Posting', duration, {
+        totalAds: results.length,
+        successful,
+        failed,
+        successRate: `${((successful / results.length) * 100).toFixed(1)}%`
+      });
+      
+      Logger.operationSuccess('DBA', 'PLAYWRIGHT_POSTING', {
+        totalAds: results.length,
+        successful,
+        failed,
+        duration: `${duration}ms`
+      });
       
       return {
         success: failed === 0, // Success only if no failures
         totalAds: results.length,
-        successful: successful,
-        failed: failed,
-        results: results,
+        successful,
+        failed,
+        results,
         message: `Posted ${successful}/${results.length} ads successfully`,
         timestamp: new Date().toISOString()
       };
       
     } catch (error) {
-      console.error('[DBA INTEGRATION] Playwright posting failed:', error);
+      const duration = Date.now() - startTime;
+      Logger.operationError('DBA', 'PLAYWRIGHT_POSTING', error, {
+        exportPath: exportResult.jsonFilePath,
+        duration: `${duration}ms`
+      });
       throw new Error(`Playwright posting failed: ${error.message}`);
     }
   }
@@ -240,7 +303,7 @@ class DbaIntegrationService {
       return status;
       
     } catch (error) {
-      console.error('[DBA INTEGRATION] Error getting DBA status:', error);
+      Logger.error('DbaIntegration', 'Error getting DBA status', error);
       return {
         ready: false,
         integrationMode: 'playwright',
@@ -257,8 +320,12 @@ class DbaIntegrationService {
    * @returns {Promise<Object>} - Test results
    */
   async testIntegration(items) {
+    const startTime = Date.now();
+    
     try {
-      console.log('[DBA INTEGRATION] Running Playwright integration test...');
+      Logger.operationStart('DBA', 'INTEGRATION_TEST', {
+        itemCount: items.length
+      });
       
       // Test with dry run mode
       const result = await this.exportAndPostToDba(items, {
@@ -282,7 +349,7 @@ class DbaIntegrationService {
           
           result.playwrightTest = {
             success: true,
-            serviceStatus: serviceStatus,
+            serviceStatus,
             message: 'Playwright service initialized and closed successfully'
           };
           
@@ -295,15 +362,31 @@ class DbaIntegrationService {
         }
       }
       
+      const duration = Date.now() - startTime;
+      Logger.performance('DBA Integration Test', duration, {
+        itemCount: items.length,
+        testSuccess: true
+      });
+      
+      Logger.operationSuccess('DBA', 'INTEGRATION_TEST', {
+        itemCount: items.length,
+        duration: `${duration}ms`,
+        playwrightTestSuccess: result.playwrightTest?.success || false
+      });
+      
       return {
         success: true,
         test: result,
-        status: status,
+        status,
         message: 'Playwright integration test completed successfully'
       };
       
     } catch (error) {
-      console.error('[DBA INTEGRATION] Test failed:', error);
+      const duration = Date.now() - startTime;
+      Logger.operationError('DBA', 'INTEGRATION_TEST', error, {
+        itemCount: items.length,
+        duration: `${duration}ms`
+      });
       throw new Error(`Integration test failed: ${error.message}`);
     }
   }
@@ -316,10 +399,10 @@ class DbaIntegrationService {
       if (this.dbaPlaywrightService) {
         await this.dbaPlaywrightService.close();
         this.dbaPlaywrightService = null;
-        console.log('[DBA INTEGRATION] Playwright service cleaned up');
+        Logger.service('DbaIntegration', 'cleanup', 'Playwright service cleaned up successfully');
       }
     } catch (error) {
-      console.error('[DBA INTEGRATION] Cleanup error:', error);
+      Logger.error('DbaIntegration', 'Cleanup error', error);
     }
   }
 }

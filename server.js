@@ -9,6 +9,7 @@ const { errorHandler } = require('./utils/errorHandler');
 const { compressionMiddleware, setCacheHeaders } = require('./middleware/compression');
 const { getCacheStats } = require('./middleware/searchCache');
 const { initializeBackupSystem } = require('./startup/initializeBackupSystem');
+const { initializeCacheSystem, shutdownCacheSystem } = require('./startup/initializeCacheSystem');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -45,6 +46,8 @@ app.use('/api/import', require('./routes/import'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/dba-selection', require('./routes/dbaSelection')); // DBA selection tracking
 app.use('/api/backup', require('./routes/backup')); // Automatic backup system
+app.use('/api/cache', require('./routes/cacheManagement')); // Enhanced cache management
+app.use('/api/plugins', require('./routes/pluginManagement')); // Plugin management
 app.use('/api', require('./routes/externalListing'));
 
 // Root endpoint
@@ -55,16 +58,29 @@ app.get('/', (req, res) => {
 // Health check endpoint with performance metrics
 app.get('/api/health', (req, res) => {
   const cacheStats = getCacheStats();
+  
+  let enhancedCacheMetrics = {};
+
+  try {
+    const { cacheManager } = require('./middleware/enhancedSearchCache');
+
+    enhancedCacheMetrics = cacheManager.getMetrics();
+  } catch (error) {
+    enhancedCacheMetrics = { error: 'Enhanced cache not available' };
+  }
 
   res.status(200).json({
     status: 'healthy',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
     cache: {
-      hitRate: Math.round(cacheStats.hitRate * 100) / 100,
-      totalKeys: cacheStats.keys,
-      hits: cacheStats.hits,
-      misses: cacheStats.misses,
+      legacy: {
+        hitRate: Math.round(cacheStats.hitRate * 100) / 100,
+        totalKeys: cacheStats.keys,
+        hits: cacheStats.hits,
+        misses: cacheStats.misses,
+      },
+      enhanced: enhancedCacheMetrics
     },
     memory: {
       used: Math.round((process.memoryUsage().heapUsed / 1024 / 1024) * 100) / 100,
@@ -82,14 +98,35 @@ app.listen(PORT, async () => {
   console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
   console.log(`🗄️  Database: ${process.env.MONGO_URI ? 'Connected' : 'Local MongoDB'}`);
   
-  // Initialize backup system after server starts
+  // Initialize systems after server starts
   setTimeout(async () => {
     try {
       await initializeBackupSystem();
+      console.log('✅ Backup system initialized');
     } catch (error) {
-      console.error('Backup system initialization failed:', error.message);
+      console.error('❌ Backup system initialization failed:', error.message);
+    }
+    
+    try {
+      await initializeCacheSystem();
+      console.log('✅ Enhanced cache system initialized');
+    } catch (error) {
+      console.error('❌ Cache system initialization failed:', error.message);
     }
   }, 8000); // Wait 8 seconds for DB connection to be fully stable
+});
+
+// Graceful shutdown handling
+process.on('SIGTERM', () => {
+  console.log('🛑 SIGTERM received, shutting down gracefully...');
+  shutdownCacheSystem();
+  process.exit(0);
+});
+
+process.on('SIGINT', () => {
+  console.log('🛑 SIGINT received, shutting down gracefully...');
+  shutdownCacheSystem();
+  process.exit(0);
 });
 
 module.exports = app;

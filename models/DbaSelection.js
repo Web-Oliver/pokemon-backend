@@ -26,7 +26,7 @@ const dbaSelectionSchema = new mongoose.Schema({
   // Automatically calculated fields (for convenience)
   expiryDate: { 
     type: Date, 
-    default: function() {
+    default() {
       return new Date(Date.now() + 60 * 24 * 60 * 60 * 1000); // 60 days from now
     }
   }
@@ -43,6 +43,7 @@ dbaSelectionSchema.index({ expiryDate: 1 });
 dbaSelectionSchema.virtual('daysRemaining').get(function() {
   const now = new Date();
   const diffTime = this.expiryDate.getTime() - now.getTime();
+
   return Math.max(0, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
 });
 
@@ -50,6 +51,7 @@ dbaSelectionSchema.virtual('daysRemaining').get(function() {
 dbaSelectionSchema.virtual('daysSelected').get(function() {
   const now = new Date();
   const diffTime = now.getTime() - this.selectedDate.getTime();
+
   return Math.floor(diffTime / (1000 * 60 * 60 * 24));
 });
 
@@ -75,6 +77,7 @@ dbaSelectionSchema.statics.getExpiredSelections = function() {
 // Static method to get selections expiring soon (within days)
 dbaSelectionSchema.statics.getExpiringSoon = function(days = 10) {
   const cutoffDate = new Date(Date.now() + days * 24 * 60 * 60 * 1000);
+
   return this.find({ 
     isActive: true,
     expiryDate: { $gt: new Date(), $lte: cutoffDate }

@@ -4,6 +4,7 @@ const Set = require('../models/Set');
 const mongoose = require('mongoose');
 const { validateReferenceData, validateUserSpecificFields } = require('./referenceDataValidator');
 const ImageManager = require('./shared/imageManager');
+const ValidatorFactory = require('../utils/ValidatorFactory');
 
 const validateCreateData = (data) => {
   const { cardName, setName, myPrice, condition } = data;
@@ -131,9 +132,7 @@ const updateRawCard = async (id, updateData) => {
   console.log('[RAW UPDATE] ID:', id);
   console.log('[RAW UPDATE] updateData:', JSON.stringify(updateData, null, 2));
 
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw new Error('Invalid ObjectId format');
-  }
+  ValidatorFactory.objectId(id, 'Raw card ID');
 
   const existingCard = await RawCard.findById(id);
 
@@ -218,6 +217,7 @@ const updateRawCard = async (id, updateData) => {
   // Get the existing card first
 
   const cardToUpdate = await RawCard.findById(id);
+
   if (!cardToUpdate) {
     throw new Error('Raw card not found');
   }
@@ -256,9 +256,7 @@ const updateRawCard = async (id, updateData) => {
 };
 
 const deleteRawCard = async (id) => {
-  if (!mongoose.Types.ObjectId.isValid(id)) {
-    throw new Error('Invalid ObjectId format');
-  }
+  ValidatorFactory.objectId(id, 'Raw card ID');
 
   const deletedCard = await RawCard.findByIdAndDelete(id);
 
