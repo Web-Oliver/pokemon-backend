@@ -78,12 +78,12 @@ mongoose
       collection: 'cardmarketreferenceproducts',
     });
 
-    const sealedProductsResult = await mongoose.connection.db.collection('sealedproducts').deleteMany({});
-
-    logAndCapture('INFO', `Deleted ${sealedProductsResult.deletedCount} sealed products`, {
-      deletedCount: sealedProductsResult.deletedCount,
-      collection: 'sealedproducts',
-    });
+    // DO NOT DELETE sealedproducts - this is personal collection data, not reference data
+    // const sealedProductsResult = await mongoose.connection.db.collection('sealedproducts').deleteMany({});
+    // logAndCapture('INFO', `Deleted ${sealedProductsResult.deletedCount} sealed products`, {
+    //   deletedCount: sealedProductsResult.deletedCount,
+    //   collection: 'sealedproducts',
+    // });
 
     // Wait a moment for database operations to complete
     await new Promise((resolve) => {
@@ -96,16 +96,16 @@ mongoose
     const remainingCardMarket = await mongoose.connection.db
       .collection('cardmarketreferenceproducts')
       .countDocuments({});
-    const remainingSealedProducts = await mongoose.connection.db.collection('sealedproducts').countDocuments({});
+    // DO NOT check sealed products - this is personal collection data, not reference data
+    // const remainingSealedProducts = await mongoose.connection.db.collection('sealedproducts').countDocuments({});
 
     logAndCapture(
       'INFO',
-      `Verification: ${remainingSets} sets, ${remainingCards} cards, ${remainingCardMarket} card market products, ${remainingSealedProducts} sealed products remaining`,
+      `Verification: ${remainingSets} sets, ${remainingCards} cards, ${remainingCardMarket} card market products remaining (sealed products preserved)`,
       {
         remainingSets,
         remainingCards,
         remainingCardMarket,
-        remainingSealedProducts,
       },
     );
 

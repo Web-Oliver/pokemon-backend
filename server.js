@@ -8,6 +8,7 @@ const connectDB = require('./config/db');
 const { errorHandler } = require('./utils/errorHandler');
 const { compressionMiddleware, setCacheHeaders } = require('./middleware/compression');
 const { getCacheStats } = require('./middleware/searchCache');
+const { initializeBackupSystem } = require('./startup/initializeBackupSystem');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -43,6 +44,7 @@ app.use('/api/export', require('./routes/export')); // Export functionality
 app.use('/api/import', require('./routes/import'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/dba-selection', require('./routes/dbaSelection')); // DBA selection tracking
+app.use('/api/backup', require('./routes/backup')); // Automatic backup system
 app.use('/api', require('./routes/externalListing'));
 
 // Root endpoint
@@ -75,8 +77,19 @@ app.get('/api/health', (req, res) => {
 app.use(errorHandler);
 
 // Start server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(PORT, async () => {
+  console.log(`🚀 Pokemon Collection Backend Server running on port ${PORT}`);
+  console.log(`📍 Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`🗄️  Database: ${process.env.MONGO_URI ? 'Connected' : 'Local MongoDB'}`);
+  
+  // Initialize backup system after server starts
+  setTimeout(async () => {
+    try {
+      await initializeBackupSystem();
+    } catch (error) {
+      console.error('Backup system initialization failed:', error.message);
+    }
+  }, 8000); // Wait 8 seconds for DB connection to be fully stable
 });
 
 module.exports = app;

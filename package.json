@@ -30,6 +30,7 @@
     "mongoose": "^8.16.1",
     "multer": "^2.0.1",
     "node-cache": "^5.1.2",
+    "node-cron": "^4.2.1",
     "playwright": "^1.54.1"
   },
   "devDependencies": {
