@@ -53,9 +53,16 @@ class ValidatorFactory {
       throw new ValidationError(`${fieldName} must be a string`);
     }
 
-    if (!mongoose.Types.ObjectId.isValid(id)) {
-      throw new ValidationError(`${fieldName} must be a valid ObjectId`);
+    // Robust ObjectId validation - use hex regex as primary validator
+    const hexRegex = /^[a-f\d]{24}$/i;
+    const isValidHex = hexRegex.test(id);
+
+    if (!isValidHex) {
+      throw new ValidationError(`${fieldName} must be a valid 24-character hex string`);
     }
+
+    // Skip mongoose validation entirely - it's causing issues
+    // Just validate that it's a 24-character hex string, which is sufficient for MongoDB ObjectIds
   }
 
   /**

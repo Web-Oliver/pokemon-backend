@@ -27,7 +27,7 @@ const getAllDbaSelections = asyncHandler(async (req, res) => {
   let selections;
   
   if (expiring === 'true') {
-    const expiringSoonDays = parseInt(req.query.days) || 10;
+    const expiringSoonDays = parseInt(req.query.days, 10) || 10;
 
     selections = await DbaSelection.getExpiringSoon(expiringSoonDays);
   } else {
@@ -87,11 +87,13 @@ const addToDbaSelection = asyncHandler(async (req, res) => {
     
     if (!itemId || !itemType) {
       errors.push({ itemId, error: 'itemId and itemType are required' });
+      // eslint-disable-next-line no-continue
       continue;
     }
     
     if (!['psa', 'raw', 'sealed'].includes(itemType)) {
       errors.push({ itemId, error: 'itemType must be psa, raw, or sealed' });
+      // eslint-disable-next-line no-continue
       continue;
     }
     
@@ -113,7 +115,8 @@ const addToDbaSelection = asyncHandler(async (req, res) => {
       
       if (!itemExists) {
         errors.push({ itemId, error: 'Item not found in collection' });
-        continue;
+        // eslint-disable-next-line no-continue
+      continue;
       }
       
       // Check if already selected for DBA
@@ -121,7 +124,8 @@ const addToDbaSelection = asyncHandler(async (req, res) => {
       
       if (existingSelection && existingSelection.isActive) {
         errors.push({ itemId, error: 'Item is already selected for DBA' });
-        continue;
+        // eslint-disable-next-line no-continue
+      continue;
       }
       
       // Create or reactivate DBA selection
@@ -178,6 +182,7 @@ const removeFromDbaSelection = asyncHandler(async (req, res) => {
     
     if (!itemId || !itemType) {
       errors.push({ itemId, error: 'itemId and itemType are required' });
+      // eslint-disable-next-line no-continue
       continue;
     }
     
@@ -186,7 +191,8 @@ const removeFromDbaSelection = asyncHandler(async (req, res) => {
       
       if (!selection) {
         errors.push({ itemId, error: 'Item not found in DBA selection' });
-        continue;
+        // eslint-disable-next-line no-continue
+      continue;
       }
       
       // Deactivate selection

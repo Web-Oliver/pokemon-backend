@@ -131,7 +131,7 @@ const exportToDba = asyncHandler(async (req, res) => {
     const collectionItems = [];
 
     for (const itemRequest of items) {
-      const { id, type, customTitle, customDescription } = itemRequest;
+      const { id, type, customTitle, customDescription: itemCustomDescription } = itemRequest;
 
       if (!id || !type) {
         throw new ValidationError('Each item must have id and type fields');
@@ -168,7 +168,7 @@ const exportToDba = asyncHandler(async (req, res) => {
         item, 
         itemType: type, 
         customTitle: customTitle?.trim() || null, 
-        customDescription: customDescription?.trim() || null 
+        customDescription: itemCustomDescription?.trim() || null 
       });
     }
 

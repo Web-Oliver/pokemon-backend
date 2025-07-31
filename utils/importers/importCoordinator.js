@@ -6,8 +6,48 @@ const {
   getAllPsaIndividualFiles,
   getAllSealedProductFiles,
 } = require('./fileUtils');
+const Logger = require('../../utils/Logger');
+const ValidatorFactory = require('../../utils/ValidatorFactory');
+const Set = require('../../models/Set');
+const Card = require('../../models/Card');
 
 const importAllData = async (options = {}) => {
+  // Validate import options using ValidatorFactory
+  const validationErrors = [];
+  
+  if (options.limitPsaFiles !== null && options.limitPsaFiles !== undefined) {
+    const psaLimitValidation = ValidatorFactory.number().min(1).max(1000);
+
+    if (!psaLimitValidation.validate(options.limitPsaFiles)) {
+      validationErrors.push('limitPsaFiles must be a number between 1 and 1000');
+    }
+  }
+  
+  if (options.limitSealedProductFiles !== null && options.limitSealedProductFiles !== undefined) {
+    const sealedLimitValidation = ValidatorFactory.number().min(1).max(1000);
+
+    if (!sealedLimitValidation.validate(options.limitSealedProductFiles)) {
+      validationErrors.push('limitSealedProductFiles must be a number between 1 and 1000');
+    }
+  }
+  
+  if (validationErrors.length > 0) {
+    Logger.operationError('INVALID_IMPORT_OPTIONS', 'Import options validation failed', new Error('Validation errors'), {
+      validationErrors,
+      options
+    });
+    return {
+      success: false,
+      errors: validationErrors,
+      psaFiles: 0,
+      sealedProductFiles: 0,
+      setsCreated: 0,
+      setsUpdated: 0,
+      cardsProcessed: 0,
+      sealedProductsProcessed: 0
+    };
+  }
+  
   const {
     includePsa = true,
     includeSealedProducts = true,
@@ -27,9 +67,11 @@ const importAllData = async (options = {}) => {
   };
 
   try {
+    Logger.operationStart('DATA_IMPORT', 'Starting complete data import', { options });
+    
     // Import PSA data using two-phase approach
     if (includePsa) {
-      console.log('Starting PSA data import...');
+      Logger.section('PSA Data Import', 'Starting PSA data import phase');
 
       // Get metadata files and individual files separately
       let metadataFiles = getAllPsaMetadataFiles();
@@ -48,14 +90,11 @@ const importAllData = async (options = {}) => {
 
       const totalPsaFiles = metadataFiles.length + individualFiles.length;
 
-      console.log(
-        `Found ${totalPsaFiles} PSA files to import (${metadataFiles.length} metadata + ${individualFiles.length} individual)`,
-      );
+      Logger.info(`Found ${totalPsaFiles} PSA files to import (${metadataFiles.length} metadata + ${individualFiles.length} individual)`);
       totalResults.psaFiles = totalPsaFiles;
 
       // Phase 1: Import set metadata from *_all_sets.json files
-      console.log('Phase 1: Importing set metadata from summary files...');
-      console.log(`Found ${metadataFiles.length} metadata files`);
+      Logger.section('Phase 1 - Set Metadata', `Importing set metadata from ${metadataFiles.length} summary files`);
 
       const metadataPromises = metadataFiles.map(async (filePath) => {
         const result = await importSetMetadata(filePath);
@@ -83,11 +122,10 @@ const importAllData = async (options = {}) => {
         }
       });
 
-      console.log(`Phase 1 completed: ${totalResults.setsCreated} sets created`);
+      Logger.operationSuccess('PHASE_1_METADATA', `Phase 1 completed: ${totalResults.setsCreated} sets created`);
 
       // Phase 2: Import card data from individual set files
-      console.log('Phase 2: Importing card data from individual set files...');
-      console.log(`Found ${individualFiles.length} individual set files`);
+      Logger.section('Phase 2 - Card Data', `Importing card data from ${individualFiles.length} individual set files`);
 
       const cardDataPromises = individualFiles.map(async (filePath) => {
         const result = await importCardData(filePath);
@@ -117,21 +155,19 @@ const importAllData = async (options = {}) => {
         }
       });
 
-      console.log(
-        `Phase 2 completed: ${totalResults.setsUpdated} sets updated, ${totalResults.cardsProcessed} cards processed`,
-      );
+      Logger.operationSuccess('PHASE_2_CARDS', `Phase 2 completed: ${totalResults.setsUpdated} sets updated, ${totalResults.cardsProcessed} cards processed`);
     }
 
     // Import Sealed Product data as CardMarket reference products
     if (includeSealedProducts || includeCardMarket) {
-      console.log('Starting Sealed Product data import...');
+      Logger.section('Sealed Products Import', 'Starting Sealed Product data import phase');
       let sealedProductFiles = getAllSealedProductFiles();
 
       if (limitSealedProductFiles) {
         sealedProductFiles = sealedProductFiles.slice(0, limitSealedProductFiles);
       }
 
-      console.log(`Found ${sealedProductFiles.length} Sealed Product files to import`);
+      Logger.info(`Found ${sealedProductFiles.length} Sealed Product files to import`);
       totalResults.sealedProductFiles = sealedProductFiles.length;
 
       const sealedProductPromises = sealedProductFiles.map(async (filePath) => {
@@ -163,42 +199,41 @@ const importAllData = async (options = {}) => {
     }
 
     // Phase 3: Update totalCardsInSet for all sets based on actual card count
-    console.log('Phase 3: Updating totalCardsInSet for all sets...');
-    const Set = require('../../models/Set');
-    const Card = require('../../models/Card');
+    Logger.section('Phase 3 - Set Updates', 'Updating totalCardsInSet for all sets based on actual card count');
 
     const allSets = await Set.find({});
     let setsUpdatedCount = 0;
 
-    console.log(`Found ${allSets.length} sets to check`);
+    Logger.info(`Found ${allSets.length} sets to check for card count updates`);
 
     for (const set of allSets) {
       const cardCount = await Card.countDocuments({ setId: set._id });
 
-      console.log(`DEBUG: Set "${set.setName}" (ID: ${set._id})`);
-      console.log(`  Current totalCardsInSet: ${set.totalCardsInSet}`);
-      console.log(`  Actual card count: ${cardCount}`);
-      console.log(`  Cards match: ${cardCount === set.totalCardsInSet}`);
+      const cardsMatch = cardCount === set.totalCardsInSet;
 
-      if (cardCount !== set.totalCardsInSet) {
-        console.log(`  UPDATING: ${set.totalCardsInSet} -> ${cardCount}`);
+      Logger.debug(`Set "${set.setName}" check`, {
+        setId: set._id,
+        currentCount: set.totalCardsInSet,
+        actualCount: cardCount,
+        cardsMatch
+      });
+
+      if (!cardsMatch) {
+        Logger.info(`Updating set ${set.setName}: ${set.totalCardsInSet} -> ${cardCount}`);
         const updateResult = await Set.findByIdAndUpdate(set._id, { totalCardsInSet: cardCount }, { new: true });
 
-        console.log(`  Update result: ${updateResult.totalCardsInSet}`);
+        Logger.debug(`Set update completed`, { setName: set.setName, newCount: updateResult.totalCardsInSet });
         setsUpdatedCount++;
-      } else {
-        console.log('  SKIPPING: No update needed');
       }
-      console.log('');
     }
 
-    console.log(`Phase 3 completed: ${setsUpdatedCount} sets updated with correct card counts`);
+    Logger.operationSuccess('PHASE_3_UPDATES', `Phase 3 completed: ${setsUpdatedCount} sets updated with correct card counts`);
 
     // Phase 3.5: Multiple verification passes to ensure all cards are properly assigned
-    console.log('\nPhase 3.5: Running multiple verification passes...');
+    Logger.section('Phase 3.5 - Verification', 'Running multiple verification passes to ensure data integrity');
 
     for (let pass = 1; pass <= 3; pass++) {
-      console.log(`\n--- Verification Pass ${pass}/3 ---`);
+      Logger.section(`Verification Pass ${pass}/3`, `Running verification pass ${pass} of 3`);
 
       // Re-check all sets and cards
       const allSetsRecheck = await Set.find({});
@@ -208,7 +243,11 @@ const importAllData = async (options = {}) => {
         const cardCount = await Card.countDocuments({ setId: set._id });
 
         if (cardCount !== set.totalCardsInSet) {
-          console.log(`Pass ${pass} - Fixing: ${set.setName} (${set.totalCardsInSet} -> ${cardCount})`);
+          Logger.warn(`Pass ${pass} - Fixing set discrepancy`, {
+            setName: set.setName,
+            previousCount: set.totalCardsInSet,
+            actualCount: cardCount
+          });
           await Set.findByIdAndUpdate(set._id, { totalCardsInSet: cardCount });
           issuesFound++;
         }
@@ -228,28 +267,36 @@ const importAllData = async (options = {}) => {
         }
       }
 
-      console.log(`Pass ${pass} - Sets corrected: ${issuesFound}, Orphaned cards: ${orphanedCount}`);
+      Logger.info(`Pass ${pass} verification results`, {
+        setsCorrected: issuesFound,
+        orphanedCards: orphanedCount
+      });
 
       // If no issues found, break early
       if (issuesFound === 0 && orphanedCount === 0) {
-        console.log(`Pass ${pass} - All checks passed! Data integrity verified.`);
+        Logger.operationSuccess('VERIFICATION_COMPLETE', `Pass ${pass} - All checks passed! Data integrity verified.`);
         break;
       }
     }
 
-    console.log('Phase 3.5 completed: Multiple verification passes finished');
+    Logger.operationSuccess('PHASE_3_5_VERIFICATION', 'Multiple verification passes completed');
 
-    console.log('\nAll data import completed');
-    console.log('Summary:');
-    console.log(`  PSA Files Processed: ${totalResults.psaFiles}`);
-    console.log(`  Sets Created: ${totalResults.setsCreated}`);
-    console.log(`  Sets Updated: ${totalResults.setsUpdated}`);
-    console.log(`  Cards Processed: ${totalResults.cardsProcessed}`);
-    console.log(`  Sealed Products Processed: ${totalResults.sealedProductsProcessed}`);
-    console.log(`  Errors: ${totalResults.errors.length}`);
+    Logger.operationSuccess('DATA_IMPORT_COMPLETE', 'All data import completed', {
+      summary: {
+        psaFilesProcessed: totalResults.psaFiles,
+        setsCreated: totalResults.setsCreated,
+        setsUpdated: totalResults.setsUpdated,
+        cardsProcessed: totalResults.cardsProcessed,
+        sealedProductsProcessed: totalResults.sealedProductsProcessed,
+        errorCount: totalResults.errors.length
+      }
+    });
     return totalResults;
   } catch (error) {
-    console.error('Error during data import:', error.message);
+    Logger.operationError('DATA_IMPORT_FAILED', 'Critical error during data import', error, {
+      totalResults,
+      options
+    });
     totalResults.errors.push(`General Error: ${error.message}`);
     return totalResults;
   }

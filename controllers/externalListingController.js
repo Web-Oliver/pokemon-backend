@@ -29,7 +29,7 @@ const generateFacebookPost = asyncHandler(async (req, res) => {
 
   // First validate the format synchronously
   for (const item of items) {
-    if (!mongoose.Types.ObjectId.isValid(item.itemId)) {
+    if (!item.itemId || typeof item.itemId !== 'string' || !/^[a-f\d]{24}$/i.test(item.itemId)) {
       throw new ValidationError(`Invalid itemId format: ${item.itemId}`);
     }
 

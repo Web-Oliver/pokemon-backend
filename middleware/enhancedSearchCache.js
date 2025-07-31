@@ -1,6 +1,280 @@
 const NodeCache = require('node-cache');
 const { searchCache, getCacheStats } = require('./searchCache');
 
+/**
+ * Enhanced Search Cache Class
+ * 
+ * Provides advanced caching capabilities specifically designed for search operations.
+ * Features TTL-based expiration, pattern-based invalidation, and performance metrics.
+ * 
+ * This class is designed to work with the SearchFactory and provide enterprise-grade
+ * caching capabilities for search results and strategy instances.
+ */
+class EnhancedSearchCache {
+  constructor(options = {}) {
+    this.cache = new Map();
+    this.options = {
+      ttl: options.ttl || 300000, // 5 minutes default
+      maxSize: options.maxSize || 1000,
+      enableWarmup: options.enableWarmup !== false,
+      enableInvalidation: options.enableInvalidation !== false,
+      enableMetrics: options.enableMetrics !== false,
+      ...options
+    };
+
+    this.metrics = {
+      hits: 0,
+      misses: 0,
+      sets: 0,
+      deletes: 0,
+      invalidations: 0,
+      evictions: 0
+    };
+
+    // Automatic cleanup interval (every 5 minutes)
+    this.cleanupInterval = setInterval(() => {
+      this.cleanup();
+    }, 300000);
+  }
+
+  /**
+   * Store a value in the cache with TTL
+   * @param {string} key - Cache key
+   * @param {any} value - Value to cache
+   * @param {number} customTtl - Custom TTL in milliseconds (optional)
+   */
+  set(key, value, customTtl) {
+    const ttl = customTtl || this.options.ttl;
+    const expireAt = Date.now() + ttl;
+
+    // Check if cache is at max size and evict oldest entries if needed
+    if (this.cache.size >= this.options.maxSize) {
+      this.evictOldest();
+    }
+
+    this.cache.set(key, {
+      value,
+      expireAt,
+      createdAt: Date.now(),
+      accessCount: 0
+    });
+
+    if (this.options.enableMetrics) {
+      this.metrics.sets++;
+    }
+  }
+
+  /**
+   * Retrieve a value from the cache
+   * @param {string} key - Cache key
+   * @returns {any} - Cached value or null if not found/expired
+   */
+  get(key) {
+    const entry = this.cache.get(key);
+
+    if (!entry) {
+      if (this.options.enableMetrics) {
+        this.metrics.misses++;
+      }
+      return null;
+    }
+
+    // Check if entry has expired
+    if (Date.now() > entry.expireAt) {
+      this.cache.delete(key);
+      if (this.options.enableMetrics) {
+        this.metrics.misses++;
+      }
+      return null;
+    }
+
+    // Update access statistics
+    entry.accessCount++;
+    entry.lastAccessed = Date.now();
+
+    if (this.options.enableMetrics) {
+      this.metrics.hits++;
+    }
+
+    return entry.value;
+  }
+
+  /**
+   * Delete a specific key from the cache
+   * @param {string} key - Cache key to delete
+   * @returns {boolean} - True if key was deleted
+   */
+  delete(key) {
+    const deleted = this.cache.delete(key);
+
+    if (deleted && this.options.enableMetrics) {
+      this.metrics.deletes++;
+    }
+    return deleted;
+  }
+
+  /**
+   * Clear all entries from the cache
+   */
+  clear() {
+    const {size} = this.cache;
+
+    this.cache.clear();
+    if (this.options.enableMetrics) {
+      this.metrics.deletes += size;
+    }
+  }
+
+  /**
+   * Get cache statistics
+   * @returns {Object} - Cache performance metrics
+   */
+  getStats() {
+    return {
+      ...this.metrics,
+      size: this.cache.size,
+      maxSize: this.options.maxSize,
+      hitRate: this.metrics.hits + this.metrics.misses > 0 
+        ? this.metrics.hits / (this.metrics.hits + this.metrics.misses) 
+        : 0,
+      memoryUsage: this.getMemoryUsage()
+    };
+  }
+
+  /**
+   * Invalidate cache entries matching a pattern
+   * @param {string|RegExp} pattern - Pattern to match against cache keys
+   * @returns {number} - Number of invalidated entries
+   */
+  invalidatePattern(pattern) {
+    if (!this.options.enableInvalidation) {
+      return 0;
+    }
+
+    let invalidatedCount = 0;
+    const keysToDelete = [];
+
+    for (const [key] of this.cache) {
+      let matches = false;
+      
+      if (typeof pattern === 'string') {
+        matches = key.includes(pattern);
+      } else if (pattern instanceof RegExp) {
+        matches = pattern.test(key);
+      }
+
+      if (matches) {
+        keysToDelete.push(key);
+        invalidatedCount++;
+      }
+    }
+
+    keysToDelete.forEach(key => this.cache.delete(key));
+
+    if (this.options.enableMetrics) {
+      this.metrics.invalidations += invalidatedCount;
+    }
+
+    return invalidatedCount;
+  }
+
+  /**
+   * Remove expired entries from the cache
+   * @returns {number} - Number of cleaned entries
+   */
+  cleanup() {
+    const now = Date.now();
+    let cleanedCount = 0;
+    const keysToDelete = [];
+
+    for (const [key, entry] of this.cache) {
+      if (now > entry.expireAt) {
+        keysToDelete.push(key);
+        cleanedCount++;
+      }
+    }
+
+    keysToDelete.forEach(key => this.cache.delete(key));
+
+    return cleanedCount;
+  }
+
+  /**
+   * Evict the oldest entries when cache is full
+   * @param {number} count - Number of entries to evict (default: 10% of max size)
+   */
+  evictOldest(count) {
+    const evictCount = count || Math.ceil(this.options.maxSize * 0.1);
+    
+    // Convert to array and sort by creation time
+    const entries = Array.from(this.cache.entries())
+      .sort((a, b) => a[1].createdAt - b[1].createdAt);
+
+    for (let i = 0; i < Math.min(evictCount, entries.length); i++) {
+      this.cache.delete(entries[i][0]);
+      if (this.options.enableMetrics) {
+        this.metrics.evictions++;
+      }
+    }
+  }
+
+  /**
+   * Get approximate memory usage of the cache
+   * @returns {number} - Memory usage estimate in bytes
+   */
+  getMemoryUsage() {
+    let totalSize = 0;
+    
+    for (const [key, entry] of this.cache) {
+      // Rough estimate: key size + JSON serialized value size
+      totalSize += key.length * 2; // UTF-16 characters
+      totalSize += JSON.stringify(entry.value).length * 2;
+      totalSize += 64; // Approximate overhead per entry
+    }
+
+    return totalSize;
+  }
+
+  /**
+   * Check if a key exists in the cache (without updating access stats)
+   * @param {string} key - Cache key
+   * @returns {boolean} - True if key exists and is not expired
+   */
+  has(key) {
+    const entry = this.cache.get(key);
+
+    return entry && Date.now() <= entry.expireAt;
+  }
+
+  /**
+   * Get all cache keys (non-expired)
+   * @returns {Array<string>} - Array of cache keys
+   */
+  keys() {
+    const now = Date.now();
+    const validKeys = [];
+
+    for (const [key, entry] of this.cache) {
+      if (now <= entry.expireAt) {
+        validKeys.push(key);
+      }
+    }
+
+    return validKeys;
+  }
+
+  /**
+   * Destroy the cache and cleanup resources
+   */
+  destroy() {
+    if (this.cleanupInterval) {
+      clearInterval(this.cleanupInterval);
+      this.cleanupInterval = null;
+    }
+    this.clear();
+  }
+}
+
 class CacheManager {
   constructor() {
     this.caches = new Map();
@@ -349,6 +623,7 @@ const createCacheKey = (req) => {
 };
 
 module.exports = {
+  EnhancedSearchCache,
   CacheManager,
   cacheManager,
   enhancedCacheMiddleware

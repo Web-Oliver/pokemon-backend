@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const activityTrackingPlugin = require('../plugins/activityTracking');
+const { queryOptimizationPlugin } = require('../plugins/queryOptimization');
 const { saleDetailsSchema, priceHistorySchema, sealedProductTransform } = require('./schemas/shared');
 
 const sealedProductSchema = new mongoose.Schema({
@@ -35,6 +36,16 @@ const sealedProductSchema = new mongoose.Schema({
   saleDetails: saleDetailsSchema,
 });
 
+// Add product-specific indexes for optimal query performance
+sealedProductSchema.index({ category: 1, sold: 1 }); // Category filtering with sale status
+sealedProductSchema.index({ setName: 1, sold: 1 }); // Set filtering with sale status
+sealedProductSchema.index({ setName: 1, category: 1 }); // Combined set and category filtering
+sealedProductSchema.index({ cardMarketPrice: 1 }); // Price range queries
+sealedProductSchema.index({ myPrice: 1 }); // User price range queries
+sealedProductSchema.index({ availability: 1 }); // Availability filtering
+sealedProductSchema.index({ productId: 1, sold: 1 }); // Reference product queries
+sealedProductSchema.index({ dateAdded: -1, sold: 1 }); // Recent items with sale status
+
 // Apply activity tracking plugin
 sealedProductSchema.plugin(activityTrackingPlugin, {
   itemType: 'sealed',
@@ -43,6 +54,27 @@ sealedProductSchema.plugin(activityTrackingPlugin, {
     trackSales: true,
     trackPriceUpdates: true,
     trackImageUpdates: true,
+  },
+});
+
+// Apply query optimization plugin with product-specific configuration
+sealedProductSchema.plugin(queryOptimizationPlugin, {
+  entityType: 'SealedProduct',
+  enableLeanQueries: true,
+  enableQueryLogging: false,
+  enablePerformanceTracking: true,
+  enableAutomaticIndexing: true,
+  enableQueryHints: true,
+  defaultLimit: 50,
+  maxLimit: 500,
+  enableCachedCounts: true,
+  optimizationLevel: 'standard',
+  // Product-specific optimizations
+  productSpecificOptions: {
+    enableCategoryIndexing: true,
+    enableSetNameIndexing: true,
+    enablePriceRangeOptimization: true,
+    enableAvailabilityFiltering: true,
   },
 });
 

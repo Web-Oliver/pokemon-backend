@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
+const { queryOptimizationPlugin } = require('../plugins/queryOptimization');
 
 const cardSchema = new mongoose.Schema(
   {
@@ -52,6 +53,34 @@ cardSchema.index({ cardName: 1 });
 cardSchema.index({ baseName: 1 });
 cardSchema.index({ setId: 1, cardName: 1 });
 cardSchema.index({ setId: 1, pokemonNumber: 1 });
+
+// Additional reference data specific indexes for query optimization
+cardSchema.index({ psaTotalGradedForCard: 1 }); // PSA population filtering
+cardSchema.index({ setId: 1, psaTotalGradedForCard: 1 }); // Set with PSA population
+cardSchema.index({ variety: 1 }); // Variety filtering
+cardSchema.index({ pokemonNumber: 1 }); // Pokemon number lookup
+
+// Apply query optimization plugin with reference data configuration
+cardSchema.plugin(queryOptimizationPlugin, {
+  entityType: 'Card',
+  enableLeanQueries: true,
+  enableQueryLogging: false,
+  enablePerformanceTracking: true,
+  enableAutomaticIndexing: false, // We manage indexes manually due to text search complexity
+  enableQueryHints: true,
+  defaultLimit: 100,
+  maxLimit: 1000,
+  enableCachedCounts: true,
+  optimizationLevel: 'standard',
+  // Reference data specific optimizations
+  referenceDataOptions: {
+    enableTextSearchOptimization: true,
+    enableSetRelationOptimization: true,
+    enablePsaPopulationOptimization: true,
+    enableCardNameOptimization: true,
+    cacheFrequentQueries: true,
+  },
+});
 
 const Card = mongoose.model('Card', cardSchema);
 

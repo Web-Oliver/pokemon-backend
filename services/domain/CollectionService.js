@@ -97,7 +97,7 @@ class CollectionService {
           ? [
               {
                 price: data.myPrice,
-                dateUpdated: new Date(),
+                dateUpdated: new Date().toISOString(),
               },
             ]
           : [],
@@ -147,7 +147,7 @@ class CollectionService {
           ...existingItem.priceHistory,
           {
             price: data.myPrice,
-            dateUpdated: new Date(),
+            dateUpdated: new Date().toISOString(),
           },
         ];
       }

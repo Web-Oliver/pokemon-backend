@@ -740,8 +740,8 @@ class ActivityService {
       return false;
     }
 
-    // Validate entityId if provided
-    if (activityData.entityId && !mongoose.Types.ObjectId.isValid(activityData.entityId)) {
+    // Validate entityId if provided - use consistent ObjectId validation
+    if (activityData.entityId && (typeof activityData.entityId !== 'string' || !/^[a-f\d]{24}$/i.test(activityData.entityId))) {
       return false;
     }
 

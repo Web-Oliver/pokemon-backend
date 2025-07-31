@@ -1,6 +1,8 @@
 const SealedProduct = require('../models/SealedProduct');
 const PsaGradedCard = require('../models/PsaGradedCard');
 const RawCard = require('../models/RawCard');
+const Logger = require('../utils/Logger');
+const ValidatorFactory = require('../utils/ValidatorFactory');
 
 /**
  * Map item types to display categories
@@ -22,6 +24,11 @@ function getDisplayCategory(itemType) {
  * Fetch sales data based on filters
  */
 async function fetchSalesData(filter, category) {
+  Logger.operationStart('FETCH_SALES_DATA', 'Fetching sales data from database', {
+    filter,
+    category: category || 'all'
+  });
+  
   let salesData = [];
 
   if (!category || category === 'all') {
@@ -91,37 +98,76 @@ async function fetchSalesData(filter, category) {
     category: getDisplayCategory(item.itemType),
   }));
 
-  return transformedData.sort(
+  const sortedData = transformedData.sort(
     (a, b) => new Date(b.saleDetails?.dateSold || 0) - new Date(a.saleDetails?.dateSold || 0),
   );
+  
+  Logger.operationSuccess('FETCH_SALES_DATA', 'Successfully fetched and transformed sales data', {
+    category: category || 'all',
+    totalItems: sortedData.length,
+    itemTypeBreakdown: {
+      sealedProducts: sortedData.filter(item => item.itemType === 'sealedProduct').length,
+      psaGradedCards: sortedData.filter(item => item.itemType === 'psaGradedCard').length,
+      rawCards: sortedData.filter(item => item.itemType === 'rawCard').length
+    }
+  });
+  
+  return sortedData;
 }
 
 /**
  * Build date filter for sales queries
  */
 function buildDateFilter(startDate, endDate) {
+  Logger.operationStart('BUILD_DATE_FILTER', 'Building date filter for sales query', {
+    startDate,
+    endDate
+  });
+  
   const filter = { sold: true };
+
+  // Validate dates using ValidatorFactory before processing
+  if (startDate && !ValidatorFactory.date().validate(startDate)) {
+    const error = new Error('Invalid startDate format');
+
+    Logger.operationError('INVALID_START_DATE', 'Invalid start date format provided', error, {
+      startDate,
+      endDate
+    });
+    throw error;
+  }
+  
+  if (endDate && !ValidatorFactory.date().validate(endDate)) {
+    const error = new Error('Invalid endDate format');
+
+    Logger.operationError('INVALID_END_DATE', 'Invalid end date format provided', error, {
+      startDate,
+      endDate
+    });
+    throw error;
+  }
 
   if (startDate || endDate) {
     filter['saleDetails.dateSold'] = {};
     if (startDate) {
       const start = new Date(startDate);
 
-      if (isNaN(start.getTime())) {
-        throw new Error('Invalid startDate format');
-      }
       filter['saleDetails.dateSold'].$gte = start;
     }
     if (endDate) {
       const end = new Date(endDate);
 
-      if (isNaN(end.getTime())) {
-        throw new Error('Invalid endDate format');
-      }
       filter['saleDetails.dateSold'].$lte = end;
     }
   }
 
+  Logger.operationSuccess('BUILD_DATE_FILTER', 'Successfully built date filter', {
+    filter,
+    hasDateRange: Boolean(startDate || endDate),
+    startDate,
+    endDate
+  });
+  
   return filter;
 }
 

@@ -11,6 +11,7 @@ const mongoose = require('mongoose');
 const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
+const Logger = require('./Logger');
 
 require('dotenv').config();
 
@@ -49,16 +50,19 @@ class RecoveryService {
    */
   async recoverFromBackup(backupId) {
     try {
-      console.log(`🔄 Starting recovery from backup: ${backupId}`);
+      Logger.operationStart('BACKUP_RECOVERY', 'Starting backup recovery process', { backupId });
       
       // Find backup directory
       const backupDir = this.findBackupDirectory(backupId);
 
       if (!backupDir) {
-        throw new Error(`Backup ${backupId} not found`);
+        const error = new Error(`Backup ${backupId} not found`);
+
+        Logger.operationError('BACKUP_NOT_FOUND', 'Backup directory not found', error, { backupId });
+        throw error;
       }
 
-      console.log(`📁 Found backup at: ${backupDir}`);
+      Logger.info('Found backup directory', { backupDir, backupId });
 
       // Create temp directory for extraction
       await this.ensureDirectory(RECOVERY_CONFIG.tempDir);
@@ -71,7 +75,10 @@ class RecoveryService {
       // Clean up temp directory
       execSync(`rm -rf "${RECOVERY_CONFIG.tempDir}"`);
 
-      console.log('\n✅ Recovery completed successfully!');
+      Logger.operationSuccess('BACKUP_RECOVERY_COMPLETE', 'Recovery completed successfully', {
+        backupId,
+        stats: this.stats
+      });
       this.printRecoveryStats();
 
       return {
@@ -80,7 +87,10 @@ class RecoveryService {
       };
 
     } catch (error) {
-      console.error('❌ Recovery failed:', error.message);
+      Logger.operationError('BACKUP_RECOVERY_FAILED', 'Recovery process failed', error, {
+        backupId,
+        stats: this.stats
+      });
       this.stats.errors.push(error.message);
       throw error;
     }
@@ -111,13 +121,13 @@ class RecoveryService {
    * Recover PSA Graded Cards
    */
   async recoverPsaGradedCards(backupDir) {
-    console.log('\n🔄 Recovering PSA Graded Cards...');
+    Logger.section('PSA Graded Cards Recovery', 'Starting PSA graded cards recovery phase');
     
     const psaBackupPath = path.join(backupDir, 'psagradedcards', RECOVERY_CONFIG.dbName);
     const bsonFile = path.join(psaBackupPath, 'psagradedcards.bson.gz');
 
     if (!fs.existsSync(bsonFile)) {
-      console.log('⚠️ No PSA graded cards backup found');
+      Logger.warn('No PSA graded cards backup found', { expectedPath: bsonFile });
       return;
     }
 
@@ -135,7 +145,7 @@ class RecoveryService {
     const jsonData = fs.readFileSync(tempJsonFile, 'utf8');
     const lines = jsonData.trim().split('\n');
 
-    console.log(`📊 Found ${lines.length} PSA graded cards to recover`);
+    Logger.info('PSA graded cards backup loaded', { cardCount: lines.length, backupDir });
 
     for (const line of lines) {
       if (line.trim()) {
@@ -145,14 +155,21 @@ class RecoveryService {
           await this.recoverSinglePsaGradedCard(cardData);
           this.stats.psaCardsRecovered++;
         } catch (error) {
-          console.error(`❌ Failed to recover PSA card:`, error.message);
+          Logger.operationError('PSA_CARD_RECOVERY_ERROR', 'Failed to recover individual PSA card', error, {
+            cardData: cardData.cardName || 'unknown',
+            grade: cardData.grade
+          });
           this.stats.psaCardsFailed++;
           this.stats.errors.push(`PSA Card recovery: ${error.message}`);
         }
       }
     }
 
-    console.log(`✅ PSA Cards: ${this.stats.psaCardsRecovered} recovered, ${this.stats.psaCardsFailed} failed`);
+    Logger.operationSuccess('PSA_CARDS_RECOVERY_COMPLETE', 'PSA graded cards recovery completed', {
+      recovered: this.stats.psaCardsRecovered,
+      failed: this.stats.psaCardsFailed,
+      totalProcessed: this.stats.psaCardsRecovered + this.stats.psaCardsFailed
+    });
   }
 
   /**
@@ -175,16 +192,16 @@ class RecoveryService {
       
       if (typeof obj === 'object') {
         if (obj.$date && obj.$date.$numberLong) {
-          return new Date(parseInt(obj.$date.$numberLong));
+          return new Date(parseInt(obj.$date.$numberLong, 10));
         }
         if (obj.$oid) {
           return obj.$oid; // Keep as string, don't convert to ObjectId for embedded docs
         }
         if (obj.$numberLong) {
-          return parseInt(obj.$numberLong);
+          return parseInt(obj.$numberLong, 10);
         }
         if (obj.$numberInt) {
-          return parseInt(obj.$numberInt);
+          return parseInt(obj.$numberInt, 10);
         }
         if (obj.$numberDouble) {
           return parseFloat(obj.$numberDouble);
@@ -219,20 +236,28 @@ class RecoveryService {
     });
 
     await newPsaCard.save();
-    console.log(`✅ Recovered PSA card: Grade ${originalCardData.grade} - ${originalCard.cardName}`);
+    Logger.info('PSA card recovered successfully', {
+      grade: originalCardData.grade,
+      cardName: originalCard.cardName,
+      cardId: originalCard._id
+    });
   }
 
   /**
    * Recover Raw Cards
    */
   async recoverRawCards(backupDir) {
-    console.log('\n🔄 Recovering Raw Cards...');
+    Logger.section('Raw Cards Recovery', 'Starting raw cards recovery phase');
     
     const rawBackupPath = path.join(backupDir, 'rawcards', RECOVERY_CONFIG.dbName);
     const bsonFile = path.join(rawBackupPath, 'rawcards.bson.gz');
 
     if (!fs.existsSync(bsonFile) || fs.statSync(bsonFile).size <= 23) {
-      console.log('⚠️ No raw cards backup found or empty');
+      Logger.warn('No raw cards backup found or backup is empty', {
+        expectedPath: bsonFile,
+        exists: fs.existsSync(bsonFile),
+        size: fs.existsSync(bsonFile) ? fs.statSync(bsonFile).size : 0
+      });
       return;
     }
 
@@ -248,7 +273,7 @@ class RecoveryService {
     const jsonData = fs.readFileSync(tempJsonFile, 'utf8');
     const lines = jsonData.trim().split('\n');
 
-    console.log(`📊 Found ${lines.length} raw cards to recover`);
+    Logger.info('Raw cards backup loaded', { cardCount: lines.length, backupDir });
 
     for (const line of lines) {
       if (line.trim()) {
@@ -258,14 +283,21 @@ class RecoveryService {
           await this.recoverSingleRawCard(cardData);
           this.stats.rawCardsRecovered++;
         } catch (error) {
-          console.error(`❌ Failed to recover raw card:`, error.message);
+          Logger.operationError('RAW_CARD_RECOVERY_ERROR', 'Failed to recover individual raw card', error, {
+            cardData: cardData.cardName || 'unknown',
+            condition: cardData.condition
+          });
           this.stats.rawCardsFailed++;
           this.stats.errors.push(`Raw Card recovery: ${error.message}`);
         }
       }
     }
 
-    console.log(`✅ Raw Cards: ${this.stats.rawCardsRecovered} recovered, ${this.stats.rawCardsFailed} failed`);
+    Logger.operationSuccess('RAW_CARDS_RECOVERY_COMPLETE', 'Raw cards recovery completed', {
+      recovered: this.stats.rawCardsRecovered,
+      failed: this.stats.rawCardsFailed,
+      totalProcessed: this.stats.rawCardsRecovered + this.stats.rawCardsFailed
+    });
   }
 
   /**
@@ -285,16 +317,16 @@ class RecoveryService {
       
       if (typeof obj === 'object') {
         if (obj.$date && obj.$date.$numberLong) {
-          return new Date(parseInt(obj.$date.$numberLong));
+          return new Date(parseInt(obj.$date.$numberLong, 10));
         }
         if (obj.$oid) {
           return obj.$oid;
         }
         if (obj.$numberLong) {
-          return parseInt(obj.$numberLong);
+          return parseInt(obj.$numberLong, 10);
         }
         if (obj.$numberInt) {
-          return parseInt(obj.$numberInt);
+          return parseInt(obj.$numberInt, 10);
         }
         if (obj.$numberDouble) {
           return parseFloat(obj.$numberDouble);
@@ -327,20 +359,28 @@ class RecoveryService {
     });
 
     await newRawCard.save();
-    console.log(`✅ Recovered raw card: ${originalCardData.condition} - ${originalCard.cardName}`);
+    Logger.info('Raw card recovered successfully', {
+      condition: originalCardData.condition,
+      cardName: originalCard.cardName,
+      cardId: originalCard._id
+    });
   }
 
   /**
    * Recover Sealed Products
    */
   async recoverSealedProducts(backupDir) {
-    console.log('\n🔄 Recovering Sealed Products...');
+    Logger.section('Sealed Products Recovery', 'Starting sealed products recovery phase');
     
     const sealedBackupPath = path.join(backupDir, 'sealedproducts', RECOVERY_CONFIG.dbName);
     const bsonFile = path.join(sealedBackupPath, 'sealedproducts.bson.gz');
 
     if (!fs.existsSync(bsonFile) || fs.statSync(bsonFile).size <= 23) {
-      console.log('⚠️ No sealed products backup found or empty');
+      Logger.warn('No sealed products backup found or backup is empty', {
+        expectedPath: bsonFile,
+        exists: fs.existsSync(bsonFile),
+        size: fs.existsSync(bsonFile) ? fs.statSync(bsonFile).size : 0
+      });
       return;
     }
 
@@ -356,7 +396,7 @@ class RecoveryService {
     const jsonData = fs.readFileSync(tempJsonFile, 'utf8');
     const lines = jsonData.trim().split('\n');
 
-    console.log(`📊 Found ${lines.length} sealed products to recover`);
+    Logger.info('Sealed products backup loaded', { productCount: lines.length, backupDir });
 
     for (const line of lines) {
       if (line.trim()) {
@@ -366,14 +406,21 @@ class RecoveryService {
           await this.recoverSingleSealedProduct(productData);
           this.stats.sealedProductsRecovered++;
         } catch (error) {
-          console.error(`❌ Failed to recover sealed product:`, error.message);
+          Logger.operationError('SEALED_PRODUCT_RECOVERY_ERROR', 'Failed to recover individual sealed product', error, {
+            productName: productData.name || 'unknown',
+            setName: productData.setName
+          });
           this.stats.sealedProductsFailed++;
           this.stats.errors.push(`Sealed Product recovery: ${error.message}`);
         }
       }
     }
 
-    console.log(`✅ Sealed Products: ${this.stats.sealedProductsRecovered} recovered, ${this.stats.sealedProductsFailed} failed`);
+    Logger.operationSuccess('SEALED_PRODUCTS_RECOVERY_COMPLETE', 'Sealed products recovery completed', {
+      recovered: this.stats.sealedProductsRecovered,
+      failed: this.stats.sealedProductsFailed,
+      totalProcessed: this.stats.sealedProductsRecovered + this.stats.sealedProductsFailed
+    });
   }
 
   /**
@@ -406,7 +453,11 @@ class RecoveryService {
     });
 
     await newSealedProduct.save();
-    console.log(`✅ Recovered sealed product: ${originalProductData.name}`);
+    Logger.info('Sealed product recovered successfully', {
+      productName: originalProductData.name,
+      setName: originalProductData.setName,
+      category: originalProductData.category
+    });
   }
 
   /**
@@ -457,13 +508,17 @@ class RecoveryService {
           let yearValue;
 
           if (typeof originalSetData.year === 'object' && originalSetData.year.$numberInt) {
-            yearValue = parseInt(originalSetData.year.$numberInt);
+            yearValue = parseInt(originalSetData.year.$numberInt, 10);
           } else {
-            yearValue = parseInt(originalSetData.year);
+            yearValue = parseInt(originalSetData.year, 10);
           }
           
           if (!yearValue || isNaN(yearValue)) {
-            console.log(`❌ Invalid year value for set: ${originalSetData.setName}`);
+            Logger.warn('Invalid year value for set', {
+              setName: originalSetData.setName,
+              yearValue: originalSetData.year,
+              oldCardId
+            });
             return null;
           }
           
@@ -485,16 +540,24 @@ class RecoveryService {
             if (currentCard) {
               return currentCard;
             } 
-              console.log(`❌ No match found for card: ${originalCardData.cardName} in set ${originalSetData.setName}`);
+              Logger.warn('No matching card found in current database', {
+                cardName: originalCardData.cardName,
+                setName: originalSetData.setName,
+                oldCardId
+              });
             
           } else {
-            console.log(`❌ No current set found for: ${originalSetData.setName} (${originalSetData.year})`);
+            Logger.warn('No current set found for card recovery', {
+              setName: originalSetData.setName,
+              year: originalSetData.year,
+              oldCardId
+            });
           }
         } else {
-          console.log(`❌ Could not find original set data for card ID: ${oldCardId}`);
+          Logger.warn('Could not find original set data for card', { oldCardId });
         }
       } else {
-        console.log(`❌ Could not find original card data for ID: ${oldCardId}`);
+        Logger.warn('Could not find original card data in backup', { oldCardId });
       }
     }
     
@@ -551,14 +614,34 @@ class RecoveryService {
    * Print recovery statistics
    */
   printRecoveryStats() {
-    console.log('\n📊 Recovery Statistics:');
-    console.log(`✅ PSA Graded Cards: ${this.stats.psaCardsRecovered} recovered, ${this.stats.psaCardsFailed} failed`);
-    console.log(`✅ Raw Cards: ${this.stats.rawCardsRecovered} recovered, ${this.stats.rawCardsFailed} failed`);
-    console.log(`✅ Sealed Products: ${this.stats.sealedProductsRecovered} recovered, ${this.stats.sealedProductsFailed} failed`);
+    Logger.section('Recovery Statistics', 'Final recovery statistics summary');
+    Logger.info('PSA Graded Cards Recovery', {
+      recovered: this.stats.psaCardsRecovered,
+      failed: this.stats.psaCardsFailed,
+      successRate: this.stats.psaCardsRecovered + this.stats.psaCardsFailed > 0 
+        ? `${((this.stats.psaCardsRecovered / (this.stats.psaCardsRecovered + this.stats.psaCardsFailed)) * 100).toFixed(2)  }%`
+        : 'N/A'
+    });
+    Logger.info('Raw Cards Recovery', {
+      recovered: this.stats.rawCardsRecovered,
+      failed: this.stats.rawCardsFailed,
+      successRate: this.stats.rawCardsRecovered + this.stats.rawCardsFailed > 0 
+        ? `${((this.stats.rawCardsRecovered / (this.stats.rawCardsRecovered + this.stats.rawCardsFailed)) * 100).toFixed(2)  }%`
+        : 'N/A'
+    });
+    Logger.info('Sealed Products Recovery', {
+      recovered: this.stats.sealedProductsRecovered,
+      failed: this.stats.sealedProductsFailed,
+      successRate: this.stats.sealedProductsRecovered + this.stats.sealedProductsFailed > 0 
+        ? `${((this.stats.sealedProductsRecovered / (this.stats.sealedProductsRecovered + this.stats.sealedProductsFailed)) * 100).toFixed(2)  }%`
+        : 'N/A'
+    });
     
     if (this.stats.errors.length > 0) {
-      console.log('\n⚠️ Errors encountered:');
-      this.stats.errors.forEach(error => console.log(`   - ${error}`));
+      Logger.warn('Recovery errors encountered', {
+        errorCount: this.stats.errors.length,
+        errors: this.stats.errors
+      });
     }
   }
 }
@@ -566,7 +649,10 @@ class RecoveryService {
 // Main execution
 async function main() {
   if (process.argv.length < 3) {
-    console.error('Usage: node recoveryScript.js <backup-id>');
+    Logger.operationError('INVALID_USAGE', 'Invalid command line arguments', new Error('Missing backup-id argument'), {
+      usage: 'node recoveryScript.js <backup-id>',
+      providedArgs: process.argv.length
+    });
     process.exit(1);
   }
 
@@ -574,17 +660,17 @@ async function main() {
   
   try {
     await mongoose.connect(process.env.MONGO_URI);
-    console.log('✅ Connected to MongoDB');
+    Logger.operationStart('MONGODB_CONNECTION', 'Connected to MongoDB for recovery');
 
     const recoveryService = new RecoveryService();
 
     await recoveryService.recoverFromBackup(backupId);
 
     await mongoose.disconnect();
-    console.log('✅ Disconnected from MongoDB');
+    Logger.operationSuccess('MONGODB_DISCONNECTION', 'Disconnected from MongoDB successfully');
     
   } catch (error) {
-    console.error('❌ Recovery script failed:', error.message);
+    Logger.operationError('RECOVERY_SCRIPT_FAILED', 'Recovery script execution failed', error, { backupId });
     await mongoose.disconnect();
     process.exit(1);
   }

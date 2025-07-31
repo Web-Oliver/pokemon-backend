@@ -38,6 +38,7 @@ module.exports = {
   transforms: {
     createDecimal128Transform: transforms.createDecimal128Transform,
     convertDecimal128ToNumber: transforms.convertDecimal128ToNumber,
+    convertDateToString: transforms.convertDateToString,
     collectionItemTransform: transforms.collectionItemTransform,
     sealedProductTransform: transforms.sealedProductTransform,
     auctionTransform: transforms.auctionTransform,

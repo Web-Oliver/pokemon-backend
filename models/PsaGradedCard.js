@@ -39,6 +39,7 @@ psaGradedCardSchema.plugin(queryOptimizationPlugin, {
 // Apply shared transform function for JSON responses
 psaGradedCardSchema.set('toJSON', {
   transform: collectionItemTransform,
+  getters: true, // Enable getters for JSON serialization
 });
 
 const PsaGradedCard = mongoose.model('PsaGradedCard', psaGradedCardSchema);

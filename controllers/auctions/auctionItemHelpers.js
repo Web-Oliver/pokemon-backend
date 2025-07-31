@@ -65,7 +65,7 @@ const validateAuctionItems = async (items) => {
 
   // First validate the format synchronously
   for (const item of items) {
-    if (!mongoose.Types.ObjectId.isValid(item.itemId)) {
+    if (!item.itemId || typeof item.itemId !== 'string' || !/^[a-f\d]{24}$/i.test(item.itemId)) {
       throw new ValidationError('Invalid itemId format in items array');
     }
 
@@ -106,7 +106,7 @@ const validateAuctionItems = async (items) => {
 
 // Helper function to validate and find a single item
 const validateAndFindItem = async (itemId, itemCategory) => {
-  if (!mongoose.Types.ObjectId.isValid(itemId)) {
+  if (!itemId || typeof itemId !== 'string' || !/^[a-f\d]{24}$/i.test(itemId)) {
     throw new ValidationError('Invalid itemId format');
   }
 

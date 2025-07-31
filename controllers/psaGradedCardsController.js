@@ -1,4 +1,5 @@
 const BaseController = require('./base/BaseController');
+const { getEntityConfig } = require('../config/entityConfigurations');
 
 /**
  * PSA Graded Card Controller
@@ -8,17 +9,18 @@ const BaseController = require('./base/BaseController');
  */
 class PsaGradedCardController extends BaseController {
   constructor() {
+    // Get centralized entity configuration
+    const entityConfig = getEntityConfig('psaGradedCard');
+    
     super('psaGradedCardService', {
-      entityName: 'PsaGradedCard',
-      pluralName: 'psaGradedCards',
-      includeMarkAsSold: true,
-      defaultPopulate: {
-        path: 'cardId',
-        populate: {
-          path: 'setId',
-          model: 'Set',
-        },
-      },
+      entityName: entityConfig.entityName,
+      pluralName: entityConfig.pluralName,
+      includeMarkAsSold: entityConfig.includeMarkAsSold,
+      defaultPopulate: entityConfig.defaultPopulate,
+      filterableFields: entityConfig.filterableFields,
+      searchFields: entityConfig.searchFields,
+      searchWeights: entityConfig.searchWeights,
+      validationRules: entityConfig.validationRules,
     });
   }
 

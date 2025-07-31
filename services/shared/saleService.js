@@ -18,8 +18,8 @@ class SaleService {
    * @returns {Promise<Object>} - Updated item with populated data
    */
   static async markAsSold(model, itemId, saleDetails, populateOptions = null) {
-    // Validate ObjectId format
-    if (!mongoose.Types.ObjectId.isValid(itemId)) {
+    // Use consistent ObjectId validation matching ValidatorFactory and BaseRepository
+    if (!itemId || typeof itemId !== 'string' || !/^[a-f\d]{24}$/i.test(itemId)) {
       throw new ValidationError('Invalid ObjectId format');
     }
 

@@ -18,6 +18,7 @@ const { execSync, exec } = require('child_process');
 const fs = require('fs');
 const path = require('path');
 const mongoose = require('mongoose');
+const Logger = require('../utils/Logger');
 
 // Import models for collection verification
 const PsaGradedCard = require('../models/PsaGradedCard');
@@ -90,6 +91,10 @@ class BackupService {
    * Following SOLID Dependency Inversion Principle
    */
   async initialize() {
+    const startTime = Date.now();
+
+    Logger.operationStart('BACKUP_SERVICE', 'INITIALIZE', { baseDir: BACKUP_CONFIG.baseDir });
+
     try {
       // Create backup directories
       await this.ensureDirectories();
@@ -101,11 +106,16 @@ class BackupService {
       await this.loadBackupHistory();
       
       this.isInitialized = true;
-      this.log('INFO', 'Backup service initialized successfully');
+      
+      Logger.performance('BackupService.initialize', Date.now() - startTime);
+      Logger.operationSuccess('BACKUP_SERVICE', 'INITIALIZE', { 
+        initialized: true,
+        historyEntries: this.backupHistory.length 
+      });
       
       return { success: true, message: 'Backup service initialized' };
     } catch (error) {
-      this.log('ERROR', 'Failed to initialize backup service', { error: error.message });
+      Logger.operationError('BACKUP_SERVICE', 'INITIALIZE', error, { baseDir: BACKUP_CONFIG.baseDir });
       throw new Error(`Backup service initialization failed: ${error.message}`);
     }
   }
@@ -158,10 +168,11 @@ class BackupService {
       this.activeJobs.set('weekly', weeklyJob);
       this.activeJobs.set('monthly', monthlyJob);
 
-      this.log('INFO', 'Scheduled backup jobs started', {
+      Logger.operationSuccess('BACKUP_SERVICE', 'START_SCHEDULED_BACKUPS', {
         daily: BACKUP_CONFIG.schedules.daily,
         weekly: BACKUP_CONFIG.schedules.weekly,
-        monthly: BACKUP_CONFIG.schedules.monthly
+        monthly: BACKUP_CONFIG.schedules.monthly,
+        activeJobs: this.activeJobs.size
       });
 
       return {
@@ -170,7 +181,7 @@ class BackupService {
         schedules: BACKUP_CONFIG.schedules
       };
     } catch (error) {
-      this.log('ERROR', 'Failed to start scheduled backups', { error: error.message });
+      Logger.operationError('BACKUP_SERVICE', 'START_SCHEDULED_BACKUPS', error);
       throw error;
     }
   }
@@ -183,8 +194,14 @@ class BackupService {
     const backupId = this.generateBackupId(backupType);
     const startTime = new Date();
     
+    Logger.operationStart('BACKUP_SERVICE', 'PERFORM_BACKUP', {
+      backupType,
+      backupId,
+      collectionsCount: collections?.length || 0
+    });
+    
     try {
-      this.log('INFO', `Starting ${backupType} backup`, { backupId, collections });
+      Logger.service('BackupService', 'performBackup', 'Starting backup', { backupType, backupId });
       this.stats.totalBackups++;
 
       // Default to all collections if none specified
@@ -238,7 +255,14 @@ class BackupService {
       // Clean up old backups based on retention policy
       await this.cleanupOldBackups(backupType);
 
-      this.log('INFO', `${backupType} backup completed successfully`, {
+      Logger.performance('BackupService.performBackup', metadata.duration, {
+        backupType,
+        collections: collections.length,
+        totalDocuments: Object.values(preBackupStats).reduce((sum, stat) => sum + stat.count, 0)
+      });
+      
+      Logger.operationSuccess('BACKUP_SERVICE', 'PERFORM_BACKUP', {
+        backupType,
         backupId,
         duration: metadata.duration,
         collections: collections.length,
@@ -269,9 +293,9 @@ class BackupService {
       this.backupHistory.unshift(errorMetadata);
       await this.saveBackupHistory();
 
-      this.log('ERROR', `${backupType} backup failed`, {
+      Logger.operationError('BACKUP_SERVICE', 'PERFORM_BACKUP', error, {
+        backupType,
         backupId,
-        error: error.message,
         duration: errorMetadata.duration
       });
 
@@ -317,7 +341,7 @@ class BackupService {
             const queryFilter = JSON.stringify({ _id: { $in: oidArray } });
 
             mongoDumpCmd.push(`--query='${queryFilter}'`);
-            this.log('DEBUG', `Applying filter to cards collection`, { 
+            Logger.debug('BackupService', 'Applying filter to cards collection', { 
               cardCount: referencedIds.cardIds.length 
             });
           } else {
@@ -332,7 +356,7 @@ class BackupService {
             const queryFilter = JSON.stringify({ _id: { $in: oidArray } });
 
             mongoDumpCmd.push(`--query='${queryFilter}'`);
-            this.log('DEBUG', `Applying filter to sets collection`, { 
+            Logger.debug('BackupService', 'Applying filter to sets collection', { 
               setCount: referencedIds.setIds.length 
             });
           } else {
@@ -347,7 +371,7 @@ class BackupService {
             const queryFilter = JSON.stringify({ _id: { $in: oidArray } });
 
             mongoDumpCmd.push(`--query='${queryFilter}'`);
-            this.log('DEBUG', `Applying filter to cardmarketreferenceproducts collection`, { 
+            Logger.debug('BackupService', 'Applying filter to cardmarketreferenceproducts collection', { 
               productCount: referencedIds.productIds.length 
             });
           } else {
@@ -359,7 +383,7 @@ class BackupService {
 
         const finalCommand = mongoDumpCmd.join(' ');
 
-        this.log('DEBUG', `Executing mongodump for collection: ${collection}`, { command: finalCommand });
+        Logger.debug('BackupService', 'Executing mongodump for collection', { collection, command: finalCommand });
 
         // Execute command synchronously for better error handling
         try {
@@ -377,7 +401,8 @@ class BackupService {
             isFiltered: ['cards', 'sets', 'cardmarketreferenceproducts'].includes(collection)
           });
           
-          this.log('DEBUG', `Successfully backed up collection: ${collection}`, { 
+          Logger.debug('BackupService', 'Successfully backed up collection', { 
+            collection,
             outputPath: collectionBackupDir,
             filtered: ['cards', 'sets', 'cardmarketreferenceproducts'].includes(collection)
           });
@@ -401,7 +426,7 @@ class BackupService {
             isFiltered: ['cards', 'sets', 'cardmarketreferenceproducts'].includes(collection)
           });
           
-          this.log('ERROR', `Failed to backup collection: ${collection}`, errorDetails);
+          Logger.error('BackupService', 'Failed to backup collection', { collection, ...errorDetails });
         }
       }
 
@@ -413,7 +438,7 @@ class BackupService {
       }
 
       if (successfulBackups.length < results.length) {
-        this.log('WARN', 'Some collections failed to backup', {
+        Logger.warn('BackupService', 'Some collections failed to backup', {
           successful: successfulBackups.length,
           total: results.length,
           failed: results.filter(r => !r.success).map(r => r.collection)
@@ -424,7 +449,7 @@ class BackupService {
       const filteredCollections = results.filter(r => r.isFiltered);
 
       if (filteredCollections.length > 0) {
-        this.log('INFO', 'Applied selective filtering to reference collections', {
+        Logger.service('BackupService', 'executeMongoDump', 'Applied selective filtering to reference collections', {
           filtered: filteredCollections.map(r => r.collection),
           referencedCardIds: referencedIds.cardIds.length,
           referencedSetIds: referencedIds.setIds.length,
@@ -445,7 +470,7 @@ class BackupService {
       };
 
     } catch (error) {
-      this.log('ERROR', 'MongoDB dump execution failed', { error: error.message });
+      Logger.error('BackupService', 'MongoDB dump execution failed', error);
       throw new Error(`MongoDB backup failed: ${error.message}`);
     }
   }
@@ -478,7 +503,7 @@ class BackupService {
         productIds: sealedProductIds
       };
     } catch (error) {
-      this.log('ERROR', 'Failed to get referenced IDs', { error: error.message });
+      Logger.error('BackupService', 'Failed to get referenced IDs', error);
       throw error;
     }
   }
@@ -534,7 +559,8 @@ class BackupService {
           filterApplied: query
         };
 
-        this.log('DEBUG', `Collection stats for ${collectionName}`, {
+        Logger.debug('BackupService', 'Collection stats', {
+          collectionName,
           count,
           hasData: count > 0,
           isFiltered: Object.keys(query).length > 0
@@ -632,10 +658,10 @@ class BackupService {
       if (fs.existsSync(archiveFile)) {
         const archiveSize = fs.statSync(archiveFile).size;
 
-        this.log('INFO', 'Archive backup created successfully', {
+        Logger.service('BackupService', 'performArchiveBackup', 'Archive backup created successfully', {
           archiveId,
           archiveFile,
-          size: `${Math.round(archiveSize / 1024 / 1024)  }MB`
+          size: `${Math.round(archiveSize / 1024 / 1024)}MB`
         });
         
         // Remove uncompressed backup directory
@@ -651,7 +677,7 @@ class BackupService {
       
       
     } catch (error) {
-      this.log('ERROR', 'Archive backup failed', { error: error.message });
+      Logger.error('BackupService', 'Archive backup failed', error);
       throw error;
     }
   }
@@ -678,14 +704,17 @@ class BackupService {
           const dirPath = path.join(backupTypeDir, dirName);
 
           execSync(`rm -rf "${dirPath}"`);
-          this.log('DEBUG', `Cleaned up old backup: ${dirName}`);
+          Logger.debug('BackupService', 'Cleaned up old backup', { dirName });
         }
         
-        this.log('INFO', `Cleaned up ${toDelete.length} old ${backupType} backups`);
+        Logger.service('BackupService', 'cleanupOldBackups', 'Cleaned up old backups', {
+          count: toDelete.length,
+          backupType
+        });
       }
       
     } catch (error) {
-      this.log('WARN', 'Backup cleanup failed', { backupType, error: error.message });
+      Logger.warn('BackupService', 'Backup cleanup failed', { backupType, error: error.message });
     }
   }
 
@@ -699,7 +728,9 @@ class BackupService {
     });
     this.activeJobs.clear();
     
-    this.log('INFO', 'All scheduled backup jobs stopped');
+    Logger.service('BackupService', 'stopScheduledBackups', 'All scheduled backup jobs stopped', {
+      stoppedJobs: this.activeJobs.size
+    });
     return { success: true, message: 'Scheduled backups stopped' };
   }
 
@@ -762,7 +793,7 @@ class BackupService {
     try {
       // Wait for connection if it's still connecting
       if (mongoose.connection.readyState === 2) { // CONNECTING
-        this.log('INFO', 'Waiting for MongoDB connection...');
+        Logger.service('BackupService', 'verifyDatabaseConnection', 'Waiting for MongoDB connection');
         await new Promise((resolve, reject) => {
           const timeout = setTimeout(() => {
             reject(new Error('Database connection timeout'));
@@ -790,7 +821,7 @@ class BackupService {
       const testCollection = mongoose.connection.db.collection('sets');
       const count = await testCollection.countDocuments({});
       
-      this.log('DEBUG', 'Database connection verified', { 
+      Logger.debug('BackupService', 'Database connection verified', { 
         setsCount: count,
         dbName: mongoose.connection.db.databaseName 
       });
@@ -814,7 +845,7 @@ class BackupService {
 
         this.backupHistory = history.slice(0, 100); // Keep last 100 entries
       } catch (error) {
-        this.log('WARN', 'Failed to load backup history', { error: error.message });
+        Logger.warn('BackupService', 'Failed to load backup history', { error: error.message });
         this.backupHistory = [];
       }
     }
@@ -826,38 +857,16 @@ class BackupService {
     try {
       fs.writeFileSync(historyFile, JSON.stringify(this.backupHistory.slice(0, 100), null, 2));
     } catch (error) {
-      this.log('WARN', 'Failed to save backup history', { error: error.message });
+      Logger.warn('BackupService', 'Failed to save backup history', { error: error.message });
     }
   }
 
   /**
-   * Logging utility with structured format
+   * Enhanced logging utility using centralized Logger
+   * Provides operation tracking and performance metrics for backup operations
    */
-  log(level, message, details = {}) {
-    const logEntry = {
-      timestamp: new Date().toISOString(),
-      level,
-      service: 'BackupService',
-      message,
-      ...details
-    };
-
-    // Output to console (can be extended to use proper logging library)
-    const logLine = `[${logEntry.timestamp}] [${level}] BackupService: ${message}`;
-    
-    switch (level) {
-      case 'ERROR':
-        console.error(logLine, details);
-        break;
-      case 'WARN':
-        console.warn(logLine, details);
-        break;
-      case 'DEBUG':
-        console.debug(logLine, details);
-        break;
-      default:
-        console.log(logLine, details);
-    }
+  logBackupOperation(operation, data = {}) {
+    Logger.service('BackupService', operation, `Backup operation: ${operation}`, data);
   }
 }
 

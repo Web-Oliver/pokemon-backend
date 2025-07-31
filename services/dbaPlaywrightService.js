@@ -9,6 +9,7 @@
 const { chromium } = require('playwright');
 const path = require('path');
 const fs = require('fs');
+const Logger = require('../utils/Logger');
 
 /**
  * Configuration for DBA automation
@@ -47,13 +48,23 @@ class DbaPlaywrightService {
    * Initialize browser with persistent session
    */
   async initialize() {
+    Logger.operationStart('DBA_PLAYWRIGHT_SERVICE', 'INITIALIZE_BROWSER', { 
+      userDataDir: this.config.userDataDir,
+      viewport: this.config.viewport 
+    });
+
     try {
-      console.log('[DBA PLAYWRIGHT] Initializing browser context...');
-      console.log(`[DBA PLAYWRIGHT] Using user data directory: ${this.config.userDataDir}`);
+      Logger.service('DbaPlaywrightService', 'initialize', 'Initializing browser context');
+      Logger.debug('DbaPlaywrightService', `Using user data directory: ${this.config.userDataDir}`);
       
       // Verify the user data directory exists (should contain logged-in session)
       if (!fs.existsSync(this.config.userDataDir)) {
-        throw new Error(`User data directory not found: ${this.config.userDataDir}. Please ensure the DBA login session exists.`);
+        const error = new Error(`User data directory not found: ${this.config.userDataDir}. Please ensure the DBA login session exists.`);
+
+        Logger.operationError('DBA_PLAYWRIGHT_SERVICE', 'INITIALIZE_BROWSER', error, { 
+          userDataDir: this.config.userDataDir 
+        });
+        throw error;
       }
 
       // Launch persistent browser context to maintain login sessions
@@ -85,11 +96,16 @@ class DbaPlaywrightService {
       this.page.setDefaultTimeout(this.config.actionTimeout);
       this.page.setDefaultNavigationTimeout(this.config.navigationTimeout);
 
-      console.log('[DBA PLAYWRIGHT] Browser initialized successfully');
+      Logger.operationSuccess('DBA_PLAYWRIGHT_SERVICE', 'INITIALIZE_BROWSER', { 
+        browserInitialized: true,
+        pageCount: this.context.pages().length 
+      });
       return true;
 
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Failed to initialize browser:', error);
+      Logger.operationError('DBA_PLAYWRIGHT_SERVICE', 'INITIALIZE_BROWSER', error, { 
+        userDataDir: this.config.userDataDir 
+      });
       throw new Error(`Browser initialization failed: ${error.message}`);
     }
   }
@@ -98,8 +114,10 @@ class DbaPlaywrightService {
    * Ensure user is logged in to DBA.dk
    */
   async ensureLoggedIn() {
+    Logger.operationStart('DBA_PLAYWRIGHT_SERVICE', 'ENSURE_LOGGED_IN', { baseUrl: this.config.baseUrl });
+
     try {
-      console.log('[DBA PLAYWRIGHT] Checking login status...');
+      Logger.service('DbaPlaywrightService', 'ensureLoggedIn', 'Checking login status');
       
       // Navigate to DBA homepage
       await this.page.goto(this.config.baseUrl, { 
@@ -114,7 +132,9 @@ class DbaPlaywrightService {
       const isLoggedIn = await this.page.locator('text=Min DBA').isVisible().catch(() => false);
       
       if (isLoggedIn) {
-        console.log('[DBA PLAYWRIGHT] User already logged in');
+        Logger.operationSuccess('DBA_PLAYWRIGHT_SERVICE', 'ENSURE_LOGGED_IN', { 
+          status: 'already_logged_in' 
+        });
         return true;
       }
 
@@ -123,25 +143,33 @@ class DbaPlaywrightService {
       const loginVisible = await loginButton.isVisible().catch(() => false);
 
       if (loginVisible) {
-        console.log('[DBA PLAYWRIGHT] User not logged in. Manual login required.');
-        console.log('[DBA PLAYWRIGHT] Please log in manually in the browser window...');
+        Logger.service('DbaPlaywrightService', 'ensureLoggedIn', 'User not logged in. Manual login required');
+        Logger.info('DbaPlaywrightService', 'Please log in manually in the browser window');
         
         // Wait for user to complete login - look for "Min DBA" to appear
         try {
           await this.page.waitForSelector('text=Min DBA', { 
             timeout: 300000 // 5 minutes for manual login
           });
-          console.log('[DBA PLAYWRIGHT] Login completed successfully');
+          Logger.operationSuccess('DBA_PLAYWRIGHT_SERVICE', 'ENSURE_LOGGED_IN', { 
+            status: 'manual_login_completed' 
+          });
           return true;
         } catch (timeoutError) {
-          throw new Error('Login timeout - user did not complete login within 5 minutes');
+          const error = new Error('Login timeout - user did not complete login within 5 minutes');
+
+          Logger.operationError('DBA_PLAYWRIGHT_SERVICE', 'ENSURE_LOGGED_IN', error, { timeout: 300000 });
+          throw error;
         }
       }
 
-      throw new Error('Unable to determine login status - page structure may have changed');
+      const error = new Error('Unable to determine login status - page structure may have changed');
+
+      Logger.operationError('DBA_PLAYWRIGHT_SERVICE', 'ENSURE_LOGGED_IN', error);
+      throw error;
 
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Login check failed:', error);
+      Logger.operationError('DBA_PLAYWRIGHT_SERVICE', 'ENSURE_LOGGED_IN', error, { baseUrl: this.config.baseUrl });
       throw new Error(`Login verification failed: ${error.message}`);
     }
   }
@@ -152,52 +180,67 @@ class DbaPlaywrightService {
   async submitForm(formData) {
     const { title, description, price, imagePaths = [], metadata = null } = formData;
 
+    Logger.operationStart('DBA_PLAYWRIGHT_SERVICE', 'SUBMIT_FORM', { 
+      title: title.substring(0, 50),
+      hasMetadata: Boolean(metadata),
+      imageCount: imagePaths?.length || 0,
+      price 
+    });
+
     try {
-      console.log(`[DBA PLAYWRIGHT] Starting form submission: ${title}`);
+      Logger.service('DbaPlaywrightService', 'submitForm', 'Starting form submission', { title });
       
       if (metadata) {
-        console.log(`[DBA PLAYWRIGHT] Card: ${metadata.cardName} | Set: ${metadata.setName} | Grade: PSA ${metadata.grade}`);
+        Logger.debug('DbaPlaywrightService', 'Card metadata', {
+          cardName: metadata.cardName,
+          setName: metadata.setName,
+          grade: metadata.grade
+        });
       }
 
       // Step 1: Ensure we're logged in
       await this.ensureLoggedIn();
 
       // Step 2: Navigate to create new ad
-      console.log('[DBA PLAYWRIGHT] Clicking "Ny annonce"...');
+      Logger.debug('DbaPlaywrightService', 'Clicking "Ny annonce"');
       await this.page.getByRole('link', { name: 'Ny annonce' }).click();
       await this.page.waitForTimeout(randomDelay(800, 1500));
 
       // Step 3: Click marketplace option
-      console.log('[DBA PLAYWRIGHT] Selecting marketplace option...');
+      Logger.debug('DbaPlaywrightService', 'Selecting marketplace option');
       await this.page.getByRole('link', { name: 'Opret annonce på' }).click();
       await this.page.waitForTimeout(randomDelay(1000, 2000));
 
       // Step 4: Upload images if provided
       if (imagePaths && imagePaths.length > 0) {
-        console.log(`[DBA PLAYWRIGHT] Uploading ${imagePaths.length} images...`);
+        Logger.debug('DbaPlaywrightService', 'Uploading images', { count: imagePaths.length });
         await this.uploadImages(imagePaths);
       }
 
       // Step 5: Select category using AI assistant
-      console.log('[DBA PLAYWRIGHT] Selecting category...');
+      Logger.debug('DbaPlaywrightService', 'Selecting category');
       await this.selectCategory();
 
       // Step 6: Fill form fields
-      console.log('[DBA PLAYWRIGHT] Filling form fields...');
+      Logger.debug('DbaPlaywrightService', 'Filling form fields');
       await this.fillFormFields(title, description, price);
 
       // Step 7: Navigate through form steps
-      console.log('[DBA PLAYWRIGHT] Proceeding through form steps...');
+      Logger.debug('DbaPlaywrightService', 'Proceeding through form steps');
       await this.completeFormFlow();
 
       // Step 8: Publish the ad
-      console.log('[DBA PLAYWRIGHT] Publishing ad...');
+      Logger.debug('DbaPlaywrightService', 'Publishing ad');
       await this.publishAd();
 
       // Step 9: Verify success
       await this.verifySuccess();
 
-      console.log(`[DBA PLAYWRIGHT] ✅ Successfully submitted: ${title}`);
+      Logger.operationSuccess('DBA_PLAYWRIGHT_SERVICE', 'SUBMIT_FORM', {
+        title,
+        hasMetadata: Boolean(metadata),
+        success: true
+      });
       return {
         success: true,
         message: 'Ad published successfully to DBA.dk',
@@ -207,16 +250,19 @@ class DbaPlaywrightService {
       };
 
     } catch (error) {
-      console.error(`[DBA PLAYWRIGHT] ❌ Form submission failed for "${title}":`, error);
+      Logger.operationError('DBA_PLAYWRIGHT_SERVICE', 'SUBMIT_FORM', error, {
+        title,
+        hasMetadata: Boolean(metadata)
+      });
       
       // Take screenshot for debugging
       try {
         const screenshotPath = path.join(__dirname, '../data', `dba-error-${Date.now()}.png`);
 
         await this.page.screenshot({ path: screenshotPath, fullPage: true });
-        console.log(`[DBA PLAYWRIGHT] Error screenshot saved: ${screenshotPath}`);
+        Logger.debug('DbaPlaywrightService', 'Error screenshot saved', { screenshotPath });
       } catch (screenshotError) {
-        console.error('[DBA PLAYWRIGHT] Failed to take error screenshot:', screenshotError);
+        Logger.error('DbaPlaywrightService', 'Failed to take error screenshot', screenshotError);
       }
 
       return {
@@ -239,13 +285,13 @@ class DbaPlaywrightService {
         const exists = fs.existsSync(imgPath);
 
         if (!exists) {
-          console.warn(`[DBA PLAYWRIGHT] Image not found: ${imgPath}`);
+          Logger.warn('DbaPlaywrightService', 'Image not found', { imagePath: imgPath });
         }
         return exists;
       });
 
       if (validPaths.length === 0) {
-        console.warn('[DBA PLAYWRIGHT] No valid images found to upload');
+        Logger.warn('DbaPlaywrightService', 'No valid images found to upload');
         return;
       }
 
@@ -258,13 +304,13 @@ class DbaPlaywrightService {
 
       await fileChooser.setFiles(validPaths);
       
-      console.log(`[DBA PLAYWRIGHT] Uploaded ${validPaths.length} images`);
+      Logger.debug('DbaPlaywrightService', 'Images uploaded successfully', { count: validPaths.length });
       
       // Wait for upload to complete
       await this.page.waitForTimeout(randomDelay(2000, 4000));
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Image upload failed:', error);
+      Logger.error('DbaPlaywrightService', 'Image upload failed', error);
       throw new Error(`Image upload failed: ${error.message}`);
     }
   }
@@ -282,11 +328,11 @@ class DbaPlaywrightService {
 
       await categoryLocator.click();
       
-      console.log('[DBA PLAYWRIGHT] Category selected: Samlerobjekter/Samlekort');
+      Logger.debug('DbaPlaywrightService', 'Category selected', { category: 'Samlerobjekter/Samlekort' });
       await this.page.waitForTimeout(randomDelay(800, 1500));
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Category selection failed:', error);
+      Logger.error('DbaPlaywrightService', 'Category selection failed', error);
       throw new Error(`Category selection failed: ${error.message}`);
     }
   }
@@ -316,10 +362,10 @@ class DbaPlaywrightService {
       await priceField.fill(price.toString());
       await this.page.waitForTimeout(randomDelay(300, 700));
 
-      console.log('[DBA PLAYWRIGHT] Form fields filled successfully');
+      Logger.debug('DbaPlaywrightService', 'Form fields filled successfully', { title: title.substring(0, 30), price });
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Form field filling failed:', error);
+      Logger.error('DbaPlaywrightService', 'Form field filling failed', error);
       throw new Error(`Form field filling failed: ${error.message}`);
     }
   }
@@ -345,10 +391,10 @@ class DbaPlaywrightService {
       await this.page.getByRole('checkbox', { name: 'Basis Mere information om' }).click();
       await this.page.waitForTimeout(randomDelay(500, 1000));
 
-      console.log('[DBA PLAYWRIGHT] Form flow completed successfully');
+      Logger.debug('DbaPlaywrightService', 'Form flow completed successfully');
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Form flow failed:', error);
+      Logger.error('DbaPlaywrightService', 'Form flow failed', error);
       throw new Error(`Form flow completion failed: ${error.message}`);
     }
   }
@@ -361,10 +407,10 @@ class DbaPlaywrightService {
       await this.page.getByRole('button', { name: 'Offentliggør annoncen' }).click();
       await this.page.waitForTimeout(randomDelay(1000, 2000));
       
-      console.log('[DBA PLAYWRIGHT] Ad publication initiated');
+      Logger.debug('DbaPlaywrightService', 'Ad publication initiated');
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Ad publication failed:', error);
+      Logger.error('DbaPlaywrightService', 'Ad publication failed', error);
       throw new Error(`Ad publication failed: ${error.message}`);
     }
   }
@@ -379,10 +425,10 @@ class DbaPlaywrightService {
         timeout: this.config.actionTimeout 
       });
       
-      console.log('[DBA PLAYWRIGHT] Success confirmation detected');
+      Logger.debug('DbaPlaywrightService', 'Success confirmation detected');
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Success verification failed:', error);
+      Logger.error('DbaPlaywrightService', 'Success verification failed', error);
       throw new Error(`Success verification failed: ${error.message}`);
     }
   }
@@ -393,12 +439,19 @@ class DbaPlaywrightService {
   async submitMultipleAds(adsArray, delayBetweenAds = 5000) {
     const results = [];
     
-    console.log(`[DBA PLAYWRIGHT] Starting batch submission of ${adsArray.length} ads`);
+    Logger.operationStart('DBA_PLAYWRIGHT_SERVICE', 'SUBMIT_MULTIPLE_ADS', {
+      adsCount: adsArray.length,
+      delayBetweenAds
+    });
     
     for (let i = 0; i < adsArray.length; i++) {
       const ad = adsArray[i];
 
-      console.log(`[DBA PLAYWRIGHT] Processing ad ${i + 1}/${adsArray.length}: ${ad.title}`);
+      Logger.service('DbaPlaywrightService', 'submitMultipleAds', 'Processing ad', {
+        current: i + 1,
+        total: adsArray.length,
+        title: ad.title
+      });
       
       try {
         const result = await this.submitForm(ad);
@@ -409,12 +462,16 @@ class DbaPlaywrightService {
         if (i < adsArray.length - 1) {
           const randomDelayMs = randomDelay(delayBetweenAds - 2000, delayBetweenAds + 3000);
 
-          console.log(`[DBA PLAYWRIGHT] Waiting ${randomDelayMs/1000} seconds before next submission...`);
+          Logger.debug('DbaPlaywrightService', 'Waiting before next submission', { delaySeconds: randomDelayMs/1000 });
           await new Promise(resolve => setTimeout(resolve, randomDelayMs));
         }
         
       } catch (error) {
-        console.error(`[DBA PLAYWRIGHT] Failed to submit ad ${i + 1}:`, error.message);
+        Logger.error('DbaPlaywrightService', 'Failed to submit ad', {
+          error: error.message,
+          adIndex: i + 1,
+          title: ad.title
+        });
         results.push({
           success: false,
           error: error.message,
@@ -424,6 +481,14 @@ class DbaPlaywrightService {
         });
       }
     }
+    
+    const successCount = results.filter(r => r.success).length;
+
+    Logger.operationSuccess('DBA_PLAYWRIGHT_SERVICE', 'SUBMIT_MULTIPLE_ADS', {
+      totalAds: adsArray.length,
+      successCount,
+      failedCount: adsArray.length - successCount
+    });
     
     return results;
   }
@@ -437,11 +502,11 @@ class DbaPlaywrightService {
         const screenshotPath = path.join(__dirname, '../data', filename);
 
         await this.page.screenshot({ path: screenshotPath, fullPage: true });
-        console.log(`[DBA PLAYWRIGHT] Screenshot saved: ${screenshotPath}`);
+        Logger.debug('DbaPlaywrightService', 'Screenshot saved', { screenshotPath });
         return screenshotPath;
       }
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Screenshot failed:', error);
+      Logger.error('DbaPlaywrightService', 'Screenshot failed', error);
     }
     return null;
   }
@@ -472,7 +537,7 @@ class DbaPlaywrightService {
       return status;
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Status check failed:', error);
+      Logger.error('DbaPlaywrightService', 'Status check failed', error);
       return {
         browserInitialized: false,
         error: error.message,
@@ -485,8 +550,10 @@ class DbaPlaywrightService {
    * Clean shutdown of browser resources
    */
   async close() {
+    Logger.operationStart('DBA_PLAYWRIGHT_SERVICE', 'CLOSE_BROWSER');
+    
     try {
-      console.log('[DBA PLAYWRIGHT] Closing browser resources...');
+      Logger.service('DbaPlaywrightService', 'close', 'Closing browser resources');
       
       if (this.context) {
         await this.context.close();
@@ -494,10 +561,12 @@ class DbaPlaywrightService {
         this.page = null;
       }
       
-      console.log('[DBA PLAYWRIGHT] Browser closed successfully');
+      Logger.operationSuccess('DBA_PLAYWRIGHT_SERVICE', 'CLOSE_BROWSER', { 
+        resourcesClosed: true 
+      });
       
     } catch (error) {
-      console.error('[DBA PLAYWRIGHT] Error closing browser:', error);
+      Logger.operationError('DBA_PLAYWRIGHT_SERVICE', 'CLOSE_BROWSER', error);
     }
   }
 }

@@ -1,4 +1,5 @@
 const BaseController = require('./base/BaseController');
+const { getEntityConfig } = require('../config/entityConfigurations');
 
 /**
  * Raw Card Controller
@@ -8,17 +9,18 @@ const BaseController = require('./base/BaseController');
  */
 class RawCardController extends BaseController {
   constructor() {
+    // Get centralized entity configuration
+    const entityConfig = getEntityConfig('rawCard');
+    
     super('rawCardService', {
-      entityName: 'RawCard',
-      pluralName: 'rawCards',
-      includeMarkAsSold: true,
-      defaultPopulate: {
-        path: 'cardId',
-        populate: {
-          path: 'setId',
-          model: 'Set',
-        },
-      },
+      entityName: entityConfig.entityName,
+      pluralName: entityConfig.pluralName,
+      includeMarkAsSold: entityConfig.includeMarkAsSold,
+      defaultPopulate: entityConfig.defaultPopulate,
+      filterableFields: entityConfig.filterableFields,
+      searchFields: entityConfig.searchFields,
+      searchWeights: entityConfig.searchWeights,
+      validationRules: entityConfig.validationRules,
     });
   }
 

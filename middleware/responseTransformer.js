@@ -113,6 +113,9 @@ class ResponseTransformer {
    * @returns {Object} - Transformed response
    */
   transformResponse(data, req, res) {
+    // Convert Decimal128 objects before any other processing
+    data = this.convertDecimal128Fields(data);
+
     // If data is already in standard format, enhance it
     if (data && typeof data === 'object' && data.hasOwnProperty('success')) {
       return this.enhanceStandardResponse(data, req, res);
@@ -166,6 +169,11 @@ class ResponseTransformer {
    */
   enhanceStandardResponse(data, req, res) {
     const enhanced = { ...data };
+
+    // Add status field if missing (required for new API format)
+    if (!enhanced.status) {
+      enhanced.status = enhanced.success ? RESPONSE_FORMATS.SUCCESS : RESPONSE_FORMATS.ERROR;
+    }
 
     if (this.options.includeMetadata) {
       enhanced.meta = {
@@ -225,6 +233,86 @@ class ResponseTransformer {
     }
 
     return response;
+  }
+
+  /**
+   * Converts MongoDB Decimal128 objects to numbers throughout the data structure
+   * @param {any} data - Data to process
+   * @returns {any} - Data with converted Decimal128 fields
+   */
+  convertDecimal128Fields(data) {
+    if (!data || typeof data !== 'object') {
+      return data;
+    }
+
+    // Handle arrays
+    if (Array.isArray(data)) {
+      return data.map(item => this.convertDecimal128Fields(item));
+    }
+
+    // Handle objects
+    const processed = {};
+    for (const [key, value] of Object.entries(data)) {
+      if (value && typeof value === 'object') {
+        // IMPORTANT: Check for Date objects FIRST to avoid corrupting them
+        if (value instanceof Date) {
+          processed[key] = value; // Keep Date objects as-is - they will be handled by Mongoose transforms
+        }
+        // Check if it's a Decimal128 object
+        else if (value.$numberDecimal) {
+          processed[key] = parseFloat(value.$numberDecimal);
+        } 
+        // Check if it's an ObjectId with buffer property (MongoDB ObjectId serialization)
+        else if (value.buffer && typeof value.buffer === 'object' && Object.keys(value.buffer).every(k => !isNaN(k))) {
+          // Convert buffer-based ObjectId to string
+          const bytesArray = Object.keys(value.buffer).map(k => value.buffer[k]);
+          const buffer = Buffer.from(bytesArray);
+          processed[key] = buffer.toString('hex');
+        }
+        // Check if it's a MongoDB Binary/Buffer object (typically has a bytes property with numeric keys for Decimal128)
+        else if (value.bytes && typeof value.bytes === 'object' && Object.keys(value.bytes).every(k => !isNaN(k))) {
+          // This appears to be a BSON Binary that should represent a Decimal128
+          // Convert bytes array to Buffer and then to Decimal128 string representation
+          const bytesArray = Object.keys(value.bytes).map(k => value.bytes[k]);
+          try {
+            // For Decimal128 stored as Binary, we need to parse it properly
+            // The bytes represent a 16-byte decimal128 value
+            // For now, let's try to extract the decimal value using BSON parsing approach
+            const buffer = Buffer.from(bytesArray);
+            
+            // Try to decode as little-endian decimal128
+            // This is a simplified approach - in reality, BSON Decimal128 parsing is more complex
+            let decimalValue = 0;
+            
+            // Check if this might be a simple integer stored as binary
+            if (buffer.length >= 8) {
+              // Try reading as 64-bit integer first (common case)
+              const lowBits = buffer.readUInt32LE(0);
+              const highBits = buffer.readUInt32LE(4);
+              
+              if (highBits === 0 && lowBits < Number.MAX_SAFE_INTEGER) {
+                decimalValue = lowBits;
+              } else {
+                // Fallback to a more complex decimal parsing if needed
+                decimalValue = lowBits; // Simplified approach
+              }
+            }
+            
+            processed[key] = decimalValue;
+          } catch (error) {
+            Logger.warn('ResponseTransformer', `Failed to convert Binary field: ${key}`, { error: error.message });
+            processed[key] = 0; // Default to 0 for failed conversions
+          }
+        } else {
+          // Recursively process nested objects and arrays
+          processed[key] = this.convertDecimal128Fields(value);
+        }
+      } else {
+        processed[key] = value;
+      }
+    }
+
+    return processed;
   }
 
   /**

@@ -333,20 +333,19 @@ function addAutomaticIndexes(schema, config, entityType) {
 }
 
 /**
- * Adds lean query defaults
+ * Adds lean query defaults with Decimal128 post-processing
  */
 function addLeanQueryDefaults(schema, config) {
-  // Override find methods to use lean by default for list operations
-  const originalFind = schema.statics.find;
-  
-  schema.statics.find = function(conditions, projection, options, callback) {
-    // Auto-apply lean for find operations without populate
-    if (options && !options.populate && options.lean === undefined) {
-      options.lean = true;
+  // Add middleware to automatically apply lean queries for find operations
+  schema.pre(/^find/, function() {
+    // Auto-apply lean for find operations without populate and when lean isn't explicitly set
+    if (!this.getOptions().populate && this.getOptions().lean === undefined) {
+      this.lean(true);
     }
-    
-    return originalFind.call(this, conditions, projection, options, callback);
-  };
+  });
+
+  // Note: Decimal128 conversion is now handled by ResponseTransformer middleware
+  // This ensures consistent conversion across all API responses
 }
 
 /**

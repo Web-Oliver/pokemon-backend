@@ -112,7 +112,7 @@ const getSetsWithPagination = asyncHandler(async (req, res) => {
 });
 
 const getSetById = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
     throw new ValidationError('Invalid ObjectId format');
   }
 

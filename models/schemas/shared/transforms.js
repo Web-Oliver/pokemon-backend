@@ -6,22 +6,38 @@
  */
 
 /**
- * Creates a transform function for converting Decimal128 to numbers
+ * Creates a transform function for converting Decimal128 to numbers, dates to strings, and ObjectIds to strings
  *
  * @param {Object} options - Transform options
  * @param {Array} options.priceFields - Array of price field names to convert
  * @param {Array} options.nestedPriceFields - Array of nested price field paths
+ * @param {Array} options.dateFields - Array of date field names to convert
+ * @param {Array} options.nestedDateFields - Array of nested date field paths
  * @returns {Function} - Transform function for schema.set('toJSON')
  */
 function createDecimal128Transform(options = {}) {
-  const { priceFields = ['myPrice'], nestedPriceFields = ['saleDetails.actualSoldPrice', 'priceHistory.price'] } =
-    options;
+  const { 
+    priceFields = ['myPrice'], 
+    nestedPriceFields = ['saleDetails.actualSoldPrice', 'priceHistory.price'],
+    dateFields = ['dateAdded'],
+    nestedDateFields = ['saleDetails.dateSold', 'priceHistory.dateUpdated']
+  } = options;
 
   return function transform(doc, ret) {
+    // Convert ObjectIds to strings (applies to _id and all nested _id fields)
+    ret = convertObjectIdsToStrings(ret);
+
     // Convert main price fields
     priceFields.forEach((field) => {
       if (ret[field]) {
         ret[field] = convertDecimal128ToNumber(ret[field]);
+      }
+    });
+
+    // Convert main date fields
+    dateFields.forEach((field) => {
+      if (ret[field]) {
+        ret[field] = convertDateToString(ret[field]);
       }
     });
 
@@ -53,6 +69,34 @@ function createDecimal128Transform(options = {}) {
       }
     });
 
+    // Convert nested date fields
+    nestedDateFields.forEach((fieldPath) => {
+      const fieldParts = fieldPath.split('.');
+      let current = ret;
+
+      // Navigate to the nested field
+      for (let i = 0; i < fieldParts.length - 1; i++) {
+        if (current[fieldParts[i]]) {
+          current = current[fieldParts[i]];
+        } else {
+          return; // Field doesn't exist
+        }
+      }
+
+      const finalField = fieldParts[fieldParts.length - 1];
+
+      // Handle array fields (like priceHistory)
+      if (Array.isArray(current)) {
+        current.forEach((item) => {
+          if (item[finalField]) {
+            item[finalField] = convertDateToString(item[finalField]);
+          }
+        });
+      } else if (current[finalField]) {
+        current[finalField] = convertDateToString(current[finalField]);
+      }
+    });
+
     return ret;
   };
 }
@@ -73,44 +117,156 @@ function convertDecimal128ToNumber(value) {
 }
 
 /**
+ * Converts a MongoDB Date value to a string
+ *
+ * @param {*} value - Value to convert
+ * @returns {string} - Converted date string
+ */
+function convertDateToString(value) {
+  if (!value) {
+    return null;
+  }
+  
+  // Handle MongoDB Date object or native Date FIRST (before empty object check)
+  if (value instanceof Date) {
+    return value.toISOString();
+  }
+  
+  // Handle MongoDB Date serialization with $date
+  if (value && value.$date) {
+    return new Date(value.$date).toISOString();
+  }
+  
+  // Handle already converted dates
+  if (typeof value === 'string') {
+    return value;
+  }
+  
+  // Handle MongoDB ObjectId-like objects that might contain dates
+  if (value && typeof value === 'object' && value.constructor && value.constructor.name === 'ObjectID') {
+    // ObjectID contains timestamp - extract it
+    return new Date(value.getTimestamp()).toISOString();
+  }
+  
+  // Handle empty objects (corrupted MongoDB dates) - AFTER Date checks
+  if (typeof value === 'object' && Object.keys(value).length === 0) {
+    return null;
+  }
+  
+  // Try to create a Date from the value
+  try {
+    const date = new Date(value);
+    if (!isNaN(date.getTime())) {
+      return date.toISOString();
+    }
+  } catch (error) {
+    // If all else fails, return null
+    return null;
+  }
+  
+  return null;
+}
+
+/**
  * Standard transform for collection items (cards)
- * Converts myPrice, saleDetails.actualSoldPrice, and priceHistory prices
+ * Converts myPrice, saleDetails.actualSoldPrice, priceHistory prices, and all date fields
  */
 const collectionItemTransform = createDecimal128Transform({
   priceFields: ['myPrice'],
   nestedPriceFields: ['saleDetails.actualSoldPrice', 'priceHistory.price'],
+  dateFields: ['dateAdded'],
+  nestedDateFields: ['saleDetails.dateSold', 'priceHistory.dateUpdated'],
 });
 
 /**
  * Transform for sealed products
- * Converts myPrice, cardMarketPrice, saleDetails.actualSoldPrice, and priceHistory prices
+ * Converts myPrice, cardMarketPrice, saleDetails.actualSoldPrice, priceHistory prices, and all date fields
  */
 const sealedProductTransform = createDecimal128Transform({
   priceFields: ['myPrice', 'cardMarketPrice'],
   nestedPriceFields: ['saleDetails.actualSoldPrice', 'priceHistory.price'],
+  dateFields: ['dateAdded'],
+  nestedDateFields: ['saleDetails.dateSold', 'priceHistory.dateUpdated'],
 });
 
 /**
  * Standard transform for auction items
- * Converts totalValue and soldValue
+ * Converts totalValue, soldValue, and date fields
  */
 const auctionTransform = createDecimal128Transform({
   priceFields: ['totalValue', 'soldValue'],
   nestedPriceFields: [],
+  dateFields: ['auctionDate'],
+  nestedDateFields: [],
 });
 
 /**
  * Standard transform for card market reference products
- * Converts price and cardMarketPrice
+ * Converts price, cardMarketPrice, and date fields
  */
 const cardMarketTransform = createDecimal128Transform({
   priceFields: ['price', 'cardMarketPrice'],
   nestedPriceFields: [],
+  dateFields: ['lastUpdated'],
+  nestedDateFields: [],
 });
+
+/**
+ * Converts MongoDB ObjectIds to strings throughout the data structure
+ *
+ * @param {*} obj - Object to process
+ * @returns {*} - Object with ObjectIds converted to strings
+ */
+function convertObjectIdsToStrings(obj) {
+  if (!obj || typeof obj !== 'object') {
+    return obj;
+  }
+
+  // Handle arrays
+  if (Array.isArray(obj)) {
+    return obj.map(item => convertObjectIdsToStrings(item));
+  }
+
+  // Handle objects
+  const processed = {};
+  for (const [key, value] of Object.entries(obj)) {
+    if (value && typeof value === 'object') {
+      // IMPORTANT: Check for Date objects FIRST to avoid corrupting them
+      if (value instanceof Date) {
+        processed[key] = value; // Keep Date objects as-is
+      }
+      // Check if it's an ObjectId with buffer property
+      else if (value.buffer && typeof value.buffer === 'object' && Object.keys(value.buffer).every(k => !isNaN(k))) {
+        // Convert buffer-based ObjectId to string
+        const bytesArray = Object.keys(value.buffer).map(k => value.buffer[k]);
+        const buffer = Buffer.from(bytesArray);
+        processed[key] = buffer.toString('hex');
+      }
+      // Check if it's a Mongoose ObjectId
+      else if (value.constructor && (value.constructor.name === 'ObjectID' || value.constructor.name === 'ObjectId')) {
+        processed[key] = value.toString();
+      }
+      // Check if it's already a proper ObjectId string format (24 hex characters)
+      else if (typeof value === 'string' && /^[0-9a-fA-F]{24}$/.test(value)) {
+        processed[key] = value;
+      }
+      // Recursively process nested objects and arrays
+      else {
+        processed[key] = convertObjectIdsToStrings(value);
+      }
+    } else {
+      processed[key] = value;
+    }
+  }
+
+  return processed;
+}
 
 module.exports = {
   createDecimal128Transform,
   convertDecimal128ToNumber,
+  convertDateToString,
+  convertObjectIdsToStrings,
   collectionItemTransform,
   sealedProductTransform,
   auctionTransform,

@@ -92,6 +92,7 @@ const findOrCreateCard = async (cardData) => {
     }
 
     const duration = Date.now() - startTime;
+
     Logger.performance('Find or Create Card', duration, {
       cardName: cardData.cardName,
       setName: cardData.setName
@@ -106,6 +107,7 @@ const findOrCreateCard = async (cardData) => {
     return card._id;
   } catch (error) {
     const duration = Date.now() - startTime;
+
     Logger.operationError('CARD', 'FIND_OR_CREATE', error, {
       cardName: cardData.cardName,
       setName: cardData.setName,
@@ -207,6 +209,7 @@ const createPsaGradedCard = async (data) => {
     Logger.service('PsaGradedCard', 'createPsaGradedCard', 'Reference card data populated successfully');
 
     const duration = Date.now() - startTime;
+
     Logger.performance('PSA Card Creation', duration, {
       cardName: data.cardName,
       grade: data.grade,
@@ -223,6 +226,7 @@ const createPsaGradedCard = async (data) => {
     return psaGradedCard;
   } catch (error) {
     const duration = Date.now() - startTime;
+
     Logger.operationError('PSA_CARD', 'CREATE', error, {
       cardName: data.cardName,
       setName: data.setName,
@@ -347,6 +351,7 @@ const updatePsaGradedCard = async (id, updateData) => {
   }
 
   const duration = Date.now() - startTime;
+
   Logger.performance('PSA Card Update', duration, {
     psaCardId: id,
     updateFields: Object.keys(updateData)
@@ -376,6 +381,7 @@ const deletePsaGradedCard = async (id) => {
   }
 
   const duration = Date.now() - startTime;
+
   Logger.performance('PSA Card Deletion', duration, { psaCardId: id });
   
   Logger.operationSuccess('PSA_CARD', 'DELETE', {

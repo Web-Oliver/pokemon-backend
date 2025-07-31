@@ -10,7 +10,7 @@ const getAllCards = asyncHandler(async (req, res) => {
   const query = {};
 
   if (setId) {
-    if (!mongoose.Types.ObjectId.isValid(setId)) {
+    if (!setId || typeof setId !== 'string' || !/^[a-f\d]{24}$/i.test(setId)) {
       throw new ValidationError('Invalid setId format');
     }
     query.setId = setId;
@@ -28,7 +28,7 @@ const getAllCards = asyncHandler(async (req, res) => {
 });
 
 const getCardById = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
     throw new ValidationError('Invalid ObjectId format');
   }
 
@@ -45,7 +45,7 @@ const getCardsBySetId = asyncHandler(async (req, res) => {
   const { setId } = req.params;
   const { page = 1, limit = 15, q, pokemonNumber } = req.query;
 
-  if (!mongoose.Types.ObjectId.isValid(setId)) {
+  if (!setId || typeof setId !== 'string' || !/^[a-f\d]{24}$/i.test(setId)) {
     throw new ValidationError('Invalid setId format');
   }
 
@@ -193,7 +193,7 @@ const searchBestMatch = asyncHandler(async (req, res) => {
 // Enhanced Cards Controller using BaseController with plugins
 class EnhancedCardsController extends BaseController {
   constructor() {
-    super('cardService', {
+    super('cardRepository', {
       entityName: 'Card',
       pluralName: 'cards',
       includeMarkAsSold: false,

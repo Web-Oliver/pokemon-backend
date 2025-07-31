@@ -186,6 +186,7 @@ class BaseController {
         const result = await handler(operation, data, context);
 
         if (hookName === 'beforeResponse' && result !== undefined) {
+          // eslint-disable-next-line no-param-reassign
           data = result;
         }
       } catch (error) {

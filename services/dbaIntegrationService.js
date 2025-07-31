@@ -109,6 +109,7 @@ class DbaIntegrationService {
       
       // Step 3: Return comprehensive result
       const duration = Date.now() - startTime;
+
       Logger.performance('DBA Export and Post', duration, {
         itemCount: items.length,
         exportSuccess: true,
@@ -137,6 +138,7 @@ class DbaIntegrationService {
       
     } catch (error) {
       const duration = Date.now() - startTime;
+
       Logger.operationError('DBA', 'EXPORT_AND_POST', error, {
         itemCount: items.length,
         duration: `${duration}ms`,
@@ -210,6 +212,7 @@ class DbaIntegrationService {
       const failed = results.filter(r => !r.success).length;
       
       const duration = Date.now() - startTime;
+
       Logger.performance('DBA Playwright Posting', duration, {
         totalAds: results.length,
         successful,
@@ -236,6 +239,7 @@ class DbaIntegrationService {
       
     } catch (error) {
       const duration = Date.now() - startTime;
+
       Logger.operationError('DBA', 'PLAYWRIGHT_POSTING', error, {
         exportPath: exportResult.jsonFilePath,
         duration: `${duration}ms`
@@ -363,6 +367,7 @@ class DbaIntegrationService {
       }
       
       const duration = Date.now() - startTime;
+
       Logger.performance('DBA Integration Test', duration, {
         itemCount: items.length,
         testSuccess: true
@@ -383,6 +388,7 @@ class DbaIntegrationService {
       
     } catch (error) {
       const duration = Date.now() - startTime;
+
       Logger.operationError('DBA', 'INTEGRATION_TEST', error, {
         itemCount: items.length,
         duration: `${duration}ms`

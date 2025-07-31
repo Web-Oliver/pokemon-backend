@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const fs = require('fs');
 const path = require('path');
+const Logger = require('./utils/Logger');
 
 require('dotenv').config();
 
@@ -9,11 +10,14 @@ const PsaGradedCard = require('./models/PsaGradedCard');
 const Card = require('./models/Card');
 const Set = require('./models/Set');
 
-console.log('🃏 IMPROVED PSA Graded Cards Import Script with Enhanced Set Matching');
-console.log('=================================================================');
+Logger.section('PSA Graded Cards Import', 'IMPROVED PSA Graded Cards Import Script with Enhanced Set Matching');
 
 async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
-    console.log(`🔍 Searching for card: "${cardName}" in set: "${setName}" (Pokemon #${pokemonNumber})`);
+    Logger.operationStart('FIND_CARD_BY_NAME_SET', 'Searching for card in database', {
+        cardName,
+        setName,
+        pokemonNumber
+    });
     
     // Enhanced set name mapping for exact matches
     const setNameMappings = {
@@ -32,7 +36,7 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
     const mappedSetName = setNameMappings[setName] || setName;
     
     if (mappedSetName === null) {
-        console.log(`❌ Set not found in mapping: "${setName}"`);
+        Logger.warn('Set not found in name mappings', { setName, mappedSetName });
         return null;
     }
     
@@ -62,22 +66,20 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
     }
     
     if (!set) {
-        console.log(`❌ Set not found after all strategies: "${setName}" (mapped to: "${mappedSetName}")`);
-        console.log(`📝 Trying partial matches...`);
-        
         // Show available similar sets for debugging
         const similarSets = await Set.find({ 
             setName: { $regex: new RegExp(setName.split(' ').slice(-2).join('|'), 'i') } 
         }).limit(3);
 
-        if (similarSets.length > 0) {
-            console.log(`📝 Similar sets found:`);
-            similarSets.forEach(s => console.log(`   - ${s.setName}`));
-        }
+        Logger.warn('Set not found after all search strategies', {
+            originalSetName: setName,
+            mappedSetName,
+            similarSetsFound: similarSets.map(s => s.setName)
+        });
         return null;
     }
     
-    console.log(`✅ Found set: "${set.setName}" (ID: ${set._id})`);
+    Logger.info('Found matching set', { setName: set.setName, setId: set._id });
     
     // Now find the card in that set
     let card = null;
@@ -116,19 +118,34 @@ async function findCardByNameAndSet(cardName, setName, pokemonNumber) {
     for (let i = 0; i < searchStrategies.length; i++) {
         card = await Card.findOne(searchStrategies[i]);
         if (card) {
-            console.log(`✅ Found card using strategy ${i + 1}: "${card.cardName}" (ID: ${card._id})`);
+            Logger.info('Found matching card', {
+                cardName: card.cardName,
+                cardId: card._id,
+                strategy: i + 1,
+                pokemonNumber: card.pokemonNumber
+            });
             break;
         }
     }
     
     if (!card) {
-        console.log(`❌ Card not found: "${cardName}" in set "${setName}"`);
-        console.log(`📝 Available cards in set (first 5):`);
         const sampleCards = await Card.find({ setId: set._id }).limit(5);
 
-        sampleCards.forEach(c => console.log(`   - ${c.cardName} (#${c.pokemonNumber})`));
+        Logger.warn('Card not found in set', {
+            cardName,
+            setName,
+            setId: set._id,
+            availableCards: sampleCards.map(c => `${c.cardName} (#${c.pokemonNumber})`)
+        });
         return null;
     }
+    
+    Logger.operationSuccess('FIND_CARD_BY_NAME_SET', 'Successfully found card match', {
+        cardName: card.cardName,
+        cardId: card._id,
+        setName: set.setName,
+        pokemonNumber: card.pokemonNumber
+    });
     
     return card;
 }
@@ -146,27 +163,38 @@ async function copyImageToPublicUploads(imagePath, newFileName) {
     try {
         if (fs.existsSync(sourceImagePath)) {
             fs.copyFileSync(sourceImagePath, targetImagePath);
-            console.log(`📸 Image copied: ${path.basename(imagePath)} -> ${newFileName}`);
+            Logger.debug('Image copied successfully', {
+                originalName: path.basename(imagePath),
+                newFileName,
+                targetPath: `/uploads/${newFileName}`
+            });
             return `/uploads/${newFileName}`;
-        } 
-            console.log(`⚠️ Image not found: ${sourceImagePath}`);
+        } else {
+            Logger.warn('Source image not found', { sourceImagePath });
             return null;
+        }
         
     } catch (error) {
-        console.log(`❌ Error copying image: ${error.message}`);
+        Logger.operationError('IMAGE_COPY_FAILED', 'Failed to copy image file', error, {
+            sourceImagePath,
+            targetImagePath,
+            newFileName
+        });
         return null;
     }
 }
 
 async function importPsaCards() {
     try {
+        Logger.operationStart('PSA_CARDS_IMPORT', 'Starting PSA graded cards import process');
+        
         await mongoose.connect(process.env.MONGO_URI);
-        console.log('✅ Connected to MongoDB');
+        Logger.info('Connected to MongoDB for PSA cards import');
         
         // Read backup data
         const backupData = JSON.parse(fs.readFileSync('./collection-backup.json', 'utf8'));
 
-        console.log(`📊 Found ${backupData.length} PSA cards to import`);
+        Logger.info('Backup data loaded', { totalCardsToImport: backupData.length });
         
         let successCount = 0;
         let skipCount = 0;
@@ -175,7 +203,12 @@ async function importPsaCards() {
         for (let i = 0; i < backupData.length; i++) {
             const cardData = backupData[i];
 
-            console.log(`\n🔄 Processing card ${i + 1}/${backupData.length}: ${cardData.title}`);
+            Logger.info('Processing PSA card', {
+                current: i + 1,
+                total: backupData.length,
+                title: cardData.title,
+                progress: `${Math.round(((i + 1) / backupData.length) * 100)}%`
+            });
             
             try {
                 // Extract card information from metadata
@@ -185,20 +218,31 @@ async function importPsaCards() {
                 const matchedCard = await findCardByNameAndSet(cardName, setName, pokemonNumber);
                 
                 if (!matchedCard) {
-                    console.log(`⏭️ Skipping card due to no match found`);
+                    Logger.warn('Skipping card - no database match found', {
+                        cardName,
+                        setName,
+                        pokemonNumber,
+                        title: cardData.title
+                    });
                     skipCount++;
+                    // eslint-disable-next-line no-continue
                     continue;
                 }
                 
                 // Check if card already exists in collection
                 const existingPsaCard = await PsaGradedCard.findOne({
                     cardId: matchedCard._id,
-                    grade: parseInt(grade)
+                    grade: parseInt(grade, 10)
                 });
                 
                 if (existingPsaCard) {
-                    console.log(`⏭️ Card already exists in collection, skipping`);
+                    Logger.debug('Skipping card - already exists in collection', {
+                        cardId: matchedCard._id,
+                        grade: parseInt(grade, 10),
+                        existingCardId: existingPsaCard._id
+                    });
                     skipCount++;
+                    // eslint-disable-next-line no-continue
                     continue;
                 }
                 
@@ -222,7 +266,7 @@ async function importPsaCards() {
                 // Create new PSA graded card
                 const newPsaCard = new PsaGradedCard({
                     cardId: matchedCard._id,
-                    grade: parseInt(grade),
+                    grade: parseInt(grade, 10),
                     images: processedImages,
                     myPrice: cardData.price,
                     priceHistory: [{
@@ -235,30 +279,45 @@ async function importPsaCards() {
                 });
                 
                 await newPsaCard.save();
-                console.log(`✅ Successfully imported PSA ${grade} card: ${cardName}`);
+                Logger.info('Successfully imported PSA card', {
+                    cardName,
+                    grade: parseInt(grade, 10),
+                    cardId: matchedCard._id,
+                    psaCardId: newPsaCard._id,
+                    imagesCount: processedImages.length,
+                    price: cardData.price
+                });
                 successCount++;
                 
             } catch (error) {
-                console.log(`❌ Error processing card: ${error.message}`);
+                Logger.operationError('PSA_CARD_PROCESSING_ERROR', 'Error processing individual PSA card', error, {
+                    cardIndex: i + 1,
+                    title: cardData.title,
+                    metadata: cardData.metadata
+                });
                 errorCount++;
             }
         }
         
-        console.log(`\n📊 Import Summary:`);
-        console.log(`✅ Successfully imported: ${successCount} cards`);
-        console.log(`⏭️ Skipped: ${skipCount} cards`);
-        console.log(`❌ Errors: ${errorCount} cards`);
-        
         // Verify final count
         const finalCount = await PsaGradedCard.countDocuments({});
-
-        console.log(`\n🎯 Total PSA cards in database: ${finalCount}`);
+        
+        Logger.operationSuccess('PSA_CARDS_IMPORT_COMPLETE', 'PSA cards import completed', {
+            summary: {
+                totalProcessed: backupData.length,
+                successfullyImported: successCount,
+                skipped: skipCount,
+                errors: errorCount,
+                finalDatabaseCount: finalCount
+            },
+            successRate: `${Math.round((successCount / backupData.length) * 100)}%`
+        });
         
     } catch (error) {
-        console.error('❌ Import failed:', error.message);
+        Logger.operationError('PSA_CARDS_IMPORT_FAILED', 'PSA cards import process failed', error);
     } finally {
         await mongoose.disconnect();
-        console.log('👋 Disconnected from MongoDB');
+        Logger.info('Disconnected from MongoDB');
     }
 }
 

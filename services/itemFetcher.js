@@ -8,7 +8,8 @@ const { NotFoundError, ValidationError } = require('../middleware/errorHandler')
  * Fetch item by ID and category
  */
 async function fetchItemById(itemId, itemCategory) {
-  if (!mongoose.Types.ObjectId.isValid(itemId)) {
+  // Use consistent ObjectId validation matching ValidatorFactory and BaseRepository
+  if (!itemId || typeof itemId !== 'string' || !/^[a-f\d]{24}$/i.test(itemId)) {
     throw new ValidationError(`Invalid itemId format: ${itemId}`);
   }
 

@@ -48,7 +48,8 @@ const findAllPsaGradedCards = async (filters) => {
 };
 
 const findPsaGradedCardById = async (id) => {
-  if (!mongoose.Types.ObjectId.isValid(id)) {
+  // Use consistent ObjectId validation matching ValidatorFactory and BaseRepository
+  if (!id || typeof id !== 'string' || !/^[a-f\d]{24}$/i.test(id)) {
     throw new Error('Invalid ObjectId format');
   }
 

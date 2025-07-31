@@ -2,16 +2,31 @@ const Auction = require('../../models/Auction');
 const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../../middleware/errorHandler');
 const { validateAndFindItem, calculateAuctionTotalValue } = require('./auctionItemHelpers');
+const Logger = require('../../utils/Logger');
 
 const addItemToAuction = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    throw new ValidationError('Invalid ObjectId format');
+  Logger.operationStart('ADD_ITEM_TO_AUCTION', 'Adding item to auction', {
+    auctionId: req.params.id,
+    itemId: req.body.itemId,
+    itemCategory: req.body.itemCategory
+  });
+  
+  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
+    const error = new ValidationError('Invalid ObjectId format');
+
+    Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for adding item', error, { auctionId: req.params.id });
+    throw error;
   }
 
   const { itemId, itemCategory } = req.body;
 
   if (!itemId || !itemCategory) {
-    throw new ValidationError('Both itemId and itemCategory are required');
+    const error = new ValidationError('Both itemId and itemCategory are required');
+
+    Logger.operationError('MISSING_ITEM_DATA', 'Missing required item data for auction', error, {
+      providedFields: Object.keys(req.body)
+    });
+    throw error;
   }
 
   // Validate and find the item
@@ -20,7 +35,10 @@ const addItemToAuction = asyncHandler(async (req, res) => {
   const auction = await Auction.findById(req.params.id);
 
   if (!auction) {
-    throw new NotFoundError('Auction not found');
+    const error = new NotFoundError('Auction not found');
+
+    Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for adding item', error, { auctionId: req.params.id });
+    throw error;
   }
 
   // Check if item already exists in auction
@@ -29,34 +47,68 @@ const addItemToAuction = asyncHandler(async (req, res) => {
   );
 
   if (existingItem) {
-    throw new ValidationError('Item already exists in this auction');
+    const error = new ValidationError('Item already exists in this auction');
+
+    Logger.operationError('DUPLICATE_AUCTION_ITEM', 'Item already exists in auction', error, {
+      auctionId: req.params.id,
+      itemId,
+      itemCategory
+    });
+    throw error;
   }
 
   auction.items.push({ itemId, itemCategory });
 
   // Recalculate total value after adding item
+  const previousTotalValue = auction.totalValue;
+
   auction.totalValue = await calculateAuctionTotalValue(auction);
 
   const updatedAuction = await auction.save();
 
+  Logger.operationSuccess('ADD_ITEM_TO_AUCTION', 'Successfully added item to auction', {
+    auctionId: req.params.id,
+    itemId,
+    itemCategory,
+    newItemCount: updatedAuction.items.length,
+    previousTotalValue,
+    newTotalValue: updatedAuction.totalValue
+  });
   res.status(200).json(updatedAuction);
 });
 
 const removeItemFromAuction = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    throw new ValidationError('Invalid ObjectId format');
+  Logger.operationStart('REMOVE_ITEM_FROM_AUCTION', 'Removing item from auction', {
+    auctionId: req.params.id,
+    itemId: req.body.itemId,
+    itemCategory: req.body.itemCategory
+  });
+  
+  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
+    const error = new ValidationError('Invalid ObjectId format');
+
+    Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for removing item', error, { auctionId: req.params.id });
+    throw error;
   }
 
   const { itemId, itemCategory } = req.body;
 
   if (!itemId || !itemCategory) {
-    throw new ValidationError('Both itemId and itemCategory are required');
+    const error = new ValidationError('Both itemId and itemCategory are required');
+
+    Logger.operationError('MISSING_ITEM_DATA', 'Missing required item data for removal', error, {
+      providedFields: Object.keys(req.body)
+    });
+    throw error;
   }
 
   const auction = await Auction.findById(req.params.id);
 
   if (!auction) {
-    throw new NotFoundError('Auction not found');
+    const error = new NotFoundError('Auction not found');
+
+    Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for removing item', error, { auctionId: req.params.id });
+    throw error;
   }
 
   const itemIndex = auction.items.findIndex(
@@ -64,39 +116,82 @@ const removeItemFromAuction = asyncHandler(async (req, res) => {
   );
 
   if (itemIndex === -1) {
-    throw new NotFoundError('Item not found in this auction');
+    const error = new NotFoundError('Item not found in this auction');
+
+    Logger.operationError('AUCTION_ITEM_NOT_FOUND', 'Item not found in auction for removal', error, {
+      auctionId: req.params.id,
+      itemId,
+      itemCategory
+    });
+    throw error;
   }
+
+  const removedItem = auction.items[itemIndex];
 
   auction.items.splice(itemIndex, 1);
 
   // Recalculate total value after removing item
+  const previousTotalValue = auction.totalValue;
+
   auction.totalValue = await calculateAuctionTotalValue(auction);
 
   // Also recalculate sold value in case the removed item was sold
+  const previousSoldValue = auction.soldValue;
+
   auction.soldValue = auction.items
     .filter((item) => item.sold)
     .reduce((total, item) => total + (item.soldPrice || 0), 0);
 
   const updatedAuction = await auction.save();
 
+  Logger.operationSuccess('REMOVE_ITEM_FROM_AUCTION', 'Successfully removed item from auction', {
+    auctionId: req.params.id,
+    itemId,
+    itemCategory,
+    newItemCount: updatedAuction.items.length,
+    wasItemSold: removedItem.sold || false,
+    previousTotalValue,
+    newTotalValue: updatedAuction.totalValue,
+    previousSoldValue,
+    newSoldValue: updatedAuction.soldValue
+  });
   res.status(200).json(updatedAuction);
 });
 
 const markItemAsSold = asyncHandler(async (req, res) => {
-  if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
-    throw new ValidationError('Invalid ObjectId format');
+  Logger.operationStart('MARK_AUCTION_ITEM_SOLD', 'Marking auction item as sold', {
+    auctionId: req.params.id,
+    itemId: req.body.itemId,
+    itemCategory: req.body.itemCategory,
+    soldPrice: req.body.soldPrice
+  });
+  
+  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
+    const error = new ValidationError('Invalid ObjectId format');
+
+    Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for marking item sold', error, { auctionId: req.params.id });
+    throw error;
   }
 
   const { itemId, itemCategory, soldPrice } = req.body;
 
   if (!itemId || !itemCategory || soldPrice === undefined || soldPrice === null) {
-    throw new ValidationError('itemId, itemCategory, and soldPrice are required');
+    const error = new ValidationError('itemId, itemCategory, and soldPrice are required');
+
+    Logger.operationError('MISSING_SALE_DATA', 'Missing required sale data for marking item sold', error, {
+      providedFields: Object.keys(req.body),
+      requiredFields: ['itemId', 'itemCategory', 'soldPrice']
+    });
+    throw error;
   }
 
   const auction = await Auction.findById(req.params.id);
 
   if (!auction) {
-    throw new NotFoundError('Auction not found');
+    const error = new NotFoundError('Auction not found');
+
+    Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for marking item sold', error, { auctionId: req.params.id });
+    throw error;
   }
 
   const itemIndex = auction.items.findIndex(
@@ -104,8 +199,19 @@ const markItemAsSold = asyncHandler(async (req, res) => {
   );
 
   if (itemIndex === -1) {
-    throw new NotFoundError('Item not found in this auction');
+    const error = new NotFoundError('Item not found in this auction');
+
+    Logger.operationError('AUCTION_ITEM_NOT_FOUND', 'Item not found in auction for sale marking', error, {
+      auctionId: req.params.id,
+      itemId,
+      itemCategory
+    });
+    throw error;
   }
+
+  const wasAlreadySold = auction.items[itemIndex].sold;
+  const previousSoldValue = auction.soldValue;
+  const previousStatus = auction.status;
 
   // Update the item as sold
   auction.items[itemIndex].sold = true;
@@ -119,6 +225,7 @@ const markItemAsSold = asyncHandler(async (req, res) => {
 
   // Check if all items are sold and update auction status
   const allItemsSold = auction.items.every((item) => item.sold);
+  const statusChanged = !allItemsSold ? false : auction.status !== 'sold';
 
   if (allItemsSold) {
     auction.status = 'sold';
@@ -126,6 +233,19 @@ const markItemAsSold = asyncHandler(async (req, res) => {
 
   const updatedAuction = await auction.save();
 
+  Logger.operationSuccess('MARK_AUCTION_ITEM_SOLD', 'Successfully marked auction item as sold', {
+    auctionId: req.params.id,
+    itemId,
+    itemCategory,
+    soldPrice,
+    wasAlreadySold,
+    previousSoldValue,
+    newSoldValue: updatedAuction.soldValue,
+    allItemsSold,
+    statusChanged,
+    previousStatus,
+    newStatus: updatedAuction.status
+  });
   res.status(200).json(updatedAuction);
 });
 

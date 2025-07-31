@@ -1,14 +1,16 @@
 const fs = require('fs');
 const Set = require('../../models/Set');
 const Card = require('../../models/Card');
+const Logger = require('../../utils/Logger');
+const ValidatorFactory = require('../../utils/ValidatorFactory');
 
 // Phase 1: Import set metadata from *_all_sets.json files
 const importSetMetadata = async (filePath) => {
   try {
-    console.log(`Importing set metadata from ${filePath}...`);
+    Logger.operationStart('IMPORT_SET_METADATA', `Importing set metadata from file`, { filePath });
 
     if (!fs.existsSync(filePath)) {
-      console.error(`File not found: ${filePath}`);
+      Logger.operationError('FILE_NOT_FOUND', `Set metadata file not found`, new Error(`File not found: ${filePath}`), { filePath });
       return { success: false, error: `File not found: ${filePath}` };
     }
 
@@ -17,11 +19,11 @@ const importSetMetadata = async (filePath) => {
 
     // Only process summary files (like *_all_sets.json)
     if (!data.set_links || !Array.isArray(data.set_links)) {
-      console.log(`Skipping file ${filePath} - not a summary file`);
+      Logger.info(`Skipping non-summary file`, { filePath, reason: 'not a summary file' });
       return { success: true, setsProcessed: 0 };
     }
 
-    console.log(`Processing summary file ${filePath} with ${data.set_links.length} sets`);
+    Logger.info(`Processing summary file`, { filePath, setCount: data.set_links.length });
 
     // Process each set from the summary file
     for (const setLink of data.set_links) {
@@ -31,7 +33,7 @@ const importSetMetadata = async (filePath) => {
 
         // Skip if URL already exists (primary identifier)
         if (existingSetByUrl) {
-          console.log(`Set already exists with URL: ${setLink.url}, skipping...`);
+          Logger.debug(`Set already exists, skipping`, { url: setLink.url, setName: setLink.set_name });
         } else {
           // Clean the set name first - remove problematic characters
           function cleanSetName(name) {
@@ -75,17 +77,24 @@ const importSetMetadata = async (filePath) => {
             totalPsaPopulation: 0, // Will be updated in phase 2
           });
 
-          console.log(`Set metadata created: ${finalSetName} (${setLink.url})`);
+          Logger.info(`Set metadata created`, { setName: finalSetName, url: setLink.url, year: data.year });
           setsProcessed++;
         }
       } catch (error) {
-        console.error(`Error processing set ${setLink.set_name}:`, error.message);
+        Logger.operationError('SET_PROCESSING_ERROR', `Error processing individual set`, error, {
+          setName: setLink.set_name,
+          url: setLink.url
+        });
       }
     }
 
+    Logger.operationSuccess('IMPORT_SET_METADATA_COMPLETE', `Set metadata import completed`, {
+      filePath,
+      setsProcessed
+    });
     return { success: true, setsProcessed };
   } catch (error) {
-    console.error(`Error importing set metadata from ${filePath}:`, error.message);
+    Logger.operationError('IMPORT_SET_METADATA_FAILED', `Failed to import set metadata`, error, { filePath });
     return { success: false, error: error.message };
   }
 };
@@ -93,10 +102,10 @@ const importSetMetadata = async (filePath) => {
 // Phase 2: Import card data from individual set files
 const importCardData = async (filePath) => {
   try {
-    console.log(`Importing card data from ${filePath}...`);
+    Logger.operationStart('IMPORT_CARD_DATA', `Importing card data from file`, { filePath });
 
     if (!fs.existsSync(filePath)) {
-      console.error(`File not found: ${filePath}`);
+      Logger.operationError('FILE_NOT_FOUND', `Card data file not found`, new Error(`File not found: ${filePath}`), { filePath });
       return { success: false, error: `File not found: ${filePath}` };
     }
 
@@ -107,7 +116,7 @@ const importCardData = async (filePath) => {
 
     // Skip summary files (*_all_sets.json)
     if (data.set_links && Array.isArray(data.set_links)) {
-      console.log(`Skipping summary file ${filePath}`);
+      Logger.info(`Skipping summary file during card data import`, { filePath });
       return {
         success: true,
         setsUpdated: 0,
@@ -118,7 +127,7 @@ const importCardData = async (filePath) => {
 
     // Skip files that don't have individual set data structure
     if (!data.set_name || !data.cards) {
-      console.log(`Skipping file ${filePath} - not a valid set data file`);
+      Logger.info(`Skipping invalid set data file`, { filePath, reason: 'missing set_name or cards' });
       return {
         success: true,
         setsUpdated: 0,
@@ -138,7 +147,11 @@ const importCardData = async (filePath) => {
       const totalGraded = totalPopCard.psa_grades?.psa_total || totalPopCard.grade_totals?.grade_total || 0;
 
       if (totalGraded < 200) {
-        console.log(`Skipping low population set ${setData.set_name}: only ${totalGraded} total graded cards`);
+        Logger.info(`Skipping low population set`, {
+          setName: setData.set_name,
+          totalGraded,
+          reason: 'population below 200 threshold'
+        });
         return {
           success: true,
           setsUpdated: 0,
@@ -153,7 +166,10 @@ const importCardData = async (filePath) => {
       const existingSet = await Set.findOne({ setUrl: setData.set_url });
 
       if (!existingSet) {
-        console.log(`Set not found for URL ${setData.set_url}, skipping card data import`);
+        Logger.warn(`Set not found for card data import`, {
+          setUrl: setData.set_url,
+          setName: setData.set_name
+        });
         return {
           success: true,
           setsUpdated: 0,
@@ -177,7 +193,11 @@ const importCardData = async (filePath) => {
 
       const psaTotal = setTotalPopCard?.grade_totals?.grade_total || setTotalPopCard?.psa_grades?.psa_total || 0;
 
-      console.log(`Set updated with card data: ${setData.set_name} (${psaTotal} PSA total)`);
+      Logger.info(`Set updated with card data`, {
+        setName: setData.set_name,
+        psaTotal,
+        setId: existingSet._id
+      });
       setsUpdated++;
 
       // Process cards for this set
@@ -208,7 +228,11 @@ const importCardData = async (filePath) => {
 
             return { processed: true, skipped: false, error: false };
           } catch (cardError) {
-            console.error(`Error processing card ${cardData.card_name}:`, cardError.message);
+            Logger.operationError('CARD_PROCESSING_ERROR', `Error processing individual card`, cardError, {
+              cardName: cardData.card_name,
+              pokemonNumber: cardData.pokemon_number,
+              setName: setData.set_name
+            });
             return { processed: false, skipped: false, error: true };
           }
         }
@@ -221,12 +245,19 @@ const importCardData = async (filePath) => {
       cardsProcessed += cardResults.filter((result) => result.processed).length;
       skippedCards += cardResults.filter((result) => result.skipped || result.error).length;
     } catch (error) {
-      console.error(`Error processing set ${setData.set_name}:`, error.message);
+      Logger.operationError('SET_CARD_DATA_ERROR', `Error processing set card data`, error, {
+        setName: setData.set_name,
+        setUrl: setData.set_url
+      });
       return { success: false, error: error.message };
     }
 
-    console.log(`Card data import from ${filePath} completed successfully`);
-    console.log(`Sets updated: ${setsUpdated}, Cards: ${cardsProcessed}, Skipped: ${skippedCards}`);
+    Logger.operationSuccess('IMPORT_CARD_DATA_COMPLETE', `Card data import completed`, {
+      filePath,
+      setsUpdated,
+      cardsProcessed,
+      skippedCards
+    });
 
     return {
       success: true,
@@ -235,7 +266,7 @@ const importCardData = async (filePath) => {
       skippedCards,
     };
   } catch (error) {
-    console.error(`Error importing card data from ${filePath}:`, error.message);
+    Logger.operationError('IMPORT_CARD_DATA_FAILED', `Failed to import card data`, error, { filePath });
     return { success: false, error: error.message };
   }
 };
