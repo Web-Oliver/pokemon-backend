@@ -1,41 +1,15 @@
-const BaseController = require('./base/BaseController');
-const { getEntityConfig } = require('../config/entityConfigurations');
-
 /**
  * Raw Card Controller
- *
- * Extends BaseController to provide CRUD operations for raw cards.
- * Uses dependency injection and repository pattern for improved architecture.
+ * 
+ * Uses controller factory to eliminate boilerplate code.
+ * All CRUD operations are provided by BaseController via factory.
  */
-class RawCardController extends BaseController {
-  constructor() {
-    // Get centralized entity configuration
-    const entityConfig = getEntityConfig('rawCard');
-    
-    super('rawCardService', {
-      entityName: entityConfig.entityName,
-      pluralName: entityConfig.pluralName,
-      includeMarkAsSold: entityConfig.includeMarkAsSold,
-      defaultPopulate: entityConfig.defaultPopulate,
-      filterableFields: entityConfig.filterableFields,
-      searchFields: entityConfig.searchFields,
-      searchWeights: entityConfig.searchWeights,
-      validationRules: entityConfig.validationRules,
-    });
-  }
 
-  // Custom methods specific to raw cards can be added here
-  // All standard CRUD operations are inherited from BaseController
-}
+const { createCollectionControllerWithExports } = require('./factories/controllerFactory');
 
-// Create instance and export methods
-const rawCardController = new RawCardController();
-
-module.exports = {
-  getAllRawCards: rawCardController.getAll,
-  getRawCardById: rawCardController.getById,
-  createRawCard: rawCardController.create,
-  updateRawCard: rawCardController.update,
-  deleteRawCard: rawCardController.delete,
-  markAsSold: rawCardController.markAsSold,
-};
+// Create controller with all standard CRUD operations in one line
+module.exports = createCollectionControllerWithExports(
+  'rawCard',           // Entity type for configuration
+  'rawCardService',    // Service name for dependency injection  
+  'RawCard'           // Prefix for export method names
+);

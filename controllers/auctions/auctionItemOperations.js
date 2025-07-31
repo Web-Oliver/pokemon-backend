@@ -1,8 +1,8 @@
 const Auction = require('../../models/Auction');
-const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../../middleware/errorHandler');
 const { validateAndFindItem, calculateAuctionTotalValue } = require('./auctionItemHelpers');
 const Logger = require('../../utils/Logger');
+const ValidationUtils = require('../../utils/validationUtils');
 
 const addItemToAuction = asyncHandler(async (req, res) => {
   Logger.operationStart('ADD_ITEM_TO_AUCTION', 'Adding item to auction', {
@@ -11,9 +11,9 @@ const addItemToAuction = asyncHandler(async (req, res) => {
     itemCategory: req.body.itemCategory
   });
   
-  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
-    const error = new ValidationError('Invalid ObjectId format');
-
+  try {
+    ValidationUtils.validateObjectId(req.params.id, 'Auction ID');
+  } catch (error) {
     Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for adding item', error, { auctionId: req.params.id });
     throw error;
   }
@@ -84,9 +84,9 @@ const removeItemFromAuction = asyncHandler(async (req, res) => {
     itemCategory: req.body.itemCategory
   });
   
-  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
-    const error = new ValidationError('Invalid ObjectId format');
-
+  try {
+    ValidationUtils.validateObjectId(req.params.id, 'Auction ID');
+  } catch (error) {
     Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for removing item', error, { auctionId: req.params.id });
     throw error;
   }
@@ -166,9 +166,9 @@ const markItemAsSold = asyncHandler(async (req, res) => {
     soldPrice: req.body.soldPrice
   });
   
-  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
-    const error = new ValidationError('Invalid ObjectId format');
-
+  try {
+    ValidationUtils.validateObjectId(req.params.id, 'Auction ID');
+  } catch (error) {
     Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for marking item sold', error, { auctionId: req.params.id });
     throw error;
   }

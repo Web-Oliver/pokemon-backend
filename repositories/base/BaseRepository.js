@@ -36,8 +36,8 @@ class BaseRepository {
    * @returns {Promise<Object|null>} - The found document or null
    */
   async findById(id, options = {}) {
-    // Use consistent ObjectId validation matching ValidatorFactory
-    if (!id || typeof id !== 'string' || !/^[a-f\d]{24}$/i.test(id)) {
+    // Use MongoDB's built-in ObjectId validation
+    if (!id || !mongoose.Types.ObjectId.isValid(id)) {
       throw new ValidationError('Invalid ObjectId format');
     }
 
@@ -175,8 +175,8 @@ class BaseRepository {
    * @returns {Promise<Object>} - Updated document
    */
   async update(id, data, options = {}) {
-    // Use consistent ObjectId validation matching ValidatorFactory
-    if (!id || typeof id !== 'string' || !/^[a-f\d]{24}$/i.test(id)) {
+    // Use MongoDB's built-in ObjectId validation
+    if (!id || !mongoose.Types.ObjectId.isValid(id)) {
       throw new ValidationError('Invalid ObjectId format');
     }
 
@@ -215,8 +215,8 @@ class BaseRepository {
    * @returns {Promise<Object>} - Deleted document
    */
   async delete(id) {
-    // Use consistent ObjectId validation matching ValidatorFactory
-    if (!id || typeof id !== 'string' || !/^[a-f\d]{24}$/i.test(id)) {
+    // Use MongoDB's built-in ObjectId validation
+    if (!id || !mongoose.Types.ObjectId.isValid(id)) {
       throw new ValidationError('Invalid ObjectId format');
     }
 

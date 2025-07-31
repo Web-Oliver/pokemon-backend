@@ -1,7 +1,7 @@
 const Set = require('../models/Set');
-const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/errorHandler');
-const Fuse = require('fuse.js');
+const searchService = require('../services/searchService');
+const ValidationUtils = require('../utils/validationUtils');
 
 const getAllSets = asyncHandler(async (req, res) => {
   const sets = await Set.find();
@@ -13,26 +13,13 @@ const getSetsWithPagination = asyncHandler(async (req, res) => {
   const { page = 1, limit = 15, q, year, cardsOnly } = req.query;
 
   // Validate pagination parameters
-  const pageNum = parseInt(page, 10);
-  const limitNum = parseInt(limit, 10);
-
-  if (isNaN(pageNum) || pageNum < 1) {
-    throw new ValidationError('Invalid page number');
-  }
-  if (isNaN(limitNum) || limitNum < 1 || limitNum > 100) {
-    throw new ValidationError('Invalid limit (must be between 1 and 100)');
-  }
+  const { pageNum, limitNum } = ValidationUtils.validatePagination(page, limit, 100);
 
   // Build base query
   const baseQuery = {};
 
   if (year) {
-    const yearNum = parseInt(year, 10);
-
-    if (isNaN(yearNum)) {
-      throw new ValidationError('Invalid year format');
-    }
-    baseQuery.year = yearNum;
+    baseQuery.year = ValidationUtils.validateYear(year);
   }
 
   // All sets in the Set model are PSA card sets (according to spec)
@@ -43,47 +30,21 @@ const getSetsWithPagination = asyncHandler(async (req, res) => {
 
   let filteredSets = allSets;
 
-  // Apply fuzzy search if query provided
+  // Apply search if query provided
   if (q && q.trim()) {
-    const fuseOptions = {
-      includeScore: true,
-      threshold: 0.4,
-      minMatchCharLength: 1,
-      keys: [{ name: 'setName', weight: 1.0 }],
+    // Build filters
+    const filters = {};
+
+    if (year) filters.year = parseInt(year, 10);
+
+    const searchOptions = {
+      limit: limitNum,
+      page: pageNum
     };
 
-    const fuse = new Fuse(allSets, fuseOptions);
-    const fuseResults = fuse.search(q.trim());
+    const searchResults = await searchService.searchSets(q.trim(), filters, searchOptions);
 
-    // Enhanced results with exact match bonuses
-    const enhancedResults = fuseResults.map((result) => {
-      const set = result.item;
-      const fuseScore = result.score;
-
-      // Exact match bonuses
-      let exactMatchBonus = 0;
-
-      if (set.setName?.toLowerCase() === q.toLowerCase()) {
-        exactMatchBonus += 100;
-      }
-      if (set.setName?.toLowerCase().includes(q.toLowerCase())) {
-        exactMatchBonus += 50;
-      }
-
-      // Combine scores: exact matches, fuzzy relevance, and year (newer first)
-      const yearScore = set.year ? (set.year - 1990) * 0.1 : 0;
-      const combinedScore = exactMatchBonus + (1 - fuseScore) * 100 + yearScore;
-
-      return {
-        ...set,
-        combinedScore,
-      };
-    });
-
-    // Sort by combined score and remove scoring field
-    filteredSets = enhancedResults
-      .sort((a, b) => b.combinedScore - a.combinedScore)
-      .map(({ combinedScore, ...set }) => set);
+    filteredSets = searchResults;
   } else {
     // Default sort when no search query
     filteredSets = allSets.sort((a, b) => {
@@ -112,9 +73,7 @@ const getSetsWithPagination = asyncHandler(async (req, res) => {
 });
 
 const getSetById = asyncHandler(async (req, res) => {
-  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
-    throw new ValidationError('Invalid ObjectId format');
-  }
+  ValidationUtils.validateObjectId(req.params.id, 'Set ID');
 
   const set = await Set.findById(req.params.id);
 

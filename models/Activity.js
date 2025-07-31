@@ -242,7 +242,7 @@ activitySchema.index(
   },
 );
 
-// Context7 Virtual Fields for Enhanced UX
+// Virtual Fields for better UX
 // eslint-disable-next-line func-names
 activitySchema.virtual('formattedTimestamp').get(function () {
   const now = new Date();

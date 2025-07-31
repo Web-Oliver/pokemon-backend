@@ -271,7 +271,7 @@ const importCardData = async (filePath) => {
   }
 };
 
-// Legacy function for backward compatibility
+// Main import dispatcher function
 const importPsaData = async (filePath) => {
   // Determine if this is a metadata file or card data file
   if (filePath.includes('_all_sets.json')) {

@@ -1,5 +1,5 @@
 const express = require('express');
-const { cacheManager } = require('../middleware/enhancedSearchCache');
+const { cacheManager } = require('../middleware/searchCache');
 const { cacheWarmupService } = require('../services/cacheWarmupService');
 const { getCacheStats, invalidateCacheByEntity, invalidateCacheByPattern } = require('../middleware/searchCache');
 

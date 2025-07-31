@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const unifiedSearchController = require('../controllers/search/UnifiedSearchController');
-const { enhancedCacheMiddleware } = require('../middleware/enhancedSearchCache');
+const searchController = require('../controllers/searchController');
+const { cachePresets } = require('../middleware/cachePresets');
 
 /**
  * Unified Search Routes
@@ -24,14 +24,8 @@ const { enhancedCacheMiddleware } = require('../middleware/enhancedSearchCache')
  * @query   {string} sort - Sort criteria as JSON string (optional)
  * @query   {string} filters - Filters as JSON string (optional)
  */
-router.get('/', 
-  enhancedCacheMiddleware({ 
-    ttl: 600, // 10 minutes for general search
-    cacheName: 'unified-search',
-    invalidateOnMutation: true 
-  }), 
-  unifiedSearchController.search
-);
+// Search routes - using standardized cache presets
+router.get('/', cachePresets.search, searchController.search);
 
 /**
  * @route   GET /api/search/suggest
@@ -41,18 +35,11 @@ router.get('/',
  * @query   {string} types - Comma-separated list of types to search (optional, defaults to 'cards,products,sets')
  * @query   {number} limit - Maximum suggestions per type (optional, default 5)
  */
-router.get('/suggest', 
-  enhancedCacheMiddleware({ 
-    ttl: 900, // 15 minutes for suggestions (more stable)
-    cacheName: 'search-suggestions',
-    invalidateOnMutation: true 
-  }), 
-  unifiedSearchController.suggest
-);
+router.get('/suggest', cachePresets.searchSuggestions, searchController.suggest);
 
 /**
  * @route   GET /api/search/cards
- * @desc    Search cards using new architecture
+ * @desc    Search cards
  * @access  Public
  * @query   {string} query - Search query (required)
  * @query   {string} setId - Set ID filter (optional)
@@ -65,18 +52,11 @@ router.get('/suggest',
  * @query   {number} page - Page number (optional, default 1)
  * @query   {string} sort - Sort criteria as JSON string (optional)
  */
-router.get('/cards', 
-  enhancedCacheMiddleware({ 
-    ttl: 480, // 8 minutes for card searches
-    cacheName: 'card-search',
-    invalidateOnMutation: true 
-  }), 
-  unifiedSearchController.searchCards
-);
+router.get('/cards', cachePresets.searchCards, searchController.searchCards);
 
 /**
  * @route   GET /api/search/products
- * @desc    Search products using new architecture
+ * @desc    Search products
  * @access  Public
  * @query   {string} query - Search query (required)
  * @query   {string} category - Category filter (optional)
@@ -88,18 +68,11 @@ router.get('/cards',
  * @query   {number} page - Page number (optional, default 1)
  * @query   {string} sort - Sort criteria as JSON string (optional)
  */
-router.get('/products', 
-  enhancedCacheMiddleware({ 
-    ttl: 300, // 5 minutes for product searches (prices change more frequently)
-    cacheName: 'product-search',
-    invalidateOnMutation: true 
-  }), 
-  unifiedSearchController.searchProducts
-);
+router.get('/products', cachePresets.searchProducts, searchController.searchProducts);
 
 /**
  * @route   GET /api/search/sets
- * @desc    Search sets using new architecture
+ * @desc    Search sets
  * @access  Public
  * @query   {string} query - Search query (required)
  * @query   {number} year - Year filter (optional)
@@ -111,27 +84,20 @@ router.get('/products',
  * @query   {number} page - Page number (optional, default 1)
  * @query   {string} sort - Sort criteria as JSON string (optional)
  */
-router.get('/sets', 
-  enhancedCacheMiddleware({ 
-    ttl: 1200, // 20 minutes for set searches (sets change infrequently)
-    cacheName: 'set-search',
-    invalidateOnMutation: true 
-  }), 
-  unifiedSearchController.searchSets
-);
+router.get('/sets', cachePresets.searchSets, searchController.searchSets);
 
 /**
  * @route   GET /api/search/types
  * @desc    Get available search types and their options
  * @access  Public
  */
-router.get('/types', unifiedSearchController.getSearchTypes);
+router.get('/types', searchController.getSearchTypes);
 
 /**
  * @route   GET /api/search/stats
- * @desc    Get search factory statistics
+ * @desc    Get search statistics
  * @access  Public
  */
-router.get('/stats', unifiedSearchController.getSearchStats);
+router.get('/stats', searchController.getSearchStats);
 
 module.exports = router;

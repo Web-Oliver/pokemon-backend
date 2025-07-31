@@ -1,9 +1,9 @@
 const Auction = require('../../models/Auction');
-const mongoose = require('mongoose');
 const { asyncHandler, NotFoundError, ValidationError } = require('../../middleware/errorHandler');
 const { populateAuctionItems, validateAuctionItems } = require('./auctionItemHelpers');
 const Logger = require('../../utils/Logger');
 const { getEntityConfig, getFilterableFields, getValidationRules } = require('../../config/entityConfigurations');
+const ValidationUtils = require('../../utils/validationUtils');
 
 const getAllAuctions = asyncHandler(async (req, res) => {
   Logger.operationStart('GET_ALL_AUCTIONS', 'Fetching all auctions', { query: req.query });
@@ -37,9 +37,11 @@ const getAllAuctions = asyncHandler(async (req, res) => {
 const getAuctionById = asyncHandler(async (req, res) => {
   Logger.operationStart('GET_AUCTION_BY_ID', 'Fetching auction by ID', { auctionId: req.params.id });
   
-  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
-    Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format', new ValidationError('Invalid ObjectId format'), { auctionId: req.params.id });
-    throw new ValidationError('Invalid ObjectId format');
+  try {
+    ValidationUtils.validateObjectId(req.params.id, 'Auction ID');
+  } catch (error) {
+    Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format', error, { auctionId: req.params.id });
+    throw error;
   }
 
   const auction = await Auction.findById(req.params.id);
@@ -49,8 +51,22 @@ const getAuctionById = asyncHandler(async (req, res) => {
     throw new NotFoundError('Auction not found');
   }
 
-  // Populate auction items with their respective data
-  const populatedAuction = await populateAuctionItems(auction);
+  // Populate auction items with their respective data with timeout protection
+  let populatedAuction;
+
+  try {
+    populatedAuction = await Promise.race([
+      populateAuctionItems(auction),
+      new Promise((_, reject) => {
+        setTimeout(() => reject(new Error('Population timeout')), 10000); // 10 second timeout
+      })
+    ]);
+  } catch (error) {
+    Logger.operationError('AUCTION_POPULATION_FAILED', 'Failed to populate auction items', error);
+    // Return auction without population as fallback to prevent total failure
+    populatedAuction = auction.toObject();
+    console.warn(`Auction population failed for ID ${auction._id}, returning without population:`, error.message);
+  }
 
   Logger.operationSuccess('GET_AUCTION_BY_ID', 'Successfully fetched auction', {
     auctionId: req.params.id,
@@ -110,9 +126,9 @@ const createAuction = asyncHandler(async (req, res) => {
 const updateAuction = asyncHandler(async (req, res) => {
   Logger.operationStart('UPDATE_AUCTION', 'Updating auction', { auctionId: req.params.id, updates: Object.keys(req.body) });
   
-  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
-    const error = new ValidationError('Invalid ObjectId format');
-
+  try {
+    ValidationUtils.validateObjectId(req.params.id, 'Auction ID');
+  } catch (error) {
     Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format for update', error, { auctionId: req.params.id });
     throw error;
   }
@@ -162,9 +178,9 @@ const updateAuction = asyncHandler(async (req, res) => {
 const deleteAuction = asyncHandler(async (req, res) => {
   Logger.operationStart('DELETE_AUCTION', 'Deleting auction', { auctionId: req.params.id });
   
-  if (!req.params.id || typeof req.params.id !== 'string' || !/^[a-f\d]{24}$/i.test(req.params.id)) {
-    const error = new ValidationError('Invalid ObjectId format');
-
+  try {
+    ValidationUtils.validateObjectId(req.params.id, 'Auction ID');
+  } catch (error) {
     Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format for deletion', error, { auctionId: req.params.id });
     throw error;
   }

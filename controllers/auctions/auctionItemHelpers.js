@@ -8,46 +8,68 @@ const { NotFoundError, ValidationError } = require('../../middleware/errorHandle
 const populateAuctionItems = async (auction) => {
   const populatedItems = [];
 
-  const itemPromises = auction.items.map(async (item) => {
-    try {
-      let populatedItem = null;
+  // Process items in batches to prevent database connection exhaustion and stack overflow
+  const BATCH_SIZE = 5;
+  const results = [];
+  
+  for (let i = 0; i < auction.items.length; i += BATCH_SIZE) {
+    const batch = auction.items.slice(i, i + BATCH_SIZE);
+    
+    const itemPromises = batch.map(async (item) => {
+      try {
+        let populatedItem = null;
 
-      switch (item.itemCategory) {
-        case 'SealedProduct':
-          populatedItem = await SealedProduct.findById(item.itemId);
-          break;
-        case 'PsaGradedCard':
-          populatedItem = await PsaGradedCard.findById(item.itemId).populate({
-            path: 'cardId',
-            populate: { path: 'setId' },
-          });
-          break;
-        case 'RawCard':
-          populatedItem = await RawCard.findById(item.itemId).populate({
-            path: 'cardId',
-            populate: { path: 'setId' },
-          });
-          break;
-        default:
-          console.error(`Unknown itemCategory: ${item.itemCategory}`);
-          throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
+        switch (item.itemCategory) {
+          case 'SealedProduct':
+            populatedItem = await SealedProduct.findById(item.itemId).lean(); // Use lean queries to prevent transform issues
+            break;
+          case 'PsaGradedCard':
+            populatedItem = await PsaGradedCard.findById(item.itemId)
+              .populate({
+                path: 'cardId',
+                populate: { 
+                  path: 'setId',
+                  options: { lean: true } // Prevent further population and transform issues
+                },
+                options: { lean: true }
+              })
+              .lean(); // Use lean queries to prevent circular reference issues
+            break;
+          case 'RawCard':
+            populatedItem = await RawCard.findById(item.itemId)
+              .populate({
+                path: 'cardId',
+                populate: { 
+                  path: 'setId',
+                  options: { lean: true } // Prevent further population and transform issues
+                },
+                options: { lean: true }
+              })
+              .lean(); // Use lean queries to prevent circular reference issues
+            break;
+          default:
+            console.error(`Unknown itemCategory: ${item.itemCategory}`);
+            throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
+        }
+
+        if (populatedItem) {
+          return {
+            itemCategory: item.itemCategory,
+            itemData: populatedItem,
+          };
+        }
+
+        return null;
+      } catch (error) {
+        console.error(`Error populating item ${item.itemId}:`, error);
+        return null; // Return null instead of crashing the entire operation
       }
+    });
 
-      if (populatedItem) {
-        return {
-          itemCategory: item.itemCategory,
-          itemData: populatedItem,
-        };
-      }
+    const batchResults = await Promise.all(itemPromises);
 
-      return null;
-    } catch (error) {
-      console.error(`Error populating item ${item.itemId}:`, error);
-      return null;
-    }
-  });
-
-  const results = await Promise.all(itemPromises);
+    results.push(...batchResults);
+  }
 
   populatedItems.push(...results.filter(Boolean));
 
@@ -74,34 +96,45 @@ const validateAuctionItems = async (items) => {
     }
   }
 
-  // Then validate existence and availability asynchronously
-  const validationPromises = items.map(async (item) => {
-    let collectionItem = null;
+  // Then validate existence and availability asynchronously in batches to prevent resource exhaustion
+  const BATCH_SIZE = 5; // Process 5 items at a time to prevent stack overflow
+  
+  for (let i = 0; i < items.length; i += BATCH_SIZE) {
+    const batch = items.slice(i, i + BATCH_SIZE);
+    
+    const validationPromises = batch.map(async (item) => {
+      try {
+        let collectionItem = null;
 
-    switch (item.itemCategory) {
-      case 'SealedProduct':
-        collectionItem = await SealedProduct.findById(item.itemId);
-        break;
-      case 'PsaGradedCard':
-        collectionItem = await PsaGradedCard.findById(item.itemId);
-        break;
-      case 'RawCard':
-        collectionItem = await RawCard.findById(item.itemId);
-        break;
-      default:
-        throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
-    }
+        switch (item.itemCategory) {
+          case 'SealedProduct':
+            collectionItem = await SealedProduct.findById(item.itemId).lean(); // Use lean queries
+            break;
+          case 'PsaGradedCard':
+            collectionItem = await PsaGradedCard.findById(item.itemId).lean(); // Use lean queries
+            break;
+          case 'RawCard':
+            collectionItem = await RawCard.findById(item.itemId).lean(); // Use lean queries
+            break;
+          default:
+            throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
+        }
 
-    if (!collectionItem) {
-      throw new NotFoundError(`${item.itemCategory} with ID ${item.itemId} not found in your collection`);
-    }
+        if (!collectionItem) {
+          throw new NotFoundError(`${item.itemCategory} with ID ${item.itemId} not found in your collection`);
+        }
 
-    if (collectionItem.sold) {
-      throw new ValidationError(`Cannot add sold items to auctions. Item ${item.itemId} is already sold.`);
-    }
-  });
+        if (collectionItem.sold) {
+          throw new ValidationError(`Cannot add sold items to auctions. Item ${item.itemId} is already sold.`);
+        }
+      } catch (error) {
+        console.error(`Error validating item ${item.itemId}:`, error);
+        throw error; // Re-throw to stop validation process
+      }
+    });
 
-  await Promise.all(validationPromises);
+    await Promise.all(validationPromises);
+  }
 };
 
 // Helper function to validate and find a single item

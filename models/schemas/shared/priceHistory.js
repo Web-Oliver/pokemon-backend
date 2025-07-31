@@ -18,7 +18,7 @@ const priceHistorySchema = [
     dateUpdated: {
       type: Date,
       default: Date.now,
-      get: function(value) {
+      get(value) {
         // Ensure dates are properly converted to ISO strings
         if (value instanceof Date && !isNaN(value.getTime())) {
           return value.toISOString();

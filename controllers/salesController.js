@@ -4,25 +4,29 @@ const salesAnalyticsService = require('../services/salesAnalyticsService');
 const { asyncHandler, ValidationError } = require('../middleware/errorHandler');
 const Logger = require('../utils/Logger');
 const ValidatorFactory = require('../utils/ValidatorFactory');
+const { validateDateRange } = require('../utils/dateValidationHelpers');
 
 const getSales = asyncHandler(async (req, res) => {
   Logger.operationStart('GET_SALES_DATA', 'Fetching sales data', { query: req.query });
   
   const { category, startDate, endDate } = req.query;
 
-  // Validate query parameters using ValidatorFactory
+  // Validate query parameters
   const validationErrors = [];
   
-  if (category && !ValidatorFactory.enum(['all', 'sealedProducts', 'psaGradedCards', 'rawCards']).validate(category)) {
-    validationErrors.push('category must be one of: all, sealedProducts, psaGradedCards, rawCards');
+  if (category) {
+    try {
+      ValidatorFactory.enum(category, ['all', 'sealedProducts', 'psaGradedCards', 'rawCards'], 'category');
+    } catch (error) {
+      validationErrors.push('category must be one of: all, sealedProducts, psaGradedCards, rawCards');
+    }
   }
   
-  if (startDate && !ValidatorFactory.date().validate(startDate)) {
-    validationErrors.push('startDate must be a valid date');
-  }
-  
-  if (endDate && !ValidatorFactory.date().validate(endDate)) {
-    validationErrors.push('endDate must be a valid date');
+  // Use consolidated date validation
+  const dateValidation = validateDateRange(startDate, endDate, { context: 'SALES_QUERY_VALIDATION' });
+
+  if (!dateValidation.isValid) {
+    validationErrors.push(...dateValidation.errors);
   }
   
   if (validationErrors.length > 0) {
@@ -78,16 +82,28 @@ const getSalesSummary = asyncHandler(async (req, res) => {
   // Validate query parameters using ValidatorFactory
   const validationErrors = [];
   
-  if (category && !ValidatorFactory.enum(['all', 'sealedProducts', 'psaGradedCards', 'rawCards']).validate(category)) {
-    validationErrors.push('category must be one of: all, sealedProducts, psaGradedCards, rawCards');
+  if (category) {
+    try {
+      ValidatorFactory.enum(category, ['all', 'sealedProducts', 'psaGradedCards', 'rawCards'], 'category');
+    } catch (error) {
+      validationErrors.push('category must be one of: all, sealedProducts, psaGradedCards, rawCards');
+    }
   }
   
-  if (startDate && !ValidatorFactory.date().validate(startDate)) {
-    validationErrors.push('startDate must be a valid date');
+  if (startDate) {
+    try {
+      ValidatorFactory.date(startDate, 'startDate');
+    } catch (error) {
+      validationErrors.push('startDate must be a valid date');
+    }
   }
   
-  if (endDate && !ValidatorFactory.date().validate(endDate)) {
-    validationErrors.push('endDate must be a valid date');
+  if (endDate) {
+    try {
+      ValidatorFactory.date(endDate, 'endDate');
+    } catch (error) {
+      validationErrors.push('endDate must be a valid date');
+    }
   }
   
   if (validationErrors.length > 0) {
@@ -144,16 +160,28 @@ const getSalesGraphData = asyncHandler(async (req, res) => {
   // Validate query parameters using ValidatorFactory
   const validationErrors = [];
   
-  if (category && !ValidatorFactory.enum(['all', 'sealedProducts', 'psaGradedCards', 'rawCards']).validate(category)) {
-    validationErrors.push('category must be one of: all, sealedProducts, psaGradedCards, rawCards');
+  if (category) {
+    try {
+      ValidatorFactory.enum(category, ['all', 'sealedProducts', 'psaGradedCards', 'rawCards'], 'category');
+    } catch (error) {
+      validationErrors.push('category must be one of: all, sealedProducts, psaGradedCards, rawCards');
+    }
   }
   
-  if (startDate && !ValidatorFactory.date().validate(startDate)) {
-    validationErrors.push('startDate must be a valid date');
+  if (startDate) {
+    try {
+      ValidatorFactory.date(startDate, 'startDate');
+    } catch (error) {
+      validationErrors.push('startDate must be a valid date');
+    }
   }
   
-  if (endDate && !ValidatorFactory.date().validate(endDate)) {
-    validationErrors.push('endDate must be a valid date');
+  if (endDate) {
+    try {
+      ValidatorFactory.date(endDate, 'endDate');
+    } catch (error) {
+      validationErrors.push('endDate must be a valid date');
+    }
   }
   
   if (validationErrors.length > 0) {

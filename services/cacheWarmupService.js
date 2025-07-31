@@ -1,5 +1,4 @@
-const { cacheManager } = require('../middleware/enhancedSearchCache');
-const { SearchUtility } = require('./searchService');
+const { cacheManager } = require('../middleware/searchCache');
 const Logger = require('../utils/Logger');
 
 class CacheWarmupService {
@@ -104,6 +103,7 @@ class CacheWarmupService {
 
   async warmupSpecificQueries(queries) {
     const startTime = Date.now();
+
     Logger.operationStart('CACHE_WARMUP_SERVICE', 'WARMUP_SPECIFIC_QUERIES', {
       queryCount: queries.length
     });
@@ -112,7 +112,9 @@ class CacheWarmupService {
     
     for (const query of queries) {
       try {
-        const patterns = SearchUtility.createFuzzyPatterns(query.q || '');
+        // Simple pattern generation for cache warmup
+        const queryText = query.q || '';
+        const patterns = queryText ? [queryText, queryText.toLowerCase()] : [];
         
         Logger.cache('WARMUP', 'processing_query_patterns', {
           originalQuery: query.q,
@@ -128,6 +130,7 @@ class CacheWarmupService {
           
           // Simulate cache warming by creating cache key
           const cacheKey = `${mockReq.route.path}:${JSON.stringify(mockReq.query)}`;
+
           Logger.cache('WARMUP', 'pattern_processed', { pattern, cacheKey: cacheKey.substring(0, 50) });
           
           results.push({
@@ -172,6 +175,7 @@ class CacheWarmupService {
 
   async warmupByEntityType(entityType, limit = 10) {
     const startTime = Date.now();
+
     Logger.operationStart('CACHE_WARMUP_SERVICE', 'WARMUP_BY_ENTITY_TYPE', {
       entityType,
       limit
@@ -200,6 +204,7 @@ class CacheWarmupService {
           break;
         default:
           const error = new Error(`Unknown entity type: ${entityType}`);
+
           Logger.operationError('CACHE_WARMUP_SERVICE', 'WARMUP_BY_ENTITY_TYPE', error, { entityType });
           throw error;
       }
@@ -303,6 +308,7 @@ class CacheWarmupService {
 
   clearWarmupHistory() {
     const historyLength = this.warmupHistory.length;
+
     Logger.cache('MANAGEMENT', 'clearing_warmup_history', { entriesCount: historyLength });
     
     this.warmupHistory = [];
@@ -321,8 +327,10 @@ class CacheWarmupService {
     try {
       // Invalidate specified patterns
       let invalidatedCount = 0;
+
       for (const pattern of patterns) {
         const count = cacheManager.invalidatePattern(pattern);
+
         invalidatedCount += count;
         Logger.cache('INVALIDATION', 'pattern_invalidated', { pattern, count });
       }
@@ -394,6 +402,7 @@ class CacheWarmupService {
     });
     
     const stoppedCount = this.scheduledWarmups.size;
+
     this.scheduledWarmups.clear();
     
     Logger.operationSuccess('CACHE_WARMUP_SERVICE', 'STOP_SCHEDULED_WARMUPS', {

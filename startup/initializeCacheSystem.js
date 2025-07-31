@@ -1,5 +1,5 @@
 const { cacheWarmupService } = require('../services/cacheWarmupService');
-const { cacheManager } = require('../middleware/enhancedSearchCache');
+const { cacheManager } = require('../middleware/searchCache');
 
 const initializeCacheSystem = async () => {
   console.log('🚀 Initializing enhanced cache system...');

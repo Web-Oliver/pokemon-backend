@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 const activityTrackingPlugin = require('../plugins/activityTracking');
+const { auctionTransform } = require('./schemas/shared/transforms');
 
 const auctionSchema = new mongoose.Schema({
   topText: {
@@ -71,6 +72,12 @@ const auctionSchema = new mongoose.Schema({
     type: Date,
     default: Date.now,
   },
+});
+
+// Apply shared transform function for JSON responses
+auctionSchema.set('toJSON', {
+  transform: auctionTransform,
+  getters: true, // Enable getters for JSON serialization
 });
 
 // Apply activity tracking plugin

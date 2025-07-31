@@ -16,7 +16,9 @@ async function initializeBackupSystem() {
   try {
     // Wait a bit more for database to be fully ready
     console.log('⏳ Waiting for database connection to stabilize...');
-    await new Promise(resolve => setTimeout(resolve, 2000));
+    await new Promise(resolve => {
+      setTimeout(resolve, 2000);
+    });
     
     // Initialize backup service
     await backupService.initialize();

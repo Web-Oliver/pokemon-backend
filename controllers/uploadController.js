@@ -2,6 +2,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const { ValidationError } = require('../middleware/errorHandler');
+const ThumbnailService = require('../services/shared/thumbnailService');
 
 // Ensure uploads directory exists
 const uploadsDir = path.join(__dirname, '../public/uploads');
@@ -25,16 +26,16 @@ const storage = multer.diskStorage({
   },
 });
 
-// File filter to only allow images
+// File filter to only allow JPEG and PNG images
 const fileFilter = (req, file, cb) => {
-  const allowedTypes = /jpeg|jpg|png|gif|webp/;
+  const allowedTypes = /jpeg|jpg|png/;
   const extname = allowedTypes.test(path.extname(file.originalname).toLowerCase());
   const mimetype = allowedTypes.test(file.mimetype);
 
   if (mimetype && extname) {
     return cb(null, true);
   }
-  cb(new Error('Only image files are allowed!'));
+  cb(new Error('Only JPEG and PNG image files are allowed!'));
 };
 
 const upload = multer({
@@ -53,7 +54,7 @@ const upload = multer({
 const uploadSingle = upload.single('image');
 
 const uploadImage = (req, res, next) => {
-  uploadSingle(req, res, (err) => {
+  uploadSingle(req, res, async (err) => {
     if (err instanceof multer.MulterError) {
       if (err.code === 'LIMIT_FILE_SIZE') {
         return next(new ValidationError('File too large. Maximum size is 200MB.'));
@@ -67,19 +68,45 @@ const uploadImage = (req, res, next) => {
       return next(new ValidationError('No file uploaded'));
     }
 
-    // Return the relative path for storing in database
-    const relativePath = `/uploads/${req.file.filename}`;
+    try {
+      // Generate thumbnail
+      const thumbnailPath = await ThumbnailService.generateThumbnail(
+        req.file.path,
+        req.file.filename
+      );
 
-    res.status(200).json({
-      status: 'success',
-      message: 'Image uploaded successfully',
-      data: {
-        filename: req.file.filename,
-        originalName: req.file.originalname,
-        path: relativePath,
-        size: req.file.size,
-      },
-    });
+      // Return the relative path for storing in database
+      const relativePath = `/uploads/${req.file.filename}`;
+
+      res.status(200).json({
+        status: 'success',
+        message: 'Image uploaded successfully',
+        data: {
+          filename: req.file.filename,
+          originalName: req.file.originalname,
+          path: relativePath,
+          thumbnailPath,
+          size: req.file.size,
+        },
+      });
+    } catch (thumbnailError) {
+      console.error('[UPLOAD] Thumbnail generation failed:', thumbnailError);
+      
+      // Return success even if thumbnail fails
+      const relativePath = `/uploads/${req.file.filename}`;
+
+      res.status(200).json({
+        status: 'success',
+        message: 'Image uploaded successfully (thumbnail generation failed)',
+        data: {
+          filename: req.file.filename,
+          originalName: req.file.originalname,
+          path: relativePath,
+          thumbnailPath: null,
+          size: req.file.size,
+        },
+      });
+    }
   });
 };
 
@@ -88,7 +115,7 @@ const uploadFlexible = (req, res, next) => {
   // Use upload.any() to accept any field name
   const uploadAny = upload.any();
 
-  uploadAny(req, res, (err) => {
+  uploadAny(req, res, async (err) => {
     console.log(`[UPLOAD] Received ${req.files ? req.files.length : 0} files`);
     console.log(`[UPLOAD] Request body keys: ${Object.keys(req.body)}`);
     console.log(
@@ -117,19 +144,42 @@ const uploadFlexible = (req, res, next) => {
       return next(new ValidationError('No files uploaded'));
     }
 
-    // Return the relative paths for storing in database
-    const uploadedFiles = req.files.map((file) => ({
-      filename: file.filename,
-      originalName: file.originalname,
-      path: `/uploads/${file.filename}`,
-      size: file.size,
-      fieldname: file.fieldname, // Include field name for debugging
-    }));
+    // Generate thumbnails for all uploaded files
+    const uploadedFiles = [];
+    
+    for (const file of req.files) {
+      try {
+        const thumbnailPath = await ThumbnailService.generateThumbnail(
+          file.path,
+          file.filename
+        );
+        
+        uploadedFiles.push({
+          filename: file.filename,
+          originalName: file.originalname,
+          path: `/uploads/${file.filename}`,
+          thumbnailPath,
+          size: file.size,
+          fieldname: file.fieldname,
+        });
+      } catch (thumbnailError) {
+        console.error(`[UPLOAD] Thumbnail generation failed for ${file.filename}:`, thumbnailError);
+        
+        uploadedFiles.push({
+          filename: file.filename,
+          originalName: file.originalname,
+          path: `/uploads/${file.filename}`,
+          thumbnailPath: null,
+          size: file.size,
+          fieldname: file.fieldname,
+        });
+      }
+    }
 
     console.log(`[UPLOAD] Sending response with ${uploadedFiles.length} files`);
     console.log(
       '[UPLOAD] Response data:',
-      uploadedFiles.map((f) => ({ filename: f.filename, path: f.path })),
+      uploadedFiles.map((f) => ({ filename: f.filename, path: f.path, thumbnailPath: f.thumbnailPath })),
     );
 
     res.status(200).json({
@@ -194,6 +244,13 @@ const cleanupImages = async (req, res, next) => {
             fs.unlinkSync(fullPath);
             deletedFiles.push(imagePath);
             console.log(`[CLEANUP] Deleted orphaned file: ${fullPath}`);
+
+            // Also delete thumbnail if it exists
+            try {
+              await ThumbnailService.deleteThumbnail(imagePath);
+            } catch (thumbError) {
+              console.log(`[CLEANUP] No thumbnail to delete for: ${imagePath}`);
+            }
           } else {
             console.log(`[CLEANUP] File not found: ${fullPath}`);
           }
@@ -259,8 +316,13 @@ const cleanupAllOrphanedImages = async (req, res, next) => {
             reason: 'Image is associated with a product',
           });
         } else {
-          // Remove leading slash if present to get filename
+          // Skip thumbnail files as they will be handled with their originals
           const filename = imagePath.startsWith('/uploads/') ? imagePath.replace('/uploads/', '') : imagePath;
+          
+          if (ThumbnailService.isThumbnail(filename)) {
+            console.log(`[CLEANUP ALL] Skipping thumbnail file: ${imagePath}`);
+            return;
+          }
 
           const fullPath = path.join(uploadsDir, filename);
 
@@ -269,6 +331,13 @@ const cleanupAllOrphanedImages = async (req, res, next) => {
             fs.unlinkSync(fullPath);
             deletedFiles.push(imagePath);
             console.log(`[CLEANUP ALL] Deleted orphaned file: ${fullPath}`);
+
+            // Also delete thumbnail if it exists
+            try {
+              await ThumbnailService.deleteThumbnail(imagePath);
+            } catch (thumbError) {
+              console.log(`[CLEANUP ALL] No thumbnail to delete for: ${imagePath}`);
+            }
           }
         }
       } catch (error) {

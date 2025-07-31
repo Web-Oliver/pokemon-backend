@@ -1,7 +1,7 @@
 const compression = require('compression');
 const zlib = require('zlib');
 
-// Enhanced compression middleware with optimized settings
+// Compression middleware with optimized settings
 const compressionMiddleware = compression({
   // Only compress responses above 1kb
   threshold: 1024,

@@ -1,2 +1,8 @@
-// Re-export all import functionality from the modular structure
-module.exports = require('./importers');
+/**
+ * Data Importer
+ * 
+ * Re-exports import functionality from the importers directory.
+ * Simple bridge to maintain compatibility.
+ */
+
+module.exports = require('./importers/importCoordinator');

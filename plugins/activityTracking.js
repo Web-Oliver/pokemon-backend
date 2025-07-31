@@ -118,12 +118,23 @@ function activityTrackingPlugin(schema, options = {}) {
           const update = this.getUpdate();
           const filter = this.getFilter();
 
-          // Populate for rich metadata (if cardId exists)
-          if (doc.cardId) {
-            await doc.populate({
-              path: 'cardId',
-              populate: { path: 'setId', model: 'Set' },
-            });
+          // Populate for rich metadata (if cardId exists) with circular reference protection
+          if (doc.cardId && !doc._populated) {
+            doc._populated = true; // Mark as populated to prevent circular population
+            try {
+              await doc.populate({
+                path: 'cardId',
+                populate: { 
+                  path: 'setId', 
+                  model: 'Set',
+                  options: { lean: true } // Prevent further population
+                },
+                options: { lean: true }
+              });
+            } catch (populateError) {
+              console.warn('Population failed in activity tracking, continuing without:', populateError.message);
+              // Continue without population rather than failing
+            }
           }
 
            

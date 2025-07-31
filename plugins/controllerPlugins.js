@@ -1,5 +1,5 @@
 const Logger = require('../utils/Logger');
-const { cacheManager } = require('../middleware/enhancedSearchCache');
+const { cacheManager } = require('../middleware/searchCache');
 
 /**
  * Collection of reusable controller plugins

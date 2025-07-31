@@ -1,13 +1,14 @@
-const PsaGradedCardRepository = require('../repositories/PsaGradedCardRepository');
-const RawCardRepository = require('../repositories/RawCardRepository');
-const SealedProductRepository = require('../repositories/SealedProductRepository');
+const CollectionRepository = require('../repositories/CollectionRepository');
+const PsaGradedCard = require('../models/PsaGradedCard');
+const RawCard = require('../models/RawCard');
+const SealedProduct = require('../models/SealedProduct');
 const CardRepository = require('../repositories/CardRepository');
 const SetRepository = require('../repositories/SetRepository');
 const CardMarketReferenceProductRepository = require('../repositories/CardMarketReferenceProductRepository');
 const CollectionService = require('../services/domain/CollectionService');
 const ImageManager = require('../services/shared/imageManager');
 const SaleService = require('../services/shared/saleService');
-const SearchFactory = require('../services/search/SearchFactory');
+// SearchFactory removed - replaced with simple searchService
 const { getEntityConfig } = require('../config/entityConfigurations');
 const Logger = require('../utils/Logger');
 
@@ -46,10 +47,10 @@ class Container {
     this.registerSingleton('imageManager', () => ImageManager);
     this.registerSingleton('saleService', () => SaleService);
 
-    // Register repositories
-    this.registerSingleton('psaGradedCardRepository', () => new PsaGradedCardRepository());
-    this.registerSingleton('rawCardRepository', () => new RawCardRepository());
-    this.registerSingleton('sealedProductRepository', () => new SealedProductRepository());
+    // Register repositories using consolidated CollectionRepository
+    this.registerSingleton('psaGradedCardRepository', () => new CollectionRepository(PsaGradedCard, 'PsaGradedCard'));
+    this.registerSingleton('rawCardRepository', () => new CollectionRepository(RawCard, 'RawCard'));
+    this.registerSingleton('sealedProductRepository', () => new CollectionRepository(SealedProduct, 'SealedProduct'));
     this.registerSingleton('cardRepository', () => new CardRepository());
     this.registerSingleton('setRepository', () => new SetRepository());
     this.registerSingleton('cardMarketReferenceProductRepository', () => new CardMarketReferenceProductRepository());
@@ -103,17 +104,7 @@ class Container {
       }
     );
 
-    // Register search services
-    this.registerSingleton(
-      'searchFactory',
-      () =>
-        new SearchFactory(this, {
-          enableCaching: true,
-          defaultMaxResults: 50,
-          enableFuzzySearch: true,
-          enableScoring: true,
-        }),
-    );
+    // Search services removed - using simple searchService directly
 
     this.initialized = true;
   }

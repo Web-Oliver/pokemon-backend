@@ -64,7 +64,7 @@ function createCRUDRoutes(controller, options = {}) {
       controller.getById,
   );
 
-  // POST / - Create new entity
+  // POST / - Create entity
   const createMiddleware = routeMiddleware.create || [];
 
   router.post(

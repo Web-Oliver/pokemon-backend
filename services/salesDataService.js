@@ -2,7 +2,7 @@ const SealedProduct = require('../models/SealedProduct');
 const PsaGradedCard = require('../models/PsaGradedCard');
 const RawCard = require('../models/RawCard');
 const Logger = require('../utils/Logger');
-const ValidatorFactory = require('../utils/ValidatorFactory');
+const { validateDateRange } = require('../utils/dateValidationHelpers');
 
 /**
  * Map item types to display categories
@@ -46,23 +46,26 @@ async function fetchSalesData(filter, category) {
     ]);
 
     salesData = [
-      ...sealedProducts.map((item) => ({
-        ...item.toObject(),
+      ...sealedProducts.filter(item => item).map((item) => ({
+        ...(item.toObject ? item.toObject() : item),
         itemType: 'sealedProduct',
       })),
-      ...psaCards.map((item) => ({
-        ...item.toObject(),
+      ...psaCards.filter(item => item).map((item) => ({
+        ...(item.toObject ? item.toObject() : item),
         itemType: 'psaGradedCard',
       })),
-      ...rawCards.map((item) => ({ ...item.toObject(), itemType: 'rawCard' })),
+      ...rawCards.filter(item => item).map((item) => ({ 
+        ...(item.toObject ? item.toObject() : item), 
+        itemType: 'rawCard' 
+      })),
     ];
   } else {
     // Fetch from specific category
     switch (category) {
       case 'sealedProducts':
         salesData = await SealedProduct.find(filter);
-        salesData = salesData.map((item) => ({
-          ...item.toObject(),
+        salesData = salesData.filter(item => item).map((item) => ({
+          ...(item.toObject ? item.toObject() : item),
           itemType: 'sealedProduct',
         }));
         break;
@@ -71,8 +74,8 @@ async function fetchSalesData(filter, category) {
           path: 'cardId',
           populate: { path: 'setId' },
         });
-        salesData = salesData.map((item) => ({
-          ...item.toObject(),
+        salesData = salesData.filter(item => item).map((item) => ({
+          ...(item.toObject ? item.toObject() : item),
           itemType: 'psaGradedCard',
         }));
         break;
@@ -81,8 +84,8 @@ async function fetchSalesData(filter, category) {
           path: 'cardId',
           populate: { path: 'setId' },
         });
-        salesData = salesData.map((item) => ({
-          ...item.toObject(),
+        salesData = salesData.filter(item => item).map((item) => ({
+          ...(item.toObject ? item.toObject() : item),
           itemType: 'rawCard',
         }));
         break;
@@ -126,26 +129,11 @@ function buildDateFilter(startDate, endDate) {
   
   const filter = { sold: true };
 
-  // Validate dates using ValidatorFactory before processing
-  if (startDate && !ValidatorFactory.date().validate(startDate)) {
-    const error = new Error('Invalid startDate format');
-
-    Logger.operationError('INVALID_START_DATE', 'Invalid start date format provided', error, {
-      startDate,
-      endDate
-    });
-    throw error;
-  }
-  
-  if (endDate && !ValidatorFactory.date().validate(endDate)) {
-    const error = new Error('Invalid endDate format');
-
-    Logger.operationError('INVALID_END_DATE', 'Invalid end date format provided', error, {
-      startDate,
-      endDate
-    });
-    throw error;
-  }
+  // Use consolidated date validation with error throwing
+  const dateValidation = validateDateRange(startDate, endDate, { 
+    throwOnError: true, 
+    context: 'BUILD_DATE_FILTER' 
+  });
 
   if (startDate || endDate) {
     filter['saleDetails.dateSold'] = {};

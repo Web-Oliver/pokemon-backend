@@ -33,26 +33,24 @@ app.use(presets.api);
 // Serve static files (images)
 app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
-// Routes
-app.use('/api/status', require('./routes/status'));
+// Routes - Consolidated for better maintainability
 app.use('/api/search', require('./routes/unifiedSearch')); // Unified search architecture
 app.use('/api/sets', require('./routes/sets'));
 app.use('/api/cards', require('./routes/cards'));
-app.use('/api/cardmarket-ref-products', require('./routes/cardMarketRefProducts'));
-app.use('/api/sealed-products', require('./routes/sealedProducts'));
-app.use('/api/psa-graded-cards', require('./routes/psaGradedCards'));
-app.use('/api/raw-cards', require('./routes/rawCards'));
-app.use('/api/sales', require('./routes/sales'));
-app.use('/api/auctions', require('./routes/auctions'));
+
+// Consolidated collection routes (PSA, Raw, Sealed Products)
+app.use('/api', require('./routes/collections'));
+
+// Consolidated API routes (Sales, CardMarket, Export, Upload, External Listing)  
+app.use('/api', require('./routes/api'));
+
+// Specialized routes that remain separate
 app.use('/api/activities', require('./routes/activityRoutes')); // Context7 Activity Tracking
-app.use('/api/export', require('./routes/export')); // Export functionality
 app.use('/api/import', require('./routes/import'));
-app.use('/api/upload', require('./routes/upload'));
 app.use('/api/dba-selection', require('./routes/dbaSelection')); // DBA selection tracking
 app.use('/api/backup', require('./routes/backup')); // Automatic backup system
-app.use('/api/cache', require('./routes/cacheManagement')); // Enhanced cache management
+app.use('/api/cache', require('./routes/cacheManagement')); // Cache management
 app.use('/api/plugins', require('./routes/pluginManagement')); // Plugin management
-app.use('/api', require('./routes/externalListing'));
 
 // Root endpoint
 app.get('/', (req, res) => {
@@ -66,7 +64,7 @@ app.get('/api/health', (req, res) => {
   let enhancedCacheMetrics = {};
 
   try {
-    const { cacheManager } = require('./middleware/enhancedSearchCache');
+    const { cacheManager } = require('./middleware/searchCache');
 
     enhancedCacheMetrics = cacheManager.getMetrics();
   } catch (error) {

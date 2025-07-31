@@ -3,7 +3,7 @@ const { asyncHandler, NotFoundError, ValidationError } = require('../../middlewa
 const container = require('../../container');
 const Logger = require('../../utils/Logger');
 const { getEntityConfig } = require('../../config/entityConfigurations');
-const { cacheManager } = require('../../middleware/enhancedSearchCache');
+const { cacheManager } = require('../../middleware/searchCache');
 
 /**
  * Enhanced Base Controller Class

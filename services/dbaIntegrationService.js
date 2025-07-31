@@ -9,7 +9,6 @@
 const path = require('path');
 const fs = require('fs');
 const { DbaExportService } = require('./dbaExportService');
-const { DbaPlaywrightService } = require('./dbaPlaywrightService');
 const Logger = require('../utils/Logger');
 
 /**
@@ -179,10 +178,11 @@ class DbaIntegrationService {
       });
       
       // Initialize Playwright service if not already done
-      if (!this.dbaPlaywrightService) {
-        this.dbaPlaywrightService = new DbaPlaywrightService();
-        await this.dbaPlaywrightService.initialize();
-      }
+      // TODO: Re-enable when DbaPlaywrightService is implemented
+      // if (!this.dbaPlaywrightService) {
+      //   this.dbaPlaywrightService = new DbaPlaywrightService();
+      //   await this.dbaPlaywrightService.initialize();
+      // }
       
       // Read the generated DBA post data
       const jsonContent = fs.readFileSync(exportResult.jsonFilePath, 'utf8');
@@ -340,31 +340,37 @@ class DbaIntegrationService {
       const status = await this.getDbaStatus();
       
       // Test Playwright service initialization
-      if (!this.dbaPlaywrightService) {
-        try {
-          this.dbaPlaywrightService = new DbaPlaywrightService();
-          await this.dbaPlaywrightService.initialize();
-          
-          const serviceStatus = await this.dbaPlaywrightService.getStatus();
-          
-          // Close test service
-          await this.dbaPlaywrightService.close();
-          this.dbaPlaywrightService = null;
-          
-          result.playwrightTest = {
-            success: true,
-            serviceStatus,
-            message: 'Playwright service initialized and closed successfully'
-          };
-          
-        } catch (playwrightError) {
-          result.playwrightTest = {
-            success: false,
-            error: playwrightError.message,
-            message: 'Playwright service test failed'
-          };
-        }
-      }
+      // TODO: Re-enable when DbaPlaywrightService is implemented
+      // if (!this.dbaPlaywrightService) {
+      //   try {
+      //     this.dbaPlaywrightService = new DbaPlaywrightService();
+      //     await this.dbaPlaywrightService.initialize();
+      //     
+      //     const serviceStatus = await this.dbaPlaywrightService.getStatus();
+      //     
+      //     // Close test service
+      //     await this.dbaPlaywrightService.close();
+      //     this.dbaPlaywrightService = null;
+      //     
+      //     result.playwrightTest = {
+      //       success: true,
+      //       serviceStatus,
+      //       message: 'Playwright service initialized and closed successfully'
+      //     };
+      //     
+      //   } catch (playwrightError) {
+      //     result.playwrightTest = {
+      //       success: false,
+      //       error: playwrightError.message,
+      //       message: 'Playwright service test failed'
+      //     };
+      //   }
+      // }
+      
+      result.playwrightTest = {
+        success: false,
+        message: 'DbaPlaywrightService temporarily disabled'
+      };
       
       const duration = Date.now() - startTime;
 

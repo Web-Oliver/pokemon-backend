@@ -169,10 +169,10 @@ async function copyImageToPublicUploads(imagePath, newFileName) {
                 targetPath: `/uploads/${newFileName}`
             });
             return `/uploads/${newFileName}`;
-        } else {
+        } 
             Logger.warn('Source image not found', { sourceImagePath });
             return null;
-        }
+        
         
     } catch (error) {
         Logger.operationError('IMAGE_COPY_FAILED', 'Failed to copy image file', error, {

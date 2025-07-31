@@ -156,6 +156,7 @@ function convertDateToString(value) {
   // Try to create a Date from the value
   try {
     const date = new Date(value);
+
     if (!isNaN(date.getTime())) {
       return date.toISOString();
     }
@@ -215,48 +216,77 @@ const cardMarketTransform = createDecimal128Transform({
  * Converts MongoDB ObjectIds to strings throughout the data structure
  *
  * @param {*} obj - Object to process
+ * @param {number} depth - Current recursion depth to prevent stack overflow
  * @returns {*} - Object with ObjectIds converted to strings
  */
-function convertObjectIdsToStrings(obj) {
+function convertObjectIdsToStrings(obj, depth = 0) {
+  // Prevent infinite recursion by limiting depth
+  const MAX_DEPTH = 10;
+
+  if (depth > MAX_DEPTH) {
+    console.warn('Maximum recursion depth reached in convertObjectIdsToStrings, stopping recursion');
+    return obj;
+  }
+
   if (!obj || typeof obj !== 'object') {
     return obj;
   }
 
+  // Handle circular references by tracking processed objects
+  if (obj._circularRefCheck) {
+    return obj; // Already processing this object, return as-is
+  }
+
   // Handle arrays
   if (Array.isArray(obj)) {
-    return obj.map(item => convertObjectIdsToStrings(item));
+    return obj.map(item => convertObjectIdsToStrings(item, depth + 1));
   }
 
   // Handle objects
   const processed = {};
-  for (const [key, value] of Object.entries(obj)) {
-    if (value && typeof value === 'object') {
-      // IMPORTANT: Check for Date objects FIRST to avoid corrupting them
-      if (value instanceof Date) {
-        processed[key] = value; // Keep Date objects as-is
+  
+  // Mark object to prevent circular references
+  obj._circularRefCheck = true;
+  
+  try {
+    for (const [key, value] of Object.entries(obj)) {
+      // Skip the circular reference marker
+      if (key === '_circularRefCheck') {
+        continue;
       }
-      // Check if it's an ObjectId with buffer property
-      else if (value.buffer && typeof value.buffer === 'object' && Object.keys(value.buffer).every(k => !isNaN(k))) {
-        // Convert buffer-based ObjectId to string
-        const bytesArray = Object.keys(value.buffer).map(k => value.buffer[k]);
-        const buffer = Buffer.from(bytesArray);
-        processed[key] = buffer.toString('hex');
-      }
-      // Check if it's a Mongoose ObjectId
-      else if (value.constructor && (value.constructor.name === 'ObjectID' || value.constructor.name === 'ObjectId')) {
-        processed[key] = value.toString();
-      }
-      // Check if it's already a proper ObjectId string format (24 hex characters)
-      else if (typeof value === 'string' && /^[0-9a-fA-F]{24}$/.test(value)) {
+      
+      if (value && typeof value === 'object') {
+        // IMPORTANT: Check for Date objects FIRST to avoid corrupting them
+        if (value instanceof Date) {
+          processed[key] = value; // Keep Date objects as-is
+        }
+        // Check if it's an ObjectId with buffer property
+        else if (value.buffer && typeof value.buffer === 'object' && Object.keys(value.buffer).every(k => !isNaN(k))) {
+          // Convert buffer-based ObjectId to string
+          const bytesArray = Object.keys(value.buffer).map(k => value.buffer[k]);
+          const buffer = Buffer.from(bytesArray);
+
+          processed[key] = buffer.toString('hex');
+        }
+        // Check if it's a Mongoose ObjectId
+        else if (value.constructor && (value.constructor.name === 'ObjectID' || value.constructor.name === 'ObjectId')) {
+          processed[key] = value.toString();
+        }
+        // Check if it's already a proper ObjectId string format (24 hex characters)
+        else if (typeof value === 'string' && /^[0-9a-fA-F]{24}$/.test(value)) {
+          processed[key] = value;
+        }
+        // Recursively process nested objects and arrays with depth tracking
+        else {
+          processed[key] = convertObjectIdsToStrings(value, depth + 1);
+        }
+      } else {
         processed[key] = value;
       }
-      // Recursively process nested objects and arrays
-      else {
-        processed[key] = convertObjectIdsToStrings(value);
-      }
-    } else {
-      processed[key] = value;
     }
+  } finally {
+    // Clean up circular reference marker
+    delete obj._circularRefCheck;
   }
 
   return processed;

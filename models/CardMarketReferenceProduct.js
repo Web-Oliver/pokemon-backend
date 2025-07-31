@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const { cardMarketTransform } = require('./schemas/shared/transforms');
 
 const cardMarketReferenceProductSchema = new mongoose.Schema(
   {
@@ -32,6 +33,12 @@ cardMarketReferenceProductSchema.index(
 cardMarketReferenceProductSchema.index({ category: 1 });
 cardMarketReferenceProductSchema.index({ name: 1 });
 cardMarketReferenceProductSchema.index({ setName: 1 });
+
+// Apply shared transform function for JSON responses
+cardMarketReferenceProductSchema.set('toJSON', {
+  transform: cardMarketTransform,
+  getters: true, // Enable getters for JSON serialization
+});
 
 const CardMarketReferenceProduct = mongoose.model('CardMarketReferenceProduct', cardMarketReferenceProductSchema);
 
