@@ -505,6 +505,77 @@ class CollectionService {
       throw error;
     }
   }
+
+  /**
+   * Bulk create multiple items
+   * Frontend genericApiOperations.ts support
+   * @param {Array} items - Array of items to create
+   * @returns {Promise<Array>} - Array of created items
+   */
+  async bulkCreate(items) {
+    try {
+      if (!Array.isArray(items) || items.length === 0) {
+        throw new ValidationError('Items must be a non-empty array');
+      }
+
+      // Add standard fields to each item
+      const itemsWithDefaults = items.map(item => ({
+        ...item,
+        dateAdded: item.dateAdded || new Date(),
+        sold: item.sold || false
+      }));
+
+      const createdItems = await this.repository.bulkCreate(itemsWithDefaults);
+
+      // Track activity for bulk creation
+      if (this.options.enableSaleTracking) {
+        await ActivityService.logActivity({
+          type: 'bulk_creation',
+          entityType: this.options.entityName,
+          details: {
+            count: createdItems.length,
+            itemIds: createdItems.map(item => item._id)
+          }
+        });
+      }
+
+      return createdItems;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  /**
+   * Batch operation on multiple items
+   * Frontend genericApiOperations.ts support
+   * @param {string} operation - Operation type
+   * @param {Array} ids - Array of item IDs
+   * @param {Object} data - Operation data
+   * @returns {Promise<Array|Object>} - Operation result
+   */
+  async batchOperation(operation, ids, data = {}) {
+    try {
+      const result = await this.repository.batchOperation(operation, ids, data);
+
+      // Track activity for batch operation
+      if (this.options.enableSaleTracking) {
+        await ActivityService.logActivity({
+          type: `batch_${operation}`,
+          entityType: this.options.entityName,
+          details: {
+            operation,
+            count: ids.length,
+            itemIds: ids,
+            data
+          }
+        });
+      }
+
+      return result;
+    } catch (error) {
+      throw error;
+    }
+  }
 }
 
 module.exports = CollectionService;

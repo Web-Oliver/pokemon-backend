@@ -27,7 +27,7 @@ const {
   getCardMarketRefProductById,
   getCardMarketRefProductSetNames,
 } = require('../controllers/cardMarketRefProductsController');
-const { generateFacebookPost, generateDbaTitle } = require('../controllers/externalListingController');
+const { generateFacebookPost, getCollectionFacebookTextFile, generateDbaTitle } = require('../controllers/externalListingController');
 const {
   zipPsaCardImages,
   zipRawCardImages,
@@ -98,7 +98,9 @@ router.get('/cardmarket-ref-products/:id', getCardMarketRefProductById);
 // EXTERNAL LISTING GENERATION
 // ================================
 router.post('/external-listing/generate-facebook-post', generateFacebookPost);
+router.post('/generate-facebook-post', generateFacebookPost); // Frontend compatibility
 router.post('/external-listing/generate-dba-title', generateDbaTitle);
+router.post('/collection/facebook-text-file', getCollectionFacebookTextFile);
 
 // ================================
 // EXPORT ROUTES
@@ -130,8 +132,10 @@ router.put('/auctions/:id', updateAuction);
 router.delete('/auctions/:id', deleteAuction);
 router.post('/auctions/:id/add-item', addItemToAuction);
 router.post('/auctions/:id/items', addItemToAuction); // Alternative route for frontend
+router.put('/auctions/:id/items', addItemToAuction); // Frontend compatibility - add item
 router.delete('/auctions/:id/remove-item', removeItemFromAuction);
 router.post('/auctions/:id/mark-item-sold', markItemAsSold);
 router.patch('/auctions/:id/items/sold', markItemAsSold);
+router.put('/auctions/:id/items/sold', markItemAsSold); // Frontend compatibility - mark sold
 
 module.exports = router;

@@ -3,37 +3,41 @@ const { asyncHandler, NotFoundError, ValidationError } = require('../middleware/
 const searchService = require('../services/searchService');
 const ValidationUtils = require('../utils/validationUtils');
 
+/**
+ * CardMarket Reference Products Controller
+ */
 const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
   const { name, setName, category, page, limit, q, search, available } = req.query;
   
   // Handle search query (support both 'q' and 'search' for compatibility)
   const searchQuery = q || search || name || setName;
-
+  
   if (searchQuery) {
     // Build filters
     const filters = {};
-
+    
     if (category) filters.category = category;
     if (available === 'true') filters.available = { $gt: 0 };
-
-    const { pageNum: searchPageNum, limitNum: searchLimitNum } = ValidationUtils.validatePagination(page || 1, limit || 50, 100);
+    
+    const { pageNum: searchPageNum, limitNum: searchLimitNum } =
+      ValidationUtils.validatePagination(page || 1, limit || 50, 100);
     const searchOptions = {
       limit: searchLimitNum,
       page: searchPageNum
     };
-
-    const results = await searchService.searchProducts(searchQuery, filters, searchOptions);
+    
+    const { results, total, page, totalPages } = await searchService.searchProducts(searchQuery, filters, searchOptions);
     
     return res.status(200).json({
       success: true,
       status: 'success',
       data: {
         products: results,
-        total: results.length,
-        currentPage: searchPageNum,
-        totalPages: Math.ceil(results.length / searchLimitNum),
-        hasNextPage: searchPageNum * searchLimitNum < results.length,
-        hasPrevPage: searchPageNum > 1,
+        total,
+        currentPage: page,
+        totalPages,
+        hasNextPage: page < totalPages,
+        hasPrevPage: page > 1,
         count: results.length,
         limit: searchLimitNum,
       },
@@ -49,7 +53,7 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
           total: results.length,
           pages: Math.ceil(results.length / searchLimitNum)
         }
-      },
+      }
     });
   }
 
@@ -59,38 +63,42 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
   if (category) query.category = category;
   if (available === 'true') query.available = { $gt: 0 };
 
-  const { pageNum, limitNum } = ValidationUtils.validatePagination(page || 1, limit || 50, 100);
+  const { pageNum, limitNum } = ValidationUtils.validatePagination(page || 1, limit || 20, 100);
   const skip = (pageNum - 1) * limitNum;
 
-  const products = await CardMarketReferenceProduct.find(query)
-    .skip(skip)
-    .limit(limitNum)
-    .sort({ name: 1 });
+  const [products, totalProducts] = await Promise.all([
+    CardMarketReferenceProduct.find(query)
+      .skip(skip)
+      .limit(limitNum)
+      .sort({ available: -1, price: 1, _id: 1 })
+      .lean(),
+    CardMarketReferenceProduct.countDocuments(query)
+  ]);
 
-  const totalProducts = await CardMarketReferenceProduct.countDocuments(query);
   const totalPages = Math.ceil(totalProducts / limitNum);
 
   res.status(200).json({
     success: true,
     status: 'success',
     data: {
-      products: products,
+      products,
       total: totalProducts,
       currentPage: pageNum,
-      totalPages: totalPages,
+      totalPages,
       hasNextPage: pageNum < totalPages,
       hasPrevPage: pageNum > 1,
       count: products.length,
-      limit: limitNum,
+      limit: limitNum
     },
     meta: {
       timestamp: new Date().toISOString(),
       version: '1.0',
       duration: '0ms',
+      filters: query,
       pagination: {
         page: pageNum,
         limit: limitNum,
-        total: totalProducts,
+        total: products.length,
         pages: totalPages
       }
     }
@@ -124,7 +132,8 @@ const getCardMarketRefProductSetNames = asyncHandler(async (req, res) => {
 
   if (searchQuery) {
     // Search products by set name and extract unique set names
-    const products = await searchService.searchProducts(searchQuery, {}, { limit: 100 });
+    const searchResults = await searchService.searchProducts(searchQuery, {}, { limit: 100 });
+    const products = Array.isArray(searchResults) ? searchResults : searchResults.results || [];
     const uniqueSetNames = [...new Set(products.map(p => p.setName))].sort();
 
     return res.status(200).json({

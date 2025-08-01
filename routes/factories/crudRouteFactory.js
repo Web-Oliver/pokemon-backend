@@ -46,10 +46,7 @@ function createCRUDRoutes(controller, options = {}) {
   router.get(
     '/',
     ...getAllMiddleware,
-    controller.getAllSealedProducts ||
-      controller.getAllPsaGradedCards ||
-      controller.getAllRawCards ||
-      controller.getAll,
+    controller.getAll
   );
 
   // GET /:id - Get single entity by ID
@@ -58,10 +55,7 @@ function createCRUDRoutes(controller, options = {}) {
   router.get(
     '/:id',
     ...getByIdMiddleware,
-    controller.getSealedProductById ||
-      controller.getPsaGradedCardById ||
-      controller.getRawCardById ||
-      controller.getById,
+    controller.getById
   );
 
   // POST / - Create entity
@@ -70,7 +64,7 @@ function createCRUDRoutes(controller, options = {}) {
   router.post(
     '/',
     ...createMiddleware,
-    controller.createSealedProduct || controller.createPsaGradedCard || controller.createRawCard || controller.create,
+    controller.create
   );
 
   // PUT /:id - Update entity by ID
@@ -79,7 +73,7 @@ function createCRUDRoutes(controller, options = {}) {
   router.put(
     '/:id',
     ...updateMiddleware,
-    controller.updateSealedProduct || controller.updatePsaGradedCard || controller.updateRawCard || controller.update,
+    controller.update
   );
 
   // DELETE /:id - Delete entity by ID
@@ -88,7 +82,7 @@ function createCRUDRoutes(controller, options = {}) {
   router.delete(
     '/:id',
     ...deleteMiddleware,
-    controller.deleteSealedProduct || controller.deletePsaGradedCard || controller.deleteRawCard || controller.delete,
+    controller.delete
   );
 
   // POST /:id/mark-sold - Mark entity as sold (conditional)
@@ -97,6 +91,10 @@ function createCRUDRoutes(controller, options = {}) {
 
     router.post('/:id/mark-sold', ...markAsSoldMiddleware, controller.markAsSold);
   }
+
+  // BULK/BATCH ROUTES REMOVED
+  // Frontend genericApiOperations.ts explicitly removed bulk operations
+  // Removed to avoid over-engineering and maintain DRY/SOLID principles
 
   // Add custom routes
   customRoutes.forEach((route) => {

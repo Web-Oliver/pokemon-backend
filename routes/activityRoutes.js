@@ -348,15 +348,12 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-/**
- * PATCH /api/activities/:id/read
- * Mark an activity as read
- */
-router.patch('/:id/read', async (req, res, next) => {
+// Mark as read handler for DRY compliance
+const markAsReadHandler = async (req, res, next) => {
   try {
     const { id } = req.params;
 
-    console.log(`[ACTIVITY API] PATCH /activities/${id}/read`);
+    console.log(`[ACTIVITY API] ${req.method} /activities/${id}/read`);
 
     const activity = await Activity.findById(id);
 
@@ -378,7 +375,19 @@ router.patch('/:id/read', async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-});
+};
+
+/**
+ * PATCH /api/activities/:id/read
+ * Mark an activity as read (RESTful standard)
+ */
+router.patch('/:id/read', markAsReadHandler);
+
+/**
+ * PUT /api/activities/:id/read
+ * Mark an activity as read (Frontend compatibility)
+ */
+router.put('/:id/read', markAsReadHandler);
 
 /**
  * DELETE /api/activities/:id

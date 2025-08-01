@@ -94,6 +94,109 @@ const generateFacebookPost = asyncHandler(async (req, res) => {
 });
 
 /**
+ * Generate Facebook text file for collection items
+ * POST /api/collection/facebook-text-file
+ * Body: { itemIds: string[] }
+ */
+const getCollectionFacebookTextFile = asyncHandler(async (req, res) => {
+  const { itemIds } = req.body;
+
+  if (!itemIds || !Array.isArray(itemIds) || itemIds.length === 0) {
+    throw new ValidationError('itemIds array is required and must not be empty');
+  }
+
+  // Get all collection items (PSA, Raw, Sealed) from the provided IDs
+  const PsaGradedCard = require('../models/PsaGradedCard');
+  const RawCard = require('../models/RawCard');
+  const SealedProduct = require('../models/SealedProduct');
+
+  const fetchedItems = [];
+
+  // Try to find each ID in all three collections
+  for (const itemId of itemIds) {
+    if (!/^[a-f\d]{24}$/i.test(itemId)) {
+      console.warn(`Invalid itemId format: ${itemId}`);
+      continue;
+    }
+
+    try {
+      // Try PSA cards first
+      let item = await PsaGradedCard.findById(itemId).populate({
+        path: 'cardId',
+        populate: { path: 'setId', model: 'Set' }
+      });
+      
+      if (item) {
+        fetchedItems.push({ data: item, category: 'PsaGradedCard' });
+        continue;
+      }
+
+      // Try Raw cards
+      item = await RawCard.findById(itemId).populate({
+        path: 'cardId',
+        populate: { path: 'setId', model: 'Set' }
+      });
+      
+      if (item) {
+        fetchedItems.push({ data: item, category: 'RawCard' });
+        continue;
+      }
+
+      // Try Sealed products
+      item = await SealedProduct.findById(itemId);
+      
+      if (item) {
+        fetchedItems.push({ data: item, category: 'SealedProduct' });
+        continue;
+      }
+
+      console.warn(`Item not found in any collection: ${itemId}`);
+    } catch (error) {
+      console.error(`Error fetching item ${itemId}:`, error);
+    }
+  }
+
+  if (fetchedItems.length === 0) {
+    throw new ValidationError('No valid items found for the provided IDs');
+  }
+
+  // Group items by category
+  const groupedItems = {
+    sealedProducts: [],
+    psaGradedCards: [],
+    rawCards: [],
+  };
+
+  fetchedItems.forEach(({ data, category }) => {
+    const formattedItem = facebookFormatter.formatItemForFacebook(data, category);
+
+    switch (category) {
+      case 'SealedProduct':
+        groupedItems.sealedProducts.push(formattedItem);
+        break;
+      case 'PsaGradedCard':
+        groupedItems.psaGradedCards.push(formattedItem);
+        break;
+      case 'RawCard':
+        groupedItems.rawCards.push(formattedItem);
+        break;
+      default:
+        console.warn(`Unknown category: ${category}`);
+    }
+  });
+
+  // Generate Facebook post with default texts
+  const topText = 'Collection Items for Sale';
+  const bottomText = 'Contact me for more details!';
+  const facebookPost = facebookFormatter.buildFacebookPost(groupedItems, topText, bottomText);
+
+  // Return as plain text for file download
+  res.setHeader('Content-Type', 'text/plain');
+  res.setHeader('Content-Disposition', 'attachment; filename="facebook-post.txt"');
+  res.send(facebookPost);
+});
+
+/**
  * Generate DBA listing title
  * POST /api/generate-dba-title
  * Body: { itemId, itemCategory }
@@ -118,5 +221,6 @@ const generateDbaTitle = asyncHandler(async (req, res) => {
 
 module.exports = {
   generateFacebookPost,
+  getCollectionFacebookTextFile,
   generateDbaTitle,
 };

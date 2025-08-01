@@ -11,7 +11,7 @@ const { ValidationError } = require('../middleware/errorHandler');
 /**
  * Validate pagination parameters
  */
-function validatePagination(page = 1, limit = 20, maxLimit = 100) {
+function validatePagination(page = 1, limit = 50, maxLimit = 100) {
   const pageNum = parseInt(page, 10);
   const limitNum = parseInt(limit, 10);
 

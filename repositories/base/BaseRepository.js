@@ -318,6 +318,10 @@ class BaseRepository {
   async bulkWrite(operations) {
     return await this.model.bulkWrite(operations);
   }
+
+  // BULK/BATCH OPERATIONS REMOVED
+  // Frontend genericApiOperations.ts explicitly removed bulk operations
+  // Removed to avoid over-engineering and maintain DRY/SOLID principles
 }
 
 module.exports = BaseRepository;

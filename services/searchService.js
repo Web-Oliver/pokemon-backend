@@ -228,9 +228,12 @@ class SearchService {
       });
     }
     
-    // For text searches, sort by text score first, then card number
+    // For text searches, sort by text score first, then PSA population, then card number
     return results.sort((a, b) => {
       if (a.score !== b.score) return b.score - a.score;
+      if (a.psaTotalGradedForCard !== b.psaTotalGradedForCard) {
+        return b.psaTotalGradedForCard - a.psaTotalGradedForCard;
+      }
       return this.compareCardNumbers(a.pokemonNumber, b.pokemonNumber);
     });
   }
@@ -436,10 +439,13 @@ class SearchService {
 
   /**
    * Search products using FlexSearch with MongoDB fallback - FAST partial matching
-   * @param {string} query - Search query
-   * @param {Object} filters - Additional filters
+   * Supports hierarchical search:
+   * 1. Set selected first -> Show only products from that set
+   * 2. Product selected first -> Return product with set info
+   * @param {string} query - Search query or '*' for all
+   * @param {Object} filters - Additional filters including setName for hierarchical
    * @param {Object} options - Search options
-   * @returns {Promise<Array>} Product search results
+   * @returns {Promise<{results: Array, total: number, page: number, totalPages: number}>} Product search results with pagination
    */
   async searchProducts(query, filters = {}, options = {}) {
     const { limit = 50 } = options;
@@ -453,12 +459,23 @@ class SearchService {
     if (!query || !query.trim() || query.trim() === '*') {
       console.log(`[MONGODB DIRECT] Searching products with filters only:`, filters);
       
+      // First get total count with filters
+      const totalCount = await CardMarketReferenceProduct.countDocuments(filters);
+      
+      // Then get paginated results
       const results = await CardMarketReferenceProduct.find(filters)
         .lean()
         .limit(limit)
         .sort({ available: -1, price: 1, _id: 1 });
 
-      return results;
+      // Return CardMarket products with pagination metadata
+      return {
+        results,
+        total: totalCount,
+        page: options.page || 1,
+        totalPages: Math.ceil(totalCount / limit),
+        count: results.length
+      };
     }
 
     try {
@@ -511,6 +528,12 @@ class SearchService {
       });
 
       if (productIds.length > 0) {
+        // Get total count first
+        const totalCount = await CardMarketReferenceProduct.countDocuments({
+          _id: { $in: productIds },
+          ...filters
+        });
+
         // SMART FILTERING: Apply both FlexSearch results AND filters
         console.log(`[FLEXSEARCH] Found ${productIds.length} FlexSearch matches, now applying filters:`, filters);
         const products = await CardMarketReferenceProduct.find({
@@ -541,7 +564,14 @@ class SearchService {
     const searchFields = ['name', 'category'];
     const defaultSort = { available: -1, price: 1, _id: 1 };
     
-    return await this.search(
+    // First get total count with filters
+    const totalCount = await CardMarketReferenceProduct.countDocuments({
+      ...this.buildTextSearchQuery(query, searchFields),
+      ...filters
+    });
+
+    // Then get paginated results
+    const results = await this.search(
       CardMarketReferenceProduct, 
       query, 
       searchFields, 
@@ -551,6 +581,13 @@ class SearchService {
         sort: options.sort || defaultSort
       }
     );
+
+    return {
+      results,
+      total: totalCount,
+      page: options.page || 1,
+      totalPages: Math.ceil(totalCount / options.limit || 20)
+    };
   }
 
   /**
@@ -563,8 +600,21 @@ class SearchService {
   async searchSets(query, filters = {}, options = {}) {
     const { limit = 50 } = options;
     
-    if (!query || !query.trim()) {
+    // AUTO-TRIGGER FEATURE: If no query but filters exist, show filtered results
+    if ((!query || !query.trim()) && Object.keys(filters).length === 0) {
       return [];
+    }
+    
+    // Handle empty query or wildcard "*" with filters - show all matching filter criteria
+    if (!query || !query.trim() || query.trim() === '*') {
+      console.log(`[MONGODB DIRECT] Searching sets with filters only:`, filters);
+      
+      const results = await Set.find(filters)
+        .lean()
+        .limit(limit)
+        .sort({ year: -1, totalPsaPopulation: -1, _id: 1 });
+
+      return results;
     }
 
     try {
@@ -702,7 +752,8 @@ class SearchService {
         break;
 
       case 'products':
-        const products = await this.searchProducts(query, {}, { limit });
+        const response = await this.searchProducts(query, {}, { limit });
+        const products = Array.isArray(response) ? response : response.results || [];
 
         results = products.map(product => ({
           id: product._id,

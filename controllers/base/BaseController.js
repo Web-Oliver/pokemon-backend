@@ -604,4 +604,8 @@ class BaseController {
   });
 }
 
+// BULK/BATCH OPERATIONS REMOVED
+// Frontend genericApiOperations.ts explicitly removed bulk operations
+// Removed to avoid over-engineering and maintain DRY/SOLID principles
+
 module.exports = BaseController;

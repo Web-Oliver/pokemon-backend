@@ -81,15 +81,13 @@ const suggest = asyncHandler(async (req, res) => {
 const searchCards = asyncHandler(async (req, res) => {
   const { query, setId, setName, year, pokemonNumber, variety, limit, page, sort } = req.query;
 
-  // AUTO-TRIGGER FEATURE: Allow empty queries or "*" when filters are provided
   let searchQuery = query;
+  const hasFilters = setId || setName || year || pokemonNumber || variety;
+  
   if (!query || typeof query !== 'string' || query.trim() === '') {
-    // Check if we have filters that can work without a query
-    const hasFilters = setId || setName || year || pokemonNumber || variety;
     if (!hasFilters) {
       throw new ValidationError('Query parameter is required when no filters are provided');
     }
-    // Use "*" as wildcard query when filters are present
     searchQuery = '*';
   }
 
@@ -113,11 +111,37 @@ const searchCards = asyncHandler(async (req, res) => {
     if (sets.length > 0) {
       filters.setId = { $in: sets.map(s => s._id) };
     } else {
+        // Parse options first before using
+      const options = {
+        limit: limit ? parseInt(limit, 10) : 20,
+        page: page ? parseInt(page, 10) : 1,
+        sort: sort ? JSON.parse(sort) : undefined
+      };
+
       // No matching sets found
       return res.status(200).json({
         success: true,
-        data: [],
-        meta: { query, filters: { setName, year }, totalResults: 0 }
+        data: {
+          cards: [],
+          total: 0,
+          currentPage: options.page,
+          totalPages: 0,
+          hasNextPage: false,
+          hasPrevPage: false,
+          count: 0,
+          limit: options.limit,
+        },
+        meta: {
+          query,
+          filters: { setName, year },
+          totalResults: 0,
+          pagination: {
+            page: options.page,
+            limit: options.limit,
+            total: 0,
+            pages: 0
+          }
+        }
       });
     }
   }
@@ -132,112 +156,57 @@ const searchCards = asyncHandler(async (req, res) => {
 
   res.status(200).json({
     success: true,
-    data: results,
+    data: {
+      cards: results,
+      total: results.length,
+      currentPage: options.page,
+      totalPages: Math.ceil(results.length / options.limit),
+      hasNextPage: options.page < Math.ceil(results.length / options.limit),
+      hasPrevPage: options.page > 1,
+      count: results.length,
+      limit: options.limit
+    },
     meta: {
       query,
       filters,
-      totalResults: results.length
+      totalResults: results.length,
+      pagination: {
+        page: options.page,
+        limit: options.limit,
+        total: results.length,
+        pages: Math.ceil(results.length / options.limit)
+      }
     }
   });
 });
 
 /**
- * Search products
+ * Search products - HIERARCHICAL SEARCH IMPLEMENTATION
+ * Supports the frontend's hierarchical search requirements:
+ * 1. Set selected first -> Show only products from that set (uses '*' query) 
+ * 2. Product selected first -> Return product with set info
+ * 3. Auto-trigger when set selected and product field focused
  */
 const searchProducts = asyncHandler(async (req, res) => {
   const { query, category, setName, minPrice, maxPrice, availableOnly, limit, page, sort } = req.query;
 
-  // AUTO-TRIGGER FEATURE: Allow empty queries or "*" when filters are provided
   let searchQuery = query;
+  const hasFilters = category || setName || minPrice || maxPrice || availableOnly;
+  
+  // HIERARCHICAL SEARCH: Allow empty query when filters exist (set selected first)
   if (!query || typeof query !== 'string' || query.trim() === '') {
-    // Check if we have filters that can work without a query
-    const hasFilters = category || setName || minPrice || maxPrice || availableOnly;
     if (!hasFilters) {
       throw new ValidationError('Query parameter is required when no filters are provided');
     }
-    // Use "*" as wildcard query when filters are present
+    // Use '*' to show all products when filtering by set/category
     searchQuery = '*';
+    console.log('[HIERARCHICAL] Using wildcard query with filters:', { setName, category });
   }
 
-  // Build filters
+  // Build filters for hierarchical search
   const filters = {};
-
   if (category) filters.category = category;
-  
-  // OPTIMAL HIERARCHICAL SEARCH: First find Set, then find products that match that set
-  if (setName) {
-    try {
-      const Set = require('../models/Set');
-      const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
-      
-      // Find the set by name (handles "Pokemon XY Evolutions" type names)
-      const matchingSet = await Set.findOne({ 
-        setName: new RegExp(setName, 'i') 
-      }).lean();
-      
-      if (matchingSet) {
-        console.log(`[HIERARCHICAL SEARCH] Found set: "${matchingSet.setName}"`);
-        
-        // Find all possible product setNames that could match this set
-        // Try multiple patterns to find the correct mapping
-        const possibleSetNames = [
-          matchingSet.setName, // Exact match: "Pokemon XY Evolutions"
-          matchingSet.setName.split(' ').pop(), // Last word: "Evolutions"
-          matchingSet.setName.replace(/^Pokemon\s+/, ''), // Remove "Pokemon ": "XY Evolutions"
-          matchingSet.setName.replace(/^Pokemon\s+\w+\s+/, ''), // Remove "Pokemon XY ": "Evolutions"
-        ];
-        
-        console.log(`[HIERARCHICAL SEARCH] Trying product setNames:`, possibleSetNames);
-        
-        // Find products that match any of these possible set names
-        const productSetNameQuery = {
-          $or: possibleSetNames.map(name => ({
-            setName: new RegExp(`^${name}$`, 'i')
-          }))
-        };
-        
-        // Check if any products exist with these setNames
-        const existingProductSetName = await CardMarketReferenceProduct.findOne(productSetNameQuery, 'setName').lean();
-        
-        if (existingProductSetName) {
-          console.log(`[HIERARCHICAL SEARCH] Found matching product setName: "${existingProductSetName.setName}"`);
-          // Use the exact setName found in products
-          filters.setName = new RegExp(`^${existingProductSetName.setName}$`, 'i');
-        } else {
-          console.log(`[HIERARCHICAL SEARCH] No products found for set: "${matchingSet.setName}"`);
-          // If no products found for this set, return empty results
-          return res.status(200).json({
-            success: true,
-            data: [],
-            meta: {
-              query,
-              filters: { setName },
-              totalResults: 0,
-              message: `No products found for set "${matchingSet.setName}"`
-            }
-          });
-        }
-      } else {
-        console.log(`[HIERARCHICAL SEARCH] No set found for: "${setName}"`);
-        // If no set found, return empty results
-        return res.status(200).json({
-          success: true,
-          data: [],
-          meta: {
-            query,
-            filters: { setName },
-            totalResults: 0,
-            message: `No set found matching "${setName}"`
-          }
-        });
-      }
-    } catch (error) {
-      console.error('[HIERARCHICAL SEARCH] Error finding set:', error);
-      // Fallback to original behavior
-      filters.setName = new RegExp(`^${setName}$`, 'i');
-    }
-  }
-  
+  if (setName) filters.setName = new RegExp(`^${setName}$`, 'i');
   if (minPrice || maxPrice) {
     filters.price = {};
     if (minPrice) filters.price.$gte = parseFloat(minPrice);
@@ -245,33 +214,65 @@ const searchProducts = asyncHandler(async (req, res) => {
   }
   if (availableOnly === 'true') filters.available = { $gt: 0 };
 
+  // Parse options
   const options = {
     limit: limit ? parseInt(limit, 10) : 20,
     page: page ? parseInt(page, 10) : 1,
     sort: sort ? JSON.parse(sort) : undefined
   };
 
+  console.log('[HIERARCHICAL SEARCH] Products:', { query: searchQuery, filters, options });
+
+  // Use searchService for all searches (supports both FlexSearch and MongoDB)
   const results = await searchService.searchProducts(searchQuery, filters, options);
 
   res.status(200).json({
     success: true,
-    data: results,
+    data: {
+      products: results.results || results, // Handle both paginated and simple array responses
+      total: results.total || results.length,
+      currentPage: results.page || options.page,
+      totalPages: results.totalPages || Math.ceil((results.total || results.length) / options.limit),
+      hasNextPage: (results.page || options.page) < (results.totalPages || Math.ceil((results.total || results.length) / options.limit)),
+      hasPrevPage: (results.page || options.page) > 1,
+      count: results.count || results.length,
+      limit: options.limit
+    },
     meta: {
-      query,
+      query: searchQuery,
       filters,
-      totalResults: results.length
+      totalResults: results.total || results.length,
+      pagination: {
+        page: results.page || options.page,
+        limit: options.limit,
+        total: results.total || results.length,
+        pages: results.totalPages || Math.ceil((results.total || results.length) / options.limit)
+      }
     }
   });
 });
 
 /**
- * Search sets
+ * Search sets - HIERARCHICAL SEARCH IMPLEMENTATION
+ * Supports the frontend's hierarchical search requirements:
+ * 1. Set search for card hierarchical filtering
+ * 2. Auto-trigger when showing all sets (uses '*' query)
+ * 3. Wildcard support for empty queries with filters
  */
 const searchSets = asyncHandler(async (req, res) => {
   const { query, year, minYear, maxYear, minPsaPopulation, minCardCount, limit, page, sort } = req.query;
 
-  if (!query || typeof query !== 'string') {
-    throw new ValidationError('Query parameter is required and must be a string');
+  let searchQuery = query;
+  const hasFilters = year || minYear || maxYear || minPsaPopulation || minCardCount;
+  
+  // HIERARCHICAL SEARCH: Allow empty query when filters exist (auto-trigger support)
+  if (!query || typeof query !== 'string' || query.trim() === '') {
+    if (!hasFilters) {
+      throw new ValidationError('Query parameter is required when no filters are provided');
+    }
+    // Use '*' to show all sets when filtering
+    searchQuery = '*';
+    console.log('[HIERARCHICAL] Using wildcard query with filters for sets:', { year, minYear, maxYear });
   }
 
   // Build filters
@@ -296,11 +297,26 @@ const searchSets = asyncHandler(async (req, res) => {
 
   res.status(200).json({
     success: true,
-    data: results,
+    data: {
+      sets: results,
+      total: results.length,
+      currentPage: options.page,
+      totalPages: Math.ceil(results.length / options.limit),
+      hasNextPage: options.page < Math.ceil(results.length / options.limit),
+      hasPrevPage: options.page > 1,
+      count: results.length,
+      limit: options.limit
+    },
     meta: {
       query,
       filters,
-      totalResults: results.length
+      totalResults: results.length,
+      pagination: {
+        page: options.page,
+        limit: options.limit,
+        total: results.length,
+        pages: Math.ceil(results.length / options.limit)
+      }
     }
   });
 });

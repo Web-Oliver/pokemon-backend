@@ -27,6 +27,7 @@ const router = express.Router();
  * Centralized configuration for all collection types
  */
 const COLLECTION_CONFIGS = {
+  // Map paths to controllers using frontend-expected URLs
   'raw-cards': {
     controller: rawCardController,
     cachePrefix: 'raw-card',
@@ -63,18 +64,21 @@ const createRouteMiddleware = (config) => {
 /**
  * Mount collection routes
  */
-Object.entries(COLLECTION_CONFIGS).forEach(([path, config]) => {
-  const collectionRouter = createCollectionItemRoutes(config.controller, {
+// Create a single router instance for all collection routes
+const collectionTypes = Object.entries(COLLECTION_CONFIGS).map(([path, config]) => {
+  const routes = createCollectionItemRoutes(config.controller, {
     includeMarkAsSold: true,
-    middleware: [], // Global middleware for all routes
+    middleware: [],
     routeMiddleware: createRouteMiddleware(config),
-    customRoutes: [
-      // Custom routes can be added per collection type here
-    ],
+    customRoutes: [],
   });
-  
-  // Mount each collection at its path
-  router.use(`/${path}`, collectionRouter);
+
+  return { path, routes };
+});
+
+// Mount each collection type at its specific path
+collectionTypes.forEach(({ path, routes }) => {
+  router.use(`/${path}`, routes);
 });
 
 module.exports = router;

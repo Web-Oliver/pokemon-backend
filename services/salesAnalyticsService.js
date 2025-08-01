@@ -47,7 +47,8 @@ function generateGraphData(salesData) {
     }
 
     const date = new Date(item.saleDetails.dateSold).toISOString().split('T')[0];
-    const salePrice = parseFloat(item.saleDetails.salePrice || 0);
+    // FIX: Use consistent field name - actualSoldPrice instead of salePrice
+    const salePrice = parseFloat(item.saleDetails.actualSoldPrice || 0);
     const cost = parseFloat(item.myPrice || 0);
     const profit = salePrice - cost;
 

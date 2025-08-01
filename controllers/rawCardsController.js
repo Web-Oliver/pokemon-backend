@@ -1,15 +1,20 @@
 /**
  * Raw Card Controller
  * 
- * Uses controller factory to eliminate boilerplate code.
- * All CRUD operations are provided by BaseController via factory.
+ * Fixed controller factory to properly export methods with correct names
  */
 
-const { createCollectionControllerWithExports } = require('./factories/controllerFactory');
+const { createCollectionController } = require('./factories/controllerFactory');
 
-// Create controller with all standard CRUD operations in one line
-module.exports = createCollectionControllerWithExports(
-  'rawCard',           // Entity type for configuration
-  'rawCardService',    // Service name for dependency injection  
-  'RawCard'           // Prefix for export method names
-);
+// Create controller with proper factory
+const controller = createCollectionController('rawCard', 'rawCardService');
+
+// Export methods with the names expected by CRUD route factory
+module.exports = {
+  getAll: controller.getAll,
+  getById: controller.getById,
+  create: controller.create,
+  update: controller.update,
+  delete: controller.delete,
+  markAsSold: controller.markAsSold
+};

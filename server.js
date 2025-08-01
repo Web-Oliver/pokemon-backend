@@ -41,13 +41,14 @@ app.use('/api/cards', require('./routes/cards'));
 // Consolidated collection routes (PSA, Raw, Sealed Products)
 app.use('/api', require('./routes/collections'));
 
-// Consolidated API routes (Sales, CardMarket, Export, Upload, External Listing)  
+// Consolidated API routes (Sales, CardMarket, Export, Upload, External Listing)
 app.use('/api', require('./routes/api'));
 
 // Specialized routes that remain separate
 app.use('/api/activities', require('./routes/activityRoutes')); // Context7 Activity Tracking
 app.use('/api/import', require('./routes/import'));
 app.use('/api/dba-selection', require('./routes/dbaSelection')); // DBA selection tracking
+app.use('/api/cardmarket', require('./routes/cardMarket')); // CardMarket reference products
 app.use('/api/backup', require('./routes/backup')); // Automatic backup system
 app.use('/api/cache', require('./routes/cacheManagement')); // Cache management
 app.use('/api/plugins', require('./routes/pluginManagement')); // Plugin management
