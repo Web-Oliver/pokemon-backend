@@ -81,8 +81,16 @@ const suggest = asyncHandler(async (req, res) => {
 const searchCards = asyncHandler(async (req, res) => {
   const { query, setId, setName, year, pokemonNumber, variety, limit, page, sort } = req.query;
 
-  if (!query || typeof query !== 'string') {
-    throw new ValidationError('Query parameter is required and must be a string');
+  // AUTO-TRIGGER FEATURE: Allow empty queries or "*" when filters are provided
+  let searchQuery = query;
+  if (!query || typeof query !== 'string' || query.trim() === '') {
+    // Check if we have filters that can work without a query
+    const hasFilters = setId || setName || year || pokemonNumber || variety;
+    if (!hasFilters) {
+      throw new ValidationError('Query parameter is required when no filters are provided');
+    }
+    // Use "*" as wildcard query when filters are present
+    searchQuery = '*';
   }
 
   // Build filters
@@ -120,7 +128,7 @@ const searchCards = asyncHandler(async (req, res) => {
     sort: sort ? JSON.parse(sort) : undefined
   };
 
-  const results = await searchService.searchCards(query, filters, options);
+  const results = await searchService.searchCards(searchQuery, filters, options);
 
   res.status(200).json({
     success: true,
@@ -139,15 +147,97 @@ const searchCards = asyncHandler(async (req, res) => {
 const searchProducts = asyncHandler(async (req, res) => {
   const { query, category, setName, minPrice, maxPrice, availableOnly, limit, page, sort } = req.query;
 
-  if (!query || typeof query !== 'string') {
-    throw new ValidationError('Query parameter is required and must be a string');
+  // AUTO-TRIGGER FEATURE: Allow empty queries or "*" when filters are provided
+  let searchQuery = query;
+  if (!query || typeof query !== 'string' || query.trim() === '') {
+    // Check if we have filters that can work without a query
+    const hasFilters = category || setName || minPrice || maxPrice || availableOnly;
+    if (!hasFilters) {
+      throw new ValidationError('Query parameter is required when no filters are provided');
+    }
+    // Use "*" as wildcard query when filters are present
+    searchQuery = '*';
   }
 
   // Build filters
   const filters = {};
 
   if (category) filters.category = category;
-  if (setName) filters.setName = new RegExp(setName, 'i');
+  
+  // OPTIMAL HIERARCHICAL SEARCH: First find Set, then find products that match that set
+  if (setName) {
+    try {
+      const Set = require('../models/Set');
+      const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
+      
+      // Find the set by name (handles "Pokemon XY Evolutions" type names)
+      const matchingSet = await Set.findOne({ 
+        setName: new RegExp(setName, 'i') 
+      }).lean();
+      
+      if (matchingSet) {
+        console.log(`[HIERARCHICAL SEARCH] Found set: "${matchingSet.setName}"`);
+        
+        // Find all possible product setNames that could match this set
+        // Try multiple patterns to find the correct mapping
+        const possibleSetNames = [
+          matchingSet.setName, // Exact match: "Pokemon XY Evolutions"
+          matchingSet.setName.split(' ').pop(), // Last word: "Evolutions"
+          matchingSet.setName.replace(/^Pokemon\s+/, ''), // Remove "Pokemon ": "XY Evolutions"
+          matchingSet.setName.replace(/^Pokemon\s+\w+\s+/, ''), // Remove "Pokemon XY ": "Evolutions"
+        ];
+        
+        console.log(`[HIERARCHICAL SEARCH] Trying product setNames:`, possibleSetNames);
+        
+        // Find products that match any of these possible set names
+        const productSetNameQuery = {
+          $or: possibleSetNames.map(name => ({
+            setName: new RegExp(`^${name}$`, 'i')
+          }))
+        };
+        
+        // Check if any products exist with these setNames
+        const existingProductSetName = await CardMarketReferenceProduct.findOne(productSetNameQuery, 'setName').lean();
+        
+        if (existingProductSetName) {
+          console.log(`[HIERARCHICAL SEARCH] Found matching product setName: "${existingProductSetName.setName}"`);
+          // Use the exact setName found in products
+          filters.setName = new RegExp(`^${existingProductSetName.setName}$`, 'i');
+        } else {
+          console.log(`[HIERARCHICAL SEARCH] No products found for set: "${matchingSet.setName}"`);
+          // If no products found for this set, return empty results
+          return res.status(200).json({
+            success: true,
+            data: [],
+            meta: {
+              query,
+              filters: { setName },
+              totalResults: 0,
+              message: `No products found for set "${matchingSet.setName}"`
+            }
+          });
+        }
+      } else {
+        console.log(`[HIERARCHICAL SEARCH] No set found for: "${setName}"`);
+        // If no set found, return empty results
+        return res.status(200).json({
+          success: true,
+          data: [],
+          meta: {
+            query,
+            filters: { setName },
+            totalResults: 0,
+            message: `No set found matching "${setName}"`
+          }
+        });
+      }
+    } catch (error) {
+      console.error('[HIERARCHICAL SEARCH] Error finding set:', error);
+      // Fallback to original behavior
+      filters.setName = new RegExp(`^${setName}$`, 'i');
+    }
+  }
+  
   if (minPrice || maxPrice) {
     filters.price = {};
     if (minPrice) filters.price.$gte = parseFloat(minPrice);
@@ -161,7 +251,7 @@ const searchProducts = asyncHandler(async (req, res) => {
     sort: sort ? JSON.parse(sort) : undefined
   };
 
-  const results = await searchService.searchProducts(query, filters, options);
+  const results = await searchService.searchProducts(searchQuery, filters, options);
 
   res.status(200).json({
     success: true,

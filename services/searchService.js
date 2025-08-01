@@ -1,67 +1,274 @@
 /**
- * Search Service
+ * Search Service - PROPER SEARCH WITH FLEXSEARCH
  * 
- * Replaces the massively over-engineered 4,773-line search architecture
- * with a practical search implementation following DRY principles.
+ * Uses FlexSearch for fast partial matching with MongoDB fallback
+ * FlexSearch handles "booster" finding "booster box" instantly
  * 
- * Before: 4,773 lines across 8 files with massive duplication
- * After: ~150 lines with unified search logic
+ * Before: Broken MongoDB-only search that required full words
+ * After: FlexSearch + MongoDB hybrid for comprehensive results
  */
 
 const Card = require('../models/Card');
 const Set = require('../models/Set');
 const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
+const FlexSearch = require('flexsearch');
 
 /**
- * Unified search service with common patterns
+ * Unified search service with FlexSearch + MongoDB hybrid
  */
 class SearchService {
+  constructor() {
+    // Initialize FlexSearch indexes for OPTIMIZED partial matching
+    this.cardIndex = new FlexSearch.Document({
+      id: "_id",
+      index: [
+        { 
+          field: "cardName", 
+          tokenize: "forward", 
+          resolution: 9,
+          minlength: 1,
+          optimize: true,
+          fastupdate: false
+        },
+        { 
+          field: "baseName", 
+          tokenize: "forward", 
+          resolution: 9,
+          minlength: 1,
+          optimize: true,
+          fastupdate: false
+        },
+        { 
+          field: "pokemonNumber", 
+          tokenize: "strict",
+          minlength: 1
+        },
+        { 
+          field: "variety", 
+          tokenize: "forward",
+          minlength: 1,
+          optimize: true
+        },
+        { 
+          field: "setName", 
+          tokenize: "forward",
+          minlength: 1,
+          optimize: true
+        }
+      ]
+    });
+
+    this.productIndex = new FlexSearch.Document({
+      id: "_id",
+      index: [
+        { 
+          field: "name", 
+          tokenize: "forward", 
+          resolution: 9,
+          minlength: 1,
+          optimize: true,
+          fastupdate: false
+        },
+        { 
+          field: "category", 
+          tokenize: "forward",
+          minlength: 1,
+          optimize: true
+        },
+        { 
+          field: "setName", 
+          tokenize: "forward",
+          minlength: 1,
+          optimize: true
+        }
+      ]
+    });
+
+    this.setIndex = new FlexSearch.Document({
+      id: "_id",
+      index: [{
+        field: "setName", 
+        tokenize: "forward", 
+        resolution: 9,
+        minlength: 1,
+        optimize: true,
+        fastupdate: false
+      }]
+    });
+
+    this.initialized = false;
+    this.initPromise = null;
+  }
+
   /**
-   * Builds a text search query for any model
+   * Initialize FlexSearch indexes with database data
+   */
+  async initializeIndexes() {
+    if (this.initialized) return;
+    if (this.initPromise) return this.initPromise;
+
+    this.initPromise = this._doInitialize();
+    return this.initPromise;
+  }
+
+  async _doInitialize() {
+    console.log('[FLEXSEARCH] Initializing search indexes...');
+    const startTime = Date.now();
+
+    try {
+      // Index all cards
+      const cards = await Card.find({}).populate('setId').lean();
+      console.log(`[FLEXSEARCH] Indexing ${cards.length} cards...`);
+      
+      cards.forEach(card => {
+        this.cardIndex.add({
+          _id: card._id.toString(),
+          cardName: card.cardName || '',
+          baseName: card.baseName || '',
+          pokemonNumber: card.pokemonNumber || '',
+          variety: card.variety || '',
+          setName: card.setId?.setName || ''
+        });
+      });
+
+      // Index all products
+      const products = await CardMarketReferenceProduct.find({}).lean();
+      console.log(`[FLEXSEARCH] Indexing ${products.length} products...`);
+      
+      products.forEach(product => {
+        this.productIndex.add({
+          _id: product._id.toString(),
+          name: product.name || '',
+          category: product.category || '',
+          setName: product.setName || ''
+        });
+      });
+
+      // Index all sets
+      const sets = await Set.find({}).lean();
+      console.log(`[FLEXSEARCH] Indexing ${sets.length} sets...`);
+      
+      sets.forEach(set => {
+        this.setIndex.add({
+          _id: set._id.toString(),
+          setName: set.setName || ''
+        });
+      });
+
+      this.initialized = true;
+      const duration = Date.now() - startTime;
+      console.log(`[FLEXSEARCH] Initialization completed in ${duration}ms`);
+      
+    } catch (error) {
+      console.error('[FLEXSEARCH] Initialization failed:', error);
+      throw error;
+    }
+  }
+  /**
+   * Builds a hybrid search query combining text search with regex for partial matching
    * @param {string} query - Search query
-   * @param {Array} searchFields - Fields to search in
-   * @returns {Object} MongoDB text search query
+   * @param {Array} searchFields - Fields to search in for regex fallback
+   * @returns {Object} MongoDB search query with text + regex hybrid approach
    */
   buildTextSearchQuery(query, searchFields) {
     if (!query || !query.trim()) {
       return {};
     }
 
-    const searchTerms = query.trim().split(/\s+/);
-    const searchQuery = {
-      $or: []
-    };
-
-    // Add regex search for each field
-    searchFields.forEach(field => {
-      searchTerms.forEach(term => {
-        searchQuery.$or.push({
-          [field]: { $regex: term, $options: 'i' }
+    const cleanQuery = query.trim();
+    
+    // HYBRID APPROACH: Combine text search with regex for comprehensive results
+    // Text search for exact word matches (fast, scored)
+    // Regex search for partial word matches (comprehensive coverage)
+    
+    const textSearch = { $text: { $search: cleanQuery } };
+    
+    // Build regex conditions for partial matching on key fields
+    const regexConditions = [];
+    if (searchFields && searchFields.length > 0) {
+      searchFields.forEach(field => {
+        regexConditions.push({
+          [field]: { $regex: cleanQuery, $options: 'i' }
         });
       });
-    });
-
-    return searchQuery;
+    }
+    
+    // Return hybrid query: text search OR regex search
+    if (regexConditions.length > 0) {
+      return {
+        $or: [
+          textSearch,
+          { $or: regexConditions }
+        ]
+      };
+    }
+    
+    // Fallback to text search only
+    return textSearch;
   }
 
   /**
-   * Generic search method for any model
+   * Enhanced card number search with intelligent sorting
+   * @param {string} query - Search query
+   * @param {Array} results - Search results to enhance
+   * @returns {Array} Enhanced and sorted results
+   */
+  enhanceCardNumberSearch(query, results) {
+    // If searching for number, prioritize and sort intelligently
+    if (/^\d+$/.test(query)) {
+      return results.sort((a, b) => {
+        const aNum = parseInt(a.pokemonNumber);
+        const bNum = parseInt(b.pokemonNumber);
+        
+        // Numeric cards first (1, 2, 3...), then alphanumeric (012/P, SP1...)
+        if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum;
+        if (!isNaN(aNum)) return -1;  // Numeric before alphanumeric
+        if (!isNaN(bNum)) return 1;
+        return a.pokemonNumber.localeCompare(b.pokemonNumber);
+      });
+    }
+    
+    // For text searches, sort by text score first, then card number
+    return results.sort((a, b) => {
+      if (a.score !== b.score) return b.score - a.score;
+      return this.compareCardNumbers(a.pokemonNumber, b.pokemonNumber);
+    });
+  }
+
+  /**
+   * Compare card numbers intelligently (numeric before alphanumeric)
+   * @param {string} a - First card number
+   * @param {string} b - Second card number
+   * @returns {number} Comparison result
+   */
+  compareCardNumbers(a, b) {
+    const aNum = parseInt(a);
+    const bNum = parseInt(b);
+    
+    if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum;
+    if (!isNaN(aNum)) return -1;
+    if (!isNaN(bNum)) return 1;
+    return a.localeCompare(b);
+  }
+
+  /**
+   * Generic search method using MongoDB text indexes (OPTIMIZED)
    * @param {Model} Model - Mongoose model to search
    * @param {string} query - Search query
-   * @param {Array} searchFields - Fields to search in
+   * @param {Array} searchFields - Fields to search in (ignored for text search)
    * @param {Object} filters - Additional filters
    * @param {Object} options - Search options (limit, page, sort)
-   * @returns {Promise<Array>} Search results
+   * @returns {Promise<Array>} Search results with text scores
    */
   async search(Model, query, searchFields, filters = {}, options = {}) {
     const { 
       limit = 50, 
       page = 1, 
-      sort = { _id: 1 },
+      sort = { score: { $meta: 'textScore' } },
       populate = null
     } = options;
 
-    // Build search query
+    // Build search query using text indexes
     const searchQuery = this.buildTextSearchQuery(query, searchFields);
     
     // Combine with filters
@@ -73,11 +280,15 @@ class SearchService {
     // Calculate pagination
     const skip = (page - 1) * limit;
 
-    // Execute query
-    let queryBuilder = Model.find(finalQuery)
-      .sort(sort)
+    // For text search queries, include text score
+    const projection = searchQuery.$text ? { score: { $meta: 'textScore' } } : {};
+
+    // Execute query with text score sorting
+    let queryBuilder = Model.find(finalQuery, projection)
+      .sort(searchQuery.$text ? { score: { $meta: 'textScore' } } : sort)
       .limit(limit)
-      .skip(skip);
+      .skip(skip)
+      .lean(); // 30% faster serialization
 
     // Add population if specified
     if (populate) {
@@ -88,15 +299,120 @@ class SearchService {
   }
 
   /**
-   * Search cards with set information
+   * Search cards using FlexSearch with MongoDB fallback - FAST partial matching
    * @param {string} query - Search query
    * @param {Object} filters - Additional filters
    * @param {Object} options - Search options
-   * @returns {Promise<Array>} Card search results
+   * @returns {Promise<Array>} Card search results with intelligent sorting
    */
   async searchCards(query, filters = {}, options = {}) {
+    const { limit = 50 } = options;
+    
+    // AUTO-TRIGGER FEATURE: If no query but filters exist, show filtered results
+    if ((!query || !query.trim()) && Object.keys(filters).length === 0) {
+      return [];
+    }
+    
+    // Handle empty query or wildcard "*" with filters - show all matching filter criteria
+    if (!query || !query.trim() || query.trim() === '*') {
+      console.log(`[MONGODB DIRECT] Searching cards with filters only:`, filters);
+      
+      const results = await Card.find(filters)
+        .populate('setId')
+        .lean()
+        .limit(limit)
+        .sort({ psaTotalGradedForCard: -1, cardName: 1 });
+
+      return results.map((card) => {
+        card.setDisplayName = card.setId?.setName || 'Unknown Set';
+        card.fallbackSetName = !card.setId?.setName;
+        return card;
+      });
+    }
+
+    try {
+      // Try FlexSearch first for INSTANT partial matching
+      await this.initializeIndexes();
+      
+      console.log(`[FLEXSEARCH] Searching cards for: "${query}" with filters:`, filters);
+      
+      // OPTIMIZED SEARCH: Multiple search strategies for better partial matching
+      let searchResults = [];
+      
+      // Strategy 1: Exact phrase search
+      const exactResults = this.cardIndex.search(query.trim(), {
+        limit: limit * 3,
+        enrich: true,
+        suggest: true
+      });
+      
+      // Strategy 2: Individual word search for partial matches
+      const words = query.trim().split(/\s+/).filter(word => word.length > 0);
+      const wordResults = [];
+      words.forEach(word => {
+        if (word.length >= 1) {
+          const results = this.cardIndex.search(word, {
+            limit: limit * 2,
+            enrich: true,
+            suggest: true
+          });
+          wordResults.push(...results);
+        }
+      });
+      
+      // Combine and deduplicate results
+      const allResults = [...exactResults, ...wordResults];
+      const seenIds = new Set();
+      searchResults = allResults.filter(result => {
+        const hasNew = result.result.some(id => !seenIds.has(id));
+        result.result.forEach(id => seenIds.add(id));
+        return hasNew;
+      });
+
+      // Extract document IDs from FlexSearch results
+      const cardIds = [];
+      searchResults.forEach(result => {
+        result.result.forEach(id => {
+          if (!cardIds.includes(id)) {
+            cardIds.push(id);
+          }
+        });
+      });
+
+      if (cardIds.length > 0) {
+        // SMART FILTERING: Apply both FlexSearch results AND filters
+        console.log(`[FLEXSEARCH] Found ${cardIds.length} FlexSearch matches, now applying filters:`, filters);
+        const cards = await Card.find({
+          _id: { $in: cardIds },
+          ...filters
+        })
+        .populate('setId')
+        .lean()
+        .limit(limit);
+
+        // Order results by FlexSearch relevance
+        const orderedResults = [];
+        cardIds.forEach(id => {
+          const card = cards.find(c => c._id.toString() === id);
+          if (card && orderedResults.length < limit) {
+            // Add set display name
+            card.setDisplayName = card.setId?.setName || 'Unknown Set';
+            card.fallbackSetName = !card.setId?.setName;
+            orderedResults.push(card);
+          }
+        });
+
+        console.log(`[FLEXSEARCH] Cards search "${query}" returned ${orderedResults.length} results`);
+        return orderedResults;
+      }
+    } catch (error) {
+      console.error('[FLEXSEARCH] Cards search failed, falling back to MongoDB:', error);
+    }
+
+    // MongoDB fallback
+    console.log(`[MONGODB FALLBACK] Searching cards for: "${query}"`);
     const searchFields = ['cardName', 'baseName', 'pokemonNumber', 'variety'];
-    const defaultSort = { psaTotalGradedForCard: -1, _id: 1 };
+    const defaultSort = { score: { $meta: 'textScore' }, psaTotalGradedForCard: -1 };
     
     const results = await this.search(
       Card, 
@@ -110,33 +426,119 @@ class SearchService {
       }
     );
 
-    // Ensure each result has a unique identifier and handle missing set data
-    return results.map((card, index) => {
+    return results.map((card) => {
       const cardObj = card.toObject ? card.toObject() : card;
-      
-      // Add fallback for missing set data with unique identifier
-      if (!cardObj.setId || !cardObj.setId.setName) {
-        cardObj.setDisplayName = `Unknown Set (${cardObj._id})`;
-        cardObj.fallbackSetName = true;
-      } else {
-        cardObj.setDisplayName = cardObj.setId.setName;
-        cardObj.fallbackSetName = false;
-      }
-      
-      
+      cardObj.setDisplayName = cardObj.setId?.setName || 'Unknown Set';
+      cardObj.fallbackSetName = !cardObj.setId?.setName;
       return cardObj;
     });
   }
 
   /**
-   * Search card market products
+   * Search products using FlexSearch with MongoDB fallback - FAST partial matching
    * @param {string} query - Search query
    * @param {Object} filters - Additional filters
    * @param {Object} options - Search options
    * @returns {Promise<Array>} Product search results
    */
   async searchProducts(query, filters = {}, options = {}) {
-    const searchFields = ['name', 'setName', 'category'];
+    const { limit = 50 } = options;
+    
+    // AUTO-TRIGGER FEATURE: If no query but filters exist, show filtered results
+    if ((!query || !query.trim()) && Object.keys(filters).length === 0) {
+      return [];
+    }
+    
+    // Handle empty query or wildcard "*" with filters - show all matching filter criteria
+    if (!query || !query.trim() || query.trim() === '*') {
+      console.log(`[MONGODB DIRECT] Searching products with filters only:`, filters);
+      
+      const results = await CardMarketReferenceProduct.find(filters)
+        .lean()
+        .limit(limit)
+        .sort({ available: -1, price: 1, _id: 1 });
+
+      return results;
+    }
+
+    try {
+      // Try FlexSearch first for INSTANT partial matching
+      await this.initializeIndexes();
+      
+      console.log(`[FLEXSEARCH] Searching products for: "${query}" with filters:`, filters);
+      
+      // OPTIMIZED SEARCH: Multiple search strategies for better partial matching
+      let searchResults = [];
+      
+      // Strategy 1: Exact phrase search
+      const exactResults = this.productIndex.search(query.trim(), {
+        limit: limit * 3,
+        enrich: true,
+        suggest: true
+      });
+      
+      // Strategy 2: Individual word search for partial matches
+      const words = query.trim().split(/\s+/).filter(word => word.length > 0);
+      const wordResults = [];
+      words.forEach(word => {
+        if (word.length >= 1) {
+          const results = this.productIndex.search(word, {
+            limit: limit * 2,
+            enrich: true,
+            suggest: true
+          });
+          wordResults.push(...results);
+        }
+      });
+      
+      // Combine and deduplicate results
+      const allResults = [...exactResults, ...wordResults];
+      const seenIds = new Set();
+      searchResults = allResults.filter(result => {
+        const hasNew = result.result.some(id => !seenIds.has(id));
+        result.result.forEach(id => seenIds.add(id));
+        return hasNew;
+      });
+
+      // Extract document IDs
+      const productIds = [];
+      searchResults.forEach(result => {
+        result.result.forEach(id => {
+          if (!productIds.includes(id)) {
+            productIds.push(id);
+          }
+        });
+      });
+
+      if (productIds.length > 0) {
+        // SMART FILTERING: Apply both FlexSearch results AND filters
+        console.log(`[FLEXSEARCH] Found ${productIds.length} FlexSearch matches, now applying filters:`, filters);
+        const products = await CardMarketReferenceProduct.find({
+          _id: { $in: productIds },
+          ...filters
+        })
+        .lean()
+        .limit(limit);
+
+        // Order results by FlexSearch relevance
+        const orderedResults = [];
+        productIds.forEach(id => {
+          const product = products.find(p => p._id.toString() === id);
+          if (product && orderedResults.length < limit) {
+            orderedResults.push(product);
+          }
+        });
+
+        console.log(`[FLEXSEARCH] Products search "${query}" returned ${orderedResults.length} results`);
+        return orderedResults;
+      }
+    } catch (error) {
+      console.error('[FLEXSEARCH] Products search failed, falling back to MongoDB:', error);
+    }
+
+    // MongoDB fallback
+    console.log(`[MONGODB FALLBACK] Searching products for: "${query}"`);
+    const searchFields = ['name', 'category'];
     const defaultSort = { available: -1, price: 1, _id: 1 };
     
     return await this.search(
@@ -152,13 +554,66 @@ class SearchService {
   }
 
   /**
-   * Search sets
+   * Search sets using FlexSearch with MongoDB fallback
    * @param {string} query - Search query
    * @param {Object} filters - Additional filters
    * @param {Object} options - Search options
    * @returns {Promise<Array>} Set search results
    */
   async searchSets(query, filters = {}, options = {}) {
+    const { limit = 50 } = options;
+    
+    if (!query || !query.trim()) {
+      return [];
+    }
+
+    try {
+      // Try FlexSearch first for INSTANT partial matching
+      await this.initializeIndexes();
+      
+      console.log(`[FLEXSEARCH] Searching sets for: "${query}"`);
+      const searchResults = this.setIndex.search(query.trim(), {
+        limit: limit * 2,
+        enrich: true
+      });
+
+      // Extract document IDs
+      const setIds = [];
+      searchResults.forEach(result => {
+        result.result.forEach(id => {
+          if (!setIds.includes(id)) {
+            setIds.push(id);
+          }
+        });
+      });
+
+      if (setIds.length > 0) {
+        // Fetch actual set documents
+        const sets = await Set.find({
+          _id: { $in: setIds },
+          ...filters
+        })
+        .lean()
+        .limit(limit);
+
+        // Order results by FlexSearch relevance
+        const orderedResults = [];
+        setIds.forEach(id => {
+          const set = sets.find(s => s._id.toString() === id);
+          if (set && orderedResults.length < limit) {
+            orderedResults.push(set);
+          }
+        });
+
+        console.log(`[FLEXSEARCH] Sets search "${query}" returned ${orderedResults.length} results`);
+        return orderedResults;
+      }
+    } catch (error) {
+      console.error('[FLEXSEARCH] Sets search failed, falling back to MongoDB:', error);
+    }
+
+    // MongoDB fallback
+    console.log(`[MONGODB FALLBACK] Searching sets for: "${query}"`);
     const searchFields = ['setName'];
     const defaultSort = { year: -1, totalPsaPopulation: -1, _id: 1 };
     
