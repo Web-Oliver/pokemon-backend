@@ -26,7 +26,7 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
       page: searchPageNum
     };
     
-    const { results, total, page, totalPages } = await searchService.searchProducts(searchQuery, filters, searchOptions);
+    const { results, total, page: resultPage, totalPages } = await searchService.searchProducts(searchQuery, filters, searchOptions);
     
     return res.status(200).json({
       success: true,
@@ -34,10 +34,10 @@ const getAllCardMarketRefProducts = asyncHandler(async (req, res) => {
       data: {
         products: results,
         total,
-        currentPage: page,
+        currentPage: resultPage || searchPageNum,
         totalPages,
-        hasNextPage: page < totalPages,
-        hasPrevPage: page > 1,
+        hasNextPage: (resultPage || searchPageNum) < totalPages,
+        hasPrevPage: (resultPage || searchPageNum) > 1,
         count: results.length,
         limit: searchLimitNum,
       },
@@ -131,38 +131,93 @@ const getCardMarketRefProductSetNames = asyncHandler(async (req, res) => {
   const searchQuery = q || search;
 
   if (searchQuery) {
-    // Search products by set name and extract unique set names
+    // Search products by set name and extract set names with metadata
     const searchResults = await searchService.searchProducts(searchQuery, {}, { limit: 100 });
     const products = Array.isArray(searchResults) ? searchResults : searchResults.results || [];
-    const uniqueSetNames = [...new Set(products.map(p => p.setName))].sort();
+    
+    // Group products by setName and calculate metadata
+    const setNameStats = {};
+    products.forEach(product => {
+      if (!setNameStats[product.setName]) {
+        setNameStats[product.setName] = {
+          setName: product.setName,
+          count: 0,
+          totalAvailable: 0,
+          categories: new Set(),
+          totalPrice: 0,
+          productCount: 0
+        };
+      }
+      
+      const stats = setNameStats[product.setName];
+      stats.count++;
+      stats.totalAvailable += product.available || 0;
+      stats.categories.add(product.category);
+      
+      if (product.price) {
+        stats.totalPrice += parseFloat(product.price) || 0;
+        stats.productCount++;
+      }
+    });
+
+    // Transform to final format with calculated averages
+    const setNamesWithStats = Object.values(setNameStats).map(stats => ({
+      setName: stats.setName,
+      count: stats.count,
+      totalAvailable: stats.totalAvailable,
+      categoryCount: stats.categories.size,
+      averagePrice: stats.productCount > 0 ? (stats.totalPrice / stats.productCount) : 0
+    })).sort((a, b) => a.setName.localeCompare(b.setName));
 
     return res.status(200).json({
       success: true,
       status: 'success',
-      data: uniqueSetNames,
+      data: setNamesWithStats,
       meta: {
         timestamp: new Date().toISOString(),
         version: '1.0',
         duration: '0ms',
-        totalResults: uniqueSetNames.length,
+        totalResults: setNamesWithStats.length,
         query: searchQuery
       },
     });
   }
 
-  // Fallback to simple aggregation
-  const setNames = await CardMarketReferenceProduct.distinct('setName');
-  const sortedSetNames = setNames.sort();
+  // Fallback to aggregation with metadata
+  const aggregationPipeline = [
+    {
+      $group: {
+        _id: '$setName',
+        count: { $sum: 1 },
+        totalAvailable: { $sum: '$available' },
+        categories: { $addToSet: '$category' },
+        averagePrice: { $avg: { $toDouble: '$price' } }
+      }
+    },
+    {
+      $project: {
+        setName: '$_id',
+        count: 1,
+        totalAvailable: 1,
+        categoryCount: { $size: '$categories' },
+        averagePrice: { $round: ['$averagePrice', 2] },
+        _id: 0
+      }
+    },
+    { $sort: { setName: 1 } }
+  ];
+
+  const setNamesWithStats = await CardMarketReferenceProduct.aggregate(aggregationPipeline);
 
   res.status(200).json({
     success: true,
     status: 'success',
-    data: sortedSetNames,
+    data: setNamesWithStats,
     meta: {
       timestamp: new Date().toISOString(),
       version: '1.0',
       duration: '0ms',
-      count: sortedSetNames.length
+      count: setNamesWithStats.length
     },
   });
 });

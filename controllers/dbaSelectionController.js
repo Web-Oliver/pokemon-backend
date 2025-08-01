@@ -31,34 +31,86 @@ const getAllDbaSelections = asyncHandler(async (req, res) => {
 
     selections = await DbaSelection.getExpiringSoon(expiringSoonDays);
   } else {
-    selections = await DbaSelection.find(query).sort({ selectedDate: -1 });
+    // Use lean() to get plain JS objects and limit fields
+    selections = await DbaSelection.find(query)
+      .select('itemId itemType selectedDate isActive notes expiryDate')
+      .sort({ selectedDate: -1 })
+      .lean()
+      .exec();
   }
   
-  // Populate with actual item data
-  const selectionsWithItems = await Promise.all(selections.map(async (selection) => {
-    let item = null;
+  // Group selections by type for batch querying
+  const psaSelections = selections.filter(s => s.itemType === 'psa');
+  const rawSelections = selections.filter(s => s.itemType === 'raw');
+  const sealedSelections = selections.filter(s => s.itemType === 'sealed');
+
+  // Batch query items by type
+  const [psaItems, rawItems, sealedItems] = await Promise.all([
+    psaSelections.length > 0 
+      ? PsaGradedCard.find({ _id: { $in: psaSelections.map(s => s.itemId) } })
+        .populate('cardId')
+        .lean()
+        .exec()
+      : [],
+    rawSelections.length > 0
+      ? RawCard.find({ _id: { $in: rawSelections.map(s => s.itemId) } })
+        .populate('cardId')
+        .lean()
+        .exec()
+      : [],
+    sealedSelections.length > 0
+      ? SealedProduct.find({ _id: { $in: sealedSelections.map(s => s.itemId) } })
+        .populate('productId')
+        .lean()
+        .exec()
+      : []
+  ]);
+
+  // Create lookup maps
+  const itemsMap = {
+    psa: psaItems.reduce((map, item) => ({ ...map, [item._id]: item }), {}),
+    raw: rawItems.reduce((map, item) => ({ ...map, [item._id]: item }), {}),
+    sealed: sealedItems.reduce((map, item) => ({ ...map, [item._id]: item }), {})
+  };
+
+  // Transform selections with computed fields
+  const selectionsWithItems = selections.map(selection => {
+    const now = new Date();
     
-    try {
-      switch (selection.itemType) {
-        case 'psa':
-          item = await PsaGradedCard.findById(selection.itemId).populate('cardId');
-          break;
-        case 'raw':
-          item = await RawCard.findById(selection.itemId).populate('cardId');
-          break;
-        case 'sealed':
-          item = await SealedProduct.findById(selection.itemId).populate('productId');
-          break;
-      }
-    } catch (error) {
-      console.warn(`Failed to populate item ${selection.itemId}:`, error.message);
-    }
+    const item = itemsMap[selection.itemType]?.[selection.itemId];
+    const itemData = item ? {
+      ...item,
+      _id: item._id?.toString(),
+      id: item._id?.toString(),
+      cardId: item.cardId?._id?.toString(),
+      productId: item.productId?._id?.toString()
+    } : null;
+
+    // Compute days remaining
+    const diffTime = selection.expiryDate.getTime() - now.getTime();
+    const daysRemaining = Math.max(0, Math.ceil(diffTime / (1000 * 60 * 60 * 24)));
     
+    // Compute days selected  
+    const selectedDiffTime = now.getTime() - selection.selectedDate.getTime();
+    const daysSelected = Math.floor(selectedDiffTime / (1000 * 60 * 60 * 24));
+    
+    // Convert to plain object with computed fields
     return {
-      ...selection.toJSON(),
-      item: item || null
+      _id: selection._id?.toString(),
+      id: selection._id?.toString(),
+      itemId: selection.itemId?.toString(),
+      itemType: selection.itemType,
+      notes: selection.notes || '',
+      isActive: selection.isActive,
+      selectedDate: selection.selectedDate,
+      expiryDate: selection.expiryDate,
+      createdAt: selection.createdAt,
+      updatedAt: selection.updatedAt,
+      daysRemaining,
+      daysSelected,
+      item: itemData
     };
-  }));
+  });
   
   res.status(200).json({
     success: true,

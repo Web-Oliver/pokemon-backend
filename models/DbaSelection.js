@@ -35,9 +35,13 @@ const dbaSelectionSchema = new mongoose.Schema({
 });
 
 // Index for efficient querying
-dbaSelectionSchema.index({ itemId: 1, itemType: 1 }, { unique: true });
-dbaSelectionSchema.index({ isActive: 1 });
-dbaSelectionSchema.index({ expiryDate: 1 });
+try {
+  dbaSelectionSchema.index({ itemId: 1, itemType: 1 }, { unique: true, background: true });
+  dbaSelectionSchema.index({ isActive: 1 }, { background: true });
+  dbaSelectionSchema.index({ expiryDate: 1 }, { background: true });
+} catch (error) {
+  console.error('[DbaSelection] Failed to create indexes:', error);
+}
 
 // Virtual for days remaining
 dbaSelectionSchema.virtual('daysRemaining').get(function() {

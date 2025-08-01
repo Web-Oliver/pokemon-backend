@@ -553,7 +553,14 @@ class SearchService {
         });
 
         console.log(`[FLEXSEARCH] Products search "${query}" returned ${orderedResults.length} results`);
-        return orderedResults;
+        
+        // Return consistent format with metadata for FlexSearch results
+        return {
+          results: orderedResults,
+          total: totalCount,
+          page: options.page || 1,
+          totalPages: Math.ceil(totalCount / (options.limit || 50))
+        };
       }
     } catch (error) {
       console.error('[FLEXSEARCH] Products search failed, falling back to MongoDB:', error);

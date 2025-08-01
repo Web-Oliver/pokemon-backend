@@ -129,12 +129,8 @@ class Logger {
    * @param {any} data - Debug data
    */
   static debug(component, message, data = null) {
-    if (process.env.NODE_ENV !== 'production') {
-      console.log(`[DEBUG:${component.toUpperCase()}] ${message}`);
-      if (data !== null) {
-        console.log(`[DEBUG:${component.toUpperCase()}] Data:`, data);
-      }
-    }
+    // Debug logging disabled to reduce console noise
+    return;
   }
 
   /**
