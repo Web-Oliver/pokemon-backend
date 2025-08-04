@@ -4,15 +4,19 @@ const { queryOptimizationPlugin } = require('../plugins/queryOptimization');
 
 const cardSchema = new mongoose.Schema(
   {
+    // MongoDB ObjectId relationships
     setId: { type: Schema.Types.ObjectId, ref: 'Set', required: true },
-    pokemonNumber: { type: String, required: false, default: '' },
+    
+    // Card data
     cardName: { type: String, required: true },
     variety: { type: String, default: '' },
+    cardNumber: { type: String, required: true },
     
-    // New fields for migration
-    unique_pokemon_id: { type: Number, required: true, unique: true },
-    unique_set_id: { type: Number, required: true },
-    card_number: { type: String, required: true },
+    // Unique identifiers for database rebuilding
+    uniquePokemonId: { type: Number, required: true, unique: true },
+    uniqueSetId: { type: Number, required: true },
+    
+    // PSA grade population data
     grades: {
       grade_1: { type: Number, default: 0 },
       grade_2: { type: Number, default: 0 },
@@ -31,19 +35,19 @@ const cardSchema = new mongoose.Schema(
 );
 
 // Compound index to ensure uniqueness for cards within a set
-cardSchema.index({ setId: 1, cardName: 1, pokemonNumber: 1, variety: 1 }, { unique: true });
+cardSchema.index({ setId: 1, cardName: 1, cardNumber: 1, variety: 1 }, { unique: true });
 
-// Text search index for efficient search across card name and pokemon number
+// Text search index for efficient search across card name and card number
 cardSchema.index(
   {
     cardName: 'text',
-    pokemonNumber: 'text',
+    cardNumber: 'text',
     variety: 'text',
   },
   {
     weights: {
       cardName: 10,
-      pokemonNumber: 5,
+      cardNumber: 5,
       variety: 3,
     },
     name: 'card_text_search',
@@ -53,18 +57,19 @@ cardSchema.index(
 // Optimized indexes for common search patterns
 cardSchema.index({ cardName: 1 });
 cardSchema.index({ setId: 1, cardName: 1 });
-cardSchema.index({ setId: 1, pokemonNumber: 1 });
+cardSchema.index({ setId: 1, cardNumber: 1 });
+cardSchema.index({ cardNumber: 1 }); // Card number lookup
 
-// New indexes for migration fields
-cardSchema.index({ unique_pokemon_id: 1 }); // Unique pokemon ID lookups
-cardSchema.index({ unique_set_id: 1 }); // Unique set ID lookups
-cardSchema.index({ card_number: 1 }); // Card number filtering
+// Unique identifier indexes for database rebuilding
+cardSchema.index({ uniquePokemonId: 1 }); // Unique pokemon ID lookups
+cardSchema.index({ uniqueSetId: 1 }); // Unique set ID lookups
+
+// PSA grade indexes
 cardSchema.index({ 'grades.grade_total': 1 }); // Grade total filtering
 cardSchema.index({ 'grades.grade_10': -1 }); // PSA 10 filtering
 cardSchema.index({ setId: 1, 'grades.grade_total': -1 }); // Set with grade population
-cardSchema.index({ unique_set_id: 1, 'grades.grade_total': -1 }); // Unique set with grade population
+cardSchema.index({ uniqueSetId: 1, 'grades.grade_total': -1 }); // Unique set with grade population
 cardSchema.index({ variety: 1 }); // Variety filtering
-cardSchema.index({ pokemonNumber: 1 }); // Pokemon number lookup
 
 // Add validation for new structure
 cardSchema.pre('save', function(next) {
@@ -72,14 +77,14 @@ cardSchema.pre('save', function(next) {
   const { ValidationError } = require('../middleware/errorHandler');
   
   try {
-    // Validate unique_pokemon_id
-    if (this.unique_pokemon_id !== undefined) {
-      validateUniquePokemonId(this.unique_pokemon_id);
+    // Validate uniquePokemonId
+    if (this.uniquePokemonId !== undefined) {
+      validateUniquePokemonId(this.uniquePokemonId);
     }
     
-    // Validate unique_set_id
-    if (this.unique_set_id !== undefined) {
-      validateUniqueSetId(this.unique_set_id);
+    // Validate uniqueSetId
+    if (this.uniqueSetId !== undefined) {
+      validateUniqueSetId(this.uniqueSetId);
     }
     
     // Validate grades structure
@@ -87,9 +92,9 @@ cardSchema.pre('save', function(next) {
       validateGrades(this.grades);
     }
     
-    // Validate card_number is not empty
-    if (this.card_number !== undefined && this.card_number.trim() === '') {
-      throw new ValidationError('card_number cannot be empty');
+    // Validate cardNumber is not empty
+    if (this.cardNumber !== undefined && this.cardNumber.trim() === '') {
+      throw new ValidationError('cardNumber cannot be empty');
     }
     
     next();

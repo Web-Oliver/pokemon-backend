@@ -7,27 +7,9 @@ const { saleDetailsSchema, priceHistorySchema, sealedProductTransform } = requir
 const sealedProductSchema = new mongoose.Schema({
   productId: {
     type: Schema.Types.ObjectId,
-    ref: 'CardMarketReferenceProduct',
+    ref: 'Product',
     required: true,
   },
-  category: {
-    type: String,
-    required: true,
-    enum: [
-      'Blisters',
-      'Booster-Boxes',
-      'Boosters',
-      'Box-Sets',
-      'Elite-Trainer-Boxes',
-      'Theme-Decks',
-      'Tins',
-      'Trainer-Kits',
-    ],
-  },
-  setName: { type: String, required: true },
-  name: { type: String, required: true },
-  availability: { type: Number, required: true },
-  cardMarketPrice: { type: mongoose.Types.Decimal128, required: true },
   myPrice: { type: mongoose.Types.Decimal128, required: true },
   priceHistory: priceHistorySchema,
   images: [{ type: String }],
@@ -37,13 +19,9 @@ const sealedProductSchema = new mongoose.Schema({
 });
 
 // Add product-specific indexes for optimal query performance
-sealedProductSchema.index({ category: 1, sold: 1 }); // Category filtering with sale status
-sealedProductSchema.index({ setName: 1, sold: 1 }); // Set filtering with sale status
-sealedProductSchema.index({ setName: 1, category: 1 }); // Combined set and category filtering
-sealedProductSchema.index({ cardMarketPrice: 1 }); // Price range queries
+sealedProductSchema.index({ productId: 1, sold: 1 }); // Product filtering with sale status
 sealedProductSchema.index({ myPrice: 1 }); // User price range queries
-sealedProductSchema.index({ availability: 1 }); // Availability filtering
-sealedProductSchema.index({ productId: 1, sold: 1 }); // Reference product queries
+sealedProductSchema.index({ sold: 1 }); // Sale status filtering
 sealedProductSchema.index({ dateAdded: -1, sold: 1 }); // Recent items with sale status
 
 // Apply activity tracking plugin
@@ -71,10 +49,9 @@ sealedProductSchema.plugin(queryOptimizationPlugin, {
   optimizationLevel: 'standard',
   // Product-specific optimizations
   productSpecificOptions: {
-    enableCategoryIndexing: true,
-    enableSetNameIndexing: true,
+    enableProductIndexing: true,
     enablePriceRangeOptimization: true,
-    enableAvailabilityFiltering: true,
+    enableSaleStatusFiltering: true,
   },
 });
 

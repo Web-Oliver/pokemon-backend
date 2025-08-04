@@ -49,7 +49,7 @@ class CardRepository extends BaseRepository {
    */
   async findByUniqueSetId(uniqueSetId, options = {}) {
     try {
-      return await this.findAll({ unique_set_id: uniqueSetId }, options);
+      return await this.findAll({ uniqueSetId }, options);
     } catch (error) {
       throw error;
     }
@@ -83,14 +83,14 @@ class CardRepository extends BaseRepository {
   }
 
   /**
-   * Finds cards by Pokemon number
-   * @param {string} pokemonNumber - Pokemon number
+   * Finds cards by card number
+   * @param {string} cardNumber - Card number
    * @param {Object} options - Query options
-   * @returns {Promise<Array>} - Cards with the Pokemon number
+   * @returns {Promise<Array>} - Cards with the card number
    */
-  async findByPokemonNumber(pokemonNumber, options = {}) {
+  async findByCardNumber(cardNumber, options = {}) {
     try {
-      return await this.findAll({ pokemonNumber }, options);
+      return await this.findAll({ cardNumber }, options);
     } catch (error) {
       throw error;
     }
@@ -117,18 +117,17 @@ class CardRepository extends BaseRepository {
       if (query) {
         searchConditions.$or = [
           { cardName: { $regex: query, $options: 'i' } },
-          { pokemonNumber: { $regex: query, $options: 'i' } },
+          { cardNumber: { $regex: query, $options: 'i' } },
           { variety: { $regex: query, $options: 'i' } },
         ];
       }
 
       // Direct field filters
       if (filters.setId) searchConditions.setId = filters.setId;
-      if (filters.uniqueSetId) searchConditions.unique_set_id = filters.uniqueSetId;
-      if (filters.pokemonNumber) searchConditions.pokemonNumber = filters.pokemonNumber;
+      if (filters.uniqueSetId) searchConditions.uniqueSetId = filters.uniqueSetId;
+      if (filters.cardNumber) searchConditions.cardNumber = filters.cardNumber;
       if (filters.variety) searchConditions.variety = new RegExp(filters.variety, 'i');
-      if (filters.cardNumber) searchConditions.card_number = filters.cardNumber;
-      if (filters.uniquePokemonId) searchConditions.unique_pokemon_id = filters.uniquePokemonId;
+      if (filters.uniquePokemonId) searchConditions.uniquePokemonId = filters.uniquePokemonId;
       
       // Grade population filter
       if (filters.minGradedPopulation) {
@@ -214,10 +213,9 @@ class CardRepository extends BaseRepository {
         text: card.cardName,
         secondaryText: card.variety || null,
         metadata: {
-          pokemonNumber: card.pokemonNumber,
-          cardNumber: card.card_number,
+          cardNumber: card.cardNumber,
           variety: card.variety,
-          uniquePokemonId: card.unique_pokemon_id,
+          uniquePokemonId: card.uniquePokemonId,
           setName: card.setInfo?.setName,
           year: card.setInfo?.year,
           totalGraded: card.grades?.grade_total,

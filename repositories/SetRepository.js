@@ -87,7 +87,7 @@ class SetRepository extends BaseRepository {
       // Unique set ID filter
       if (filters.uniqueSetId) {
         matchConditions.push({
-          unique_set_id: filters.uniqueSetId
+          uniqueSetId: filters.uniqueSetId
         });
       }
 
@@ -241,7 +241,7 @@ class SetRepository extends BaseRepository {
           year: set.year,
           totalCards: set.totalCardsInSet,
           totalGraded: set.total_grades?.total_graded,
-          uniqueSetId: set.unique_set_id,
+          uniqueSetId: set.uniqueSetId,
           setUrl: set.setUrl,
           era: set.year || 'Unknown',
           // Include grade breakdown if available

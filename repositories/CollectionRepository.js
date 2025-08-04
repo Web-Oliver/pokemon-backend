@@ -1,13 +1,3 @@
-/**
- * Collection Repository
- * 
- * Replaces the duplicated collection repositories:
- * - PsaGradedCardRepository.js (248 lines)
- * - RawCardRepository.js (294 lines)
- * - SealedProductRepository.js (404 lines)
- * Total: 946 lines → ~200 lines (79% reduction)
- */
-
 const BaseRepository = require('./base/BaseRepository');
 
 /**

@@ -1,24 +1,25 @@
 const BaseRepository = require('./base/BaseRepository');
-const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
+const Product = require('../models/Product');
 const { ValidationError } = require('../middleware/errorHandler');
 
 /**
- * CardMarketReferenceProduct Repository
+ * Product Repository
  *
- * Specialized repository for CardMarketReferenceProduct model operations.
+ * Specialized repository for Product model operations.
  * Extends BaseRepository with product-specific search and query methods.
  *
- * IMPORTANT: This handles CardMarketReferenceProduct which has a setName field
- * that is NOT the same as the Set model. This setName is for product grouping.
+ * IMPORTANT: This handles Product which references SetProduct
+ * for product expansion/set grouping information.
  */
-class CardMarketReferenceProductRepository extends BaseRepository {
+class ProductRepository extends BaseRepository {
   /**
-   * Creates a new CardMarketReferenceProduct repository instance
+   * Creates a new Product repository instance
    */
   constructor() {
-    super(CardMarketReferenceProduct, {
-      entityName: 'CardMarketReferenceProduct',
+    super(Product, {
+      entityName: 'Product',
       defaultSort: { available: -1, price: 1 },
+      defaultPopulate: 'setProductId',
     });
   }
 
@@ -42,16 +43,16 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   }
 
   /**
-   * Finds products by set name (product grouping)
-   * @param {string} setName - Set name to search
+   * Finds products by set product ID
+   * @param {string} setProductId - Set product ID
    * @param {Object} options - Query options
    * @returns {Promise<Array>} - Products in the set
    */
-  async findBySetName(setName, options = {}) {
+  async findBySetProduct(setProductId, options = {}) {
     try {
       return await this.findAll(
         {
-          setName: new RegExp(setName, 'i'),
+          setProductId,
         },
         options,
       );
@@ -78,12 +79,26 @@ class CardMarketReferenceProductRepository extends BaseRepository {
         },
       });
 
+      // Populate set product for search
+      pipeline.push({
+        $lookup: {
+          from: 'setproducts',
+          localField: 'setProductId',
+          foreignField: '_id',
+          as: 'setProduct',
+        },
+      });
+
+      pipeline.push({
+        $unwind: '$setProduct',
+      });
+
       // Text search
       if (query) {
         matchConditions.push({
           $or: [
-            { name: { $regex: query, $options: 'i' } },
-            { setName: { $regex: query, $options: 'i' } },
+            { productName: { $regex: query, $options: 'i' } },
+            { 'setProduct.setProductName': { $regex: query, $options: 'i' } },
             { category: { $regex: query, $options: 'i' } },
           ],
         });
@@ -96,10 +111,10 @@ class CardMarketReferenceProductRepository extends BaseRepository {
         });
       }
 
-      // Set name filter
-      if (filters.setName) {
+      // Set product filter
+      if (filters.setProductId) {
         matchConditions.push({
-          setName: new RegExp(filters.setName, 'i'),
+          setProductId: filters.setProductId,
         });
       }
 
@@ -127,13 +142,6 @@ class CardMarketReferenceProductRepository extends BaseRepository {
         });
       }
 
-      // Last updated filter
-      if (filters.lastUpdatedAfter) {
-        matchConditions.push({
-          lastUpdated: { $gte: new Date(filters.lastUpdatedAfter) },
-        });
-      }
-
       // Add match stage
       if (matchConditions.length > 0) {
         pipeline.push({
@@ -147,10 +155,10 @@ class CardMarketReferenceProductRepository extends BaseRepository {
           $addFields: {
             score: {
               $add: [
-                // Exact name match
+                // Exact product name match
                 {
                   $cond: {
-                    if: { $eq: [{ $toLower: '$name' }, query.toLowerCase()] },
+                    if: { $eq: [{ $toLower: '$productName' }, query.toLowerCase()] },
                     then: 100,
                     else: 0,
                   },
@@ -159,18 +167,18 @@ class CardMarketReferenceProductRepository extends BaseRepository {
                 {
                   $cond: {
                     if: {
-                      $eq: [{ $toLower: '$setName' }, query.toLowerCase()],
+                      $eq: [{ $toLower: '$setProduct.setProductName' }, query.toLowerCase()],
                     },
                     then: 80,
                     else: 0,
                   },
                 },
-                // Name starts with
+                // Product name starts with
                 {
                   $cond: {
                     if: {
                       $regexMatch: {
-                        input: { $toLower: '$name' },
+                        input: { $toLower: '$productName' },
                         regex: `^${query.toLowerCase()}`,
                       },
                     },
@@ -183,7 +191,7 @@ class CardMarketReferenceProductRepository extends BaseRepository {
                   $cond: {
                     if: {
                       $regexMatch: {
-                        input: { $toLower: '$setName' },
+                        input: { $toLower: '$setProduct.setProductName' },
                         regex: `^${query.toLowerCase()}`,
                       },
                     },
@@ -191,12 +199,12 @@ class CardMarketReferenceProductRepository extends BaseRepository {
                     else: 0,
                   },
                 },
-                // Name contains
+                // Product name contains
                 {
                   $cond: {
                     if: {
                       $regexMatch: {
-                        input: { $toLower: '$name' },
+                        input: { $toLower: '$productName' },
                         regex: query.toLowerCase(),
                       },
                     },
@@ -209,7 +217,7 @@ class CardMarketReferenceProductRepository extends BaseRepository {
                   $cond: {
                     if: {
                       $regexMatch: {
-                        input: { $toLower: '$setName' },
+                        input: { $toLower: '$setProduct.setProductName' },
                         regex: query.toLowerCase(),
                       },
                     },
@@ -306,15 +314,28 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   }
 
   /**
-   * Gets available set names (product groupings)
-   * @returns {Promise<Array>} - Available set names
+   * Gets available set products
+   * @returns {Promise<Array>} - Available set products
    */
-  async getSetNames() {
+  async getSetProducts() {
     try {
-      const setNames = await this.aggregate([
+      const setProducts = await this.aggregate([
+        {
+          $lookup: {
+            from: 'setproducts',
+            localField: 'setProductId',
+            foreignField: '_id',
+            as: 'setProduct',
+          },
+        },
+        {
+          $unwind: '$setProduct',
+        },
         {
           $group: {
-            _id: '$setName',
+            _id: '$setProductId',
+            setProductName: { $first: '$setProduct.setProductName' },
+            uniqueSetProductId: { $first: '$setProduct.uniqueSetProductId' },
             count: { $sum: 1 },
             totalAvailable: { $sum: '$available' },
             averagePrice: { $avg: { $toDouble: '$price' } },
@@ -326,7 +347,9 @@ class CardMarketReferenceProductRepository extends BaseRepository {
         },
         {
           $project: {
-            setName: '$_id',
+            setProductId: '$_id',
+            setProductName: 1,
+            uniqueSetProductId: 1,
             count: 1,
             totalAvailable: 1,
             averagePrice: { $round: ['$averagePrice', 2] },
@@ -336,7 +359,7 @@ class CardMarketReferenceProductRepository extends BaseRepository {
         },
       ]);
 
-      return setNames;
+      return setProducts;
     } catch (error) {
       throw error;
     }
@@ -356,14 +379,15 @@ class CardMarketReferenceProductRepository extends BaseRepository {
 
       return results.map((product) => ({
         id: product._id,
-        text: product.name,
-        secondaryText: product.setName,
+        text: product.productName,
+        secondaryText: product.setProduct?.setProductName || 'Unknown Set',
         metadata: {
           category: product.category,
           price: product.price,
           priceNumeric: product.priceNumeric,
           available: product.available,
-          setName: product.setName,
+          setProductId: product.setProductId,
+          setProductName: product.setProduct?.setProductName,
           isAvailable: product.available > 0,
         },
       }));
@@ -373,4 +397,4 @@ class CardMarketReferenceProductRepository extends BaseRepository {
   }
 }
 
-module.exports = CardMarketReferenceProductRepository;
+module.exports = ProductRepository;
