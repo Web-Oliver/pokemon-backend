@@ -13,13 +13,13 @@ Migrating from old data structure to new improved format with both `unique_set_i
   - [x] Update indexes for new fields
   - [x] Add validation for new structure
 
-- [ ] **Update Card.js model** - Add new fields while keeping MongoDB ObjectId
-  - [ ] Add `unique_pokemon_id` (Number, required, unique)
-  - [ ] Add `grades` object (grade_1 through grade_10, grade_total)
-  - [ ] Add `card_number` field (String)
-  - [ ] Keep existing `_id` (auto-generated MongoDB ObjectId)
-  - [ ] Update compound indexes
-  - [ ] Add validation for new structure
+- [x] **Update Card.js model** - Add new fields while keeping MongoDB ObjectId
+  - [x] Add `unique_pokemon_id` (Number, required, unique)
+  - [x] Add `grades` object (grade_1 through grade_10, grade_total)
+  - [x] Add `card_number` field (String)
+  - [x] Keep existing `_id` (auto-generated MongoDB ObjectId)
+  - [x] Update compound indexes
+  - [x] Add validation for new structure
 
 ### 2. Core Infrastructure
 - [ ] **Create field mapping utilities** (`utils/fieldMapper.js`)
