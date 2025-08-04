@@ -202,11 +202,11 @@ const auctionTransform = createDecimal128Transform({
 });
 
 /**
- * Standard transform for card market reference products
- * Converts price, cardMarketPrice, and date fields
+ * Standard transform for products (SetProduct → Product hierarchy)
+ * Converts price and date fields for Product model
  */
-const cardMarketTransform = createDecimal128Transform({
-  priceFields: ['price', 'cardMarketPrice'],
+const productTransform = createDecimal128Transform({
+  priceFields: ['price'],
   nestedPriceFields: [],
   dateFields: ['lastUpdated'],
   nestedDateFields: [],
@@ -300,5 +300,5 @@ module.exports = {
   collectionItemTransform,
   sealedProductTransform,
   auctionTransform,
-  cardMarketTransform,
+  productTransform,
 };

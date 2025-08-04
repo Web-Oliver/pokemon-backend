@@ -9,7 +9,7 @@ const { ValidationError } = require('../middleware/errorHandler');
  * Extends BaseRepository with card-specific search and query methods.
  *
  * IMPORTANT: This handles the Card model (official Pokemon cards) which
- * references the Set model. This is different from CardMarketReferenceProduct.
+ * references the Set model. This is different from the Product model's SetProduct relationship.
  */
 class CardRepository extends BaseRepository {
   /**

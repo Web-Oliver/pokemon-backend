@@ -14,7 +14,7 @@ const SET_FIELD_MAPPING = {
   year: 'year',
   setUrl: 'setUrl',
   totalCardsInSet: 'totalCardsInSet',
-  totalPsaPopulation: 'totalPsaPopulation',
+  totalPsaPopulation: 'total_grades.total_graded',
   
   // New migration fields (no mapping needed for these)
   unique_set_id: 'unique_set_id',
@@ -27,9 +27,12 @@ const SET_FIELD_MAPPING = {
 const CARD_FIELD_MAPPING = {
   // Keep existing fields as-is for backward compatibility
   setId: 'setId',
-  pokemonNumber: 'pokemonNumber',
   cardName: 'cardName',
   variety: 'variety',
+  
+  // Field updates for new schema
+  pokemonNumber: 'cardNumber', // Old pokemonNumber -> new cardNumber
+  baseName: 'cardName', // Old baseName merged into cardName
   
   // Grade field mappings (old -> new)
   'psaGrades.psa_1': 'grades.grade_1',

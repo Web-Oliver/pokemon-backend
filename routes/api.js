@@ -6,7 +6,7 @@
  * 
  * This single file replaces:
  * - sales.js (9 lines)
- * - cardMarketRefProducts.js (13 lines)
+ * - products.js (13 lines) [formerly cardMarketRefProducts.js]
  * - externalListing.js (11 lines)
  * - export.js (28 lines)
  * Total: 61 lines of boilerplate → ~80 lines with better organization
@@ -21,12 +21,13 @@ const { getSales, getSalesSummary, getSalesGraphData } = require('../controllers
 // Models for status endpoint
 const Card = require('../models/Card');
 const Set = require('../models/Set');
-const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
+const Product = require('../models/Product');
+const SetProduct = require('../models/SetProduct');
 const {
-  getAllCardMarketRefProducts,
-  getCardMarketRefProductById,
-  getCardMarketRefProductSetNames,
-} = require('../controllers/cardMarketRefProductsController');
+  getAllProducts,
+  getProductById,
+  getProductSetNames,
+} = require('../controllers/productsController');
 const { generateFacebookPost, getCollectionFacebookTextFile, generateDbaTitle } = require('../controllers/externalListingController');
 const {
   zipPsaCardImages,
@@ -55,10 +56,11 @@ const {
 // ================================
 router.get('/status', async (req, res) => {
   try {
-    const [cardCount, setCount, productCount] = await Promise.all([
+    const [cardCount, setCount, productCount, setProductCount] = await Promise.all([
       Card.countDocuments(),
       Set.countDocuments(),
-      CardMarketReferenceProduct.countDocuments(),
+      Product.countDocuments(),
+      SetProduct.countDocuments(),
     ]);
 
     res.json({
@@ -67,6 +69,7 @@ router.get('/status', async (req, res) => {
         cards: cardCount,
         sets: setCount,
         products: productCount,
+        setProducts: setProductCount,
         timestamp: new Date().toISOString(),
       },
     });
@@ -88,11 +91,11 @@ router.get('/sales/summary', getSalesSummary);
 router.get('/sales/graph-data', getSalesGraphData);
 
 // ================================
-// CARD MARKET REFERENCE PRODUCTS
+// PRODUCTS (SetProduct → Product hierarchy)
 // ================================
-router.get('/cardmarket-ref-products/set-names', getCardMarketRefProductSetNames);
-router.get('/cardmarket-ref-products', getAllCardMarketRefProducts);
-router.get('/cardmarket-ref-products/:id', getCardMarketRefProductById);
+router.get('/products/set-names', getProductSetNames);
+router.get('/products', getAllProducts);
+router.get('/products/:id', getProductById);
 
 // ================================
 // EXTERNAL LISTING GENERATION

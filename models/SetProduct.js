@@ -14,10 +14,7 @@ const setProductSchema = new mongoose.Schema(
 
 // Add set product specific indexes for optimal query performance
 setProductSchema.index({ setProductName: 'text' }, { name: 'set_product_text_search' }); // Text search
-setProductSchema.index({ setProductName: 1 }); // Name filtering
-
-// Unique identifier indexes for database rebuilding
-setProductSchema.index({ uniqueSetProductId: 1 }); // ID lookups
+// Note: setProductName and uniqueSetProductId indexes are automatically created by unique: true in schema
 
 // Add validation for new structure
 setProductSchema.pre('save', function(next) {

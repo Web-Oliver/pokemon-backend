@@ -26,7 +26,7 @@ const getSetsWithPagination = asyncHandler(async (req, res) => {
   // No filtering needed since SealedProduct has its own setName field
 
   // Get all sets matching base criteria (use existing database values)
-  const allSets = await Set.find(baseQuery).select('setName year totalCardsInSet totalPsaPopulation setUrl').lean();
+  const allSets = await Set.find(baseQuery).select('setName year totalCardsInSet total_grades setUrl uniqueSetId').lean();
 
   let filteredSets = allSets;
 

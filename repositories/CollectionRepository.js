@@ -57,7 +57,7 @@ class CollectionRepository extends BaseRepository {
     switch (this.entityType) {
       case 'PsaGradedCard':
       case 'RawCard':
-        searchFields = ['cardId.cardName', 'cardId.baseName', 'cardId.variety'];
+        searchFields = ['cardId.cardName', 'cardId.variety', 'cardId.cardNumber'];
         break;
       case 'SealedProduct':
         searchFields = ['name', 'category', 'setName'];

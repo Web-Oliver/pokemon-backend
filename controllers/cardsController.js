@@ -14,7 +14,7 @@ class CardsController extends BaseController {
       enableCaching: true,
       enablePlugins: true,
       enableMetrics: true,
-      filterableFields: ['setId', 'cardName', 'baseName', 'pokemonNumber', 'year']
+      filterableFields: ['setId', 'cardName', 'cardNumber', 'variety', 'uniquePokemonId', 'uniqueSetId']
     });
 
     // Apply plugins specific to cards
@@ -24,11 +24,10 @@ class CardsController extends BaseController {
     this.addPlugin('cardSpecificEnhancements', {
       beforeOperation: async (operation, data, context) => {
         // Add card-specific validation or processing
-        if (operation === 'create' && data.pokemonNumber) {
-          // Validate Pokemon number format
-          if (!/^\d+$/.test(data.pokemonNumber)) {
-            const error = new Error('Pokemon number must be numeric');
-
+        if (operation === 'create' && data.cardNumber) {
+          // Validate card number format
+          if (!data.cardNumber.trim()) {
+            const error = new Error('Card number cannot be empty');
             error.statusCode = 400;
             throw error;
           }

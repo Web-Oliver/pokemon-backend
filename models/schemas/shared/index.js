@@ -42,6 +42,6 @@ module.exports = {
     collectionItemTransform: transforms.collectionItemTransform,
     sealedProductTransform: transforms.sealedProductTransform,
     auctionTransform: transforms.auctionTransform,
-    cardMarketTransform: transforms.cardMarketTransform,
+    productTransform: transforms.productTransform,
   },
 };

@@ -184,20 +184,22 @@ const ENTITY_CONFIGS = {
     includeMarkAsSold: false,
     
     // Filterable fields
-    filterableFields: ['cardName', 'setName', 'pokemonNumber'],
+    filterableFields: ['cardName', 'setName', 'cardNumber', 'variety', 'uniquePokemonId', 'uniqueSetId'],
     
     // Search configuration
-    searchFields: ['cardName', 'baseName', 'variety'],
+    searchFields: ['cardName', 'cardNumber', 'variety'],
     searchWeights: {
       cardName: 3,
-      baseName: 2,
+      cardNumber: 2,
       variety: 1,
     },
     
     // Validation rules
-    requiredFields: ['setId', 'cardName'],
+    requiredFields: ['setId', 'cardName', 'cardNumber', 'uniquePokemonId', 'uniqueSetId'],
     validationRules: {
-      pokemonNumber: { type: 'number', min: 1, integer: true },
+      cardNumber: { type: 'string', required: true },
+      uniquePokemonId: { type: 'number', min: 1, integer: true, required: true },
+      uniqueSetId: { type: 'number', min: 1, integer: true, required: true },
     },
   },
 

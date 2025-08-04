@@ -22,7 +22,7 @@ const search = asyncHandler(async (req, res) => {
   }
 
   // Parse types (default to all if not specified)
-  const searchTypes = types ? types.split(',').map(t => t.trim()) : ['cards', 'products', 'sets'];
+  const searchTypes = types ? types.split(',').map(t => t.trim()) : ['cards', 'products', 'sets', 'setProducts'];
 
   // Parse options
   const options = {
@@ -79,10 +79,10 @@ const suggest = asyncHandler(async (req, res) => {
  * Search cards
  */
 const searchCards = asyncHandler(async (req, res) => {
-  const { query, setId, setName, year, pokemonNumber, variety, limit, page, sort } = req.query;
+  const { query, setId, setName, year, cardNumber, variety, limit, page, sort } = req.query;
 
   let searchQuery = query;
-  const hasFilters = setId || setName || year || pokemonNumber || variety;
+  const hasFilters = setId || setName || year || cardNumber || variety;
   
   if (!query || typeof query !== 'string' || query.trim() === '') {
     if (!hasFilters) {
@@ -95,7 +95,7 @@ const searchCards = asyncHandler(async (req, res) => {
   const filters = {};
 
   if (setId) filters.setId = setId;
-  if (pokemonNumber) filters.pokemonNumber = pokemonNumber;
+  if (cardNumber) filters.cardNumber = cardNumber;
   if (variety) filters.variety = new RegExp(variety, 'i');
 
   // Add set name filter by looking up set ID
@@ -203,23 +203,55 @@ const searchProducts = asyncHandler(async (req, res) => {
     console.log('[HIERARCHICAL] Using wildcard query with filters:', { setName, category });
   }
 
-  // Build filters for hierarchical search
+  // Parse options first (needed for early returns)
+  const options = {
+    limit: limit ? parseInt(limit, 10) : 20,
+    page: page ? parseInt(page, 10) : 1,
+    sort: sort ? JSON.parse(sort) : undefined
+  };
+
+  // Build filters for hierarchical search (SetProduct → Product)
   const filters = {};
   if (category) filters.category = category;
-  if (setName) filters.setName = new RegExp(`^${setName}$`, 'i');
+  
+  // Handle setName by looking up SetProduct and using its ID
+  if (setName) {
+    const SetProduct = require('../models/SetProduct');
+    const setProduct = await SetProduct.findOne({ 
+      setProductName: new RegExp(`^${setName}$`, 'i') 
+    });
+    if (setProduct) {
+      filters.setProductId = setProduct._id;
+    } else {
+      // No matching set found - return empty results
+      return res.status(200).json({
+        success: true,
+        data: {
+          products: [],
+          total: 0,
+          currentPage: options.page,
+          totalPages: 0,
+          hasNextPage: false,
+          hasPrevPage: false,
+          count: 0,
+          limit: options.limit
+        },
+        meta: {
+          query: searchQuery,
+          filters: { setName },
+          totalResults: 0,
+          message: 'No products found for the specified set'
+        }
+      });
+    }
+  }
+  
   if (minPrice || maxPrice) {
     filters.price = {};
     if (minPrice) filters.price.$gte = parseFloat(minPrice);
     if (maxPrice) filters.price.$lte = parseFloat(maxPrice);
   }
   if (availableOnly === 'true') filters.available = { $gt: 0 };
-
-  // Parse options
-  const options = {
-    limit: limit ? parseInt(limit, 10) : 20,
-    page: page ? parseInt(page, 10) : 1,
-    sort: sort ? JSON.parse(sort) : undefined
-  };
 
   console.log('[HIERARCHICAL SEARCH] Products:', { query: searchQuery, filters, options });
 
@@ -284,7 +316,7 @@ const searchSets = asyncHandler(async (req, res) => {
     if (minYear) filters.year.$gte = parseInt(minYear, 10);
     if (maxYear) filters.year.$lte = parseInt(maxYear, 10);
   }
-  if (minPsaPopulation) filters.totalPsaPopulation = { $gte: parseInt(minPsaPopulation, 10) };
+  if (minPsaPopulation) filters['total_grades.total_graded'] = { $gte: parseInt(minPsaPopulation, 10) };
   if (minCardCount) filters.totalCardsInSet = { $gte: parseInt(minCardCount, 10) };
 
   const options = {
@@ -331,7 +363,7 @@ const getSearchTypes = asyncHandler(async (req, res) => {
       types: ['cards', 'products', 'sets'],
       description: {
         cards: 'Pokemon cards with set information',
-        products: 'CardMarket reference products',
+        products: 'Products (SetProduct → Product hierarchy)',
         sets: 'Pokemon card sets'
       }
     }
@@ -344,12 +376,14 @@ const getSearchTypes = asyncHandler(async (req, res) => {
 const getSearchStats = asyncHandler(async (req, res) => {
   const Card = require('../models/Card');
   const Set = require('../models/Set');
-  const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
+  const Product = require('../models/Product');
+  const SetProduct = require('../models/SetProduct');
 
-  const [cardCount, setCount, productCount] = await Promise.all([
+  const [cardCount, setCount, productCount, setProductCount] = await Promise.all([
     Card.countDocuments(),
     Set.countDocuments(),
-    CardMarketReferenceProduct.countDocuments()
+    Product.countDocuments(),
+    SetProduct.countDocuments()
   ]);
 
   res.status(200).json({
@@ -358,6 +392,7 @@ const getSearchStats = asyncHandler(async (req, res) => {
       totalCards: cardCount,
       totalSets: setCount,
       totalProducts: productCount,
+      totalSetProducts: setProductCount,
       searchTypes: ['cards', 'products', 'sets']
     }
   });

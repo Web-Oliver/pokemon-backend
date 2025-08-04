@@ -60,9 +60,7 @@ cardSchema.index({ setId: 1, cardName: 1 });
 cardSchema.index({ setId: 1, cardNumber: 1 });
 cardSchema.index({ cardNumber: 1 }); // Card number lookup
 
-// Unique identifier indexes for database rebuilding
-cardSchema.index({ uniquePokemonId: 1 }); // Unique pokemon ID lookups
-cardSchema.index({ uniqueSetId: 1 }); // Unique set ID lookups
+// Note: uniquePokemonId and uniqueSetId indexes are automatically created by unique: true in schema
 
 // PSA grade indexes
 cardSchema.index({ 'grades.grade_total': 1 }); // Grade total filtering

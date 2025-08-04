@@ -79,9 +79,9 @@ const cachePresets = {
   setDetails: createCachePreset('set-details', 'set-details', CACHE_TTL.SETS),
   setCards: createCachePreset('set-cards', 'set-cards', CACHE_TTL.CARDS),
   
-  // CardMarket caching - MISSING PRESETS ADDED
-  cardMarketData: createCachePreset('cardmarket-data', 'cardmarket-data', CACHE_TTL.CATEGORIES),
-  cardMarketSearch: createCachePreset('cardmarket-search', 'cardmarket-search', CACHE_TTL.PRODUCTS),
+  // Product caching (SetProduct → Product hierarchy)
+  productData: createCachePreset('product-data', 'product-data', CACHE_TTL.CATEGORIES),
+  productSearch: createCachePreset('product-search', 'product-search', CACHE_TTL.PRODUCTS),
   
   // Activity caching
   activityData: createCachePreset('activity', 'activity-data', CACHE_TTL.COLLECTION_ITEMS),

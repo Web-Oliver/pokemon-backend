@@ -80,7 +80,7 @@ class DbaExportService {
       } else {
         // For cards: handle card name and pokemon number
         const cardName = item.cardId?.cardName || item.cardName || item.name || '';
-        const pokemonNumber = item.cardId?.pokemonNumber || '';
+        const cardNumber = item.cardId?.cardNumber || '';
         
         if (cardName) {
           // Remove technical formatting from card name and clean up text
@@ -95,8 +95,8 @@ class DbaExportService {
           parts.push(cleanCardName);
         }
         
-        if (pokemonNumber) {
-          parts.push(pokemonNumber);
+        if (cardNumber) {
+          parts.push(cardNumber);
         }
         
         // Add card-specific suffix
@@ -231,7 +231,7 @@ class DbaExportService {
             grade: item.grade,
             condition: item.condition,
             category: item.category,
-            pokemonNumber: item.cardId?.pokemonNumber,
+            cardNumber: item.cardId?.cardNumber,
           }
         };
         

@@ -22,7 +22,7 @@ function formatItemForFacebook(data, category) {
 
     case 'PsaGradedCard':
       if (data.cardId && data.cardId.setId) {
-        const cardName = formatCardName(data.cardId.cardName, data.cardId.pokemonNumber, data.cardId.variety);
+        const cardName = formatCardName(data.cardId.cardName, data.cardId.cardNumber, data.cardId.variety);
         const setName = getShortenedSetName(data.cardId.setId.setName);
         const isJapanese = isJapaneseSet(data.cardId.setId.setName);
 
@@ -39,7 +39,7 @@ function formatItemForFacebook(data, category) {
 
     case 'RawCard':
       if (data.cardId && data.cardId.setId) {
-        const cardName = formatCardName(data.cardId.cardName, data.cardId.pokemonNumber, data.cardId.variety);
+        const cardName = formatCardName(data.cardId.cardName, data.cardId.cardNumber, data.cardId.variety);
         const setName = getShortenedSetName(data.cardId.setId.setName);
         const isJapanese = isJapaneseSet(data.cardId.setId.setName);
 

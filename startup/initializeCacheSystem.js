@@ -9,6 +9,8 @@ const initializeCacheSystem = async () => {
     
     cacheManager.addInvalidationPattern('/api/cards', ['search']);
     cacheManager.addInvalidationPattern('/api/sets', ['search']);
+    cacheManager.addInvalidationPattern('/api/set-products', ['search']);
+    cacheManager.addInvalidationPattern('/api/products', ['search']);
     cacheManager.addInvalidationPattern('/api/sealed-products', ['search']);
     cacheManager.addInvalidationPattern('/api/psa-graded-cards', ['search']);
     cacheManager.addInvalidationPattern('/api/unified-search', ['search']);

@@ -26,9 +26,8 @@ class CardService {
       const existingCard = await Card.findOne({
         setId: set._id,
         cardName: cardData.cardName,
-        baseName: cardData.baseName || cardData.cardName,
-        variety: cardData.variety || '',
-        pokemonNumber: cardData.pokemonNumber || 'N/A'
+        cardNumber: cardData.cardNumber || 'N/A',
+        variety: cardData.variety || ''
       });
 
       if (existingCard) {
@@ -40,14 +39,15 @@ class CardService {
       const newCard = new Card({
         setId: set._id,
         cardName: cardData.cardName,
-        baseName: cardData.baseName || cardData.cardName,
+        cardNumber: cardData.cardNumber || 'N/A',
         variety: cardData.variety || '',
-        pokemonNumber: cardData.pokemonNumber || 'N/A',
-        psaGrades: {
-          psa_1: 0, psa_2: 0, psa_3: 0, psa_4: 0, psa_5: 0,
-          psa_6: 0, psa_7: 0, psa_8: 0, psa_9: 0, psa_10: 0
-        },
-        psaTotalGradedForCard: 0
+        uniquePokemonId: cardData.uniquePokemonId || Math.floor(Math.random() * 1000000),
+        uniqueSetId: cardData.uniqueSetId || set.uniqueSetId || Math.floor(Math.random() * 1000000),
+        grades: {
+          grade_1: 0, grade_2: 0, grade_3: 0, grade_4: 0, grade_5: 0,
+          grade_6: 0, grade_7: 0, grade_8: 0, grade_9: 0, grade_10: 0,
+          grade_total: 0
+        }
       });
 
       const savedCard = await newCard.save();
@@ -85,7 +85,12 @@ class CardService {
         year: year || new Date().getFullYear(),
         setUrl: `https://example.com/sets/${setName.toLowerCase().replace(/\s+/g, '-')}`,
         totalCardsInSet: 0,
-        totalPsaPopulation: 0
+        uniqueSetId: Date.now(), // Temporary unique ID for new sets
+        total_grades: {
+          grade_1: 0, grade_2: 0, grade_3: 0, grade_4: 0, grade_5: 0,
+          grade_6: 0, grade_7: 0, grade_8: 0, grade_9: 0, grade_10: 0,
+          total_graded: 0
+        }
       });
 
       const savedSet = await newSet.save();

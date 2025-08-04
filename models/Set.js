@@ -37,7 +37,7 @@ setSchema.index({ totalCardsInSet: 1 }); // Set size filtering
 setSchema.index({ setName: 'text' }, { name: 'set_text_search' }); // Text search on set names
 
 // Unique identifier indexes for database rebuilding
-setSchema.index({ uniqueSetId: 1 }); // Unique set ID lookups
+// Note: uniqueSetId index is automatically created by unique: true in schema
 
 // PSA grade indexes
 setSchema.index({ 'total_grades.total_graded': 1 }); // Total graded filtering

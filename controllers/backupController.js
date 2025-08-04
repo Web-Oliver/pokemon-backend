@@ -124,7 +124,7 @@ const triggerManualBackup = asyncHandler(async (req, res) => {
         targetCollections = ['psagradedcards', 'rawcards', 'sealedproducts'];
         break;
       case 'reference':
-        targetCollections = ['sets', 'cards', 'cardmarketreferenceproducts'];
+        targetCollections = ['sets', 'cards', 'setproducts', 'products'];
         break;
       case 'full':
       case 'manual':

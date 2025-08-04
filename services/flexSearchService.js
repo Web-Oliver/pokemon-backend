@@ -8,7 +8,8 @@
 const FlexSearch = require('flexsearch');
 const Card = require('../models/Card');
 const Set = require('../models/Set');
-const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
+const Product = require('../models/Product');
+const SetProduct = require('../models/SetProduct');
 
 class FlexSearchService {
   constructor() {
@@ -22,12 +23,7 @@ class FlexSearchService {
           resolution: 9
         },
         {
-          field: "baseName", 
-          tokenize: "forward",
-          resolution: 9
-        },
-        {
-          field: "pokemonNumber",
+          field: "cardNumber",
           tokenize: "strict"
         },
         {
@@ -45,7 +41,7 @@ class FlexSearchService {
       id: "_id",
       index: [
         {
-          field: "name",
+          field: "productName",
           tokenize: "forward",
           resolution: 9
         },
@@ -54,7 +50,7 @@ class FlexSearchService {
           tokenize: "forward"
         },
         {
-          field: "setName",
+          field: "setProductName",
           tokenize: "forward"
         }
       ]
@@ -65,6 +61,17 @@ class FlexSearchService {
       index: [
         {
           field: "setName",
+          tokenize: "forward",
+          resolution: 9
+        }
+      ]
+    });
+
+    this.setProductIndex = new FlexSearch.Document({
+      id: "_id",
+      index: [
+        {
+          field: "setProductName",
           tokenize: "forward",
           resolution: 9
         }
@@ -94,34 +101,36 @@ class FlexSearchService {
     try {
       // Index all cards with populated set data
       const cards = await Card.find({}).populate('setId').lean();
+
       console.log(`[FLEXSEARCH] Indexing ${cards.length} cards...`);
       
       cards.forEach(card => {
         this.cardIndex.add({
           _id: card._id.toString(),
           cardName: card.cardName || '',
-          baseName: card.baseName || '',
-          pokemonNumber: card.pokemonNumber || '',
+          cardNumber: card.cardNumber || '',
           variety: card.variety || '',
           setName: card.setId?.setName || ''
         });
       });
 
-      // Index all products
-      const products = await CardMarketReferenceProduct.find({}).lean();
+      // Index all products with populated SetProduct data
+      const products = await Product.find({}).populate('setProductId', 'setProductName').lean();
+
       console.log(`[FLEXSEARCH] Indexing ${products.length} products...`);
       
       products.forEach(product => {
         this.productIndex.add({
           _id: product._id.toString(),
-          name: product.name || '',
+          productName: product.productName || '',
           category: product.category || '',
-          setName: product.setName || ''
+          setProductName: product.setProductId?.setProductName || ''
         });
       });
 
       // Index all sets
       const sets = await Set.find({}).lean();
+
       console.log(`[FLEXSEARCH] Indexing ${sets.length} sets...`);
       
       sets.forEach(set => {
@@ -131,8 +140,21 @@ class FlexSearchService {
         });
       });
 
+      // Index all set products
+      const setProducts = await SetProduct.find({}).lean();
+
+      console.log(`[FLEXSEARCH] Indexing ${setProducts.length} set products...`);
+      
+      setProducts.forEach(setProduct => {
+        this.setProductIndex.add({
+          _id: setProduct._id.toString(),
+          setProductName: setProduct.setProductName || ''
+        });
+      });
+
       this.initialized = true;
       const duration = Date.now() - startTime;
+      
       console.log(`[FLEXSEARCH] Initialization completed in ${duration}ms`);
       
     } catch (error) {
@@ -230,11 +252,12 @@ class FlexSearchService {
       return [];
     }
 
-    // Fetch actual product documents
-    const products = await CardMarketReferenceProduct.find({
+    // Fetch actual product documents with populated SetProduct data
+    const products = await Product.find({
       _id: { $in: productIds },
       ...filters
     })
+    .populate('setProductId', 'setProductName')
     .lean()
     .limit(limit);
 
@@ -305,9 +328,62 @@ class FlexSearchService {
   }
 
   /**
+   * Search SetProducts using FlexSearch with MongoDB fallback
+   */
+  async searchSetProducts(query, filters = {}, options = {}) {
+    await this.initializeIndexes();
+
+    const { limit = 50 } = options;
+    
+    if (!query || !query.trim()) {
+      return [];
+    }
+
+    // FlexSearch with partial matching
+    const searchResults = this.setProductIndex.search(query.trim(), {
+      limit: limit * 2,
+      enrich: true
+    });
+
+    // Extract document IDs
+    const setProductIds = [];
+    searchResults.forEach(result => {
+      result.result.forEach(id => {
+        if (!setProductIds.includes(id)) {
+          setProductIds.push(id);
+        }
+      });
+    });
+
+    if (setProductIds.length === 0) {
+      return [];
+    }
+
+    // Fetch actual set product documents
+    const setProducts = await SetProduct.find({
+      _id: { $in: setProductIds },
+      ...filters
+    })
+    .lean()
+    .limit(limit);
+
+    // Order results by search relevance
+    const orderedResults = [];
+    setProductIds.forEach(id => {
+      const setProduct = setProducts.find(sp => sp._id.toString() === id);
+      if (setProduct) {
+        orderedResults.push(setProduct);
+      }
+    });
+
+    console.log(`[FLEXSEARCH] SetProducts search "${query}" returned ${orderedResults.length} results`);
+    return orderedResults;
+  }
+
+  /**
    * Unified search across all models
    */
-  async unifiedSearch(query, types = ['cards', 'products', 'sets'], options = {}) {
+  async unifiedSearch(query, types = ['cards', 'products', 'sets', 'setProducts'], options = {}) {
     const results = {};
     const { limit = 20 } = options;
 
@@ -329,6 +405,12 @@ class FlexSearchService {
     if (types.includes('sets')) {
       searchPromises.push(
         this.searchSets(query, {}, { limit }).then(data => ({ sets: data }))
+      );
+    }
+
+    if (types.includes('setProducts')) {
+      searchPromises.push(
+        this.searchSetProducts(query, {}, { limit }).then(data => ({ setProducts: data }))
       );
     }
 
@@ -356,9 +438,9 @@ class FlexSearchService {
         results = cards.map(card => ({
           id: card._id,
           text: card.cardName,
-          secondaryText: card.baseName !== card.cardName ? card.baseName : null,
+          secondaryText: card.variety || null,
           metadata: {
-            pokemonNumber: card.pokemonNumber,
+            cardNumber: card.cardNumber,
             variety: card.variety,
             setName: card.setDisplayName,
             year: card.setId?.year,
@@ -371,12 +453,13 @@ class FlexSearchService {
         const products = await this.searchProducts(query, {}, { limit });
         results = products.map(product => ({
           id: product._id,
-          text: product.name,
-          secondaryText: product.setName,
+          text: product.productName,
+          secondaryText: product.setProductId?.setProductName || 'Unknown Set',
           metadata: {
             category: product.category,
             price: product.price,
-            available: product.available
+            available: product.available,
+            setProductName: product.setProductId?.setProductName
           }
         }));
         break;
@@ -390,7 +473,20 @@ class FlexSearchService {
           metadata: {
             year: set.year,
             totalCards: set.totalCardsInSet,
-            totalPsaPopulation: set.totalPsaPopulation
+            totalGraded: set.total_grades?.total_graded,
+            uniqueSetId: set.uniqueSetId
+          }
+        }));
+        break;
+
+      case 'setProducts':
+        const setProducts = await this.searchSetProducts(query, {}, { limit });
+        results = setProducts.map(setProduct => ({
+          id: setProduct._id,
+          text: setProduct.setProductName,
+          secondaryText: 'Set Product',
+          metadata: {
+            uniqueSetProductId: setProduct.uniqueSetProductId
           }
         }));
         break;
@@ -409,12 +505,12 @@ class FlexSearchService {
     // Clear existing indexes
     this.cardIndex = new FlexSearch.Document({
       id: "_id",
-      index: ["cardName", "baseName", "pokemonNumber", "variety", "setName"]
+      index: ["cardName", "cardNumber", "variety", "setName"]
     });
     
     this.productIndex = new FlexSearch.Document({
       id: "_id", 
-      index: ["name", "category", "setName"]
+      index: ["productName", "category", "setProductName"]
     });
     
     this.setIndex = new FlexSearch.Document({

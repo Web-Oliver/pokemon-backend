@@ -10,7 +10,8 @@
 
 const Card = require('../models/Card');
 const Set = require('../models/Set');
-const CardMarketReferenceProduct = require('../models/CardMarketReferenceProduct');
+const Product = require('../models/Product');
+const SetProduct = require('../models/SetProduct');
 const FlexSearch = require('flexsearch');
 
 /**
@@ -31,15 +32,7 @@ class SearchService {
           fastupdate: false
         },
         { 
-          field: "baseName", 
-          tokenize: "forward", 
-          resolution: 9,
-          minlength: 1,
-          optimize: true,
-          fastupdate: false
-        },
-        { 
-          field: "pokemonNumber", 
+          field: "cardNumber", 
           tokenize: "strict",
           minlength: 1
         },
@@ -62,7 +55,7 @@ class SearchService {
       id: "_id",
       index: [
         { 
-          field: "name", 
+          field: "productName", 
           tokenize: "forward", 
           resolution: 9,
           minlength: 1,
@@ -76,7 +69,7 @@ class SearchService {
           optimize: true
         },
         { 
-          field: "setName", 
+          field: "setProductName", 
           tokenize: "forward",
           minlength: 1,
           optimize: true
@@ -118,34 +111,36 @@ class SearchService {
     try {
       // Index all cards
       const cards = await Card.find({}).populate('setId').lean();
+      
       console.log(`[FLEXSEARCH] Indexing ${cards.length} cards...`);
       
       cards.forEach(card => {
         this.cardIndex.add({
           _id: card._id.toString(),
           cardName: card.cardName || '',
-          baseName: card.baseName || '',
-          pokemonNumber: card.pokemonNumber || '',
+          cardNumber: card.cardNumber || '',
           variety: card.variety || '',
           setName: card.setId?.setName || ''
         });
       });
 
-      // Index all products
-      const products = await CardMarketReferenceProduct.find({}).lean();
+      // Index all products with populated SetProduct data
+      const products = await Product.find({}).populate('setProductId', 'setProductName').lean();
+
       console.log(`[FLEXSEARCH] Indexing ${products.length} products...`);
       
       products.forEach(product => {
         this.productIndex.add({
           _id: product._id.toString(),
-          name: product.name || '',
+          productName: product.productName || '',
           category: product.category || '',
-          setName: product.setName || ''
+          setProductName: product.setProductId?.setProductName || ''
         });
       });
 
       // Index all sets
       const sets = await Set.find({}).lean();
+
       console.log(`[FLEXSEARCH] Indexing ${sets.length} sets...`);
       
       sets.forEach(set => {
@@ -157,6 +152,7 @@ class SearchService {
 
       this.initialized = true;
       const duration = Date.now() - startTime;
+
       console.log(`[FLEXSEARCH] Initialization completed in ${duration}ms`);
       
     } catch (error) {
@@ -164,6 +160,7 @@ class SearchService {
       throw error;
     }
   }
+
   /**
    * Builds a hybrid search query combining text search with regex for partial matching
    * @param {string} query - Search query
@@ -185,6 +182,7 @@ class SearchService {
     
     // Build regex conditions for partial matching on key fields
     const regexConditions = [];
+    
     if (searchFields && searchFields.length > 0) {
       searchFields.forEach(field => {
         regexConditions.push({
@@ -202,7 +200,6 @@ class SearchService {
         ]
       };
     }
-    
     // Fallback to text search only
     return textSearch;
   }
@@ -217,24 +214,24 @@ class SearchService {
     // If searching for number, prioritize and sort intelligently
     if (/^\d+$/.test(query)) {
       return results.sort((a, b) => {
-        const aNum = parseInt(a.pokemonNumber);
-        const bNum = parseInt(b.pokemonNumber);
+        const aNum = parseInt(a.cardNumber, 10);
+        const bNum = parseInt(b.cardNumber, 10);
         
         // Numeric cards first (1, 2, 3...), then alphanumeric (012/P, SP1...)
         if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum;
         if (!isNaN(aNum)) return -1;  // Numeric before alphanumeric
         if (!isNaN(bNum)) return 1;
-        return a.pokemonNumber.localeCompare(b.pokemonNumber);
+        return a.cardNumber.localeCompare(b.cardNumber);
       });
     }
     
     // For text searches, sort by text score first, then PSA population, then card number
     return results.sort((a, b) => {
       if (a.score !== b.score) return b.score - a.score;
-      if (a.psaTotalGradedForCard !== b.psaTotalGradedForCard) {
-        return b.psaTotalGradedForCard - a.psaTotalGradedForCard;
+      if (a.grades?.grade_total !== b.grades?.grade_total) {
+        return (b.grades?.grade_total || 0) - (a.grades?.grade_total || 0);
       }
-      return this.compareCardNumbers(a.pokemonNumber, b.pokemonNumber);
+      return this.compareCardNumbers(a.cardNumber, b.cardNumber);
     });
   }
 
@@ -245,8 +242,9 @@ class SearchService {
    * @returns {number} Comparison result
    */
   compareCardNumbers(a, b) {
-    const aNum = parseInt(a);
-    const bNum = parseInt(b);
+    
+    const aNum = parseInt(a, 10);
+    const bNum = parseInt(b, 10);
     
     if (!isNaN(aNum) && !isNaN(bNum)) return aNum - bNum;
     if (!isNaN(aNum)) return -1;
@@ -324,7 +322,7 @@ class SearchService {
         .populate('setId')
         .lean()
         .limit(limit)
-        .sort({ psaTotalGradedForCard: -1, cardName: 1 });
+        .sort({ 'grades.grade_total': -1, cardName: 1 });
 
       return results.map((card) => {
         card.setDisplayName = card.setId?.setName || 'Unknown Set';
@@ -352,6 +350,7 @@ class SearchService {
       // Strategy 2: Individual word search for partial matches
       const words = query.trim().split(/\s+/).filter(word => word.length > 0);
       const wordResults = [];
+
       words.forEach(word => {
         if (word.length >= 1) {
           const results = this.cardIndex.search(word, {
@@ -359,6 +358,7 @@ class SearchService {
             enrich: true,
             suggest: true
           });
+
           wordResults.push(...results);
         }
       });
@@ -366,14 +366,17 @@ class SearchService {
       // Combine and deduplicate results
       const allResults = [...exactResults, ...wordResults];
       const seenIds = new Set();
+
       searchResults = allResults.filter(result => {
         const hasNew = result.result.some(id => !seenIds.has(id));
+
         result.result.forEach(id => seenIds.add(id));
         return hasNew;
       });
 
       // Extract document IDs from FlexSearch results
       const cardIds = [];
+
       searchResults.forEach(result => {
         result.result.forEach(id => {
           if (!cardIds.includes(id)) {
@@ -395,8 +398,10 @@ class SearchService {
 
         // Order results by FlexSearch relevance
         const orderedResults = [];
+        
         cardIds.forEach(id => {
           const card = cards.find(c => c._id.toString() === id);
+          
           if (card && orderedResults.length < limit) {
             // Add set display name
             card.setDisplayName = card.setId?.setName || 'Unknown Set';
@@ -414,8 +419,8 @@ class SearchService {
 
     // MongoDB fallback
     console.log(`[MONGODB FALLBACK] Searching cards for: "${query}"`);
-    const searchFields = ['cardName', 'baseName', 'pokemonNumber', 'variety'];
-    const defaultSort = { score: { $meta: 'textScore' }, psaTotalGradedForCard: -1 };
+    const searchFields = ['cardName', 'cardNumber', 'variety'];
+    const defaultSort = { score: { $meta: 'textScore' }, 'grades.grade_total': -1 };
     
     const results = await this.search(
       Card, 
@@ -431,6 +436,7 @@ class SearchService {
 
     return results.map((card) => {
       const cardObj = card.toObject ? card.toObject() : card;
+
       cardObj.setDisplayName = cardObj.setId?.setName || 'Unknown Set';
       cardObj.fallbackSetName = !cardObj.setId?.setName;
       return cardObj;
@@ -460,15 +466,16 @@ class SearchService {
       console.log(`[MONGODB DIRECT] Searching products with filters only:`, filters);
       
       // First get total count with filters
-      const totalCount = await CardMarketReferenceProduct.countDocuments(filters);
+      const totalCount = await Product.countDocuments(filters);
       
       // Then get paginated results
-      const results = await CardMarketReferenceProduct.find(filters)
+      const results = await Product.find(filters)
+        .populate('setProductId', 'setProductName')
         .lean()
         .limit(limit)
         .sort({ available: -1, price: 1, _id: 1 });
 
-      // Return CardMarket products with pagination metadata
+      // Return products with pagination metadata
       return {
         results,
         total: totalCount,
@@ -497,6 +504,7 @@ class SearchService {
       // Strategy 2: Individual word search for partial matches
       const words = query.trim().split(/\s+/).filter(word => word.length > 0);
       const wordResults = [];
+
       words.forEach(word => {
         if (word.length >= 1) {
           const results = this.productIndex.search(word, {
@@ -504,6 +512,7 @@ class SearchService {
             enrich: true,
             suggest: true
           });
+
           wordResults.push(...results);
         }
       });
@@ -511,14 +520,17 @@ class SearchService {
       // Combine and deduplicate results
       const allResults = [...exactResults, ...wordResults];
       const seenIds = new Set();
+
       searchResults = allResults.filter(result => {
         const hasNew = result.result.some(id => !seenIds.has(id));
+
         result.result.forEach(id => seenIds.add(id));
         return hasNew;
       });
 
       // Extract document IDs
       const productIds = [];
+
       searchResults.forEach(result => {
         result.result.forEach(id => {
           if (!productIds.includes(id)) {
@@ -529,24 +541,27 @@ class SearchService {
 
       if (productIds.length > 0) {
         // Get total count first
-        const totalCount = await CardMarketReferenceProduct.countDocuments({
+        const totalCount = await Product.countDocuments({
           _id: { $in: productIds },
           ...filters
         });
 
         // SMART FILTERING: Apply both FlexSearch results AND filters
         console.log(`[FLEXSEARCH] Found ${productIds.length} FlexSearch matches, now applying filters:`, filters);
-        const products = await CardMarketReferenceProduct.find({
+        const products = await Product.find({
           _id: { $in: productIds },
           ...filters
         })
+        .populate('setProductId', 'setProductName')
         .lean()
         .limit(limit);
 
         // Order results by FlexSearch relevance
         const orderedResults = [];
+
         productIds.forEach(id => {
           const product = products.find(p => p._id.toString() === id);
+          
           if (product && orderedResults.length < limit) {
             orderedResults.push(product);
           }
@@ -568,24 +583,25 @@ class SearchService {
 
     // MongoDB fallback
     console.log(`[MONGODB FALLBACK] Searching products for: "${query}"`);
-    const searchFields = ['name', 'category'];
+    const searchFields = ['productName', 'category'];
     const defaultSort = { available: -1, price: 1, _id: 1 };
     
     // First get total count with filters
-    const totalCount = await CardMarketReferenceProduct.countDocuments({
+    const totalCount = await Product.countDocuments({
       ...this.buildTextSearchQuery(query, searchFields),
       ...filters
     });
 
     // Then get paginated results
     const results = await this.search(
-      CardMarketReferenceProduct, 
+      Product, 
       query, 
       searchFields, 
       filters, 
       { 
         ...options, 
-        sort: options.sort || defaultSort
+        sort: options.sort || defaultSort,
+        populate: { path: 'setProductId', select: 'setProductName' }
       }
     );
 
@@ -619,7 +635,7 @@ class SearchService {
       const results = await Set.find(filters)
         .lean()
         .limit(limit)
-        .sort({ year: -1, totalPsaPopulation: -1, _id: 1 });
+        .sort({ year: -1, 'total_grades.total_graded': -1, _id: 1 });
 
       return results;
     }
@@ -636,6 +652,7 @@ class SearchService {
 
       // Extract document IDs
       const setIds = [];
+
       searchResults.forEach(result => {
         result.result.forEach(id => {
           if (!setIds.includes(id)) {
@@ -655,8 +672,10 @@ class SearchService {
 
         // Order results by FlexSearch relevance
         const orderedResults = [];
+
         setIds.forEach(id => {
           const set = sets.find(s => s._id.toString() === id);
+
           if (set && orderedResults.length < limit) {
             orderedResults.push(set);
           }
@@ -672,7 +691,7 @@ class SearchService {
     // MongoDB fallback
     console.log(`[MONGODB FALLBACK] Searching sets for: "${query}"`);
     const searchFields = ['setName'];
-    const defaultSort = { year: -1, totalPsaPopulation: -1, _id: 1 };
+    const defaultSort = { year: -1, 'total_grades.total_graded': -1, _id: 1 };
     
     return await this.search(
       Set, 
@@ -747,13 +766,16 @@ class SearchService {
         results = cards.map(card => ({
           id: card._id,
           text: card.cardName,
-          secondaryText: card.baseName !== card.cardName ? card.baseName : null,
+          secondaryText: card.variety || null,
           metadata: {
-            pokemonNumber: card.pokemonNumber,
+            cardNumber: card.cardNumber,
             variety: card.variety,
+            uniquePokemonId: card.uniquePokemonId,
+            uniqueSetId: card.uniqueSetId,
             setName: card.setDisplayName || card.setId?.setName || 'Unknown Set',
             year: card.setId?.year,
-            fallbackSetName: card.fallbackSetName || false
+            fallbackSetName: card.fallbackSetName || false,
+            grades: card.grades
           }
         }));
         break;
@@ -764,12 +786,13 @@ class SearchService {
 
         results = products.map(product => ({
           id: product._id,
-          text: product.name,
-          secondaryText: product.setName,
+          text: product.productName,
+          secondaryText: product.setProductId?.setProductName || 'Unknown Set',
           metadata: {
             category: product.category,
             price: product.price,
-            available: product.available
+            available: product.available,
+            setProductName: product.setProductId?.setProductName
           }
         }));
         break;
@@ -784,7 +807,8 @@ class SearchService {
           metadata: {
             year: set.year,
             totalCards: set.totalCardsInSet,
-            totalPsaPopulation: set.totalPsaPopulation
+            totalGraded: set.total_grades?.total_graded,
+            uniqueSetId: set.uniqueSetId
           }
         }));
         break;

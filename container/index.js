@@ -4,7 +4,8 @@ const RawCard = require('../models/RawCard');
 const SealedProduct = require('../models/SealedProduct');
 const CardRepository = require('../repositories/CardRepository');
 const SetRepository = require('../repositories/SetRepository');
-const CardMarketReferenceProductRepository = require('../repositories/CardMarketReferenceProductRepository');
+const ProductRepository = require('../repositories/ProductRepository');
+const SetProductRepository = require('../repositories/SetProductRepository');
 const CollectionService = require('../services/domain/CollectionService');
 const ImageManager = require('../services/shared/imageManager');
 const SaleService = require('../services/shared/saleService');
@@ -53,7 +54,8 @@ class Container {
     this.registerSingleton('sealedProductRepository', () => new CollectionRepository(SealedProduct, 'SealedProduct'));
     this.registerSingleton('cardRepository', () => new CardRepository());
     this.registerSingleton('setRepository', () => new SetRepository());
-    this.registerSingleton('cardMarketReferenceProductRepository', () => new CardMarketReferenceProductRepository());
+    this.registerSingleton('productRepository', () => new ProductRepository());
+    this.registerSingleton('setProductRepository', () => new SetProductRepository());
 
     // Register domain services using entity configurations
     this.registerTransient(

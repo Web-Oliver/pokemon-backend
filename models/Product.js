@@ -61,8 +61,7 @@ productSchema.index({ productName: 1 });
 productSchema.index({ setProductId: 1 });
 productSchema.index({ available: 1 });
 
-// Unique identifier indexes for database rebuilding
-productSchema.index({ uniqueProductId: 1 });
+// Note: uniqueProductId index is automatically created by unique: true in schema
 
 // Optimization indexes
 productSchema.index({ setProductId: 1, category: 1 }); // Set with category filtering
