@@ -1,0 +1,20 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    "data/**",
+    "public/uploads/**",
+    "*.log"
+  ],
+  "verbose": true,
+  "watch": [
+    "server.js",
+    "models/",
+    "routes/", 
+    "controllers/",
+    "services/",
+    "utils/",
+    "middleware/"
+  ],
+  "ext": "js,json",
+  "delay": 1000
+}

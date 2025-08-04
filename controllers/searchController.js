@@ -360,11 +360,12 @@ const getSearchTypes = asyncHandler(async (req, res) => {
   res.status(200).json({
     success: true,
     data: {
-      types: ['cards', 'products', 'sets'],
+      types: ['cards', 'products', 'sets', 'setProducts'],
       description: {
         cards: 'Pokemon cards with set information',
         products: 'Products (SetProduct → Product hierarchy)',
-        sets: 'Pokemon card sets'
+        sets: 'Pokemon card sets',
+        setProducts: 'Set products (top-level product categories)'
       }
     }
   });
@@ -393,7 +394,7 @@ const getSearchStats = asyncHandler(async (req, res) => {
       totalSets: setCount,
       totalProducts: productCount,
       totalSetProducts: setProductCount,
-      searchTypes: ['cards', 'products', 'sets']
+      searchTypes: ['cards', 'products', 'sets', 'setProducts']
     }
   });
 });

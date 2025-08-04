@@ -7,6 +7,7 @@
 
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 const JSZip = require('jszip');
 const { createPokemonNameShortener } = require('./pokemonNameShortener');
 
@@ -72,8 +73,19 @@ class DbaExportService {
       
       // Handle different item types
       if (itemType === 'sealed') {
-        // For sealed products: "Pokemon Kort" (shortened set name) (category) Sealed
-        if (item.category) {
+        // For sealed products: use the product name directly
+        const productName = item.name || item.productId?.productName || '';
+        if (productName) {
+          // Clean the product name (remove Pokemon prefix to avoid duplication)
+          const cleanProductName = productName
+            .replace(/^pokemon\s+/gi, '')
+            .replace(/^pokémon\s+/gi, '')
+            .replace(/\s+/g, ' ')
+            .trim();
+          if (cleanProductName) {
+            parts.push(cleanProductName);
+          }
+        } else if (item.category) {
           parts.push(item.category);
         }
         parts.push('Sealed');

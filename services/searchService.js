@@ -706,13 +706,56 @@ class SearchService {
   }
 
   /**
+   * Search SetProducts using direct MongoDB search
+   * @param {string} query - Search query
+   * @param {Object} filters - Additional filters
+   * @param {Object} options - Search options
+   * @returns {Promise<Array>} SetProduct search results
+   */
+  async searchSetProducts(query, filters = {}, options = {}) {
+    const { limit = 50 } = options;
+    
+    // Handle empty query or wildcard "*" with filters
+    if (!query || !query.trim() || query.trim() === '*') {
+      console.log(`[MONGODB DIRECT] Searching setProducts with filters only:`, filters);
+      
+      const results = await SetProduct.find(filters)
+        .lean()
+        .limit(limit)
+        .sort({ setProductName: 1 });
+
+      return results;
+    }
+
+    try {
+      console.log(`[MONGODB] Searching setProducts for: "${query}" with filters:`, filters);
+      
+      // Use MongoDB text search with regex fallback
+      const searchRegex = new RegExp(query.trim(), 'i');
+      
+      const results = await SetProduct.find({
+        setProductName: searchRegex,
+        ...filters
+      })
+      .lean()
+      .limit(limit)
+      .sort({ setProductName: 1 });
+
+      return results;
+    } catch (error) {
+      console.error('[SETPRODUCT SEARCH ERROR]', error);
+      return [];
+    }
+  }
+
+  /**
    * Unified search across all models
    * @param {string} query - Search query
-   * @param {Array} types - Types to search ['cards', 'products', 'sets']
+   * @param {Array} types - Types to search ['cards', 'products', 'sets', 'setProducts']
    * @param {Object} options - Search options
    * @returns {Promise<Object>} Unified search results
    */
-  async unifiedSearch(query, types = ['cards', 'products', 'sets'], options = {}) {
+  async unifiedSearch(query, types = ['cards', 'products', 'sets', 'setProducts'], options = {}) {
     const results = {};
     const { limit = 20 } = options;
 
@@ -734,6 +777,12 @@ class SearchService {
     if (types.includes('sets')) {
       searchPromises.push(
         this.searchSets(query, {}, { limit }).then(data => ({ sets: data }))
+      );
+    }
+
+    if (types.includes('setProducts')) {
+      searchPromises.push(
+        this.searchSetProducts(query, {}, { limit }).then(data => ({ setProducts: data }))
       );
     }
 

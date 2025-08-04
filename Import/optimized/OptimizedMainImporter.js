@@ -48,7 +48,7 @@ class OptimizedMainImporter {
    */
   async initDatabase() {
     try {
-      const mongoUri = process.env.MONGODB_URI || 'mongodb://localhost:27017/pokemon-collection';
+      const mongoUri = process.env.MONGO_URI || 'mongodb://localhost:27017/pokemon_collection';
       
       await mongoose.connect(mongoUri, {
         maxPoolSize: 20,

@@ -55,13 +55,14 @@ const exportToDba = asyncHandler(async (req, res) => {
   }
 
   console.log(`[DBA EXPORT] Received request for ${items.length} items`);
+  console.log('[DBA EXPORT] First item from frontend:', JSON.stringify(items[0], null, 2));
 
   try {
     // Collect all items with their data
     const collectionItems = [];
 
     for (const itemRequest of items) {
-      const { id, type, customTitle, customDescription: itemCustomDescription } = itemRequest;
+      const { id, type, name, setName, customTitle, customDescription: itemCustomDescription } = itemRequest;
 
       if (!id || !type) {
         throw new ValidationError('Each item must have id and type fields');
@@ -84,7 +85,10 @@ const exportToDba = asyncHandler(async (req, res) => {
           });
           break;
         case 'sealed':
-          item = await SealedProduct.findById(id);
+          item = await SealedProduct.findById(id).populate({
+            path: 'productId',
+            model: 'Product'
+          });
           break;
         default:
           throw new ValidationError(`Invalid item type: ${type}`);
@@ -94,8 +98,16 @@ const exportToDba = asyncHandler(async (req, res) => {
         throw new ValidationError(`Item not found: ${id} (${type})`);
       }
 
+      // Convert mongoose document to plain object
+      const itemData = item.toJSON ? item.toJSON() : item;
+      
       collectionItems.push({ 
-        item, 
+        item: {
+          ...itemData,
+          // Use frontend name which contains the correct product name
+          name: name || itemData.name,
+          setName: setName || itemData.setName
+        }, 
         itemType: type, 
         customTitle: customTitle?.trim() || null, 
         customDescription: itemCustomDescription?.trim() || null 
@@ -200,7 +212,10 @@ const postToDba = asyncHandler(async (req, res) => {
           });
           break;
         case 'sealed':
-          item = await SealedProduct.findById(id);
+          item = await SealedProduct.findById(id).populate({
+            path: 'productId',
+            model: 'Product'
+          });
           break;
         default:
           throw new ValidationError(`Invalid item type: ${type}`);
@@ -312,7 +327,10 @@ const testDbaIntegration = asyncHandler(async (req, res) => {
           });
           break;
         case 'sealed':
-          item = await SealedProduct.findById(id);
+          item = await SealedProduct.findById(id).populate({
+            path: 'productId',
+            model: 'Product'
+          });
           break;
       }
 

@@ -34,7 +34,7 @@ async function fetchSalesData(filter, category) {
   if (!category || category === 'all') {
     // Fetch from all categories
     const [sealedProducts, psaCards, rawCards] = await Promise.all([
-      SealedProduct.find(filter),
+      SealedProduct.find(filter).populate('productId'),
       PsaGradedCard.find(filter).populate({
         path: 'cardId',
         populate: { path: 'setId' },
@@ -63,7 +63,7 @@ async function fetchSalesData(filter, category) {
     // Fetch from specific category
     switch (category) {
       case 'sealedProducts':
-        salesData = await SealedProduct.find(filter);
+        salesData = await SealedProduct.find(filter).populate('productId');
         salesData = salesData.filter(item => item).map((item) => ({
           ...(item.toObject ? item.toObject() : item),
           itemType: 'sealedProduct',
