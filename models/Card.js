@@ -7,11 +7,11 @@ const cardSchema = new mongoose.Schema(
     setId: { type: Schema.Types.ObjectId, ref: 'Set', required: true },
     pokemonNumber: { type: String, required: false, default: '' },
     cardName: { type: String, required: true },
-    baseName: { type: String, required: true },
     variety: { type: String, default: '' },
     
     // New fields for migration
     unique_pokemon_id: { type: Number, required: true, unique: true },
+    unique_set_id: { type: Number, required: true },
     card_number: { type: String, required: true },
     grades: {
       grade_1: { type: Number, default: 0 },
@@ -37,14 +37,12 @@ cardSchema.index({ setId: 1, cardName: 1, pokemonNumber: 1, variety: 1 }, { uniq
 cardSchema.index(
   {
     cardName: 'text',
-    baseName: 'text',
     pokemonNumber: 'text',
     variety: 'text',
   },
   {
     weights: {
       cardName: 10,
-      baseName: 8,
       pokemonNumber: 5,
       variety: 3,
     },
@@ -54,28 +52,34 @@ cardSchema.index(
 
 // Optimized indexes for common search patterns
 cardSchema.index({ cardName: 1 });
-cardSchema.index({ baseName: 1 });
 cardSchema.index({ setId: 1, cardName: 1 });
 cardSchema.index({ setId: 1, pokemonNumber: 1 });
 
 // New indexes for migration fields
 cardSchema.index({ unique_pokemon_id: 1 }); // Unique pokemon ID lookups
+cardSchema.index({ unique_set_id: 1 }); // Unique set ID lookups
 cardSchema.index({ card_number: 1 }); // Card number filtering
 cardSchema.index({ 'grades.grade_total': 1 }); // Grade total filtering
 cardSchema.index({ 'grades.grade_10': -1 }); // PSA 10 filtering
 cardSchema.index({ setId: 1, 'grades.grade_total': -1 }); // Set with grade population
+cardSchema.index({ unique_set_id: 1, 'grades.grade_total': -1 }); // Unique set with grade population
 cardSchema.index({ variety: 1 }); // Variety filtering
 cardSchema.index({ pokemonNumber: 1 }); // Pokemon number lookup
 
 // Add validation for new structure
 cardSchema.pre('save', function(next) {
-  const { validateUniquePokemonId, validateGrades } = require('../utils/validationUtils');
+  const { validateUniquePokemonId, validateUniqueSetId, validateGrades } = require('../utils/validationUtils');
   const { ValidationError } = require('../middleware/errorHandler');
   
   try {
     // Validate unique_pokemon_id
     if (this.unique_pokemon_id !== undefined) {
       validateUniquePokemonId(this.unique_pokemon_id);
+    }
+    
+    // Validate unique_set_id
+    if (this.unique_set_id !== undefined) {
+      validateUniqueSetId(this.unique_set_id);
     }
     
     // Validate grades structure

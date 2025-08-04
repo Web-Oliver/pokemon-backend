@@ -8,7 +8,6 @@ const setSchema = new mongoose.Schema(
     year: { type: Number, required: true },
     setUrl: { type: String, required: true },
     totalCardsInSet: { type: Number, required: true },
-    totalPsaPopulation: { type: Number, required: true },
     
     // New fields for migration
     unique_set_id: { type: Number, required: true, unique: true },
@@ -33,8 +32,6 @@ const setSchema = new mongoose.Schema(
 setSchema.index({ year: 1 }); // Year filtering and sorting
 setSchema.index({ year: 1, setName: 1 }); // Year with set name queries
 setSchema.index({ totalCardsInSet: 1 }); // Set size filtering
-setSchema.index({ totalPsaPopulation: 1 }); // PSA population filtering
-setSchema.index({ year: -1, totalPsaPopulation: -1 }); // Recent sets with high PSA population
 setSchema.index({ setName: 'text' }, { name: 'set_text_search' }); // Text search on set names
 
 // New indexes for migration fields
@@ -42,6 +39,7 @@ setSchema.index({ unique_set_id: 1 }); // Unique set ID lookups
 setSchema.index({ 'total_grades.total_graded': 1 }); // Total graded filtering
 setSchema.index({ 'total_grades.grade_10': -1 }); // PSA 10 filtering
 setSchema.index({ year: 1, 'total_grades.total_graded': -1 }); // Year with grade population
+setSchema.index({ year: -1, 'total_grades.total_graded': -1 }); // Recent sets with high grade population
 
 // Add validation for new structure
 setSchema.pre('save', function(next) {

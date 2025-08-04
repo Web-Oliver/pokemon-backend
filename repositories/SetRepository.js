@@ -60,20 +60,34 @@ class SetRepository extends BaseRepository {
         });
       }
 
-      // PSA population filter
-      if (filters.minPsaPopulation) {
+      // Grade population filter
+      if (filters.minGradedPopulation) {
         matchConditions.push({
-          totalPsaPopulation: { $gte: filters.minPsaPopulation },
+          'total_grades.total_graded': { $gte: filters.minGradedPopulation }
         });
       }
 
-      // PSA population range filter
-      if (filters.psaPopulationRange) {
+      // Grade population range filter
+      if (filters.gradedPopulationRange) {
         matchConditions.push({
-          totalPsaPopulation: {
-            $gte: filters.psaPopulationRange.min,
-            $lte: filters.psaPopulationRange.max,
-          },
+          'total_grades.total_graded': {
+            $gte: filters.gradedPopulationRange.min,
+            $lte: filters.gradedPopulationRange.max,
+          }
+        });
+      }
+
+      // Grade-specific filters for new structure
+      if (filters.minGrade10Count) {
+        matchConditions.push({
+          'total_grades.grade_10': { $gte: filters.minGrade10Count }
+        });
+      }
+
+      // Unique set ID filter
+      if (filters.uniqueSetId) {
+        matchConditions.push({
+          unique_set_id: filters.uniqueSetId
         });
       }
 
@@ -159,8 +173,8 @@ class SetRepository extends BaseRepository {
                 // Popularity score
                 {
                   $cond: {
-                    if: { $gt: ['$totalPsaPopulation', 0] },
-                    then: { $divide: ['$totalPsaPopulation', 10000] },
+                    if: { $gt: ['$total_grades.total_graded', 0] },
+                    then: { $divide: ['$total_grades.total_graded', 10000] },
                     else: 0,
                   },
                 },
@@ -185,7 +199,7 @@ class SetRepository extends BaseRepository {
 
       // Sort
       const sortStage = query
-        ? { $sort: { score: -1, totalPsaPopulation: -1, year: -1 } }
+        ? { $sort: { score: -1, 'total_grades.total_graded': -1, year: -1 } }
         : { $sort: filters.sort || this.options.defaultSort };
 
       pipeline.push(sortStage);
@@ -226,9 +240,19 @@ class SetRepository extends BaseRepository {
         metadata: {
           year: set.year,
           totalCards: set.totalCardsInSet,
-          totalPsaPopulation: set.totalPsaPopulation,
+          totalGraded: set.total_grades?.total_graded,
+          uniqueSetId: set.unique_set_id,
           setUrl: set.setUrl,
           era: set.year || 'Unknown',
+          // Include grade breakdown if available
+          ...(set.total_grades && {
+            grades: {
+              grade_10: set.total_grades.grade_10,
+              grade_9: set.total_grades.grade_9,
+              grade_8: set.total_grades.grade_8,
+              total_graded: set.total_grades.total_graded
+            }
+          })
         },
       }));
     } catch (error) {

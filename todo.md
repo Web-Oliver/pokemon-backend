@@ -22,10 +22,10 @@ Migrating from old data structure to new improved format with both `unique_set_i
   - [x] Add validation for new structure
 
 ### 2. Core Infrastructure
-- [ ] **Create field mapping utilities** (`utils/fieldMapper.js`)
-  - [ ] Map old field names to new field names
-  - [ ] Handle grade field transformations (psa_X → grade_X)
-  - [ ] Create reverse mapping for backward compatibility
+- [x] **Create field mapping utilities** (`utils/fieldMapper.js`)
+  - [x] Map old field names to new field names
+  - [x] Handle grade field transformations (psa_X → grade_X)
+  - [x] Create reverse mapping for backward compatibility
 
 - [ ] **Update import coordinator** (`utils/importers/importCoordinator.js`)
   - [ ] Add support for new data structure

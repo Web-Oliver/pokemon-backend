@@ -22,7 +22,7 @@ class CardRepository extends BaseRepository {
         path: 'setId',
         model: 'Set',
       },
-      defaultSort: { psaTotalGradedForCard: -1, cardName: 1 },
+      defaultSort: { 'grades.grade_total': -1, cardName: 1 },
     });
   }
 
@@ -36,6 +36,20 @@ class CardRepository extends BaseRepository {
   async findBySetId(setId, options = {}) {
     try {
       return await this.findAll({ setId }, options);
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  /**
+   * Finds cards by unique set ID
+   * @param {number} uniqueSetId - Unique set ID
+   * @param {Object} options - Query options
+   * @returns {Promise<Array>} - Cards in the set
+   */
+  async findByUniqueSetId(uniqueSetId, options = {}) {
+    try {
+      return await this.findAll({ unique_set_id: uniqueSetId }, options);
     } catch (error) {
       throw error;
     }
@@ -103,21 +117,27 @@ class CardRepository extends BaseRepository {
       if (query) {
         searchConditions.$or = [
           { cardName: { $regex: query, $options: 'i' } },
-          { baseName: { $regex: query, $options: 'i' } },
           { pokemonNumber: { $regex: query, $options: 'i' } },
           { variety: { $regex: query, $options: 'i' } },
         ];
       }
 
-      // Direct field filters (no aggregation needed)
+      // Direct field filters
       if (filters.setId) searchConditions.setId = filters.setId;
+      if (filters.uniqueSetId) searchConditions.unique_set_id = filters.uniqueSetId;
       if (filters.pokemonNumber) searchConditions.pokemonNumber = filters.pokemonNumber;
       if (filters.variety) searchConditions.variety = new RegExp(filters.variety, 'i');
-      if (filters.minPsaPopulation) {
-        searchConditions.psaTotalGradedForCard = { $gte: filters.minPsaPopulation };
+      if (filters.cardNumber) searchConditions.card_number = filters.cardNumber;
+      if (filters.uniquePokemonId) searchConditions.unique_pokemon_id = filters.uniquePokemonId;
+      
+      // Grade population filter
+      if (filters.minGradedPopulation) {
+        searchConditions['grades.grade_total'] = { $gte: filters.minGradedPopulation };
       }
-      if (filters.psaGrade) {
-        const gradeField = `psaGrades.psa_${filters.psaGrade}`;
+      
+      // Grade-specific filters
+      if (filters.grade) {
+        const gradeField = `grades.grade_${filters.grade}`;
         searchConditions[gradeField] = { $gte: filters.minGradeCount || 1 };
       }
 
@@ -134,7 +154,7 @@ class CardRepository extends BaseRepository {
 
       // Apply sorting (simple sort, no complex scoring needed)
       const sortOptions = query 
-        ? { psaTotalGradedForCard: -1, cardName: 1 } // Relevance by PSA popularity + alphabetical
+        ? { 'grades.grade_total': -1, cardName: 1 } // Relevance by grade popularity + alphabetical
         : filters.sort || this.options.defaultSort;
       
       mongooseQuery = mongooseQuery.sort(sortOptions);
@@ -164,14 +184,11 @@ class CardRepository extends BaseRepository {
             if (card.cardName && card.cardName.toLowerCase() === lowerQuery) score += 100;
             else if (card.cardName && card.cardName.toLowerCase().startsWith(lowerQuery)) score += 80;
             
-            if (card.baseName && card.baseName.toLowerCase() === lowerQuery) score += 90;
-            else if (card.baseName && card.baseName.toLowerCase().startsWith(lowerQuery)) score += 70;
-            
-            if (card.psaTotalGradedForCard > 0) score += Math.min(card.psaTotalGradedForCard / 1000, 10);
+            if (card.grades?.grade_total > 0) score += Math.min(card.grades.grade_total / 1000, 10);
             
             return { ...card, score };
           })
-          .sort((a, b) => b.score - a.score || b.psaTotalGradedForCard - a.psaTotalGradedForCard || a.cardName.localeCompare(b.cardName));
+          .sort((a, b) => b.score - a.score || (b.grades?.grade_total || 0) - (a.grades?.grade_total || 0) || a.cardName.localeCompare(b.cardName));
       }
 
       return filteredResults;
@@ -195,13 +212,24 @@ class CardRepository extends BaseRepository {
       return results.map((card) => ({
         id: card._id,
         text: card.cardName,
-        secondaryText: card.baseName !== card.cardName ? card.baseName : null,
+        secondaryText: card.variety || null,
         metadata: {
           pokemonNumber: card.pokemonNumber,
+          cardNumber: card.card_number,
           variety: card.variety,
+          uniquePokemonId: card.unique_pokemon_id,
           setName: card.setInfo?.setName,
           year: card.setInfo?.year,
-          totalGraded: card.psaTotalGradedForCard,
+          totalGraded: card.grades?.grade_total,
+          // Include grade breakdown if available
+          ...(card.grades && {
+            grades: {
+              grade_10: card.grades.grade_10,
+              grade_9: card.grades.grade_9,
+              grade_8: card.grades.grade_8,
+              grade_total: card.grades.grade_total
+            }
+          })
         },
       }));
     } catch (error) {
