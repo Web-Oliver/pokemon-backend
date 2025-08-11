@@ -76,10 +76,26 @@ const suggest = asyncHandler(async (req, res) => {
 });
 
 /**
- * Search cards
+ * Search cards - ENHANCED HIERARCHICAL SEARCH IMPLEMENTATION
+ * Supports bidirectional relationships:
+ * 1. Set selected first -> Show cards from that set (filtered by setId)
+ * 2. Card selected first -> Return card with Set info (populate setId)
+ * 3. Related cards lookup -> Find other cards in same set
  */
 const searchCards = asyncHandler(async (req, res) => {
-  const { query, setId, setName, year, cardNumber, variety, limit, page, sort } = req.query;
+  const { 
+    query, 
+    setId, // Direct ObjectId filtering
+    setName, 
+    year, 
+    cardNumber, 
+    variety, 
+    populate, // Auto-population support
+    exclude, // For related cards queries
+    limit, 
+    page, 
+    sort 
+  } = req.query;
 
   let searchQuery = query;
   const hasFilters = setId || setName || year || cardNumber || variety;
@@ -91,15 +107,38 @@ const searchCards = asyncHandler(async (req, res) => {
     searchQuery = '*';
   }
 
-  // Build filters
+  // Build filters for hierarchical search
   const filters = {};
 
-  if (setId) filters.setId = setId;
+  // HIERARCHICAL SEARCH: Direct ObjectId filtering (preferred method)
+  if (setId) {
+    try {
+      const mongoose = require('mongoose');
+      filters.setId = new mongoose.Types.ObjectId(setId);
+    } catch (error) {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid setId format',
+        error: error.message
+      });
+    }
+  }
+  
   if (cardNumber) filters.cardNumber = cardNumber;
   if (variety) filters.variety = new RegExp(variety, 'i');
+  
+  // EXCLUDE support for "related cards" queries
+  if (exclude) {
+    try {
+      const mongoose = require('mongoose');
+      filters._id = { $ne: new mongoose.Types.ObjectId(exclude) };
+    } catch (error) {
+      // Invalid exclude ID, ignore
+    }
+  }
 
-  // Add set name filter by looking up set ID
-  if (setName || year) {
+  // Fallback: Add set name filter by looking up set ID
+  if ((setName || year) && !setId) {
     const Set = require('../models/Set');
     const setQuery = {};
 
@@ -152,7 +191,27 @@ const searchCards = asyncHandler(async (req, res) => {
     sort: sort ? JSON.parse(sort) : undefined
   };
 
-  const results = await searchService.searchCards(searchQuery, filters, options);
+  let results = await searchService.searchCards(searchQuery, filters, options);
+  
+  // AUTO-POPULATION: Add Set information if requested
+  if (populate && populate.includes('setId') && results.length > 0) {
+    const Set = require('../models/Set');
+    const Card = require('../models/Card');
+    
+    // If results are plain objects, we need to populate manually
+    const populatedResults = await Promise.all(results.map(async (card) => {
+      if (card.setId && !card.setId.setName) {
+        const set = await Set.findById(card.setId).select('setName year totalCardsInSet');
+        return {
+          ...card,
+          setId: set || card.setId
+        };
+      }
+      return card;
+    }));
+    
+    results = populatedResults;
+  }
 
   res.status(200).json({
     success: true,
@@ -170,6 +229,13 @@ const searchCards = asyncHandler(async (req, res) => {
       query,
       filters,
       totalResults: results.length,
+      searchType: 'cards',
+      hierarchicalSearch: {
+        setId: setId || null,
+        setName: setName || null,
+        populated: populate || null,
+        excluded: exclude || null
+      },
       pagination: {
         page: options.page,
         limit: options.limit,
@@ -181,26 +247,89 @@ const searchCards = asyncHandler(async (req, res) => {
 });
 
 /**
- * Search products - HIERARCHICAL SEARCH IMPLEMENTATION
+ * Search Set Products (top-level categories like "Elite Trainer Box")
+ * Part of hierarchical search: SetProduct → Product relationship
+ */
+const searchSetProducts = asyncHandler(async (req, res) => {
+  const { query, limit, page, sort } = req.query;
+
+  let searchQuery = query;
+  
+  // Allow empty query for "show all" functionality
+  if (!query || typeof query !== 'string' || query.trim() === '') {
+    searchQuery = '*';
+  }
+
+  const options = {
+    limit: limit ? parseInt(limit, 10) : 10, // Smaller limit for set products
+    page: page ? parseInt(page, 10) : 1,
+    sort: sort ? JSON.parse(sort) : undefined
+  };
+
+  const results = await searchService.searchSetProducts(searchQuery, {}, options);
+
+  res.status(200).json({
+    success: true,
+    data: {
+      setProducts: results,
+      total: results.length,
+      currentPage: options.page,
+      totalPages: Math.ceil(results.length / options.limit),
+      hasNextPage: options.page < Math.ceil(results.length / options.limit),
+      hasPrevPage: options.page > 1,
+      count: results.length,
+      limit: options.limit
+    },
+    meta: {
+      query: searchQuery,
+      totalResults: results.length,
+      searchType: 'setProducts',
+      pagination: {
+        page: options.page,
+        limit: options.limit,
+        total: results.length,
+        pages: Math.ceil(results.length / options.limit)
+      }
+    }
+  });
+});
+
+/**
+ * Search products - ENHANCED HIERARCHICAL SEARCH IMPLEMENTATION
  * Supports the frontend's hierarchical search requirements:
- * 1. Set selected first -> Show only products from that set (uses '*' query) 
- * 2. Product selected first -> Return product with set info
- * 3. Auto-trigger when set selected and product field focused
+ * 1. SetProduct selected first -> Show only products from that SetProduct (filtered by setProductId)
+ * 2. Product selected first -> Return product with SetProduct info (populate setProductId)
+ * 3. Bidirectional relationships using MongoDB ObjectId references
+ * 4. Auto-population support for reverse lookups
  */
 const searchProducts = asyncHandler(async (req, res) => {
-  const { query, category, setName, minPrice, maxPrice, availableOnly, limit, page, sort } = req.query;
+  const { 
+    query, 
+    category, 
+    setName, 
+    setProductId, // Direct ObjectId filtering
+    minPrice, 
+    maxPrice, 
+    availableOnly, 
+    populate, // Auto-population support
+    exclude, // For related items queries
+    limit, 
+    page, 
+    sort 
+  } = req.query;
 
   let searchQuery = query;
   const hasFilters = category || setName || minPrice || maxPrice || availableOnly;
   
-  // HIERARCHICAL SEARCH: Allow empty query when filters exist (set selected first)
+  // HIERARCHICAL SEARCH: Allow empty query for initial load (like sets) and when filters exist
   if (!query || typeof query !== 'string' || query.trim() === '') {
-    if (!hasFilters) {
-      throw new ValidationError('Query parameter is required when no filters are provided');
-    }
-    // Use '*' to show all products when filtering by set/category
+    // Use '*' to show all products (either when filtering or for initial load)
     searchQuery = '*';
-    console.log('[HIERARCHICAL] Using wildcard query with filters:', { setName, category });
+    if (hasFilters) {
+      console.log('[HIERARCHICAL] Using wildcard query with filters:', { setName, category });
+    } else {
+      console.log('[INITIAL LOAD] Using wildcard query to show all products');
+    }
   }
 
   // Parse options first (needed for early returns)
@@ -214,8 +343,21 @@ const searchProducts = asyncHandler(async (req, res) => {
   const filters = {};
   if (category) filters.category = category;
   
-  // Handle setName by looking up SetProduct and using its ID
-  if (setName) {
+  // HIERARCHICAL SEARCH: Direct ObjectId filtering (preferred method)
+  if (setProductId) {
+    try {
+      const mongoose = require('mongoose');
+      filters.setProductId = new mongoose.Types.ObjectId(setProductId);
+    } catch (error) {
+      return res.status(400).json({
+        success: false,
+        message: 'Invalid setProductId format',
+        error: error.message
+      });
+    }
+  }
+  // Fallback: Handle setName by looking up SetProduct and using its ID
+  else if (setName) {
     const SetProduct = require('../models/SetProduct');
     const setProduct = await SetProduct.findOne({ 
       setProductName: new RegExp(`^${setName}$`, 'i') 
@@ -252,11 +394,41 @@ const searchProducts = asyncHandler(async (req, res) => {
     if (maxPrice) filters.price.$lte = parseFloat(maxPrice);
   }
   if (availableOnly === 'true') filters.available = { $gt: 0 };
+  
+  // EXCLUDE support for "related items" queries
+  if (exclude) {
+    try {
+      const mongoose = require('mongoose');
+      filters._id = { $ne: new mongoose.Types.ObjectId(exclude) };
+    } catch (error) {
+      // Invalid exclude ID, ignore
+    }
+  }
 
-  console.log('[HIERARCHICAL SEARCH] Products:', { query: searchQuery, filters, options });
+  console.log('[HIERARCHICAL SEARCH] Products:', { query: searchQuery, filters, options, populate });
 
-  // Use searchService for all searches (supports both FlexSearch and MongoDB)
-  const results = await searchService.searchProducts(searchQuery, filters, options);
+  // Use searchService with population support
+  let results = await searchService.searchProducts(searchQuery, filters, options);
+  
+  // AUTO-POPULATION: Add SetProduct information if requested
+  if (populate && populate.includes('setProductId') && results.length > 0) {
+    const SetProduct = require('../models/SetProduct');
+    const Product = require('../models/Product');
+    
+    // If results are plain objects, we need to populate manually
+    const populatedResults = await Promise.all(results.map(async (product) => {
+      if (product.setProductId && !product.setProductId.setProductName) {
+        const setProduct = await SetProduct.findById(product.setProductId).select('setProductName');
+        return {
+          ...product,
+          setProductId: setProduct || product.setProductId
+        };
+      }
+      return product;
+    }));
+    
+    results = populatedResults;
+  }
 
   res.status(200).json({
     success: true,
@@ -274,6 +446,13 @@ const searchProducts = asyncHandler(async (req, res) => {
       query: searchQuery,
       filters,
       totalResults: results.total || results.length,
+      searchType: 'products',
+      hierarchicalSearch: {
+        setProductId: setProductId || null,
+        setName: setName || null,
+        populated: populate || null,
+        excluded: exclude || null
+      },
       pagination: {
         page: results.page || options.page,
         limit: options.limit,
@@ -298,13 +477,15 @@ const searchSets = asyncHandler(async (req, res) => {
   const hasFilters = year || minYear || maxYear || minPsaPopulation || minCardCount;
   
   // HIERARCHICAL SEARCH: Allow empty query when filters exist (auto-trigger support)
+  // ALSO: Allow empty query for initial "show all" functionality
   if (!query || typeof query !== 'string' || query.trim() === '') {
-    if (!hasFilters) {
-      throw new ValidationError('Query parameter is required when no filters are provided');
-    }
-    // Use '*' to show all sets when filtering
+    // Use '*' to show all sets (either when filtering or for initial load)
     searchQuery = '*';
-    console.log('[HIERARCHICAL] Using wildcard query with filters for sets:', { year, minYear, maxYear });
+    if (hasFilters) {
+      console.log('[HIERARCHICAL] Using wildcard query with filters for sets:', { year, minYear, maxYear });
+    } else {
+      console.log('[INITIAL LOAD] Using wildcard query to show all sets');
+    }
   }
 
   // Build filters
@@ -325,7 +506,7 @@ const searchSets = asyncHandler(async (req, res) => {
     sort: sort ? JSON.parse(sort) : undefined
   };
 
-  const results = await searchService.searchSets(query, filters, options);
+  const results = await searchService.searchSets(searchQuery, filters, options);
 
   res.status(200).json({
     success: true,
@@ -399,12 +580,139 @@ const getSearchStats = asyncHandler(async (req, res) => {
   });
 });
 
+/**
+ * Get related cards in the same set
+ * Implements bidirectional card relationships
+ */
+const getRelatedCards = asyncHandler(async (req, res) => {
+  const { cardId } = req.params;
+  const { limit = 10 } = req.query;
+
+  if (!cardId) {
+    return res.status(400).json({
+      success: false,
+      message: 'Card ID is required'
+    });
+  }
+
+  try {
+    const mongoose = require('mongoose');
+    const Card = require('../models/Card');
+    const Set = require('../models/Set');
+    
+    // 1. Get the card with its set information
+    const card = await Card.findById(cardId).populate('setId', 'setName year totalCardsInSet');
+    
+    if (!card) {
+      return res.status(404).json({
+        success: false,
+        message: 'Card not found'
+      });
+    }
+    
+    // 2. Find all other cards in the same set
+    const relatedCards = await Card.find({ 
+      setId: card.setId._id,
+      _id: { $ne: cardId } // Exclude the original card
+    })
+    .populate('setId', 'setName year')
+    .limit(parseInt(limit, 10));
+    
+    res.status(200).json({
+      success: true,
+      data: {
+        selectedCard: card,
+        relatedCards: relatedCards,
+        setInfo: card.setId,
+        totalRelated: relatedCards.length
+      },
+      meta: {
+        searchType: 'relatedCards',
+        setId: card.setId._id,
+        setName: card.setId.setName,
+        limit: parseInt(limit, 10)
+      }
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Error finding related cards',
+      error: error.message
+    });
+  }
+});
+
+/**
+ * Get related products in the same set product category
+ * Implements bidirectional product relationships
+ */
+const getRelatedProducts = asyncHandler(async (req, res) => {
+  const { productId } = req.params;
+  const { limit = 10 } = req.query;
+
+  if (!productId) {
+    return res.status(400).json({
+      success: false,
+      message: 'Product ID is required'
+    });
+  }
+
+  try {
+    const mongoose = require('mongoose');
+    const Product = require('../models/Product');
+    const SetProduct = require('../models/SetProduct');
+    
+    // 1. Get the product with its set product information
+    const product = await Product.findById(productId).populate('setProductId', 'setProductName');
+    
+    if (!product) {
+      return res.status(404).json({
+        success: false,
+        message: 'Product not found'
+      });
+    }
+    
+    // 2. Find all other products in the same set product category
+    const relatedProducts = await Product.find({ 
+      setProductId: product.setProductId._id,
+      _id: { $ne: productId } // Exclude the original product
+    })
+    .populate('setProductId', 'setProductName')
+    .limit(parseInt(limit, 10));
+    
+    res.status(200).json({
+      success: true,
+      data: {
+        selectedProduct: product,
+        relatedProducts: relatedProducts,
+        setProductInfo: product.setProductId,
+        totalRelated: relatedProducts.length
+      },
+      meta: {
+        searchType: 'relatedProducts',
+        setProductId: product.setProductId._id,
+        setProductName: product.setProductId.setProductName,
+        limit: parseInt(limit, 10)
+      }
+    });
+  } catch (error) {
+    res.status(500).json({
+      success: false,
+      message: 'Error finding related products',
+      error: error.message
+    });
+  }
+});
+
 module.exports = {
   search,
   suggest,
   searchCards,
   searchProducts,
   searchSets,
+  searchSetProducts,
+  getRelatedCards,
+  getRelatedProducts,
   getSearchTypes,
   getSearchStats
 };

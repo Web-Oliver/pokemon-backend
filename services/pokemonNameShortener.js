@@ -265,10 +265,91 @@ function quickShortenSetName(setName) {
   return shortener.shortenSetName(setName);
 }
 
+/**
+ * Format card name with proper fallbacks
+ * @param {string} cardName - Card name
+ * @param {string} cardNumber - Card number
+ * @param {string} variety - Card variety
+ * @returns {string} - Formatted name
+ */
+function formatCardName(cardName, cardNumber, variety) {
+  if (!cardName || cardName === 'Unknown') {
+    return cardNumber ? `#${cardNumber}` : 'Unknown Card';
+  }
+  
+  const baseName = cardName;
+  const number = cardNumber ? ` #${cardNumber}` : '';
+  const variant = variety && variety !== 'Unknown' && variety !== 'Normal' ? ` ${variety}` : '';
+  
+  return `${baseName}${number}${variant}`;
+}
+
+/**
+ * Format sealed product name with proper fallbacks for unknown values
+ * @param {string} name - Product name
+ * @param {string} setName - Set name
+ * @returns {string} - Formatted name
+ */
+function formatSealedProductName(name, setName) {
+  // Handle completely unknown products
+  if ((!name || name === 'Unknown') && (!setName || setName === 'Unknown')) {
+    return 'Sealed Product';
+  }
+  
+  // Handle unknown set name but known product name
+  if (!setName || setName === 'Unknown') {
+    return name || 'Sealed Product';
+  }
+  
+  // Handle known set name but unknown product name
+  if (!name || name === 'Unknown') {
+    const shortener = new PokemonNameShortener();
+    const shortened = shortener.shortenSetName(setName);
+    return `${shortened.shortenedName} Product`;
+  }
+  
+  // Both are known - use shortened set name
+  const shortener = new PokemonNameShortener();
+  const shortened = shortener.shortenSetName(setName);
+  return `${shortened.shortenedName} ${name}`;
+}
+
+/**
+ * Get shortened set name using the shortener
+ * @param {string} setName - Full set name
+ * @returns {string} - Shortened name
+ */
+function getShortenedSetName(setName) {
+  if (!setName || setName === 'Unknown') {
+    return 'Unknown Set';
+  }
+  
+  const shortener = new PokemonNameShortener();
+  const result = shortener.shortenSetName(setName);
+  return result.shortenedName;
+}
+
+/**
+ * Check if set is Japanese
+ * @param {string} setName - Set name
+ * @returns {boolean} - True if Japanese set
+ */
+function isJapaneseSet(setName) {
+  if (!setName) return false;
+  const lowerName = setName.toLowerCase();
+  return lowerName.includes('japanese') || 
+         lowerName.includes('japan') || 
+         lowerName.includes('jpn');
+}
+
 module.exports = {
   PokemonNameShortener,
   createPokemonNameShortener,
   quickShortenSetName,
+  formatCardName,
+  formatSealedProductName,
+  getShortenedSetName,
+  isJapaneseSet,
   POKEMON_ABBREVIATIONS,
   SPECIAL_RULES,
   SHORTENER_CONFIG,

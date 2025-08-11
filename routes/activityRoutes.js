@@ -444,6 +444,28 @@ router.post('/archive-old', async (req, res, next) => {
   }
 });
 
+/**
+ * POST /api/activities/generate-historical
+ * Generate historical activities for existing collection items (maintenance endpoint)
+ */
+router.post('/generate-historical', async (req, res, next) => {
+  try {
+    console.log('[ACTIVITY API] POST /activities/generate-historical');
+
+    const totalGenerated = await ActivityService.generateHistoricalActivities();
+
+    res.json({
+      success: true,
+      data: {
+        activitiesGenerated: totalGenerated,
+      },
+      message: `Generated ${totalGenerated} historical activities`,
+    });
+  } catch (error) {
+    next(error);
+  }
+});
+
 // Context7 Error Handler
 router.use(handleActivityError);
 

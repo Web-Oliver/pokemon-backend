@@ -511,11 +511,195 @@ function createResponseTransformer(options = {}) {
 }
 
 /**
+ * RFC 7807 Problem Details for HTTP APIs Support
+ * Creates standardized error responses following RFC 7807 specification
+ */
+class ProblemDetailsHandler {
+  static createProblemDetails({
+    type = 'about:blank',
+    title,
+    status,
+    detail,
+    instance,
+    extensions = {}
+  }) {
+    const problem = {
+      type,
+      title,
+      status,
+      detail,
+      instance
+    };
+
+    // Add any extension members
+    Object.assign(problem, extensions);
+
+    return problem;
+  }
+
+  static validation(message, errors = [], instance = null) {
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/validation-failed',
+      title: 'Validation Failed',
+      status: 400,
+      detail: message,
+      instance,
+      extensions: {
+        errors: errors.map(err => ({
+          field: err.field || err.path,
+          message: err.message,
+          code: err.code || 'VALIDATION_ERROR'
+        }))
+      }
+    });
+  }
+
+  static notFound(resource, instance = null) {
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/resource-not-found',
+      title: 'Resource Not Found',
+      status: 404,
+      detail: `The requested ${resource} could not be found`,
+      instance
+    });
+  }
+
+  static unauthorized(detail = 'Authentication required', instance = null) {
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/unauthorized',
+      title: 'Unauthorized',
+      status: 401,
+      detail,
+      instance
+    });
+  }
+
+  static forbidden(detail = 'Access denied', instance = null) {
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/forbidden',
+      title: 'Forbidden',
+      status: 403,
+      detail,
+      instance
+    });
+  }
+
+  static conflict(resource, detail, instance = null) {
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/resource-conflict',
+      title: 'Resource Conflict',
+      status: 409,
+      detail: detail || `Conflict with existing ${resource}`,
+      instance
+    });
+  }
+
+  static serverError(detail = 'An internal server error occurred', instance = null) {
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/server-error',
+      title: 'Internal Server Error',
+      status: 500,
+      detail,
+      instance
+    });
+  }
+
+  static badRequest(detail = 'The request could not be understood', instance = null) {
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/bad-request',
+      title: 'Bad Request',
+      status: 400,
+      detail,
+      instance
+    });
+  }
+
+  static rateLimited(detail = 'Too many requests', retryAfter = null, instance = null) {
+    const extensions = retryAfter ? { 'retry-after': retryAfter } : {};
+    return this.createProblemDetails({
+      type: 'https://pokemon-collection.com/problems/rate-limited',
+      title: 'Too Many Requests',
+      status: 429,
+      detail,
+      instance,
+      extensions
+    });
+  }
+}
+
+/**
+ * Enhanced response transformer with RFC 7807 Problem Details support
+ */
+function createEnhancedResponseTransformer(options = {}) {
+  const transformer = new ResponseTransformer(options);
+  const middleware = transformer.createMiddleware();
+
+  return (req, res, next) => {
+    // Add RFC 7807 Problem Details methods to response object
+    res.problem = (problemDetails) => {
+      res.status(problemDetails.status)
+         .set('Content-Type', 'application/problem+json')
+         .json(problemDetails);
+    };
+
+    res.validationProblem = (message, errors = []) => {
+      const problem = ProblemDetailsHandler.validation(message, errors, req.originalUrl);
+      res.problem(problem);
+    };
+
+    res.notFoundProblem = (resource) => {
+      const problem = ProblemDetailsHandler.notFound(resource, req.originalUrl);
+      res.problem(problem);
+    };
+
+    res.unauthorizedProblem = (detail) => {
+      const problem = ProblemDetailsHandler.unauthorized(detail, req.originalUrl);
+      res.problem(problem);
+    };
+
+    res.forbiddenProblem = (detail) => {
+      const problem = ProblemDetailsHandler.forbidden(detail, req.originalUrl);
+      res.problem(problem);
+    };
+
+    res.conflictProblem = (resource, detail) => {
+      const problem = ProblemDetailsHandler.conflict(resource, detail, req.originalUrl);
+      res.problem(problem);
+    };
+
+    res.serverErrorProblem = (detail) => {
+      const problem = ProblemDetailsHandler.serverError(detail, req.originalUrl);
+      res.problem(problem);
+    };
+
+    res.badRequestProblem = (detail) => {
+      const problem = ProblemDetailsHandler.badRequest(detail, req.originalUrl);
+      res.problem(problem);
+    };
+
+    res.rateLimitedProblem = (detail, retryAfter) => {
+      const problem = ProblemDetailsHandler.rateLimited(detail, retryAfter, req.originalUrl);
+      res.problem(problem);
+    };
+
+    // Call the original middleware
+    middleware(req, res, next);
+  };
+}
+
+/**
  * Pre-configured transformers for common use cases
  */
 const presets = {
-  // API responses with full metadata
-  api: createResponseTransformer({
+  // API responses with full metadata and RFC 7807 support
+  api: createEnhancedResponseTransformer({
+    includeMetadata: true,
+    includeTimestamp: true,
+    logResponses: true,
+  }),
+
+  // Legacy API responses (backward compatibility)
+  legacy: createResponseTransformer({
     includeMetadata: true,
     includeTimestamp: true,
     logResponses: true,
@@ -529,7 +713,7 @@ const presets = {
   }),
 
   // Development responses with detailed logging
-  development: createResponseTransformer({
+  development: createEnhancedResponseTransformer({
     includeMetadata: true,
     includeTimestamp: true,
     logResponses: true,
@@ -540,6 +724,8 @@ const presets = {
 module.exports = {
   ResponseTransformer,
   createResponseTransformer,
+  createEnhancedResponseTransformer,
+  ProblemDetailsHandler,
   presets,
   RESPONSE_FORMATS,
 };

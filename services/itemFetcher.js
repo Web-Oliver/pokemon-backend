@@ -21,7 +21,12 @@ async function fetchItemById(itemId, itemCategory) {
 
   switch (itemCategory) {
     case 'SealedProduct':
-      fetchedItem = await SealedProduct.findById(itemId);
+      fetchedItem = await SealedProduct.findById(itemId).populate({
+        path: 'productId',
+        populate: {
+          path: 'setProductId'
+        }
+      });
       break;
     case 'PsaGradedCard':
       fetchedItem = await PsaGradedCard.findById(itemId).populate({

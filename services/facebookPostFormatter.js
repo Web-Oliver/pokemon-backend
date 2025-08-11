@@ -14,8 +14,10 @@ function formatItemForFacebook(data, category) {
 
   switch (category) {
     case 'SealedProduct':
-      formattedName = formatSealedProductName(data.name, data.setName);
-      const isJapaneseSealed = isJapaneseSet(data.setName);
+      const productName = data.productId?.productName;
+      const setName = data.productId?.setProductId?.setProductName;
+      formattedName = formatSealedProductName(productName, setName);
+      const isJapaneseSealed = isJapaneseSet(setName);
 
       price = data.myPrice ? `${Math.round(parseFloat(data.myPrice.toString()))} Kr.` : 'N/A';
       return `* ${isJapaneseSealed ? 'Japanese ' : ''}${formattedName} Sealed - ${price}`;

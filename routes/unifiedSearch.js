@@ -39,15 +39,16 @@ router.get('/suggest', cachePresets.searchSuggestions, searchController.suggest)
 
 /**
  * @route   GET /api/search/cards
- * @desc    Search cards
+ * @desc    Search cards with hierarchical filtering and population support
  * @access  Public
  * @query   {string} query - Search query (required)
- * @query   {string} setId - Set ID filter (optional)
- * @query   {string} setName - Set name filter (optional)
+ * @query   {string} setId - Set ObjectId filter (optional, preferred for hierarchical search)
+ * @query   {string} setName - Set name filter (optional, fallback)
  * @query   {number} year - Year filter (optional)
  * @query   {string} cardNumber - Card number filter (optional)
  * @query   {string} variety - Variety filter (optional)
- * @query   {number} minPsaPopulation - Minimum PSA population filter (optional)
+ * @query   {string} populate - Fields to populate, e.g. 'setId' (optional)
+ * @query   {string} exclude - Card ID to exclude from results (for related cards)
  * @query   {number} limit - Maximum results (optional, default 20)
  * @query   {number} page - Page number (optional, default 1)
  * @query   {string} sort - Sort criteria as JSON string (optional)
@@ -56,11 +57,14 @@ router.get('/cards', cachePresets.searchCards, searchController.searchCards);
 
 /**
  * @route   GET /api/search/products
- * @desc    Search products
+ * @desc    Search products with hierarchical filtering and population support
  * @access  Public
  * @query   {string} query - Search query (required)
  * @query   {string} category - Category filter (optional)
- * @query   {string} setName - Set name filter (optional)
+ * @query   {string} setProductId - SetProduct ObjectId filter (optional, preferred for hierarchical search)
+ * @query   {string} setName - Set name filter (optional, fallback)
+ * @query   {string} populate - Fields to populate, e.g. 'setProductId' (optional)
+ * @query   {string} exclude - Product ID to exclude from results (for related products)
  * @query   {number} minPrice - Minimum price filter (optional)
  * @query   {number} maxPrice - Maximum price filter (optional)
  * @query   {boolean} availableOnly - Show only available products (optional)
@@ -85,6 +89,35 @@ router.get('/products', cachePresets.searchProducts, searchController.searchProd
  * @query   {string} sort - Sort criteria as JSON string (optional)
  */
 router.get('/sets', cachePresets.searchSets, searchController.searchSets);
+
+/**
+ * @route   GET /api/search/set-products
+ * @desc    Search set products (top-level categories like "Elite Trainer Box")
+ * @access  Public
+ * @query   {string} query - Search query (optional, defaults to show all)
+ * @query   {number} limit - Maximum results (optional, default 10)
+ * @query   {number} page - Page number (optional, default 1)
+ * @query   {string} sort - Sort criteria as JSON string (optional)
+ */
+router.get('/set-products', cachePresets.searchProducts, searchController.searchSetProducts);
+
+/**
+ * @route   GET /api/search/cards/:cardId/related
+ * @desc    Get related cards in the same set (bidirectional relationship)
+ * @access  Public
+ * @param   {string} cardId - Card ID
+ * @query   {number} limit - Maximum related cards (optional, default 10)
+ */
+router.get('/cards/:cardId/related', cachePresets.searchCards, searchController.getRelatedCards);
+
+/**
+ * @route   GET /api/search/products/:productId/related
+ * @desc    Get related products in the same set product category (bidirectional relationship)
+ * @access  Public
+ * @param   {string} productId - Product ID
+ * @query   {number} limit - Maximum related products (optional, default 10)
+ */
+router.get('/products/:productId/related', cachePresets.searchProducts, searchController.getRelatedProducts);
 
 /**
  * @route   GET /api/search/types

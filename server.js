@@ -10,6 +10,8 @@ const { compressionMiddleware, setCacheHeaders } = require('./middleware/compres
 const { getCacheStats } = require('./middleware/searchCache');
 const { initializeCacheSystem, shutdownCacheSystem } = require('./startup/initializeCacheSystem');
 const { presets } = require('./middleware/responseTransformer');
+const { createVersioningMiddleware } = require('./middleware/versioning');
+const { paginationPresets } = require('./middleware/pagination');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -26,23 +28,22 @@ app.use(cors());
 app.use(express.json({ limit: '200mb' }));
 app.use(express.urlencoded({ limit: '200mb', extended: true, parameterLimit: 50000 }));
 
-// Response transformation middleware (after body parsing, before routes)
-app.use(presets.api);
+// Pagination middleware for API routes
+app.use('/api', paginationPresets.api);
+
+// Response transformation middleware with RFC 7807 support
+app.use('/api', presets.api);
 
 // Serve static files (images)
 app.use('/uploads', express.static(path.join(__dirname, 'public/uploads')));
 
-// Routes - Consolidated for better maintainability
-app.use('/api/search', require('./routes/unifiedSearch')); // Unified search architecture
+// Modern REST-compliant API routes
+app.use('/api/search', require('./routes/unifiedSearch')); // Unified hierarchical search
+app.use('/api', require('./routes/collections')); // REST-compliant collection endpoints
+app.use('/api', require('./routes/api')); // REST-compliant API endpoints
 app.use('/api/sets', require('./routes/sets'));
 app.use('/api/cards', require('./routes/cards'));
-app.use('/api/set-products', require('./routes/setProducts')); // SetProduct routes (SetProduct → Product hierarchy)
-
-// Consolidated collection routes (PSA, Raw, Sealed Products)
-app.use('/api', require('./routes/collections'));
-
-// Consolidated API routes (Sales, CardMarket, Export, Upload, External Listing)
-app.use('/api', require('./routes/api'));
+app.use('/api/set-products', require('./routes/setProducts'));
 
 // Specialized routes that remain separate
 app.use('/api/activities', require('./routes/activityRoutes')); // Context7 Activity Tracking
@@ -51,9 +52,15 @@ app.use('/api/products', require('./routes/products')); // Product routes (SetPr
 app.use('/api/cache', require('./routes/cacheManagement')); // Cache management
 app.use('/api/plugins', require('./routes/pluginManagement')); // Plugin management
 
+
 // Root endpoint
 app.get('/', (req, res) => {
-  res.status(200).json({ message: 'Server Running' });
+  res.status(200).json({ 
+    message: 'Pokemon Collection Backend API', 
+    version: '2.0',
+    status: 'operational',
+    documentation: '/api/version'
+  });
 });
 
 // Health check endpoint with performance metrics

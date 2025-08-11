@@ -1,14 +1,11 @@
 /**
- * Unified Collection Routes
+ * REST-Compliant Collection Routes
  * 
- * Consolidates all collection entity routes (PSA, Raw, Sealed) to eliminate
- * the massive duplication across individual route files.
- * 
- * This single file replaces:
- * - rawCards.js (40 lines)
- * - psaGradedCards.js (40 lines) 
- * - sealedProducts.js (27 lines)
- * Total: 107 lines → ~50 lines (50% reduction)
+ * Implements unified collection endpoints following REST principles:
+ * - Resource-based URL structure (/collections/:type)
+ * - Proper HTTP method usage
+ * - Consistent response formats
+ * - RFC 7807 Problem Details error handling
  */
 
 const express = require('express');
@@ -76,9 +73,96 @@ const collectionTypes = Object.entries(COLLECTION_CONFIGS).map(([path, config]) 
   return { path, routes };
 });
 
-// Mount each collection type at its specific path
+// REST-compliant unified collection routes
+// Note: More specific routes should come before parameterized routes
+router.get('/collections/:type', (req, res, next) => {
+  // Skip special collection endpoints
+  if (req.params.type === 'social-exports' || req.params.type === 'exports') {
+    return next();
+  }
+  const controller = getControllerByType(req.params.type, res);
+  if (controller) controller.getAll(req, res, next);
+});
+
+router.get('/collections/:type/:id', (req, res, next) => {
+  // Skip special collection endpoints
+  if (req.params.type === 'social-exports' || req.params.type === 'exports') {
+    return next();
+  }
+  const controller = getControllerByType(req.params.type, res);
+  if (controller) controller.getById(req, res, next);
+});
+
+router.post('/collections/:type', (req, res, next) => {
+  // Skip special collection endpoints
+  if (req.params.type === 'social-exports' || req.params.type === 'exports') {
+    return next();
+  }
+  const controller = getControllerByType(req.params.type, res);
+  if (controller) controller.create(req, res, next);
+});
+
+router.put('/collections/:type/:id', (req, res, next) => {
+  // Skip special collection endpoints  
+  if (req.params.type === 'social-exports' || req.params.type === 'exports') {
+    return next();
+  }
+  const controller = getControllerByType(req.params.type, res);
+  if (controller) controller.update(req, res, next);
+});
+
+router.patch('/collections/:type/:id', (req, res, next) => {
+  // Skip special collection endpoints
+  if (req.params.type === 'social-exports' || req.params.type === 'exports') {
+    return next();
+  }
+  const controller = getControllerByType(req.params.type, res);
+  if (controller) {
+    if (req.body.sold !== undefined && controller.markAsSold) {
+      controller.markAsSold(req, res, next);
+    } else {
+      controller.update(req, res, next);
+    }
+  }
+});
+
+router.delete('/collections/:type/:id', (req, res, next) => {
+  // Skip special collection endpoints
+  if (req.params.type === 'social-exports' || req.params.type === 'exports') {
+    return next();
+  }
+  const controller = getControllerByType(req.params.type, res);
+  if (controller) controller.delete(req, res, next);
+});
+
+// Legacy routes for backward compatibility
 collectionTypes.forEach(({ path, routes }) => {
   router.use(`/${path}`, routes);
 });
+
+/**
+ * Helper function to get controller by collection type
+ */
+function getControllerByType(type, res) {
+  switch (type) {
+    case 'psa-cards':
+    case 'psa-graded-cards':
+      return require('../controllers/psaGradedCardsController');
+    case 'raw-cards':
+      return require('../controllers/rawCardsController');
+    case 'sealed-products':
+      return require('../controllers/sealedProductsController');
+    default:
+      res.status(400).json({
+        type: 'https://pokemon-collection.com/problems/invalid-collection-type',
+        title: 'Invalid Collection Type',
+        status: 400,
+        detail: `Collection type '${type}' is not supported`,
+        instance: res.req.originalUrl,
+        supportedTypes: ['psa-cards', 'raw-cards', 'sealed-products']
+      });
+      return null;
+  }
+}
 
 module.exports = router;

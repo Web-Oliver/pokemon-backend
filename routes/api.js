@@ -1,15 +1,11 @@
 /**
- * Unified API Routes
+ * Modern REST-Compliant API Routes
  * 
- * Consolidates all simple route files to eliminate the proliferation
- * of tiny 9-13 line route files.
- * 
- * This single file replaces:
- * - sales.js (9 lines)
- * - products.js (13 lines) [formerly cardMarketRefProducts.js]
- * - externalListing.js (11 lines)
- * - export.js (28 lines)
- * Total: 61 lines of boilerplate → ~80 lines with better organization
+ * Implements fixes for REST violations identified in API analysis:
+ * - Proper HTTP method usage
+ * - Resource-based URL structure
+ * - RFC 7807 Problem Details error handling
+ * - Standardized response formats
  */
 
 const express = require('express');
@@ -17,8 +13,6 @@ const router = express.Router();
 
 // Controllers
 const { getSales, getSalesSummary, getSalesGraphData } = require('../controllers/salesController');
-
-// Models for status endpoint
 const Card = require('../models/Card');
 const Set = require('../models/Set');
 const Product = require('../models/Product');
@@ -98,24 +92,100 @@ router.get('/products', getAllProducts);
 router.get('/products/:id', getProductById);
 
 // ================================
-// EXTERNAL LISTING GENERATION
+// SOCIAL EXPORTS RESOURCE - REST COMPLIANT
 // ================================
-router.post('/external-listing/generate-facebook-post', generateFacebookPost);
-router.post('/generate-facebook-post', generateFacebookPost); // Frontend compatibility
-router.post('/external-listing/generate-dba-title', generateDbaTitle);
-router.post('/collection/facebook-text-file', getCollectionFacebookTextFile);
+router.post('/collections/social-exports', (req, res, next) => {
+  const { type } = req.body;
+  
+  switch (type) {
+    case 'facebook-post':
+      generateFacebookPost(req, res, next);
+      break;
+    case 'dba-title':
+      generateDbaTitle(req, res, next);
+      break;
+    case 'facebook-text-file':
+      getCollectionFacebookTextFile(req, res, next);
+      break;
+    default:
+      res.status(400).json({
+        type: 'https://pokemon-collection.com/problems/invalid-export-type',
+        title: 'Invalid Export Type',
+        status: 400,
+        detail: `Export type '${type}' is not supported`,
+        instance: req.originalUrl,
+        supportedTypes: ['facebook-post', 'dba-title', 'facebook-text-file']
+      });
+  }
+});
 
 // ================================
-// EXPORT ROUTES
+// COLLECTION EXPORTS RESOURCE - REST COMPLIANT
 // ================================
-router.get('/export/zip/psa-cards', zipPsaCardImages);
-router.get('/export/zip/raw-cards', zipRawCardImages);
-router.get('/export/zip/sealed-products', zipSealedProductImages);
-router.post('/export/dba', exportToDba);
-router.get('/export/dba/download', downloadDbaZip);
-router.post('/export/dba/post', postToDba);
-router.get('/export/dba/status', getDbaStatus);
-router.post('/export/dba/test', testDbaIntegration);
+router.post('/collections/:type/exports', (req, res, next) => {
+  const { type } = req.params;
+  const { format } = req.body;
+  
+  switch (format) {
+    case 'dba':
+      exportToDba(req, res, next);
+      break;
+    case 'zip':
+      switch (type) {
+        case 'psa-cards':
+        case 'psa-graded-cards':
+          zipPsaCardImages(req, res, next);
+          break;
+        case 'raw-cards':
+          zipRawCardImages(req, res, next);
+          break;
+        case 'sealed-products':
+          zipSealedProductImages(req, res, next);
+          break;
+        default:
+          res.status(400).json({
+            type: 'https://pokemon-collection.com/problems/unsupported-export',
+            title: 'Unsupported Export',
+            status: 400,
+            detail: `ZIP export not supported for collection type '${type}'`,
+            instance: req.originalUrl
+          });
+      }
+      break;
+    default:
+      res.status(400).json({
+        type: 'https://pokemon-collection.com/problems/invalid-export-format',
+        title: 'Invalid Export Format',
+        status: 400,
+        detail: `Export format '${format}' is not supported`,
+        instance: req.originalUrl,
+        supportedFormats: ['dba', 'zip']
+      });
+  }
+});
+
+router.get('/collections/exports/:exportId', (req, res, next) => {
+  const { exportId } = req.params;
+  
+  if (exportId === 'dba' || exportId.includes('dba')) {
+    downloadDbaZip(req, res, next);
+  } else {
+    res.status(404).json({
+      type: 'https://pokemon-collection.com/problems/export-not-found',
+      title: 'Export Not Found',
+      status: 404,
+      detail: `Export with ID '${exportId}' was not found`,
+      instance: req.originalUrl
+    });
+  }
+});
+
+// ================================
+// DBA INTEGRATION RESOURCE - REST COMPLIANT
+// ================================
+router.post('/dba/posts', postToDba);
+router.get('/dba/status', getDbaStatus);
+router.post('/dba/test', testDbaIntegration);
 
 // ================================
 // UPLOAD ROUTES
@@ -126,19 +196,24 @@ router.delete('/upload/cleanup', cleanupImages);
 router.delete('/upload/cleanup-all', cleanupAllOrphanedImages);
 
 // ================================
-// AUCTION ROUTES
+// AUCTIONS RESOURCE - REST COMPLIANT
 // ================================
 router.get('/auctions', getAllAuctions);
 router.get('/auctions/:id', getAuctionById);
 router.post('/auctions', createAuction);
 router.put('/auctions/:id', updateAuction);
+router.patch('/auctions/:id', updateAuction);
 router.delete('/auctions/:id', deleteAuction);
-router.post('/auctions/:id/add-item', addItemToAuction);
-router.post('/auctions/:id/items', addItemToAuction); // Alternative route for frontend
-router.put('/auctions/:id/items', addItemToAuction); // Frontend compatibility - add item
-router.delete('/auctions/:id/remove-item', removeItemFromAuction);
-router.post('/auctions/:id/mark-item-sold', markItemAsSold);
-router.patch('/auctions/:id/items/sold', markItemAsSold);
-router.put('/auctions/:id/items/sold', markItemAsSold); // Frontend compatibility - mark sold
+
+// Auction items subresource
+router.post('/auctions/:id/items', addItemToAuction);
+router.delete('/auctions/:id/items/:itemId', (req, res, next) => {
+  req.body.itemId = req.params.itemId;
+  removeItemFromAuction(req, res, next);
+});
+router.patch('/auctions/:id/items/:itemId', (req, res, next) => {
+  req.body.itemId = req.params.itemId;
+  markItemAsSold(req, res, next);
+});
 
 module.exports = router;
