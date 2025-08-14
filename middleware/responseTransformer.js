@@ -248,7 +248,7 @@ class ResponseTransformer {
 
     // Circular reference protection using WeakSet
     if (seen.has(data)) {
-      return '[Circular Reference]';
+      return null; // Skip circular references entirely instead of showing placeholder text
     }
     seen.add(data);
 

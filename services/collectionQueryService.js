@@ -49,9 +49,11 @@ class CollectionQueryService {
 
     const results = await this.Model.find(query).populate({
       path: 'cardId',
+      select: 'cardName cardNumber variety grades',
       populate: {
         path: 'setId',
         model: 'Set',
+        select: 'setName year totalCardsInSet totalPsaPopulation'
       },
     });
 
@@ -69,9 +71,11 @@ class CollectionQueryService {
 
     const entity = await this.Model.findById(id).populate({
       path: 'cardId',
+      select: 'cardName cardNumber variety grades',
       populate: {
         path: 'setId',
         model: 'Set',
+        select: 'setName year totalCardsInSet totalPsaPopulation'
       },
     });
 

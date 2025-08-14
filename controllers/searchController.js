@@ -14,15 +14,47 @@ const searchService = require('../services/searchService');
  * Unified search across multiple types
  */
 const search = asyncHandler(async (req, res) => {
-  const { query, types, limit, page, sort, filters } = req.query;
+  const { query, types, type, domain, limit, page, sort, filters } = req.query;
 
-  // Validate query
-  if (!query || typeof query !== 'string') {
-    throw new ValidationError('Query parameter is required and must be a string');
+  // Allow empty queries for unified search (consistent with individual search endpoints)
+  let searchQuery = query;
+  if (!query || typeof query !== 'string' || query.trim() === '') {
+    searchQuery = '*'; // Use wildcard for "show all" functionality
   }
 
-  // Parse types (default to all if not specified)
-  const searchTypes = types ? types.split(',').map(t => t.trim()) : ['cards', 'products', 'sets', 'setProducts'];
+  // DOMAIN-AWARE SEARCH: Respect domain boundaries
+  let searchTypes;
+  
+  if (domain) {
+    // HIERARCHICAL SEARCH: Domain-specific search types
+    const domainMap = {
+      'cards': ['cards', 'sets'],         // Card Domain: Set → Card hierarchy
+      'products': ['products', 'setProducts'], // Product Domain: SetProduct → Product hierarchy
+      'card-domain': ['cards', 'sets'],   // Alias for clarity
+      'product-domain': ['products', 'setProducts'] // Alias for clarity
+    };
+    
+    searchTypes = domainMap[domain] || domainMap['cards']; // Default to card domain
+    console.log(`[DOMAIN SEARCH] Using domain "${domain}" with types:`, searchTypes);
+  } else if (type) {
+    // Frontend sends specific type - map to correct domain-specific search
+    const typeMap = {
+      'sets': ['sets'],           // Card Domain: Set entities only
+      'cards': ['cards'],         // Card Domain: Card entities only  
+      'products': ['products'],   // Product Domain: Product entities only
+      'set-products': ['setProducts'], // Product Domain: SetProduct entities only
+      'all': ['cards', 'products', 'sets', 'setProducts'] // All domains (fallback)
+    };
+    
+    searchTypes = typeMap[type] || [type]; // Use mapping or fallback to raw type
+  } else if (types) {
+    // Legacy support for comma-separated types
+    searchTypes = types.split(',').map(t => t.trim());
+  } else {
+    // CHANGED: Default to card domain only (was mixing both domains)
+    searchTypes = ['cards', 'sets']; // Card domain only
+    console.log('[DOMAIN SEARCH] No domain specified, defaulting to card domain');
+  }
 
   // Parse options
   const options = {
@@ -32,13 +64,13 @@ const search = asyncHandler(async (req, res) => {
     filters: filters ? JSON.parse(filters) : {}
   };
 
-  const results = await searchService.unifiedSearch(query, searchTypes, options);
+  const results = await searchService.unifiedSearch(searchQuery, searchTypes, options);
 
   res.status(200).json({
     success: true,
     data: results,
     meta: {
-      query,
+      query: searchQuery,
       types: searchTypes,
       totalTypes: Object.keys(results).length
     }
@@ -51,8 +83,9 @@ const search = asyncHandler(async (req, res) => {
 const suggest = asyncHandler(async (req, res) => {
   const { query, types, limit } = req.query;
 
-  if (!query || typeof query !== 'string') {
-    throw new ValidationError('Query parameter is required and must be a string');
+  // Require query for suggestions (suggestions need something to search for)
+  if (!query || typeof query !== 'string' || query.trim() === '') {
+    throw new ValidationError('Query parameter is required and must be a string for suggestions');
   }
 
   const searchTypes = types ? types.split(',').map(t => t.trim()) : ['cards'];

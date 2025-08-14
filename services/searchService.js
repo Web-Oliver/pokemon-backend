@@ -319,7 +319,10 @@ class SearchService {
       console.log(`[MONGODB DIRECT] Searching cards with filters only:`, filters);
       
       const results = await Card.find(filters)
-        .populate('setId')
+        .populate({
+          path: 'setId',
+          select: 'setName year totalCardsInSet totalPsaPopulation'
+        })
         .lean()
         .limit(limit)
         .sort({ 'grades.grade_total': -1, cardName: 1 });
@@ -368,9 +371,15 @@ class SearchService {
       const seenIds = new Set();
 
       searchResults = allResults.filter(result => {
-        const hasNew = result.result.some(id => !seenIds.has(id));
-
-        result.result.forEach(id => seenIds.add(id));
+        // FIXED: Handle different FlexSearch result structures safely
+        const resultArray = Array.isArray(result.result) ? result.result : 
+                           Array.isArray(result) ? result : 
+                           result.result ? [result.result] : [];
+        
+        if (resultArray.length === 0) return false;
+        
+        const hasNew = resultArray.some(id => !seenIds.has(id));
+        resultArray.forEach(id => seenIds.add(id));
         return hasNew;
       });
 
@@ -378,7 +387,12 @@ class SearchService {
       const cardIds = [];
 
       searchResults.forEach(result => {
-        result.result.forEach(id => {
+        // FIXED: Handle different FlexSearch result structures safely
+        const resultArray = Array.isArray(result.result) ? result.result : 
+                           Array.isArray(result) ? result : 
+                           result.result ? [result.result] : [];
+        
+        resultArray.forEach(id => {
           if (!cardIds.includes(id)) {
             cardIds.push(id);
           }
@@ -392,7 +406,10 @@ class SearchService {
           _id: { $in: cardIds },
           ...filters
         })
-        .populate('setId')
+        .populate({
+          path: 'setId',
+          select: 'setName year totalCardsInSet totalPsaPopulation'
+        })
         .lean()
         .limit(limit);
 
@@ -430,7 +447,10 @@ class SearchService {
       { 
         ...options, 
         sort: options.sort || defaultSort,
-        populate: 'setId'
+        populate: {
+          path: 'setId',
+          select: 'setName year totalCardsInSet totalPsaPopulation'
+        }
       }
     );
 
@@ -522,9 +542,15 @@ class SearchService {
       const seenIds = new Set();
 
       searchResults = allResults.filter(result => {
-        const hasNew = result.result.some(id => !seenIds.has(id));
-
-        result.result.forEach(id => seenIds.add(id));
+        // FIXED: Handle different FlexSearch result structures safely
+        const resultArray = Array.isArray(result.result) ? result.result : 
+                           Array.isArray(result) ? result : 
+                           result.result ? [result.result] : [];
+        
+        if (resultArray.length === 0) return false;
+        
+        const hasNew = resultArray.some(id => !seenIds.has(id));
+        resultArray.forEach(id => seenIds.add(id));
         return hasNew;
       });
 
@@ -532,7 +558,12 @@ class SearchService {
       const productIds = [];
 
       searchResults.forEach(result => {
-        result.result.forEach(id => {
+        // FIXED: Handle different FlexSearch result structures safely
+        const resultArray = Array.isArray(result.result) ? result.result : 
+                           Array.isArray(result) ? result : 
+                           result.result ? [result.result] : [];
+        
+        resultArray.forEach(id => {
           if (!productIds.includes(id)) {
             productIds.push(id);
           }
@@ -654,7 +685,12 @@ class SearchService {
       const setIds = [];
 
       searchResults.forEach(result => {
-        result.result.forEach(id => {
+        // FIXED: Handle different FlexSearch result structures safely
+        const resultArray = Array.isArray(result.result) ? result.result : 
+                           Array.isArray(result) ? result : 
+                           result.result ? [result.result] : [];
+        
+        resultArray.forEach(id => {
           if (!setIds.includes(id)) {
             setIds.push(id);
           }
