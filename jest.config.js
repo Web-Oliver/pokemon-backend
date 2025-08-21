@@ -2,10 +2,10 @@
 const config = {
   // Test environment
   testEnvironment: 'node',
-  
+
   // Root directories
   roots: ['<rootDir>/jest-tests'],
-  
+
   // Test file patterns
   testMatch: [
     '**/jest-tests/**/*.test.js',
@@ -13,7 +13,7 @@ const config = {
     '**/__tests__/**/*.js',
     '**/?(*.)+(spec|test).js'
   ],
-  
+
   // Ignore patterns
   testPathIgnorePatterns: [
     '/node_modules/',
@@ -21,10 +21,10 @@ const config = {
     '/dist/',
     '/coverage/'
   ],
-  
+
   // Setup files
   setupFilesAfterEnv: ['<rootDir>/jest-tests/setup/jest.setup.js'],
-  
+
   // Coverage configuration
   collectCoverage: true,
   collectCoverageFrom: [
@@ -39,7 +39,7 @@ const config = {
     '!**/jest-tests/**',
     '!**/coverage/**'
   ],
-  
+
   // Coverage thresholds
   coverageThreshold: {
     global: {
@@ -49,33 +49,33 @@ const config = {
       statements: 70
     }
   },
-  
+
   // Test timeout
   testTimeout: 10000,
-  
+
   // Clear mocks between tests
   clearMocks: true,
-  
+
   // Reset mocks between tests
   resetMocks: true,
-  
+
   // Restore mocks after each test
   restoreMocks: true,
-  
+
   // Verbose output
   verbose: true,
-  
+
   // Transform configuration
   transform: {
     '^.+\\.js$': 'babel-jest'
   },
-  
+
   // Module paths
   modulePaths: ['<rootDir>'],
-  
+
   // Force coverage for files with inline tests
   forceCoverageMatch: ['**/*.test.js'],
-  
+
   // Watch path ignore patterns
   watchPathIgnorePatterns: [
     '<rootDir>/node_modules/',

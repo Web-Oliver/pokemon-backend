@@ -166,3 +166,8 @@ test-results/
 
 # Data files
 data/
+
+# Google Cloud credentials (SECURITY: Never commit these!)
+google-service-account.json
+*.json
+!package*.json

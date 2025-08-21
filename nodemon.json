@@ -7,13 +7,7 @@
   ],
   "verbose": true,
   "watch": [
-    "server.js",
-    "models/",
-    "routes/", 
-    "controllers/",
-    "services/",
-    "utils/",
-    "middleware/"
+    "src/"
   ],
   "ext": "js,json",
   "delay": 1000
