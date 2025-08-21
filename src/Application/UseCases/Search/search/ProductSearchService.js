@@ -7,13 +7,9 @@
  */
 
 import Product from '@/Domain/Entities/Product.js';
-import SearchQueryBuilder from './SearchQueryBuilder.js';
-import FlexSearchIndexManager from './FlexSearchIndexManager.js';
-import Logger from '@/Infrastructure/Utilities/Logger.js';
-class ProductSearchService {
-  constructor() {
-    this.indexManager = FlexSearchIndexManager;
-  }
+import BaseSearchService from '../BaseSearchService.js';
+
+class ProductSearchService extends BaseSearchService {
 
   /**
    * Search products using FlexSearch + MongoDB hybrid approach
@@ -25,18 +21,13 @@ class ProductSearchService {
    * @returns {Array} Array of products matching the search criteria
    */
   async searchProducts(query, filters = {}, options = {}) {
-    const { limit = 50, offset = 0, sort = { _id: -1 }, populate = true } = options;
+    const searchConfig = {
+      searchFields: ['name', 'brand', 'type', 'category'],
+      searchWeights: { name: 3, brand: 2, type: 1, category: 1 },
+      defaultPopulate: 'setDetails'
+    };
 
-    Logger.operationStart('PRODUCT_SEARCH', 'Searching products', {
-      query: query?.substring(0, 50),
-      filtersCount: Object.keys(filters).length,
-      options: { limit, offset, populate }
-    });
-
-    // Return all products if no query and no filters
-    if ((!query || !query.trim()) && Object.keys(filters).length === 0) {
-      return this._getAllProducts(limit, offset, sort, populate);
-    }
+    return this.performSearch('product', Product, query, filters, options, searchConfig);
 
     // Handle wildcard or empty query with filters
     if (!query || !query.trim() || query.trim() === '*') {
@@ -403,4 +394,4 @@ class ProductSearchService {
   }
 }
 
-export default new ProductSearchService();
+export default ProductSearchService;

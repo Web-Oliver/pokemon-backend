@@ -5,10 +5,10 @@
  * Maintains exact API compatibility while using the new unified architecture
  */
 
-import UnifiedMatchingService from './matching/UnifiedMatchingService.js';
+import { container, ServiceKeys } from '@/Infrastructure/DependencyInjection/ServiceContainer.js';
 class UnifiedPsaMatchingService {
   constructor() {
-    this.unifiedService = new UnifiedMatchingService();
+    // Use dependency injection instead of direct instantiation
   }
 
   /**
@@ -16,7 +16,31 @@ class UnifiedPsaMatchingService {
    * Compatible with: PsaMatchingService, SmartPsaMatchingService, OptimalPsaMatchingService
    */
   async matchPsaLabel(psaText) {
-    return await this.unifiedService.matchPsaLabel(psaText, 'psa-optimal');
+    try {
+      const orchestrator = container.resolve(ServiceKeys.OCR_ORCHESTRATOR);
+      const result = await orchestrator.processOcrText(psaText, { strategy: 'psa-optimal' });
+      
+      // Convert to expected PSA format
+      return {
+        matches: result.matches?.map(match => ({
+          card: {
+            _id: match.cardId,
+            cardName: match.cardName,
+            cardNumber: match.cardNumber,
+            setName: match.setName,
+            setId: match.setId,
+            year: match.year
+          },
+          confidence: match.confidence,
+          strategy: match.matchStrategy
+        })) || [],
+        confidence: result.confidence,
+        extractedData: result.extractedData
+      };
+    } catch (error) {
+      console.error('❌ PSA matching failed:', error);
+      return { matches: [], confidence: 0, extractedData: {} };
+    }
   }
 
   /**
@@ -31,7 +55,13 @@ class UnifiedPsaMatchingService {
    * Extract PSA fields - delegates to unified parser
    */
   extractPsaFields(psaText) {
-    return this.unifiedService._extractBasicData(psaText);
+    try {
+      const parser = container.resolve(ServiceKeys.OCR_TEXT_PARSER);
+      return parser.parseCardInfo(psaText);
+    } catch (error) {
+      console.error('❌ PSA field extraction failed:', error);
+      return { originalText: psaText, confidence: 0 };
+    }
   }
 
   /**
@@ -45,7 +75,13 @@ class UnifiedPsaMatchingService {
    * Parse OCR text - delegates to unified service
    */
   parseOcrText(ocrText) {
-    return this.unifiedService._extractBasicData(ocrText);
+    try {
+      const parser = container.resolve(ServiceKeys.OCR_TEXT_PARSER);
+      return parser.parseCardInfo(ocrText);
+    } catch (error) {
+      console.error('❌ OCR text parsing failed:', error);
+      return { originalText: ocrText, confidence: 0 };
+    }
   }
 }
 

@@ -6,20 +6,19 @@
  */
 
 import { asyncHandler   } from '@/Infrastructure/Utilities/errorHandler.js';
-import ocrMatchingService from '@/Application/UseCases/Matching/UnifiedOcrMatchingService.js';
+import OcrServiceInitializer from '@/Application/UseCases/Ocr/OcrServiceInitializer.js';
+import DebugLogger from '@/Infrastructure/Utilities/DebugLogger.js';
 import PsaGradedCard from '@/Domain/Entities/PsaGradedCard.js';
 import PsaLabel from '@/Domain/Entities/PsaLabel.js';
-// Comprehensive debugging utility
-const debugLog = (context, message, data = null) => {
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [OCR-COLLECTION-${context}] ${message}`;
+import path from 'path';
+import fs from 'fs/promises';
+import { fileURLToPath } from 'url';
 
-  if (data) {
-    console.log(logMessage, data);
-  } else {
-    console.log(logMessage);
-  }
-};
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Use extracted debug logger
+const debugLog = DebugLogger.createScopedLogger('OCR-COLLECTION');
 
 /**
  * POST /api/ocr/approve
@@ -93,6 +92,45 @@ const approveMatch = asyncHandler(async (req, res) => {
       });
     }
 
+    // Move and rename FULL PSA IMAGE to collection storage
+    let collectionImagePath = null;
+    try {
+      // Generate unique filename for collection storage
+      const timestamp = Date.now();
+      const randomSuffix = Math.round(Math.random() * 1e9);
+      const imageExtension = path.extname(psaLabel.labelImage) || '.jpg';
+      const newImageName = `image-${timestamp}-${randomSuffix}${imageExtension}`;
+      
+      // Source: OCR FULL-IMAGES storage path (NOT the label!) - STANDARDIZED
+      const sourcePath = path.join(__dirname, '../../../uploads/ocr/full-images', psaLabel.labelImage);
+      
+      // Destination: Collection storage path - STANDARDIZED
+      const destinationPath = path.join(__dirname, '../../../uploads/collection', newImageName);
+      
+      // Copy the FULL IMAGE file to collection storage
+      await fs.copyFile(sourcePath, destinationPath);
+      
+      // Set collection-style path for database storage
+      collectionImagePath = `/uploads/${newImageName}`;
+      
+      debugLog('IMAGE_MOVE_SUCCESS', 'Moved FULL PSA image to collection storage', {
+        sourceFullImagePath: sourcePath,
+        destinationPath: collectionImagePath,
+        newImageName,
+        originalLabelImage: psaLabel.labelImage
+      });
+      
+    } catch (imageError) {
+      debugLog('IMAGE_MOVE_ERROR', 'Failed to move FULL PSA image to collection storage', {
+        error: imageError.message,
+        sourceFullImagePath: path.join(__dirname, '../../../uploads/ocr/full-images', psaLabel.labelImage),
+        originalLabelImage: psaLabel.labelImage
+      });
+      
+      // Fall back to PSA label ID for virtual URL if move fails
+      collectionImagePath = psaLabel._id.toString();
+    }
+
     // Create PSA graded card from approved match
     const psaCardData = {
       // Basic card information
@@ -108,12 +146,15 @@ const approveMatch = asyncHandler(async (req, res) => {
       certificationNumber: psaLabel.certificationNumber || extractedData?.certificationNumber,
       grade: extractedData?.grade || psaLabel.psaData?.extractedData?.grade,
       gradingService: 'PSA',
-      labelImage: psaLabel.labelImage,
+      
+      // Images - use the moved collection image path
+      images: [collectionImagePath].filter(Boolean),
 
       // OCR and approval tracking
       ocrConfidence: matchConfidence,
       approvalSource: 'ocr_matching',
       approvedAt: new Date(),
+      ocrSourceLabelId: psaLabel._id,
 
       // Extracted data backup
       originalOcrText: psaLabel.ocrText,
@@ -125,7 +166,7 @@ const approveMatch = asyncHandler(async (req, res) => {
 
       // Market information from matched card
       currentPrice: matchedCard.price,
-      imageUrl: matchedCard.imageUrl || psaLabel.labelImage
+      myPrice: matchedCard.price
     };
 
     const psaCard = new PsaGradedCard(psaCardData);

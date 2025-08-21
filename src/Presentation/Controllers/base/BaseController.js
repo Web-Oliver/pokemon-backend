@@ -4,6 +4,8 @@ import container from '@/Infrastructure/DependencyInjection/index.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 import { getEntityConfig   } from '@/Infrastructure/Configuration/entityConfigurations.js';
 import { cacheManager   } from '@/Presentation/Middleware/searchCache.js';
+import ControllerPluginManager from './ControllerPluginManager.js';
+import ControllerMetrics from './ControllerMetrics.js';
 /**
  * Enhanced Base Controller Class
  *
@@ -47,16 +49,9 @@ class BaseController {
       ...options,
     };
 
-    // Plugin system
-    this.plugins = new Map();
-    this.hooks = new Map(['beforeOperation', 'afterOperation', 'onError', 'beforeResponse'].map(hook => [hook, []]));
-
-    // Metrics tracking
-    this.metrics = {
-      operations: new Map(),
-      errors: new Map(),
-      responseTime: new Map(),
-    };
+    // Initialize plugin manager and metrics (SRP compliance)
+    this.pluginManager = new ControllerPluginManager();
+    this.metricsManager = new ControllerMetrics();
 
     // Bind methods to maintain context
     this.getAll = this.getAll.bind(this);
@@ -78,7 +73,7 @@ class BaseController {
   initializeDefaultPlugins() {
     // Cache invalidation plugin
     if (this.options.enableCaching) {
-      this.addPlugin('cacheInvalidation', {
+      this.pluginManager.addPlugin('cacheInvalidation', {
         afterOperation: (operation, result, context) => {
           if (['create', 'update', 'delete', 'markAsSold'].includes(operation)) {
             setTimeout(() => {
@@ -94,25 +89,23 @@ class BaseController {
 
     // Metrics tracking plugin
     if (this.options.enableMetrics) {
-      this.addPlugin('metricsTracking', {
+      this.pluginManager.addPlugin('metricsTracking', {
         beforeOperation: (operation, context) => {
           context.startTime = Date.now();
         },
         afterOperation: (operation, result, context) => {
           const duration = Date.now() - context.startTime;
-
-          this.updateMetrics(operation, 'success', duration);
+          this.metricsManager.updateMetrics(operation, 'success', duration);
         },
         onError: (operation, error, context) => {
           const duration = Date.now() - (context.startTime || Date.now());
-
-          this.updateMetrics(operation, 'error', duration);
+          this.metricsManager.updateMetrics(operation, 'error', duration);
         }
       });
     }
 
     // Response transformation plugin
-    this.addPlugin('responseTransformation', {
+    this.pluginManager.addPlugin('responseTransformation', {
       beforeResponse: (operation, data, context) => {
         if (data && typeof data === 'object') {
           // Add metadata to response
@@ -125,7 +118,7 @@ class BaseController {
           data.meta.timestamp = new Date().toISOString();
 
           if (this.options.enableMetrics) {
-            data.meta.metrics = this.getOperationMetrics(operation);
+            data.meta.metrics = this.metricsManager.getOperationMetrics(operation);
           }
         }
         return data;
@@ -134,134 +127,61 @@ class BaseController {
   }
 
   /**
-   * Add a plugin to the controller
+   * Add a plugin to the controller (delegates to PluginManager)
    * @param {string} name - Plugin name
    * @param {Object} plugin - Plugin object with hook handlers
    */
   addPlugin(name, plugin) {
-    this.plugins.set(name, plugin);
-
-    // Register plugin hooks
-    Object.keys(plugin).forEach(hookName => {
-      if (this.hooks.has(hookName)) {
-        this.hooks.get(hookName).push({
-          pluginName: name,
-          handler: plugin[hookName]
-        });
-      }
-    });
-
-    Logger.debug('BaseController', `Plugin '${name}' added to ${this.options.entityName} controller`);
+    this.pluginManager.addPlugin(name, plugin);
   }
 
   /**
-   * Remove a plugin from the controller
+   * Remove a plugin from the controller (delegates to PluginManager)
    * @param {string} name - Plugin name
    */
   removePlugin(name) {
-    if (this.plugins.has(name)) {
-      // Remove plugin hooks
-      this.hooks.forEach((handlers, hookName) => {
-        this.hooks.set(hookName, handlers.filter(h => h.pluginName !== name));
-      });
-
-      this.plugins.delete(name);
-      Logger.debug('BaseController', `Plugin '${name}' removed from ${this.options.entityName} controller`);
-    }
+    this.pluginManager.removePlugin(name);
   }
 
   /**
-   * Execute hooks for a specific event
+   * Execute hooks for a specific event (delegates to PluginManager)
    * @param {string} hookName - Hook name
    * @param {string} operation - Operation name
    * @param {*} data - Hook data
    * @param {Object} context - Operation context
    */
   async executeHooks(hookName, operation, data, context = {}) {
-    const handlers = this.hooks.get(hookName) || [];
-
-    for (const { pluginName, handler } of handlers) {
-      try {
-        const result = await handler(operation, data, context);
-
-        if (hookName === 'beforeResponse' && result !== undefined) {
-
-          data = result;
-        }
-      } catch (error) {
-        Logger.error('BaseController', `Plugin '${pluginName}' hook '${hookName}' failed`, error);
-      }
-    }
-
-    return data;
+    return this.pluginManager.executeHooks(hookName, operation, data, context);
   }
 
   /**
-   * Update operation metrics
+   * Update operation metrics (delegates to MetricsManager)
    * @param {string} operation - Operation name
    * @param {string} status - Operation status ('success' or 'error')
    * @param {number} duration - Operation duration in ms
    */
   updateMetrics(operation, status, duration) {
-    if (!this.metrics.operations.has(operation)) {
-      this.metrics.operations.set(operation, { success: 0, error: 0 });
-    }
-
-    this.metrics.operations.get(operation)[status]++;
-
-    if (!this.metrics.responseTime.has(operation)) {
-      this.metrics.responseTime.set(operation, []);
-    }
-
-    const times = this.metrics.responseTime.get(operation);
-
-    times.push(duration);
-
-    // Keep only last 100 measurements
-    if (times.length > 100) {
-      times.shift();
-    }
+    this.metricsManager.updateMetrics(operation, status, duration);
   }
 
   /**
-   * Get metrics for a specific operation
+   * Get metrics for a specific operation (delegates to MetricsManager)
    * @param {string} operation - Operation name
    * @returns {Object} - Operation metrics
    */
   getOperationMetrics(operation) {
-    const ops = this.metrics.operations.get(operation) || { success: 0, error: 0 };
-    const times = this.metrics.responseTime.get(operation) || [];
-
-    const avgResponseTime = times.length > 0
-      ? Math.round(times.reduce((sum, time) => sum + time, 0) / times.length)
-      : 0;
-
-    return {
-      totalOperations: ops.success + ops.error,
-      successRate: ops.success + ops.error > 0
-        ? Math.round((ops.success / (ops.success + ops.error)) * 100)
-        : 100,
-      averageResponseTime: avgResponseTime
-    };
+    return this.metricsManager.getOperationMetrics(operation);
   }
 
   /**
-   * Get all controller metrics
+   * Get all controller metrics (delegates to MetricsManager)
    * @returns {Object} - Complete metrics object
    */
   getMetrics() {
-    const allMetrics = {};
-
-    for (const [operation, stats] of this.metrics.operations) {
-      allMetrics[operation] = this.getOperationMetrics(operation);
-    }
-
-    return {
-      entityType: this.options.entityName,
-      operations: allMetrics,
-      plugins: Array.from(this.plugins.keys()),
-      totalPlugins: this.plugins.size
-    };
+    return this.metricsManager.getAllMetrics(
+      this.options.entityName,
+      this.pluginManager.getPluginNames()
+    );
   }
 
   /**

@@ -1,6 +1,7 @@
 import SetProduct from '@/Domain/Entities/SetProduct.js';
 import { asyncHandler, NotFoundError, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
-import searchService from '@/Application/UseCases/Search/searchService.js';
+import SearchService from '@/Application/UseCases/Search/SearchService.js';
+const searchService = new SearchService();
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
 const getAllSetProducts = asyncHandler(async (req, res) => {
   const setProducts = await SetProduct.find();
@@ -51,7 +52,7 @@ const getSetProductById = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
   // Validate ObjectId format
-  if (!ValidationUtils.isValidObjectId(id)) {
+  if (!ValidatorFactory.isValidObjectId(id)) {
     throw new ValidationError('Invalid set product ID format');
   }
 

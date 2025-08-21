@@ -1,6 +1,7 @@
 import Set from '@/Domain/Entities/Set.js';
 import { asyncHandler, NotFoundError, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
-import searchService from '@/Application/UseCases/Search/searchService.js';
+import SearchService from '@/Application/UseCases/Search/SearchService.js';
+const searchService = new SearchService();
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
 const getAllSets = asyncHandler(async (req, res) => {
   const sets = await Set.find();
@@ -72,7 +73,7 @@ const getSetsWithPagination = asyncHandler(async (req, res) => {
 });
 
 const getSetById = asyncHandler(async (req, res) => {
-  ValidationUtils.validateObjectId(req.params.id, 'Set ID');
+  ValidatorFactory.validateObjectId(req.params.id, 'Set ID');
 
   const set = await Set.findById(req.params.id);
 

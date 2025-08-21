@@ -8,10 +8,10 @@
 import express from 'express';
 const router = express.Router();
 
-// Import focused route modules
-import coreDetectionRoutes from './core-detection.js';
-import visionProcessingRoutes from './vision-processing.js';
-import cardMatchingRoutes from './card-matching.js';
+// Import focused route modules  
+import coreDetectionRoutes from '@/Presentation/Routes/ocr/core-detection.js';
+import visionProcessingRoutes from '@/Presentation/Routes/ocr/vision-processing.js';
+import cardMatchingRoutes from '@/Presentation/Routes/ocr/card-matching.js';
 /**
  * Global OCR middleware for logging and performance tracking
  */
@@ -52,7 +52,7 @@ router.use((req, res, next) => {
  * Each module handles its specific responsibility
  */
 
-// Core detection routes: /api/ocr/detect-*, /api/ocr/validate-*, /api/ocr/detection-stats
+// Core detection routes: /api/ocr/detect-card, /api/ocr/batch-detect, /api/ocr/validate-text
 router.use('/', coreDetectionRoutes);
 
 // Vision processing routes: /api/ocr/vision, /api/ocr/advanced, /api/ocr/async, /api/ocr/batch-*

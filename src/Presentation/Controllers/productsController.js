@@ -1,7 +1,8 @@
 import Product from '@/Domain/Entities/Product.js';
 import SetProduct from '@/Domain/Entities/SetProduct.js';
 import { asyncHandler, NotFoundError, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
-import searchService from '@/Application/UseCases/Search/searchService.js';
+import SearchService from '@/Application/UseCases/Search/SearchService.js';
+const searchService = new SearchService();
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
 /**
  * Products Controller
@@ -63,7 +64,7 @@ const getAllProducts = asyncHandler(async (req, res) => {
   if (category) query.category = category;
   if (available === 'true') query.available = { $gt: 0 };
 
-  const { pageNum, limitNum } = ValidationUtils.validatePagination(page || 1, limit || 20, 100);
+  const { pageNum, limitNum } = ValidatorFactory.validatePagination(page || 1, limit || 20, 100);
   const skip = (pageNum - 1) * limitNum;
 
   const [products, totalProducts] = await Promise.all([
@@ -107,7 +108,7 @@ const getAllProducts = asyncHandler(async (req, res) => {
 });
 
 const getProductById = asyncHandler(async (req, res) => {
-  ValidationUtils.validateObjectId(req.params.id, 'Product ID');
+  ValidatorFactory.validateObjectId(req.params.id, 'Product ID');
 
   const product = await Product.findById(req.params.id)
     .populate('setProductId', 'setProductName');

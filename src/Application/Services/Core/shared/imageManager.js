@@ -33,7 +33,7 @@ class ImageManager {
         // Convert URL to file path
         // Assuming images are stored as relative paths like "/uploads/images/filename.jpg"
         if (imageUrl && imageUrl.startsWith('/uploads/')) {
-          const filePath = path.join(__dirname, '..', '..', imageUrl);
+          const filePath = path.join(__dirname, '..', '..', '..', '..', imageUrl);
 
           console.log('[IMAGE CLEANUP] Attempting to delete:', filePath);
 
@@ -96,7 +96,7 @@ class ImageManager {
    * @static
    */
   static getImageFilePath(imageUrl) {
-    return path.join(__dirname, '..', '..', imageUrl);
+    return path.join(__dirname, '..', '..', '..', '..', imageUrl);
   }
 }
 

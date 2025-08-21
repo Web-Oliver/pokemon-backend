@@ -1,5 +1,6 @@
 import { asyncHandler, ValidationError } from '@/Infrastructure/Utilities/errorHandler.js';
-import searchService from '@/Application/UseCases/Search/searchService.js';
+import SearchService from '@/Application/UseCases/Search/SearchService.js';
+const searchService = new SearchService();
 /**
  * Unified Search Controller
  *

@@ -128,14 +128,26 @@ class CollectionCrudService {
       throw new Error('Invalid ObjectId format');
     }
 
-    const entity = await this.Model.findByIdAndDelete(id);
-
+    // First get the entity to retrieve image paths before deletion
+    const entity = await this.Model.findById(id);
     if (!entity) {
       throw new Error(`${this.entityType} not found`);
     }
 
-    Logger.service(this.entityType, 'deleteById', 'Entity deleted', { id });
-    return entity;
+    // Delete images if they exist
+    if (entity.imageUrls && entity.imageUrls.length > 0) {
+      Logger.service(this.entityType, 'deleteById', 'Deleting associated images', { 
+        id, 
+        imageCount: entity.imageUrls.length 
+      });
+      await ImageManager.deleteImageFiles(entity.imageUrls);
+    }
+
+    // Now delete the entity from database
+    const deletedEntity = await this.Model.findByIdAndDelete(id);
+    
+    Logger.service(this.entityType, 'deleteById', 'Entity and images deleted successfully', { id });
+    return deletedEntity;
   }
 
   /**

@@ -6,7 +6,7 @@
  * Ensures consistent caching behavior across all endpoints
  */
 
-import { cachePresets, createCollectionCache, CACHE_TTL, createCachePreset   } from './cachePresets.js';
+import { cachePresets, createCollectionCache, CACHE_TTL, createCachePreset   } from '@/Presentation/Middleware/cachePresets.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 /**
  * Route pattern to cache preset mapping

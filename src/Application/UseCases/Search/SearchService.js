@@ -83,5 +83,5 @@ class SearchService {
   }
 }
 
-// Export singleton instance for backward compatibility
-export default new SearchService();
+// Export class constructor for proper instantiation
+export default SearchService;

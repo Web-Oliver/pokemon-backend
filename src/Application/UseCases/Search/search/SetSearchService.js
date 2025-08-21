@@ -7,9 +7,9 @@
  */
 
 import Set from '@/Domain/Entities/Set.js';
-import FlexSearchIndexManager from './FlexSearchIndexManager.js';
-import Logger from '@/Infrastructure/Utilities/Logger.js';
-class SetSearchService {
+import BaseSearchService from '../BaseSearchService.js';
+
+class SetSearchService extends BaseSearchService {
   /**
    * Search sets using hybrid FlexSearch + MongoDB approach
    *
@@ -19,24 +19,13 @@ class SetSearchService {
    * @returns {Object} Search results with sets and metadata
    */
   async searchSets(query, filters = {}, options = {}) {
-    const { limit = 50, offset = 0, populate = false } = options;
+    const searchConfig = {
+      searchFields: ['name', 'series', 'year', 'code'],
+      searchWeights: { name: 3, series: 2, code: 2, year: 1 },
+      defaultPopulate: false
+    };
 
-    Logger.operationStart('SET_SEARCH', 'Starting set search', {
-      query: query?.substring(0, 50),
-      filtersCount: Object.keys(filters).length,
-      limit,
-      offset
-    });
-
-    // Handle empty query with filters only
-    if ((!query || !query.trim()) && Object.keys(filters).length === 0) {
-      return this._getEmptySearchResult('No search query or filters provided');
-    }
-
-    // Handle wildcard or empty query
-    if (!query || !query.trim() || query.trim() === '*') {
-      return this._searchAllSets(filters, { limit, offset, populate });
-    }
+    return this.performSearch('set', Set, query, filters, options, searchConfig);
 
     try {
       // Ensure FlexSearch indexes are initialized

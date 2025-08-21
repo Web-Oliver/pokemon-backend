@@ -8,7 +8,7 @@
  * After: Centralized presets with consistent TTL and naming
  */
 
-import { searchCacheMiddleware   } from './searchCache.js';
+import { searchCacheMiddleware   } from '@/Presentation/Middleware/searchCache.js';
 /**
  * Standard cache TTL presets (in seconds - aligned with frontend millisecond values)
  * Matching frontend cacheConfig.ts for consistency

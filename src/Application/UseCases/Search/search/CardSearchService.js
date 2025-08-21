@@ -7,9 +7,8 @@
  */
 
 import Card from '@/Domain/Entities/Card.js';
-import FlexSearchIndexManager from './FlexSearchIndexManager.js';
-import Logger from '@/Infrastructure/Utilities/Logger.js';
-class CardSearchService {
+import BaseSearchService from '../BaseSearchService.js';
+class CardSearchService extends BaseSearchService {
   /**
    * Search cards using hybrid FlexSearch + MongoDB approach
    *
@@ -19,24 +18,13 @@ class CardSearchService {
    * @returns {Object} Search results with cards and metadata
    */
   async searchCards(query, filters = {}, options = {}) {
-    const { limit = 50, offset = 0, populate = true } = options;
+    const searchConfig = {
+      searchFields: ['name', 'number', 'rarity', 'artist'],
+      searchWeights: { name: 3, number: 2, rarity: 1, artist: 1 },
+      defaultPopulate: 'setDetails'
+    };
 
-    Logger.operationStart('CARD_SEARCH', 'Starting card search', {
-      query: query?.substring(0, 50),
-      filtersCount: Object.keys(filters).length,
-      limit,
-      offset
-    });
-
-    // Handle empty query with filters only
-    if ((!query || !query.trim()) && Object.keys(filters).length === 0) {
-      return this._getEmptySearchResult('No search query or filters provided');
-    }
-
-    // Handle wildcard or empty query
-    if (!query || !query.trim() || query.trim() === '*') {
-      return this._searchAllCards(filters, { limit, offset, populate });
-    }
+    return this.performSearch('card', Card, query, filters, options, searchConfig);
 
     try {
       // Ensure FlexSearch indexes are initialized

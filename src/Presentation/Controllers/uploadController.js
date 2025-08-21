@@ -9,8 +9,8 @@ import ThumbnailService from '@/Application/Services/Core/shared/thumbnailServic
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Ensure uploads directory exists
-const uploadsDir = path.join(__dirname, '../public/uploads');
+// Ensure uploads directory exists - STANDARDIZED LOCATION
+const uploadsDir = path.join(__dirname, '../../../uploads/collection');
 
 if (!fs.existsSync(uploadsDir)) {
   fs.mkdirSync(uploadsDir, { recursive: true });

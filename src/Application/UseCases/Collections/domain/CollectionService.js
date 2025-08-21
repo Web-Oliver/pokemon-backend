@@ -184,29 +184,21 @@ class CollectionService {
         cardType = 'raw';
       }
 
-      // Log deletion activity before actually deleting
+      // TEMPORARILY DISABLED: Log deletion activity before actually deleting
       if (item) {
-        try {
-          console.log(`[COLLECTION SERVICE] Logging deletion activity for ${this.options.entityName} ${id} (cardType: ${cardType})`);
-          console.log('[COLLECTION SERVICE] Item to delete:', {
-            id: item._id,
-            cardName: item.cardName || item.cardId?.cardName,
-            setName: item.setName || item.cardId?.setId?.setName
-          });
-
-          const activity = await ActivityService.logCardDeleted(item, cardType);
-
-          console.log('[COLLECTION SERVICE] Deletion activity created successfully:', activity._id);
-        } catch (activityError) {
-          console.error(`[COLLECTION SERVICE] Failed to log deletion activity for ${this.options.entityName} ${id}:`, activityError);
-          // Don't let activity logging failures prevent deletion
-        }
+        console.log(`[COLLECTION SERVICE] Skipping activity logging for ${this.options.entityName} ${id} (cardType: ${cardType})`);
+        console.log('[COLLECTION SERVICE] Item to delete:', {
+          id: item._id,
+          cardName: item.cardName || item.cardId?.cardName,
+          setName: item.setName || item.cardId?.setId?.setName
+        });
       }
 
       // Delete associated images if enabled
-      if (this.options.enableImageManagement && item && item.images && item.images.length > 0) {
+      if (this.options.enableImageManagement && item && item.imageUrls && item.imageUrls.length > 0) {
         try {
-          await this.options.imageManager.deleteImageFiles(item.images);
+          console.log(`[COLLECTION SERVICE] Deleting ${item.imageUrls.length} images for ${this.options.entityName} ${id}`);
+          await this.options.imageManager.deleteImageFiles(item.imageUrls);
         } catch (imageError) {
           console.warn(`Failed to delete images for ${this.options.entityName} ${id}:`, imageError.message);
         }

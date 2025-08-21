@@ -9,7 +9,7 @@
  */
 
 import express from 'express';
-import { createCollectionItemRoutes   } from './factories/crudRouteFactory.js';
+import { createCollectionItemRoutes   } from '@/Presentation/Routes/factories/crudRouteFactory.js';
 import { createCollectionCache   } from '@/Presentation/Middleware/cachePresets.js';
 // Import consolidated controllers
 import rawCardController from '@/Presentation/Controllers/rawCardsController.js';

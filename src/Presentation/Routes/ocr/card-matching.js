@@ -9,7 +9,7 @@ import express from 'express';
 const router = express.Router();
 
 // Import OCR matching controller - delegates to UnifiedOcrMatchingService
-import ocrMatchingController from '@/Presentation/Controllers/ocrMatchingController.js';
+import ocrMatchingController from '@/Presentation/Controllers/ocr/index.js';
 /**
  * POST /api/ocr/match
  * Match OCR text against card database with confidence scores

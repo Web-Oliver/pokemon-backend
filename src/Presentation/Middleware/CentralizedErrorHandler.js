@@ -7,7 +7,7 @@
  * Replaces 40+ repeated try-catch blocks with consistent error handling patterns.
  */
 
-import { ValidationError, NotFoundError, AppError   } from './errorHandler.js';
+import { ValidationError, NotFoundError, AppError   } from '@/Presentation/Middleware/errorHandler.js';
 /**
  * Error context types for consistent logging and handling
  */

@@ -6,21 +6,18 @@
  */
 
 import { asyncHandler   } from '@/Infrastructure/Utilities/errorHandler.js';
-import ocrMatchingService from '@/Application/UseCases/Matching/UnifiedOcrMatchingService.js';
+import OcrServiceInitializer from '@/Application/UseCases/Ocr/OcrServiceInitializer.js';
+import DebugLogger from '@/Infrastructure/Utilities/DebugLogger.js';
 import PsaLabel from '@/Domain/Entities/PsaLabel.js';
 import path from 'path';
 import fs from 'fs';
-// Comprehensive debugging utility
-const debugLog = (context, message, data = null) => {
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [OCR-LABEL-${context}] ${message}`;
+import { fileURLToPath } from 'url';
 
-  if (data) {
-    console.log(logMessage, data);
-  } else {
-    console.log(logMessage);
-  }
-};
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Use extracted debug logger
+const debugLog = DebugLogger.createScopedLogger('OCR-LABEL');
 
 /**
  * POST /api/ocr/process-all-psa-labels
@@ -95,7 +92,19 @@ const processAllPsaLabels = asyncHandler(async (req, res) => {
         debugLog('PROCESSING_LABEL', `Processing PSA label: ${psaLabel._id}`);
 
         // Run OCR matching on the label text
-        const matchingResult = await ocrMatchingService.matchOcrText(psaLabel.ocrText, {
+        console.log('🔎 DETAILED DEBUG: About to call ensureServiceInitialized()');
+        const service = await OcrServiceInitializer.getOcrService('LabelProcessingController');
+        console.log('🔎 DETAILED DEBUG: Service returned:', typeof service, service.constructor.name);
+        console.log('🔎 DETAILED DEBUG: service.matchOcrText type:', typeof service.matchOcrText);
+        
+        if (typeof service.matchOcrText !== 'function') {
+          console.error('🐛 BUG: service.matchOcrText is not a function!');
+          console.error('🐛 BUG: service keys:', Object.keys(service));
+          console.error('🐛 BUG: service proto:', Object.getPrototypeOf(service));
+          throw new Error(`matchOcrText is not a function. Got: ${typeof service.matchOcrText}`);
+        }
+        
+        const matchingResult = await service.matchOcrText(psaLabel.ocrText, {
           limit: 10,
           threshold: 0.1
         });
@@ -285,8 +294,8 @@ const getPsaLabelImage = asyncHandler(async (req, res) => {
       });
     }
 
-    // Construct the full path to the image
-    const imagePath = path.join(__dirname, '../../images/psa-labels', psaLabel.labelImage);
+    // Construct the full path to the image using the correct uploads directory
+    const imagePath = path.join(__dirname, '../../../uploads/ocr/full-images', psaLabel.labelImage);
 
     // Check if file exists
     if (!fs.existsSync(imagePath)) {
@@ -499,4 +508,4 @@ export {
   getPsaLabelImage,
   getAllPsaLabels
 };
-export default processAllPsaLabels;;
+export default processAllPsaLabels;

@@ -16,10 +16,10 @@ import OptimizedSetImporter from './OptimizedSetImporter.js';
 import OptimizedProductImporter from './OptimizedProductImporter.js';
 import OptimizedCardImporter from './OptimizedCardImporter.js';
 // Import models for connection
-import from '@/Domain/Entities/Set.js';
-import from '@/Domain/Entities/Card.js';
-import from '@/Domain/Entities/SetProduct.js';
-import from '@/Domain/Entities/Product.js';
+import Set from '@/Domain/Entities/Set.js';
+import Card from '@/Domain/Entities/Card.js';
+import SetProduct from '@/Domain/Entities/SetProduct.js';
+import Product from '@/Domain/Entities/Product.js';
 
 class OptimizedMainImporter {
   constructor(options = {}) {

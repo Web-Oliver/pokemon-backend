@@ -6,19 +6,13 @@
  */
 
 import { asyncHandler   } from '@/Infrastructure/Utilities/errorHandler.js';
-import ocrMatchingService from '@/Application/UseCases/Matching/UnifiedOcrMatchingService.js';
-import searchService from '@/Application/UseCases/Search/searchService.js';
-// Comprehensive debugging utility
-const debugLog = (context, message, data = null) => {
-  const timestamp = new Date().toISOString();
-  const logMessage = `[${timestamp}] [OCR-TEXT-${context}] ${message}`;
+import OcrServiceInitializer from '@/Application/UseCases/Ocr/OcrServiceInitializer.js';
+import DebugLogger from '@/Infrastructure/Utilities/DebugLogger.js';
+import SearchService from '@/Application/UseCases/Search/SearchService.js';
+const searchService = new SearchService();
 
-  if (data) {
-    console.log(logMessage, data);
-  } else {
-    console.log(logMessage);
-  }
-};
+// Use extracted debug logger
+const debugLog = DebugLogger.createScopedLogger('OCR-TEXT');
 
 /**
  * POST /api/ocr/match
@@ -48,7 +42,8 @@ const matchOcrText = asyncHandler(async (req, res) => {
       options
     });
 
-    const result = await ocrMatchingService.matchOcrText(ocrText, options);
+    const service = await OcrServiceInitializer.getOcrService('TextMatchingController');
+    const result = await service.matchOcrText(ocrText, options);
 
     debugLog('MATCH_SUCCESS', 'OCR matching completed', {
       success: result.success,
@@ -72,7 +67,7 @@ const matchOcrText = asyncHandler(async (req, res) => {
         debug: {
           hierarchicalSearchEnabled: true,
           setRecommendationsCount: result.setRecommendations?.length || 0,
-          matchesWithSetNames: result.matches?.filter(m => m.card.setName && m.card.setName !== 'Unknown Set').length || 0,
+          matchesWithSetNames: result.matches?.filter(m => m.setName && m.setName !== 'Unknown Set').length || 0,
           matchesTotal: result.matches?.length || 0
         }
       },
@@ -118,7 +113,8 @@ const batchMatchOcrText = asyncHandler(async (req, res) => {
 
     if (typeof ocrText === 'string' && ocrText.trim()) {
       try {
-        const result = await ocrMatchingService.matchOcrText(ocrText, options);
+        const service = await OcrServiceInitializer.getOcrService('TextMatchingController');
+    const result = await service.matchOcrText(ocrText, options);
 
         results.push({
           index: i,
@@ -307,7 +303,8 @@ const editExtractedData = asyncHandler(async (req, res) => {
 
     // Re-run matching with corrected data
     const mockOcrText = `${extractedData.pokemonName || ''} ${extractedData.cardNumber || ''} ${extractedData.setName || ''}`.trim();
-    const rematchResult = await ocrMatchingService.matchOcrText(mockOcrText, { limit: 10 });
+    const service = await OcrServiceInitializer.getOcrService('TextMatchingController');
+    const rematchResult = await service.matchOcrText(mockOcrText, { limit: 10 });
 
     debugLog('EDIT_EXTRACT_SUCCESS', 'Manual data correction completed', {
       psaLabelId,
@@ -343,7 +340,8 @@ const getMatchingStats = asyncHandler(async (req, res) => {
 
   try {
     // Get service statistics from unified service
-    const serviceStats = await ocrMatchingService.getServiceStats();
+    const service = await OcrServiceInitializer.getOcrService('TextMatchingController');
+    const serviceStats = await service.getServiceStats();
 
     // Get basic PSA label statistics
     const PsaLabel = (await import('@/Domain/Entities/PsaLabel.js')).default;
