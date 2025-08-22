@@ -3,7 +3,7 @@ import facebookFormatter from '@/Application/UseCases/Facebook/facebookPostForma
 import dbaFormatter from '@/Application/Services/Data/dbaFormatter.js';
 import FacebookPostService from '@/Application/UseCases/Facebook/FacebookPostService.js';
 import mongoose from 'mongoose';
-import { asyncHandler, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
+import { asyncHandler, ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 /**
  * Generate Facebook auction post text
  * POST /api/generate-facebook-post

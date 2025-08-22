@@ -12,9 +12,9 @@ import express from 'express';
 import { createCollectionItemRoutes   } from '@/Presentation/Routes/factories/crudRouteFactory.js';
 import { createCollectionCache   } from '@/Presentation/Middleware/cachePresets.js';
 // Import consolidated controllers
-import rawCardController from '@/Presentation/Controllers/rawCardsController.js';
-import psaGradedCardController from '@/Presentation/Controllers/psaGradedCardsController.js';
-import sealedProductController from '@/Presentation/Controllers/sealedProductsController.js';
+import rawCardController from '@/Presentation/Controllers/collections/rawCardsController.js';
+import psaGradedCardController from '@/Presentation/Controllers/collections/psaGradedCardsController.js';
+import sealedProductController from '@/Presentation/Controllers/collections/sealedProductsController.js';
 const router = express.Router();
 
 /**

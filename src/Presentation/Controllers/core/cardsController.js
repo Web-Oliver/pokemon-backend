@@ -1,7 +1,7 @@
 import Card from '@/Domain/Entities/Card.js';
-import { asyncHandler, NotFoundError, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
+import { asyncHandler, NotFoundError, ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 import container from '@/Infrastructure/DependencyInjection/index.js';
-import BaseController from './base/BaseController.js';
+import BaseController from '../base/BaseController.js';
 import { pluginManager   } from '@/Infrastructure/Plugins/PluginManager.js';
 // Cards Controller using BaseController with plugins
 class CardsController extends BaseController {

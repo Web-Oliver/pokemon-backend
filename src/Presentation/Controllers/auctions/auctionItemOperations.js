@@ -1,5 +1,5 @@
 import Auction from '@/Domain/Entities/Auction.js';
-import { asyncHandler, NotFoundError, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
+import { asyncHandler, NotFoundError, ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 import { validateAndFindItem, calculateAuctionTotalValue   } from './auctionItemHelpers.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';

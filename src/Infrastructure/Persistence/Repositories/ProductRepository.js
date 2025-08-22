@@ -1,6 +1,6 @@
 import SearchableRepository from './base/SearchableRepository.js';
 import Product from '@/Domain/Entities/Product.js';
-import { ValidationError   } from '@/Application/Common/ErrorTypes.js';
+import { ValidationError   } from '@/Application/ErrorTypes.js';
 /**
  * Product Repository
  *

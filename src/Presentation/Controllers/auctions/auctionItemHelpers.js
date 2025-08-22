@@ -2,7 +2,7 @@ import SealedProduct from '@/Domain/Entities/SealedProduct.js';
 import PsaGradedCard from '@/Domain/Entities/PsaGradedCard.js';
 import RawCard from '@/Domain/Entities/RawCard.js';
 import mongoose from 'mongoose';
-import { NotFoundError, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
+import { NotFoundError, ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 // Helper function to populate auction items
 const populateAuctionItems = async (auction) => {
   const populatedItems = [];

@@ -6,7 +6,7 @@ import { getAllCards,
   updateCard,
   deleteCard,
   getCardMetrics
-  } from '@/Presentation/Controllers/cardsController.js';
+  } from '@/Presentation/Controllers/core/cardsController.js';
 import { cachePresets } from '@/Presentation/Middleware/cachePresets.js';
 // Card routes - READ-ONLY reference data
 router.get('/', cachePresets.cardData, getAllCards);

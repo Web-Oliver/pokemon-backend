@@ -1,7 +1,7 @@
 import express from 'express';
 import { body, param, query   } from 'express-validator';
 import multer from 'multer';
-import stitchedLabelController from '@/Presentation/Controllers/stitchedLabelController.js';
+import stitchedLabelController from '@/Presentation/Controllers/collections/stitchedLabelController.js';
 const router = express.Router();
 
 // Multer configuration for multiple image uploads

@@ -1,6 +1,6 @@
-import { asyncHandler, ValidationError } from '@/Infrastructure/Utilities/errorHandler.js';
+import { asyncHandler, ValidationError } from '@/Presentation/Middleware/errorHandler.js';
 import { CentralizedErrorHandler, ERROR_CONTEXTS   } from '@/Presentation/Middleware/CentralizedErrorHandler.js';
-import { ErrorFactory   } from '@/Application/Common/ErrorTypes.js';
+import { ErrorFactory   } from '@/Application/ErrorTypes.js';
 import { DbaExportService   } from '@/Application/Services/Data/dbaExportService.js';
 import { DbaIntegrationService   } from '@/Application/Services/Data/dbaIntegrationService.js';
 import { zipCollectionImages   } from '@/Infrastructure/Utilities/exportHelpers.js';

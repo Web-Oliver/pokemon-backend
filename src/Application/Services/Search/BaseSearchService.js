@@ -5,7 +5,7 @@
  * Extracted from multiple search services to eliminate duplication
  */
 
-import FlexSearchIndexManager from './search/FlexSearchIndexManager.js';
+import FlexSearchIndexManager from './FlexSearchIndexManager.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 
 class BaseSearchService {

@@ -6,9 +6,9 @@ import CardRepository from '@/Infrastructure/Persistence/Repositories/CardReposi
 import SetRepository from '@/Infrastructure/Persistence/Repositories/SetRepository.js';
 import ProductRepository from '@/Infrastructure/Persistence/Repositories/ProductRepository.js';
 import SetProductRepository from '@/Infrastructure/Persistence/Repositories/SetProductRepository.js';
-import CollectionService from '@/Application/UseCases/Collections/domain/CollectionService.js';
-import ImageManager from '@/Application/Services/Core/shared/imageManager.js';
-import SaleService from '@/Application/Services/Core/shared/saleService.js';
+import CollectionService from '@/Application/UseCases/Collections/CollectionService.js';
+import ImageManager from '@/Application/Services/Core/imageManager.js';
+import SaleService from '@/Application/Services/Core/saleService.js';
 // SearchFactory removed - replaced with simple searchService
 import { getEntityConfig   } from '@/Infrastructure/Configuration/entityConfigurations.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';

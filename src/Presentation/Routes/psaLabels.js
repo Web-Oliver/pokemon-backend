@@ -1,7 +1,7 @@
 import express from 'express';
 import { body, param, query   } from 'express-validator';
 import multer from 'multer';
-import psaLabelController from '@/Presentation/Controllers/psaLabelController.js';
+import psaLabelController from '@/Presentation/Controllers/collections/psaLabelController.js';
 const router = express.Router();
 
 // Multer configuration for image uploads

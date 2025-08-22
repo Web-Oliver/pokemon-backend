@@ -3,7 +3,7 @@ import {
   formatSealedProductName,
   getShortenedSetName,
   isJapaneseSet,
-} from '@/Infrastructure/Utilities/nameShortener.js';
+} from '@/Application/Services/Core/pokemonNameShortener.js';
 
 /**
  * Format item for Facebook post

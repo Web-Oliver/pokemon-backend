@@ -11,8 +11,8 @@ import { getAllSetProducts,
   getSetProductByName,
   getSetProductStats
   } from '@/Presentation/Controllers/setProductsController.js';
-import { asyncHandler   } from '@/Infrastructure/Utilities/errorHandler.js';
-import SetProductService from '@/Application/UseCases/Products/products/SetProductService.js';
+import { asyncHandler   } from '@/Presentation/Middleware/errorHandler.js';
+import SetProductService from '@/Application/UseCases/Products/SetProductService.js';
 import { cachePresets   } from '@/Presentation/Middleware/cachePresets.js';
 /**
  * @route   GET /api/set-products

@@ -7,7 +7,7 @@
  */
 
 import Card from '@/Domain/Entities/Card.js';
-import BaseSearchService from '../BaseSearchService.js';
+import BaseSearchService from './BaseSearchService.js';
 class CardSearchService extends BaseSearchService {
   /**
    * Search cards using hybrid FlexSearch + MongoDB approach

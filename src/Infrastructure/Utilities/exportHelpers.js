@@ -7,7 +7,7 @@
 import PsaGradedCard from '@/Domain/Entities/PsaGradedCard.js';
 import RawCard from '@/Domain/Entities/RawCard.js';
 import SealedProduct from '@/Domain/Entities/SealedProduct.js';
-import { ValidationError   } from '@/Application/Common/ErrorTypes.js';
+import { ValidationError   } from '@/Application/ErrorTypes.js';
 /**
  * Model configuration for different collection types
  */

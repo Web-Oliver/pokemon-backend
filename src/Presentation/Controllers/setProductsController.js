@@ -1,6 +1,6 @@
 import SetProduct from '@/Domain/Entities/SetProduct.js';
-import { asyncHandler, NotFoundError, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
-import SearchService from '@/Application/UseCases/Search/SearchService.js';
+import { asyncHandler, NotFoundError, ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
+import SearchService from '@/Application/Services/Search/SearchService.js';
 const searchService = new SearchService();
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
 const getAllSetProducts = asyncHandler(async (req, res) => {

@@ -1,6 +1,6 @@
 import { ValidationError, NotFoundError } from '@/Presentation/Middleware/errorHandler.js';
-import ImageManager from '@/Application/Services/Core/shared/imageManager.js';
-import SaleService from '@/Application/Services/Core/shared/saleService.js';
+import ImageManager from '@/Application/Services/Core/imageManager.js';
+import SaleService from '@/Application/Services/Core/saleService.js';
 import ActivityService from '@/Application/UseCases/Activities/activityService.js';
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
 /**

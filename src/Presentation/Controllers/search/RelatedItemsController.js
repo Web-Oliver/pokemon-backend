@@ -1,4 +1,4 @@
-import { asyncHandler, ValidationError } from '@/Infrastructure/Utilities/errorHandler.js';
+import { asyncHandler, ValidationError } from '@/Presentation/Middleware/errorHandler.js';
 import mongoose from 'mongoose';
 /**
  * Related Items Controller

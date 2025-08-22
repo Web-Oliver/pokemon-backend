@@ -40,7 +40,7 @@ import { getAllAuctions,
   addItemToAuction,
   removeItemFromAuction,
   markItemAsSold,
-  } from '@/Presentation/Controllers/auctions.js';
+  } from '@/Presentation/Controllers/auctions/index.js';
 // ================================
 // STATUS ROUTES
 // ================================

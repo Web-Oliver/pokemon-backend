@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 import activityTrackingPlugin from '@/Infrastructure/Plugins/activityTracking.js';
 import { queryOptimizationPlugin   } from '@/Infrastructure/Plugins/queryOptimization.js';
-import { saleDetailsSchema, priceHistorySchema, sealedProductTransform   } from '@/Domain/ValueObjects/schemas/shared/index.js';
+import { saleDetailsSchema, priceHistorySchema, sealedProductTransform   } from '@/Domain/ValueObjects/schemas/index.js';
 const sealedProductSchema = new mongoose.Schema({
   productId: {
     type: Schema.Types.ObjectId,

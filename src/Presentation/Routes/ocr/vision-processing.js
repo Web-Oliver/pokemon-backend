@@ -11,7 +11,7 @@ const router = express.Router();
 import googleVisionService from '@/Infrastructure/ExternalServices/Google/googleVisionService.js';
 import psaLabelService from '@/Application/Services/Core/psaLabelService.js';
 import stitchedLabelService from '@/Application/Services/Core/stitchedLabelService.js';
-import { asyncHandler, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
+import { asyncHandler, ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 import { validationResult, body   } from 'express-validator';
 import multer from 'multer';
 /**

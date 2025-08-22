@@ -5,8 +5,8 @@
 
 import express from 'express';
 const router = express.Router();
-import { asyncHandler   } from '@/Infrastructure/Utilities/errorHandler.js';
-import ProductSearchService from '@/Application/UseCases/Products/products/ProductSearchService.js';
+import { asyncHandler   } from '@/Presentation/Middleware/errorHandler.js';
+import ProductApiService from '@/Application/UseCases/Products/ProductApiService.js';
 import { cachePresets   } from '@/Presentation/Middleware/cachePresets.js';
 /**
  * @route   GET /api/products/search
@@ -21,8 +21,7 @@ import { cachePresets   } from '@/Presentation/Middleware/cachePresets.js';
 router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) => {
   const { page, limit, category, setName, availableOnly } = req.query;
 
-  const service = new ProductSearchService();
-  const results = await service.searchProducts({
+  const results = await ProductApiService.searchProducts({
     page: parseInt(page),
     limit: parseInt(limit),
     category,
@@ -39,8 +38,7 @@ router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) 
  * @access  Public
  */
 router.get('/categories', cachePresets.productData, asyncHandler(async (req, res) => {
-  const service = new ProductSearchService();
-  const categories = await service.getCategories();
+  const categories = await ProductApiService.getCategories();
 
   res.json({
     success: true,
@@ -54,8 +52,7 @@ router.get('/categories', cachePresets.productData, asyncHandler(async (req, res
  * @access  Public
  */
 router.get('/categories/:category', cachePresets.productData, asyncHandler(async (req, res) => {
-  const service = new ProductSearchService();
-  const details = await service.getCategoryDetails(req.params.category);
+  const details = await ProductApiService.getCategoryDetails(req.params.category);
 
   res.json({
     success: true,

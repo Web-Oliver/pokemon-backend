@@ -7,7 +7,7 @@
  */
 
 import Set from '@/Domain/Entities/Set.js';
-import BaseSearchService from '../BaseSearchService.js';
+import BaseSearchService from './BaseSearchService.js';
 
 class SetSearchService extends BaseSearchService {
   /**

@@ -5,8 +5,8 @@
  * Handles approval workflow, collection item creation, and PSA card operations
  */
 
-import { asyncHandler   } from '@/Infrastructure/Utilities/errorHandler.js';
-import OcrServiceInitializer from '@/Application/UseCases/Ocr/OcrServiceInitializer.js';
+import { asyncHandler   } from '@/Presentation/Middleware/errorHandler.js';
+import OcrServiceInitializer from '@/Application/UseCases/OcrServiceInitializer.js';
 import DebugLogger from '@/Infrastructure/Utilities/DebugLogger.js';
 import PsaGradedCard from '@/Domain/Entities/PsaGradedCard.js';
 import PsaLabel from '@/Domain/Entities/PsaLabel.js';

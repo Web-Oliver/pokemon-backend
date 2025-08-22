@@ -2,8 +2,8 @@ import multer from 'multer';
 import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
-import { ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
-import ThumbnailService from '@/Application/Services/Core/shared/thumbnailService.js';
+import { ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
+import ThumbnailService from '@/Application/Services/Core/thumbnailService.js';
 
 // ES Module equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);

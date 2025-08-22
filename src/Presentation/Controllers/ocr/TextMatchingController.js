@@ -5,10 +5,10 @@
  * Handles text analysis, card matching, and search functionality
  */
 
-import { asyncHandler   } from '@/Infrastructure/Utilities/errorHandler.js';
-import OcrServiceInitializer from '@/Application/UseCases/Ocr/OcrServiceInitializer.js';
+import { asyncHandler   } from '@/Presentation/Middleware/errorHandler.js';
+import OcrServiceInitializer from '@/Application/UseCases/OcrServiceInitializer.js';
 import DebugLogger from '@/Infrastructure/Utilities/DebugLogger.js';
-import SearchService from '@/Application/UseCases/Search/SearchService.js';
+import SearchService from '@/Application/Services/Search/SearchService.js';
 const searchService = new SearchService();
 
 // Use extracted debug logger

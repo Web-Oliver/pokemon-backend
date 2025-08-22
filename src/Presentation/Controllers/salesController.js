@@ -1,7 +1,7 @@
 // Sales controller for managing sold items and sales analytics
 import salesDataService from '@/Application/UseCases/Analytics/salesDataService.js';
 import salesAnalyticsService from '@/Application/UseCases/Analytics/salesAnalyticsService.js';
-import { asyncHandler, ValidationError   } from '@/Infrastructure/Utilities/errorHandler.js';
+import { asyncHandler, ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
 const { SalesValidators, SalesErrorHandlers, SalesSuccessLoggers } = ValidatorFactory.salesUtils;

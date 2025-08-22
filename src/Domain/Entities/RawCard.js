@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 import activityTrackingPlugin from '@/Infrastructure/Plugins/activityTracking.js';
 import { queryOptimizationPlugin   } from '@/Infrastructure/Plugins/queryOptimization.js';
-import { saleDetailsSchema, priceHistorySchema, collectionItemTransform   } from '@/Domain/ValueObjects/schemas/shared/index.js';
+import { saleDetailsSchema, priceHistorySchema, collectionItemTransform   } from '@/Domain/ValueObjects/schemas/index.js';
 const rawCardSchema = new mongoose.Schema({
   cardId: { type: Schema.Types.ObjectId, ref: 'Card', required: true },
   condition: { type: String, required: true },

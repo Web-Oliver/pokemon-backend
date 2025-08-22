@@ -1,5 +1,5 @@
-import { asyncHandler, ValidationError } from '@/Infrastructure/Utilities/errorHandler.js';
-import SearchService from '@/Application/UseCases/Search/SearchService.js';
+import { asyncHandler, ValidationError } from '@/Presentation/Middleware/errorHandler.js';
+import SearchService from '@/Application/Services/Search/SearchService.js';
 const searchService = new SearchService();
 /**
  * Entity Search Controller

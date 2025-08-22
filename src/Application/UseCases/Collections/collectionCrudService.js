@@ -11,8 +11,8 @@
 import mongoose from 'mongoose';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
-import ImageManager from './shared/imageManager.js';
-import CardService from './shared/cardService.js';
+import ImageManager from '@/Application/Services/Core/imageManager.js';
+import CardService from '@/Application/Services/Core/cardService.js';
 /**
  * CRUD operations for collection models
  */

@@ -1,6 +1,6 @@
-import FacebookPostValidator from './facebook/FacebookPostValidator.js';
-import FacebookItemFetcher from './facebook/FacebookItemFetcher.js';
-import FacebookPostBuilder from './facebook/FacebookPostBuilder.js';
+import FacebookPostValidator from './FacebookPostValidator.js';
+import FacebookItemFetcher from './FacebookItemFetcher.js';
+import FacebookPostBuilder from './FacebookPostBuilder.js';
 /**
  * Facebook Post Service - Main Coordinator
  * Single Responsibility: Orchestrate Facebook post generation workflow

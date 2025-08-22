@@ -14,7 +14,7 @@ const __dirname = path.dirname(__filename);
 
 // Import all dependencies using the @ alias
 import connectDB from '@/Infrastructure/Configuration/db.js';
-import errorHandler from '@/Infrastructure/Utilities/errorHandler.js';
+import errorHandler from '@/Presentation/Middleware/errorHandler.js';
 import { compressionMiddleware, setCacheHeaders   } from '@/Presentation/Middleware/compression.js';
 import { getCacheStats, cacheManager   } from '@/Presentation/Middleware/searchCache.js';
 import { initializeCacheSystem, shutdownCacheSystem   } from '@/Infrastructure/Startup/initializeCacheSystem.js';

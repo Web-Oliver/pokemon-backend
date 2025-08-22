@@ -7,7 +7,8 @@
  */
 
 import Product from '@/Domain/Entities/Product.js';
-import BaseSearchService from '../BaseSearchService.js';
+import BaseSearchService from './BaseSearchService.js';
+import UnifiedSearchQueryBuilder from './UnifiedSearchQueryBuilder.js';
 
 class ProductSearchService extends BaseSearchService {
 
@@ -187,7 +188,7 @@ class ProductSearchService extends BaseSearchService {
     const { limit = 50, offset = 0, sort = { _id: -1 }, populate = true } = options;
 
     // Build MongoDB query
-    const mongoQuery = SearchQueryBuilder.buildTextSearchQuery(query, [
+    const mongoQuery = UnifiedSearchQueryBuilder.buildTextSearchQuery(query, [
       'productName', 'category'
     ]);
 

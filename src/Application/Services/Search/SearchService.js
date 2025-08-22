@@ -18,11 +18,11 @@
  * Maintains 100% backward compatibility with existing controllers
  */
 
-import UnifiedSearchService from './search/UnifiedSearchService.js';
-import CardSearchService from './search/CardSearchService.js';
-import ProductSearchService from './search/ProductSearchService.js';
-import SetSearchService from './search/SetSearchService.js';
-import FlexSearchIndexManager from './search/FlexSearchIndexManager.js';
+import UnifiedSearchService from './UnifiedSearchService.js';
+import CardSearchService from './CardSearchService.js';
+import ProductSearchService from './ProductSearchService.js';
+import SetSearchService from './SetSearchService.js';
+import FlexSearchIndexManager from './FlexSearchIndexManager.js';
 class SearchService {
   constructor() {
     this.unifiedSearchService = new UnifiedSearchService();

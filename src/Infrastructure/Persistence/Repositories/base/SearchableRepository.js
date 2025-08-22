@@ -1,5 +1,5 @@
 import BaseRepository from './BaseRepository.js';
-import UnifiedSearchQueryBuilder from '@/Application/UseCases/Search/search/UnifiedSearchQueryBuilder.js';
+import UnifiedSearchQueryBuilder from '@/Application/Services/Search/UnifiedSearchQueryBuilder.js';
 import { SEARCH_CONFIGS   } from '@/Infrastructure/Configuration/searchConfigurations.js';
 /**
  * Searchable Repository Base Class

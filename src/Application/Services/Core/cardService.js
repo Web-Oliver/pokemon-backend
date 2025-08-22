@@ -1,7 +1,7 @@
 import Card from '@/Domain/Entities/Card.js';
 import Set from '@/Domain/Entities/Set.js';
 import { ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
-import Logger from '@/Presentation/Middleware/logger.js';
+import Logger from '@/Infrastructure/Utilities/Logger.js';
 /**
  * Shared Card Service
  * Consolidates duplicate card and set creation logic used across collection services

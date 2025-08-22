@@ -15,7 +15,7 @@ import Product from '@/Domain/Entities/Product.js';
 import SetProduct from '@/Domain/Entities/SetProduct.js';
 import { ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 import ValidatorFactory from '@/Application/Validators/ValidatorFactory.js';
-class ProductSearchService {
+class ProductApiService {
   /**
    * Search products with pagination and filtering (SetProduct → Product hierarchy)
    */
@@ -138,4 +138,4 @@ class ProductSearchService {
   }
 }
 
-export default ProductSearchService;
+export default ProductApiService;

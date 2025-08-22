@@ -1,6 +1,6 @@
 import SearchableRepository from './base/SearchableRepository.js';
 import Card from '@/Domain/Entities/Card.js';
-import { ValidationError   } from '@/Application/Common/ErrorTypes.js';
+import { ValidationError   } from '@/Application/ErrorTypes.js';
 /**
  * Card Repository
  *

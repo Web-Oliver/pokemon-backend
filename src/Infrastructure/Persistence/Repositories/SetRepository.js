@@ -1,6 +1,6 @@
 import SearchableRepository from './base/SearchableRepository.js';
 import Set from '@/Domain/Entities/Set.js';
-import { ValidationError   } from '@/Application/Common/ErrorTypes.js';
+import { ValidationError   } from '@/Application/ErrorTypes.js';
 /**
  * Set Repository
  *

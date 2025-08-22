@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { NotFoundError, ValidationError   } from '@/Application/Common/ErrorTypes.js';
+import { NotFoundError, ValidationError   } from '@/Application/ErrorTypes.js';
 /**
  * Base Repository Class
  *
