@@ -2,12 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import Product from '@/Domain/Entities/Product.js';
 import SetProduct from '@/Domain/Entities/SetProduct.js';
-import { ImportValidators, ImportValidationError   } from '@/validators/ImportValidators.js';
+import { ImportValidators, ImportValidationError   } from './validators/ImportValidators.js';
 /**
  * Optimized Product MongoDB Importer
  * Bulk operations with SetProduct validation
  */
-class OptimizedProductImporter {
+class ProductImporter {
   constructor(options = {}) {
     this.options = ImportValidators.validateImportOptions(options);
 
@@ -234,9 +234,9 @@ class OptimizedProductImporter {
     if (this.options.verbose) {
       const timestamp = new Date().toISOString();
 
-      console.log(`[OptimizedProductImporter ${timestamp}] ${message}`);
+      console.log(`[ProductImporter ${timestamp}] ${message}`);
     }
   }
 }
 
-export default OptimizedProductImporter;
+export default ProductImporter;

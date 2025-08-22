@@ -3,7 +3,7 @@ import {
   formatSealedProductName,
   getShortenedSetName,
   isJapaneseSet,
-} from '@/Application/Services/Core/pokemonNameShortener.js';
+} from '@/core/services/pokemonNameShortener.js';
 
 /**
  * Generate DBA title for item

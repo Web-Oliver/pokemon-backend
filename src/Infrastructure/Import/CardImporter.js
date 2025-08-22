@@ -2,12 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import Card from '@/Domain/Entities/Card.js';
 import Set from '@/Domain/Entities/Set.js';
-import { ImportValidators, ImportValidationError   } from '@/validators/ImportValidators.js';
+import { ImportValidators, ImportValidationError   } from './validators/ImportValidators.js';
 /**
  * Optimized Card MongoDB Importer
  * Bulk operations with validation for maximum performance
  */
-class OptimizedCardImporter {
+class CardImporter {
   constructor(options = {}) {
     this.options = ImportValidators.validateImportOptions(options);
 
@@ -234,9 +234,9 @@ class OptimizedCardImporter {
     if (this.options.verbose) {
       const timestamp = new Date().toISOString();
 
-      console.log(`[OptimizedCardImporter ${timestamp}] ${message}`);
+      console.log(`[CardImporter ${timestamp}] ${message}`);
     }
   }
 }
 
-export default OptimizedCardImporter;
+export default CardImporter;

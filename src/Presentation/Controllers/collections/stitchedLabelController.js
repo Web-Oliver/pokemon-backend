@@ -1,5 +1,5 @@
 import { validationResult } from 'express-validator';
-import stitchedLabelService from '@/Application/Services/Core/stitchedLabelService.js';
+import stitchedLabelService from '@/core/services/stitchedLabelService.js';
 import { ValidationError, NotFoundError   } from '@/Presentation/Middleware/errorHandler.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 class StitchedLabelController {

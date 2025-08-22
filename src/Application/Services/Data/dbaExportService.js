@@ -9,7 +9,7 @@ import path from 'path';
 import fs from 'fs';
 import os from 'os';
 import JSZip from 'jszip';
-import { createPokemonNameShortener   } from '@/Application/Services/Core/pokemonNameShortener.js';
+import { createPokemonNameShortener   } from '@/core/services/pokemonNameShortener.js';
 /**
  * Configuration for DBA export
  */

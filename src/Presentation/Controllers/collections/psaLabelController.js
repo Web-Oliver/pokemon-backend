@@ -1,5 +1,5 @@
 import { validationResult } from 'express-validator';
-import psaLabelService from '@/Application/Services/Core/psaLabelService.js';
+import psaLabelService from '@/core/services/psaLabelService.js';
 import { ValidationError, NotFoundError   } from '@/Presentation/Middleware/errorHandler.js';
 import Logger from '@/Infrastructure/Utilities/Logger.js';
 class PsaLabelController {

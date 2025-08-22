@@ -1,27 +1,27 @@
 #!/usr/bin/env node
 
 /**
- * Optimized Main MongoDB Import Script
+ * Main MongoDB Import Script
  *
- * Uses all optimized importers with bulk operations and validation.
- * 10x faster than original with comprehensive error handling.
+ * Uses bulk operations and validation for high-performance imports.
+ * Comprehensive error handling and monitoring.
  */
 
 import mongoose from 'mongoose';
 import path from 'path';
 import fs from 'fs';
-// Import optimized importers
-import OptimizedSetProductImporter from './OptimizedSetProductImporter.js';
-import OptimizedSetImporter from './OptimizedSetImporter.js';
-import OptimizedProductImporter from './OptimizedProductImporter.js';
-import OptimizedCardImporter from './OptimizedCardImporter.js';
+// Import importers
+import SetProductImporter from './SetProductImporter.js';
+import SetImporter from './SetImporter.js';
+import ProductImporter from './ProductImporter.js';
+import CardImporter from './CardImporter.js';
 // Import models for connection
 import Set from '@/Domain/Entities/Set.js';
 import Card from '@/Domain/Entities/Card.js';
 import SetProduct from '@/Domain/Entities/SetProduct.js';
 import Product from '@/Domain/Entities/Product.js';
 
-class OptimizedMainImporter {
+class MainImporter {
   constructor(options = {}) {
     this.options = {
       dryRun: options.dryRun || false,
@@ -104,7 +104,7 @@ class OptimizedMainImporter {
     this.log('\n📦 Starting optimized SetProduct import...');
 
     try {
-      const importer = new OptimizedSetProductImporter(this.options);
+      const importer = new SetProductImporter(this.options);
       const result = await importer.import();
 
       this.stats.setProducts = result;
@@ -124,7 +124,7 @@ class OptimizedMainImporter {
     this.log('\n🎯 Starting optimized Set import...');
 
     try {
-      const importer = new OptimizedSetImporter(this.options);
+      const importer = new SetImporter(this.options);
       const result = await importer.import();
 
       this.stats.sets = result;
@@ -144,7 +144,7 @@ class OptimizedMainImporter {
     this.log('\n🛍️ Starting optimized Product import...');
 
     try {
-      const importer = new OptimizedProductImporter(this.options);
+      const importer = new ProductImporter(this.options);
       const result = await importer.import();
 
       this.stats.products = result;
@@ -164,7 +164,7 @@ class OptimizedMainImporter {
     this.log('\n🃏 Starting optimized Card import...');
 
     try {
-      const importer = new OptimizedCardImporter(this.options);
+      const importer = new CardImporter(this.options);
       const result = await importer.import();
 
       this.stats.cards = result;
@@ -264,7 +264,7 @@ class OptimizedMainImporter {
     if (this.options.verbose) {
       const timestamp = new Date().toISOString();
 
-      console.log(`[OptimizedMainImporter ${timestamp}] ${message}`);
+      console.log(`[MainImporter ${timestamp}] ${message}`);
     }
   }
 
@@ -274,7 +274,7 @@ class OptimizedMainImporter {
   error(message, error = null) {
     const timestamp = new Date().toISOString();
 
-    console.error(`[OptimizedMainImporter ${timestamp}] ${message}`);
+    console.error(`[MainImporter ${timestamp}] ${message}`);
     if (error) {
       console.error(error);
     }
@@ -291,7 +291,7 @@ if (require.main === module) {
     batchSize: args.includes('--fast') ? 500 : 200
   };
 
-  const importer = new OptimizedMainImporter(options);
+  const importer = new MainImporter(options);
 
   importer.run().catch(error => {
     console.error('Optimized import failed:', error);
@@ -299,4 +299,4 @@ if (require.main === module) {
   });
 }
 
-export default OptimizedMainImporter;
+export default MainImporter;

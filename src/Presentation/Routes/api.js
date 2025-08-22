@@ -12,7 +12,7 @@ import express from 'express';
 const router = express.Router();
 
 // Controllers
-import { getSales, getSalesSummary, getSalesGraphData   } from '@/Presentation/Controllers/salesController.js';
+import { getSales, getSalesSummary, getSalesGraphData   } from '@/Presentation/Controllers/business/salesController.js';
 import Card from '@/Domain/Entities/Card.js';
 import Set from '@/Domain/Entities/Set.js';
 import Product from '@/Domain/Entities/Product.js';
@@ -20,7 +20,7 @@ import SetProduct from '@/Domain/Entities/SetProduct.js';
 import { getAllProducts,
   getProductById,
   getProductSetNames,
-  } from '@/Presentation/Controllers/productsController.js';
+  } from '@/Presentation/Controllers/entities/productsController.js';
 import { generateFacebookPost, getCollectionFacebookTextFile, generateDbaTitle   } from '@/Presentation/Controllers/externalListingController.js';
 import { zipPsaCardImages,
   zipRawCardImages,

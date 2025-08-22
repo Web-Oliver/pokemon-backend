@@ -3,7 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import { fileURLToPath } from 'url';
 import { ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
-import ThumbnailService from '@/Application/Services/Core/thumbnailService.js';
+import ThumbnailService from '@/core/services/thumbnailService.js';
 
 // ES Module equivalent of __dirname
 const __filename = fileURLToPath(import.meta.url);

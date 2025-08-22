@@ -2,55 +2,32 @@
 
 ## Overview
 
-Complete import system for Pokemon collection data with optimized performance and comprehensive validation.
+High-performance import system for Pokemon collection data with bulk operations and comprehensive validation.
 
 ## Quick Start
 
-### Optimized Import (Recommended)
 ```bash
-# Run optimized import with all enhancements
-node Import/optimized/OptimizedMainImporter.js
+# Run import with all enhancements
+node Import/MainImporter.js
 
 # Dry run to test without changes
-node Import/optimized/OptimizedMainImporter.js --dry-run
+node Import/MainImporter.js --dry-run
 
 # Skip existing records for faster updates
-node Import/optimized/OptimizedMainImporter.js --skip-existing
+node Import/MainImporter.js --skip-existing
 
 # High-speed mode for large datasets
-node Import/optimized/OptimizedMainImporter.js --fast
+node Import/MainImporter.js --fast
 ```
-
-### Original Import (Legacy)
-```bash
-# Original import system
-node Import/importMain.js
-```
-
-## Performance Comparison
-
-| Feature | Original | Optimized | Improvement |
-|---------|----------|-----------|-------------|
-| Speed | ~100 docs/sec | ~1000+ docs/sec | **10x faster** |
-| Validation | Basic | Comprehensive | **15x more reliable** |
-| Memory | Unbounded | <500MB | **Predictable** |
-| Batch Size | 50-100 | 200-500 | **Configurable** |
 
 ## Features
 
-### ✅ Optimized System
 - **Bulk Operations**: MongoDB bulkWrite() for maximum performance
 - **Pre-validation**: Comprehensive data validation before database insertion
-- **Memory Efficient**: Configurable batch processing
+- **Memory Efficient**: Configurable batch processing (200-500 docs/batch)
 - **Error Recovery**: Individual fallback processing for failed batches
 - **Performance Metrics**: Real-time monitoring and reporting
 - **Cache Optimization**: Smart duplicate detection using Set data structures
-
-### ⚠️ Original System
-- Individual document processing (slower)
-- Basic validation (error-prone)
-- No performance monitoring
-- Limited error handling
 
 ## Import Order
 
@@ -130,10 +107,10 @@ The optimized system provides detailed metrics:
 
 ```bash
 # Enable debug logging
-DEBUG=* node Import/optimized/OptimizedMainImporter.js
+DEBUG=* node Import/MainImporter.js
 
 # Test with small batch
-node Import/optimized/OptimizedMainImporter.js --dry-run --verbose
+node Import/MainImporter.js --dry-run --verbose
 ```
 
 ## Development
@@ -141,8 +118,8 @@ node Import/optimized/OptimizedMainImporter.js --dry-run --verbose
 ### Adding New Importers
 
 1. Extend base validation in `validators/ImportValidators.js`
-2. Create optimized importer following existing patterns
-3. Add to OptimizedMainImporter.js
+2. Create importer following existing patterns
+3. Add to MainImporter.js
 4. Update this README
 
 ### Testing
@@ -155,23 +132,20 @@ console.log('Validation works:', ImportValidators.validateSetData({...}));
 "
 
 # Test with dry run
-node Import/optimized/OptimizedMainImporter.js --dry-run
+node Import/MainImporter.js --dry-run
 ```
 
 ## Architecture
 
 ```
 Import/
-├── optimized/           # High-performance importers (10x faster)
-│   ├── OptimizedMainImporter.js      # Orchestrates all imports
-│   ├── OptimizedSetImporter.js       # Bulk set import
-│   ├── OptimizedCardImporter.js      # Bulk card import  
-│   ├── OptimizedProductImporter.js   # Bulk product import
-│   └── OptimizedSetProductImporter.js # Bulk set product import
-├── validators/          # Comprehensive validation system
-│   └── ImportValidators.js           # All validation logic
-├── importers/          # Original importers (legacy)
-└── importMain.js       # Original main script (legacy)
+├── MainImporter.js      # Orchestrates all imports
+├── SetImporter.js       # Bulk set import
+├── CardImporter.js      # Bulk card import  
+├── ProductImporter.js   # Bulk product import
+├── SetProductImporter.js # Bulk set product import
+└── validators/          # Comprehensive validation system
+    └── ImportValidators.js           # All validation logic
 ```
 
-The optimized system follows CLAUDE.md principles with SOLID architecture, DRY validation patterns, and performance-first design.
+The system follows CLAUDE.md principles with SOLID architecture, DRY validation patterns, and performance-first design.

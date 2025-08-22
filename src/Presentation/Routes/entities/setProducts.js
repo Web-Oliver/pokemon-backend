@@ -10,7 +10,7 @@ import { getAllSetProducts,
   getSetProductById,
   getSetProductByName,
   getSetProductStats
-  } from '@/Presentation/Controllers/setProductsController.js';
+  } from '@/Presentation/Controllers/entities/setProductsController.js';
 import { asyncHandler   } from '@/Presentation/Middleware/errorHandler.js';
 import SetProductService from '@/Application/UseCases/Products/SetProductService.js';
 import { cachePresets   } from '@/Presentation/Middleware/cachePresets.js';

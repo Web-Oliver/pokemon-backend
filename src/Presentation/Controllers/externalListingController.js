@@ -1,4 +1,4 @@
-import itemFetcher from '@/Application/Services/Core/itemFetcher.js';
+import itemFetcher from '@/core/services/itemFetcher.js';
 import facebookFormatter from '@/Application/UseCases/Facebook/facebookPostFormatter.js';
 import dbaFormatter from '@/Application/Services/Data/dbaFormatter.js';
 import FacebookPostService from '@/Application/UseCases/Facebook/FacebookPostService.js';

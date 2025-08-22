@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import SetModel from '@/Domain/Entities/Set.js';
-import { ImportValidators, ImportValidationError   } from '@/validators/ImportValidators.js';
+import { ImportValidators, ImportValidationError   } from './validators/ImportValidators.js';
 /**
  * Optimized Set MongoDB Importer
  *
@@ -18,7 +18,7 @@ import { ImportValidators, ImportValidationError   } from '@/validators/ImportVa
  * - Utilizes lean queries for better performance
  * - Employs proper index hints for optimal query performance
  */
-class OptimizedSetImporter {
+class SetImporter {
   constructor(options = {}) {
     this.options = ImportValidators.validateImportOptions(options);
 
@@ -413,9 +413,9 @@ class OptimizedSetImporter {
     if (this.options.verbose) {
       const timestamp = new Date().toISOString();
 
-      console.log(`[OptimizedSetImporter ${timestamp}] ${message}`);
+      console.log(`[SetImporter ${timestamp}] ${message}`);
     }
   }
 }
 
-export default OptimizedSetImporter;
+export default SetImporter;

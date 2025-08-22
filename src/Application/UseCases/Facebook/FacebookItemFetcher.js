@@ -1,7 +1,7 @@
 import PsaGradedCard from '@/Domain/Entities/PsaGradedCard.js';
 import RawCard from '@/Domain/Entities/RawCard.js';
 import SealedProduct from '@/Domain/Entities/SealedProduct.js';
-import itemFetcher from '@/Application/Services/Core/itemFetcher.js';
+import itemFetcher from '@/core/services/itemFetcher.js';
 import { ValidationError   } from '@/Presentation/Middleware/errorHandler.js';
 /**
  * Facebook Item Fetcher Service

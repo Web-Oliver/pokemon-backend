@@ -1,12 +1,12 @@
 import fs from 'fs';
 import path from 'path';
 import SetProduct from '@/Domain/Entities/SetProduct.js';
-import { ImportValidators, ImportValidationError   } from '@/validators/ImportValidators.js';
+import { ImportValidators, ImportValidationError   } from './validators/ImportValidators.js';
 /**
- * Optimized SetProduct MongoDB Importer
+ * SetProduct MongoDB Importer
  * Extracts unique setProductName values from Products data
  */
-class OptimizedSetProductImporter {
+class SetProductImporter {
   constructor(options = {}) {
     this.options = ImportValidators.validateImportOptions(options);
 
@@ -214,4 +214,4 @@ class OptimizedSetProductImporter {
   }
 }
 
-export default OptimizedSetProductImporter;
+export default SetProductImporter;

@@ -22,21 +22,21 @@ import { presets   } from '@/Presentation/Middleware/responseTransformer.js';
 import { createVersioningMiddleware   } from '@/Presentation/Middleware/versioning.js';
 import { paginationPresets   } from '@/Presentation/Middleware/pagination.js';
 // Import all routes using the @ alias
-import unifiedSearchRoute from '@/Presentation/Routes/unifiedSearch.js';
-import collectionsRoute from '@/Presentation/Routes/collections.js';
+import unifiedSearchRoute from '@/Presentation/Routes/search/unifiedSearch.js';
+import collectionsRoute from '@/Presentation/Routes/entities/collections.js';
 import apiRoute from '@/Presentation/Routes/api.js';
-import imagesRoute from '@/Presentation/Routes/images.js';
-import setsRoute from '@/Presentation/Routes/sets.js';
-import cardsRoute from '@/Presentation/Routes/cards.js';
-import setProductsRoute from '@/Presentation/Routes/setProducts.js';
-import activityRoutes from '@/Presentation/Routes/activityRoutes.js';
-import dbaSelection from '@/Presentation/Routes/dbaSelection.js';
-import productsRoute from '@/Presentation/Routes/products.js';
-import cacheManagement from '@/Presentation/Routes/cacheManagement.js';
-import pluginManagement from '@/Presentation/Routes/pluginManagement.js';
+import imagesRoute from '@/Presentation/Routes/images/index.js';
+import setsRoute from '@/Presentation/Routes/entities/sets.js';
+import cardsRoute from '@/Presentation/Routes/entities/cards.js';
+import setProductsRoute from '@/Presentation/Routes/entities/setProducts.js';
+import activityRoutes from '@/Presentation/Routes/activities/index.js';
+import dbaSelection from '@/Presentation/Routes/utilities/dbaSelection.js';
+import productsRoute from '@/Presentation/Routes/entities/products.js';
+import cacheManagement from '@/Presentation/Routes/management/cacheManagement.js';
+import pluginManagement from '@/Presentation/Routes/management/pluginManagement.js';
 import ocrRoute from '@/Presentation/Routes/ocr.js';
-import psaLabelsRoute from '@/Presentation/Routes/psaLabels.js';
-import stitchedLabelsRoute from '@/Presentation/Routes/stitchedLabels.js';
+import psaLabelsRoute from '@/Presentation/Routes/labels/psaLabels.js';
+import stitchedLabelsRoute from '@/Presentation/Routes/labels/stitchedLabels.js';
 
 // NEW: Import service bootstrap for dependency injection
 import { bootstrapServices, shutdownServices } from '@/Infrastructure/Startup/serviceBootstrap.js';

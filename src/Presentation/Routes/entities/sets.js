@@ -1,6 +1,6 @@
 import express from 'express';
 const router = express.Router();
-import { getAllSets, getSetById, getSetsWithPagination   } from '@/Presentation/Controllers/setsController.js';
+import { getAllSets, getSetById, getSetsWithPagination   } from '@/Presentation/Controllers/entities/setsController.js';
 import { getCardsBySetId   } from '@/Presentation/Controllers/core/cardsController.js';
 import { cachePresets } from '@/Presentation/Middleware/cachePresets.js';
 // Set routes - using proper cache middleware
