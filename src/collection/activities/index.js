@@ -26,7 +26,7 @@ const handleActivityError = (error, req, res, next) => {
       success: false,
       error: 'Validation Error',
       message: error.message,
-      details: error.errors,
+      details: error.errors
     });
   }
 
@@ -34,14 +34,14 @@ const handleActivityError = (error, req, res, next) => {
     return res.status(400).json({
       success: false,
       error: 'Invalid ID',
-      message: 'Invalid activity ID format',
+      message: 'Invalid activity ID format'
     });
   }
 
   res.status(500).json({
     success: false,
     error: 'Internal Server Error',
-    message: 'An unexpected error occurred while processing activities',
+    message: 'An unexpected error occurred while processing activities'
   });
 };
 
@@ -54,7 +54,7 @@ const validateActivityFilters = (req, res, next) => {
     return res.status(400).json({
       success: false,
       error: 'Invalid Filter',
-      message: `Invalid activity type. Must be one of: ${Object.values(ACTIVITY_TYPES).join(', ')}`,
+      message: `Invalid activity type. Must be one of: ${Object.values(ACTIVITY_TYPES).join(', ')}`
     });
   }
 
@@ -63,7 +63,7 @@ const validateActivityFilters = (req, res, next) => {
     return res.status(400).json({
       success: false,
       error: 'Invalid Filter',
-      message: `Invalid priority. Must be one of: ${Object.values(ACTIVITY_PRIORITIES).join(', ')}`,
+      message: `Invalid priority. Must be one of: ${Object.values(ACTIVITY_PRIORITIES).join(', ')}`
     });
   }
 
@@ -72,7 +72,7 @@ const validateActivityFilters = (req, res, next) => {
     return res.status(400).json({
       success: false,
       error: 'Invalid Filter',
-      message: 'Invalid date range. Must be one of: today, week, month, quarter, all',
+      message: 'Invalid date range. Must be one of: today, week, month, quarter, all'
     });
   }
 
@@ -81,7 +81,7 @@ const validateActivityFilters = (req, res, next) => {
     return res.status(400).json({
       success: false,
       error: 'Invalid Pagination',
-      message: 'Limit must be a number between 1 and 100',
+      message: 'Limit must be a number between 1 and 100'
     });
   }
 
@@ -89,7 +89,7 @@ const validateActivityFilters = (req, res, next) => {
     return res.status(400).json({
       success: false,
       error: 'Invalid Pagination',
-      message: 'Offset must be a number greater than or equal to 0',
+      message: 'Offset must be a number greater than or equal to 0'
     });
   }
 
@@ -123,7 +123,7 @@ router.get('/', cachePresets.activityData, validateActivityFilters, async (req, 
       entityId: req.query.entityId,
       priority: req.query.priority,
       dateRange: req.query.dateRange,
-      search: req.query.search,
+      search: req.query.search
     };
 
     const result = await ActivityService.getActivities(options);
@@ -137,8 +137,8 @@ router.get('/', cachePresets.activityData, validateActivityFilters, async (req, 
         offset: result.offset,
         hasMore: result.hasMore,
         page: Math.floor(result.offset / result.limit) + 1,
-        totalPages: Math.ceil(result.total / result.limit),
-      },
+        totalPages: Math.ceil(result.total / result.limit)
+      }
     });
   } catch (error) {
     next(error);
@@ -157,7 +157,7 @@ router.get('/stats', cachePresets.activityStats, async (req, res, next) => {
 
     res.json({
       success: true,
-      data: stats,
+      data: stats
     });
   } catch (error) {
     next(error);
@@ -175,13 +175,13 @@ router.get('/types', (req, res) => {
     label: key
       .split('_')
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
-      .join(' '),
+      .join(' ')
   }));
 
   const priorities = Object.entries(ACTIVITY_PRIORITIES).map(([key, value]) => ({
     key,
     value,
-    label: key.charAt(0).toUpperCase() + key.slice(1).toLowerCase(),
+    label: key.charAt(0).toUpperCase() + key.slice(1).toLowerCase()
   }));
 
   res.json({
@@ -194,9 +194,9 @@ router.get('/types', (req, res) => {
         { value: 'week', label: 'This Week' },
         { value: 'month', label: 'This Month' },
         { value: 'quarter', label: 'This Quarter' },
-        { value: 'all', label: 'All Time' },
-      ],
-    },
+        { value: 'all', label: 'All Time' }
+      ]
+    }
   });
 });
 
@@ -214,7 +214,7 @@ router.get('/recent', cachePresets.activityData, async (req, res, next) => {
 
     res.json({
       success: true,
-      data: activities,
+      data: activities
     });
   } catch (error) {
     next(error);
@@ -235,7 +235,7 @@ router.get('/entity/:entityType/:entityId', cachePresets.activityData, async (re
 
     res.json({
       success: true,
-      data: activities,
+      data: activities
     });
   } catch (error) {
     next(error);
@@ -254,7 +254,7 @@ router.get('/search', async (req, res, next) => {
       return res.status(400).json({
         success: false,
         error: 'Invalid Search',
-        message: 'Search term must be at least 2 characters long',
+        message: 'Search term must be at least 2 characters long'
       });
     }
 
@@ -280,8 +280,8 @@ router.get('/search', async (req, res, next) => {
       data: activities,
       meta: {
         searchTerm: searchTerm.trim(),
-        resultCount: activities.length,
-      },
+        resultCount: activities.length
+      }
     });
   } catch (error) {
     next(error);
@@ -304,13 +304,13 @@ router.get('/:id', cachePresets.activityData, async (req, res, next) => {
       return res.status(404).json({
         success: false,
         error: 'Activity Not Found',
-        message: 'The requested activity could not be found',
+        message: 'The requested activity could not be found'
       });
     }
 
     res.json({
       success: true,
-      data: activity,
+      data: activity
     });
   } catch (error) {
     next(error);
@@ -332,7 +332,7 @@ router.post('/', async (req, res, next) => {
       return res.status(400).json({
         success: false,
         error: 'Missing Required Fields',
-        message: 'Activity must have type, title, and description',
+        message: 'Activity must have type, title, and description'
       });
     }
 
@@ -341,7 +341,7 @@ router.post('/', async (req, res, next) => {
     res.status(201).json({
       success: true,
       data: activity,
-      message: 'Activity created successfully',
+      message: 'Activity created successfully'
     });
   } catch (error) {
     next(error);
@@ -361,7 +361,7 @@ const markAsReadHandler = async (req, res, next) => {
       return res.status(404).json({
         success: false,
         error: 'Activity Not Found',
-        message: 'The requested activity could not be found',
+        message: 'The requested activity could not be found'
       });
     }
 
@@ -370,7 +370,7 @@ const markAsReadHandler = async (req, res, next) => {
     res.json({
       success: true,
       data: activity,
-      message: 'Activity marked as read',
+      message: 'Activity marked as read'
     });
   } catch (error) {
     next(error);
@@ -405,7 +405,7 @@ router.delete('/:id', async (req, res, next) => {
       return res.status(404).json({
         success: false,
         error: 'Activity Not Found',
-        message: 'The requested activity could not be found',
+        message: 'The requested activity could not be found'
       });
     }
 
@@ -413,7 +413,7 @@ router.delete('/:id', async (req, res, next) => {
 
     res.json({
       success: true,
-      message: 'Activity archived successfully',
+      message: 'Activity archived successfully'
     });
   } catch (error) {
     next(error);
@@ -435,9 +435,9 @@ router.post('/archive-old', async (req, res, next) => {
     res.json({
       success: true,
       data: {
-        archivedCount: result.modifiedCount,
+        archivedCount: result.modifiedCount
       },
-      message: `Archived ${result.modifiedCount} old activities`,
+      message: `Archived ${result.modifiedCount} old activities`
     });
   } catch (error) {
     next(error);
@@ -457,9 +457,9 @@ router.post('/generate-historical', async (req, res, next) => {
     res.json({
       success: true,
       data: {
-        activitiesGenerated: totalGenerated,
+        activitiesGenerated: totalGenerated
       },
-      message: `Generated ${totalGenerated} historical activities`,
+      message: `Generated ${totalGenerated} historical activities`
     });
   } catch (error) {
     next(error);

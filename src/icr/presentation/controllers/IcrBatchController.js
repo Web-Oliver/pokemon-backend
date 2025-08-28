@@ -50,8 +50,6 @@ const upload = multer({
 
 class IcrBatchController extends BaseController {
   constructor() {
-    console.log('🔍 [DEBUG] IcrBatchController constructor called');
-    console.log('🔍 [DEBUG] ServiceKeys.ICR_BATCH_SERVICE:', ServiceKeys.ICR_BATCH_SERVICE);
 
     try {
       super(ServiceKeys.ICR_BATCH_SERVICE, {
@@ -62,15 +60,12 @@ class IcrBatchController extends BaseController {
         enableMetrics: true
       });
 
-      console.log('✅ [DEBUG] BaseController constructor completed');
-      console.log('🔍 [DEBUG] this.service:', typeof this.service, this.service ? 'exists' : 'undefined');
 
       // Initialize proper services following SOLID principles
       this.icrBatchService = this.service;
       this.icrControllerService = new IcrControllerService();
       this.icrFileService = new IcrFileService();
-      
-      console.log('✅ [DEBUG] IcrBatchController constructor completed successfully');
+
     } catch (error) {
       console.error('❌ [DEBUG] IcrBatchController constructor failed:', error.message);
       console.error('❌ [DEBUG] Stack:', error.stack);
@@ -212,7 +207,7 @@ class IcrBatchController extends BaseController {
       success: true,
       message: `Card matching completed: ${result.successfulMatches}/${result.totalProcessed} matches found with OCR data extraction`,
       data: {
-        ...result,
+        ...result
       }
     });
   });
@@ -261,7 +256,7 @@ class IcrBatchController extends BaseController {
 
     // FIXED: Use service instead of direct database access
     const scans = await this.icrControllerService.getScans(
-      { status }, 
+      { status },
       { skip, limit }
     );
 
@@ -414,19 +409,19 @@ class IcrBatchController extends BaseController {
    */
   serveFullImage = asyncHandler(async (req, res) => {
     const { filename } = req.params;
-    
+
     // FIXED: Use file service instead of direct file system access
     const imagePath = this.icrFileService.getUploadPath('fullImages');
     const fullPath = path.join(imagePath, filename);
-    
+
     const imageData = await this.icrControllerService.serveImage(fullPath, 'full');
-    
+
     res.set({
       'Content-Type': imageData.contentType,
       'Content-Length': imageData.size,
       'Last-Modified': imageData.lastModified.toUTCString()
     });
-    
+
     res.end(imageData.buffer);
   });
 
@@ -436,19 +431,19 @@ class IcrBatchController extends BaseController {
    */
   serveLabelImage = asyncHandler(async (req, res) => {
     const { filename } = req.params;
-    
+
     // FIXED: Use file service instead of direct file system access
     const imagePath = this.icrFileService.getUploadPath('extractedLabels');
     const fullPath = path.join(imagePath, filename);
-    
+
     const imageData = await this.icrControllerService.serveImage(fullPath, 'label');
-    
+
     res.set({
       'Content-Type': imageData.contentType,
       'Content-Length': imageData.size,
       'Last-Modified': imageData.lastModified.toUTCString()
     });
-    
+
     res.end(imageData.buffer);
   });
 
@@ -458,19 +453,19 @@ class IcrBatchController extends BaseController {
    */
   serveStitchedImage = asyncHandler(async (req, res) => {
     const { filename } = req.params;
-    
+
     // FIXED: Use file service instead of direct file system access
     const imagePath = this.icrFileService.getUploadPath('stitchedImages');
     const fullPath = path.join(imagePath, filename);
-    
+
     const imageData = await this.icrControllerService.serveImage(fullPath, 'stitched');
-    
+
     res.set({
       'Content-Type': imageData.contentType,
       'Content-Length': imageData.size,
       'Last-Modified': imageData.lastModified.toUTCString()
     });
-    
+
     res.end(imageData.buffer);
   });
 
@@ -534,12 +529,12 @@ class IcrBatchController extends BaseController {
     });
 
     const { id } = req.params;
-    
+
     Logger.info('IcrBatchController', '🔍 Getting scan details', { scanId: id });
 
     // Get complete scan details with all OCR data and card matches
     const scan = await this.icrControllerService.getScanById(id);
-    
+
     if (!scan) {
       return res.status(404).json({
         success: false,
@@ -592,7 +587,7 @@ class IcrBatchController extends BaseController {
       success: true,
       message: 'PSA card created successfully with pre-populated OCR data',
       data: {
-        ...result,
+        ...result
       }
     });
   });

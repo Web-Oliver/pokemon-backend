@@ -13,7 +13,7 @@
 
 import Product from '@/pokemon/products/Product.js';
 import SetProduct from '@/pokemon/products/SetProduct.js';
-import { ValidationError } from '@/system/middleware/errorHandler.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 class ProductApiService {
   /**

@@ -11,7 +11,7 @@
 
 import SetProduct from '@/pokemon/products/SetProduct.js';
 import Product from '@/pokemon/products/Product.js';
-import { ValidationError, NotFoundError } from '@/system/middleware/errorHandler.js';
+import { ValidationError, NotFoundError } from '@/system/errors/ErrorTypes.js';
 class SetProductService {
 
   /**

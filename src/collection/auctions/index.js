@@ -3,7 +3,7 @@ import { getAllAuctions,
   getAuctionById,
   createAuction,
   updateAuction,
-  deleteAuction,
+  deleteAuction
   } from './auctionCrudOperations.js';
 import { addItemToAuction, removeItemFromAuction, markItemAsSold } from './auctionItemOperations.js';
 export {
@@ -14,5 +14,5 @@ export {
   deleteAuction,
   addItemToAuction,
   removeItemFromAuction,
-  markItemAsSold,
+  markItemAsSold
 };

@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const { Schema } = mongoose;
 import { queryOptimizationPlugin } from '@/system/plugins/queryOptimization.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
-import { ValidationError } from '@/system/middleware/errorHandler.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 const cardSchema = new mongoose.Schema(
   {
     // MongoDB ObjectId relationships
@@ -32,7 +32,7 @@ const cardSchema = new mongoose.Schema(
       grade_total: { type: Number, default: 0 }
     }
   },
-  { versionKey: false },
+  { versionKey: false }
 );
 
 // Compound index to ensure uniqueness for cards within a set
@@ -43,16 +43,16 @@ cardSchema.index(
   {
     cardName: 'text',
     cardNumber: 'text',
-    variety: 'text',
+    variety: 'text'
   },
   {
     weights: {
       cardName: 10,
       cardNumber: 5,
-      variety: 3,
+      variety: 3
     },
-    name: 'card_text_search',
-  },
+    name: 'card_text_search'
+  }
 );
 
 // Optimized indexes for common search patterns
@@ -123,8 +123,8 @@ cardSchema.plugin(queryOptimizationPlugin, {
     enableSetRelationOptimization: true,
     enablePsaPopulationOptimization: true,
     enableCardNameOptimization: true,
-    cacheFrequentQueries: true,
-  },
+    cacheFrequentQueries: true
+  }
 });
 
 const Card = mongoose.model('Card', cardSchema);

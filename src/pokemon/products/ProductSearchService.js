@@ -154,20 +154,19 @@ class ProductSearchService extends BaseSearchService {
   async _combineWithMongoQuery(query, flexResultIds, filters, options) {
     const { limit = 50, offset = 0, sort = { _id: -1 }, populate = true } = options;
 
-    // Build MongoDB query
-    const mongoQuery = UnifiedSearchQueryBuilder.buildTextSearchQuery(query, [
-      'productName', 'category'
-    ]);
+    // Build MongoDB query using modern search conditions
+    const queryBuilder = new UnifiedSearchQueryBuilder();
+    const { searchConditions } = queryBuilder.buildSimpleSearchConditions('products', query);
 
     // Add filters
-    Object.assign(mongoQuery, filters);
+    Object.assign(searchConditions, filters);
 
     const orderedResults = [];
 
     // Get FlexSearch results first (prioritized)
     if (flexResultIds.length > 0) {
       const flexQuery = {
-        ...mongoQuery,
+        ...searchConditions,
         _id: { $in: flexResultIds }
       };
 
@@ -204,7 +203,7 @@ class ProductSearchService extends BaseSearchService {
 
       // Exclude already found products
       const supplementQuery = {
-        ...mongoQuery,
+        ...searchConditions,
         _id: { $nin: existingIds }
       };
 

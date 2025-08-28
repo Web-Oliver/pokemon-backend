@@ -1,4 +1,4 @@
-import itemFetcher from '@/collection/shared/itemFetcher.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
 import facebookFormatter from '@/marketplace/facebook/facebookPostFormatter.js';
 import dbaFormatter from '@/marketplace/dba/dbaFormatter.js';
 import FacebookPostService from '@/marketplace/facebook/FacebookPostService.js';
@@ -22,7 +22,7 @@ const generateFacebookPost = asyncHandler(async (req, res) => {
 
   res.status(200).json({
     status: 'success',
-    data: result,
+    data: result
   });
 });
 
@@ -56,14 +56,25 @@ const generateDbaTitle = asyncHandler(async (req, res) => {
     throw new ValidationError('Both itemId and itemCategory are required');
   }
 
-  const fetchedItem = await itemFetcher.fetchItemById(itemId, itemCategory);
+  // Map old itemCategory format to new itemType format
+  const itemTypeMap = {
+    'SealedProduct': 'sealed',
+    'PsaGradedCard': 'psa',
+    'RawCard': 'raw'
+  };
+  const itemType = itemTypeMap[itemCategory];
+  if (!itemType) {
+    throw new ValidationError(`Invalid itemCategory: ${itemCategory}`);
+  }
+
+  const fetchedItem = await fetchSingleItem(itemId, itemType);
   const dbaTitle = dbaFormatter.generateDbaTitle(fetchedItem, itemCategory);
 
   res.status(200).json({
     status: 'success',
     data: {
-      dbaTitle,
-    },
+      dbaTitle
+    }
   });
 });
 

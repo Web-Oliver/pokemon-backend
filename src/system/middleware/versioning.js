@@ -180,7 +180,7 @@ class VersionTransformers {
       if (data.success !== undefined && data.data !== undefined) {
         return {
           success: data.success,
-          data: data.data,
+          data: data.data
           // V1 didn't include meta or status fields
         };
       }

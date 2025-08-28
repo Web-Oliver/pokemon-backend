@@ -1,7 +1,34 @@
-import ApiCall from '@/system/logging/ApiCall.js';
+import mongoose from 'mongoose';
 import { promises as fs } from 'fs';
 import path from 'path';
 import crypto from 'crypto';
+
+/**
+ * 🚨 CRITICAL: API Call Tracking Model
+ * EVERY SINGLE API CALL MUST BE LOGGED TO PREVENT UNEXPECTED BILLING
+ */
+const ApiCallSchema = new mongoose.Schema({
+  provider: { type: String, required: true, default: 'google-vision' },
+  endpoint: { type: String, required: true },
+  requestSize: { type: Number, required: true }, // bytes or request units
+  responseTime: { type: Number, required: true }, // milliseconds
+  success: { type: Boolean, required: true },
+  cost: { type: Number, required: true, default: 0 }, // estimated cost in USD
+  features: [{ type: String }], // features used (e.g., 'TEXT_DETECTION', 'LABEL_DETECTION')
+  timestamp: { type: Date, default: Date.now },
+  metadata: {
+    imageCount: Number,
+    totalBytes: Number,
+    processingTime: Number,
+    quotaRemaining: Number
+  }
+});
+
+// 🚨 CRITICAL INDEXES FOR QUOTA ENFORCEMENT
+ApiCallSchema.index({ provider: 1, timestamp: 1 });
+ApiCallSchema.index({ provider: 1, 'timestamp': 1, success: 1 });
+
+const ApiCall = mongoose.model('ApiCall', ApiCallSchema);
 /**
  * 🚨 CRITICAL: 100% INDEPENDENT API Call Tracker Service
  * SELF-CONTAINED: ONLY USES DATABASE + JSON FILES + GOOGLE BILLING API

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { ValidationError, NotFoundError } from '@/system/middleware/errorHandler.js';
+import { ValidationError, NotFoundError } from '@/system/errors/ErrorTypes.js';
 /**
  * Sale Service
  *
@@ -32,7 +32,7 @@ class SaleService {
       buyerAddress,
       buyerPhoneNumber,
       buyerEmail,
-      trackingNumber,
+      trackingNumber
     } = saleDetails;
 
     // Find the item
@@ -54,7 +54,7 @@ class SaleService {
       buyerAddress,
       buyerPhoneNumber,
       buyerEmail,
-      trackingNumber,
+      trackingNumber
     };
 
     // Save the item
@@ -81,8 +81,8 @@ class SaleService {
       path: 'cardId',
       populate: {
         path: 'setId',
-        model: 'Set',
-      },
+        model: 'Set'
+      }
     };
 
     return await this.markAsSold(model, itemId, saleDetails, populateOptions);
@@ -98,7 +98,7 @@ class SaleService {
    */
   static async markSealedProductAsSold(model, itemId, saleDetails) {
     const populateOptions = {
-      path: 'productId',
+      path: 'productId'
     };
 
     return await this.markAsSold(model, itemId, saleDetails, populateOptions);
@@ -143,15 +143,15 @@ class SaleService {
         {
           $group: {
             _id: null,
-            total: { $sum: '$saleDetails.actualSoldPrice' },
-          },
-        },
-      ]),
+            total: { $sum: '$saleDetails.actualSoldPrice' }
+          }
+        }
+      ])
     ]);
 
     return {
       totalSold,
-      totalRevenue: totalRevenue[0]?.total || 0,
+      totalRevenue: totalRevenue[0]?.total || 0
     };
   }
 
@@ -168,8 +168,8 @@ class SaleService {
       sold: true,
       'saleDetails.dateSold': {
         $gte: startDate,
-        $lte: endDate,
-      },
+        $lte: endDate
+      }
     });
   }
 }

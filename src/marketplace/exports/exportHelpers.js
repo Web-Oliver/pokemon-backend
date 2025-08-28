@@ -23,7 +23,7 @@ const COLLECTION_CONFIGS = {
       cardNumber: card.cardId?.cardNumber || '',
       variety: card.cardId?.variety || 'Standard',
       uniquePokemonId: card.cardId?.uniquePokemonId,
-      uniqueSetId: card.cardId?.uniqueSetId,
+      uniqueSetId: card.cardId?.uniqueSetId
     }),
     notFoundMessage: 'No PSA cards found'
   },
@@ -38,7 +38,7 @@ const COLLECTION_CONFIGS = {
       cardNumber: card.cardId?.cardNumber || '',
       variety: card.cardId?.variety || 'Standard',
       uniquePokemonId: card.cardId?.uniquePokemonId,
-      uniqueSetId: card.cardId?.uniqueSetId,
+      uniqueSetId: card.cardId?.uniqueSetId
     }),
     notFoundMessage: 'No raw cards found'
   },
@@ -50,7 +50,7 @@ const COLLECTION_CONFIGS = {
       images: product.images || [],
       name: product.name || 'Unknown Product',
       category: product.category,
-      setName: product.setName,
+      setName: product.setName
     }),
     notFoundMessage: 'No sealed products found'
   }
@@ -94,7 +94,7 @@ const zipCollectionImages = async (collectionType, ids) => {
   // Map items using the specific mapping function
   return {
     status: 'success',
-    data: items.map(config.mapFunction),
+    data: items.map(config.mapFunction)
   };
 };
 

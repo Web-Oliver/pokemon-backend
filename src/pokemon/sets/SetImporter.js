@@ -36,7 +36,7 @@ class SetImporter {
       performanceMetrics: {
         validationTime: 0,
         databaseTime: 0,
-        fileReadTime: 0,
+        fileReadTime: 0
       }
     };
 
@@ -239,7 +239,7 @@ class SetImporter {
       // Execute bulk operation with optimization settings
       const result = await SetModel.bulkWrite(bulkOps, {
         ordered: false, // Allow parallel processing for better performance
-        bypassDocumentValidation: false, // Keep validation for data integrity
+        bypassDocumentValidation: false // Keep validation for data integrity
       });
 
       // Update statistics based on result

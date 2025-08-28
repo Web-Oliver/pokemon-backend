@@ -10,7 +10,7 @@ function calculateSalesSummary(salesData) {
       totalItems: 0,
       averageSalePrice: 0,
       averageProfit: 0,
-      profitMargin: 0,
+      profitMargin: 0
     };
   }
 
@@ -31,7 +31,7 @@ function calculateSalesSummary(salesData) {
     totalItems,
     averageSalePrice: Math.round(averageSalePrice * 100) / 100,
     averageProfit: Math.round(averageProfit * 100) / 100,
-    profitMargin: Math.round(profitMargin * 100) / 100,
+    profitMargin: Math.round(profitMargin * 100) / 100
   };
 }
 
@@ -62,7 +62,7 @@ function generateGraphData(salesData) {
       salesByDate.set(date, {
         sales: salePrice,
         profit,
-        itemCount: 1,
+        itemCount: 1
       });
     }
   });
@@ -72,7 +72,7 @@ function generateGraphData(salesData) {
       date,
       sales: Math.round(data.sales * 100) / 100,
       profit: Math.round(data.profit * 100) / 100,
-      itemCount: data.itemCount,
+      itemCount: data.itemCount
     }))
     .sort((a, b) => new Date(a.date) - new Date(b.date));
 }

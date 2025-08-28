@@ -7,14 +7,14 @@ const sealedProductSchema = new mongoose.Schema({
   productId: {
     type: Schema.Types.ObjectId,
     ref: 'Product',
-    required: true,
+    required: true
   },
   myPrice: { type: mongoose.Types.Decimal128, required: true },
   priceHistory: priceHistorySchema,
   images: [{ type: String }],
   dateAdded: { type: Date, default: Date.now },
   sold: { type: Boolean, default: false },
-  saleDetails: saleDetailsSchema,
+  saleDetails: saleDetailsSchema
 });
 
 // Add product-specific indexes for optimal query performance
@@ -30,8 +30,8 @@ sealedProductSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: true,
-    trackImageUpdates: true,
-  },
+    trackImageUpdates: true
+  }
 });
 
 // Apply query optimization plugin with product-specific configuration
@@ -50,13 +50,13 @@ sealedProductSchema.plugin(queryOptimizationPlugin, {
   productSpecificOptions: {
     enableProductIndexing: true,
     enablePriceRangeOptimization: true,
-    enableSaleStatusFiltering: true,
-  },
+    enableSaleStatusFiltering: true
+  }
 });
 
 // Apply shared transform function for JSON responses
 sealedProductSchema.set('toJSON', {
-  transform: sealedProductTransform,
+  transform: sealedProductTransform
 });
 
 const SealedProduct = mongoose.model('SealedProduct', sealedProductSchema);

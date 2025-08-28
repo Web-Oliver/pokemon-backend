@@ -5,78 +5,78 @@ import { auctionTransform } from '@/system/schemas/transforms.js';
 const auctionSchema = new mongoose.Schema({
   topText: {
     type: String,
-    required: true,
+    required: true
   },
   bottomText: {
     type: String,
-    required: true,
+    required: true
   },
   auctionDate: {
     type: Date,
-    required: false,
+    required: false
   },
   status: {
     type: String,
     enum: ['draft', 'active', 'sold', 'expired'],
-    default: 'draft',
+    default: 'draft'
   },
   generatedFacebookPost: {
     type: String,
-    required: false,
+    required: false
   },
   // Legacy field for backwards compatibility
   isActive: {
     type: Boolean,
-    default: true,
+    default: true
   },
   items: [
     {
       itemId: {
         type: Schema.Types.ObjectId,
         required: true,
-        refPath: 'items.itemCategory',
+        refPath: 'items.itemCategory'
       },
       itemCategory: {
         type: String,
         required: true,
-        enum: ['SealedProduct', 'PsaGradedCard', 'RawCard'],
+        enum: ['SealedProduct', 'PsaGradedCard', 'RawCard']
       },
       sold: {
         type: Boolean,
-        default: false,
+        default: false
       },
       soldPrice: {
         type: Number,
-        required: false,
+        required: false
       },
       soldDate: {
         type: Date,
-        required: false,
-      },
-    },
+        required: false
+      }
+    }
   ],
   totalValue: {
     type: Number,
-    required: false,
+    required: false
   },
   soldValue: {
     type: Number,
-    required: false,
+    required: false
   },
   createdAt: {
     type: Date,
-    default: Date.now,
+    default: Date.now
   },
   updatedAt: {
     type: Date,
-    default: Date.now,
-  },
+    default: Date.now
+  }
 });
 
 // Apply shared transform function for JSON responses
 auctionSchema.set('toJSON', {
   transform: auctionTransform,
-  getters: true, // Enable getters for JSON serialization
+  getters: true // Enable getters for JSON serialization
 });
 
 // Apply activity tracking plugin
@@ -86,8 +86,8 @@ auctionSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: false,
-    trackImageUpdates: false,
-  },
+    trackImageUpdates: false
+  }
 });
 
 const Auction = mongoose.model('Auction', auctionSchema);

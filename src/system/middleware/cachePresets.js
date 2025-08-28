@@ -41,7 +41,7 @@ const CACHE_TTL = {
   MEDIUM: 600, // 10 minutes - details/individual items
   LONG: 900, // 15 minutes - metrics/suggestions
   VERY_LONG: 1200, // 20 minutes - rarely changing data
-  NO_CACHE: 0, // No caching for mutations
+  NO_CACHE: 0 // No caching for mutations
 };
 
 /**
@@ -97,7 +97,7 @@ const cachePresets = {
   // ICR processing should NOT be cached - removed inappropriate caching
 
   // Mutation operations (no caching)
-  mutation: createCachePreset('mutation', 'no-cache', CACHE_TTL.NO_CACHE),
+  mutation: createCachePreset('mutation', 'no-cache', CACHE_TTL.NO_CACHE)
 };
 
 /**
@@ -111,7 +111,7 @@ const createCollectionCache = (entityType, operation) => {
   const ttlMap = {
     list: CACHE_TTL.COLLECTION_ITEMS,
     details: CACHE_TTL.COLLECTION_ITEMS,
-    mutation: CACHE_TTL.NO_CACHE,
+    mutation: CACHE_TTL.NO_CACHE
   };
 
   const cacheName = operation === 'list'

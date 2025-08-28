@@ -1,9 +1,9 @@
 /**
  * Image Stitching Engine - Centralized Stitching Logic
- * 
+ *
  * ELIMINATES CODE DUPLICATION by providing a single implementation
  * for all stitching operations across the ICR system.
- * 
+ *
  * BEFORE: 150+ lines duplicated between IcrStitchingService & IcrStitchingOrchestrator
  * AFTER: Single source of truth for all stitching logic
  */

@@ -13,14 +13,74 @@
 
 import Product from '@/pokemon/products/Product.js';
 import SetProduct from '@/pokemon/products/SetProduct.js';
+import ProductRepository from '@/pokemon/products/ProductRepository.js';
+import BaseRepository from '@/system/database/BaseRepository.js';
+import BaseService from '@/system/services/BaseService.js';
 import SearchService from '@/search/services/SearchService.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 import Logger from '@/system/logging/Logger.js';
-import { NotFoundError, ValidationError } from '@/system/middleware/errorHandler.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
-class ProductService {
+class ProductService extends BaseService {
   constructor() {
+    // Create repository for Product model
+    const productRepository = new BaseRepository(Product, {
+      entityName: 'Product',
+      defaultPopulate: { path: 'setProductId', select: 'setProductName' },
+      defaultSort: { available: -1, price: 1, _id: 1 }
+    });
+
+    // Initialize BaseService
+    super(productRepository, {
+      entityName: 'Product',
+      enableLogging: true,
+      enableValidation: true
+    });
+
     this.searchService = new SearchService();
+  }
+  /**
+   * Product-specific validation for create operations
+   * @protected
+   */
+  async validateEntitySpecificCreateData(data) {
+    // Validate required product fields
+    ValidatorFactory.string(data.productName, 'Product name', { required: true, maxLength: 255 });
+    ValidatorFactory.string(data.category, 'Category', { required: true });
+    ValidatorFactory.string(data.setName, 'Set name', { required: true });
+    ValidatorFactory.number(data.price, 'Price', { required: true, min: 0 });
+    ValidatorFactory.number(data.available, 'Available quantity', { min: 0, integer: true });
+
+    if (data.setProductId) {
+      ValidatorFactory.objectId(data.setProductId, 'Set product reference');
+    }
+  }
+
+  /**
+   * Product-specific validation for update operations
+   * @protected
+   */
+  async validateEntitySpecificUpdateData(data, id) {
+    // Validate product fields for updates
+    if (data.productName !== undefined) {
+      ValidatorFactory.string(data.productName, 'Product name', { required: true, maxLength: 255 });
+    }
+
+    if (data.category !== undefined) {
+      ValidatorFactory.string(data.category, 'Category', { required: true });
+    }
+
+    if (data.price !== undefined) {
+      ValidatorFactory.number(data.price, 'Price', { required: true, min: 0 });
+    }
+
+    if (data.available !== undefined) {
+      ValidatorFactory.number(data.available, 'Available quantity', { min: 0, integer: true });
+    }
+
+    if (data.setProductId !== undefined) {
+      ValidatorFactory.objectId(data.setProductId, 'Set product reference');
+    }
   }
 
   /**
@@ -30,8 +90,6 @@ class ProductService {
    * @returns {Promise<Object>} - Products with pagination metadata
    */
   async getAllProducts(filters = {}, options = {}) {
-    Logger.debug('ProductService', 'Getting all products', { filters, options });
-
     const {
       page = 1,
       limit = 20,
@@ -46,42 +104,30 @@ class ProductService {
       return this.searchProducts(searchQuery, filters, { page, limit });
     }
 
-    // Build MongoDB query
+    // Build query filters
     const query = this.buildProductQuery(filters);
 
-    // Validate pagination
+    // Use BaseService findPaginated with enhanced options
     const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, maxLimit);
-    const skip = (pageNum - 1) * limitNum;
 
-    // Execute query with pagination
-    const [products, totalProducts] = await Promise.all([
-      Product.find(query)
-        .populate('setProductId', 'setProductName')
-        .skip(skip)
-        .limit(limitNum)
-        .sort({ [sortBy]: sortOrder, price: 1, _id: 1 })
-        .lean(),
-      Product.countDocuments(query)
-    ]);
-
-    const totalPages = Math.ceil(totalProducts / limitNum);
-
-    Logger.debug('ProductService', 'Products retrieved', {
-      found: products.length,
-      total: totalProducts,
+    const paginatedResults = await this.findPaginated(query, {
       page: pageNum,
-      totalPages
+      limit: limitNum,
+      sort: { [sortBy]: sortOrder, price: 1, _id: 1 },
+      populate: this.repository.options.defaultPopulate,
+      lean: true
     });
 
+    // Transform to match expected response format
     return {
-      products,
+      products: paginatedResults.data,
       pagination: {
-        total: totalProducts,
-        currentPage: pageNum,
-        totalPages,
-        hasNextPage: pageNum < totalPages,
-        hasPrevPage: pageNum > 1,
-        count: products.length,
+        total: paginatedResults.pagination.totalCount,
+        currentPage: paginatedResults.pagination.page,
+        totalPages: paginatedResults.pagination.totalPages,
+        hasNextPage: paginatedResults.pagination.hasNextPage,
+        hasPrevPage: paginatedResults.pagination.hasPrevPage,
+        count: paginatedResults.data.length,
         limit: limitNum
       },
       filters: query,
@@ -96,35 +142,12 @@ class ProductService {
    * @returns {Promise<Object>} - Product document
    */
   async getProductById(productId, options = {}) {
-    Logger.debug('ProductService', 'Getting product by ID', { productId, options });
-
-    // Validate product ID
-    ValidatorFactory.validateObjectId(productId, 'Product ID');
-
-    let query = Product.findById(productId);
-
-    // Apply populate options
-    if (options.populate !== false) {
-      query = query.populate('setProductId', 'setProductName');
-    }
-
-    if (options.select) {
-      query = query.select(options.select);
-    }
-
-    if (options.lean !== false) {
-      query = query.lean();
-    }
-
-    const product = await query;
-
-    if (!product) {
-      throw new NotFoundError('Product not found');
-    }
-
-    Logger.debug('ProductService', 'Product found', { productId: product._id });
-
-    return product;
+    // Use BaseService getById method with enhanced validation
+    return await this.getById(productId, {
+      populate: options.populate !== false ? this.repository.options.defaultPopulate : false,
+      select: options.select,
+      lean: options.lean !== false
+    });
   }
 
   /**
@@ -410,16 +433,12 @@ class ProductService {
    * @returns {Promise<Object>} - Created product
    */
   async createProduct(productData, options = {}) {
-    Logger.debug('ProductService', 'Creating product', { productData });
+    // Use BaseService create method with enhanced validation and logging
+    const product = await this.create(productData, {
+      populate: options.populate !== false ? this.repository.options.defaultPopulate : false
+    });
 
-    const product = new Product(productData);
-    await product.save();
-
-    Logger.info('ProductService', 'Product created', { productId: product._id });
-
-    return options.populate !== false
-      ? await product.populate('setProductId', 'setProductName')
-      : product;
+    return product;
   }
 
   /**
@@ -430,25 +449,12 @@ class ProductService {
    * @returns {Promise<Object>} - Updated product
    */
   async updateProduct(productId, updateData, options = {}) {
-    Logger.debug('ProductService', 'Updating product', { productId, updateData });
+    // Use BaseService update method with enhanced validation and logging
+    const product = await this.update(productId, updateData, {
+      populate: options.populate !== false ? this.repository.options.defaultPopulate : false
+    });
 
-    ValidatorFactory.validateObjectId(productId, 'Product ID');
-
-    const product = await Product.findByIdAndUpdate(
-      productId,
-      updateData,
-      { new: true, runValidators: true }
-    );
-
-    if (!product) {
-      throw new NotFoundError('Product not found');
-    }
-
-    Logger.info('ProductService', 'Product updated', { productId: product._id });
-
-    return options.populate !== false
-      ? await product.populate('setProductId', 'setProductName')
-      : product;
+    return product;
   }
 
   /**
@@ -457,19 +463,8 @@ class ProductService {
    * @returns {Promise<Object>} - Deleted product
    */
   async deleteProduct(productId) {
-    Logger.debug('ProductService', 'Deleting product', { productId });
-
-    ValidatorFactory.validateObjectId(productId, 'Product ID');
-
-    const product = await Product.findByIdAndDelete(productId);
-
-    if (!product) {
-      throw new NotFoundError('Product not found');
-    }
-
-    Logger.info('ProductService', 'Product deleted', { productId });
-
-    return product;
+    // Use BaseService delete method with enhanced validation and logging
+    return await this.delete(productId);
   }
 }
 

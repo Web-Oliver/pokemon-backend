@@ -1,6 +1,6 @@
 /**
  * Image Hash Service - Centralized Image Hash Generation
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Only handles image hash generation
  * - Open/Closed: Static methods for extension without modification
@@ -19,7 +19,7 @@ export class ImageHashService {
     if (!buffer || !Buffer.isBuffer(buffer)) {
       throw new Error('Invalid buffer provided for hash generation');
     }
-    
+
     return crypto.createHash('sha256').update(buffer).digest('hex');
   }
 

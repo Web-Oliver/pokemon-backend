@@ -43,8 +43,8 @@ const getSetProductsWithPagination = asyncHandler(async (req, res) => {
       page: pageNum,
       limit: limitNum,
       total: totalCount,
-      pages: Math.ceil(totalCount / limitNum),
-    },
+      pages: Math.ceil(totalCount / limitNum)
+    }
   });
 });
 

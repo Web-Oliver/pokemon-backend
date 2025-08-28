@@ -8,6 +8,9 @@ import FacebookPostBuilder from './FacebookPostBuilder.js';
  * This service coordinates the entire Facebook post generation process
  * by delegating specific responsibilities to specialized services.
  */
+import OperationManager from '@/system/utilities/OperationManager.js';
+import StandardResponseBuilder from '@/system/utilities/StandardResponseBuilder.js';
+
 class FacebookPostService {
   constructor() {
     this.validator = new FacebookPostValidator();
@@ -23,19 +26,30 @@ class FacebookPostService {
    * @returns {Promise<Object>} Object containing facebookPost and itemCount
    */
   async generateFacebookPost(items, topText, bottomText) {
-    // Validate input data
-    this.validator.validateTexts(topText, bottomText);
+    const context = OperationManager.createContext('FacebookPost', 'generateFacebookPost', {
+      itemCount: items.length,
+      hasTopText: Boolean(topText),
+      hasBottomText: Boolean(bottomText)
+    });
 
-    // Fetch all items
-    const fetchedItems = await this.itemFetcher.fetchItemsWithCategory(items);
+    return OperationManager.executeOperation(context, async () => {
+      // Validate input data
+      this.validator.validateTexts(topText, bottomText);
 
-    // Build Facebook post
-    const facebookPost = this.postBuilder.buildPost(fetchedItems, topText, bottomText);
+      // Fetch all items
+      const fetchedItems = await this.itemFetcher.fetchItemsWithCategory(items);
 
-    return {
-      facebookPost,
-      itemCount: fetchedItems.length,
-    };
+      // Build Facebook post
+      const facebookPost = this.postBuilder.buildPost(fetchedItems, topText, bottomText);
+
+      return StandardResponseBuilder.exportOperation({
+        facebookPost,
+        itemCount: fetchedItems.length
+      }, 'facebook', {
+        textLength: facebookPost.length,
+        processedItems: fetchedItems.length
+      }).data;
+    });
   }
 
   /**

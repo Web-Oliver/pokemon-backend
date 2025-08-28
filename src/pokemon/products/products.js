@@ -5,7 +5,7 @@
 
 import express from 'express';
 const router = express.Router();
-import { asyncHandler } from '@/system/middleware/errorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import ProductApiService from '@/pokemon/products/ProductApiService.js';
 import { cachePresets } from '@/system/middleware/cachePresets.js';
 /**

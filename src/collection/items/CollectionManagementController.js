@@ -6,12 +6,10 @@
  */
 
 import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
-import DebugLogger from '@/system/logging/DebugLogger.js';
-import CollectionService from '@/collection/services/CollectionService.js';
-
-// Use extracted debug logger
-const debugLog = DebugLogger.createScopedLogger('OCR-COLLECTION');
-const collectionService = new CollectionService();
+import Logger from '@/system/logging/Logger.js';
+import OcrCollectionService from '@/collection/services/CollectionService.js';
+import StandardResponseBuilder from '@/system/utilities/StandardResponseBuilder.js';
+const collectionService = new OcrCollectionService();
 
 /**
  * POST /api/ocr/approve
@@ -26,7 +24,7 @@ const approveMatch = asyncHandler(async (req, res) => {
     userConfirmed = false
   } = req.body;
 
-  debugLog('APPROVE_START', 'Starting match approval', {
+  Logger.debug('OCR-COLLECTION', 'APPROVE_START', 'Starting match approval', {
     psaLabelId,
     cardId,
     matchConfidence,
@@ -50,24 +48,22 @@ const approveMatch = asyncHandler(async (req, res) => {
     );
 
 
-    debugLog('APPROVE_SUCCESS', 'Match approved and PSA card created', {
+    Logger.debug('OCR-COLLECTION', 'APPROVE_SUCCESS', 'Match approved and PSA card created', {
       psaLabelId,
       cardId,
       psaCardId: result.psaCard._id,
       certificationNumber: result.psaCard.certificationNumber
     });
 
-    res.json({
-      success: true,
-      data: result,
+    const response = StandardResponseBuilder.success(result, {
       message: `Successfully created PSA card for ${result.psaCard.cardName} (Cert: ${result.psaCard.certificationNumber})`,
-      meta: {
-        timestamp: new Date().toISOString()
-      }
+      operation: 'approveMatch',
+      certificationNumber: result.psaCard.certificationNumber
     });
+    res.json(response);
 
   } catch (error) {
-    debugLog('APPROVE_ERROR', 'Match approval failed', {
+    Logger.debug('OCR-COLLECTION', 'APPROVE_ERROR', 'Match approval failed', {
       error: error.message,
       psaLabelId,
       cardId
@@ -105,7 +101,7 @@ const createCollectionItem = asyncHandler(async (req, res) => {
     });
   }
 
-  debugLog('CREATE_COLLECTION_START', 'Creating collection item', {
+  Logger.debug('OCR-COLLECTION', 'CREATE_COLLECTION_START', 'Creating collection item', {
     psaGradedCardId,
     collectionData
   });
@@ -113,22 +109,21 @@ const createCollectionItem = asyncHandler(async (req, res) => {
   try {
     const result = await collectionService.createCollectionItem(psaGradedCardId, collectionData);
 
-    debugLog('CREATE_COLLECTION_SUCCESS', 'Collection item created', {
+    Logger.debug('OCR-COLLECTION', 'CREATE_COLLECTION_SUCCESS', 'Collection item created', {
       psaGradedCardId,
       cardName: result.psaCard.cardName
     });
 
-    res.json({
-      success: true,
-      data: result,
+    const response = StandardResponseBuilder.success(result, {
       message: `Collection item created for ${result.psaCard.cardName} (PSA ${result.psaCard.grade})`,
-      meta: {
-        timestamp: new Date().toISOString()
-      }
+      operation: 'createCollectionItem',
+      cardName: result.psaCard.cardName,
+      grade: result.psaCard.grade
     });
+    res.json(response);
 
   } catch (error) {
-    debugLog('CREATE_COLLECTION_ERROR', 'Collection item creation failed', {
+    Logger.debug('OCR-COLLECTION', 'CREATE_COLLECTION_ERROR', 'Collection item creation failed', {
       error: error.message,
       psaGradedCardId
     });
@@ -144,24 +139,22 @@ const deletePsaLabel = asyncHandler(async (req, res) => {
   const { id } = req.params;
   const { reason = 'user_request' } = req.body;
 
-  debugLog('DELETE_LABEL_START', 'Deleting PSA label', { id, reason });
+  Logger.debug('OCR-COLLECTION', 'DELETE_LABEL_START', 'Deleting PSA label', { id, reason });
 
   try {
     const result = await collectionService.deletePsaLabel(id, reason);
 
-    debugLog('DELETE_LABEL_SUCCESS', 'PSA label deleted', { id, reason });
+    Logger.debug('OCR-COLLECTION', 'DELETE_LABEL_SUCCESS', 'PSA label deleted', { id, reason });
 
-    res.json({
-      success: true,
-      data: result,
+    const response = StandardResponseBuilder.success(result, {
       message: 'PSA label successfully deleted',
-      meta: {
-        timestamp: new Date().toISOString()
-      }
+      operation: 'deletePsaLabel',
+      labelId: id
     });
+    res.json(response);
 
   } catch (error) {
-    debugLog('DELETE_LABEL_ERROR', 'PSA label deletion failed', {
+    Logger.debug('OCR-COLLECTION', 'DELETE_LABEL_ERROR', 'PSA label deletion failed', {
       error: error.message,
       id
     });

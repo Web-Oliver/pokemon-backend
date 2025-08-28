@@ -1,6 +1,6 @@
 /**
  * ICR OCR Processing Service
- * 
+ *
  * Single Responsibility: Handle Google Vision OCR processing
  * Extracted from IcrBatchService to follow SRP
  */
@@ -11,6 +11,8 @@ import OcrTextDistributor from '@/icr/shared/OcrTextDistributor.js';
 import StitchedLabelRepository from '@/icr/infrastructure/repositories/StitchedLabelRepository.js';
 import Logger from '@/system/logging/Logger.js';
 import { promises as fs } from 'fs';
+
+import OperationManager from '@/system/utilities/OperationManager.js';
 
 export class IcrOcrProcessingService {
   constructor() {
@@ -23,62 +25,56 @@ export class IcrOcrProcessingService {
    * EXACT EXTRACTION from IcrBatchService.js lines 334-391
    */
   async processOcr(stitchedImagePath) {
-    try {
-      Logger.operationStart('ICR_OCR', 'Processing OCR on stitched image', { stitchedImagePath });
+    const context = OperationManager.createContext('IcrOcr', 'processOcr', {
+      stitchedImagePath
+    });
 
-      const stitchedBuffer = await fs.readFile(stitchedImagePath);
-      const ocrResult = await this.googleVisionProvider.extractText(stitchedBuffer);
+    return OperationManager.executeFileOperation(
+      context,
+      { fileName: path.basename(stitchedImagePath) },
+      async () => {
+        const stitchedBuffer = await fs.readFile(stitchedImagePath);
+        const ocrResult = await this.googleVisionProvider.extractText(stitchedBuffer);
 
-      // Find the StitchedLabel record to update
-      const stitchedImageHash = ImageHashService.generateHash(stitchedBuffer);
-      const stitchedLabel = await this.stitchedLabelRepository.findByHash(stitchedImageHash);
+        // Find the StitchedLabel record to update
+        const stitchedImageHash = ImageHashService.generateHash(stitchedBuffer);
+        const stitchedLabel = await this.stitchedLabelRepository.findByHash(stitchedImageHash);
 
-      if (!stitchedLabel) {
-        throw new Error(`No StitchedLabel found for image hash: ${stitchedImageHash}`);
+        if (!stitchedLabel) {
+          throw new Error(`No StitchedLabel found for image hash: ${stitchedImageHash}`);
+        }
+
+        // Calculate overall confidence from text annotations
+        const overallConfidence = OcrTextDistributor.calculateOverallConfidence(ocrResult.textAnnotations);
+
+        // Update StitchedLabel database record with OCR results
+        await this.stitchedLabelRepository.update(stitchedLabel._id, {
+          ocrText: ocrResult.fullText,
+          ocrConfidence: overallConfidence,
+          ocrAnnotations: ocrResult.textAnnotations,
+          processingStatus: 'ocr_completed'
+        });
+
+        // Also save OCR results to JSON file for testing/backup
+        const resultsPath = stitchedImagePath.replace('.jpg', '_ocr_results.json');
+        await fs.writeFile(resultsPath, JSON.stringify({
+          fullText: ocrResult.fullText,
+          textAnnotations: ocrResult.textAnnotations,
+          processingTime: ocrResult.processingTime,
+          provider: ocrResult.provider,
+          stitchedLabelId: stitchedLabel._id,
+          confidence: overallConfidence
+        }, null, 2));
+
+        return {
+          ...ocrResult,
+          resultsPath,
+          stitchedLabelId: stitchedLabel._id,
+          confidence: overallConfidence,
+          databaseUpdated: true
+        };
       }
-
-      // Calculate overall confidence from text annotations
-      const overallConfidence = OcrTextDistributor.calculateOverallConfidence(ocrResult.textAnnotations);
-
-      // Update StitchedLabel database record with OCR results
-      await this.stitchedLabelRepository.update(stitchedLabel._id, {
-        ocrText: ocrResult.fullText,
-        ocrConfidence: overallConfidence,
-        ocrAnnotations: ocrResult.textAnnotations,
-        processingStatus: 'ocr_completed'
-      });
-
-      Logger.operationSuccess('ICR_OCR', 'OCR processing and database update completed', {
-        textLength: ocrResult.fullText?.length || 0,
-        annotationCount: ocrResult.textAnnotations?.length || 0,
-        confidence: overallConfidence,
-        stitchedLabelId: stitchedLabel._id,
-        status: 'ocr_completed'
-      });
-
-      // Also save OCR results to JSON file for testing/backup
-      const resultsPath = stitchedImagePath.replace('.jpg', '_ocr_results.json');
-      await fs.writeFile(resultsPath, JSON.stringify({
-        fullText: ocrResult.fullText,
-        textAnnotations: ocrResult.textAnnotations,
-        processingTime: ocrResult.processingTime,
-        provider: ocrResult.provider,
-        stitchedLabelId: stitchedLabel._id,
-        confidence: overallConfidence
-      }, null, 2));
-
-      return {
-        ...ocrResult,
-        resultsPath,
-        stitchedLabelId: stitchedLabel._id,
-        confidence: overallConfidence,
-        databaseUpdated: true
-      };
-
-    } catch (error) {
-      Logger.operationError('ICR_OCR', 'OCR processing failed', error);
-      throw error;
-    }
+    );
   }
 
   /**
@@ -133,7 +129,7 @@ export class IcrOcrProcessingService {
         labelHashes: { $in: imageHashes },
         processingStatus: { $in: ['stitched', 'ocr_completed'] }
       }, { sort: { createdAt: -1 }, limit: 1 });
-      
+
       const stitchedLabel = stitchedLabels[0];
 
       if (!stitchedLabel) {
@@ -165,14 +161,14 @@ export class IcrOcrProcessingService {
 
       // Use existing OCR data if already processed, otherwise process OCR
       let ocrResult;
-      
+
       if (stitchedLabel.processingStatus === 'ocr_completed' && stitchedLabel.ocrText) {
         Logger.info('ICR_OCR_BY_HASHES', 'Using existing OCR data from stitched label', {
           stitchedLabelId: stitchedLabel._id,
           ocrTextLength: stitchedLabel.ocrText?.length || 0,
           confidence: stitchedLabel.ocrConfidence
         });
-        
+
         // Return existing OCR data
         ocrResult = {
           fullText: stitchedLabel.ocrText,
@@ -187,7 +183,7 @@ export class IcrOcrProcessingService {
         Logger.info('ICR_OCR_BY_HASHES', 'Processing OCR for stitched image', {
           stitchedImagePath: stitchedLabel.stitchedImagePath
         });
-        
+
         // Process OCR on stitched image
         ocrResult = await this.processOcr(stitchedLabel.stitchedImagePath);
       }

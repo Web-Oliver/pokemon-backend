@@ -13,7 +13,7 @@ const priceHistorySchema = [
   {
     price: {
       type: mongoose.Types.Decimal128,
-      required: true,
+      required: true
     },
     dateUpdated: {
       type: Date,
@@ -25,8 +25,8 @@ const priceHistorySchema = [
         }
         return value;
       }
-    },
-  },
+    }
+  }
 ];
 
 export default priceHistorySchema;

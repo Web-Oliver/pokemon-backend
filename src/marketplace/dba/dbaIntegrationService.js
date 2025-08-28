@@ -17,7 +17,7 @@ const DBA_CONFIG = {
   defaultDelay: 5000, // 5 seconds between posts
   maxRetries: 3,
   timeout: 120000, // 2 minutes timeout
-  retryDelay: 10000, // 10 seconds between retries
+  retryDelay: 10000 // 10 seconds between retries
 };
 
 class DbaIntegrationService {

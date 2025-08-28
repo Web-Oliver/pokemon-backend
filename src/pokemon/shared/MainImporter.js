@@ -52,7 +52,7 @@ class MainImporter {
         maxPoolSize: 20,
         minPoolSize: 5,
         maxIdleTimeMS: 30000,
-        serverSelectionTimeoutMS: 5000,
+        serverSelectionTimeoutMS: 5000
       });
 
       this.log('✅ Connected to MongoDB with optimized settings');

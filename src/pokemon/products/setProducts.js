@@ -11,7 +11,7 @@ import { getAllSetProducts,
   getSetProductByName,
   getSetProductStats
   } from '@/pokemon/products/setProductsController.js';
-import { asyncHandler } from '@/system/middleware/errorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import SetProductService from '@/pokemon/products/SetProductService.js';
 import { cachePresets } from '@/system/middleware/cachePresets.js';
 /**

@@ -1,6 +1,6 @@
 /**
  * ICR File Service - File System Operations
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Only handles file system operations for ICR
  * - Open/Closed: Extensible for new file operations
@@ -12,13 +12,16 @@ import path from 'path';
 import Logger from '@/system/logging/Logger.js';
 import { FileSystemUtils } from '@/icr/shared/FileSystemUtils.js';
 
+import IcrPathManager from '@/icr/shared/IcrPathManager.js';
+
 export class IcrFileService {
   constructor() {
-    this.baseUploadDir = path.join(process.cwd(), 'uploads', 'icr');
+    // Use IcrPathManager for centralized path management
+    this.baseUploadDir = IcrPathManager.BASE_ICR_DIR;
     this.directories = {
-      fullImages: path.join(this.baseUploadDir, 'full-images'),
-      extractedLabels: path.join(this.baseUploadDir, 'extracted-labels'),
-      stitchedImages: path.join(this.baseUploadDir, 'stitched-images')
+      fullImages: IcrPathManager.getDirectory('FULL_IMAGES'),
+      extractedLabels: IcrPathManager.getDirectory('EXTRACTED_LABELS'),
+      stitchedImages: IcrPathManager.getDirectory('STITCHED_IMAGES')
     };
   }
 
@@ -62,11 +65,11 @@ export class IcrFileService {
   validateFilePath(filePath) {
     const normalizedPath = path.resolve(filePath);
     const allowedBasePath = path.resolve(this.baseUploadDir);
-    
+
     if (!normalizedPath.startsWith(allowedBasePath)) {
       throw new Error('Invalid file path - outside allowed directory');
     }
-    
+
     return normalizedPath;
   }
 
@@ -75,7 +78,7 @@ export class IcrFileService {
    */
   async readFile(filePath) {
     const validatedPath = this.validateFilePath(filePath);
-    
+
     try {
       return await fs.readFile(validatedPath);
     } catch (error) {
@@ -89,16 +92,16 @@ export class IcrFileService {
    */
   async writeFile(buffer, filename, directoryType = 'fullImages') {
     await this.ensureDirectories();
-    
+
     const directoryPath = this.getUploadPath(directoryType);
     const filePath = path.join(directoryPath, filename);
-    
+
     try {
       await fs.writeFile(filePath, buffer);
-      Logger.info('IcrFileService', 'File written successfully', { 
-        filePath, 
+      Logger.info('IcrFileService', 'File written successfully', {
+        filePath,
         size: buffer.length,
-        directoryType 
+        directoryType
       });
       return filePath;
     } catch (error) {
@@ -135,7 +138,7 @@ export class IcrFileService {
    */
   async getFileStats(filePath) {
     const validatedPath = this.validateFilePath(filePath);
-    
+
     try {
       return await fs.stat(validatedPath);
     } catch (error) {

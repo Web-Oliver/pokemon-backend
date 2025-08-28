@@ -26,18 +26,18 @@ const COLLECTION_CONFIGS = {
   'raw-cards': {
     controller: rawCardController,
     cachePrefix: 'raw-card',
-    cacheTTL: { list: 300, details: 600 }, // 5min list, 10min details
+    cacheTTL: { list: 300, details: 600 } // 5min list, 10min details
   },
   'psa-graded-cards': {
     controller: psaGradedCardController,
     cachePrefix: 'psa-card',
-    cacheTTL: { list: 300, details: 600 }, // 5min list, 10min details
+    cacheTTL: { list: 300, details: 600 } // 5min list, 10min details
   },
   'sealed-products': {
     controller: sealedProductController,
     cachePrefix: 'sealed-product',
-    cacheTTL: { list: 300, details: 600 }, // 5min list, 10min details
-  },
+    cacheTTL: { list: 300, details: 600 } // 5min list, 10min details
+  }
 };
 
 /**
@@ -65,7 +65,7 @@ const collectionTypes = Object.entries(COLLECTION_CONFIGS).map(([path, config]) 
     includeMarkAsSold: true,
     middleware: [],
     routeMiddleware: createRouteMiddleware(config),
-    customRoutes: [],
+    customRoutes: []
   });
 
   return { path, routes };

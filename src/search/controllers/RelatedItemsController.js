@@ -1,7 +1,7 @@
 import { asyncHandler, ValidationError, NotFoundError } from '@/system/middleware/CentralizedErrorHandler.js';
 import mongoose from 'mongoose';
 import BaseController from '@/system/middleware/BaseController.js';
-import container from '@/system/dependency-injection/index.js';
+import { container } from '@/system/dependency-injection/ServiceContainer.js';
 import Logger from '@/system/logging/Logger.js';
 import { pluginManager } from '@/system/plugins/PluginManager.js';
 

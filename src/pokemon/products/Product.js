@@ -25,15 +25,15 @@ const productSchema = new mongoose.Schema(
         'Elite-Trainer-Boxes',
         'Theme-Decks',
         'Tins',
-        'Trainer-Kits',
-      ],
+        'Trainer-Kits'
+      ]
     },
     url: { type: String, required: true },
 
     // Unique identifier for database rebuilding
-    uniqueProductId: { type: Number, required: true, unique: true },
+    uniqueProductId: { type: Number, required: true, unique: true }
   },
-  { versionKey: false },
+  { versionKey: false }
 );
 
 // Compound index for uniqueness within a product set
@@ -46,12 +46,12 @@ productSchema.index({
 // Text index for efficient search across name
 productSchema.index(
   {
-    productName: 'text',
+    productName: 'text'
   },
   {
     weights: { productName: 10 },
-    name: 'product_text_search',
-  },
+    name: 'product_text_search'
+  }
 );
 
 // Additional indexes for filtering and sorting
@@ -85,8 +85,8 @@ productSchema.plugin(queryOptimizationPlugin, {
     enableSetProductOptimization: true,
     enableCategoryFiltering: true,
     enableAvailabilityOptimization: true,
-    cacheFrequentQueries: true,
-  },
+    cacheFrequentQueries: true
+  }
 });
 
 const Product = mongoose.model('Product', productSchema);

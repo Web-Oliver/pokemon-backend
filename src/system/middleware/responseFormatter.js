@@ -347,41 +347,5 @@ export const responsePresets = {
   })
 };
 
-/**
- * Legacy response format converter
- * Helps migrate from old response formats gradually
- */
-export const legacyResponseConverter = {
-  /**
-   * Convert Products Controller format
-   */
-  fromProductsFormat: (oldResponse) => {
-    const { success, status, data, meta } = oldResponse;
-
-    return responsePresets.success(data, {
-      legacy: { status },
-      ...meta
-    });
-  },
-
-  /**
-   * Convert Collection format
-   */
-  fromCollectionFormat: (oldResponse) => {
-    const { success, data } = oldResponse;
-    return responsePresets.success(data);
-  },
-
-  /**
-   * Convert Export format
-   */
-  fromExportFormat: (oldResponse) => {
-    const { success, message, data } = oldResponse;
-
-    return responsePresets.success(data, {
-      message
-    });
-  }
-};
 
 export default responseFormatter;

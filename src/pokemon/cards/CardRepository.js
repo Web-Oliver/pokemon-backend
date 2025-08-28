@@ -21,9 +21,9 @@ class CardRepository extends SearchableRepository {
       entityType: 'cards', // Use search configuration key
       defaultPopulate: {
         path: 'setId',
-        model: 'Set',
+        model: 'Set'
       },
-      defaultSort: { 'grades.grade_total': -1, cardName: 1 },
+      defaultSort: { 'grades.grade_total': -1, cardName: 1 }
     });
   }
 

@@ -2,7 +2,7 @@ import {
   formatCardName,
   formatSealedProductName,
   getShortenedSetName,
-  isJapaneseSet,
+  isJapaneseSet
 } from '@/pokemon/products/pokemonNameShortener.js';
 
 /**
@@ -21,7 +21,7 @@ function generateDbaTitle(fetchedItem, itemCategory) {
         const cardName = formatCardName(
           fetchedItem.cardId.cardName,
           fetchedItem.cardId.pokemonNumber,
-          fetchedItem.cardId.variety,
+          fetchedItem.cardId.variety
         );
         const setName = getShortenedSetName(fetchedItem.cardId.setId.setName);
         const isJapanese = isJapaneseSet(fetchedItem.cardId.setId.setName);
@@ -37,7 +37,7 @@ function generateDbaTitle(fetchedItem, itemCategory) {
         const cardName = formatCardName(
           fetchedItem.cardId.cardName,
           fetchedItem.cardId.pokemonNumber,
-          fetchedItem.cardId.variety,
+          fetchedItem.cardId.variety
         );
         const setName = getShortenedSetName(fetchedItem.cardId.setId.setName);
         const isJapanese = isJapaneseSet(fetchedItem.cardId.setId.setName);

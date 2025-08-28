@@ -28,7 +28,7 @@ const ACTIVITY_TYPES = {
   SALE_UPDATED: 'sale_updated',
   MILESTONE: 'milestone',
   COLLECTION_STATS: 'collection_stats',
-  SYSTEM: 'system',
+  SYSTEM: 'system'
 };
 
 // Activity Priority Levels - Context7 importance classification
@@ -36,14 +36,14 @@ const ACTIVITY_PRIORITIES = {
   LOW: 'low',
   MEDIUM: 'medium',
   HIGH: 'high',
-  CRITICAL: 'critical',
+  CRITICAL: 'critical'
 };
 
 // Activity Status - Context7 state management
 const ACTIVITY_STATUS = {
   ACTIVE: 'active',
   ARCHIVED: 'archived',
-  HIDDEN: 'hidden',
+  HIDDEN: 'hidden'
 };
 
 // Context7 Activity Schema with Premium Features
@@ -54,27 +54,27 @@ const activitySchema = new mongoose.Schema(
       type: String,
       enum: Object.values(ACTIVITY_TYPES),
       required: true,
-      index: true,
+      index: true
     },
 
     title: {
       type: String,
       required: true,
       maxLength: 200,
-      trim: true,
+      trim: true
     },
 
     description: {
       type: String,
       required: true,
       maxLength: 500,
-      trim: true,
+      trim: true
     },
 
     details: {
       type: String,
       maxLength: 1000,
-      trim: true,
+      trim: true
     },
 
     // Context7 Premium Metadata
@@ -82,26 +82,26 @@ const activitySchema = new mongoose.Schema(
       type: String,
       enum: Object.values(ACTIVITY_PRIORITIES),
       default: ACTIVITY_PRIORITIES.MEDIUM,
-      index: true,
+      index: true
     },
 
     status: {
       type: String,
       enum: Object.values(ACTIVITY_STATUS),
       default: ACTIVITY_STATUS.ACTIVE,
-      index: true,
+      index: true
     },
 
     // Entity References - Context7 Relationship Tracking
     entityType: {
       type: String,
       enum: ['psa_card', 'raw_card', 'sealed_product', 'auction', 'collection', 'system'],
-      index: true,
+      index: true
     },
 
     entityId: {
       type: mongoose.Schema.Types.ObjectId,
-      index: true,
+      index: true
     },
 
     // Context7 Rich Data Structure
@@ -140,21 +140,21 @@ const activitySchema = new mongoose.Schema(
       tags: [String],
       color: {
         type: String,
-        default: 'indigo',
+        default: 'indigo'
       },
-      icon: String,
+      icon: String
     },
 
     // Context7 Timeline Features
     timestamp: {
       type: Date,
       default: Date.now,
-      index: true,
+      index: true
     },
 
     relativeTime: {
       type: String, // "2 hours ago", "1 day ago", etc.
-      default: 'just now',
+      default: 'just now'
     },
 
     // Context7 User Context
@@ -166,7 +166,7 @@ const activitySchema = new mongoose.Schema(
     isRead: {
       type: Boolean,
       default: false,
-      index: true,
+      index: true
     },
 
     readAt: Date,
@@ -175,18 +175,18 @@ const activitySchema = new mongoose.Schema(
     isArchived: {
       type: Boolean,
       default: false,
-      index: true,
+      index: true
     },
 
     archivedAt: Date,
 
     // Context7 Performance Optimization
-    searchVector: String, // For full-text search optimization
+    searchVector: String // For full-text search optimization
   },
   {
     timestamps: {
       createdAt: 'createdAt',
-      updatedAt: 'updatedAt',
+      updatedAt: 'updatedAt'
     },
     // Context7 Advanced Indexing
     collection: 'activities',
@@ -195,9 +195,9 @@ const activitySchema = new mongoose.Schema(
       virtuals: true,
       transform(doc, ret) {
         return ActivityTransformService.transformForJSON(doc, ret);
-      },
-    },
-  },
+      }
+    }
+  }
 );
 
 // Context7 Premium Indexes for Performance
@@ -209,11 +209,11 @@ activitySchema.index(
   {
     title: 'text',
     description: 'text',
-    details: 'text',
+    details: 'text'
   },
   {
-    name: 'activity_text_search',
-  },
+    name: 'activity_text_search'
+  }
 );
 
 // Virtual Fields for better UX - Uses service-based approach

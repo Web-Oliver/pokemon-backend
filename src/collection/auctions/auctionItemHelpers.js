@@ -1,8 +1,9 @@
 import SealedProduct from '@/collection/items/SealedProduct.js';
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
-import mongoose from 'mongoose';
-import { NotFoundError, ValidationError } from '@/system/middleware/errorHandler.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
+import { toAbbreviated, isValidClassName } from '@/system/constants/ItemTypeMapper.js';
 // Helper function to populate auction items
 const populateAuctionItems = async (auction) => {
   const populatedItems = [];
@@ -54,7 +55,7 @@ const populateAuctionItems = async (auction) => {
         if (populatedItem) {
           return {
             itemCategory: item.itemCategory,
-            itemData: populatedItem,
+            itemData: populatedItem
           };
         }
 
@@ -74,7 +75,7 @@ const populateAuctionItems = async (auction) => {
 
   return {
     ...auction.toObject(),
-    items: populatedItems,
+    items: populatedItems
   };
 };
 
@@ -90,7 +91,7 @@ const validateAuctionItems = async (items) => {
       throw new ValidationError('Invalid itemId format in items array');
     }
 
-    if (!['SealedProduct', 'PsaGradedCard', 'RawCard'].includes(item.itemCategory)) {
+    if (!isValidClassName(item.itemCategory)) {
       throw new ValidationError('Invalid itemCategory. Must be one of: SealedProduct, PsaGradedCard, RawCard');
     }
   }
@@ -103,21 +104,9 @@ const validateAuctionItems = async (items) => {
 
     const validationPromises = batch.map(async (item) => {
       try {
-        let collectionItem = null;
-
-        switch (item.itemCategory) {
-          case 'SealedProduct':
-            collectionItem = await SealedProduct.findById(item.itemId).lean(); // Use lean queries
-            break;
-          case 'PsaGradedCard':
-            collectionItem = await PsaGradedCard.findById(item.itemId).lean(); // Use lean queries
-            break;
-          case 'RawCard':
-            collectionItem = await RawCard.findById(item.itemId).lean(); // Use lean queries
-            break;
-          default:
-            throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
-        }
+        // Use centralized item fetching with ItemBatchFetcher
+        const abbreviatedType = toAbbreviated(item.itemCategory);
+        const collectionItem = await fetchSingleItem(item.itemId, abbreviatedType, { lean: true });
 
         if (!collectionItem) {
           throw new NotFoundError(`${item.itemCategory} with ID ${item.itemId} not found in your collection`);
@@ -136,42 +125,8 @@ const validateAuctionItems = async (items) => {
   }
 };
 
-// Helper function to validate and find a single item
-const validateAndFindItem = async (itemId, itemCategory) => {
-  if (!itemId || typeof itemId !== 'string' || !(/^[a-f\d]{24}$/i).test(itemId)) {
-    throw new ValidationError('Invalid itemId format');
-  }
-
-  if (!['SealedProduct', 'PsaGradedCard', 'RawCard'].includes(itemCategory)) {
-    throw new ValidationError('Invalid itemCategory. Must be one of: SealedProduct, PsaGradedCard, RawCard');
-  }
-
-  let collectionItem = null;
-
-  switch (itemCategory) {
-    case 'SealedProduct':
-      collectionItem = await SealedProduct.findById(itemId);
-      break;
-    case 'PsaGradedCard':
-      collectionItem = await PsaGradedCard.findById(itemId);
-      break;
-    case 'RawCard':
-      collectionItem = await RawCard.findById(itemId);
-      break;
-    default:
-      throw new Error(`Unknown itemCategory: ${itemCategory}`);
-  }
-
-  if (!collectionItem) {
-    throw new NotFoundError(`${itemCategory} with ID ${itemId} not found in your collection`);
-  }
-
-  if (collectionItem.sold) {
-    throw new ValidationError('Cannot add sold items to auctions');
-  }
-
-  return collectionItem;
-};
+// validateAndFindItem function removed - replaced with ItemBatchFetcher.fetchSingleItem
+// This eliminates duplicate validation logic across the codebase
 
 // Helper function to calculate total value of auction items
 const calculateAuctionTotalValue = async (auction) => {
@@ -179,22 +134,9 @@ const calculateAuctionTotalValue = async (auction) => {
 
   for (const item of auction.items) {
     try {
-      let collectionItem = null;
-
-      switch (item.itemCategory) {
-        case 'SealedProduct':
-          collectionItem = await SealedProduct.findById(item.itemId);
-          break;
-        case 'PsaGradedCard':
-          collectionItem = await PsaGradedCard.findById(item.itemId);
-          break;
-        case 'RawCard':
-          collectionItem = await RawCard.findById(item.itemId);
-          break;
-        default:
-          console.error(`Unknown itemCategory: ${item.itemCategory}`);
-          throw new Error(`Unknown itemCategory: ${item.itemCategory}`);
-      }
+      // Use centralized item fetching with ItemBatchFetcher
+      const abbreviatedType = toAbbreviated(item.itemCategory);
+      const collectionItem = await fetchSingleItem(item.itemId, abbreviatedType, { lean: false });
 
       if (collectionItem && collectionItem.myPrice) {
         // Handle Decimal128 conversion
@@ -218,7 +160,6 @@ const calculateAuctionTotalValue = async (auction) => {
 export {
   populateAuctionItems,
   validateAuctionItems,
-  validateAndFindItem,
   calculateAuctionTotalValue
 };
 export default populateAuctionItems; ;

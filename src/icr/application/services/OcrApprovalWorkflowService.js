@@ -1,8 +1,8 @@
 /**
  * OCR Approval Workflow Service
- * 
+ *
  * FIXES SOLID VIOLATIONS by extracting business logic from OcrApprovalController
- * 
+ *
  * BEFORE: Controller had direct database access, file operations, business logic (SRP violation)
  * AFTER: Clean service layer handles all workflow operations
  */

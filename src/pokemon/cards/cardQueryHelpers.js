@@ -19,12 +19,12 @@ const applyPostPopulationFilters = (cards, filters) => {
 
   if (setName) {
     filteredCards = filteredCards.filter((card) =>
-      card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase()),
+      card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase())
     );
   }
   if (cardName) {
     filteredCards = filteredCards.filter((card) =>
-      card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase()),
+      card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase())
     );
   }
 

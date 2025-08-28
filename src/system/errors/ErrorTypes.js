@@ -5,7 +5,66 @@
  * used throughout the application for consistent error management.
  */
 
-import { AppError, ValidationError, NotFoundError } from '@/system/middleware/errorHandler.js';
+/**
+ * Base Error Classes - Consolidated from errorHandler.js to eliminate duplication
+ */
+
+/**
+ * Base Application Error
+ */
+class AppError extends Error {
+  constructor(message, statusCode) {
+    super(message);
+    this.statusCode = statusCode;
+    this.isOperational = true;
+    Error.captureStackTrace(this, this.constructor);
+  }
+}
+
+/**
+ * Validation Error - 400 status code
+ */
+class ValidationError extends AppError {
+  constructor(message) {
+    super(message, 400);
+  }
+}
+
+/**
+ * Not Found Error - 404 status code
+ */
+class NotFoundError extends AppError {
+  constructor(message = 'Resource not found') {
+    super(message, 404);
+  }
+}
+
+/**
+ * Database Error - 500 status code
+ */
+class DatabaseError extends AppError {
+  constructor(message = 'Database operation failed') {
+    super(message, 500);
+  }
+}
+
+/**
+ * External Service Error - 502 status code
+ */
+class ExternalServiceError extends AppError {
+  constructor(message = 'External service unavailable') {
+    super(message, 502);
+  }
+}
+
+/**
+ * Authentication Error - 401 status code
+ */
+class AuthenticationError extends AppError {
+  constructor(message = 'Authentication failed') {
+    super(message, 401);
+  }
+}
 /**
  * Error Severity Levels
  */
@@ -422,7 +481,11 @@ export {
   ERROR_TYPES,
   ErrorType,
   ErrorFactory,
+  AppError,
+  ValidationError,
   NotFoundError,
-  ValidationError
+  DatabaseError,
+  ExternalServiceError,
+  AuthenticationError
 };
 export default ERROR_SEVERITY; ;

@@ -1,6 +1,6 @@
 /**
  * Intelligent Image Naming Service
- * 
+ *
  * Generates standardized filenames at upload time using date and hash
  * while maintaining hash-based deduplication and matching capabilities.
  */
@@ -26,7 +26,7 @@ export class IntelligentImageNamingService {
       const metadata = await this.extractImageMetadata(imageBuffer);
       const timestamp = new Date().toISOString().slice(0, 10).replace(/-/g, ''); // YYYYMMDD
       const hashPreview = imageHash ? imageHash.substring(0, 8) : this.generateTempHash().substring(0, 8);
-      
+
       const descriptiveFilename = `PSA-scan-${timestamp}-${hashPreview}.${metadata.format}`;
       const hashBasedFilename = this.constructHashBasedFilename(imageHash, metadata.format);
 
@@ -86,10 +86,10 @@ export class IntelligentImageNamingService {
     if (!imageHash) {
       imageHash = this.generateTempHash();
     }
-    
+
     const shortHash = imageHash.substring(0, 16);
     const timestamp = Date.now().toString(36);
-    
+
     return `${shortHash}-${timestamp}.${format || 'jpg'}`;
   }
 
@@ -99,9 +99,9 @@ export class IntelligentImageNamingService {
   generateFallbackFilename(imageHash) {
     const timestamp = new Date().toISOString().slice(0, 10).replace(/-/g, '');
     const hashPreview = imageHash ? imageHash.substring(0, 8) : 'unknown';
-    
+
     const fallbackName = `PSA-scan-${timestamp}-${hashPreview}.jpg`;
-    
+
     return {
       descriptive: fallbackName,
       storage: fallbackName,
@@ -130,11 +130,11 @@ export class IntelligentImageNamingService {
       case 'descriptive':
       case 'display':
         return filenameInfo.descriptive;
-      
+
       case 'storage':
       case 'internal':
         return filenameInfo.storage;
-      
+
       default:
         return filenameInfo.descriptive;
     }

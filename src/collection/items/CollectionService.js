@@ -1,4 +1,4 @@
-import { ValidationError, NotFoundError } from '@/system/middleware/errorHandler.js';
+import { ValidationError, NotFoundError } from '@/system/errors/ErrorTypes.js';
 import ImageManager from '@/uploads/imageManager.js';
 import SaleService from '@/collection/sales/saleService.js';
 import ActivityService from '@/collection/activities/activityService.js';
@@ -28,7 +28,7 @@ class CollectionService {
       saleService: options.saleService || SaleService,
       enableImageManagement: options.enableImageManagement !== false,
       enableSaleTracking: options.enableSaleTracking !== false,
-      ...options,
+      ...options
     };
   }
 
@@ -96,10 +96,10 @@ class CollectionService {
           ? [
               {
                 price: data.myPrice,
-                dateUpdated: new Date().toISOString(),
-              },
+                dateUpdated: new Date().toISOString()
+              }
             ]
-          : [],
+          : []
       };
 
       // Create the item
@@ -146,8 +146,8 @@ class CollectionService {
           ...existingItem.priceHistory,
           {
             price: data.myPrice,
-            dateUpdated: new Date().toISOString(),
-          },
+            dateUpdated: new Date().toISOString()
+          }
         ];
       }
 
@@ -240,8 +240,8 @@ class CollectionService {
         sold: true,
         saleDetails: {
           ...saleDetails,
-          dateSold: new Date(),
-        },
+          dateSold: new Date()
+        }
       };
 
       // Update the item
@@ -284,8 +284,8 @@ class CollectionService {
           buyerAddress: null,
           buyerPhoneNumber: null,
           buyerEmail: null,
-          trackingNumber: null,
-        },
+          trackingNumber: null
+        }
       };
 
       // Update the item
@@ -407,16 +407,16 @@ class CollectionService {
         path: 'cardId',
         populate: {
           path: 'setId',
-          model: 'Set',
-        },
+          model: 'Set'
+        }
       };
     } else if (entityName?.includes('raw')) {
       return {
         path: 'cardId',
         populate: {
           path: 'setId',
-          model: 'Set',
-        },
+          model: 'Set'
+        }
       };
     } else if (entityName?.includes('sealed') || entityName?.includes('product')) {
       return 'productId';
@@ -448,8 +448,8 @@ class CollectionService {
       const operations = updates.map((update) => ({
         updateOne: {
           filter: { _id: update.id },
-          update: { $set: update.data },
-        },
+          update: { $set: update.data }
+        }
       }));
 
       return await this.repository.bulkWrite(operations);

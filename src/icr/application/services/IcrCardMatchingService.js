@@ -1,6 +1,6 @@
 /**
  * ICR Card Matching Service
- * 
+ *
  * Single Responsibility: Handle hierarchical card matching for OCR results
  * Extracted from IcrBatchService to follow SRP
  */
@@ -8,6 +8,8 @@
 import HierarchicalPsaParser from '@/icr/application/HierarchicalPsaParser.js';
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
 import Logger from '@/system/logging/Logger.js';
+
+import OperationManager from '@/system/utilities/OperationManager.js';
 
 export class IcrCardMatchingService {
   constructor() {
@@ -20,21 +22,23 @@ export class IcrCardMatchingService {
    * EXACT EXTRACTION from IcrBatchService.js lines 219-317
    */
   async performCardMatching(batchId) {
-    try {
-      Logger.operationStart('ICR_CARD_MATCHING', 'Starting hierarchical card matching', { batchId });
+    const context = OperationManager.createContext('IcrCardMatching', 'performCardMatching', {
+      batchId
+    });
 
+    return OperationManager.executeOperation(context, async () => {
       const scans = await this.gradedCardScanRepository.findMany({ batchId, ocrText: { $exists: true, $ne: '' } });
-      const matchingResults = [];
-      let successfulMatching = 0;
 
-      for (const scan of scans) {
-        try {
+      return OperationManager.executeBatchOperation(
+        { ...context, operation: 'cardMatching' },
+        scans,
+        async (scan, index) => {
           const parsingResult = await this.hierarchicalParser.parsePsaLabel(scan.ocrText);
 
           const result = {
             scanId: scan._id,
             originalFileName: scan.originalFileName,
-              ocrText: scan.ocrText,
+            ocrText: scan.ocrText,
             extractedData: parsingResult.extractedData || {},
             cardMatches: [],
             matchingStatus: 'no_match',
@@ -76,7 +80,7 @@ export class IcrCardMatchingService {
               processingStatus: 'matched'
             });
 
-            successfulMatching++;
+            return result;
           } else {
             // Update database for FAILED matches
             await this.gradedCardScanRepository.update(scan._id, {
@@ -87,36 +91,16 @@ export class IcrCardMatchingService {
               matchingStatus: 'no_match',
               processingStatus: 'matching_failed'
             });
+
+            return result;
           }
-
-          matchingResults.push(result);
-
-        } catch (error) {
-          Logger.operationError('ICR_SCAN_MATCHING', 'Individual scan matching failed', error, { scanId: scan._id });
-          matchingResults.push({
-            scanId: scan._id,
-            originalFileName: scan.originalFileName,
-            error: error.message,
-            processingStatus: 'error'
-          });
+        },
+        {
+          continueOnError: true,
+          maxConcurrent: 2
         }
-      }
-
-      Logger.operationSuccess('ICR_CARD_MATCHING', 'Card matching completed', {
-        totalProcessed: matchingResults.length,
-        successfulMatches: successfulMatching
-      });
-
-      return {
-        totalProcessed: matchingResults.length,
-        successfulMatches: successfulMatching,
-        matchingResults
-      };
-
-    } catch (error) {
-      Logger.operationError('ICR_CARD_MATCHING', 'Card matching failed', error);
-      throw error;
-    }
+      );
+    });
   }
 
   /**

@@ -6,9 +6,9 @@ const setProductSchema = new mongoose.Schema(
     setProductName: { type: String, required: true, unique: true },
 
     // Unique identifier for database rebuilding
-    uniqueSetProductId: { type: Number, required: true, unique: true },
+    uniqueSetProductId: { type: Number, required: true, unique: true }
   },
-  { versionKey: false },
+  { versionKey: false }
 );
 
 // Add set product specific indexes for optimal query performance
@@ -58,8 +58,8 @@ setProductSchema.plugin(queryOptimizationPlugin, {
   // Set product specific optimizations
   setProductOptions: {
     enableNameOptimization: true,
-    cacheFrequentSetQueries: true,
-  },
+    cacheFrequentSetQueries: true
+  }
 });
 
 const SetProduct = mongoose.model('SetProduct', setProductSchema);

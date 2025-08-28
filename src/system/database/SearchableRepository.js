@@ -151,7 +151,7 @@ class SearchableRepository extends BaseRepository {
   async getSuggestions(query, options = {}) {
     try {
       const results = await this.searchAdvanced(query, {
-        limit: options.limit || 10,
+        limit: options.limit || 10
       });
 
       return this.searchQueryBuilder.formatSuggestions(this.entityType, results);
@@ -312,8 +312,8 @@ class SearchableRepository extends BaseRepository {
           totalCount,
           totalPages,
           hasNextPage: page < totalPages,
-          hasPrevPage: page > 1,
-        },
+          hasPrevPage: page > 1
+        }
       };
     } catch (error) {
       throw error;

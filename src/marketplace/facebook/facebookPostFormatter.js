@@ -2,7 +2,7 @@ import {
   formatCardName,
   formatSealedProductName,
   getShortenedSetName,
-  isJapaneseSet,
+  isJapaneseSet
 } from '@/pokemon/products/pokemonNameShortener.js';
 
 /**

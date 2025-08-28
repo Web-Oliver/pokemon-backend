@@ -6,14 +6,125 @@ import mongoose from 'mongoose';
 
 class ValidatorFactory {
   // ObjectId validation
-  static validateObjectId(id, fieldName) {
+  static objectId(id, fieldName = 'ID') {
     if (!mongoose.Types.ObjectId.isValid(id)) {
       throw new Error(`${fieldName} must be a valid ObjectId`);
     }
+    return id;
+  }
+
+  static validateObjectId(id, fieldName) {
+    return this.objectId(id, fieldName);
   }
 
   static isValidObjectId(id) {
     return mongoose.Types.ObjectId.isValid(id);
+  }
+
+  // String validation
+  static string(value, fieldName, options = {}) {
+    if (options.required && (value === undefined || value === null || value === '')) {
+      throw new Error(`${fieldName} is required`);
+    }
+
+    if (value !== undefined && value !== null) {
+      const str = String(value);
+      if (options.minLength && str.length < options.minLength) {
+        throw new Error(`${fieldName} must be at least ${options.minLength} characters long`);
+      }
+      if (options.maxLength && str.length > options.maxLength) {
+        throw new Error(`${fieldName} must be at most ${options.maxLength} characters long`);
+      }
+      if (options.pattern && !options.pattern.test(str)) {
+        throw new Error(`${fieldName} has invalid format`);
+      }
+      if (options.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str)) {
+        throw new Error(`${fieldName} must be a valid email address`);
+      }
+    }
+    return value;
+  }
+
+  // Array validation
+  static array(value, fieldName, options = {}) {
+    if (options.required && (!value || !Array.isArray(value) || value.length === 0)) {
+      throw new Error(`${fieldName} is required and must be a non-empty array`);
+    }
+
+    if (value !== undefined && value !== null) {
+      if (!Array.isArray(value)) {
+        throw new Error(`${fieldName} must be an array`);
+      }
+      if (options.minLength && value.length < options.minLength) {
+        throw new Error(`${fieldName} must contain at least ${options.minLength} items`);
+      }
+      if (options.maxLength && value.length > options.maxLength) {
+        throw new Error(`${fieldName} must contain at most ${options.maxLength} items`);
+      }
+      if (options.itemValidator) {
+        value.forEach((item, index) => {
+          try {
+            options.itemValidator(item, `${fieldName}[${index}]`);
+          } catch (error) {
+            throw new Error(`${fieldName}[${index}]: ${error.message}`);
+          }
+        });
+      }
+    }
+    return value;
+  }
+
+  // Boolean validation
+  static boolean(value, fieldName, options = {}) {
+    if (options.required && value === undefined) {
+      throw new Error(`${fieldName} is required`);
+    }
+
+    if (value !== undefined && typeof value !== 'boolean') {
+      throw new Error(`${fieldName} must be a boolean`);
+    }
+    return value;
+  }
+
+  // Date validation
+  static date(value, fieldName, options = {}) {
+    if (options.required && !value) {
+      throw new Error(`${fieldName} is required`);
+    }
+
+    if (value !== undefined && value !== null) {
+      const date = new Date(value);
+      if (isNaN(date.getTime())) {
+        throw new Error(`${fieldName} must be a valid date`);
+      }
+      if (options.minDate && date < new Date(options.minDate)) {
+        throw new Error(`${fieldName} must be after ${options.minDate}`);
+      }
+      if (options.maxDate && date > new Date(options.maxDate)) {
+        throw new Error(`${fieldName} must be before ${options.maxDate}`);
+      }
+      return date;
+    }
+    return value;
+  }
+
+  // Object validation
+  static object(value, fieldName, options = {}) {
+    if (options.required && (!value || typeof value !== 'object' || Array.isArray(value))) {
+      throw new Error(`${fieldName} is required and must be an object`);
+    }
+
+    if (value !== undefined && value !== null) {
+      if (typeof value !== 'object' || Array.isArray(value)) {
+        throw new Error(`${fieldName} must be an object`);
+      }
+      if (options.schema) {
+        Object.entries(options.schema).forEach(([key, validator]) => {
+          validator(value[key], `${fieldName}.${key}`);
+        });
+      }
+    }
+    return value;
   }
 
   // Pagination validation
@@ -25,29 +136,39 @@ class ValidatorFactory {
 
   // Number validation
   static number(value, fieldName, options = {}) {
-    const num = parseFloat(value);
-    if (isNaN(num)) {
-      throw new Error(`${fieldName} must be a number`);
-    }
-    if (options.min !== undefined && num < options.min) {
-      throw new Error(`${fieldName} must be at least ${options.min}`);
-    }
-    if (options.max !== undefined && num > options.max) {
-      throw new Error(`${fieldName} must be at most ${options.max}`);
-    }
-    if (options.integer && !Number.isInteger(num)) {
-      throw new Error(`${fieldName} must be an integer`);
-    }
-    if (options.required && value === undefined) {
+    if (options.required && (value === undefined || value === null)) {
       throw new Error(`${fieldName} is required`);
     }
+
+    if (value !== undefined && value !== null) {
+      const num = parseFloat(value);
+      if (isNaN(num)) {
+        throw new Error(`${fieldName} must be a number`);
+      }
+      if (options.min !== undefined && num < options.min) {
+        throw new Error(`${fieldName} must be at least ${options.min}`);
+      }
+      if (options.max !== undefined && num > options.max) {
+        throw new Error(`${fieldName} must be at most ${options.max}`);
+      }
+      if (options.integer && !Number.isInteger(num)) {
+        throw new Error(`${fieldName} must be an integer`);
+      }
+      return num;
+    }
+    return value;
   }
 
   // Enum validation
-  static enum(value, allowedValues, fieldName) {
-    if (!allowedValues.includes(value)) {
+  static enum(value, allowedValues, fieldName, options = {}) {
+    if (options.required && (value === undefined || value === null)) {
+      throw new Error(`${fieldName} is required`);
+    }
+
+    if (value !== undefined && value !== null && !allowedValues.includes(value)) {
       throw new Error(`${fieldName} must be one of: ${allowedValues.join(', ')}`);
     }
+    return value;
   }
 
   // Year validation
@@ -59,54 +180,154 @@ class ValidatorFactory {
     return yearNum;
   }
 
-  // Sale details validation
-  static saleDetails(saleDetails) {
-    if (!saleDetails || typeof saleDetails !== 'object') {
-      throw new Error('Sale details must be an object');
+  // Price validation
+  static price(value, fieldName, options = {}) {
+    const num = this.number(value, fieldName, {
+      ...options,
+      min: options.min || 0
+    });
+
+    if (num !== undefined && options.currency) {
+      // Add currency-specific validation if needed
     }
-    // Add specific sale validation as needed
+    return num;
+  }
+
+  // Grade validation (PSA specific)
+  static grade(value, fieldName, options = {}) {
+    const grade = this.number(value, fieldName, {
+      integer: true,
+      min: options.min || 1,
+      max: options.max || 10,
+      ...options
+    });
+    return grade;
+  }
+
+  // Collection-specific validators
+  static condition(value, fieldName) {
+    const allowedConditions = ['mint', 'near_mint', 'excellent', 'good', 'light_played', 'played', 'poor'];
+    return this.enum(value, allowedConditions, fieldName);
+  }
+
+  // Sale details validation
+  static saleDetails(saleDetails, fieldName = 'Sale details') {
+    this.object(saleDetails, fieldName, {
+      required: true,
+      schema: {
+        price: (val) => this.price(val, 'Sale price', { required: true }),
+        dateSold: (val) => this.date(val, 'Sale date'),
+        paymentMethod: (val) => this.string(val, 'Payment method'),
+        deliveryMethod: (val) => this.string(val, 'Delivery method'),
+        buyerName: (val) => this.string(val, 'Buyer name')
+      }
+    });
+    return saleDetails;
   }
 
   // Collection item data validation
   static collectionItemData(data, entityName) {
-    if (!data || typeof data !== 'object') {
-      throw new Error(`${entityName} data must be an object`);
+    this.object(data, `${entityName} data`, { required: true });
+
+    // Common collection item validations
+    if (data.myPrice !== undefined) {
+      this.price(data.myPrice, 'My price', { required: true });
     }
-    // Add specific collection item validation as needed
+    if (data.images !== undefined) {
+      this.array(data.images, 'Images', {
+        itemValidator: (item) => this.string(item, 'Image URL', { required: true })
+      });
+    }
+
+    return data;
   }
 
   // Pokemon-specific validators
   static validateUniquePokemonId(pokemonId) {
-    // Implementation for unique Pokemon ID validation
+    this.objectId(pokemonId, 'Pokemon ID');
     return true;
   }
 
   static validateUniqueSetId(setId) {
-    // Implementation for unique Set ID validation
+    this.objectId(setId, 'Set ID');
     return true;
   }
 
   static validateGrades(grades) {
-    // Implementation for grades validation
+    this.array(grades, 'Grades', {
+      itemValidator: (grade) => this.grade(grade, 'Grade')
+    });
     return true;
   }
 
   static validateTotalGrades(totalGrades) {
-    // Implementation for total grades validation
+    this.number(totalGrades, 'Total grades', {
+      integer: true,
+      min: 0
+    });
     return true;
+  }
+
+  // Composite validation for common patterns
+  static cardReference(cardId, fieldName = 'Card reference') {
+    this.objectId(cardId, fieldName);
+    return cardId;
+  }
+
+  static setReference(setId, fieldName = 'Set reference') {
+    this.objectId(setId, fieldName);
+    return setId;
+  }
+
+  // Batch validation utility
+  static validateBatch(data, validators) {
+    const errors = [];
+
+    Object.entries(validators).forEach(([field, validator]) => {
+      try {
+        if (typeof validator === 'function') {
+          validator(data[field], field);
+        } else {
+          // Handle validator objects with method and options
+          this[validator.method](data[field], field, validator.options);
+        }
+      } catch (error) {
+        errors.push({
+          field,
+          message: error.message,
+          value: data[field]
+        });
+      }
+    });
+
+    if (errors.length > 0) {
+      const errorMessage = errors.map(e => `${e.field}: ${e.message}`).join('; ');
+      throw new Error(`Validation failed: ${errorMessage}`);
+    }
+
+    return data;
   }
 
   // Sales utilities
   static get salesUtils() {
     return {
       validators: {
-        // Add sales-specific validators as needed
+        saleDetails: this.saleDetails.bind(this),
+        price: this.price.bind(this)
       },
       errorHandlers: {
-        // Add error handlers as needed
+        handleValidationError: (error, field) => {
+          return {
+            field,
+            error: error.message,
+            type: 'validation'
+          };
+        }
       },
       successLoggers: {
-        // Add success loggers as needed
+        logValidationSuccess: (field, value) => {
+          console.log(`✅ ${field} validated successfully:`, value);
+        }
       }
     };
   }

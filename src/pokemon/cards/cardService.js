@@ -1,6 +1,6 @@
 import Card from '@/pokemon/cards/Card.js';
 import Set from '@/pokemon/sets/Set.js';
-import { ValidationError } from '@/system/middleware/errorHandler.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 import Logger from '@/system/logging/Logger.js';
 /**
  * Shared Card Service

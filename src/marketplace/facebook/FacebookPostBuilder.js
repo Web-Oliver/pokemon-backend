@@ -14,7 +14,7 @@ class FacebookPostBuilder {
     const groupedItems = {
       sealedProducts: [],
       psaGradedCards: [],
-      rawCards: [],
+      rawCards: []
     };
 
     fetchedItems.forEach(({ data, category }) => {

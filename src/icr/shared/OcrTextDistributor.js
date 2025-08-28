@@ -1,6 +1,6 @@
 /**
  * OCR Text Distributor - Centralized OCR Text Processing
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Only handles OCR text distribution and confidence calculation
  * - Open/Closed: Static methods for extension without modification
@@ -51,7 +51,7 @@ export class OcrTextDistributor {
           break;
         }
       }
-      
+
       // If no exact match, find closest label
       if (labelIndex === -1) {
         let minDistance = Infinity;
@@ -65,7 +65,7 @@ export class OcrTextDistributor {
           }
         }
       }
-      
+
       labelSegments[labelIndex].push({
         text: annotation.description,
         confidence: annotation.confidence || 0,
@@ -79,10 +79,10 @@ export class OcrTextDistributor {
       if (Array.isArray(segment)) {
         segment.sort((a, b) => a.centerY - b.centerY);
       } else {
-        Logger.error('OcrTextDistributor', 'Segment is not an array', { 
-          index, 
-          segment, 
-          labelSegmentsLength: labelSegments.length 
+        Logger.error('OcrTextDistributor', 'Segment is not an array', {
+          index,
+          segment,
+          labelSegmentsLength: labelSegments.length
         });
         labelSegments[index] = []; // Fix corrupted segment
       }
@@ -124,7 +124,7 @@ export class OcrTextDistributor {
 
     // Skip the first annotation (full text block) and process individual words/phrases
     const individualAnnotations = textAnnotations.slice(1);
-    
+
     if (individualAnnotations.length === 0) {
       return 0;
     }
@@ -134,7 +134,7 @@ export class OcrTextDistributor {
     }, 0);
 
     const averageConfidence = totalConfidence / individualAnnotations.length;
-    
+
     // Round to 2 decimal places
     return Math.round(averageConfidence * 100) / 100;
   }
@@ -153,7 +153,7 @@ export class OcrTextDistributor {
       if (!segment || !Array.isArray(segment)) {
         return '';
       }
-      
+
       return segment
         .map(annotation => annotation.text || '')
         .filter(text => text.trim().length > 0)

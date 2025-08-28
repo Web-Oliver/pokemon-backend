@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
+import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 /**
  * Base Repository Class
  *
@@ -24,7 +25,7 @@ class BaseRepository {
       defaultSort: options.defaultSort || { dateAdded: -1 },
       defaultLimit: options.defaultLimit || 1000,
       entityName: options.entityName || model.modelName,
-      ...options,
+      ...options
     };
   }
 
@@ -36,8 +37,10 @@ class BaseRepository {
    */
   async findById(id, options = {}) {
     // Use MongoDB's built-in ObjectId validation
-    if (!id || !mongoose.Types.ObjectId.isValid(id)) {
-      throw new ValidationError('Invalid ObjectId format');
+    try {
+      ValidatorFactory.objectId(id, 'Document ID');
+    } catch (error) {
+      throw new ValidationError(error.message);
     }
 
     let query = this.model.findById(id);
@@ -70,7 +73,7 @@ class BaseRepository {
       sort = this.options.defaultSort,
       limit = this.options.defaultLimit,
       skip = 0,
-      select = null,
+      select = null
     } = options;
 
     let query = this.model.find(filters);
@@ -133,8 +136,8 @@ class BaseRepository {
         totalCount,
         totalPages,
         hasNextPage: page < totalPages,
-        hasPrevPage: page > 1,
-      },
+        hasPrevPage: page > 1
+      }
     };
   }
 
@@ -146,7 +149,7 @@ class BaseRepository {
    */
   async create(data, options = {}) {
     try {
-      // eslint-disable-next-line new-cap
+
       const document = new this.model(data);
       const savedDocument = await document.save();
 
@@ -175,15 +178,17 @@ class BaseRepository {
    */
   async update(id, data, options = {}) {
     // Use MongoDB's built-in ObjectId validation
-    if (!id || !mongoose.Types.ObjectId.isValid(id)) {
-      throw new ValidationError('Invalid ObjectId format');
+    try {
+      ValidatorFactory.objectId(id, 'Document ID');
+    } catch (error) {
+      throw new ValidationError(error.message);
     }
 
     try {
       const updateOptions = {
         new: true,
         runValidators: true,
-        ...options,
+        ...options
       };
 
       const document = await this.model.findByIdAndUpdate(id, data, updateOptions);
@@ -215,8 +220,10 @@ class BaseRepository {
    */
   async delete(id) {
     // Use MongoDB's built-in ObjectId validation
-    if (!id || !mongoose.Types.ObjectId.isValid(id)) {
-      throw new ValidationError('Invalid ObjectId format');
+    try {
+      ValidatorFactory.objectId(id, 'Document ID');
+    } catch (error) {
+      throw new ValidationError(error.message);
     }
 
     const document = await this.model.findByIdAndDelete(id);
@@ -256,7 +263,7 @@ class BaseRepository {
   async updateMany(filters, data, options = {}) {
     const updateOptions = {
       runValidators: true,
-      ...options,
+      ...options
     };
 
     return await this.model.updateMany(filters, data, updateOptions);

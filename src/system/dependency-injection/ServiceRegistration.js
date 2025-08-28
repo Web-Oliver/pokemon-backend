@@ -15,10 +15,21 @@ import ProductRepository from '@/pokemon/products/ProductRepository.js';
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
 import StitchedLabelRepository from '@/icr/infrastructure/repositories/StitchedLabelRepository.js';
 
+// Collection Models and Services
+import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
+import RawCard from '@/collection/items/RawCard.js';
+import SealedProduct from '@/collection/items/SealedProduct.js';
+import CollectionRepository from '@/collection/items/CollectionRepository.js';
+import CollectionService from '@/collection/items/CollectionService.js';
+import OcrCollectionService from '@/collection/services/CollectionService.js';
+import { getEntityConfig } from '@/system/database/entityConfigurations.js';
+
 // Services
 import ProductService from '@/pokemon/products/ProductService.js';
 import SearchService from '@/search/services/SearchService.js';
 import ExportService from '@/marketplace/exports/ExportService.js';
+import StatusService from '@/system/services/StatusService.js';
+import StatusController from '@/system/controllers/StatusController.js';
 import IcrBatchService from '@/icr/application/IcrBatchService.js';
 import IcrStatusService from '@/icr/application/services/IcrStatusService.js';
 import IcrStitchingOrchestrator from '@/icr/application/services/IcrStitchingOrchestrator.js';
@@ -27,64 +38,92 @@ import IcrStitchingOrchestrator from '@/icr/application/services/IcrStitchingOrc
  * Register all services in the container
  */
 export function registerServices() {
-  console.log('📦 Registering all services...');
 
   // ============ REPOSITORY REGISTRATIONS ============
   container.registerSingleton(ServiceKeys.CARD_REPOSITORY, () => {
-    console.log('🗃️ Creating CardRepository singleton');
     return new CardRepository();
   });
 
   container.registerSingleton(ServiceKeys.SET_REPOSITORY, () => {
-    console.log('🗃️ Creating SetRepository singleton');
     return new SetRepository();
   });
 
   container.registerSingleton(ServiceKeys.PRODUCT_REPOSITORY, () => {
-    console.log('🗃️ Creating ProductRepository singleton');
     return new ProductRepository();
   });
 
   container.registerSingleton(ServiceKeys.GRADED_CARD_SCAN_REPOSITORY, () => {
-    console.log('🗃️ Creating GradedCardScanRepository singleton');
     return new GradedCardScanRepository();
   });
 
   container.registerSingleton(ServiceKeys.STITCHED_LABEL_REPOSITORY, () => {
-    console.log('🗃️ Creating StitchedLabelRepository singleton');
     return new StitchedLabelRepository();
+  });
+
+  // ============ COLLECTION REPOSITORY REGISTRATIONS ============
+  container.registerSingleton('psaGradedCardRepository', () => {
+    return new CollectionRepository(PsaGradedCard, 'PsaGradedCard');
+  });
+
+  container.registerSingleton('rawCardRepository', () => {
+    return new CollectionRepository(RawCard, 'RawCard');
+  });
+
+  container.registerSingleton('sealedProductRepository', () => {
+    return new CollectionRepository(SealedProduct, 'SealedProduct');
+  });
+
+  // ============ COLLECTION SERVICE REGISTRATIONS ============
+  container.registerSingleton('psaGradedCardService', () => {
+    return new CollectionService(
+      container.resolve('psaGradedCardRepository'),
+      { entityName: 'PsaGradedCard' }
+    );
+  });
+
+  container.registerSingleton('rawCardService', () => {
+    return new CollectionService(
+      container.resolve('rawCardRepository'),
+      { entityName: 'RawCard' }
+    );
+  });
+
+  container.registerSingleton('sealedProductService', () => {
+    return new CollectionService(
+      container.resolve('sealedProductRepository'),
+      { entityName: 'SealedProduct' }
+    );
+  });
+
+  // ============ OCR COLLECTION SERVICE REGISTRATIONS ============
+  // OCR-specific service for PSA card approval workflow
+  container.register('ocrCollectionService', () => {
+    return new OcrCollectionService();
   });
 
   // ============ BUSINESS LOGIC SERVICE REGISTRATIONS ============
   container.registerSingleton(ServiceKeys.PRODUCT_SERVICE, () => {
-    console.log('🏢 Creating ProductService singleton');
     return new ProductService();
   });
 
   container.registerSingleton(ServiceKeys.SEARCH_SERVICE, () => {
-    console.log('🏢 Creating SearchService singleton');
     return new SearchService();
   });
 
   container.registerSingleton(ServiceKeys.EXPORT_SERVICE, () => {
-    console.log('🏢 Creating ExportService singleton');
     return new ExportService();
   });
 
-  console.log('🔍 [DEBUG] ICR_BATCH_SERVICE key:', ServiceKeys.ICR_BATCH_SERVICE);
   container.registerSingleton(ServiceKeys.ICR_BATCH_SERVICE, () => {
-    console.log('🏢 Creating IcrBatchService singleton');
     return new IcrBatchService();
   });
 
   // ============ ICR SERVICE REGISTRATIONS ============
   container.registerSingleton(ServiceKeys.ICR_STATUS_SERVICE, () => {
-    console.log('🏢 Creating IcrStatusService singleton');
     return new IcrStatusService();
   });
 
   container.register(ServiceKeys.ICR_STITCHING_ORCHESTRATOR, () => {
-    console.log('🏢 Creating IcrStitchingOrchestrator transient (with injected dependencies)');
     return new IcrStitchingOrchestrator(
       container.resolve(ServiceKeys.ICR_STATUS_SERVICE),
       container.resolve(ServiceKeys.GRADED_CARD_SCAN_REPOSITORY),
@@ -92,23 +131,29 @@ export function registerServices() {
     );
   });
 
-  console.log('✅ All services registered successfully');
+  // ============ SYSTEM SERVICE REGISTRATIONS ============
+  container.registerSingleton(ServiceKeys.STATUS_SERVICE, () => {
+    return new StatusService();
+  });
+
+  container.registerSingleton(ServiceKeys.STATUS_CONTROLLER, () => {
+    return new StatusController(
+      container.resolve(ServiceKeys.STATUS_SERVICE)
+    );
+  });
 
   // Log registration stats
   const stats = container.getStats();
-  console.log('📊 Registration stats:', stats);
 }
 
 /**
  * Initialize services that need startup initialization
  */
 export async function initializeServices() {
-  console.log('🚀 Initializing services...');
 
   try {
     // OCR services now use new domain-driven architecture
     // No startup initialization needed for repositories
-    console.log('✅ Services initialized successfully');
   } catch (error) {
     console.error('❌ Service initialization failed:', error);
     throw error;
@@ -119,11 +164,9 @@ export async function initializeServices() {
  * Cleanup services on application shutdown
  */
 export async function cleanupServices() {
-  console.log('🧹 Cleaning up services...');
 
   try {
     container.clear();
-    console.log('✅ Services cleaned up successfully');
   } catch (error) {
     console.error('❌ Service cleanup failed:', error);
   }

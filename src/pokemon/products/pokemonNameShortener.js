@@ -56,7 +56,7 @@ const POKEMON_ABBREVIATIONS = {
   'German': 'German',
   'French': 'French',
   'Italian': 'Italian',
-  'Spanish': 'Spanish',
+  'Spanish': 'Spanish'
 };
 
 /**
@@ -79,7 +79,7 @@ const SPECIAL_RULES = {
   promoYear: {
     pattern: /(.+) Promo \((\d+)\)$/i,
     replacement: '$1 Promo $2'
-  },
+  }
 };
 
 /**
@@ -89,7 +89,7 @@ const SHORTENER_CONFIG = {
   addPokemonKortPrefix: true,
   preserveLanguage: true,
   standardizePromoFormat: true,
-  removeRedundantWords: true,
+  removeRedundantWords: true
 };
 
 class PokemonNameShortener {
@@ -108,7 +108,7 @@ class PokemonNameShortener {
       return {
         originalName: originalName || '',
         shortenedName: originalName || '',
-        abbreviationsApplied: [],
+        abbreviationsApplied: []
       };
     }
 
@@ -133,7 +133,7 @@ class PokemonNameShortener {
       originalName,
       shortenedName: processedName,
       abbreviationsApplied,
-      charactersReduced: originalName.length - processedName.length,
+      charactersReduced: originalName.length - processedName.length
     };
   }
 
@@ -238,7 +238,7 @@ class PokemonNameShortener {
       charactersReduced: result.charactersReduced,
       reductionPercentage: Math.round((result.charactersReduced / result.originalName.length) * 100),
       abbreviationsCount: result.abbreviationsApplied.length,
-      abbreviationsApplied: result.abbreviationsApplied,
+      abbreviationsApplied: result.abbreviationsApplied
     };
   }
 }

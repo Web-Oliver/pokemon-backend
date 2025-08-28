@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { queryOptimizationPlugin } from '@/system/plugins/queryOptimization.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
-import { ValidationError } from '@/system/middleware/errorHandler.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 const setSchema = new mongoose.Schema(
   {
     // Set metadata
@@ -28,7 +28,7 @@ const setSchema = new mongoose.Schema(
       total_graded: { type: Number, default: 0 }
     }
   },
-  { versionKey: false },
+  { versionKey: false }
 );
 
 // Add set-specific indexes for optimal query performance
@@ -89,8 +89,8 @@ setSchema.plugin(queryOptimizationPlugin, {
     enableCardCountOptimization: true,
     enableSetNameOptimization: true,
     cacheFrequentSetQueries: true,
-    enableTemporalQueries: true, // For year-based queries
-  },
+    enableTemporalQueries: true // For year-based queries
+  }
 });
 
 const Set = mongoose.model('Set', setSchema);

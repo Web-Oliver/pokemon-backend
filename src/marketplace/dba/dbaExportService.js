@@ -40,6 +40,9 @@ const DBA_CONFIG = {
   }
 };
 
+import OperationManager from '@/system/utilities/OperationManager.js';
+import StandardResponseBuilder from '@/system/utilities/StandardResponseBuilder.js';
+
 class DbaExportService {
   constructor() {
     this.config = DBA_CONFIG;
@@ -244,7 +247,7 @@ class DbaExportService {
             grade: item.grade,
             condition: item.condition,
             category: item.category,
-            cardNumber: item.cardId?.cardNumber,
+            cardNumber: item.cardId?.cardNumber
           }
         };
 
@@ -328,10 +331,12 @@ class DbaExportService {
    */
   async generateDbaExport(items, options = {}) {
     const { customDescription = '', includeMetadata = true } = options;
+    const context = OperationManager.createContext('DbaExport', 'generateDbaExport', {
+      itemCount: items.length,
+      includeMetadata
+    });
 
-    try {
-      console.log(`[DBA EXPORT] Starting export for ${items.length} items`);
-
+    return OperationManager.executeOperation(context, async () => {
       // Process items into DBA format
       const dbaItems = this.processItemsForDba(items, customDescription);
 
@@ -353,7 +358,6 @@ class DbaExportService {
       dbaItems.forEach(item => {
         item.originalImagePaths.forEach(imagePath => {
           const filename = path.basename(imagePath);
-
           if (!selectedImageFiles.includes(filename)) {
             selectedImageFiles.push(filename);
           }
@@ -368,31 +372,23 @@ class DbaExportService {
 
       // Write JSON file
       const jsonFilePath = path.join(dataFolder, this.config.outputFileName);
-
       fs.writeFileSync(jsonFilePath, JSON.stringify(dbaPostData, null, 2), 'utf8');
 
       // Write metadata file for ZIP creation
       const metadataFilePath = path.join(dataFolder, 'export-metadata.json');
-
       fs.writeFileSync(metadataFilePath, JSON.stringify(metadataFile, null, 2), 'utf8');
 
-      console.log('[DBA EXPORT] Export completed successfully');
-      console.log(`[DBA EXPORT] JSON file: ${jsonFilePath}`);
-      console.log(`[DBA EXPORT] Images folder: ${dataFolder}`);
-
-      return {
-        success: true,
+      return StandardResponseBuilder.exportOperation({
         itemCount: items.length,
         jsonFilePath,
         dataFolder,
         items: dbaPostData,
-        dbaItems, // Include original processed items with image paths
-      };
-
-    } catch (error) {
-      console.error('[DBA EXPORT] Export failed:', error);
-      throw new Error(`DBA export failed: ${error.message}`);
-    }
+        dbaItems // Include original processed items with image paths
+      }, 'dba', {
+        exportedFiles: [jsonFilePath, metadataFilePath],
+        imageCount: selectedImageFiles.length
+      }).data;
+    });
   }
 
   /**

@@ -3,19 +3,15 @@ import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import Logger from '@/system/logging/Logger.js';
 import { validateDateRange } from '@/system/validation/dateValidationHelpers.js';
+import { getDisplayName } from '@/system/constants/ItemTypeMapper.js';
 /**
- * Map item types to display categories
+ * Map item types to display categories using centralized ItemTypeMapper
  */
 function getDisplayCategory(itemType) {
-  switch (itemType) {
-    case 'sealedProduct':
-      return 'Sealed Product';
-    case 'psaGradedCard':
-      return 'PSA Graded Card';
-    case 'rawCard':
-      return 'Raw Card';
-    default:
-      return 'Unknown';
+  try {
+    return getDisplayName(itemType);
+  } catch {
+    return 'Unknown';
   }
 }
 
@@ -36,27 +32,27 @@ async function fetchSalesData(filter, category) {
       SealedProduct.find(filter).populate('productId'),
       PsaGradedCard.find(filter).populate({
         path: 'cardId',
-        populate: { path: 'setId' },
+        populate: { path: 'setId' }
       }),
       RawCard.find(filter).populate({
         path: 'cardId',
-        populate: { path: 'setId' },
-      }),
+        populate: { path: 'setId' }
+      })
     ]);
 
     salesData = [
       ...sealedProducts.filter(item => item).map((item) => ({
         ...(item.toObject ? item.toObject() : item),
-        itemType: 'sealedProduct',
+        itemType: 'sealedProduct'
       })),
       ...psaCards.filter(item => item).map((item) => ({
         ...(item.toObject ? item.toObject() : item),
-        itemType: 'psaGradedCard',
+        itemType: 'psaGradedCard'
       })),
       ...rawCards.filter(item => item).map((item) => ({
         ...(item.toObject ? item.toObject() : item),
         itemType: 'rawCard'
-      })),
+      }))
     ];
   } else {
     // Fetch from specific category
@@ -65,27 +61,27 @@ async function fetchSalesData(filter, category) {
         salesData = await SealedProduct.find(filter).populate('productId');
         salesData = salesData.filter(item => item).map((item) => ({
           ...(item.toObject ? item.toObject() : item),
-          itemType: 'sealedProduct',
+          itemType: 'sealedProduct'
         }));
         break;
       case 'psaGradedCards':
         salesData = await PsaGradedCard.find(filter).populate({
           path: 'cardId',
-          populate: { path: 'setId' },
+          populate: { path: 'setId' }
         });
         salesData = salesData.filter(item => item).map((item) => ({
           ...(item.toObject ? item.toObject() : item),
-          itemType: 'psaGradedCard',
+          itemType: 'psaGradedCard'
         }));
         break;
       case 'rawCards':
         salesData = await RawCard.find(filter).populate({
           path: 'cardId',
-          populate: { path: 'setId' },
+          populate: { path: 'setId' }
         });
         salesData = salesData.filter(item => item).map((item) => ({
           ...(item.toObject ? item.toObject() : item),
-          itemType: 'rawCard',
+          itemType: 'rawCard'
         }));
         break;
       default:
@@ -97,11 +93,11 @@ async function fetchSalesData(filter, category) {
   // Transform data for response
   const transformedData = salesData.map((item) => ({
     ...item,
-    category: getDisplayCategory(item.itemType),
+    category: getDisplayCategory(item.itemType)
   }));
 
   const sortedData = transformedData.sort(
-    (a, b) => new Date(b.saleDetails?.dateSold || 0) - new Date(a.saleDetails?.dateSold || 0),
+    (a, b) => new Date(b.saleDetails?.dateSold || 0) - new Date(a.saleDetails?.dateSold || 0)
   );
 
   Logger.operationSuccess('FETCH_SALES_DATA', 'Successfully fetched and transformed sales data', {

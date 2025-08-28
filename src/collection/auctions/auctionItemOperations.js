@@ -1,6 +1,9 @@
 import Auction from '@/collection/auctions/Auction.js';
-import { asyncHandler, NotFoundError, ValidationError } from '@/system/middleware/errorHandler.js';
-import { validateAndFindItem, calculateAuctionTotalValue } from './auctionItemHelpers.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
+import { calculateAuctionTotalValue } from './auctionItemHelpers.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
+import { toAbbreviated, isValidClassName } from '@/system/constants/ItemTypeMapper.js';
 import Logger from '@/system/logging/Logger.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 const addItemToAuction = asyncHandler(async (req, res) => {
@@ -28,8 +31,27 @@ const addItemToAuction = asyncHandler(async (req, res) => {
     throw error;
   }
 
-  // Validate and find the item
-  await validateAndFindItem(itemId, itemCategory);
+  // Validate item type and find the item
+  if (!isValidClassName(itemCategory)) {
+    const error = new ValidationError('Invalid itemCategory. Must be one of: SealedProduct, PsaGradedCard, RawCard');
+    Logger.operationError('INVALID_ITEM_CATEGORY', 'Invalid item category for auction', error, { itemCategory });
+    throw error;
+  }
+
+  const abbreviatedType = toAbbreviated(itemCategory);
+  const collectionItem = await fetchSingleItem(itemId, abbreviatedType, { lean: false });
+
+  if (!collectionItem) {
+    const error = new NotFoundError(`${itemCategory} with ID ${itemId} not found in your collection`);
+    Logger.operationError('ITEM_NOT_FOUND', 'Item not found for auction', error, { itemId, itemCategory });
+    throw error;
+  }
+
+  if (collectionItem.sold) {
+    const error = new ValidationError('Cannot add sold items to auctions');
+    Logger.operationError('SOLD_ITEM_AUCTION', 'Attempted to add sold item to auction', error, { itemId, itemCategory });
+    throw error;
+  }
 
   const auction = await Auction.findById(req.params.id);
 
@@ -42,7 +64,7 @@ const addItemToAuction = asyncHandler(async (req, res) => {
 
   // Check if item already exists in auction
   const existingItem = auction.items.find(
-    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory,
+    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory
   );
 
   if (existingItem) {
@@ -111,7 +133,7 @@ const removeItemFromAuction = asyncHandler(async (req, res) => {
   }
 
   const itemIndex = auction.items.findIndex(
-    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory,
+    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory
   );
 
   if (itemIndex === -1) {
@@ -194,7 +216,7 @@ const markItemAsSold = asyncHandler(async (req, res) => {
   }
 
   const itemIndex = auction.items.findIndex(
-    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory,
+    (item) => item.itemId.toString() === itemId && item.itemCategory === itemCategory
   );
 
   if (itemIndex === -1) {

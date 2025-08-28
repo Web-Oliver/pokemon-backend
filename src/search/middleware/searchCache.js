@@ -544,7 +544,7 @@ const createCacheKey = (req) => {
     categoryContext,
     type,
     year,
-    pokemonNumber,
+    pokemonNumber
   })}`;
 };
 

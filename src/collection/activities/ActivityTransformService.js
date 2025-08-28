@@ -40,7 +40,7 @@ class ActivityTransformService {
       activityData.metadata?.cardName,
       activityData.metadata?.setName,
       ...(activityData.metadata?.tags || []),
-      ...(activityData.metadata?.badges || []),
+      ...(activityData.metadata?.badges || [])
     ]
       .filter(Boolean)
       .join(' ')
@@ -65,7 +65,7 @@ class ActivityTransformService {
       status: activity.status,
       timestamp: activity.timestamp,
       entityType: activity.entityType,
-      entityId: activity.entityId,
+      entityId: activity.entityId
     };
 
     // Add optional fields
@@ -132,7 +132,7 @@ class ActivityTransformService {
 
       // Formatted dates
       formattedDate: new Date(activity.timestamp).toLocaleDateString(),
-      formattedTime: new Date(activity.timestamp).toLocaleTimeString(),
+      formattedTime: new Date(activity.timestamp).toLocaleTimeString()
     };
   }
 
@@ -277,7 +277,7 @@ class ActivityTransformService {
       byEntityType: {},
       dateRange: null,
       mostRecentActivity: null,
-      oldestActivity: null,
+      oldestActivity: null
     };
 
     if (activities.length === 0) {

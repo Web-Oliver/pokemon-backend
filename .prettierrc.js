@@ -38,30 +38,30 @@ const config = {
       files: '*.json',
       options: {
         tabWidth: 2,
-        printWidth: 120,
-      },
+        printWidth: 120
+      }
     },
     {
       files: '*.md',
       options: {
         proseWrap: 'preserve',
-        printWidth: 120,
-      },
+        printWidth: 120
+      }
     },
     {
       files: ['*.yaml', '*.yml'],
       options: {
         tabWidth: 2,
-        singleQuote: false,
-      },
+        singleQuote: false
+      }
     },
     {
       files: '.prettierrc',
       options: {
-        parser: 'json',
-      },
-    },
-  ],
+        parser: 'json'
+      }
+    }
+  ]
 };
 
 module.exports = config;

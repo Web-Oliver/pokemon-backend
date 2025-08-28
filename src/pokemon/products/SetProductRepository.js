@@ -16,7 +16,7 @@ class SetProductRepository extends SearchableRepository {
   constructor() {
     super(SetProduct, {
       entityType: 'setProducts', // Use search configuration key
-      defaultSort: { setProductName: 1 },
+      defaultSort: { setProductName: 1 }
     });
   }
 
@@ -30,9 +30,9 @@ class SetProductRepository extends SearchableRepository {
     try {
       return await this.findOne(
         {
-          setProductName: new RegExp(`^${setProductName}$`, 'i'),
+          setProductName: new RegExp(`^${setProductName}$`, 'i')
         },
-        options,
+        options
       );
     } catch (error) {
       throw error;
@@ -49,9 +49,9 @@ class SetProductRepository extends SearchableRepository {
     try {
       return await this.findOne(
         {
-          uniqueSetProductId,
+          uniqueSetProductId
         },
-        options,
+        options
       );
     } catch (error) {
       throw error;

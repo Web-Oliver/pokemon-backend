@@ -1,6 +1,6 @@
 /**
  * Graded Card Scan Repository - Data Access Layer
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Only handles GradedCardScan data access
  * - Dependency Inversion: Abstracts database operations from services
@@ -30,7 +30,7 @@ export class GradedCardScanRepository extends BaseRepository {
    */
   async findByStatus(status, options = {}) {
     const { skip = 0, limit = 50, sort = { createdAt: -1 } } = options;
-    
+
     return await this.findAll(
       { processingStatus: status },
       { skip, limit: parseInt(limit, 10), sort }
@@ -41,8 +41,8 @@ export class GradedCardScanRepository extends BaseRepository {
    * Find scans by multiple image hashes
    */
   async findByHashes(imageHashes) {
-    return await this.findAll({ 
-      imageHash: { $in: imageHashes } 
+    return await this.findAll({
+      imageHash: { $in: imageHashes }
     });
   }
 

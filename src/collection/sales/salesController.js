@@ -24,7 +24,7 @@ const getSales = asyncHandler(async (req, res) => {
     res.status(200).json({
       success: true,
       count: salesData.length,
-      data: salesData,
+      data: salesData
     });
   } catch (error) {
     // Use centralized error handling

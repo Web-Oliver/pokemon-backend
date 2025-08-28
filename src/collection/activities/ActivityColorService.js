@@ -16,28 +16,28 @@ class ActivityColorService {
       emerald: {
         bg: 'from-emerald-500 to-teal-600',
         badge: 'bg-emerald-100 text-emerald-800',
-        dot: 'bg-emerald-400',
+        dot: 'bg-emerald-400'
       },
       amber: {
         bg: 'from-amber-500 to-orange-600',
         badge: 'bg-amber-100 text-amber-800',
-        dot: 'bg-amber-400',
+        dot: 'bg-amber-400'
       },
       purple: {
         bg: 'from-purple-500 to-violet-600',
         badge: 'bg-purple-100 text-purple-800',
-        dot: 'bg-purple-400',
+        dot: 'bg-purple-400'
       },
       indigo: {
         bg: 'from-indigo-500 to-blue-600',
         badge: 'bg-indigo-100 text-indigo-800',
-        dot: 'bg-indigo-400',
+        dot: 'bg-indigo-400'
       },
       red: {
         bg: 'from-red-500 to-rose-600',
         badge: 'bg-red-100 text-red-800',
-        dot: 'bg-red-400',
-      },
+        dot: 'bg-red-400'
+      }
     };
 
     return colorMap[color] || colorMap.indigo;
@@ -63,7 +63,7 @@ class ActivityColorService {
       sale_updated: 'amber',
       milestone: 'purple',
       collection_stats: 'indigo',
-      system: 'indigo',
+      system: 'indigo'
     };
 
     const color = typeColorMap[activityType] || 'indigo';
@@ -81,7 +81,7 @@ class ActivityColorService {
       low: 'indigo',
       medium: 'amber',
       high: 'purple',
-      critical: 'red',
+      critical: 'red'
     };
 
     const color = priorityColorMap[priority] || 'indigo';
@@ -109,7 +109,7 @@ class ActivityColorService {
       sale_updated: 'fas fa-edit',
       milestone: 'fas fa-trophy',
       collection_stats: 'fas fa-chart-bar',
-      system: 'fas fa-cog',
+      system: 'fas fa-cog'
     };
 
     return iconMap[activityType] || 'fas fa-info-circle';
@@ -125,18 +125,18 @@ class ActivityColorService {
       active: {
         bg: 'bg-green-100',
         text: 'text-green-800',
-        border: 'border-green-200',
+        border: 'border-green-200'
       },
       archived: {
         bg: 'bg-gray-100',
         text: 'text-gray-800',
-        border: 'border-gray-200',
+        border: 'border-gray-200'
       },
       hidden: {
         bg: 'bg-yellow-100',
         text: 'text-yellow-800',
-        border: 'border-yellow-200',
-      },
+        border: 'border-yellow-200'
+      }
     };
 
     return statusBadgeMap[status] || statusBadgeMap.active;
@@ -168,7 +168,7 @@ class ActivityColorService {
       badgeClasses: this.getBadgeClasses(status),
 
       // Utility
-      primaryColor: metadataColor || this.getTypeColor(activityType),
+      primaryColor: metadataColor || this.getTypeColor(activityType)
     };
   }
 
@@ -192,7 +192,7 @@ class ActivityColorService {
       sale_updated: 'amber',
       milestone: 'purple',
       collection_stats: 'indigo',
-      system: 'indigo',
+      system: 'indigo'
     };
 
     return typeColorMap[activityType] || 'indigo';
@@ -208,7 +208,7 @@ class ActivityColorService {
       { name: 'amber', label: 'Amber', preview: 'bg-amber-500' },
       { name: 'purple', label: 'Purple', preview: 'bg-purple-500' },
       { name: 'indigo', label: 'Indigo', preview: 'bg-indigo-500' },
-      { name: 'red', label: 'Red', preview: 'bg-red-500' },
+      { name: 'red', label: 'Red', preview: 'bg-red-500' }
     ];
   }
 

@@ -10,7 +10,7 @@ class ControllerMetrics {
     this.metrics = {
       operations: new Map(),
       errors: new Map(),
-      responseTime: new Map(),
+      responseTime: new Map()
     };
   }
 
@@ -90,7 +90,7 @@ class ControllerMetrics {
     this.metrics = {
       operations: new Map(),
       errors: new Map(),
-      responseTime: new Map(),
+      responseTime: new Map()
     };
   }
 

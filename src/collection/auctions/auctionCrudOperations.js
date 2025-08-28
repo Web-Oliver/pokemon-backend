@@ -1,5 +1,6 @@
 import Auction from '@/collection/auctions/Auction.js';
-import { asyncHandler, NotFoundError, ValidationError } from '@/system/middleware/errorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 import { populateAuctionItems, validateAuctionItems } from './auctionItemHelpers.js';
 import Logger from '@/system/logging/Logger.js';
 import { getEntityConfig, getFilterableFields, getValidationRules } from '@/system/database/entityConfigurations.js';
@@ -108,7 +109,7 @@ const createAuction = asyncHandler(async (req, res) => {
     generatedFacebookPost: generatedFacebookPost || '',
     isActive: isActive !== undefined ? isActive : true,
     items: items || [],
-    totalValue: totalValue || 0,
+    totalValue: totalValue || 0
   });
 
   const savedAuction = await auction.save();
@@ -200,7 +201,7 @@ const deleteAuction = asyncHandler(async (req, res) => {
   });
   res.status(200).json({
     status: 'success',
-    message: 'Auction deleted successfully',
+    message: 'Auction deleted successfully'
   });
 });
 

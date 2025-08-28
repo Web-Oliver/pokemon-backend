@@ -12,7 +12,7 @@ const psaGradedCardSchema = new mongoose.Schema({
   priceHistory: priceHistorySchema,
   dateAdded: { type: Date, default: Date.now },
   sold: { type: Boolean, default: false },
-  saleDetails: saleDetailsSchema,
+  saleDetails: saleDetailsSchema
 });
 
 // Apply activity tracking plugin
@@ -22,8 +22,8 @@ psaGradedCardSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: true,
-    trackImageUpdates: true,
-  },
+    trackImageUpdates: true
+  }
 });
 
 // Apply query optimization plugin
@@ -33,13 +33,13 @@ psaGradedCardSchema.plugin(queryOptimizationPlugin, {
   enablePerformanceTracking: true,
   enableAutomaticIndexing: true,
   defaultLimit: 50,
-  maxLimit: 500,
+  maxLimit: 500
 });
 
 // Apply shared transform function for JSON responses
 psaGradedCardSchema.set('toJSON', {
   transform: collectionItemTransform,
-  getters: true, // Enable getters for JSON serialization
+  getters: true // Enable getters for JSON serialization
 });
 
 const PsaGradedCard = mongoose.model('PsaGradedCard', psaGradedCardSchema);

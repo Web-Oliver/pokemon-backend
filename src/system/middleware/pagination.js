@@ -17,7 +17,7 @@ const PAGINATION_DEFAULTS = {
   MAX_LIMIT: 100,
   MIN_LIMIT: 1,
   DEFAULT_PAGE: 1,
-  CURSOR_THRESHOLD: 10000, // Use cursor-based pagination for collections > 10k items
+  CURSOR_THRESHOLD: 10000 // Use cursor-based pagination for collections > 10k items
 };
 
 /**
@@ -25,7 +25,7 @@ const PAGINATION_DEFAULTS = {
  */
 const PAGINATION_TYPES = {
   OFFSET: 'offset',
-  CURSOR: 'cursor',
+  CURSOR: 'cursor'
 };
 
 /**

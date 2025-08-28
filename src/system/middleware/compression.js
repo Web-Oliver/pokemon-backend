@@ -33,7 +33,7 @@ const compressionMiddleware = compression({
         'application/octet-stream',
         'application/pdf',
         'application/zip',
-        'application/gzip',
+        'application/gzip'
       ];
 
       if (binaryTypes.some((binaryType) => type.startsWith(binaryType))) {
@@ -43,7 +43,7 @@ const compressionMiddleware = compression({
 
     // Compress text-based responses
     return compression.filter(req, res);
-  },
+  }
 });
 
 // Middleware for setting cache headers for static content
@@ -55,7 +55,7 @@ const setCacheHeaders = (req, res, next) => {
       res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         Pragma: 'no-cache',
-        Expires: '0',
+        Expires: '0'
       });
     }
     // NO CACHE for auction data to ensure real-time updates
@@ -63,14 +63,14 @@ const setCacheHeaders = (req, res, next) => {
       res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         Pragma: 'no-cache',
-        Expires: '0',
+        Expires: '0'
       });
     }
     // Short cache for search results only
     else if (req.url.includes('/search')) {
       res.set({
         'Cache-Control': 'public, max-age=60', // 1 minute
-        Vary: 'Accept-Encoding',
+        Vary: 'Accept-Encoding'
       });
     }
     // NO CACHE for ICR/OCR - Real-time data required
@@ -78,14 +78,14 @@ const setCacheHeaders = (req, res, next) => {
       res.set({
         'Cache-Control': 'no-cache, no-store, must-revalidate',
         'Pragma': 'no-cache',
-        'Expires': '0',
+        'Expires': '0'
       });
     }
     // Moderate cache for other less dynamic data
     else {
       res.set({
         'Cache-Control': 'public, max-age=300', // 5 minutes
-        Vary: 'Accept-Encoding',
+        Vary: 'Accept-Encoding'
       });
     }
   }

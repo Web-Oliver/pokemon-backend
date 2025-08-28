@@ -10,12 +10,12 @@
  * - Open/Closed: Extensible for new export types
  */
 
-import ItemFetcher from '@/system/utilities/ItemFetcher.js';
+import ItemFetcher from '@/collection/shared/ItemFetcher.js';
 import { DbaExportService } from '@/marketplace/dba/dbaExportService.js';
 import { DbaIntegrationService } from '@/marketplace/dba/dbaIntegrationService.js';
 import { zipCollectionImages } from '@/marketplace/exports/exportHelpers.js';
 import Logger from '@/system/logging/Logger.js';
-import { ValidationError, NotFoundError } from '@/system/middleware/errorHandler.js';
+import { ValidationError, NotFoundError } from '@/system/errors/ErrorTypes.js';
 
 class ExportService {
   constructor() {

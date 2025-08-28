@@ -7,7 +7,8 @@
  * Replaces 40+ repeated try-catch blocks with consistent error handling patterns.
  */
 
-import { ValidationError, NotFoundError, AppError, asyncHandler } from '@/system/middleware/errorHandler.js';
+import { ValidationError, NotFoundError, AppError } from '@/system/errors/ErrorTypes.js';
+// asyncHandler is now implemented within this file
 import Logger from '@/system/logging/Logger.js';
 import { responsePresets } from '@/system/middleware/responseFormatter.js';
 /**
@@ -372,6 +373,14 @@ const withErrorHandler = (context, operation, metadata = {}) => (asyncFunction) 
 const withRouteErrorHandler = (context, operation, metadata = {}) => CentralizedErrorHandler.wrapRoute(context, operation, metadata);
 
 /**
+ * Simple async handler wrapper for Express routes
+ * Replaces the deleted errorHandler.js asyncHandler function
+ */
+const asyncHandler = (fn) => (req, res, next) => {
+  Promise.resolve(fn(req, res, next)).catch(next);
+};
+
+/**
  * Enhanced error middleware for Express integration
  */
 const enhancedErrorMiddleware = (err, req, res, next) => {
@@ -414,10 +423,10 @@ export {
   withErrorHandler,
   withRouteErrorHandler,
   enhancedErrorMiddleware,
+  asyncHandler,
   // Re-export from errorHandler.js for unified imports
   ValidationError,
   NotFoundError,
-  AppError,
-  asyncHandler
+  AppError
 };
 export default CentralizedErrorHandler;

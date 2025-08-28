@@ -176,7 +176,7 @@ const collectionItemTransform = createDecimal128Transform({
   priceFields: ['myPrice'],
   nestedPriceFields: ['saleDetails.actualSoldPrice', 'priceHistory.price'],
   dateFields: ['dateAdded'],
-  nestedDateFields: ['saleDetails.dateSold', 'priceHistory.dateUpdated'],
+  nestedDateFields: ['saleDetails.dateSold', 'priceHistory.dateUpdated']
 });
 
 /**
@@ -187,7 +187,7 @@ const sealedProductTransform = createDecimal128Transform({
   priceFields: ['myPrice', 'cardMarketPrice'],
   nestedPriceFields: ['saleDetails.actualSoldPrice', 'priceHistory.price'],
   dateFields: ['dateAdded'],
-  nestedDateFields: ['saleDetails.dateSold', 'priceHistory.dateUpdated'],
+  nestedDateFields: ['saleDetails.dateSold', 'priceHistory.dateUpdated']
 });
 
 /**
@@ -198,7 +198,7 @@ const auctionTransform = createDecimal128Transform({
   priceFields: ['totalValue', 'soldValue'],
   nestedPriceFields: [],
   dateFields: ['auctionDate'],
-  nestedDateFields: [],
+  nestedDateFields: []
 });
 
 /**
@@ -209,7 +209,7 @@ const productTransform = createDecimal128Transform({
   priceFields: ['price'],
   nestedPriceFields: [],
   dateFields: ['lastUpdated'],
-  nestedDateFields: [],
+  nestedDateFields: []
 });
 
 /**

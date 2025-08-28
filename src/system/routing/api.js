@@ -14,24 +14,23 @@ import { validationMiddlewares } from '@/system/middleware/validationMiddleware.
 
 // Controllers
 import { getSales, getSalesSummary, getSalesGraphData } from '@/collection/sales/salesController.js';
-import Card from '@/pokemon/cards/Card.js';
-import Set from '@/pokemon/sets/Set.js';
-import Product from '@/pokemon/products/Product.js';
-import SetProduct from '@/pokemon/products/SetProduct.js';
+import { container, ServiceKeys } from '@/system/dependency-injection/ServiceContainer.js';
 import { getAllProducts,
   getProductById,
-  getProductSetNames,
+  getProductSetNames
   } from '@/pokemon/products/productsController.js';
-import { generateFacebookPost, getCollectionFacebookTextFile, generateDbaTitle } from '@/marketplace/listings/externalListingController.js';
-import { zipPsaCardImages,
-  zipRawCardImages,
-  zipSealedProductImages,
-  exportToDba,
-  downloadDbaZip,
+import {
   postToDba,
   getDbaStatus,
-  testDbaIntegration,
-  } from '@/marketplace/exports/exportController.js';
+  testDbaIntegration
+} from '@/marketplace/exports/exportController.js';
+import {
+  getSupportedSocialExportTypes,
+  getSupportedCollectionExportFormats,
+  getSocialExportHandler,
+  getCollectionExportHandler,
+  getExportDownloadHandler
+} from '@/system/configuration/ExportRouteConfiguration.js';
 import { uploadImage, uploadImages, cleanupImages, cleanupAllOrphanedImages } from '@/uploads/uploadController.js';
 import { getAllAuctions,
   getAuctionById,
@@ -40,38 +39,19 @@ import { getAllAuctions,
   deleteAuction,
   addItemToAuction,
   removeItemFromAuction,
-  markItemAsSold,
+  markItemAsSold
   } from '@/collection/auctions/index.js';
 // ================================
 // STATUS ROUTES
 // ================================
-router.get('/status', async (req, res) => {
-  try {
-    const [cardCount, setCount, productCount, setProductCount] = await Promise.all([
-      Card.countDocuments(),
-      Set.countDocuments(),
-      Product.countDocuments(),
-      SetProduct.countDocuments(),
-    ]);
-
-    res.json({
-      success: true,
-      data: {
-        cards: cardCount,
-        sets: setCount,
-        products: productCount,
-        setProducts: setProductCount,
-        timestamp: new Date().toISOString(),
-      },
-    });
-  } catch (error) {
-    console.error('Status check error:', error);
-    res.status(500).json({
-      success: false,
-      message: 'Failed to get database status',
-      error: error.message,
-    });
-  }
+// Status endpoint using proper service layer (lazy-loaded)
+router.get('/status', (req, res, next) => {
+  const statusController = container.resolve(ServiceKeys.STATUS_CONTROLLER);
+  statusController.getStatus(req, res, next);
+});
+router.get('/health', (req, res, next) => {
+  const statusController = container.resolve(ServiceKeys.STATUS_CONTROLLER);
+  statusController.getSystemHealth(req, res, next);
 });
 
 // ================================
@@ -91,81 +71,56 @@ router.get('/products/:id', validationMiddlewares.validateObjectIdParam, getProd
 // ================================
 // SOCIAL EXPORTS RESOURCE - REST COMPLIANT
 // ================================
+// Configuration-driven social exports
 router.post('/collections/social-exports', validationMiddlewares.validateExportBody, (req, res, next) => {
   const { type } = req.body;
+  const handler = getSocialExportHandler(type);
 
-  switch (type) {
-    case 'facebook-post':
-      generateFacebookPost(req, res, next);
-      break;
-    case 'dba-title':
-      generateDbaTitle(req, res, next);
-      break;
-    case 'facebook-text-file':
-      getCollectionFacebookTextFile(req, res, next);
-      break;
-    default:
-      res.status(400).json({
-        type: 'https://pokemon-collection.com/problems/invalid-export-type',
-        title: 'Invalid Export Type',
-        status: 400,
-        detail: `Export type '${type}' is not supported`,
-        instance: req.originalUrl,
-        supportedTypes: ['facebook-post', 'dba-title', 'facebook-text-file']
-      });
+  if (handler) {
+    handler(req, res, next);
+  } else {
+    res.status(400).json({
+      type: 'https://pokemon-collection.com/problems/invalid-export-type',
+      title: 'Invalid Export Type',
+      status: 400,
+      detail: `Export type '${type}' is not supported`,
+      instance: req.originalUrl,
+      supportedTypes: getSupportedSocialExportTypes()
+    });
   }
 });
 
 // ================================
 // COLLECTION EXPORTS RESOURCE - REST COMPLIANT
 // ================================
+// Configuration-driven collection exports
 router.post('/collections/:type/exports', validationMiddlewares.validateExportBody, (req, res, next) => {
   const { type } = req.params;
   const { format } = req.body;
+  const handler = getCollectionExportHandler(format, type);
 
-  switch (format) {
-    case 'dba':
-      exportToDba(req, res, next);
-      break;
-    case 'zip':
-      switch (type) {
-        case 'psa-cards':
-        case 'psa-graded-cards':
-          zipPsaCardImages(req, res, next);
-          break;
-        case 'raw-cards':
-          zipRawCardImages(req, res, next);
-          break;
-        case 'sealed-products':
-          zipSealedProductImages(req, res, next);
-          break;
-        default:
-          res.status(400).json({
-            type: 'https://pokemon-collection.com/problems/unsupported-export',
-            title: 'Unsupported Export',
-            status: 400,
-            detail: `ZIP export not supported for collection type '${type}'`,
-            instance: req.originalUrl
-          });
-      }
-      break;
-    default:
-      res.status(400).json({
-        type: 'https://pokemon-collection.com/problems/invalid-export-format',
-        title: 'Invalid Export Format',
-        status: 400,
-        detail: `Export format '${format}' is not supported`,
-        instance: req.originalUrl,
-        supportedFormats: ['dba', 'zip']
-      });
+  if (handler) {
+    handler(req, res, next);
+  } else {
+    const supportedFormats = getSupportedCollectionExportFormats();
+    res.status(400).json({
+      type: 'https://pokemon-collection.com/problems/invalid-export-format',
+      title: 'Invalid Export Format',
+      status: 400,
+      detail: `Export format '${format}' ${format === 'zip' ? `not supported for collection type '${type}'` : 'is not supported'}`,
+      instance: req.originalUrl,
+      supportedFormats
+    });
   }
 });
 
+// Configuration-driven export downloads
 router.get('/collections/exports/:exportId', (req, res, next) => {
   const { exportId } = req.params;
+  const handler = getExportDownloadHandler(exportId);
 
-  if (exportId === 'dba' || exportId.includes('dba')) {
-    downloadDbaZip(req, res, next);
+  if (handler) {
+    handler(req, res, next);
   } else {
     res.status(404).json({
       type: 'https://pokemon-collection.com/problems/export-not-found',
@@ -202,15 +157,9 @@ router.put('/auctions/:id', updateAuction);
 router.patch('/auctions/:id', updateAuction);
 router.delete('/auctions/:id', deleteAuction);
 
-// Auction items subresource
+// Auction items subresource - clean parameter passing
 router.post('/auctions/:id/items', addItemToAuction);
-router.delete('/auctions/:id/items/:itemId', (req, res, next) => {
-  req.body.itemId = req.params.itemId;
-  removeItemFromAuction(req, res, next);
-});
-router.patch('/auctions/:id/items/:itemId', (req, res, next) => {
-  req.body.itemId = req.params.itemId;
-  markItemAsSold(req, res, next);
-});
+router.delete('/auctions/:id/items/:itemId', removeItemFromAuction);
+router.patch('/auctions/:id/items/:itemId', markItemAsSold);
 
 export default router;

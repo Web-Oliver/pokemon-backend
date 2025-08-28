@@ -1,6 +1,6 @@
 /**
  * ICR Controller Service - Business Logic Layer for Controllers
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Handles all ICR controller business logic
  * - Dependency Inversion: Uses repositories and other services
@@ -71,13 +71,13 @@ export class IcrControllerService {
    */
   async deleteScans(scanIds) {
     const scansToDelete = await this.gradedCardScanRepository.findByIds(scanIds);
-    
+
     // Delete associated files
     await this.deleteAssociatedFiles(scansToDelete);
-    
+
     // Delete from database
     const result = await this.gradedCardScanRepository.deleteManyByIds(scanIds);
-    
+
     Logger.info('IcrControllerService', 'Scans deleted', {
       deletedCount: result.deletedCount,
       scanIds: scanIds.slice(0, 5) // Log first 5 IDs
@@ -91,13 +91,13 @@ export class IcrControllerService {
    */
   async deleteStitchedImages(labelIds) {
     const labelsToDelete = await this.stitchedLabelRepository.findByIds(labelIds);
-    
+
     // Delete associated files
     await this.deleteStitchedFiles(labelsToDelete);
-    
+
     // Delete from database
     const result = await this.stitchedLabelRepository.deleteManyByIds(labelIds);
-    
+
     Logger.info('IcrControllerService', 'Stitched images deleted', {
       deletedCount: result.deletedCount,
       labelIds: labelIds.slice(0, 5)
@@ -111,7 +111,7 @@ export class IcrControllerService {
    */
   async syncStatuses(imageHashes) {
     const scans = await this.gradedCardScanRepository.findByHashes(imageHashes);
-    
+
     const statusMap = {};
     scans.forEach(scan => {
       statusMap[scan.imageHash] = scan.processingStatus;
@@ -135,22 +135,22 @@ export class IcrControllerService {
       // SECURITY: Strict path validation to prevent directory traversal
       const normalizedPath = path.resolve(imagePath);
       const uploadsDir = path.resolve(process.cwd(), 'uploads', 'icr');
-      
+
       // Define allowed subdirectories based on image type
       const allowedSubDirs = {
         'full': 'full-images',
         'label': 'extracted-labels',
         'stitched': 'stitched-images'
       };
-      
+
       const expectedSubDir = path.join(uploadsDir, allowedSubDirs[imageType]);
-      
+
       // SECURITY: Ensure path is within expected subdirectory
       if (!normalizedPath.startsWith(expectedSubDir)) {
-        Logger.warn('IcrControllerService', 'Path traversal attempt detected', { 
-          normalizedPath, 
-          expectedSubDir, 
-          imageType 
+        Logger.warn('IcrControllerService', 'Path traversal attempt detected', {
+          normalizedPath,
+          expectedSubDir,
+          imageType
         });
         throw new Error('Access denied: Invalid image path');
       }
@@ -159,37 +159,37 @@ export class IcrControllerService {
       const allowedExtensions = ['.jpg', '.jpeg', '.png', '.webp'];
       const fileExtension = path.extname(normalizedPath).toLowerCase();
       if (!allowedExtensions.includes(fileExtension)) {
-        Logger.warn('IcrControllerService', 'Invalid file extension attempted', { 
-          fileExtension, 
-          imagePath 
+        Logger.warn('IcrControllerService', 'Invalid file extension attempted', {
+          fileExtension,
+          imagePath
         });
         throw new Error('Invalid file type');
       }
 
       // SECURITY: Check if file exists and is readable
       await fs.access(normalizedPath, fsConstants.constants.R_OK);
-      
+
       const stats = await fs.stat(normalizedPath);
-      
+
       // SECURITY: Check file size (prevent serving huge files)
       const maxFileSize = 50 * 1024 * 1024; // 50MB limit
       if (stats.size > maxFileSize) {
-        Logger.warn('IcrControllerService', 'File too large', { 
-          size: stats.size, 
+        Logger.warn('IcrControllerService', 'File too large', {
+          size: stats.size,
           maxSize: maxFileSize,
-          imagePath 
+          imagePath
         });
         throw new Error('File too large');
       }
 
       const imageBuffer = await fs.readFile(normalizedPath);
-      
-      Logger.info('IcrControllerService', 'Image served successfully', { 
-        imagePath: path.basename(normalizedPath), 
-        imageType, 
-        size: stats.size 
+
+      Logger.info('IcrControllerService', 'Image served successfully', {
+        imagePath: path.basename(normalizedPath),
+        imageType,
+        size: stats.size
       });
-      
+
       return {
         buffer: imageBuffer,
         contentType: this.getContentType(normalizedPath),
@@ -197,10 +197,10 @@ export class IcrControllerService {
         lastModified: stats.mtime
       };
     } catch (error) {
-      Logger.error('IcrControllerService', 'Image access denied', { 
-        imagePath: path.basename(imagePath), 
-        imageType, 
-        error: error.message 
+      Logger.error('IcrControllerService', 'Image access denied', {
+        imagePath: path.basename(imagePath),
+        imageType,
+        error: error.message
       });
       throw new Error('Image not found or access denied');
     }

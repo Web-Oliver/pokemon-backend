@@ -15,12 +15,8 @@ import { validationMiddlewares } from '@/system/middleware/validationMiddleware.
 // NO CACHING FOR ICR - Removed all caching middleware to prevent workflow issues
 
 // Initialize controller with debug logging
-console.log('🔍 [DEBUG] Creating IcrBatchController...');
 try {
   const icrBatchController = new IcrBatchController();
-  console.log('✅ [DEBUG] IcrBatchController created successfully');
-  console.log('🔍 [DEBUG] Available methods:', Object.getOwnPropertyNames(icrBatchController).filter(name => typeof icrBatchController[name] === 'function'));
-  console.log('🔍 [DEBUG] stitchBatch type:', typeof icrBatchController.stitchBatch);
 } catch (error) {
   console.error('❌ [DEBUG] Failed to create IcrBatchController:', error.message);
   console.error('❌ [DEBUG] Stack:', error.stack);

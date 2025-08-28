@@ -19,8 +19,8 @@ class CollectionRepository extends BaseRepository {
         path: 'cardId',
         populate: {
           path: 'setId',
-          model: 'Set',
-        },
+          model: 'Set'
+        }
       };
     }
 

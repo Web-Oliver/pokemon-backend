@@ -7,8 +7,18 @@
 
 import FlexSearchIndexManager from './FlexSearchIndexManager.js';
 import Logger from '@/system/logging/Logger.js';
+import EnhancedSearchCache from '@/search/middleware/EnhancedSearchCache.js';
+import OperationManager from '@/system/utilities/OperationManager.js';
 
 class BaseSearchService {
+  constructor() {
+    // Initialize enhanced search cache
+    this.searchCache = new EnhancedSearchCache({
+      defaultTtl: 300, // 5 minutes
+      enableAnalytics: true,
+      compressionThreshold: 2048 // 2KB threshold
+    });
+  }
   /**
    * Standard search method pattern
    * @param {string} entityType - Type of entity being searched
@@ -23,29 +33,41 @@ class BaseSearchService {
     const { limit = 50, offset = 0, populate = true } = options;
     const { searchFields = [], searchWeights = {} } = searchConfig;
 
-    console.log(`[DEBUG BASESEARCH] performSearch called with query: "${query}", entityType: ${entityType}`);
+    // Only use caching for high-volume entities
+    const shouldCache = ['card', 'set', 'product', 'setproduct'].includes(entityType.toLowerCase());
 
-    Logger.operationStart(`${entityType.toUpperCase()}_SEARCH`, `Starting ${entityType} search`, {
-      query: query?.substring(0, 50),
+    const context = OperationManager.createContext('BaseSearch', 'performSearch', {
+      entityType,
+      hasQuery: Boolean(query?.trim()),
       filtersCount: Object.keys(filters).length,
-      limit,
-      offset
+      shouldCache
     });
 
-    const startTime = Date.now();
-    let results = [];
-    let searchMetadata = {
-      totalCount: 0,
-      searchMethod: 'direct',
-      searchTime: 0,
-      hasMore: false,
-      filters: filters
-    };
+    return OperationManager.executeOperation(context, async () => {
+      let cachedResult = null;
 
-    try {
+      // Check cache only for high-volume entities
+      if (shouldCache) {
+        const searchParams = { query, filters, options, searchType: entityType, engine: 'auto' };
+        cachedResult = await this.searchCache.get(searchParams);
+        if (cachedResult) {
+          return cachedResult.data;
+        }
+      }
+
+      const startTime = Date.now();
+      let results = [];
+      const searchMetadata = {
+        totalCount: 0,
+        searchMethod: 'direct',
+        searchTime: 0,
+        hasMore: false,
+        filters: filters,
+        cached: Boolean(cachedResult)
+      };
+
       // Try FlexSearch first if query exists and search fields are configured
       if (query && query.trim() && searchFields.length > 0) {
-        console.log(`[DEBUG BASESEARCH] Trying FlexSearch for query: "${query}", entityType: ${entityType}`);
         try {
           const flexSearchResults = await FlexSearchIndexManager.search(
             entityType,
@@ -83,22 +105,17 @@ class BaseSearchService {
 
       // Fallback to MongoDB search if FlexSearch didn't return results
       if (results.length === 0) {
-        console.log(`[DEBUG BASESEARCH] Fallback to MongoDB search. Query: "${query}", searchFields: ${JSON.stringify(searchFields)}`);
         const mongoQuery = {};
 
         // Add text search if query exists
         if (query && query.trim()) {
-          console.log(`[DEBUG BASESEARCH] Query exists and not empty: "${query.trim()}"`);
           // Handle wildcard queries - convert to "match all" behavior
           if (query.trim() === '*') {
-            console.log('[DEBUG BASESEARCH] Wildcard query detected - skipping text search conditions');
             // Wildcard means "return all" - use only filters
             Object.assign(mongoQuery, filters);
           } else if (searchFields.length > 0) {
-            console.log('[DEBUG BASESEARCH] Using custom field search with regex escaping');
             // Custom field search with regex escaping for safety
             const escapedQuery = this.escapeRegexSpecialChars(query);
-            console.log(`[DEBUG BASESEARCH] Escaped query: "${escapedQuery}"`);
 
             // FIXED: Only apply regex search to string fields, skip number fields
             const stringFields = searchFields.filter(field => field !== 'year' && field !== 'totalCardsInSet');
@@ -108,7 +125,7 @@ class BaseSearchService {
 
             // Handle number fields separately - only if query is a number
             const numberFields = searchFields.filter(field => field === 'year' || field === 'totalCardsInSet');
-            if (numberFields.length > 0 && (/^\d+$/).test(query.trim())) {
+            if (numberFields.length > 0 && (/^\\d+$/).test(query.trim())) {
               const numericValue = parseInt(query.trim(), 10);
               numberFields.forEach(field => {
                 searchConditions.push({ [field]: numericValue });
@@ -134,16 +151,12 @@ class BaseSearchService {
             } else if (conditions.length === 1) {
               Object.assign(mongoQuery, conditions[0]);
             }
-
-            console.log(`[DEBUG BASESEARCH] MongoDB query: ${JSON.stringify(mongoQuery)}`);
           } else {
-            console.log('[DEBUG BASESEARCH] Using text search fallback');
             // Combine filters with text search
             Object.assign(mongoQuery, filters);
             mongoQuery.$text = { $search: query };
           }
         } else {
-          console.log('[DEBUG BASESEARCH] No query provided or empty query - using filters only');
           Object.assign(mongoQuery, filters);
         }
 
@@ -168,14 +181,7 @@ class BaseSearchService {
       searchMetadata.searchTime = Date.now() - startTime;
       searchMetadata.hasMore = (offset + results.length) < searchMetadata.totalCount;
 
-      Logger.operationSuccess(`${entityType.toUpperCase()}_SEARCH`, `${entityType} search completed`, {
-        resultCount: results.length,
-        totalCount: searchMetadata.totalCount,
-        searchMethod: searchMetadata.searchMethod,
-        searchTime: searchMetadata.searchTime
-      });
-
-      return {
+      const finalResult = {
         results,
         metadata: searchMetadata,
         pagination: {
@@ -186,13 +192,14 @@ class BaseSearchService {
         }
       };
 
-    } catch (error) {
-      Logger.operationError(`${entityType.toUpperCase()}_SEARCH`, `${entityType} search failed`, error, {
-        query: query?.substring(0, 50),
-        filters
-      });
-      throw error;
-    }
+      // Cache only for high-volume entities
+      if (shouldCache && results.length > 0) {
+        const searchParams = { query, filters, options, searchType: entityType, engine: 'auto' };
+        await this.searchCache.set(searchParams, finalResult, { ttl: 300 }); // 5 minutes
+      }
+
+      return finalResult;
+    });
   }
 
   /**

@@ -33,8 +33,8 @@ function activityTrackingPlugin(schema, options = {}) {
     _activityTracking: {
       wasNew: { type: Boolean, default: false },
       isSaleUpdate: { type: Boolean, default: false },
-      previousState: { type: Object, default: {} },
-    },
+      previousState: { type: Object, default: {} }
+    }
   });
 
   // Pre-save hook: Mark new items and sale updates
@@ -99,7 +99,7 @@ function activityTrackingPlugin(schema, options = {}) {
         if (docToUpdate) {
           this.previousState = {
             myPrice: docToUpdate.myPrice,
-            images: docToUpdate.images || [],
+            images: docToUpdate.images || []
           };
         }
       } catch (error) {
@@ -157,12 +157,12 @@ function activityTrackingPlugin(schema, options = {}) {
 
                 if (newImageCount > previousImageCount) {
                   await ActivityService.logCardUpdated(doc, itemType, {
-                    imagesAdded: newImageCount - previousImageCount,
+                    imagesAdded: newImageCount - previousImageCount
                   });
                   console.log(`[ACTIVITY TRACKING] ${itemType} images added tracked:`, doc._id);
                 } else if (newImageCount < previousImageCount) {
                   await ActivityService.logCardUpdated(doc, itemType, {
-                    imagesRemoved: previousImageCount - newImageCount,
+                    imagesRemoved: previousImageCount - newImageCount
                   });
                   console.log(`[ACTIVITY TRACKING] ${itemType} images removed tracked:`, doc._id);
                 }

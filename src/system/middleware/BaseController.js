@@ -46,7 +46,7 @@ class BaseController {
       enableCaching: options.enableCaching !== false,
       enablePlugins: options.enablePlugins !== false,
       enableMetrics: options.enableMetrics !== false,
-      ...options,
+      ...options
     };
 
     // Initialize plugin manager and metrics (SRP compliance)
@@ -226,8 +226,8 @@ class BaseController {
         {
           populate: this.options.defaultPopulate,
           sort: this.options.defaultSort,
-          limit: parseInt(req.query.limit, 10) || this.options.defaultLimit,
-        },
+          limit: parseInt(req.query.limit, 10) || this.options.defaultLimit
+        }
       );
 
       // Execute after operation hooks
@@ -240,7 +240,7 @@ class BaseController {
       let responseData = {
         success: true,
         count: results.length,
-        data: results,
+        data: results
       };
 
       // Execute before response hooks
@@ -278,7 +278,7 @@ class BaseController {
       await this.executeHooks('beforeOperation', operation, { id: req.params.id }, context);
 
       const entity = await this.service.getById(req.params.id, {
-        populate: this.options.defaultPopulate,
+        populate: this.options.defaultPopulate
       });
 
       // Execute after operation hooks
@@ -290,7 +290,7 @@ class BaseController {
 
       let responseData = {
         success: true,
-        data: entity,
+        data: entity
       };
 
       // Execute before response hooks
@@ -328,7 +328,7 @@ class BaseController {
       await this.executeHooks('beforeOperation', operation, req.body, context);
 
       const entity = await this.service.create(req.body, {
-        populate: this.options.defaultPopulate,
+        populate: this.options.defaultPopulate
       });
 
       // Update context with created entity ID
@@ -343,7 +343,7 @@ class BaseController {
 
       let responseData = {
         success: true,
-        data: entity,
+        data: entity
       };
 
       // Execute before response hooks
@@ -383,7 +383,7 @@ class BaseController {
       await this.executeHooks('beforeOperation', operation, { id: req.params.id, data: req.body }, context);
 
       const entity = await this.service.update(req.params.id, req.body, {
-        populate: this.options.defaultPopulate,
+        populate: this.options.defaultPopulate
       });
 
       // Execute after operation hooks
@@ -395,7 +395,7 @@ class BaseController {
 
       let responseData = {
         success: true,
-        data: entity,
+        data: entity
       };
 
       // Execute before response hooks
@@ -445,7 +445,7 @@ class BaseController {
 
       let responseData = {
         success: true,
-        message: `${this.options.entityName} deleted successfully`,
+        message: `${this.options.entityName} deleted successfully`
       };
 
       // Execute before response hooks
@@ -503,7 +503,7 @@ class BaseController {
 
       let responseData = {
         success: true,
-        data: entity,
+        data: entity
       };
 
       // Execute before response hooks

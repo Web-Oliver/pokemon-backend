@@ -31,7 +31,7 @@ function createCRUDRoutes(controller, options = {}) {
     middleware = [],
     routeMiddleware = {},
     customRoutes = [],
-    routeOptions = {},
+    routeOptions = {}
   } = options;
 
   const router = express.Router();
@@ -171,7 +171,7 @@ function createReadOnlyRoutes(controller, options = {}) {
 function createCollectionItemRoutes(controller, options = {}) {
   return createCRUDRoutes(controller, {
     includeMarkAsSold: true,
-    ...options,
+    ...options
   });
 }
 
@@ -225,7 +225,7 @@ const ROUTE_PRESETS = {
     includeMarkAsSold: true,
     middleware: [],
     routeMiddleware: {},
-    customRoutes: [],
+    customRoutes: []
   },
 
   // Reference data (sets, reference products)
@@ -233,7 +233,7 @@ const ROUTE_PRESETS = {
     includeMarkAsSold: false,
     middleware: [],
     routeMiddleware: {},
-    customRoutes: [],
+    customRoutes: []
   },
 
   // Activity/audit logs
@@ -243,8 +243,8 @@ const ROUTE_PRESETS = {
     routeMiddleware: {},
     customRoutes: [
       { method: 'get', path: '/stats', handler: 'getStats' },
-      { method: 'post', path: '/:id/read', handler: 'markAsRead' },
-    ],
+      { method: 'post', path: '/:id/read', handler: 'markAsRead' }
+    ]
   },
 
   // Analytics/reporting
@@ -254,9 +254,9 @@ const ROUTE_PRESETS = {
     routeMiddleware: {},
     customRoutes: [
       { method: 'get', path: '/summary', handler: 'getSummary' },
-      { method: 'get', path: '/export', handler: 'exportData' },
-    ],
-  },
+      { method: 'get', path: '/export', handler: 'exportData' }
+    ]
+  }
 };
 
 export {

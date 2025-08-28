@@ -8,12 +8,12 @@
  * After: Single centralized utility with service layer integration
  */
 
-import container from '@/system/dependency-injection/index.js';
+import { container } from '@/system/dependency-injection/ServiceContainer.js';
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import SealedProduct from '@/collection/items/SealedProduct.js';
 import Logger from '@/system/logging/Logger.js';
-import { NotFoundError, ValidationError } from '@/system/middleware/errorHandler.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
 /**
  * Centralized item fetching utility

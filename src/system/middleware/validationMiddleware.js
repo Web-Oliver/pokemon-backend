@@ -4,6 +4,7 @@
  */
 
 import mongoose from 'mongoose';
+import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 
 /**
  * Core validation utility - runs validation chains in parallel
@@ -16,9 +17,9 @@ const validate = (validations) => {
     // Run all validations in parallel
     await Promise.all(validations.map(validation => validation.run(req, errors)));
 
-    console.log('🔍 VALIDATE MIDDLEWARE: Validation completed', { 
-      errorCount: errors.length, 
-      errors: errors 
+    console.log('🔍 VALIDATE MIDDLEWARE: Validation completed', {
+      errorCount: errors.length,
+      errors: errors
     });
 
     if (errors.length > 0) {
@@ -129,7 +130,7 @@ class ValidationChain {
 
   isObjectId() {
     this.validators.push((value, field) => {
-      if (value !== undefined && !mongoose.Types.ObjectId.isValid(value)) {
+      if (value !== undefined && !ValidatorFactory.isValidObjectId(value)) {
         return { field, message: `${field} must be a valid ObjectId` };
       }
       return null;
@@ -290,14 +291,14 @@ export const validationMiddlewares = {
   // ICR stitching status validation - validates scans can be stitched
   validateStitchingRequest: validate([
     body('imageHashes').exists().custom(async (value) => {
-      console.log('🔍 VALIDATION DEBUG: Starting stitching validation', { 
-        valueType: typeof value, 
-        isArray: Array.isArray(value), 
+      console.log('🔍 VALIDATION DEBUG: Starting stitching validation', {
+        valueType: typeof value,
+        isArray: Array.isArray(value),
         length: value?.length,
         firstFew: value?.slice?.(0, 3),
         fullValue: value
       });
-      
+
       if (!Array.isArray(value)) {
         console.error('🔴 VALIDATION ERROR: imageHashes is not an array:', typeof value, value);
         return 'imageHashes must be an array';
@@ -306,7 +307,7 @@ export const validationMiddlewares = {
         console.error('🔴 VALIDATION ERROR: imageHashes array is empty');
         return 'imageHashes array cannot be empty';
       }
-      
+
       // Validate each hash is a non-empty string
       for (let i = 0; i < value.length; i++) {
         const hash = value[i];
@@ -315,46 +316,46 @@ export const validationMiddlewares = {
           return `imageHashes[${i}] must be a non-empty string`;
         }
       }
-      
+
       // Check scan statuses - only allow 'extracted' and 'stitched' scans to be stitched/re-stitched
       try {
         console.log('🔍 VALIDATION DEBUG: Using repository pattern to query scans...');
         const GradedCardScanRepository = (await import('../../icr/infrastructure/repositories/GradedCardScanRepository.js')).default;
         const repository = new GradedCardScanRepository();
-        
+
         console.log('🔍 VALIDATION DEBUG: Querying scans for hashes...', { hashCount: value.length });
-        const scans = await repository.findMany({ 
-          imageHash: { $in: value } 
+        const scans = await repository.findMany({
+          imageHash: { $in: value }
         });
-        
-        console.log('🔍 VALIDATION DEBUG: Found scans:', { 
-          scansFound: scans.length, 
-          statuses: scans.map(s => ({ 
-            id: s._id.toString().substring(0, 8), 
-            status: s.processingStatus, 
+
+        console.log('🔍 VALIDATION DEBUG: Found scans:', {
+          scansFound: scans.length,
+          statuses: scans.map(s => ({
+            id: s._id.toString().substring(0, 8),
+            status: s.processingStatus,
             fileName: s.originalFileName,
-            imageHash: s.imageHash.substring(0, 16) + '...' 
+            imageHash: s.imageHash.substring(0, 16) + '...'
           }))
         });
-        
+
         if (scans.length === 0) {
           console.error('🔴 VALIDATION ERROR: No scans found for provided image hashes');
           return 'No scans found for provided image hashes';
         }
-        
-        const invalidScans = scans.filter(scan => 
+
+        const invalidScans = scans.filter(scan =>
           !['extracted', 'stitched'].includes(scan.processingStatus)
         );
-        
+
         if (invalidScans.length > 0) {
           const invalidStatuses = invalidScans.map(s => `${s.originalFileName} (${s.processingStatus})`).join(', ');
-          console.error('🔴 VALIDATION ERROR: Invalid scan statuses found:', { 
-            invalidCount: invalidScans.length, 
-            invalidStatuses 
+          console.error('🔴 VALIDATION ERROR: Invalid scan statuses found:', {
+            invalidCount: invalidScans.length,
+            invalidStatuses
           });
           return `Cannot stitch images with invalid statuses: ${invalidStatuses}. Only 'extracted' and 'stitched' images can be stitched/re-stitched.`;
         }
-        
+
         console.log('✅ VALIDATION SUCCESS: All scans have valid statuses for stitching');
         return null; // SUCCESS - return null, not true!
       } catch (error) {

@@ -1,6 +1,6 @@
 /**
  * Collection Service - Business Logic Layer
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Handles all collection business operations
  * - Dependency Inversion: Uses repositories for data access
@@ -12,7 +12,7 @@ import fs from 'fs/promises';
 import path from 'path';
 import Logger from '@/system/logging/Logger.js';
 
-export class CollectionService {
+export class OcrCollectionService {
   constructor() {
     // Initialize any dependencies here
   }
@@ -22,14 +22,14 @@ export class CollectionService {
    */
   async approveMatch(psaLabelId, cardId, extractedData, matchConfidence, userConfirmed = false) {
     try {
-      Logger.info('CollectionService', 'Starting match approval', {
+      Logger.info('OcrCollectionService', 'Starting match approval', {
         psaLabelId, cardId, matchConfidence, userConfirmed
       });
 
       // Get PSA label
       const PsaLabel = (await import('@/icr/infrastructure/persistence/PsaLabel.js')).default;
       const psaLabel = await PsaLabel.findById(psaLabelId);
-      
+
       if (!psaLabel) {
         throw new Error('PSA label not found');
       }
@@ -58,7 +58,7 @@ export class CollectionService {
 
       // Create PSA card data
       const psaCardData = this.createPsaCardData(matchedCard, psaLabel, extractedData, matchConfidence, collectionImagePath, userConfirmed);
-      
+
       const psaCard = new PsaGradedCard(psaCardData);
       await psaCard.save();
 
@@ -78,7 +78,7 @@ export class CollectionService {
         }
       });
 
-      Logger.info('CollectionService', 'Match approved successfully', {
+      Logger.info('OcrCollectionService', 'Match approved successfully', {
         psaCardId: psaCard._id,
         certificationNumber: psaCard.certificationNumber
       });
@@ -95,7 +95,7 @@ export class CollectionService {
       };
 
     } catch (error) {
-      Logger.error('CollectionService', 'Match approval failed', error, { psaLabelId, cardId });
+      Logger.error('OcrCollectionService', 'Match approval failed', error, { psaLabelId, cardId });
       throw error;
     }
   }
@@ -134,7 +134,7 @@ export class CollectionService {
         ...collectionData
       };
 
-      Logger.info('CollectionService', 'Collection item created', {
+      Logger.info('OcrCollectionService', 'Collection item created', {
         psaGradedCardId,
         cardName: psaCard.cardName
       });
@@ -145,7 +145,7 @@ export class CollectionService {
       };
 
     } catch (error) {
-      Logger.error('CollectionService', 'Collection item creation failed', error, { psaGradedCardId });
+      Logger.error('OcrCollectionService', 'Collection item creation failed', error, { psaGradedCardId });
       throw error;
     }
   }
@@ -156,7 +156,7 @@ export class CollectionService {
   async deletePsaLabel(id, reason = 'user_request') {
     try {
       const PsaLabel = (await import('@/icr/infrastructure/persistence/PsaLabel.js')).default;
-      
+
       const psaLabel = await PsaLabel.findById(id);
       if (!psaLabel) {
         throw new Error('PSA label not found');
@@ -184,7 +184,7 @@ export class CollectionService {
         }
       });
 
-      Logger.info('CollectionService', 'PSA label deleted', { id, reason });
+      Logger.info('OcrCollectionService', 'PSA label deleted', { id, reason });
 
       return {
         deletedLabelId: id,
@@ -193,7 +193,7 @@ export class CollectionService {
       };
 
     } catch (error) {
-      Logger.error('CollectionService', 'PSA label deletion failed', error, { id });
+      Logger.error('OcrCollectionService', 'PSA label deletion failed', error, { id });
       throw error;
     }
   }
@@ -214,7 +214,7 @@ export class CollectionService {
 
       await fs.copyFile(sourcePath, destinationPath);
 
-      Logger.info('CollectionService', 'Image moved to collection storage', {
+      Logger.info('OcrCollectionService', 'Image moved to collection storage', {
         sourcePath,
         destinationPath,
         newImageName
@@ -223,7 +223,7 @@ export class CollectionService {
       return `/uploads/${newImageName}`;
 
     } catch (error) {
-      Logger.warn('CollectionService', 'Failed to move image to collection', error);
+      Logger.warn('OcrCollectionService', 'Failed to move image to collection', error);
       return psaLabel._id.toString(); // Fallback
     }
   }
@@ -259,4 +259,4 @@ export class CollectionService {
   }
 }
 
-export default CollectionService;
+export default OcrCollectionService;

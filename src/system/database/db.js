@@ -11,12 +11,9 @@ const connectDB = async () => {
     const conn = await mongoose.connect(process.env.MONGO_URI, {
       connectTimeoutMS: 10000,
       socketTimeoutMS: 45000,
-      serverSelectionTimeoutMS: 10000,
+      serverSelectionTimeoutMS: 10000
     });
 
-    console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
-    console.log(`🗄️  Database Name: ${conn.connection.name}`);
-    console.log(`🔗 Connection URI: ${process.env.MONGO_URI}`);
 
     // Handle connection errors
     conn.connection.on('error', err => {
@@ -24,11 +21,9 @@ const connectDB = async () => {
     });
 
     conn.connection.on('disconnected', () => {
-      console.log('MongoDB disconnected, attempting to reconnect...');
     });
 
     conn.connection.on('reconnected', () => {
-      console.log('MongoDB reconnected');
     });
 
   } catch (error) {

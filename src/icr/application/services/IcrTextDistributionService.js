@@ -1,6 +1,6 @@
 /**
  * ICR Text Distribution Service
- * 
+ *
  * Single Responsibility: Distribute OCR text to individual scans
  * Extracted from IcrBatchService to follow SRP
  */

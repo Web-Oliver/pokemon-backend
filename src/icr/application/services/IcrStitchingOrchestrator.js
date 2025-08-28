@@ -16,6 +16,8 @@ import Logger from '@/system/logging/Logger.js';
 import { promises as fs } from 'fs';
 import path from 'path';
 
+import IcrPathManager from '@/icr/shared/IcrPathManager.js';
+
 class IcrStitchingOrchestrator {
   constructor(
     statusService = null,
@@ -49,7 +51,7 @@ class IcrStitchingOrchestrator {
       for (let i = 0; i < availableScans.length; i++) {
         const scan = availableScans[i];
         const position = stitchResult.labelPositions[i];
-        
+
         await this.gradedCardScanRepository.update(scan._id, {
           processingStatus: 'stitched',
           stitchedPosition: {
@@ -59,7 +61,7 @@ class IcrStitchingOrchestrator {
           }
         });
       }
-      
+
       const scansUpdated = availableScans.length;
 
       Logger.operationSuccess('ICR_STITCH_ORCHESTRATOR', 'Stitching orchestration completed', {
@@ -202,7 +204,7 @@ class IcrStitchingOrchestrator {
           $unset: { stitchedPosition: 1 }
         });
       }
-      
+
       const scansReset = stitched.labelHashes.length;
 
       Logger.operationSuccess('ICR_STITCH_DELETE', 'Stitched image deleted and scans reset', {
@@ -230,8 +232,13 @@ class IcrStitchingOrchestrator {
         quality: 90
       });
 
-      // Save stitched image
-      const stitchedImagePath = path.join(process.cwd(), 'uploads', 'icr', 'stitched-images', `stitched_${Date.now()}.jpg`);
+      // Generate filename using IcrPathManager
+      const filenameInfo = IcrPathManager.generateFileName('stitched_image.jpg', {
+        labelCount: labelBuffers.length
+      });
+
+      // Save stitched image using IcrPathManager
+      const stitchedImagePath = IcrPathManager.getFilePath('STITCHED_IMAGES', filenameInfo.descriptive);
       await fs.writeFile(stitchedImagePath, stitchResult.buffer);
 
       return {

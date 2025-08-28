@@ -1,8 +1,8 @@
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import SealedProduct from '@/collection/items/SealedProduct.js';
-import itemFetcher from '@/collection/shared/itemFetcher.js';
-import { ValidationError } from '@/system/middleware/errorHandler.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 /**
  * Facebook Item Fetcher Service
  * Single Responsibility: Fetch and prepare items for Facebook post generation
@@ -22,11 +22,22 @@ class FacebookItemFetcher {
     this.validator.validateItems(items);
 
     const fetchPromises = items.map(async (item) => {
-      const fetchedItem = await itemFetcher.fetchItemById(item.itemId, item.itemCategory);
+      // Map old itemCategory format to new itemType format
+      const itemTypeMap = {
+        'SealedProduct': 'sealed',
+        'PsaGradedCard': 'psa',
+        'RawCard': 'raw'
+      };
+      const itemType = itemTypeMap[item.itemCategory];
+      if (!itemType) {
+        throw new ValidationError(`Invalid itemCategory: ${item.itemCategory}`);
+      }
+
+      const fetchedItem = await fetchSingleItem(item.itemId, itemType);
 
       return {
         data: fetchedItem,
-        category: item.itemCategory,
+        category: item.itemCategory
       };
     });
 
@@ -34,7 +45,7 @@ class FacebookItemFetcher {
 
     return fetchResults.map((result) => ({
       data: result.data,
-      category: result.category,
+      category: result.category
     }));
   }
 

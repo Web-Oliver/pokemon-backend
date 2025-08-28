@@ -11,7 +11,7 @@ const rawCardSchema = new mongoose.Schema({
   priceHistory: priceHistorySchema,
   dateAdded: { type: Date, default: Date.now },
   sold: { type: Boolean, default: false },
-  saleDetails: saleDetailsSchema,
+  saleDetails: saleDetailsSchema
 });
 
 // Apply activity tracking plugin
@@ -21,8 +21,8 @@ rawCardSchema.plugin(activityTrackingPlugin, {
     trackCreation: true,
     trackSales: true,
     trackPriceUpdates: true,
-    trackImageUpdates: true,
-  },
+    trackImageUpdates: true
+  }
 });
 
 // Apply query optimization plugin
@@ -32,12 +32,12 @@ rawCardSchema.plugin(queryOptimizationPlugin, {
   enablePerformanceTracking: true,
   enableAutomaticIndexing: true,
   defaultLimit: 50,
-  maxLimit: 500,
+  maxLimit: 500
 });
 
 // Apply shared transform function for JSON responses
 rawCardSchema.set('toJSON', {
-  transform: collectionItemTransform,
+  transform: collectionItemTransform
 });
 
 const RawCard = mongoose.model('RawCard', rawCardSchema);

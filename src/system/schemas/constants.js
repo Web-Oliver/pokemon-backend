@@ -24,56 +24,56 @@ const COMMON_PATTERNS = {
   // Standard date field with default to now
   dateWithDefault: {
     type: Date,
-    default: Date.now,
+    default: Date.now
   },
 
   // Required string field
   requiredString: {
     type: String,
-    required: true,
+    required: true
   },
 
   // Optional string field
   optionalString: {
-    type: String,
+    type: String
   },
 
   // Boolean field with default false
   booleanDefault: {
     type: Boolean,
-    default: false,
+    default: false
   },
 
   // Required ObjectId reference
   requiredObjectId: (ref) => ({
     type: mongoose.Schema.Types.ObjectId,
     ref,
-    required: true,
+    required: true
   }),
 
   // Optional ObjectId reference
   optionalObjectId: (ref) => ({
     type: mongoose.Schema.Types.ObjectId,
-    ref,
+    ref
   }),
 
   // Required Decimal128 for prices
   requiredPrice: {
     type: mongoose.Types.Decimal128,
-    required: true,
+    required: true
   },
 
   // Optional Decimal128 for prices
   optionalPrice: {
-    type: mongoose.Types.Decimal128,
+    type: mongoose.Types.Decimal128
   },
 
   // Array of strings for images
   imagesArray: [
     {
-      type: String,
-    },
-  ],
+      type: String
+    }
+  ]
 };
 
 export {

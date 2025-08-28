@@ -48,7 +48,7 @@ class ActivityHelpers {
     const query = {
       timestamp: { $gte: startDate, $lte: endDate },
       status: 'active',
-      ...filters,
+      ...filters
     };
 
     return Activity.find(query)
@@ -67,7 +67,7 @@ class ActivityHelpers {
     return Activity.find({
       entityType,
       entityId,
-      status: 'active',
+      status: 'active'
     })
       .sort({ timestamp: -1 })
       .lean();
@@ -88,12 +88,12 @@ class ActivityHelpers {
             { title: { $regex: searchTerm, $options: 'i' } },
             { description: { $regex: searchTerm, $options: 'i' } },
             { details: { $regex: searchTerm, $options: 'i' } },
-            { searchVector: { $regex: searchTerm, $options: 'i' } },
-          ],
+            { searchVector: { $regex: searchTerm, $options: 'i' } }
+          ]
         },
         { status: 'active' },
-        filters,
-      ],
+        filters
+      ]
     };
 
     return Activity.find(query)
@@ -328,7 +328,7 @@ class ActivityHelpers {
       sale_updated: 'Sale Updated',
       milestone: 'Milestone Reached',
       collection_stats: 'Collection Statistics',
-      system: 'System Activity',
+      system: 'System Activity'
     };
 
     return labelMap[activityType] || activityType;

@@ -556,42 +556,8 @@ class UnifiedSearchQueryBuilder {
    * @deprecated Use buildSimpleSearchConditions instead
    * @static
    */
-  static buildTextSearchQuery(query, searchFields) {
-    if (!query || !query.trim()) {
-      return {};
-    }
-
-    const searchTerms = query.toLowerCase().trim().split(/\s+/);
-    const regexConditions = [];
-
-    // Create regex patterns for each search term
-    searchTerms.forEach(term => {
-      if (term.length === 0) return;
-
-      // Escape special regex characters
-      const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      const regex = new RegExp(escapedTerm, 'i');
-
-      if (searchFields && searchFields.length > 0) {
-        // Search in specific fields
-        const fieldConditions = searchFields.map(field => ({
-          [field]: { $regex: regex }
-        }));
-
-        regexConditions.push({ $or: fieldConditions });
-      } else {
-        // Generic search - will be customized by caller
-        regexConditions.push({ $regex: regex });
-      }
-    });
-
-    // Combine all conditions with AND logic
-    if (regexConditions.length > 0) {
-      return regexConditions.length === 1 ? regexConditions[0] : { $and: regexConditions };
-    }
-
-    return {};
-  }
+  // REMOVED: buildTextSearchQuery method was deprecated and removed
+  // Use buildSimpleSearchConditions() instead for modern search functionality
 }
 
 export default UnifiedSearchQueryBuilder;

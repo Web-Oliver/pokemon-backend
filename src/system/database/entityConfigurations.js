@@ -19,20 +19,20 @@ const POPULATE_PATTERNS = {
     path: 'cardId',
     populate: {
       path: 'setId',
-      model: 'Set',
-    },
+      model: 'Set'
+    }
   },
 
   // Product reference (for sealed products)
   PRODUCT_REFERENCE: {
-    path: 'productId',
+    path: 'productId'
   },
 
   // Set information only
   SET_ONLY: {
     path: 'setId',
-    model: 'Set',
-  },
+    model: 'Set'
+  }
 };
 
 /**
@@ -49,7 +49,7 @@ const FILTER_PATTERNS = {
   PRODUCT: ['sold', 'dateAdded', 'myPrice', 'category', 'availability'],
 
   // Search-specific filters
-  SEARCH: ['searchTerm', 'searchType', 'limit', 'page'],
+  SEARCH: ['searchTerm', 'searchType', 'limit', 'page']
 };
 
 /**
@@ -61,7 +61,7 @@ const SORT_PATTERNS = {
   PRICE_DESC: { myPrice: -1 },
   PRICE_ASC: { myPrice: 1 },
   NAME_ASC: { cardName: 1 },
-  SET_NAME_ASC: { setName: 1 },
+  SET_NAME_ASC: { setName: 1 }
 };
 
 /**
@@ -89,15 +89,15 @@ const ENTITY_CONFIGS = {
     searchWeights: {
       cardName: 3,
       setName: 2,
-      grade: 1,
+      grade: 1
     },
 
     // Validation rules
     requiredFields: ['cardId', 'grade'],
     validationRules: {
       grade: { type: 'number', min: 1, max: 10, integer: true },
-      myPrice: { type: 'number', min: 0 },
-    },
+      myPrice: { type: 'number', min: 0 }
+    }
   },
 
   // Raw Cards
@@ -121,7 +121,7 @@ const ENTITY_CONFIGS = {
     searchWeights: {
       cardName: 3,
       setName: 2,
-      condition: 1,
+      condition: 1
     },
 
     // Validation rules
@@ -131,8 +131,8 @@ const ENTITY_CONFIGS = {
         type: 'enum',
         choices: ['mint', 'near_mint', 'excellent', 'good', 'light_played', 'played', 'poor']
       },
-      myPrice: { type: 'number', min: 0 },
-    },
+      myPrice: { type: 'number', min: 0 }
+    }
   },
 
   // Sealed Products
@@ -156,7 +156,7 @@ const ENTITY_CONFIGS = {
     searchWeights: {
       name: 3,
       setName: 2,
-      category: 1,
+      category: 1
     },
 
     // Validation rules
@@ -166,8 +166,8 @@ const ENTITY_CONFIGS = {
         type: 'enum',
         choices: ['Booster-Boxes', 'Elite-Trainer-Boxes', 'Collection-Boxes', 'Theme-Decks', 'Other']
       },
-      myPrice: { type: 'number', min: 0 },
-    },
+      myPrice: { type: 'number', min: 0 }
+    }
   },
 
   // Cards (reference data)
@@ -191,7 +191,7 @@ const ENTITY_CONFIGS = {
     searchWeights: {
       cardName: 3,
       cardNumber: 2,
-      variety: 1,
+      variety: 1
     },
 
     // Validation rules
@@ -199,8 +199,8 @@ const ENTITY_CONFIGS = {
     validationRules: {
       cardNumber: { type: 'string', required: true },
       uniquePokemonId: { type: 'number', min: 1, integer: true, required: true },
-      uniqueSetId: { type: 'number', min: 1, integer: true, required: true },
-    },
+      uniqueSetId: { type: 'number', min: 1, integer: true, required: true }
+    }
   },
 
   // Sets (reference data)
@@ -222,15 +222,15 @@ const ENTITY_CONFIGS = {
     // Search configuration
     searchFields: ['setName'],
     searchWeights: {
-      setName: 1,
+      setName: 1
     },
 
     // Validation rules
     requiredFields: ['setName'],
     validationRules: {
       year: { type: 'number', min: 1996, max: 2030, integer: true },
-      totalCardsInSet: { type: 'number', min: 1, integer: true },
-    },
+      totalCardsInSet: { type: 'number', min: 1, integer: true }
+    }
   },
 
   // Auctions
@@ -253,7 +253,7 @@ const ENTITY_CONFIGS = {
     searchFields: ['topText', 'bottomText'],
     searchWeights: {
       topText: 2,
-      bottomText: 1,
+      bottomText: 1
     },
 
     // Validation rules
@@ -264,9 +264,9 @@ const ENTITY_CONFIGS = {
         choices: ['draft', 'active', 'sold', 'expired']
       },
       totalValue: { type: 'number', min: 0 },
-      soldValue: { type: 'number', min: 0 },
-    },
-  },
+      soldValue: { type: 'number', min: 0 }
+    }
+  }
 };
 
 /**
@@ -331,7 +331,7 @@ function getSearchConfig(entityType) {
 
   return {
     fields: config.searchFields || [],
-    weights: config.searchWeights || {},
+    weights: config.searchWeights || {}
   };
 }
 
@@ -349,7 +349,7 @@ function getValidationRules(entityType) {
 
   return {
     required: config.requiredFields || [],
-    rules: config.validationRules || {},
+    rules: config.validationRules || {}
   };
 }
 

@@ -24,7 +24,7 @@ const DEFAULT_OPTIONS = {
   defaultLimit: 100,
   maxLimit: 1000,
   enableCachedCounts: true,
-  optimizationLevel: 'standard', // 'minimal', 'standard', 'aggressive'
+  optimizationLevel: 'standard' // 'minimal', 'standard', 'aggressive'
 };
 
 /**
@@ -87,7 +87,7 @@ function addQueryOptimizationMethods(schema, config) {
       sort = { _id: -1 },
       populate = null,
       lean = true,
-      select = null,
+      select = null
     } = options;
 
     let query = this.find(filter);
@@ -125,7 +125,7 @@ function addQueryOptimizationMethods(schema, config) {
       limit = config.defaultLimit,
       sort = { _id: -1 },
       populate = null,
-      lean = true,
+      lean = true
     } = options;
 
     const skip = (page - 1) * limit;
@@ -135,13 +135,13 @@ function addQueryOptimizationMethods(schema, config) {
       limit: actualLimit,
       sort,
       populate,
-      lean,
+      lean
     }).skip(skip);
 
     // Return promise with both data and pagination info
     return Promise.all([
       query.exec(),
-      this.countDocuments(filter),
+      this.countDocuments(filter)
     ]).then(([data, total]) => ({
       data,
       pagination: {
@@ -150,8 +150,8 @@ function addQueryOptimizationMethods(schema, config) {
         total,
         pages: Math.ceil(total / actualLimit),
         hasNext: page < Math.ceil(total / actualLimit),
-        hasPrev: page > 1,
-      },
+        hasPrev: page > 1
+      }
     }));
   };
 
@@ -204,7 +204,7 @@ function addQueryOptimizationMethods(schema, config) {
 
     return this.bulkWrite(operations, {
       ordered,
-      bypassDocumentValidation,
+      bypassDocumentValidation
     });
   };
 }
@@ -230,7 +230,7 @@ function addPerformanceTrackingMiddleware(schema, config, entityType) {
           {
             type: this.queryType,
             filter: JSON.stringify(this.getFilter()),
-            resultCount: Array.isArray(result) ? result.length : result ? 1 : 0,
+            resultCount: Array.isArray(result) ? result.length : result ? 1 : 0
           }
         );
       }
@@ -252,7 +252,7 @@ function addPerformanceTrackingMiddleware(schema, config, entityType) {
           duration,
           {
             pipeline: JSON.stringify(this.pipeline()),
-            resultCount: Array.isArray(result) ? result.length : 0,
+            resultCount: Array.isArray(result) ? result.length : 0
           }
         );
       }
@@ -268,13 +268,13 @@ function addQueryLoggingMiddleware(schema, config, entityType) {
     Logger.debug(entityType, 'Query started', {
       type: 'find',
       filter: this.getFilter(),
-      options: this.getOptions(),
+      options: this.getOptions()
     });
   });
 
   schema.pre('aggregate', function () {
     Logger.debug(entityType, 'Aggregation started', {
-      pipeline: this.pipeline(),
+      pipeline: this.pipeline()
     });
   });
 }
@@ -293,7 +293,7 @@ function addAutomaticIndexes(schema, config, entityType) {
   const commonIndexes = [
     { dateAdded: -1 }, // Common sorting field
     { sold: 1 }, // Common filter field
-    { sold: 1, dateAdded: -1 }, // Common compound index
+    { sold: 1, dateAdded: -1 } // Common compound index
   ];
 
   // Add indexes that don't already exist
@@ -325,7 +325,7 @@ function addAutomaticIndexes(schema, config, entityType) {
     });
 
     schema.index(textIndex, {
-      name: `${entityType.toLowerCase()}_text_search`,
+      name: `${entityType.toLowerCase()}_text_search`
     });
 
     Logger.debug(entityType, 'Added text search index', textIndex);
@@ -419,7 +419,7 @@ const QueryOptimizationUtils = {
         const fullPipeline = [{ $match: this.filter }, ...pipeline];
 
         return model.aggregateOptimized(fullPipeline);
-      },
+      }
     };
   },
 
@@ -439,7 +439,7 @@ const QueryOptimizationUtils = {
       totalSize: stats.size,
       avgObjSize: stats.avgObjSize,
       storageSize: stats.storageSize,
-      totalIndexSize: stats.totalIndexSize,
+      totalIndexSize: stats.totalIndexSize
     };
   },
 
@@ -450,7 +450,7 @@ const QueryOptimizationUtils = {
    */
   async explainQuery(query) {
     return query.explain('executionStats');
-  },
+  }
 };
 
 export {

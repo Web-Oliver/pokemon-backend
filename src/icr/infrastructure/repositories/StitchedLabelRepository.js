@@ -1,6 +1,6 @@
 /**
  * Stitched Label Repository - Data Access Layer
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Only handles StitchedLabel data access
  * - Dependency Inversion: Abstracts database operations from services
@@ -29,8 +29,8 @@ export class StitchedLabelRepository extends BaseRepository {
    * Find stitched labels by multiple hashes
    */
   async findByHashes(stitchedImageHashes) {
-    return await this.findAll({ 
-      stitchedImageHash: { $in: stitchedImageHashes } 
+    return await this.findAll({
+      stitchedImageHash: { $in: stitchedImageHashes }
     });
   }
 
@@ -46,7 +46,7 @@ export class StitchedLabelRepository extends BaseRepository {
    */
   async findWithPagination(options = {}) {
     const { skip = 0, limit = 50, sort = { createdAt: -1 } } = options;
-    
+
     return await this.findAll(
       {},
       { skip, limit: parseInt(limit, 10), sort }

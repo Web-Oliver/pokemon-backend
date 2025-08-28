@@ -1,9 +1,9 @@
 /**
  * File System Utilities - Centralized File Operations
- * 
+ *
  * ELIMINATES CODE DUPLICATION for file operations across ICR services.
- * 
- * BEFORE: Duplicate content type, file deletion, and validation logic 
+ *
+ * BEFORE: Duplicate content type, file deletion, and validation logic
  *         spread across IcrFileService, IcrControllerService
  * AFTER: Single source of truth for all file operations
  */
@@ -75,11 +75,11 @@ export class FileSystemUtils {
   static validateImagePath(filePath, allowedBasePath) {
     const normalizedPath = path.resolve(filePath);
     const allowedBase = path.resolve(allowedBasePath);
-    
+
     if (!normalizedPath.startsWith(allowedBase)) {
       throw new Error('Invalid file path - outside allowed directory');
     }
-    
+
     return normalizedPath;
   }
 
@@ -90,7 +90,7 @@ export class FileSystemUtils {
   static isValidImageFile(filename, mimeType) {
     const allowedExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.bmp', '.webp'];
     const allowedMimeTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/bmp', 'image/webp'];
-    
+
     const ext = path.extname(filename).toLowerCase();
     return allowedExtensions.includes(ext) && allowedMimeTypes.includes(mimeType);
   }
@@ -109,7 +109,7 @@ export class FileSystemUtils {
 
       // Copy file
       await fs.copyFile(validatedSource, validatedDest);
-      
+
       Logger.info('FileSystemUtils', 'File copied successfully', {
         source: validatedSource,
         destination: validatedDest
@@ -117,9 +117,9 @@ export class FileSystemUtils {
 
       return validatedDest;
     } catch (error) {
-      Logger.error('FileSystemUtils', 'Failed to copy file', error, { 
-        sourcePath, 
-        destinationPath 
+      Logger.error('FileSystemUtils', 'Failed to copy file', error, {
+        sourcePath,
+        destinationPath
       });
       throw error;
     }

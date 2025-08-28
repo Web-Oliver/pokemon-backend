@@ -1,6 +1,6 @@
 /**
  * ICR Label Extraction Service
- * 
+ *
  * Single Responsibility: Extract PSA labels from uploaded scans
  * Extracted from IcrBatchService to follow SRP
  */
@@ -10,6 +10,9 @@ import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCa
 import Logger from '@/system/logging/Logger.js';
 import { promises as fs } from 'fs';
 import path from 'path';
+
+import OperationManager from '@/system/utilities/OperationManager.js';
+import IcrPathManager from '@/icr/shared/IcrPathManager.js';
 
 export class IcrLabelExtractionService {
   constructor() {
@@ -22,86 +25,68 @@ export class IcrLabelExtractionService {
    * EXACT EXTRACTION from IcrBatchService.js lines 123-196
    */
   async extractLabels(scanIds) {
-    try {
-      Logger.operationStart('ICR_EXTRACT_LABELS', 'Extracting PSA labels', { scanCount: scanIds.length });
+    const context = OperationManager.createContext('IcrLabelExtraction', 'extractLabels', {
+      scanCount: scanIds.length
+    });
 
-      const results = [];
-      const errors = [];
-      const skipped = [];
-
-      for (const scanId of scanIds) {
-        try {
-          const scan = await this.gradedCardScanRepository.findById(scanId);
-          if (!scan) {
-            errors.push({ scanId, error: 'Scan not found' });
-            continue;
-          }
-
-          if (scan.processingStatus !== 'uploaded') {
-            skipped.push({ scanId, reason: `Already processed (${scan.processingStatus})` });
-            continue;
-          }
-
-          // Read uploaded image file
-          const imageBuffer = await fs.readFile(scan.fullImage);
-
-          // Extract PSA label
-          const extractionResult = await this.psaLabelExtractionService.extractPsaLabel(imageBuffer);
-
-          // Save extracted label
-          const labelPath = await this.saveExtractedLabel(
-            extractionResult.labelBuffer,
-            scan.originalFileName,
-            scanId
-          );
-
-          // Update GradedCardScan with label info
-          await this.gradedCardScanRepository.update(scanId, {
-            labelImage: labelPath,
-            extractedDimensions: extractionResult.extractedDimensions,
-            processingStatus: 'extracted'
-          });
-
-          results.push({
-            scanId,
-            originalFileName: scan.originalFileName,
-            labelPath,
-            extractedDimensions: extractionResult.extractedDimensions
-          });
-
-        } catch (error) {
-          Logger.operationError('ICR_LABEL_EXTRACTION', 'Label extraction failed', error, { scanId });
-          errors.push({ scanId, error: error.message });
+    return OperationManager.executeBatchOperation(
+      context,
+      scanIds,
+      async (scanId, index) => {
+        const scan = await this.gradedCardScanRepository.findById(scanId);
+        if (!scan) {
+          throw new Error('Scan not found');
         }
+
+        if (scan.processingStatus !== 'uploaded') {
+          throw new Error(`Already processed (${scan.processingStatus})`);
+        }
+
+        // Read uploaded image file
+        const imageBuffer = await fs.readFile(scan.fullImage);
+
+        // Extract PSA label
+        const extractionResult = await this.psaLabelExtractionService.extractPsaLabel(imageBuffer);
+
+        // Save extracted label using IcrPathManager
+        const labelPath = await this.saveExtractedLabel(
+          extractionResult.labelBuffer,
+          scan.originalFileName,
+          scanId
+        );
+
+        // Update GradedCardScan with label info
+        await this.gradedCardScanRepository.update(scanId, {
+          labelImage: labelPath,
+          extractedDimensions: extractionResult.extractedDimensions,
+          processingStatus: 'extracted'
+        });
+
+        return {
+          scanId,
+          originalFileName: scan.originalFileName,
+          labelPath,
+          extractedDimensions: extractionResult.extractedDimensions
+        };
+      },
+      {
+        continueOnError: true,
+        maxConcurrent: 3
       }
-
-      Logger.operationSuccess('ICR_EXTRACT_LABELS', 'Label extraction completed', {
-        successful: results.length,
-        failed: errors.length,
-        skipped: skipped.length
-      });
-
-      return {
-        successful: results.length,
-        failed: errors.length,
-        skippedCount: skipped.length,
-        results,
-        errors,
-        skipped
-      };
-
-    } catch (error) {
-      Logger.operationError('ICR_EXTRACT_LABELS', 'Label extraction failed', error);
-      throw error;
-    }
+    );
   }
 
   /**
    * Helper method extracted from IcrBatchService lines 1050-1055
    */
-  async saveExtractedLabel(labelBuffer, originalName, index) {
-    const filename = `${originalName}_extracted_label.jpg`;
-    const filePath = path.join(process.cwd(), 'uploads', 'icr', 'extracted-labels', filename);
+  async saveExtractedLabel(labelBuffer, originalName, scanId) {
+    // Generate filename using IcrPathManager
+    const filenameInfo = IcrPathManager.generateFileName(`${originalName}_extracted_label.jpg`, {
+      scanId: scanId.toString().substring(0, 8)
+    });
+
+    // Use IcrPathManager for consistent path generation
+    const filePath = IcrPathManager.getFilePath('EXTRACTED_LABELS', filenameInfo.descriptive);
     await fs.writeFile(filePath, labelBuffer);
     return filePath;
   }

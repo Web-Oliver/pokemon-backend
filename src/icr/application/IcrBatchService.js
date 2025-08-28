@@ -134,7 +134,7 @@ class IcrBatchService {
         };
       }
 
-      // Create vertical stitched image using orchestrator  
+      // Create vertical stitched image using orchestrator
       const stitchedResult = await this.stitchingOrchestrator.createVerticalStitchedImage(labelBuffers);
 
       // Generate hash of stitched image
@@ -337,12 +337,11 @@ class IcrBatchService {
   }
 
   /**
-   * Distribute OCR text by imageHashes - delegates to text distribution service  
+   * Distribute OCR text by imageHashes - delegates to text distribution service
    */
   async distributeOcrTextByHashes(imageHashes, ocrResult = null) {
     return await this.textDistributionService.distributeOcrTextByHashes(imageHashes, ocrResult);
   }
-
 
 
   /**
@@ -375,8 +374,6 @@ class IcrBatchService {
     await fs.writeFile(filePath, file.buffer);
     return filePath;
   }
-
-
 
 
 }

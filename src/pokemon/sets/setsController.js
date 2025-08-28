@@ -1,92 +1,94 @@
 import Set from '@/pokemon/sets/Set.js';
 import { asyncHandler, NotFoundError, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
+import BaseController from '@/system/middleware/BaseController.js';
+import { ControllerExportFactory } from '@/system/factories/ControllerExportFactory.js';
 import SearchService from '@/search/services/SearchService.js';
-const searchService = new SearchService();
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
-const getAllSets = asyncHandler(async (req, res) => {
-  const sets = await Set.find();
-
-  res.status(200).json(sets);
-});
-
-const getSetsWithPagination = asyncHandler(async (req, res) => {
-  const { page = 1, limit = 15, q, year, cardsOnly } = req.query;
-
-  // Validate pagination parameters
-  const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, 100);
-
-  // Build base query
-  const baseQuery = {};
-
-  if (year) {
-    baseQuery.year = ValidatorFactory.validateYear(year);
-  }
-
-  // All sets in the Set model are PSA card sets (according to spec)
-  // No filtering needed since SealedProduct has its own setName field
-
-  // Get all sets matching base criteria (use existing database values)
-  const allSets = await Set.find(baseQuery).select('setName year totalCardsInSet total_grades setUrl uniqueSetId').lean();
-
-  let filteredSets = allSets;
-
-  // Apply search if query provided
-  if (q && q.trim()) {
-    // Build filters
-    const filters = {};
-
-    if (year) filters.year = parseInt(year, 10);
-
-    const searchOptions = {
-      limit: limitNum,
-      page: pageNum
-    };
-
-    const searchResults = await searchService.searchSets(q.trim(), filters, searchOptions);
-
-    filteredSets = searchResults;
-  } else {
-    // Default sort when no search query
-    filteredSets = allSets.sort((a, b) => {
-      // Sort by year descending, then by setName ascending
-      if (b.year !== a.year) {
-        return (b.year || 0) - (a.year || 0);
-      }
-      return a.setName.localeCompare(b.setName);
+// Sets Controller using BaseController pattern
+class SetsController extends BaseController {
+  constructor() {
+    super('SearchService', {
+      entityName: 'Set',
+      pluralName: 'sets',
+      enableCaching: true,
+      enableMetrics: true,
+      filterableFields: ['year', 'setName']
     });
+
+    this.searchService = new SearchService();
   }
 
-  // Apply pagination
-  const totalSets = filteredSets.length;
-  const totalPages = Math.ceil(totalSets / limitNum);
-  const skip = (pageNum - 1) * limitNum;
-  const sets = filteredSets.slice(skip, skip + limitNum);
+  // Custom method for paginated sets with search
+  getSetsWithPagination = asyncHandler(async (req, res) => {
+    const { page = 1, limit = 15, q, year } = req.query;
 
-  res.status(200).json({
-    sets,
-    currentPage: pageNum,
-    totalPages,
-    totalSets,
-    hasNextPage: pageNum < totalPages,
-    hasPrevPage: pageNum > 1,
+    // Validate pagination parameters
+    const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, 100);
+
+    // Build base query
+    const baseQuery = {};
+    if (year) {
+      baseQuery.year = ValidatorFactory.validateYear(year);
+    }
+
+    // Get all sets matching base criteria
+    const allSets = await Set.find(baseQuery).select('setName year totalCardsInSet total_grades setUrl uniqueSetId').lean();
+    let filteredSets = allSets;
+
+    // Apply search if query provided
+    if (q && q.trim()) {
+      const filters = {};
+      if (year) filters.year = parseInt(year, 10);
+
+      const searchOptions = { limit: limitNum, page: pageNum };
+      const searchResults = await this.searchService.searchSets(q.trim(), filters, searchOptions);
+      filteredSets = searchResults;
+    } else {
+      // Default sort when no search query
+      filteredSets = allSets.sort((a, b) => {
+        if (b.year !== a.year) {
+          return (b.year || 0) - (a.year || 0);
+        }
+        return a.setName.localeCompare(b.setName);
+      });
+    }
+
+    // Apply pagination
+    const totalSets = filteredSets.length;
+    const totalPages = Math.ceil(totalSets / limitNum);
+    const skip = (pageNum - 1) * limitNum;
+    const sets = filteredSets.slice(skip, skip + limitNum);
+
+    res.status(200).json({
+      sets,
+      currentPage: pageNum,
+      totalPages,
+      totalSets,
+      hasNextPage: pageNum < totalPages,
+      hasPrevPage: pageNum > 1
+    });
   });
+}
+
+// Use ControllerExportFactory to eliminate duplication
+const controllerExports = ControllerExportFactory.createPokemonControllerExports(SetsController, {
+  entityName: 'Set',
+  pluralName: 'sets',
+  includeMetrics: true,
+  customMethods: ['getSetsWithPagination']
 });
 
-const getSetById = asyncHandler(async (req, res) => {
-  ValidatorFactory.validateObjectId(req.params.id, 'Set ID');
+// Add custom method implementation
+controllerExports.getSetsWithPagination = (req, res, next) => controllerExports.getController().getSetsWithPagination(req, res, next);
 
-  const set = await Set.findById(req.params.id);
+// Export all methods generated by factory
+export const {
+  getAll: getAllSets,
+  getById: getSetById,
+  getSetsWithPagination,
+  // Controller getter
+  getSetsController: getController
+} = controllerExports;
 
-  if (!set) {
-    throw new NotFoundError('Set not found');
-  }
-
-  res.status(200).json(set);
-});
-
-export {
-  getAllSets,
-  getSetById,
-  getSetsWithPagination
-};
-export default getAllSets; ;
+// Default export for backward compatibility
+export default getAllSets;

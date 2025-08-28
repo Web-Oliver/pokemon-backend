@@ -21,7 +21,7 @@ import { ErrorFactory } from '@/system/errors/ErrorTypes.js';
 import { DbaExportService } from '@/marketplace/dba/dbaExportService.js';
 import { DbaIntegrationService } from '@/marketplace/dba/dbaIntegrationService.js';
 import { zipCollectionImages } from '@/marketplace/exports/exportHelpers.js';
-import ItemFetcher from '@/system/utilities/ItemFetcher.js';
+import ItemFetcher from '@/collection/shared/ItemFetcher.js';
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import SealedProduct from '@/collection/items/SealedProduct.js';
@@ -71,112 +71,72 @@ class ExportController extends BaseController {
   }
 
   /**
-   * ZIP PSA Card images
+   * Create generic ZIP export method to eliminate duplication
+   * @param {string} collectionType - Collection type (psa-cards, raw-cards, sealed-products)
+   * @returns {Function} - Configured export method
+   */
+  createZipExportMethod(collectionType) {
+    const operationMap = {
+      'psa-cards': { operation: 'zipPsaCards', displayName: 'ZIP PSA CARDS' },
+      'raw-cards': { operation: 'zipRawCards', displayName: 'ZIP RAW CARDS' },
+      'sealed-products': { operation: 'zipSealedProducts', displayName: 'ZIP SEALED PRODUCTS' }
+    };
+
+    const config = operationMap[collectionType];
+    if (!config) {
+      throw new Error(`Unsupported collection type: ${collectionType}`);
+    }
+
+    return asyncHandler(async (req, res) => {
+      const operation = config.operation;
+      const context = { req, res, operation };
+
+      Logger.operationStart('Export', config.displayName, req.query);
+
+      try {
+        await this.executeHooks('beforeOperation', operation, req.query, context);
+
+        const { ids } = req.query;
+        const result = await this.service.exportToZip(collectionType, ids);
+
+        await this.executeHooks('afterOperation', operation, result, context);
+
+        Logger.operationSuccess('Export', config.displayName, {
+          itemCount: result.data?.itemCount || 0
+        });
+
+        let responseData = {
+          success: true,
+          data: result.data
+        };
+
+        responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
+        res.status(200).json(responseData);
+      } catch (error) {
+        await this.executeHooks('onError', operation, error, context);
+        Logger.operationError('Export', config.displayName, error, req.query);
+        throw error;
+      }
+    });
+  }
+
+  /**
+   * ZIP PSA Card images - Generated method using factory pattern
    * GET /api/export/zip/psa-cards?ids=id1,id2,id3 (optional - if no ids, zip all)
    */
-  zipPsaCardImages = asyncHandler(async (req, res) => {
-    const operation = 'zipPsaCards';
-    const context = { req, res, operation };
-
-    Logger.operationStart('Export', 'ZIP PSA CARDS', req.query);
-
-    try {
-      await this.executeHooks('beforeOperation', operation, req.query, context);
-
-      const { ids } = req.query;
-      const result = await this.service.exportToZip('psa-cards', ids);
-
-      await this.executeHooks('afterOperation', operation, result, context);
-
-      Logger.operationSuccess('Export', 'ZIP PSA CARDS', {
-        itemCount: result.data?.itemCount || 0
-      });
-
-      let responseData = {
-        success: true,
-        data: result.data
-      };
-
-      responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
-      res.status(200).json(responseData);
-    } catch (error) {
-      await this.executeHooks('onError', operation, error, context);
-      Logger.operationError('Export', 'ZIP PSA CARDS', error, req.query);
-      throw error;
-    }
-  });
+  zipPsaCardImages = this.createZipExportMethod('psa-cards');
 
   /**
-   * ZIP Raw Card images
+   * ZIP Raw Card images - Generated method using factory pattern
    * GET /api/export/zip/raw-cards?ids=id1,id2,id3 (optional - if no ids, zip all)
    */
-  zipRawCardImages = asyncHandler(async (req, res) => {
-    const operation = 'zipRawCards';
-    const context = { req, res, operation };
-
-    Logger.operationStart('Export', 'ZIP RAW CARDS', req.query);
-
-    try {
-      await this.executeHooks('beforeOperation', operation, req.query, context);
-
-      const { ids } = req.query;
-      const result = await this.service.exportToZip('raw-cards', ids);
-
-      await this.executeHooks('afterOperation', operation, result, context);
-
-      Logger.operationSuccess('Export', 'ZIP RAW CARDS', {
-        itemCount: result.data?.itemCount || 0
-      });
-
-      let responseData = {
-        success: true,
-        data: result.data
-      };
-
-      responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
-      res.status(200).json(responseData);
-    } catch (error) {
-      await this.executeHooks('onError', operation, error, context);
-      Logger.operationError('Export', 'ZIP RAW CARDS', error, req.query);
-      throw error;
-    }
-  });
+  zipRawCardImages = this.createZipExportMethod('raw-cards');
 
   /**
-   * ZIP Sealed Product images
+   * ZIP Sealed Product images - Generated method using factory pattern
    * GET /api/export/zip/sealed-products?ids=id1,id2,id3 (optional - if no ids, zip all)
    */
-  zipSealedProductImages = asyncHandler(async (req, res) => {
-    const operation = 'zipSealedProducts';
-    const context = { req, res, operation };
-
-    Logger.operationStart('Export', 'ZIP SEALED PRODUCTS', req.query);
-
-    try {
-      await this.executeHooks('beforeOperation', operation, req.query, context);
-
-      const { ids } = req.query;
-      const result = await this.service.exportToZip('sealed-products', ids);
-
-      await this.executeHooks('afterOperation', operation, result, context);
-
-      Logger.operationSuccess('Export', 'ZIP SEALED PRODUCTS', {
-        itemCount: result.data?.itemCount || 0
-      });
-
-      let responseData = {
-        success: true,
-        data: result.data
-      };
-
-      responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
-      res.status(200).json(responseData);
-    } catch (error) {
-      await this.executeHooks('onError', operation, error, context);
-      Logger.operationError('Export', 'ZIP SEALED PRODUCTS', error, req.query);
-      throw error;
-    }
-  });
+  zipSealedProductImages = this.createZipExportMethod('sealed-products');
 
   /**
    * Export collection items to DBA.dk format
