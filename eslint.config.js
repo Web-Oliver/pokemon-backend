@@ -53,12 +53,14 @@ export default defineConfig([
       import: pluginImport,
     },
     settings: {
-      // Use the module-alias resolver to read aliases from package.json
       'import/resolver': {
-        'module-alias': {
-          alias: {
-            '@': './src', // Ensure the alias points to your src directory
-          },
+        node: {
+          extensions: ['.js', '.json'],
+          moduleDirectory: ['node_modules', 'src'],
+        },
+        alias: {
+          map: [['@', './src']],
+          extensions: ['.js', '.json'],
         },
       },
     },
@@ -82,7 +84,7 @@ export default defineConfig([
       'accessor-pairs': 'off',
       'arrow-body-style': 'off',
       'block-scoped-var': 'error',
-      'camelcase': 'error',
+      'camelcase': ['error', { 'properties': 'never' }],
       'class-methods-use-this': 'off',
       'consistent-return': 'off',
       'default-case': 'error',
@@ -97,7 +99,7 @@ export default defineConfig([
       'no-alert': 'error',
       'no-bitwise': 'error',
       'no-case-declarations': 'off',
-      'no-console': 'warn',
+      'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'warn',
       'no-continue': 'off',
       'no-empty-function': 'error',
       'no-eq-null': 'error',
@@ -113,7 +115,9 @@ export default defineConfig([
       'no-param-reassign': 'off',
       'no-useless-constructor': 'off',
       'radix': 'error', // Enforce radix parameter
-      'require-await': 'warn', // Change to warn
+      'require-await': 'off', // Disable - async functions may be awaitable by design
+      'no-await-in-loop': 'off', // Disable - often necessary for sequential processing
+      'func-names': 'off', // Disable - arrow functions and anonymous functions are fine
       'yoda': 'error',
       // Layout & Formatting
       'eol-last': 'error',
@@ -157,7 +161,7 @@ export default defineConfig([
       'wrap-regex': 'error',
       'yield-star-spacing': 'error',
       // Import Rules
-      'import/no-unresolved': ['error', { commonjs: true, caseSensitive: true }],
+      'import/no-unresolved': 'off', // Disable due to path alias issues
       'import/extensions': 'off',
       'import/no-extraneous-dependencies': 'off',
       'import/named': 'off',

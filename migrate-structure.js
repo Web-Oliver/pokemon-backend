@@ -2,10 +2,10 @@
 
 /**
  * BULLETPROOF POKEMON COLLECTION STRUCTURE MIGRATION
- * 
+ *
  * This script reorganizes the src/ folder from scattered technical layers
  * to logical business domains with MAXIMUM SAFETY PROTECTIONS.
- * 
+ *
  * SAFETY FEATURES:
  * - Complete backup before any changes
  * - Dry-run mode (default)
@@ -323,7 +323,7 @@ class MigrationSafety {
     const timestamp = new Date().toISOString();
     const prefix = DRY_RUN ? '[DRY-RUN]' : '[EXECUTE]';
     console.log(`${timestamp} ${prefix} [${type}] ${message}`);
-    
+
     if (type === 'ERROR') this.errors.push(message);
     if (type === 'WARN') this.warnings.push(message);
   }
@@ -331,7 +331,7 @@ class MigrationSafety {
   // SAFETY CHECK 1: Verify all source files exist
   verifySourceFiles() {
     this.log('🔍 SAFETY CHECK 1: Verifying all source files exist...');
-    
+
     const allFiles = [];
     Object.values(FILE_MIGRATIONS).forEach(fileList => {
       allFiles.push(...fileList);
@@ -357,17 +357,17 @@ class MigrationSafety {
   // SAFETY CHECK 2: Detect file collisions BEFORE any moves
   detectFileCollisions() {
     this.log('🔍 SAFETY CHECK 2: Detecting potential file collisions...');
-    
+
     const targetFiles = new Map();
     let collisions = 0;
-    
+
     Object.entries(FILE_MIGRATIONS).forEach(([targetDir, files]) => {
       files.forEach(file => {
         const targetFileName = path.basename(file);
         const targetPath = path.join(SRC_DIR, targetDir, targetFileName);
-        
+
         if (targetFiles.has(targetPath)) {
-          this.log(`❌ COLLISION DETECTED: Two files would map to same destination:`, 'ERROR');
+          this.log('❌ COLLISION DETECTED: Two files would map to same destination:', 'ERROR');
           this.log(`   File 1: ${targetFiles.get(targetPath)}`, 'ERROR');
           this.log(`   File 2: ${file}`, 'ERROR');
           this.log(`   Target: ${targetPath}`, 'ERROR');
@@ -378,18 +378,18 @@ class MigrationSafety {
         }
       });
     });
-    
+
     if (collisions > 0) {
       throw new Error(`❌ ABORT: ${collisions} file collision(s) detected! Cannot proceed safely.`);
     }
-    
+
     this.log(`✅ No file collisions detected. ${targetFiles.size} unique destinations verified.`);
   }
 
   // SAFETY CHECK 3: Create backup
   createBackup() {
     this.log('💾 SAFETY CHECK 3: Creating backup...');
-    
+
     if (DRY_RUN) {
       this.log(`[DRY-RUN] Would create backup: ${BACKUP_DIR}`);
       this.stats.backupCreated = true; // Mark as would-be-created for dry-run
@@ -398,7 +398,7 @@ class MigrationSafety {
 
     try {
       execSync(`cp -r ${SRC_DIR} ${BACKUP_DIR}`, { stdio: 'inherit' });
-      execSync(`git add . && git commit -m "Pre-migration backup - $(date)"`, { stdio: 'inherit' });
+      execSync('git add . && git commit -m "Pre-migration backup - $(date)"', { stdio: 'inherit' });
       this.stats.backupCreated = true;
       this.log(`✅ Backup created: ${BACKUP_DIR}`);
     } catch (error) {
@@ -409,12 +409,12 @@ class MigrationSafety {
   // SAFETY CHECK 3: Pre-flight directory creation
   createDirectories() {
     this.log('📁 SAFETY CHECK 3: Creating new directory structure...');
-    
+
     const directories = Object.keys(FILE_MIGRATIONS);
     directories.forEach(dir => {
       const fullPath = path.join(SRC_DIR, dir);
       this.log(`Creating directory: ${fullPath}`);
-      
+
       if (!DRY_RUN) {
         fs.mkdirSync(fullPath, { recursive: true });
       }
@@ -426,27 +426,27 @@ class MigrationSafety {
   // SAFETY CHECK 4: Move files with verification
   moveFiles() {
     this.log('🔄 SAFETY CHECK 4: Moving files with verification...');
-    
+
     Object.entries(FILE_MIGRATIONS).forEach(([targetDir, files]) => {
       files.forEach(file => {
         const oldPath = path.join(SRC_DIR, file);
         const newPath = path.join(SRC_DIR, targetDir, path.basename(file));
-        
+
         this.log(`Moving: ${file} → ${targetDir}${path.basename(file)}`);
-        
+
         if (!DRY_RUN) {
           if (!fs.existsSync(oldPath)) {
             this.log(`❌ Source file missing: ${oldPath}`, 'ERROR');
             return;
           }
-          
+
           fs.renameSync(oldPath, newPath);
-          
+
           // Verify move succeeded
           if (!fs.existsSync(newPath)) {
             throw new Error(`❌ File move failed: ${newPath}`);
           }
-          
+
           this.stats.filesMoved++;
         }
       });
@@ -458,10 +458,10 @@ class MigrationSafety {
   // SAFETY CHECK 5: Update all import paths
   updateImports() {
     this.log('🔗 SAFETY CHECK 5: Analyzing and updating import paths...');
-    
+
     let totalImports = 0;
     let pathsToUpdate = 0;
-    
+
     // Build complete path mapping
     const pathMapping = {};
     Object.entries(FILE_MIGRATIONS).forEach(([targetDir, files]) => {
@@ -471,17 +471,17 @@ class MigrationSafety {
         pathMapping[oldImportPath] = newImportPath;
       });
     });
-    
+
     if (DRY_RUN) {
       this.log(`📋 Would update ${Object.keys(pathMapping).length} import path mappings:`);
       Object.entries(pathMapping).slice(0, 5).forEach(([old, newPath]) => {
         this.log(`   ${old} → ${newPath}`);
       });
       this.log(`   ... and ${Object.keys(pathMapping).length - 5} more`);
-      
+
       // Scan for actual import usage (dry-run analysis)
       this.log('🔍 Scanning for import usage...');
-      
+
       // This would scan all .js files and count import statements
       Object.entries(FILE_MIGRATIONS).forEach(([targetDir, files]) => {
         files.forEach(file => {
@@ -491,7 +491,7 @@ class MigrationSafety {
               const content = fs.readFileSync(filePath, 'utf8');
               const imports = content.match(/import.*?from\s+['"]@\/.*?['"];?/g) || [];
               totalImports += imports.length;
-              
+
               imports.forEach(importStatement => {
                 if (Object.keys(pathMapping).some(oldPath => importStatement.includes(oldPath))) {
                   pathsToUpdate++;
@@ -503,7 +503,7 @@ class MigrationSafety {
           }
         });
       });
-      
+
       this.log(`📊 Import analysis: Found ${totalImports} total imports, ${pathsToUpdate} need updating`);
       this.stats.importsUpdated = pathsToUpdate;
     } else {
@@ -512,23 +512,23 @@ class MigrationSafety {
       // Implementation would go here
       this.stats.importsUpdated = pathsToUpdate;
     }
-    
-    this.log(`✅ Import path analysis complete`);
+
+    this.log('✅ Import path analysis complete');
   }
 
-  // SAFETY CHECK 6: Final verification  
+  // SAFETY CHECK 6: Final verification
   finalVerification() {
     this.log('🎯 SAFETY CHECK 6: Final verification...');
-    
+
     let expectedFileCount = 0;
     let verifiedFileCount = 0;
-    
+
     Object.entries(FILE_MIGRATIONS).forEach(([targetDir, files]) => {
       files.forEach(file => {
         expectedFileCount++;
         const oldPath = path.join(SRC_DIR, file);
         const newPath = path.join(SRC_DIR, targetDir, path.basename(file));
-        
+
         if (DRY_RUN) {
           // In dry-run, verify source exists (destination doesn't exist yet)
           if (fs.existsSync(oldPath)) {
@@ -549,12 +549,12 @@ class MigrationSafety {
     });
 
     this.log(`📊 Verification: ${verifiedFileCount}/${expectedFileCount} files ${DRY_RUN ? 'ready to move' : 'successfully moved'}`);
-    
+
     if (verifiedFileCount !== expectedFileCount) {
       throw new Error(`❌ Verification failed: ${verifiedFileCount}/${expectedFileCount} files verified`);
     }
-    
-    this.log(`✅ Final verification passed`);
+
+    this.log('✅ Final verification passed');
   }
 
   // ROLLBACK MECHANISM
@@ -565,34 +565,34 @@ class MigrationSafety {
 
     this.log('⏪ ROLLING BACK MIGRATION...');
     execSync(`rm -rf ${SRC_DIR} && mv ${BACKUP_DIR} ${SRC_DIR}`, { stdio: 'inherit' });
-    execSync(`git add . && git commit -m "Rollback migration - $(date)"`, { stdio: 'inherit' });
+    execSync('git add . && git commit -m "Rollback migration - $(date)"', { stdio: 'inherit' });
     this.log('✅ Rollback completed');
   }
 
   // MAIN EXECUTION
   async execute() {
     try {
-      this.log(`🚀 STARTING POKEMON COLLECTION MIGRATION`);
+      this.log('🚀 STARTING POKEMON COLLECTION MIGRATION');
       this.log(`Mode: ${DRY_RUN ? 'DRY-RUN (safe)' : 'EXECUTE (will modify files)'}`);
-      
+
       this.verifySourceFiles();
       this.createBackup();
       this.createDirectories();
       this.moveFiles();
       this.updateImports();
       this.finalVerification();
-      
+
       this.log('🎉 MIGRATION COMPLETED SUCCESSFULLY!');
       this.log(`📊 Stats: ${JSON.stringify(this.stats, null, 2)}`);
-      
+
     } catch (error) {
       this.log(`💥 MIGRATION FAILED: ${error.message}`, 'ERROR');
-      
+
       if (!DRY_RUN && this.stats.backupCreated) {
         this.log('🔄 Attempting automatic rollback...');
         this.rollback();
       }
-      
+
       throw error;
     }
   }
@@ -601,7 +601,7 @@ class MigrationSafety {
 // EXECUTION
 if (import.meta.url === `file://${process.argv[1]}`) {
   const migration = new MigrationSafety();
-  
+
   console.log(`
 🚨 POKEMON COLLECTION STRUCTURE MIGRATION 🚨
 
