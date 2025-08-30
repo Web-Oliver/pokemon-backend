@@ -1,12 +1,10 @@
-import BaseController from '@/system/middleware/BaseController.js';
-import { DatabaseError } from '@/system/errors/ErrorTypes.js';
-
 /**
- * Controller for system status endpoints
+ * Simple Status Controller for system health endpoints
+ * Does NOT extend BaseController - standalone utility controller
  */
-export default class StatusController extends BaseController {
+export default class StatusController {
     constructor(statusService) {
-        super();
+        console.log('[DEBUG] StatusController instantiated - standalone controller');
         this.statusService = statusService;
     }
 
@@ -14,12 +12,32 @@ export default class StatusController extends BaseController {
      * Get database status and counts
      */
     async getStatus(req, res) {
+        console.log('[DEBUG] StatusController.getStatus called');
         try {
             const data = await this.statusService.getDatabaseCounts();
-            this.sendSuccessResponse(res, data);
+            res.status(200).json({
+                success: true,
+                data: data,
+                meta: {
+                    controller: 'StatusController',
+                    method: 'getStatus',
+                    timestamp: new Date().toISOString()
+                }
+            });
         } catch (error) {
-            this.logger.error('Status check failed', error);
-            throw new DatabaseError('Failed to get database status');
+            console.error('[ERROR] Status check failed', error);
+            res.status(500).json({
+                success: false,
+                error: {
+                    message: 'Failed to get database status',
+                    details: error.message
+                },
+                meta: {
+                    controller: 'StatusController',
+                    method: 'getStatus',
+                    timestamp: new Date().toISOString()
+                }
+            });
         }
     }
 
@@ -27,12 +45,32 @@ export default class StatusController extends BaseController {
      * Get comprehensive system status
      */
     async getSystemHealth(req, res) {
+        console.log('[DEBUG] StatusController.getSystemHealth called');
         try {
             const data = await this.statusService.getSystemStatus();
-            this.sendSuccessResponse(res, data);
+            res.status(200).json({
+                success: true,
+                data: data,
+                meta: {
+                    controller: 'StatusController',
+                    method: 'getSystemHealth',
+                    timestamp: new Date().toISOString()
+                }
+            });
         } catch (error) {
-            this.logger.error('System health check failed', error);
-            throw new DatabaseError('Failed to get system status');
+            console.error('[ERROR] System health check failed', error);
+            res.status(500).json({
+                success: false,
+                error: {
+                    message: 'Failed to get system status',
+                    details: error.message
+                },
+                meta: {
+                    controller: 'StatusController',
+                    method: 'getSystemHealth',
+                    timestamp: new Date().toISOString()
+                }
+            });
         }
     }
 }
