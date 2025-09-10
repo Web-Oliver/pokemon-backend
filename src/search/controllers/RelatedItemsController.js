@@ -3,7 +3,6 @@ import mongoose from 'mongoose';
 import BaseController from '@/system/middleware/BaseController.js';
 import { container } from '@/system/dependency-injection/ServiceContainer.js';
 import Logger from '@/system/logging/Logger.js';
-import { pluginManager } from '@/system/plugins/PluginManager.js';
 
 /**
  * Related Items Controller
@@ -24,59 +23,8 @@ class RelatedItemsController extends BaseController {
       pluralName: 'relatedItems',
       includeMarkAsSold: false,
       enableCaching: true,
-      enablePlugins: true,
       enableMetrics: true,
       filterableFields: ['setId', 'category', 'type']
-    });
-
-    // Apply global plugins for related items
-    pluginManager.applyPlugins(this, 'RelatedItem');
-
-    // Add related-items-specific plugins
-    this.addPlugin('recommendationEnhancements', {
-      beforeOperation: async (operation, data, context) => {
-        // Add recommendation-specific validation
-        if (operation === 'getRecommendations' && !data.itemId) {
-          throw new ValidationError('Item ID is required for recommendations');
-        }
-
-        // Log recommendation requests for analytics
-        if (['getRecommendations', 'getTrending'].includes(operation)) {
-          Logger.info('RelatedItemsController', `${operation} requested`, {
-            operation,
-            params: data,
-            timestamp: new Date().toISOString()
-          });
-        }
-      },
-
-      beforeResponse: (operation, data, context) => {
-        // Add recommendation-specific metadata
-        if (data.data && data.meta) {
-          data.meta = {
-            ...data.meta,
-            recommendationEngine: 'similarity-based',
-            enhancedSearch: true,
-            cacheEnabled: this.options.enableCaching
-          };
-        }
-        return data;
-      }
-    });
-
-    this.addPlugin('trendingAnalytics', {
-      afterOperation: async (operation, result, context) => {
-        // Track trending requests for analytics
-        if (operation === 'getTrending') {
-          const { type, period, limit } = context.req?.query || {};
-          Logger.debug('RelatedItemsController', 'Trending analytics', {
-            type,
-            period,
-            limit,
-            resultsCount: result.data?.trending?.length || 0
-          });
-        }
-      }
     });
   }
 

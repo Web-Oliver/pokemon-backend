@@ -102,31 +102,6 @@ router.get('/sets', validationMiddlewares.validateSearchEndpoint, searchCacheMid
 router.get('/set-products', validationMiddlewares.validateSearchEndpoint, searchCacheMiddleware(), searchController.searchSetProducts);
 
 /**
- * @route   GET /api/search/cards/:cardId/related
- * @desc    Get related cards in the same set (bidirectional relationship)
- * @access  Public
- * @param   {string} cardId - Card ID
- * @query   {number} limit - Maximum related cards (optional, default 10)
- */
-router.get('/cards/:cardId/related', validationMiddlewares.validateObjectIdParam, searchCacheMiddleware(), searchController.getRelatedCards);
-
-/**
- * @route   GET /api/search/products/:productId/related
- * @desc    Get related products in the same set product category (bidirectional relationship)
- * @access  Public
- * @param   {string} productId - Product ID
- * @query   {number} limit - Maximum related products (optional, default 10)
- */
-router.get('/products/:productId/related', validationMiddlewares.validateObjectIdParam, searchCacheMiddleware(), searchController.getRelatedProducts);
-
-/**
- * @route   GET /api/search/types
- * @desc    Get available search types and their options
- * @access  Public
- */
-router.get('/types', searchController.getSearchTypes);
-
-/**
  * @route   GET /api/search/stats
  * @desc    Get search statistics
  * @access  Public

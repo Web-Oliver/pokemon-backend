@@ -125,5 +125,9 @@ export const ServiceKeys = {
   
   // System Services
   STATUS_SERVICE: 'StatusService',
-  STATUS_CONTROLLER: 'StatusController'
-};
+  STATUS_CONTROLLER: 'StatusController',
+  HEALTH_SERVICE: 'HealthService',
+  HEALTH_CONTROLLER: 'HealthController',
+  ENDPOINTS_SERVICE: 'EndpointsService',
+  ENDPOINTS_CONTROLLER: 'EndpointsController'
+};;

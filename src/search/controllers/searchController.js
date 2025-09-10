@@ -10,14 +10,13 @@
 
 import { search, suggest, getStats } from './UnifiedSearchController.js';
 import { searchCards, searchProducts, searchSets, searchSetProducts } from './EntitySearchController.js';
-import { getRelatedCards, getRelatedProducts, getRecommendations, getTrending } from './RelatedItemsController.js';
+import { getRecommendations, getTrending } from './RelatedItemsController.js';
 // Export all search functionality from focused controllers
 const searchController = {
   // Unified Search functionality
   search,
   suggest,
   getStats,
-  getSearchTypes: () => ({ types: ['cards', 'products', 'sets'] }), // Simple types listing
   getSearchStats: getStats, // Alias for getStats
 
   // Entity-specific search
@@ -27,8 +26,6 @@ const searchController = {
   searchSetProducts, // FIXED: Now uses dedicated SetProduct search
 
   // Related items and recommendations
-  getRelatedCards,
-  getRelatedProducts,
   getRecommendations,
   getTrending
 };

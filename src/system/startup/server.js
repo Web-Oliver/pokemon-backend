@@ -15,7 +15,7 @@ const __dirname = path.dirname(__filename);
 import connectDB from '@/system/database/db.js';
 import { enhancedErrorMiddleware } from '@/system/middleware/CentralizedErrorHandler.js';
 import { compressionMiddleware, setCacheHeaders } from '@/system/middleware/compression.js';
-import { getCacheStats, cacheManager } from '@/search/middleware/searchCache.js';
+import { getCacheStats } from '@/search/middleware/searchCache.js';
 import { initializeCacheSystem, shutdownCacheSystem } from '@/system/cache/initializeCacheSystem.js';
 // REMOVED: Legacy response transformer - unified response formatter used instead
 import { createVersioningMiddleware } from '@/system/middleware/versioning.js';
@@ -32,7 +32,6 @@ import setProductsRoute from '@/pokemon/products/setProducts.js';
 import dbaSelection from '@/marketplace/dba/dbaSelection.js';
 import productsRoute from '@/pokemon/products/products.js';
 import cacheManagement from '@/system/management/cacheManagement.js';
-import pluginManagement from '@/system/management/pluginManagement.js';
 // NEW: Import service bootstrap for dependency injection
 import { bootstrapServices, shutdownServices } from '@/system/startup/serviceBootstrap.js';
 
@@ -87,8 +86,8 @@ app.use('/api', responseFormatter({
 
 // REMOVED: Legacy response transformer - causes conflicts with unified response formatter
 
-// Serve static files (images) - SINGLE STANDARDIZED LOCATION
-const uploadsPath = path.join(__dirname, '../../../uploads');
+// Serve static files (images) - BACKEND UPLOADS DIRECTORY
+const uploadsPath = path.join(process.cwd(), 'uploads');
 
 
 // Collection images: /uploads/collection/
@@ -111,7 +110,6 @@ app.use('/api/activities', activityRoutes);
 app.use('/api/dba-selection', dbaSelection);
 app.use('/api/products', productsRoute);
 app.use('/api/cache', cacheManagement);
-app.use('/api/plugins', pluginManagement);
 app.use('/api/icr', icrBatchRoute);
 
 // Root endpoint
@@ -128,27 +126,11 @@ app.get('/', (req, res) => {
 app.get('/api/health', (req, res) => {
   const cacheStats = getCacheStats();
 
-  let enhancedCacheMetrics = {};
-
-  try {
-    enhancedCacheMetrics = cacheManager.getMetrics();
-  } catch (error) {
-    enhancedCacheMetrics = { error: 'Enhanced cache not available' };
-  }
-
   res.status(200).json({
     status: 'healthy',
     timestamp: new Date().toISOString(),
     uptime: process.uptime(),
-    cache: {
-      legacy: {
-        hitRate: Math.round(cacheStats.hitRate * 100) / 100,
-        totalKeys: cacheStats.keys,
-        hits: cacheStats.hits,
-        misses: cacheStats.misses
-      },
-      enhanced: enhancedCacheMetrics
-    },
+    cache: cacheStats,
     memory: {
       used: Math.round((process.memoryUsage().heapUsed / 1024 / 1024) * 100) / 100,
       total: Math.round((process.memoryUsage().heapTotal / 1024 / 1024) * 100) / 100

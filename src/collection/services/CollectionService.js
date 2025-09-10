@@ -209,7 +209,7 @@ export class OcrCollectionService {
       const imageExtension = path.extname(psaLabel.labelImage) || '.jpg';
       const newImageName = `image-${timestamp}-${randomSuffix}${imageExtension}`;
 
-      const sourcePath = path.resolve(process.cwd(), 'uploads', 'ocr', 'full-images', psaLabel.labelImage);
+      const sourcePath = path.resolve(process.cwd(), 'uploads', 'icr', 'full-images', psaLabel.labelImage);
       const destinationPath = path.resolve(process.cwd(), 'uploads', 'collection', newImageName);
 
       await fs.copyFile(sourcePath, destinationPath);

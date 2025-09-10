@@ -7,17 +7,11 @@
 
 import FlexSearchIndexManager from './FlexSearchIndexManager.js';
 import Logger from '@/system/logging/Logger.js';
-import EnhancedSearchCache from '@/search/middleware/EnhancedSearchCache.js';
 import OperationManager from '@/system/utilities/OperationManager.js';
 
 class BaseSearchService {
   constructor() {
-    // Initialize enhanced search cache
-    this.searchCache = new EnhancedSearchCache({
-      defaultTtl: 300, // 5 minutes
-      enableAnalytics: true,
-      compressionThreshold: 2048 // 2KB threshold
-    });
+    // Removed overengineered cache - caching handled by middleware
   }
   /**
    * Standard search method pattern
@@ -33,27 +27,13 @@ class BaseSearchService {
     const { limit = 50, offset = 0, populate = true } = options;
     const { searchFields = [], searchWeights = {} } = searchConfig;
 
-    // Only use caching for high-volume entities
-    const shouldCache = ['card', 'set', 'product', 'setproduct'].includes(entityType.toLowerCase());
-
     const context = OperationManager.createContext('BaseSearch', 'performSearch', {
       entityType,
       hasQuery: Boolean(query?.trim()),
-      filtersCount: Object.keys(filters).length,
-      shouldCache
+      filtersCount: Object.keys(filters).length
     });
 
     return OperationManager.executeOperation(context, async () => {
-      let cachedResult = null;
-
-      // Check cache only for high-volume entities
-      if (shouldCache) {
-        const searchParams = { query, filters, options, searchType: entityType, engine: 'auto' };
-        cachedResult = await this.searchCache.get(searchParams);
-        if (cachedResult) {
-          return cachedResult.data;
-        }
-      }
 
       const startTime = Date.now();
       let results = [];
@@ -62,8 +42,7 @@ class BaseSearchService {
         searchMethod: 'direct',
         searchTime: 0,
         hasMore: false,
-        filters: filters,
-        cached: Boolean(cachedResult)
+        filters: filters
       };
 
       // Try FlexSearch first if query exists and search fields are configured
@@ -191,12 +170,6 @@ class BaseSearchService {
           hasMore: searchMetadata.hasMore
         }
       };
-
-      // Cache only for high-volume entities
-      if (shouldCache && results.length > 0) {
-        const searchParams = { query, filters, options, searchType: entityType, engine: 'auto' };
-        await this.searchCache.set(searchParams, finalResult, { ttl: 300 }); // 5 minutes
-      }
 
       return finalResult;
     });

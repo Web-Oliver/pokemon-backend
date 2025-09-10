@@ -12,8 +12,33 @@ import Logger from '@/system/logging/Logger.js';
 
 class EntitySearchController extends BaseSearchController {
     constructor() {
-        super();
-        this.initializeEntityConfigurations();
+        console.log('DEBUG: EntitySearchController constructor called');
+        try {
+            super();
+            console.log('DEBUG: super() called successfully');
+        } catch (error) {
+            console.error('ERROR: super() call failed:', error);
+            console.error('ERROR: super() stack:', error.stack);
+            throw error;
+        }
+        
+        try {
+            this.initializeEntityConfigurations();
+            console.log('DEBUG: initializeEntityConfigurations() called successfully');
+        } catch (error) {
+            console.error('ERROR: initializeEntityConfigurations() failed:', error);
+            throw error;
+        }
+        
+        try {
+            this.initializeSearchHandlers();
+            console.log('DEBUG: initializeSearchHandlers() called successfully');
+        } catch (error) {
+            console.error('ERROR: initializeSearchHandlers() failed:', error);
+            throw error;
+        }
+        
+        console.log('DEBUG: EntitySearchController constructor complete');
     }
 
     /**
@@ -21,6 +46,8 @@ class EntitySearchController extends BaseSearchController {
      * This replaces the repetitive method implementations
      */
     initializeEntityConfigurations() {
+        console.log('DEBUG: initializeEntityConfigurations called');
+        
         this.entityConfigs = {
             Cards: {
                 allowEmptyQuery: true,
@@ -60,7 +87,7 @@ class EntitySearchController extends BaseSearchController {
                     }
                 },
                 handleEmptyQuery: async (query, filters, req, res, context) => {
-                    if ((!query || query.trim() === '') && !filters.setName && !filters.year) {
+                    if ((!query || query.trim() === '') && !filters.setName && !filters.year && !filters.setId) {
                         const emptyResult = {
                             success: true,
                             data: {
@@ -75,7 +102,7 @@ class EntitySearchController extends BaseSearchController {
                             },
                             meta: {
                                 query: '',
-                                filters: { setName: filters.setName, year: filters.year },
+                                filters: { setName: filters.setName, year: filters.year, setId: filters.setId },
                                 totalResults: 0,
                                 searchType: 'cards'
                             }
@@ -160,31 +187,48 @@ class EntitySearchController extends BaseSearchController {
                 populationHandlers: {}
             }
         };
+        
+        console.log('DEBUG: this.entityConfigs set to:', Object.keys(this.entityConfigs));
     }
 
     /**
-     * Search cards with hierarchical filtering
-     * Now uses generic executeSearchOperation with Cards configuration
+     * Initialize search handlers after configurations are set
      */
-    searchCards = this.createSearchHandler('Cards', this.entityConfigs.Cards);
+    initializeSearchHandlers() {
+        // Debug logging
+        console.log('DEBUG: initializeSearchHandlers called');
+        console.log('DEBUG: this.entityConfigs =', this.entityConfigs);
+        console.log('DEBUG: typeof this.entityConfigs =', typeof this.entityConfigs);
+        
+        if (!this.entityConfigs) {
+            console.error('ERROR: this.entityConfigs is undefined in initializeSearchHandlers');
+            return;
+        }
+        
+        /**
+         * Search cards with hierarchical filtering
+         * Now uses generic executeSearchOperation with Cards configuration
+         */
+        this.searchCards = this.createSearchHandler('Cards', this.entityConfigs.Cards);
 
-    /**
-     * Search products with set-based filtering
-     * Now uses generic executeSearchOperation with Products configuration
-     */
-    searchProducts = this.createSearchHandler('Products', this.entityConfigs.Products);
+        /**
+         * Search products with set-based filtering
+         * Now uses generic executeSearchOperation with Products configuration
+         */
+        this.searchProducts = this.createSearchHandler('Products', this.entityConfigs.Products);
 
-    /**
-     * Search sets with filtering
-     * Now uses generic executeSearchOperation with Sets configuration
-     */
-    searchSets = this.createSearchHandler('Sets', this.entityConfigs.Sets);
+        /**
+         * Search sets with filtering
+         * Now uses generic executeSearchOperation with Sets configuration
+         */
+        this.searchSets = this.createSearchHandler('Sets', this.entityConfigs.Sets);
 
-    /**
-     * Search set products
-     * Now uses generic executeSearchOperation with SetProducts configuration
-     */
-    searchSetProducts = this.createSearchHandler('SetProducts', this.entityConfigs.SetProducts);
+        /**
+         * Search set products
+         * Now uses generic executeSearchOperation with SetProducts configuration
+         */
+        this.searchSetProducts = this.createSearchHandler('SetProducts', this.entityConfigs.SetProducts);
+    }
 }
 
 // Lazy instantiation - controller created only when needed
@@ -209,4 +253,4 @@ export function getEntitySearchController() {
 }
 
 export const getController = getEntitySearchController;
-export default entitySearchController;
+export default getEntitySearchController;

@@ -29,7 +29,6 @@ class ProductsController extends BaseController {
       pluralName: 'products',
       enableCaching: true,
       enableMetrics: true,
-      enablePlugins: true,
       // Custom configuration for products
       defaultLimit: 20,
       defaultSort: { available: -1, price: 1, _id: 1 },
@@ -39,36 +38,6 @@ class ProductsController extends BaseController {
     // ProductService will be available as this.service via BaseController DI
     // No need to manually instantiate - handled by dependency injection
 
-    // Add product-specific plugins
-    this.addProductPlugins();
-  }
-
-  /**
-   * Add product-specific plugins
-   */
-  addProductPlugins() {
-    // Search optimization plugin
-    this.addPlugin('searchOptimization', {
-      beforeOperation: (operation, data, context) => {
-        if (operation === 'getAll' && context.req.query.q) {
-          context.useSearch = true;
-          context.searchQuery = context.req.query.q;
-        }
-      }
-    });
-
-    // Response enhancement plugin
-    this.addPlugin('responseEnhancement', {
-      beforeResponse: (operation, data, context) => {
-        if (data && data.data && data.pagination) {
-          // Add enhanced metadata for product responses
-          data.meta = data.meta || {};
-          data.meta.entityType = 'Product';
-          data.meta.pagination = data.pagination;
-        }
-        return data;
-      }
-    });
   }
 
   /**

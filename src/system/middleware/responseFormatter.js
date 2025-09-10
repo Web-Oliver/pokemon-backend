@@ -63,6 +63,25 @@ export const responseFormatter = (options = {}) => {
 
     // Override res.send for non-JSON responses
     res.send = function (data) {
+      // Check if response formatting should be bypassed
+      if (res._skipResponseFormatter || res.headersSent) {
+        return originalSend.call(this, data);
+      }
+
+      // Don't format binary data (Buffer objects)
+      if (Buffer.isBuffer(data)) {
+        return originalSend.call(this, data);
+      }
+
+      // Don't format if content-type indicates binary data
+      const contentType = res.get('Content-Type') || '';
+      if (contentType.startsWith('image/') || 
+          contentType.startsWith('video/') || 
+          contentType.startsWith('audio/') ||
+          contentType.includes('octet-stream')) {
+        return originalSend.call(this, data);
+      }
+
       // Only format if data looks like JSON
       if (typeof data === 'object' && data !== null) {
         return res.json(data);

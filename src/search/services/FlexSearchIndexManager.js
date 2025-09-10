@@ -317,6 +317,83 @@ class FlexSearchIndexManager {
       }
     };
   }
+
+  /**
+   * Search across FlexSearch indexes
+   * @param {string} entityType - Type of entity to search ('card', 'product', 'set')  
+   * @param {string} query - Search query
+   * @param {Object} options - Search options
+   * @returns {Array} Array of matching document IDs
+   */
+  async search(entityType, query, options = {}) {
+    if (!this.initialized) {
+      await this.initializeIndexes();
+    }
+
+    if (!query || !query.trim()) {
+      return [];
+    }
+
+    const { limit = 10 } = options;
+
+    try {
+      let index;
+      switch (entityType.toLowerCase()) {
+        case 'card':
+          index = this.getCardIndex();
+          break;
+        case 'product':
+          index = this.getProductIndex();
+          break;
+        case 'set':
+          index = this.getSetIndex();
+          break;
+        default:
+          Logger.error('FLEXSEARCH_SEARCH', `Unknown entity type: ${entityType}`);
+          return [];
+      }
+
+      if (!index) {
+        Logger.error('FLEXSEARCH_SEARCH', `No index found for entity type: ${entityType}`);
+        return [];
+      }
+
+      // Perform the search using FlexSearch
+      const results = index.search(query.trim(), { limit });
+      
+      // FlexSearch returns results in format: [{ field: "fieldName", result: ["id1", "id2", ...] }, ...]
+      // We need to extract all unique IDs from all fields
+      const allIds = new Set();
+      
+      if (Array.isArray(results)) {
+        results.forEach(fieldResult => {
+          if (fieldResult && Array.isArray(fieldResult.result)) {
+            fieldResult.result.forEach(id => allIds.add(id));
+          }
+        });
+      }
+
+      const uniqueIds = Array.from(allIds).slice(0, limit);
+      
+      Logger.debug('FLEXSEARCH_SEARCH', `Found ${uniqueIds.length} results for "${query}" in ${entityType}`, {
+        entityType,
+        query,
+        resultCount: uniqueIds.length,
+        totalMatches: allIds.size
+      });
+
+      return uniqueIds;
+
+    } catch (error) {
+      Logger.error('FLEXSEARCH_SEARCH', `Search failed for ${entityType}`, {
+        entityType,
+        query,
+        error: error.message,
+        stack: error.stack
+      });
+      return [];
+    }
+  }
 }
 
 // Export singleton instance

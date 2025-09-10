@@ -36,38 +36,9 @@ class ExportController extends BaseController {
       pluralName: 'exports',
       enableCaching: true,
       enableMetrics: true,
-      enablePlugins: true,
       defaultLimit: 20
     });
 
-    // Add export-specific plugins
-    this.addExportPlugins();
-  }
-
-  /**
-   * Add export-specific plugins
-   */
-  addExportPlugins() {
-    // ZIP export optimization plugin
-    this.addPlugin('zipOptimization', {
-      beforeOperation: (operation, data, context) => {
-        if (operation.includes('zip')) {
-          context.optimizeForZip = true;
-        }
-      }
-    });
-
-    // DBA integration monitoring plugin
-    this.addPlugin('dbaMonitoring', {
-      afterOperation: (operation, result, context) => {
-        if (operation.includes('dba')) {
-          Logger.info('ExportController', `DBA operation completed: ${operation}`, {
-            success: result.success,
-            itemCount: result.data?.itemCount || 0
-          });
-        }
-      }
-    });
   }
 
   /**
@@ -282,82 +253,6 @@ class ExportController extends BaseController {
     }
   });
 
-  /**
-   * Get DBA integration status
-   * GET /api/export/dba/status
-   */
-  getDbaStatus = asyncHandler(async (req, res) => {
-    const operation = 'getDbaStatus';
-    const context = { req, res, operation };
-
-    Logger.operationStart('Export', 'DBA STATUS', {});
-
-    try {
-      await this.executeHooks('beforeOperation', operation, {}, context);
-
-      const result = await this.service.getDbaStatus();
-
-      await this.executeHooks('afterOperation', operation, result, context);
-
-      Logger.operationSuccess('Export', 'DBA STATUS', {
-        statusAvailable: Boolean(result.data)
-      });
-
-      let responseData = {
-        success: true,
-        data: result.data
-      };
-
-      responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
-      res.status(200).json(responseData);
-    } catch (error) {
-      await this.executeHooks('onError', operation, error, context);
-      Logger.operationError('Export', 'DBA STATUS', error, {});
-      throw error;
-    }
-  });
-
-  /**
-   * Test DBA integration
-   * POST /api/export/dba/test
-   */
-  testDbaIntegration = asyncHandler(async (req, res) => {
-    const operation = 'testDbaIntegration';
-    const context = { req, res, operation };
-
-    const { items } = req.body;
-
-    Logger.operationStart('Export', 'DBA TEST', {
-      itemCount: items?.length || 0
-    });
-
-    try {
-      await this.executeHooks('beforeOperation', operation, req.body, context);
-
-      const result = await this.service.testDbaIntegration(items);
-
-      await this.executeHooks('afterOperation', operation, result, context);
-
-      Logger.operationSuccess('Export', 'DBA TEST', {
-        testedItems: result.metadata?.processedItems || 0
-      });
-
-      let responseData = {
-        success: true,
-        message: 'DBA integration test completed',
-        data: result.data
-      };
-
-      responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
-      res.status(200).json(responseData);
-    } catch (error) {
-      await this.executeHooks('onError', operation, error, context);
-      Logger.operationError('Export', 'DBA TEST', error, {
-        testItemCount: items?.length || 0
-      });
-      throw error;
-    }
-  });
 }
 
 // Lazy controller instance creation
@@ -387,9 +282,7 @@ export {
   zipSealedProductImages,
   exportToDba,
   downloadDbaZip,
-  postToDba,
-  getDbaStatus,
-  testDbaIntegration
+  postToDba
 };
 
 // Export controller instance accessor for advanced usage

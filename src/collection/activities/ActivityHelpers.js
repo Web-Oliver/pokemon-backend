@@ -192,28 +192,6 @@ class ActivityHelpers {
   }
 
   /**
-   * Archive old activities
-   * @param {Object} Activity - Activity model reference
-   * @param {number} daysOld - Age threshold in days
-   * @returns {Promise<Object>} Update result
-   */
-  static async archiveOldActivities(Activity, daysOld = 90) {
-    const cutoffDate = new Date(Date.now() - daysOld * 24 * 60 * 60 * 1000);
-
-    return Activity.updateMany(
-      {
-        timestamp: { $lt: cutoffDate },
-        status: 'active'
-      },
-      {
-        status: 'archived',
-        isArchived: true,
-        archivedAt: new Date()
-      }
-    );
-  }
-
-  /**
    * Mark activity as read
    * @param {Object} activity - Activity document instance
    * @returns {Promise<Object>} Updated activity

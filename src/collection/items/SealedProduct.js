@@ -1,7 +1,6 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
 import activityTrackingPlugin from '@/collection/activities/activityTracking.js';
-import { queryOptimizationPlugin } from '@/system/plugins/queryOptimization.js';
 import { saleDetailsSchema, priceHistorySchema, sealedProductTransform } from '@/system/schemas/index.js';
 const sealedProductSchema = new mongoose.Schema({
   productId: {
@@ -31,26 +30,6 @@ sealedProductSchema.plugin(activityTrackingPlugin, {
     trackSales: true,
     trackPriceUpdates: true,
     trackImageUpdates: true
-  }
-});
-
-// Apply query optimization plugin with product-specific configuration
-sealedProductSchema.plugin(queryOptimizationPlugin, {
-  entityType: 'SealedProduct',
-  enableLeanQueries: true,
-  enableQueryLogging: false,
-  enablePerformanceTracking: true,
-  enableAutomaticIndexing: true,
-  enableQueryHints: true,
-  defaultLimit: 50,
-  maxLimit: 500,
-  enableCachedCounts: true,
-  optimizationLevel: 'standard',
-  // Product-specific optimizations
-  productSpecificOptions: {
-    enableProductIndexing: true,
-    enablePriceRangeOptimization: true,
-    enableSaleStatusFiltering: true
   }
 });
 

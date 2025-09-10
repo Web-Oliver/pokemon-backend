@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-import { queryOptimizationPlugin } from '@/system/plugins/queryOptimization.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 import { ValidationError } from '@/system/errors/ErrorTypes.js';
 const cardSchema = new mongoose.Schema(
@@ -102,28 +101,6 @@ cardSchema.pre('save', function (next) {
     next();
   } catch (error) {
     next(error);
-  }
-});
-
-// Apply query optimization plugin with reference data configuration
-cardSchema.plugin(queryOptimizationPlugin, {
-  entityType: 'Card',
-  enableLeanQueries: true,
-  enableQueryLogging: false,
-  enablePerformanceTracking: true,
-  enableAutomaticIndexing: false, // We manage indexes manually due to text search complexity
-  enableQueryHints: true,
-  defaultLimit: 100,
-  maxLimit: 1000,
-  enableCachedCounts: true,
-  optimizationLevel: 'standard',
-  // Reference data specific optimizations
-  referenceDataOptions: {
-    enableTextSearchOptimization: true,
-    enableSetRelationOptimization: true,
-    enablePsaPopulationOptimization: true,
-    enableCardNameOptimization: true,
-    cacheFrequentQueries: true
   }
 });
 

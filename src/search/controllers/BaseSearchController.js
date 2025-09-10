@@ -12,59 +12,12 @@ export default class BaseSearchController extends BaseController {
             pluralName: 'searches',
             enableCaching: true,
             enableMetrics: true,
-            enablePlugins: true,
             defaultLimit: 20,
             filterableFields: ['query', 'setName', 'year', 'minPrice', 'maxPrice', 'sold', 'availableOnly']
         });
 
-        this.addSearchPlugins();
     }
 
-    /**
-     * Add search-specific plugins
-     */
-    addSearchPlugins() {
-        // Search optimization plugin
-        this.addPlugin('searchOptimization', {
-            beforeOperation: (operation, data, context) => {
-                if (context.req.query.q || context.req.query.query) {
-                    context.useAdvancedSearch = true;
-                    context.searchQuery = context.req.query.q || context.req.query.query;
-                }
-            }
-        });
-
-        // Hierarchical search plugin
-        this.addPlugin('hierarchicalSearch', {
-            beforeOperation: (operation, data, context) => {
-                const { req } = context;
-                if (req.query.setName || req.query.setProductId || req.query.year) {
-                    context.useHierarchicalFiltering = true;
-                    Logger.debug('BaseSearchController', 'Hierarchical filtering enabled', {
-                        setName: req.query.setName,
-                        setProductId: req.query.setProductId,
-                        year: req.query.year
-                    });
-                }
-            }
-        });
-
-        // Response enhancement plugin
-        this.addPlugin('responseEnhancement', {
-            beforeResponse: (operation, data, context) => {
-                if (data && data.data) {
-                    data.meta = data.meta || {};
-                    data.meta.entityType = 'Search';
-                    data.meta.operation = operation;
-                    data.meta.searchType = this.getSearchTypeFromOperation(operation);
-                    if (context.searchQuery) {
-                        data.meta.searchQuery = context.searchQuery;
-                    }
-                }
-                return data;
-            }
-        });
-    }
 
     /**
      * Helper method to determine search type from operation

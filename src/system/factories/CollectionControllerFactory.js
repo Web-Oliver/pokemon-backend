@@ -52,7 +52,6 @@ export function createCollectionController({
   const defaultOptions = {
     includeMarkAsSold: true,
     enableCaching: true,
-    enablePlugins: true,
     enableMetrics: true,
     defaultPopulate: getPopulateConfig(entityName),
     filterableFields: getFilterableFields(entityName),

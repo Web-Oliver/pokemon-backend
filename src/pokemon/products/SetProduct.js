@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { queryOptimizationPlugin } from '@/system/plugins/queryOptimization.js';
 const setProductSchema = new mongoose.Schema(
   {
     // Set product data
@@ -40,25 +39,6 @@ setProductSchema.pre('save', function (next) {
     next();
   } catch (error) {
     next(error);
-  }
-});
-
-// Apply query optimization plugin with set product configuration
-setProductSchema.plugin(queryOptimizationPlugin, {
-  entityType: 'SetProduct',
-  enableLeanQueries: true,
-  enableQueryLogging: false,
-  enablePerformanceTracking: true,
-  enableAutomaticIndexing: false, // We manage indexes manually
-  enableQueryHints: true,
-  defaultLimit: 50,
-  maxLimit: 500,
-  enableCachedCounts: true,
-  optimizationLevel: 'standard',
-  // Set product specific optimizations
-  setProductOptions: {
-    enableNameOptimization: true,
-    cacheFrequentSetQueries: true
   }
 });
 

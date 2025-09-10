@@ -30,6 +30,12 @@ import SearchService from '@/search/services/SearchService.js';
 import ExportService from '@/marketplace/exports/ExportService.js';
 import StatusService from '@/system/services/StatusService.js';
 import StatusController from '@/system/controllers/StatusController.js';
+import HealthService from '@/system/services/HealthService.js';
+import HealthController from '@/system/controllers/HealthController.js';
+import { cacheManager } from '@/search/middleware/searchCache.js';
+import EndpointsService from '@/system/services/EndpointsService.js';
+import EndpointsController from '@/system/controllers/EndpointsController.js';
+import Logger from '@/system/logging/Logger.js';
 import IcrBatchService from '@/icr/application/IcrBatchService.js';
 import IcrStatusService from '@/icr/application/services/IcrStatusService.js';
 import IcrStitchingOrchestrator from '@/icr/application/services/IcrStitchingOrchestrator.js';
@@ -132,6 +138,10 @@ export function registerServices() {
   });
 
   // ============ SYSTEM SERVICE REGISTRATIONS ============
+  container.registerSingleton('Logger', () => {
+    return new Logger();
+  });
+
   container.registerSingleton(ServiceKeys.STATUS_SERVICE, () => {
     return new StatusService();
   });
@@ -139,6 +149,31 @@ export function registerServices() {
   container.registerSingleton(ServiceKeys.STATUS_CONTROLLER, () => {
     return new StatusController(
       container.resolve(ServiceKeys.STATUS_SERVICE)
+    );
+  });
+
+  // Health Service & Controller - DEPENDENCY CHECKS
+  container.registerSingleton(ServiceKeys.HEALTH_SERVICE, () => {
+    return new HealthService({
+      cacheManager: cacheManager, // Use working cache manager from searchCache.js
+      uploadPath: process.env.UPLOAD_PATH || './uploads'
+    });
+  });
+
+  container.registerSingleton(ServiceKeys.HEALTH_CONTROLLER, () => {
+    return new HealthController(
+      container.resolve(ServiceKeys.HEALTH_SERVICE)
+    );
+  });
+
+  // Endpoints Documentation Service & Controller - STANDALONE
+  container.registerSingleton(ServiceKeys.ENDPOINTS_SERVICE, () => {
+    return new EndpointsService(console); // Use console instead of complex logger
+  });
+
+  container.registerSingleton(ServiceKeys.ENDPOINTS_CONTROLLER, () => {
+    return new EndpointsController(
+      container.resolve(ServiceKeys.ENDPOINTS_SERVICE)
     );
   });
 

@@ -420,29 +420,6 @@ router.delete('/:id', async (req, res, next) => {
   }
 });
 
-/**
- * POST /api/activities/archive-old
- * Archive old activities (maintenance endpoint)
- */
-router.post('/archive-old', async (req, res, next) => {
-  try {
-    const { daysOld = 90 } = req.body;
-
-    console.log('[ACTIVITY API] POST /activities/archive-old - Days:', daysOld);
-
-    const result = await ActivityService.archiveOldActivities(daysOld);
-
-    res.json({
-      success: true,
-      data: {
-        archivedCount: result.modifiedCount
-      },
-      message: `Archived ${result.modifiedCount} old activities`
-    });
-  } catch (error) {
-    next(error);
-  }
-});
 
 /**
  * POST /api/activities/generate-historical

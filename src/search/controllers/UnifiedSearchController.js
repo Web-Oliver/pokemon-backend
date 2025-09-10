@@ -14,35 +14,7 @@ class UnifiedSearchController extends BaseController {
       pluralName: 'searches',
       enableCaching: true,
       enableMetrics: true,
-      enablePlugins: true,
       defaultLimit: 20
-    });
-
-    // Add search-specific plugins
-    this.addSearchPlugins();
-  }
-
-  /**
-   * Add search-specific plugins
-   */
-  addSearchPlugins() {
-    // Query optimization plugin
-    this.addPlugin('queryOptimization', {
-      beforeOperation: (operation, data, context) => {
-        if (context.req.query.q || context.req.query.query) {
-          context.optimizeQuery = true;
-        }
-      }
-    });
-
-    // Search analytics plugin
-    this.addPlugin('searchAnalytics', {
-      afterOperation: (operation, result, context) => {
-        Logger.info('UnifiedSearchController', `Search completed: ${operation}`, {
-          resultCount: result.data?.length || 0,
-          searchQuery: context.req.query.query || context.req.query.q
-        });
-      }
     });
   }
 

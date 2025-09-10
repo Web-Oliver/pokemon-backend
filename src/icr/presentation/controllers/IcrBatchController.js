@@ -56,7 +56,6 @@ class IcrBatchController extends BaseController {
         entityName: 'IcrBatch',
         pluralName: 'batches',
         enableCaching: false,
-        enablePlugins: false,
         enableMetrics: true
       });
 

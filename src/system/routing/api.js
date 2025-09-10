@@ -20,9 +20,7 @@ import { getAllProducts,
   getProductSetNames
   } from '@/pokemon/products/productsController.js';
 import {
-  postToDba,
-  getDbaStatus,
-  testDbaIntegration
+  postToDba
 } from '@/marketplace/exports/exportController.js';
 import {
   getSupportedSocialExportTypes,
@@ -49,9 +47,47 @@ router.get('/status', (req, res, next) => {
   const statusController = container.resolve(ServiceKeys.STATUS_CONTROLLER);
   statusController.getStatus(req, res, next);
 });
+// Health endpoints using dedicated health controller
 router.get('/health', (req, res, next) => {
-  const statusController = container.resolve(ServiceKeys.STATUS_CONTROLLER);
-  statusController.getSystemHealth(req, res, next);
+  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+  healthController.getSystemHealth(req, res, next);
+});
+
+router.get('/health/detailed', (req, res, next) => {
+  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+  healthController.getDetailedHealth(req, res, next);
+});
+
+router.get('/health/ready', (req, res, next) => {
+  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+  healthController.getReadiness(req, res, next);
+});
+
+router.get('/health/live', (req, res, next) => {
+  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+  healthController.getLiveness(req, res, next);
+});
+
+// Endpoints Documentation - SOLID & DRY Implementation
+router.get('/endpoints', (req, res, next) => {
+  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+  endpointsController.getEndpoints(req, res, next);
+});
+router.get('/endpoints/summary', (req, res, next) => {
+  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+  endpointsController.getEndpointsSummary(req, res, next);
+});
+router.get('/endpoints/openapi', (req, res, next) => {
+  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+  endpointsController.getOpenApiSpec(req, res, next);
+});
+router.get('/endpoints/category/:categoryName', (req, res, next) => {
+  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+  endpointsController.getCategoryEndpoints(req, res, next);
+});
+router.delete('/endpoints/cache', (req, res, next) => {
+  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+  endpointsController.clearCache(req, res, next);
 });
 
 // ================================
@@ -136,8 +172,6 @@ router.get('/collections/exports/:exportId', (req, res, next) => {
 // DBA INTEGRATION RESOURCE - REST COMPLIANT
 // ================================
 router.post('/dba/posts', validationMiddlewares.validateExportBody, postToDba);
-router.get('/dba/status', getDbaStatus);
-router.post('/dba/test', validationMiddlewares.validateExportBody, testDbaIntegration);
 
 // ================================
 // UPLOAD ROUTES

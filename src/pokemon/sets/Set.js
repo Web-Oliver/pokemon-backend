@@ -1,5 +1,4 @@
 import mongoose from 'mongoose';
-import { queryOptimizationPlugin } from '@/system/plugins/queryOptimization.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 import { ValidationError } from '@/system/errors/ErrorTypes.js';
 const setSchema = new mongoose.Schema(
@@ -70,28 +69,6 @@ setSchema.pre('save', function (next) {
   }
 });
 
-// Apply query optimization plugin with set-specific configuration
-setSchema.plugin(queryOptimizationPlugin, {
-  entityType: 'Set',
-  enableLeanQueries: true,
-  enableQueryLogging: false,
-  enablePerformanceTracking: true,
-  enableAutomaticIndexing: false, // We manage indexes manually for optimal set queries
-  enableQueryHints: true,
-  defaultLimit: 50,
-  maxLimit: 500,
-  enableCachedCounts: true,
-  optimizationLevel: 'standard',
-  // Set-specific optimizations
-  setSpecificOptions: {
-    enableYearFiltering: true,
-    enablePsaPopulationOptimization: true,
-    enableCardCountOptimization: true,
-    enableSetNameOptimization: true,
-    cacheFrequentSetQueries: true,
-    enableTemporalQueries: true // For year-based queries
-  }
-});
 
 const Set = mongoose.model('Set', setSchema);
 

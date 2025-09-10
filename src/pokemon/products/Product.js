@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
 const { Schema } = mongoose;
-import { queryOptimizationPlugin } from '@/system/plugins/queryOptimization.js';
 const productSchema = new mongoose.Schema(
   {
     // MongoDB ObjectId relationships
@@ -66,28 +65,6 @@ productSchema.index({ available: 1 });
 productSchema.index({ setProductId: 1, category: 1 }); // Set with category filtering
 productSchema.index({ setProductId: 1, available: -1 }); // Set with availability sorting
 productSchema.index({ category: 1, available: -1 }); // Category with availability sorting
-
-// Apply query optimization plugin with product configuration
-productSchema.plugin(queryOptimizationPlugin, {
-  entityType: 'Product',
-  enableLeanQueries: true,
-  enableQueryLogging: false,
-  enablePerformanceTracking: true,
-  enableAutomaticIndexing: false, // We manage indexes manually
-  enableQueryHints: true,
-  defaultLimit: 100,
-  maxLimit: 1000,
-  enableCachedCounts: true,
-  optimizationLevel: 'standard',
-  // Product specific optimizations
-  productOptions: {
-    enableTextSearchOptimization: true,
-    enableSetProductOptimization: true,
-    enableCategoryFiltering: true,
-    enableAvailabilityOptimization: true,
-    cacheFrequentQueries: true
-  }
-});
 
 const Product = mongoose.model('Product', productSchema);
 

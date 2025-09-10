@@ -171,13 +171,6 @@ class ActivityService {
   }
 
   /**
-   * Archive old activities - Delegates to ActivityHelpers
-   */
-  static async archiveOldActivities(daysOld = 90) {
-    return ActivityHelpers.archiveOldActivities(Activity, daysOld);
-  }
-
-  /**
    * Generate historical activities for existing collection items
    */
   static async generateHistoricalActivities() {

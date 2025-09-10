@@ -9,7 +9,6 @@ class CardsController extends BaseController {
       pluralName: 'cards',
       includeMarkAsSold: false,
       enableCaching: true,
-      enablePlugins: false,  // Disable plugins to avoid dependency issues
       enableMetrics: true,
       filterableFields: ['setId', 'cardName', 'cardNumber', 'variety', 'uniquePokemonId', 'uniqueSetId']
     });
