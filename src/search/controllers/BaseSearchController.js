@@ -16,6 +16,41 @@ export default class BaseSearchController extends BaseController {
             filterableFields: ['query', 'setName', 'year', 'minPrice', 'maxPrice', 'sold', 'availableOnly']
         });
 
+        // Initialize hooks map
+        this.hooks = new Map();
+    }
+
+    /**
+     * Executes hooks for an event
+     * @param {string} event - Event name
+     * @param {string} operation - Operation context
+     * @param {*} data - Data to pass to hooks
+     * @param {Object} context - Additional context
+     */
+    async executeHooks(event, operation, data, context) {
+        const handlers = this.hooks.get(event) || [];
+        
+        for (const handler of handlers) {
+            try {
+                await handler(operation, data, context);
+            } catch (error) {
+                Logger.error('BaseSearchController', `Hook execution failed for ${event}`, error);
+            }
+        }
+        
+        return data;
+    }
+
+    /**
+     * Registers a lifecycle hook
+     * @param {string} event - Event name
+     * @param {Function} handler - Hook handler function
+     */
+    registerHook(event, handler) {
+        if (!this.hooks.has(event)) {
+            this.hooks.set(event, []);
+        }
+        this.hooks.get(event).push(handler);
     }
 
 

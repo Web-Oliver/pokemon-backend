@@ -124,11 +124,10 @@ function buildDateFilter(startDate, endDate) {
 
   const filter = { sold: true };
 
-  // Use consolidated date validation with error throwing
-  const dateValidation = validateDateRange(startDate, endDate, {
-    throwOnError: true,
-    context: 'BUILD_DATE_FILTER'
-  });
+  // Only validate date range if both dates are provided
+  if (startDate && endDate) {
+    validateDateRange(startDate, endDate);
+  }
 
   if (startDate || endDate) {
     filter['saleDetails.dateSold'] = {};

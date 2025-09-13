@@ -313,7 +313,24 @@ class ValidatorFactory {
     return {
       validators: {
         saleDetails: this.saleDetails.bind(this),
-        price: this.price.bind(this)
+        price: this.price.bind(this),
+        validateGetSalesParams: ({ category, startDate, endDate }) => {
+          // Optional category validation
+          if (category !== undefined && category !== null && category !== '') {
+            ValidatorFactory.string(category, 'Category');
+          }
+          
+          // Optional date validations
+          if (startDate !== undefined && startDate !== null && startDate !== '') {
+            ValidatorFactory.date(startDate, 'Start date');
+          }
+          
+          if (endDate !== undefined && endDate !== null && endDate !== '') {
+            ValidatorFactory.date(endDate, 'End date');
+          }
+          
+          return { category, startDate, endDate };
+        }
       },
       errorHandlers: {
         handleValidationError: (error, field) => {
@@ -322,11 +339,32 @@ class ValidatorFactory {
             error: error.message,
             type: 'validation'
           };
+        },
+        handleGetSalesError: (error, params) => {
+          console.error('❌ Get Sales Error:', error.message, { params });
+          throw error;
+        },
+        handleGetSalesSummaryError: (error, params) => {
+          console.error('❌ Get Sales Summary Error:', error.message, { params });
+          throw error;
+        },
+        handleGetSalesGraphDataError: (error, params) => {
+          console.error('❌ Get Sales Graph Data Error:', error.message, { params });
+          throw error;
         }
       },
       successLoggers: {
         logValidationSuccess: (field, value) => {
           console.log(`✅ ${field} validated successfully:`, value);
+        },
+        logGetSalesSuccess: (params, data) => {
+          console.log('✅ Get Sales Success:', { params, count: data.length });
+        },
+        logGetSalesSummarySuccess: (params, summary) => {
+          console.log('✅ Get Sales Summary Success:', { params, summary });
+        },
+        logGetSalesGraphDataSuccess: (params, result) => {
+          console.log('✅ Get Sales Graph Data Success:', { params, result });
         }
       }
     };

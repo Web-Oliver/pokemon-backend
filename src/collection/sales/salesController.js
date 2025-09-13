@@ -4,9 +4,9 @@ import { calculateSalesSummary, generateGraphData } from '@/collection/sales/sal
 import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 import Logger from '@/system/logging/Logger.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
-const { validators: SalesValidators, errorHandlers: SalesErrorHandlers, successLoggers: SalesSuccessLoggers } = ValidatorFactory.salesUtils;
 
 const getSales = asyncHandler(async (req, res) => {
+  const { validators: SalesValidators, errorHandlers: SalesErrorHandlers, successLoggers: SalesSuccessLoggers } = ValidatorFactory.salesUtils;
   Logger.operationStart('GET_SALES_DATA', 'Fetching sales data', { query: req.query });
 
   const { category, startDate, endDate } = req.query;
@@ -33,12 +33,13 @@ const getSales = asyncHandler(async (req, res) => {
 });
 
 const getSalesSummary = asyncHandler(async (req, res) => {
+  const { validators: SalesValidators, errorHandlers: SalesErrorHandlers, successLoggers: SalesSuccessLoggers } = ValidatorFactory.salesUtils;
   Logger.operationStart('GET_SALES_SUMMARY', 'Calculating sales summary', { query: req.query });
 
   const { category, startDate, endDate } = req.query;
 
   // Use centralized validation
-  SalesValidators.validateGetSalesSummaryParams({ category, startDate, endDate });
+  SalesValidators.validateGetSalesParams({ category, startDate, endDate });
 
   try {
     const filter = buildDateFilter(startDate, endDate);
@@ -61,12 +62,13 @@ const getSalesSummary = asyncHandler(async (req, res) => {
 });
 
 const getSalesGraphData = asyncHandler(async (req, res) => {
+  const { validators: SalesValidators, errorHandlers: SalesErrorHandlers, successLoggers: SalesSuccessLoggers } = ValidatorFactory.salesUtils;
   Logger.operationStart('GET_SALES_GRAPH_DATA', 'Generating sales graph data', { query: req.query });
 
   const { category, startDate, endDate } = req.query;
 
   // Use centralized validation
-  SalesValidators.validateGetSalesGraphDataParams({ category, startDate, endDate });
+  SalesValidators.validateGetSalesParams({ category, startDate, endDate });
 
   try {
     const filter = buildDateFilter(startDate, endDate);

@@ -25,7 +25,32 @@ class SetSearchService extends BaseSearchService {
       defaultPopulate: false
     };
 
-    return this.performSearch('set', Set, query, filters, options, searchConfig);
+    // Convert page to offset for BaseSearchService
+    const { page = 1, limit = 20, ...restOptions } = options;
+    const offset = (page - 1) * limit;
+    const searchOptions = { ...restOptions, offset, limit };
+
+    const result = await this.performSearch('set', Set, query, filters, searchOptions, searchConfig);
+    
+    console.log('DEBUG SetSearchService result:', JSON.stringify(result, null, 2));
+    console.log('DEBUG result type:', typeof result);
+    console.log('DEBUG result.pagination:', result?.pagination);
+    console.log('DEBUG result.results:', Array.isArray(result?.results) ? `Array(${result.results.length})` : result?.results);
+    
+    // Transform result to match expected format
+    return {
+      sets: result.results,
+      total: result.pagination.total,
+      currentPage: Math.floor(result.pagination.offset / result.pagination.limit) + 1,
+      totalPages: Math.ceil(result.pagination.total / result.pagination.limit),
+      hasNextPage: result.pagination.hasMore,
+      hasPrevPage: result.pagination.offset > 0,
+      count: result.results.length,
+      limit: result.pagination.limit,
+      query: query,
+      searchMethod: result.metadata.searchMethod,
+      filters: result.metadata.filters
+    };
   }
 
   /**
