@@ -21,7 +21,7 @@ class EntitySearchController extends BaseSearchController {
             console.error('ERROR: super() stack:', error.stack);
             throw error;
         }
-        
+
         try {
             this.initializeEntityConfigurations();
             console.log('DEBUG: initializeEntityConfigurations() called successfully');
@@ -29,7 +29,7 @@ class EntitySearchController extends BaseSearchController {
             console.error('ERROR: initializeEntityConfigurations() failed:', error);
             throw error;
         }
-        
+
         try {
             this.initializeSearchHandlers();
             console.log('DEBUG: initializeSearchHandlers() called successfully');
@@ -37,7 +37,7 @@ class EntitySearchController extends BaseSearchController {
             console.error('ERROR: initializeSearchHandlers() failed:', error);
             throw error;
         }
-        
+
         console.log('DEBUG: EntitySearchController constructor complete');
     }
 
@@ -47,7 +47,7 @@ class EntitySearchController extends BaseSearchController {
      */
     initializeEntityConfigurations() {
         console.log('DEBUG: initializeEntityConfigurations called');
-        
+
         this.entityConfigs = {
             Cards: {
                 allowEmptyQuery: true,
@@ -187,7 +187,7 @@ class EntitySearchController extends BaseSearchController {
                 populationHandlers: {}
             }
         };
-        
+
         console.log('DEBUG: this.entityConfigs set to:', Object.keys(this.entityConfigs));
     }
 
@@ -199,12 +199,12 @@ class EntitySearchController extends BaseSearchController {
         console.log('DEBUG: initializeSearchHandlers called');
         console.log('DEBUG: this.entityConfigs =', this.entityConfigs);
         console.log('DEBUG: typeof this.entityConfigs =', typeof this.entityConfigs);
-        
+
         if (!this.entityConfigs) {
             console.error('ERROR: this.entityConfigs is undefined in initializeSearchHandlers');
             return;
         }
-        
+
         /**
          * Search cards with hierarchical filtering
          * Now uses generic executeSearchOperation with Cards configuration

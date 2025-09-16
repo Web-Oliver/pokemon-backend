@@ -72,21 +72,21 @@ export class OcrApprovalWorkflowService {
    * Reject ICR result
    * SINGLE RESPONSIBILITY: Handles rejection workflow
    */
-  async rejectIcrResult(scanId, reason = 'user_rejection') {
+  async rejectIcrResult(id, reason = 'user_rejection') {
     try {
-      Logger.operationStart('OCR_REJECTION_WORKFLOW', 'Starting OCR rejection workflow', { scanId, reason });
+      Logger.operationStart('OCR_REJECTION_WORKFLOW', 'Starting OCR rejection workflow', { id, reason });
 
-      await this.gradedCardScanRepository.updateById(scanId, {
+      await this.gradedCardScanRepository.updateById(id, {
         processingStatus: 'rejected',
         userDenied: true,
         processedAt: new Date(),
         rejectionReason: reason
       });
 
-      Logger.operationSuccess('OCR_REJECTION_WORKFLOW', 'OCR rejection workflow completed', { scanId });
+      Logger.operationSuccess('OCR_REJECTION_WORKFLOW', 'OCR rejection workflow completed', { id });
 
       return {
-        rejectedScanId: scanId,
+        rejectedScanId: id,
         rejectedAt: new Date(),
         reason
       };

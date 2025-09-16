@@ -34,19 +34,13 @@ export class IcrImageUploadService {
     // Ensure directories exist using IcrPathManager
     await IcrPathManager.ensureDirectories();
 
-    return OperationManager.executeBatchOperation(
+    const batchResult = await OperationManager.executeBatchOperation(
       context,
       imageFiles,
       async (file, index) => {
         // Read file from disk (multer disk storage provides path, not buffer)
         const fileBuffer = await fs.readFile(file.path);
         const imageHash = ImageHashService.generateHash(fileBuffer);
-
-        // Check for existing GradedCardScan with same hash
-        const existingScan = await this.gradedCardScanRepository.findByHash(imageHash);
-        if (existingScan) {
-          throw new Error(`Image already uploaded: ${existingScan._id}`);
-        }
 
         // Generate intelligent filename using IcrPathManager
         const filenameInfo = IcrPathManager.generateFileName(file.originalname, {
@@ -57,18 +51,33 @@ export class IcrImageUploadService {
         const filePath = IcrPathManager.getFilePath('FULL_IMAGES', filenameInfo.descriptive);
         await fs.writeFile(filePath, fileBuffer);
 
-        // Create GradedCardScan record
-        const gradedCardScan = await this.gradedCardScanRepository.create({
-          fullImage: filePath,
-          originalFileName: filenameInfo.descriptive,
-          imageHash,
-          fileSize: fileBuffer.length,
-          mimeType: file.mimetype,
-          processingStatus: 'uploaded'
-        });
+        // Check for duplicate first to avoid MongoDB error
+        let gradedCardScan = await this.gradedCardScanRepository.findOne({ imageHash });
+
+        if (gradedCardScan) {
+          console.log('DEBUG: Duplicate image detected, returning existing scan:', {
+            imageHash: imageHash.substring(0, 16),
+            scanId: gradedCardScan._id.toString(),
+            status: gradedCardScan.processingStatus
+          });
+        } else {
+          // Create new GradedCardScan record
+          gradedCardScan = await this.gradedCardScanRepository.create({
+            fullImage: filePath,
+            originalFileName: filenameInfo.descriptive,
+            imageHash,
+            fileSize: fileBuffer.length,
+            mimeType: file.mimetype,
+            processingStatus: 'uploaded'
+          });
+          console.log('DEBUG: Created new scan:', {
+            imageHash: imageHash.substring(0, 16),
+            scanId: gradedCardScan._id.toString()
+          });
+        }
 
         return {
-          scanId: gradedCardScan._id,
+          id: gradedCardScan._id,
           filename: file.originalname,
           storedFileName: filenameInfo.descriptive
         };
@@ -78,6 +87,31 @@ export class IcrImageUploadService {
         maxConcurrent: 3
       }
     );
+
+    // Debug: Log what we get from OperationManager
+    console.log('DEBUG: Batch result structure:', {
+      hasResults: !!batchResult.results,
+      resultCount: batchResult.results?.length || 0,
+      successful: batchResult.successful,
+      failed: batchResult.failed,
+      batchResultKeys: Object.keys(batchResult || {}),
+      fullBatchResult: batchResult
+    });
+
+    // Extract IDs from successful results
+    const ids = batchResult.results?.map(result => result.result?.id).filter(Boolean) || [];
+
+    console.log('DEBUG: Extracted IDs:', {
+      idCount: ids.length,
+      ids: ids.slice(0, 5),
+      firstResult: batchResult.results?.[0],
+      resultStructure: batchResult.results?.[0]?.result
+    });
+
+    return {
+      ...batchResult,
+      ids
+    };
   }
 
   /**

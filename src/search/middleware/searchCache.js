@@ -10,7 +10,7 @@ const cache = new NodeCache({
 const createCacheKey = (req) => {
   const { q, limit, category, setId, setName, type } = req.query;
   const route = req.route?.path || req.path;
-  
+
   return `${route}:${JSON.stringify({
     q: q?.toLowerCase?.() || q,
     limit,
@@ -57,14 +57,14 @@ export const searchCacheMiddleware = (ttl = 300) => {
 export const invalidateCache = (pattern) => {
   const keys = cache.keys();
   let count = 0;
-  
+
   keys.forEach(key => {
     if (key.includes(pattern)) {
       cache.del(key);
       count++;
     }
   });
-  
+
   return count;
 };
 

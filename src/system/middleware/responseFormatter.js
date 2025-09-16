@@ -75,8 +75,8 @@ export const responseFormatter = (options = {}) => {
 
       // Don't format if content-type indicates binary data
       const contentType = res.get('Content-Type') || '';
-      if (contentType.startsWith('image/') || 
-          contentType.startsWith('video/') || 
+      if (contentType.startsWith('image/') ||
+          contentType.startsWith('video/') ||
           contentType.startsWith('audio/') ||
           contentType.includes('octet-stream')) {
         return originalSend.call(this, data);

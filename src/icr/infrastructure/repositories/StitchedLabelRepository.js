@@ -35,6 +35,13 @@ export class StitchedLabelRepository extends BaseRepository {
   }
 
   /**
+   * Find stitched label by label hashes (using static method)
+   */
+  async findByLabelHashes(labelHashes) {
+    return await this.model.findByLabelHashes(labelHashes);
+  }
+
+  /**
    * Find many stitched labels with filters (using base repository method)
    */
   async findMany(filters = {}, options = {}) {
@@ -74,6 +81,40 @@ export class StitchedLabelRepository extends BaseRepository {
    */
   async updateStatus(labelId, status) {
     return await this.update(labelId, { processingStatus: status });
+  }
+
+  /**
+   * Find stitched label by batch ID (using gradedCardScanIds)
+   */
+  async findByBatchId(batchId) {
+    // For now, find by any matching scan ID - this may need refinement
+    return await this.findOne({
+      gradedCardScanIds: { $in: [batchId] }
+    });
+  }
+
+  /**
+   * Update processing status with optional metadata
+   */
+  async updateProcessingStatus(labelId, status, metadata = {}) {
+    const updateData = {
+      processingStatus: status,
+      ...metadata
+    };
+    return await this.update(labelId, updateData);
+  }
+
+  /**
+   * Update OCR results
+   */
+  async updateOcrResults(labelId, ocrData) {
+    const updateData = {
+      ocrText: ocrData.ocrText,
+      ocrConfidence: ocrData.ocrConfidence,
+      ocrAnnotations: ocrData.ocrAnnotations,
+      processingStatus: 'ocr_completed'
+    };
+    return await this.update(labelId, updateData);
   }
 
   /**

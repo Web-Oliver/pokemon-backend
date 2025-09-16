@@ -29,7 +29,7 @@ export default class BaseSearchController extends BaseController {
      */
     async executeHooks(event, operation, data, context) {
         const handlers = this.hooks.get(event) || [];
-        
+
         for (const handler of handlers) {
             try {
                 await handler(operation, data, context);
@@ -37,7 +37,7 @@ export default class BaseSearchController extends BaseController {
                 Logger.error('BaseSearchController', `Hook execution failed for ${event}`, error);
             }
         }
-        
+
         return data;
     }
 

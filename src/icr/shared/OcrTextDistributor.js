@@ -1,10 +1,8 @@
 /**
- * OCR Text Distributor - Centralized OCR Text Processing
+ * OCR Text Distribution Utility
  *
- * SOLID Principles:
- * - Single Responsibility: Only handles OCR text distribution and confidence calculation
- * - Open/Closed: Static methods for extension without modification
- * - DRY: Single implementation used across all ICR services
+ * Handles mapping OCR text annotations from stitched images back to individual labels
+ * using coordinate-based positioning. Critical component for Pokemon card OCR workflow.
  */
 
 import Logger from '@/system/logging/Logger.js';
@@ -12,177 +10,229 @@ import Logger from '@/system/logging/Logger.js';
 export class OcrTextDistributor {
 
   /**
-   * Distribute OCR text annotations by actual label positions
-   * @param {Array} textAnnotations - Google Vision text annotations
-   * @param {Array} labelPositions - Array of {index, y, height} for each label
-   * @returns {Array} Array of text strings for each label
+   * Distribute OCR text annotations to individual labels based on Y coordinates
+   * @param {Array} textAnnotations - Google Vision text annotations with bounding boxes
+   * @param {Array} labelPositions - Label positions from stitching process
+   * @returns {Array} Array of text strings for each label position
    */
   static distributeByActualPositions(textAnnotations, labelPositions) {
-    if (!textAnnotations || !Array.isArray(textAnnotations) || textAnnotations.length === 0) {
-      Logger.warn('OcrTextDistributor', 'No text annotations provided for distribution');
-      return Array(labelPositions.length).fill('');
-    }
-
-    if (!labelPositions || !Array.isArray(labelPositions) || labelPositions.length === 0) {
-      Logger.warn('OcrTextDistributor', 'No label positions provided for distribution');
-      return [];
-    }
-
-    const labelSegments = Array(labelPositions.length).fill(null).map(() => []);
-
-    // Skip the first annotation (full text block) and process individual words/phrases
-    const individualAnnotations = textAnnotations.slice(1);
-
-    individualAnnotations.forEach(annotation => {
-      if (!annotation.boundingPoly || !annotation.boundingPoly.vertices) {
-        return;
-      }
-
-      // Calculate center Y position of the text
-      const vertices = annotation.boundingPoly.vertices;
-      const avgY = vertices.reduce((sum, vertex) => sum + (vertex.y || 0), 0) / vertices.length;
-
-      // Find which label this text belongs to based on actual positions
-      let labelIndex = -1;
-      for (let i = 0; i < labelPositions.length; i++) {
-        const pos = labelPositions[i];
-        if (avgY >= pos.y && avgY < pos.y + pos.height) {
-          labelIndex = i;
-          break;
-        }
-      }
-
-      // If no exact match, find closest label
-      if (labelIndex === -1) {
-        let minDistance = Infinity;
-        for (let i = 0; i < labelPositions.length; i++) {
-          const pos = labelPositions[i];
-          const labelCenter = pos.y + pos.height / 2;
-          const distance = Math.abs(avgY - labelCenter);
-          if (distance < minDistance) {
-            minDistance = distance;
-            labelIndex = i;
-          }
-        }
-      }
-
-      labelSegments[labelIndex].push({
-        text: annotation.description,
-        confidence: annotation.confidence || 0,
-        boundingBox: annotation.boundingPoly,
-        centerY: avgY
+    try {
+      Logger.operationStart('OCR_TEXT_DISTRIBUTION', 'Distributing text by Y coordinates', {
+        annotationCount: textAnnotations?.length || 0,
+        labelCount: labelPositions?.length || 0
       });
-    });
 
-    // Sort text within each label by Y position (top to bottom)
-    labelSegments.forEach((segment, index) => {
-      if (Array.isArray(segment)) {
-        segment.sort((a, b) => a.centerY - b.centerY);
-      } else {
-        Logger.error('OcrTextDistributor', 'Segment is not an array', {
-          index,
-          segment,
-          labelSegmentsLength: labelSegments.length
+      // Validate inputs
+      if (!textAnnotations || !Array.isArray(textAnnotations) || textAnnotations.length === 0) {
+        Logger.warn('OcrTextDistributor', 'No text annotations provided');
+        return Array(labelPositions?.length || 0).fill('');
+      }
+
+      if (!labelPositions || !Array.isArray(labelPositions) || labelPositions.length === 0) {
+        Logger.warn('OcrTextDistributor', 'No label positions provided');
+        return [];
+      }
+
+      // Initialize distribution array - create array with correct length
+      const distribution = Array(labelPositions.length).fill(null).map(() => []);
+
+      // Skip first annotation (full text block) and process individual text segments
+      const individualAnnotations = textAnnotations.slice(1);
+
+      Logger.info('OCR_TEXT_DISTRIBUTION', 'Processing individual text annotations', {
+        totalAnnotations: textAnnotations.length,
+        individualAnnotations: individualAnnotations.length,
+        labelPositions: labelPositions.length
+      });
+
+      // Process each text annotation
+      for (let i = 0; i < individualAnnotations.length; i++) {
+        const annotation = individualAnnotations[i];
+
+        if (!annotation.boundingPoly || !annotation.boundingPoly.vertices) {
+          Logger.warn('OCR_TEXT_DISTRIBUTION', 'Annotation missing bounding box', {
+            annotationIndex: i,
+            description: annotation.description?.substring(0, 30)
+          });
+          continue;
+        }
+
+        // Calculate text center Y coordinate
+        const textBounds = this.calculateTextBounds(annotation.boundingPoly.vertices);
+        const textCenterY = (textBounds.top + textBounds.bottom) / 2;
+
+        // Find matching label position using Y coordinate overlap
+        const assignment = this.findBestLabelMatch(textCenterY, textBounds, labelPositions);
+
+        if (assignment.labelIndex !== -1) {
+          // Add text to the correct label position
+          distribution[assignment.labelIndex].push({
+            text: annotation.description,
+            confidence: annotation.confidence || 0,
+            centerY: textCenterY,
+            assignmentConfidence: assignment.confidence,
+            boundingBox: annotation.boundingPoly
+          });
+
+          Logger.debug('OCR_TEXT_DISTRIBUTION', 'Text assigned to label', {
+            text: annotation.description.substring(0, 30),
+            textY: textCenterY,
+            labelIndex: assignment.labelIndex,
+            labelYRange: `${labelPositions[assignment.labelIndex].y}-${labelPositions[assignment.labelIndex].y + labelPositions[assignment.labelIndex].height}`,
+            confidence: assignment.confidence
+          });
+        } else {
+          Logger.warn('OCR_TEXT_DISTRIBUTION', 'No label found for text annotation', {
+            text: annotation.description.substring(0, 30),
+            textY: textCenterY,
+            textBounds: textBounds
+          });
+        }
+      }
+
+      // Sort text within each label by Y position (top to bottom)
+      distribution.forEach((segments, labelIndex) => {
+        segments.sort((a, b) => a.centerY - b.centerY);
+      });
+
+      // Convert to text strings
+      const textStrings = distribution.map((segments, labelIndex) => {
+        const text = segments.map(segment => segment.text).join(' ').trim();
+
+        Logger.debug('OCR_TEXT_DISTRIBUTION', `Label ${labelIndex} text result`, {
+          labelIndex,
+          segmentCount: segments.length,
+          textLength: text.length,
+          textPreview: text.substring(0, 50)
         });
-        labelSegments[index] = []; // Fix corrupted segment
-      }
-    });
 
-    Logger.info('OcrTextDistributor', 'Text distribution completed', {
-      totalAnnotations: individualAnnotations.length,
-      labelCount: labelPositions.length,
-      distributedCounts: labelSegments.map(segment => segment.length)
-    });
+        return text;
+      });
 
-    // Convert segments to strings for distribution (this was the missing part!)
-    const textStrings = labelSegments.map((segment, index) => {
-      if (!Array.isArray(segment)) {
-        Logger.warn('OcrTextDistributor', 'Non-array segment found, returning empty string', { index, segment });
-        return '';
-      }
-      return segment.map(item => item.text).join(' ').trim();
-    });
+      Logger.operationSuccess('OCR_TEXT_DISTRIBUTION', 'Text distribution completed', {
+        distributedLabels: textStrings.filter(t => t.length > 0).length,
+        emptyLabels: textStrings.filter(t => t.length === 0).length,
+        totalLabels: textStrings.length
+      });
 
-    Logger.info('OcrTextDistributor', 'String conversion completed', {
-      resultLength: textStrings.length,
-      expectedLength: labelPositions.length,
-      textLengths: textStrings.map(r => r.length)
-    });
+      return textStrings;
 
-    return textStrings;
+    } catch (error) {
+      Logger.operationError('OCR_TEXT_DISTRIBUTION', 'Text distribution failed', error);
+      throw error;
+    }
   }
 
   /**
-   * Calculate overall confidence score from text annotations
-   * @param {Array} textAnnotations - Google Vision text annotations
-   * @returns {number} Average confidence score (0-1)
+   * Calculate bounding rectangle from vertices
+   * @param {Array} vertices - Array of {x, y} coordinates
+   * @returns {Object} Normalized bounding rectangle
    */
-  static calculateOverallConfidence(textAnnotations) {
-    if (!textAnnotations || !Array.isArray(textAnnotations) || textAnnotations.length === 0) {
-      return 0;
-    }
+  static calculateTextBounds(vertices) {
+    const xCoords = vertices.map(v => v.x || 0);
+    const yCoords = vertices.map(v => v.y || 0);
 
-    // Skip the first annotation (full text block) and process individual words/phrases
-    const individualAnnotations = textAnnotations.slice(1);
-
-    if (individualAnnotations.length === 0) {
-      return 0;
-    }
-
-    const totalConfidence = individualAnnotations.reduce((sum, annotation) => {
-      return sum + (annotation.confidence || 0);
-    }, 0);
-
-    const averageConfidence = totalConfidence / individualAnnotations.length;
-
-    // Round to 2 decimal places
-    return Math.round(averageConfidence * 100) / 100;
+    return {
+      left: Math.min(...xCoords),
+      right: Math.max(...xCoords),
+      top: Math.min(...yCoords),
+      bottom: Math.max(...yCoords),
+      width: Math.max(...xCoords) - Math.min(...xCoords),
+      height: Math.max(...yCoords) - Math.min(...yCoords)
+    };
   }
 
   /**
-   * Extract text content from distributed segments
-   * @param {Array} labelSegments - Distributed text segments
-   * @returns {Array} Array of text strings for each label
+   * Find best matching label for text based on Y coordinate overlap
+   * @param {number} textCenterY - Y coordinate of text center
+   * @param {Object} textBounds - Text bounding rectangle
+   * @param {Array} labelPositions - Label positions array
+   * @returns {Object} Best assignment with confidence score
    */
-  static extractTextFromSegments(labelSegments) {
-    if (!labelSegments || !Array.isArray(labelSegments)) {
-      return [];
+  static findBestLabelMatch(textCenterY, textBounds, labelPositions) {
+    const TOLERANCE = 10; // 10px tolerance for boundary detection
+    let bestMatch = { labelIndex: -1, confidence: 0, overlapPercentage: 0 };
+
+    for (let i = 0; i < labelPositions.length; i++) {
+      const position = labelPositions[i];
+
+      // Calculate label boundaries with tolerance
+      const labelTop = position.y - TOLERANCE;
+      const labelBottom = position.y + position.height + TOLERANCE;
+
+      // Check for Y coordinate overlap
+      const overlapTop = Math.max(textBounds.top, labelTop);
+      const overlapBottom = Math.min(textBounds.bottom, labelBottom);
+      const overlapHeight = Math.max(0, overlapBottom - overlapTop);
+
+      const textHeight = textBounds.bottom - textBounds.top;
+      const overlapPercentage = textHeight > 0 ? overlapHeight / textHeight : 0;
+
+      // Calculate distance from text center to label center
+      const labelCenterY = position.y + (position.height / 2);
+      const distanceFromCenter = Math.abs(textCenterY - labelCenterY);
+      const normalizedDistance = distanceFromCenter / (position.height / 2);
+
+      // Calculate assignment confidence
+      const confidence = this.calculateAssignmentConfidence(overlapPercentage, normalizedDistance);
+
+      // Update best match if this is better
+      if (confidence > bestMatch.confidence) {
+        bestMatch = {
+          labelIndex: i,
+          confidence: confidence,
+          overlapPercentage: overlapPercentage,
+          distanceFromCenter: distanceFromCenter,
+          labelPosition: position
+        };
+      }
     }
 
-    return labelSegments.map(segment => {
-      if (!segment || !Array.isArray(segment)) {
-        return '';
-      }
-
-      return segment
-        .map(annotation => annotation.text || '')
-        .filter(text => text.trim().length > 0)
-        .join(' ');
-    });
+    return bestMatch;
   }
 
   /**
-   * Get confidence scores for each label segment
-   * @param {Array} labelSegments - Distributed text segments
-   * @returns {Array} Array of confidence scores for each label
+   * Calculate confidence score for text-to-label assignment
+   * @param {number} overlapPercentage - 0.0 to 1.0+ (overlap percentage)
+   * @param {number} normalizedDistance - 0.0 to 1.0+ (distance from center)
+   * @returns {number} Confidence score 0.0 to 1.0
    */
-  static getSegmentConfidences(labelSegments) {
-    if (!labelSegments || !Array.isArray(labelSegments)) {
-      return [];
-    }
+  static calculateAssignmentConfidence(overlapPercentage, normalizedDistance) {
+    // Weighted scoring system
+    const overlapWeight = 0.7;
+    const distanceWeight = 0.3;
 
-    return labelSegments.map(segment => {
-      if (!segment || !Array.isArray(segment) || segment.length === 0) {
-        return 0;
-      }
+    // Overlap score (higher overlap = better)
+    const overlapScore = Math.min(1.0, overlapPercentage);
 
-      const totalConfidence = segment.reduce((sum, annotation) => {
-        return sum + (annotation.confidence || 0);
-      }, 0);
+    // Distance score (closer to center = better)
+    const distanceScore = Math.max(0.0, 1.0 - normalizedDistance);
 
-      const averageConfidence = totalConfidence / segment.length;
-      return Math.round(averageConfidence * 100) / 100;
-    });
+    // Combined confidence score
+    const confidence = (overlapScore * overlapWeight) + (distanceScore * distanceWeight);
+
+    return Math.max(0.0, Math.min(1.0, confidence));
+  }
+
+  /**
+   * Get distribution quality metrics
+   * @param {Array} distributionResults - Results from distributeByActualPositions
+   * @param {Array} originalAnnotations - Original OCR annotations
+   * @returns {Object} Quality metrics
+   */
+  static getDistributionQualityMetrics(distributionResults, originalAnnotations) {
+    const totalAnnotations = originalAnnotations.length - 1; // Exclude full text block
+    const distributedText = distributionResults.filter(text => text.length > 0);
+    const emptyLabels = distributionResults.filter(text => text.length === 0);
+
+    return {
+      totalLabels: distributionResults.length,
+      labelsWithText: distributedText.length,
+      emptyLabels: emptyLabels.length,
+      distributionRate: distributedText.length / distributionResults.length,
+      averageTextLength: distributedText.reduce((sum, text) => sum + text.length, 0) / Math.max(1, distributedText.length),
+      totalCharacters: distributionResults.reduce((sum, text) => sum + text.length, 0)
+    };
   }
 }
 

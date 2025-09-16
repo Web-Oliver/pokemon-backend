@@ -57,10 +57,6 @@ class BaseController {
   }
 
 
-
-
-
-
   /**
    * Get all entities with filtering and pagination
    *
@@ -110,7 +106,7 @@ class BaseController {
         [`Found ${this.options.pluralName}`]: results.length
       });
 
-      let responseData = {
+      const responseData = {
         success: true,
         count: results.length,
         data: results
@@ -153,7 +149,7 @@ class BaseController {
         [`${this.options.entityName} found`]: entity._id
       });
 
-      let responseData = {
+      const responseData = {
         success: true,
         data: entity
       };
@@ -198,7 +194,7 @@ class BaseController {
         [`${this.options.entityName} created successfully`]: entity._id
       });
 
-      let responseData = {
+      const responseData = {
         success: true,
         data: entity
       };
@@ -242,7 +238,7 @@ class BaseController {
         [`${this.options.entityName} updated successfully`]: entity._id
       });
 
-      let responseData = {
+      const responseData = {
         success: true,
         data: entity
       };
@@ -284,7 +280,7 @@ class BaseController {
         [`${this.options.entityName} deleted successfully`]: req.params.id
       });
 
-      let responseData = {
+      const responseData = {
         success: true,
         message: `${this.options.entityName} deleted successfully`
       };
@@ -334,7 +330,7 @@ class BaseController {
         [`${this.options.entityName} marked as sold`]: entity._id
       });
 
-      let responseData = {
+      const responseData = {
         success: true,
         data: entity
       };

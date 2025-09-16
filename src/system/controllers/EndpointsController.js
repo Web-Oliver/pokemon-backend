@@ -1,6 +1,6 @@
 /**
  * Endpoints Documentation Controller - STANDALONE
- * 
+ *
  * Does NOT extend BaseController to avoid conflicts with existing code
  * Simple, focused controller for documentation endpoints only
  */
@@ -16,7 +16,7 @@ export default class EndpointsController {
   async getEndpoints(req, res, next) {
     try {
       const documentation = await this.endpointsService.getEndpointsDocumentation();
-      
+
       res.status(200).json({
         success: true,
         data: documentation,
@@ -44,7 +44,7 @@ export default class EndpointsController {
   async getEndpointsSummary(req, res, next) {
     try {
       const documentation = await this.endpointsService.getEndpointsDocumentation();
-      
+
       const summary = {
         meta: documentation.meta,
         categories: Object.keys(documentation.categories).map(key => ({
@@ -56,7 +56,7 @@ export default class EndpointsController {
           methods: [...new Set(documentation.categories[key].endpoints.map(e => e.method))]
         }))
       };
-      
+
       res.status(200).json({
         success: true,
         data: summary,
@@ -78,7 +78,7 @@ export default class EndpointsController {
     try {
       const { categoryName } = req.params;
       const documentation = await this.endpointsService.getEndpointsDocumentation();
-      
+
       const category = documentation.categories[categoryName];
       if (!category) {
         return res.status(404).json({
@@ -89,7 +89,7 @@ export default class EndpointsController {
           }
         });
       }
-      
+
       res.status(200).json({
         success: true,
         data: category,
@@ -110,7 +110,7 @@ export default class EndpointsController {
   async clearCache(req, res, next) {
     try {
       this.endpointsService.clearCache();
-      
+
       res.status(200).json({
         success: true,
         data: null,

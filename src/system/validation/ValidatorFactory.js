@@ -319,16 +319,16 @@ class ValidatorFactory {
           if (category !== undefined && category !== null && category !== '') {
             ValidatorFactory.string(category, 'Category');
           }
-          
+
           // Optional date validations
           if (startDate !== undefined && startDate !== null && startDate !== '') {
             ValidatorFactory.date(startDate, 'Start date');
           }
-          
+
           if (endDate !== undefined && endDate !== null && endDate !== '') {
             ValidatorFactory.date(endDate, 'End date');
           }
-          
+
           return { category, startDate, endDate };
         }
       },

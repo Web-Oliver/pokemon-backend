@@ -90,7 +90,7 @@ class Container {
           saleService: this.resolve('saleService'),
           enableImageManagement: true,
           enableSaleTracking: entityConfig?.includeMarkAsSold !== false,
-          ...this.getConfiguration('psaGradedCardService'),
+          ...this.getConfiguration('psaGradedCardService')
         });
       }
     );
@@ -106,7 +106,7 @@ class Container {
           saleService: this.resolve('saleService'),
           enableImageManagement: true,
           enableSaleTracking: entityConfig?.includeMarkAsSold !== false,
-          ...this.getConfiguration('rawCardService'),
+          ...this.getConfiguration('rawCardService')
         });
       }
     );
@@ -122,7 +122,7 @@ class Container {
           saleService: this.resolve('saleService'),
           enableImageManagement: true,
           enableSaleTracking: entityConfig?.includeMarkAsSold !== false,
-          ...this.getConfiguration('sealedProductService'),
+          ...this.getConfiguration('sealedProductService')
         });
       }
     );
@@ -140,7 +140,7 @@ class Container {
   registerSingleton(name, factory) {
     this.dependencies.set(name, {
       factory,
-      type: 'singleton',
+      type: 'singleton'
     });
   }
 
@@ -152,7 +152,7 @@ class Container {
   registerTransient(name, factory) {
     this.dependencies.set(name, {
       factory,
-      type: 'transient',
+      type: 'transient'
     });
   }
 
@@ -164,7 +164,7 @@ class Container {
   registerScoped(name, factory) {
     this.dependencies.set(name, {
       factory,
-      type: 'scoped',
+      type: 'scoped'
     });
   }
 
@@ -177,7 +177,7 @@ class Container {
   registerFactory(name, factory, lifecycle = 'transient') {
     this.dependencies.set(name, {
       factory: () => factory(this),
-      type: lifecycle,
+      type: lifecycle
     });
   }
 
@@ -372,7 +372,7 @@ class Container {
       graph[name] = {
         type: dependency.type,
         hasConfiguration: this.configurations.has(name),
-        isResolved: dependency.type === 'singleton' ? this.singletons.has(name) : false,
+        isResolved: dependency.type === 'singleton' ? this.singletons.has(name) : false
       };
     }
 
@@ -412,7 +412,7 @@ class Container {
       issues,
       warnings,
       totalDependencies: this.dependencies.size,
-      totalConfigurations: this.configurations.size,
+      totalConfigurations: this.configurations.size
     };
   }
 
@@ -432,7 +432,7 @@ class Container {
     const dependenciesByType = {
       singleton: 0,
       transient: 0,
-      scoped: 0,
+      scoped: 0
     };
 
     for (const dependency of this.dependencies.values()) {
@@ -447,7 +447,7 @@ class Container {
       totalHooks: Array.from(this.hooks.values()).reduce((total, handlers) => total + handlers.length, 0),
       scopedContexts: this.scoped.size,
       initialized: this.initialized,
-      isResolving: this.isResolvingStack.size > 0,
+      isResolving: this.isResolvingStack.size > 0
     };
   }
 }

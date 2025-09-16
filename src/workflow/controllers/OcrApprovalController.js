@@ -60,20 +60,20 @@ const approveOcrForCollection = asyncHandler(async (req, res) => {
  * REFACTORED: Controller only handles HTTP concerns, delegates to service
  */
 const rejectIcrResult = asyncHandler(async (req, res) => {
-  const { scanId, reason = 'user_rejection' } = req.body;
+  const { id, reason = 'user_rejection' } = req.body;
 
   // Input validation (controller responsibility)
-  if (!scanId) {
+  if (!id) {
     throw new ValidationError('Scan ID is required for rejection');
   }
 
   Logger.info('OcrApprovalController', 'OCR rejection request received', {
-    scanId,
+    id,
     reason
   });
 
   // Delegate to service (business logic)
-  const result = await ocrApprovalService.rejectIcrResult(scanId, reason);
+  const result = await ocrApprovalService.rejectIcrResult(id, reason);
 
   // Format response (controller responsibility)
   res.json({

@@ -32,7 +32,7 @@ const icrBatchController = new IcrBatchController();
  * @route   POST /api/icr/upload
  * @desc    Upload PSA card images with duplicate detection
  * @access  Public
- * @body    {files} images - Array of image files (max 50 files, 50MB limit)
+ * @body    {files} images - Array of image files (max 100 files, 50MB limit)
  */
 router.post('/upload',
   icrBatchController.getUploadMiddleware(),
@@ -43,7 +43,7 @@ router.post('/upload',
  * @route   POST /api/icr/extract-labels
  * @desc    Extract PSA labels from uploaded scans
  * @access  Public
- * @body    {array} scanIds - Array of scan IDs to process
+ * @body    {array} ids - Array of scan IDs to process
  */
 router.post('/extract-labels',
   icrBatchController.extractLabels
@@ -209,7 +209,7 @@ router.get('/images/stitched/:filename',
  * @route   DELETE /api/icr/scans
  * @desc    Delete multiple scans
  * @access  Public
- * @body    {array} scanIds - Array of scan IDs to delete
+ * @body    {array} ids - Array of scan IDs to delete
  */
 router.delete('/scans',
   icrBatchController.deleteScans
@@ -237,7 +237,7 @@ router.delete('/stitched/:id',
  * @body    {string} imageHash - Image hash identifier
  * @body    {string} cardId - Selected card ObjectId
  */
-router.put('/batch/:scanId/select-match',
+router.put('/batch/:id/select-match',
   icrBatchController.selectMatch
 );
 

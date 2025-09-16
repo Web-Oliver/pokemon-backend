@@ -34,7 +34,7 @@ class ProductSearchService extends BaseSearchService {
     const searchOptions = { ...restOptions, offset, limit };
 
     const result = await this.performSearch('product', Product, query, filters, searchOptions, searchConfig);
-    
+
     // Transform result to match expected format
     return {
       products: result.results,

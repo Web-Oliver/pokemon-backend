@@ -36,7 +36,7 @@ export class IcrCardMatchingService {
           const parsingResult = await this.hierarchicalParser.parsePsaLabel(scan.ocrText);
 
           const result = {
-            scanId: scan._id,
+            id: scan._id,
             originalFileName: scan.originalFileName,
             ocrText: scan.ocrText,
             extractedData: parsingResult.extractedData || {},
@@ -62,6 +62,7 @@ export class IcrCardMatchingService {
               cardId: match.card._id,
               cardName: match.card.cardName,
               cardNumber: match.card.cardNumber,
+              setId: match.card.setId || match.setDetails?._id,
               setName: match.setDetails?.setName || 'Unknown',
               year: match.setDetails?.year,
               confidence: match.confidence,
@@ -121,7 +122,7 @@ export class IcrCardMatchingService {
           const parsingResult = await this.hierarchicalParser.parsePsaLabel(scan.ocrText);
 
           const result = {
-            scanId: scan._id,
+            id: scan._id,
             imageHash: scan.imageHash,
             originalFileName: scan.originalFileName,
             ocrText: scan.ocrText,
@@ -147,6 +148,7 @@ export class IcrCardMatchingService {
               cardId: match.card._id,
               cardName: match.card.cardName,
               cardNumber: match.card.cardNumber,
+              setId: match.card.setId || match.setDetails?._id,
               setName: match.setDetails?.setName || 'Unknown',
               year: match.setDetails?.year,
               confidence: match.confidence,
@@ -170,11 +172,16 @@ export class IcrCardMatchingService {
           matchingResults.push(result);
 
         } catch (error) {
-          Logger.operationError('ICR_SCAN_MATCHING_BY_HASH', 'Individual scan matching failed', error, { scanId: scan._id });
+          Logger.operationError('ICR_SCAN_MATCHING_BY_HASH', 'Individual scan matching failed', error, { id: scan._id });
           matchingResults.push({
-            scanId: scan._id,
+            id: scan._id,
             imageHash: scan.imageHash,
             originalFileName: scan.originalFileName,
+            ocrText: scan.ocrText || 'No OCR text',
+            extractedData: {},
+            cardMatches: [],
+            matchingStatus: 'error',
+            bestMatch: null,
             error: error.message,
             processingStatus: 'error'
           });

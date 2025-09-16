@@ -14,9 +14,22 @@ const gradedCardScanSchema = new mongoose.Schema({
   imageHash: { type: String, required: true, unique: true },
   originalFileName: String,
 
+  // Batch processing
+  batchId: { type: String, required: false }, // For tracking batch operations
+
   // OCR results
   ocrText: String,
   ocrConfidence: { type: Number, min: 0, max: 1 },
+
+  // NEW: Preserve annotation segments with bounding boxes
+  ocrAnnotations: [{
+    text: String,
+    confidence: { type: Number, min: 0, max: 1 },
+    boundingBox: {
+      vertices: [{ x: Number, y: Number }]
+    },
+    centerY: Number
+  }],
 
   // Extracted PSA data from OCR parsing
   extractedData: {
@@ -36,6 +49,7 @@ const gradedCardScanSchema = new mongoose.Schema({
     cardId: { type: Schema.Types.ObjectId, ref: 'Card' },
     cardName: String,
     cardNumber: String,
+    setId: { type: Schema.Types.ObjectId, ref: 'Set' },
     setName: String,
     year: Number,
     confidence: { type: Number, min: 0, max: 1 },
@@ -57,10 +71,9 @@ const gradedCardScanSchema = new mongoose.Schema({
     default: 'pending'
   },
 
-  // Processing status (ICR pipeline steps)
+  // Processing status (ICR pipeline steps) - NO ENUM VALIDATION
   processingStatus: {
     type: String,
-    enum: ['pending', 'uploaded', 'extracted', 'stitched', 'ocr_completed', 'matched', 'failed', 'approved', 'denied'],
     default: 'pending'
   },
 
@@ -80,11 +93,13 @@ const gradedCardScanSchema = new mongoose.Schema({
 }, {
   timestamps: true,
   versionKey: false
-});
+});;
 
 // Essential indexes only
 gradedCardScanSchema.index({ imageHash: 1 }, { unique: true });
 gradedCardScanSchema.index({ processingStatus: 1 });
+gradedCardScanSchema.index({ batchId: 1 });
+gradedCardScanSchema.index({ batchId: 1, processingStatus: 1 });
 
 // Essential static methods only
 

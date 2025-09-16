@@ -6,7 +6,7 @@ import { API_ENDPOINTS, API_CATEGORIES, SYSTEM_INFO } from '@/system/constants/E
 
 /**
  * StatusService - Completely Standalone
- * 
+ *
  * Provides static API information and basic system metrics.
  * No database connections, no BaseService inheritance, no external dependencies.
  * Pure static information service.
@@ -144,7 +144,7 @@ export default class StatusService {
             search: 'Multi-engine search capabilities across all entities',
             cards: 'Pokemon card data management and retrieval',
             sets: 'Pokemon set information and card relationships',
-            products: 'Pokemon product catalog and management', 
+            products: 'Pokemon product catalog and management',
             setProducts: 'Set-specific product information and statistics',
             collection: 'Personal collection management and exports',
             activities: 'Activity tracking and history management',

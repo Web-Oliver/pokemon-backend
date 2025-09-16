@@ -81,12 +81,15 @@ export class GoogleVisionOcrProvider {
         image: { content: imageBuffer },
         features: [
           {
-            type: 'TEXT_DETECTION',
-            maxResults: 50
+            type: 'TEXT_DETECTION', // ✅ FIXED: Use TEXT_DETECTION for PSA labels (better for simple text)
+            maxResults: 50 // Optimized for PSA labels
           }
         ],
         imageContext: {
-          languageHints: ['en', 'ja']
+          languageHints: ['en', 'ja'],
+          textDetectionParams: {
+            enableTextDetectionConfidenceScore: true // Enable confidence scores
+          }
         }
       };
 
@@ -97,14 +100,75 @@ export class GoogleVisionOcrProvider {
 
       Logger.info('GoogleVisionOcrProvider', `Text extraction completed in ${processingTime}ms`);
 
+      // ✅ DEBUG: Log the actual API response structure
+      Logger.info('GoogleVisionOcrProvider', 'API Response Structure', {
+        hasTextAnnotations: !!result.textAnnotations,
+        textAnnotationsLength: result.textAnnotations?.length || 0,
+        hasFullTextAnnotation: !!result.fullTextAnnotation,
+        hasError: !!result.error,
+        firstAnnotationHasBoundingPoly: result.textAnnotations?.[0]?.boundingPoly ? true : false,
+        firstAnnotationSample: result.textAnnotations?.[0] ? {
+          description: result.textAnnotations[0].description?.substring(0, 50),
+          hasBoundingPoly: !!result.textAnnotations[0].boundingPoly,
+          hasVertices: !!result.textAnnotations[0].boundingPoly?.vertices
+        } : null
+      });
+
       // Check for errors
       if (result.error) {
         throw new Error(`Google Vision API error: ${result.error.message}`);
       }
 
-      // Extract text annotations
-      const textAnnotations = result.textAnnotations || [];
+      // Extract text annotations - try both response formats
+      let textAnnotations = result.textAnnotations || [];
+
+      // ✅ FALLBACK: If no textAnnotations, try fullTextAnnotation
+      if (textAnnotations.length === 0 && result.fullTextAnnotation) {
+        Logger.info('GoogleVisionOcrProvider', 'Using fullTextAnnotation as fallback');
+
+        // Extract from structured response
+        if (result.fullTextAnnotation.pages) {
+          textAnnotations = [];
+          result.fullTextAnnotation.pages.forEach(page => {
+            page.blocks?.forEach(block => {
+              block.paragraphs?.forEach(paragraph => {
+                paragraph.words?.forEach(word => {
+                  const wordText = word.symbols?.map(s => s.text).join('') || '';
+                  if (wordText && word.boundingBox) {
+                    textAnnotations.push({
+                      description: wordText,
+                      boundingPoly: word.boundingBox,
+                      confidence: word.confidence
+                    });
+                  }
+                });
+              });
+            });
+          });
+        }
+
+        // Add full text as first annotation
+        if (result.fullTextAnnotation.text) {
+          textAnnotations.unshift({
+            description: result.fullTextAnnotation.text,
+            boundingPoly: result.fullTextAnnotation.pages?.[0]?.blocks?.[0]?.boundingBox
+          });
+        }
+      }
+
       const fullText = textAnnotations.length > 0 ? textAnnotations[0].description : '';
+
+      // ✅ FINAL DEBUG: Log what we're returning
+      Logger.info('GoogleVisionOcrProvider', 'Final extraction result', {
+        textAnnotationsLength: textAnnotations.length,
+        fullTextLength: fullText.length,
+        annotationsWithBoundingBoxes: textAnnotations.filter(a => a.boundingPoly?.vertices).length,
+        sampleAnnotations: textAnnotations.slice(1, 4).map(a => ({
+          text: a.description?.substring(0, 20),
+          hasBoundingPoly: !!a.boundingPoly,
+          verticesCount: a.boundingPoly?.vertices?.length || 0
+        }))
+      });
 
       return {
         textAnnotations,

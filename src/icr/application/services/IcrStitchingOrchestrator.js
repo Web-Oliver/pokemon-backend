@@ -93,9 +93,9 @@ class IcrStitchingOrchestrator {
     // Find scans by imageHashes that have extracted labels
     const scans = await this.gradedCardScanRepository.findMany({
       imageHash: { $in: imageHashes },
-      processingStatus: { $in: ['extracted', 'stitched'] }, // Allow re-stitching, exclude ocr_completed/matched
+      // NO STATUS CHECK - Allow stitching ANY scan with a label
       labelImage: { $exists: true, $ne: null }
-    }, { sort: { createdAt: 1 } }); // Pass sort options as second parameter
+    }, { sort: { createdAt: -1 } }); // FIXED: Sort newest first to match visual top-to-bottom order
 
     if (scans.length === 0) {
       throw new Error('No scans with extracted labels found for provided image hashes');
@@ -131,7 +131,7 @@ class IcrStitchingOrchestrator {
         availableScans.push(scan);
       } catch (error) {
         Logger.warn('ICR_STITCH_ORCHESTRATOR', 'Label file not found - skipping', {
-          scanId: scan._id,
+          id: scan._id,
           labelPath: scan.labelImage,
           imageHash: scan.imageHash
         });
@@ -166,7 +166,7 @@ class IcrStitchingOrchestrator {
         height: stitchResult.height
       },
       labelPositions: stitchResult.labelPositions,
-      labelHashes: availableScans.map(s => s.imageHash).sort(),
+      labelHashes: availableScans.map(s => s.imageHash),
       labelCount: availableScans.length,
       gradedCardScanIds: availableScans.map(s => s._id),
       processingStatus: 'stitched'

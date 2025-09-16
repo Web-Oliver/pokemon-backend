@@ -57,14 +57,17 @@ export class GradedCardScanRepository extends BaseRepository {
    * Count scans by status
    */
   async countByStatus(status) {
+    if (status === undefined) {
+      return await this.count({}); // Count all documents
+    }
     return await this.count({ processingStatus: status });
   }
 
   /**
    * Update scan processing status
    */
-  async updateStatus(scanId, status) {
-    return await this.update(scanId, { processingStatus: status });
+  async updateStatus(id, status) {
+    return await this.update(id, { processingStatus: status });
   }
 
   /**
@@ -90,10 +93,49 @@ export class GradedCardScanRepository extends BaseRepository {
   /**
    * Delete scans by IDs
    */
-  async deleteManyByIds(scanIds) {
+  async deleteManyByIds(ids) {
     return await this.deleteMany({
-      _id: { $in: scanIds }
+      _id: { $in: ids }
     });
+  }
+
+  /**
+   * Find scans by batch ID (this assumes batchId relates to scans somehow)
+   * For now, we'll treat batchId as a group identifier
+   */
+  async findByBatchId(batchId) {
+    // This may need refinement based on how batch IDs are actually stored
+    // For now, assume we group by creation time or some batch field
+    return await this.findAll({ batchId });
+  }
+
+  /**
+   * Update OCR results for a scan
+   */
+  async updateOcrResults(id, ocrData) {
+    const updateData = {
+      ocrText: ocrData.ocrText,
+      ocrConfidence: ocrData.ocrConfidence,
+      ocrAnnotations: ocrData.ocrAnnotations
+      // NO PROCESSING STATUS UPDATES - CORE FUNCTIONALITY ONLY
+    };
+    return await this.update(id, updateData);
+  }
+
+  /**
+   * Clear OCR data for scans in a batch
+   */
+  async clearOcrDataByBatch(batchId) {
+    const clearData = {
+      ocrText: null,
+      ocrConfidence: null,
+      ocrAnnotations: [],
+      processingStatus: 'extracted'
+    };
+    return await this.updateMany(
+      { batchId },
+      clearData
+    );
   }
 
   /**

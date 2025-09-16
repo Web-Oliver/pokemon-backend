@@ -1,10 +1,10 @@
 /**
  * HealthController - Comprehensive System Health Checks
- * 
+ *
  * Performs health checks on all critical system dependencies:
  * - MongoDB database connectivity
  * - Node-cache in-memory cache
- * - Google Vision API accessibility  
+ * - Google Vision API accessibility
  * - File system (upload directories)
  * - System resources (memory, uptime)
  */
@@ -20,13 +20,13 @@ export default class HealthController {
      */
     async getSystemHealth(req, res) {
         console.log('[DEBUG] HealthController.getSystemHealth called');
-        
+
         const startTime = Date.now();
-        
+
         try {
             const healthData = await this.healthService.performHealthChecks();
             const responseTime = Date.now() - startTime;
-            
+
             // Add response metadata
             healthData.meta = {
                 controller: 'HealthController',
@@ -37,17 +37,17 @@ export default class HealthController {
 
             // Return 503 if any critical dependencies are down
             const statusCode = healthData.status === 'UP' ? 200 : 503;
-            
+
             res.status(statusCode).json({
                 success: healthData.status === 'UP',
                 ...healthData
             });
-            
+
         } catch (error) {
             console.error('[ERROR] Health check failed', error);
-            
+
             const responseTime = Date.now() - startTime;
-            
+
             res.status(503).json({
                 success: false,
                 status: 'DOWN',
@@ -70,32 +70,32 @@ export default class HealthController {
      */
     async getDetailedHealth(req, res) {
         console.log('[DEBUG] HealthController.getDetailedHealth called');
-        
+
         const startTime = Date.now();
-        
+
         try {
             const healthData = await this.healthService.getDetailedHealthInfo();
             const responseTime = Date.now() - startTime;
-            
+
             healthData.meta = {
-                controller: 'HealthController', 
+                controller: 'HealthController',
                 method: 'getDetailedHealth',
                 responseTime: `${responseTime}ms`,
                 timestamp: new Date().toISOString()
             };
 
             const statusCode = healthData.status === 'UP' ? 200 : 503;
-            
+
             res.status(statusCode).json({
                 success: healthData.status === 'UP',
                 ...healthData
             });
-            
+
         } catch (error) {
             console.error('[ERROR] Detailed health check failed', error);
-            
+
             const responseTime = Date.now() - startTime;
-            
+
             res.status(503).json({
                 success: false,
                 status: 'DOWN',
@@ -105,7 +105,7 @@ export default class HealthController {
                 },
                 meta: {
                     controller: 'HealthController',
-                    method: 'getDetailedHealth', 
+                    method: 'getDetailedHealth',
                     responseTime: `${responseTime}ms`,
                     timestamp: new Date().toISOString()
                 }
@@ -119,13 +119,13 @@ export default class HealthController {
      */
     async getReadiness(req, res) {
         console.log('[DEBUG] HealthController.getReadiness called');
-        
+
         try {
             const isReady = await this.healthService.checkReadiness();
-            
+
             const statusCode = isReady ? 200 : 503;
             const status = isReady ? 'READY' : 'NOT_READY';
-            
+
             res.status(statusCode).json({
                 success: isReady,
                 data: {
@@ -139,10 +139,10 @@ export default class HealthController {
                     timestamp: new Date().toISOString()
                 }
             });
-            
+
         } catch (error) {
             console.error('[ERROR] Readiness check failed', error);
-            
+
             res.status(503).json({
                 success: false,
                 data: {
@@ -164,18 +164,18 @@ export default class HealthController {
     }
 
     /**
-     * Get liveness probe - for container orchestration  
+     * Get liveness probe - for container orchestration
      * Checks if service is alive and should be restarted if not
      */
     async getLiveness(req, res) {
         console.log('[DEBUG] HealthController.getLiveness called');
-        
+
         try {
             const isAlive = await this.healthService.checkLiveness();
-            
+
             const statusCode = isAlive ? 200 : 503;
             const status = isAlive ? 'ALIVE' : 'DEAD';
-            
+
             res.status(statusCode).json({
                 success: isAlive,
                 data: {
@@ -189,10 +189,10 @@ export default class HealthController {
                     timestamp: new Date().toISOString()
                 }
             });
-            
+
         } catch (error) {
             console.error('[ERROR] Liveness check failed', error);
-            
+
             res.status(503).json({
                 success: false,
                 data: {

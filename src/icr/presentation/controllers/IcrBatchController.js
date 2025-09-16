@@ -37,7 +37,7 @@ const upload = multer({
   }),
   limits: {
     fileSize: 50 * 1024 * 1024, // 50MB limit
-    files: 50 // Max 50 files
+    files: 100 // Max 100 files
   },
   fileFilter: (req, file, cb) => {
     // Use file service for validation
@@ -91,7 +91,7 @@ class IcrBatchController extends BaseController {
       success: true,
       message: `Image upload completed: ${result.successful}/${req.files.length} images uploaded, ${result.duplicateCount} duplicates skipped`,
       data: {
-        scanIds: result.scanIds,
+        ids: result.ids,
         successful: result.successful,
         failed: result.failed,
         duplicateCount: result.duplicateCount,
@@ -106,19 +106,19 @@ class IcrBatchController extends BaseController {
    * Extract PSA labels from uploaded scans
    */
   extractLabels = asyncHandler(async (req, res) => {
-    const { scanIds } = req.body;
+    const { ids } = req.body;
 
-    if (!scanIds || !Array.isArray(scanIds) || scanIds.length === 0) {
-      throw new ValidationError('scanIds array is required');
+    if (!ids || !Array.isArray(ids) || ids.length === 0) {
+      throw new ValidationError('ids array is required');
     }
 
-    Logger.info('IcrBatchController', '⚙️ Label extraction request received', { scanCount: scanIds.length });
+    Logger.info('IcrBatchController', '⚙️ Label extraction request received', { scanCount: ids.length });
 
-    const result = await this.icrBatchService.extractLabels(scanIds);
+    const result = await this.icrBatchService.extractLabels(ids);
 
     res.json({
       success: true,
-      message: `Label extraction completed: ${result.successful}/${scanIds.length} scans processed, ${result.skippedCount} skipped`,
+      message: `Label extraction completed: ${result.successful}/${ids.length} scans processed, ${result.skippedCount} skipped`,
       data: result
     });
   });
@@ -184,10 +184,31 @@ class IcrBatchController extends BaseController {
 
     const result = await this.icrBatchService.distributeOcrTextByHashes(imageHashes, ocrResult);
 
-    res.json({
-      success: true,
-      message: 'Text distribution completed',
-      data: result
+    // Determine the appropriate HTTP status code
+    const statusCode = result.success ? 200 : 207; // 207 = Multi-Status for partial success
+
+    // Create detailed response message
+    let message;
+    if (result.successCount === result.totalRequested) {
+      message = `All ${result.successCount} scans processed successfully`;
+    } else if (result.successCount > 0) {
+      message = `Partial success: ${result.successCount}/${result.totalRequested} scans processed successfully, ${result.failureCount} failed`;
+    } else {
+      message = `All ${result.failureCount} scans failed to process`;
+    }
+
+    res.status(statusCode).json({
+      success: result.success,
+      message: message,
+      data: {
+        ...result,
+        // Include detailed failure information for frontend debugging
+        failedScanDetails: result.failedScans?.map(scan => ({
+          originalFileName: scan.originalFileName,
+          imageHash: scan.imageHash,
+          error: scan.error
+        })) || []
+      }
     });
   });
 
@@ -250,7 +271,7 @@ class IcrBatchController extends BaseController {
       'Expires': '0'
     });
 
-    const { status = 'uploaded', page = 1, limit = 150 } = req.query;
+    const { status, page = 1, limit = 150 } = req.query;
     const skip = (page - 1) * limit;
 
     // FIXED: Use service instead of direct database access
@@ -272,6 +293,10 @@ class IcrBatchController extends BaseController {
           processingStatus: scan.processingStatus,
           imageHash: scan.imageHash,
           extractedData: scan.extractedData || {},
+          ocrText: scan.ocrText || null,
+          ocrConfidence: scan.ocrConfidence || null,
+          ocrAnnotations: scan.ocrAnnotations || [],
+          cardMatches: scan.cardMatches || [],
           createdAt: scan.createdAt
         })),
         pagination: {
@@ -473,16 +498,16 @@ class IcrBatchController extends BaseController {
    * Delete multiple scans
    */
   deleteScans = asyncHandler(async (req, res) => {
-    const { scanIds } = req.body;
+    const { ids } = req.body;
 
-    if (!scanIds || !Array.isArray(scanIds) || scanIds.length === 0) {
-      throw new ValidationError('scanIds array is required');
+    if (!ids || !Array.isArray(ids) || ids.length === 0) {
+      throw new ValidationError('ids array is required');
     }
 
-    Logger.info('IcrBatchController', '🗑️ Scan deletion request received', { scanCount: scanIds.length });
+    Logger.info('IcrBatchController', '🗑️ Scan deletion request received', { scanCount: ids.length });
 
     // FIXED: Use service instead of direct database access
-    const result = await this.icrControllerService.deleteScans(scanIds);
+    const result = await this.icrControllerService.deleteScans(ids);
 
     res.json({
       success: true,
@@ -492,23 +517,23 @@ class IcrBatchController extends BaseController {
   });
 
   /**
-   * PUT /api/icr/batch/:scanId/select-match
+   * PUT /api/icr/batch/:id/select-match
    * Manual card match selection
    */
   selectMatch = asyncHandler(async (req, res) => {
-    const { scanId } = req.params;
+    const { id } = req.params;
     const { cardId } = req.body;
 
-    Logger.info('IcrBatchController', '🎯 Manual match selection', { scanId, cardId });
+    Logger.info('IcrBatchController', '🎯 Manual match selection', { id, cardId });
 
     // FIXED: Delegate to batch service instead of direct model access
-    await this.icrBatchService.selectCardMatch(scanId, cardId);
+    await this.icrBatchService.selectCardMatch(id, cardId);
 
     res.json({
       success: true,
       message: 'Match selected successfully',
       data: {
-        scanId,
+        id,
         selectedCardId: cardId,
         matchingStatus: 'manual_override'
       }
@@ -529,7 +554,7 @@ class IcrBatchController extends BaseController {
 
     const { id } = req.params;
 
-    Logger.info('IcrBatchController', '🔍 Getting scan details', { scanId: id });
+    Logger.info('IcrBatchController', '🔍 Getting scan details', { id });
 
     // Get complete scan details with all OCR data and card matches
     const scan = await this.icrControllerService.getScanById(id);
@@ -567,16 +592,16 @@ class IcrBatchController extends BaseController {
   });
 
   /**
-   * POST /api/icr/batch/:scanId/create-psa
+   * POST /api/icr/batch/:id/create-psa
    * Create PSA card from matched scan
    */
   createPsaCard = asyncHandler(async (req, res) => {
-    const { scanId } = req.params;
+    const { id } = req.params;
     const { myPrice, dateAdded, grade } = req.body;
 
-    Logger.info('IcrBatchController', '💳 PSA card creation request', { scanId });
+    Logger.info('IcrBatchController', '💳 PSA card creation request', { id });
 
-    const result = await this.icrBatchService.createPsaCardFromScan(scanId, {
+    const result = await this.icrBatchService.createPsaCardFromScan(id, {
       myPrice,
       dateAdded: dateAdded || new Date(),
       grade
@@ -593,7 +618,7 @@ class IcrBatchController extends BaseController {
 
   // Multer middleware getter for routes
   getUploadMiddleware() {
-    return upload.array('images', 50);
+    return upload.array('images', 100);
   }
 }
 

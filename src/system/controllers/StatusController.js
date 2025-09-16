@@ -6,7 +6,7 @@ import { API_ENDPOINTS, API_CATEGORIES, SYSTEM_INFO } from '@/system/constants/E
 
 /**
  * StatusController - Completely Standalone
- * 
+ *
  * Returns hardcoded API endpoint information and basic system status.
  * No database connections, no service dependencies, no dynamic queries.
  * Pure static information display.
@@ -30,7 +30,7 @@ export default class StatusController {
                 data: data,
                 meta: {
                     controller: 'StatusController',
-                    method: 'getStatus', 
+                    method: 'getStatus',
                     timestamp: new Date().toISOString()
                 }
             });
@@ -72,7 +72,7 @@ export default class StatusController {
             });
         } catch (error) {
             console.error('[ERROR] Get endpoints by category failed', error);
-            
+
             // Handle not found error specifically
             if (error.message.includes('not found')) {
                 return res.status(404).json({
@@ -88,7 +88,7 @@ export default class StatusController {
                     }
                 });
             }
-            
+
             res.status(500).json({
                 success: false,
                 error: {

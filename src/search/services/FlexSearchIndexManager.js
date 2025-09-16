@@ -320,7 +320,7 @@ class FlexSearchIndexManager {
 
   /**
    * Search across FlexSearch indexes
-   * @param {string} entityType - Type of entity to search ('card', 'product', 'set')  
+   * @param {string} entityType - Type of entity to search ('card', 'product', 'set')
    * @param {string} query - Search query
    * @param {Object} options - Search options
    * @returns {Array} Array of matching document IDs
@@ -360,11 +360,11 @@ class FlexSearchIndexManager {
 
       // Perform the search using FlexSearch
       const results = index.search(query.trim(), { limit });
-      
+
       // FlexSearch returns results in format: [{ field: "fieldName", result: ["id1", "id2", ...] }, ...]
       // We need to extract all unique IDs from all fields
       const allIds = new Set();
-      
+
       if (Array.isArray(results)) {
         results.forEach(fieldResult => {
           if (fieldResult && Array.isArray(fieldResult.result)) {
@@ -374,7 +374,7 @@ class FlexSearchIndexManager {
       }
 
       const uniqueIds = Array.from(allIds).slice(0, limit);
-      
+
       Logger.debug('FLEXSEARCH_SEARCH', `Found ${uniqueIds.length} results for "${query}" in ${entityType}`, {
         entityType,
         query,

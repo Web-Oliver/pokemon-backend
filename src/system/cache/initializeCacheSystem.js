@@ -3,7 +3,7 @@ import Logger from '@/system/logging/Logger.js';
 const initializeCacheSystem = async () => {
   try {
     Logger.info('CACHE_SYSTEM', 'Initializing simple cache middleware system');
-    
+
     // Simple cache system - no complex warmup needed
     return {
       success: true,

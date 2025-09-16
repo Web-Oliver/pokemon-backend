@@ -31,12 +31,12 @@ class SetSearchService extends BaseSearchService {
     const searchOptions = { ...restOptions, offset, limit };
 
     const result = await this.performSearch('set', Set, query, filters, searchOptions, searchConfig);
-    
+
     console.log('DEBUG SetSearchService result:', JSON.stringify(result, null, 2));
     console.log('DEBUG result type:', typeof result);
     console.log('DEBUG result.pagination:', result?.pagination);
     console.log('DEBUG result.results:', Array.isArray(result?.results) ? `Array(${result.results.length})` : result?.results);
-    
+
     // Transform result to match expected format
     return {
       sets: result.results,

@@ -30,7 +30,7 @@ class CardSearchService extends BaseSearchService {
     const searchOptions = { ...restOptions, offset, limit };
 
     const result = await this.performSearch('card', Card, query, filters, searchOptions, searchConfig);
-    
+
     // Transform result to match expected format
     return {
       cards: result.results,

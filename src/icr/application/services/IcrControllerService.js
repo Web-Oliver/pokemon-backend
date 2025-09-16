@@ -69,18 +69,21 @@ export class IcrControllerService {
   /**
    * Delete scans by IDs
    */
-  async deleteScans(scanIds) {
-    const scansToDelete = await this.gradedCardScanRepository.findByIds(scanIds);
+  async deleteScans(ids) {
+    // Find scans by IDs using findAll with $in operator
+    const scansToDelete = await this.gradedCardScanRepository.findAll({
+      _id: { $in: ids }
+    });
 
     // Delete associated files
     await this.deleteAssociatedFiles(scansToDelete);
 
     // Delete from database
-    const result = await this.gradedCardScanRepository.deleteManyByIds(scanIds);
+    const result = await this.gradedCardScanRepository.deleteManyByIds(ids);
 
     Logger.info('IcrControllerService', 'Scans deleted', {
       deletedCount: result.deletedCount,
-      scanIds: scanIds.slice(0, 5) // Log first 5 IDs
+      ids: ids.slice(0, 5) // Log first 5 IDs
     });
 
     return result;
@@ -90,7 +93,10 @@ export class IcrControllerService {
    * Delete stitched images by IDs
    */
   async deleteStitchedImages(labelIds) {
-    const labelsToDelete = await this.stitchedLabelRepository.findByIds(labelIds);
+    // Find labels by IDs using findAll with $in operator
+    const labelsToDelete = await this.stitchedLabelRepository.findAll({
+      _id: { $in: labelIds }
+    });
 
     // Delete associated files
     await this.deleteStitchedFiles(labelsToDelete);
@@ -234,7 +240,7 @@ export class IcrControllerService {
           Logger.info('IcrControllerService', 'Deleted label image file', { path: scan.labelImage });
         }
       } catch (error) {
-        Logger.warn('IcrControllerService', 'Failed to delete scan file', { error: error.message, scanId: scan._id });
+        Logger.warn('IcrControllerService', 'Failed to delete scan file', { error: error.message, id: scan._id });
       }
     }
   }

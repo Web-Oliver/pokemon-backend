@@ -5,7 +5,7 @@ import { ImageAnnotatorClient } from '@google-cloud/vision';
 
 /**
  * HealthService - Comprehensive Dependency Health Checks
- * 
+ *
  * Performs health checks on all critical system dependencies:
  * - MongoDB database connectivity via mongoose
  * - Node-cache in-memory cache functionality
@@ -16,12 +16,12 @@ import { ImageAnnotatorClient } from '@google-cloud/vision';
 export default class HealthService {
     constructor(dependencies = {}) {
         console.log('[DEBUG] HealthService instantiated');
-        
+
         // Inject dependencies for testing
         this.cacheManager = dependencies.cacheManager;
         this.visionClient = dependencies.visionClient;
         this.uploadPath = dependencies.uploadPath || './uploads';
-        
+
         // Initialize Google Vision client if not injected
         if (!this.visionClient) {
             try {
@@ -39,12 +39,12 @@ export default class HealthService {
      */
     async performHealthChecks() {
         const startTime = Date.now();
-        
+
         try {
             // Run all health checks in parallel for speed
             const [
                 databaseCheck,
-                cacheCheck, 
+                cacheCheck,
                 visionCheck,
                 filesystemCheck,
                 systemCheck
@@ -67,7 +67,7 @@ export default class HealthService {
             // Determine overall status
             const criticalFailures = Object.values(checks)
                 .filter(check => check.status === 'DOWN' && check.critical);
-            
+
             const degradedServices = Object.values(checks)
                 .filter(check => check.status === 'DOWN' && !check.critical);
 
@@ -93,7 +93,7 @@ export default class HealthService {
                     degraded: degradedServices.length
                 }
             };
-            
+
         } catch (error) {
             console.error('[ERROR] Health check system failure', error);
             throw new Error(`Health check system failure: ${error.message}`);
@@ -106,11 +106,11 @@ export default class HealthService {
      */
     async getDetailedHealthInfo() {
         const basicHealth = await this.performHealthChecks();
-        
+
         // Add detailed system information
         const detailedSystem = await this.getDetailedSystemInfo();
         basicHealth.checks.system = { ...basicHealth.checks.system, ...detailedSystem };
-        
+
         return basicHealth;
     }
 
@@ -151,7 +151,7 @@ export default class HealthService {
      */
     async checkDatabase() {
         const startTime = Date.now();
-        
+
         try {
             // Check if mongoose is connected
             if (mongoose.connection.readyState !== 1) {
@@ -160,9 +160,9 @@ export default class HealthService {
 
             // Perform a ping to verify connectivity
             await mongoose.connection.db.admin().ping();
-            
+
             const responseTime = Date.now() - startTime;
-            
+
             return {
                 status: 'UP',
                 responseTime: `${responseTime}ms`,
@@ -174,11 +174,11 @@ export default class HealthService {
                 },
                 critical: true
             };
-            
+
         } catch (error) {
             const responseTime = Date.now() - startTime;
             console.error('[ERROR] Database health check failed', error);
-            
+
             return {
                 status: 'DOWN',
                 responseTime: `${responseTime}ms`,
@@ -197,7 +197,7 @@ export default class HealthService {
      */
     async checkCache() {
         const startTime = Date.now();
-        
+
         try {
             if (!this.cacheManager) {
                 throw new Error('Cache manager not available');
@@ -206,20 +206,20 @@ export default class HealthService {
             // Test cache set/get functionality
             const testKey = `health_check_${Date.now()}`;
             const testValue = 'health_test_value';
-            
+
             this.cacheManager.set(testKey, testValue, 10); // 10 second TTL
             const retrievedValue = this.cacheManager.get(testKey);
-            
+
             if (retrievedValue !== testValue) {
                 throw new Error('Cache set/get test failed');
             }
 
             // Clean up test key
             this.cacheManager.del(testKey);
-            
+
             const responseTime = Date.now() - startTime;
             const stats = this.cacheManager.getStats();
-            
+
             return {
                 status: 'UP',
                 responseTime: `${responseTime}ms`,
@@ -232,11 +232,11 @@ export default class HealthService {
                 },
                 critical: false
             };
-            
+
         } catch (error) {
             const responseTime = Date.now() - startTime;
             console.error('[ERROR] Cache health check failed', error);
-            
+
             return {
                 status: 'DOWN',
                 responseTime: `${responseTime}ms`,
@@ -252,7 +252,7 @@ export default class HealthService {
      */
     async checkGoogleVision() {
         const startTime = Date.now();
-        
+
         try {
             if (!this.visionClient) {
                 throw new Error('Google Vision client not initialized');
@@ -261,7 +261,7 @@ export default class HealthService {
             // We can't easily test the API without making a real call
             // So we just verify the client is initialized properly
             const responseTime = Date.now() - startTime;
-            
+
             return {
                 status: 'UP',
                 responseTime: `${responseTime}ms`,
@@ -272,11 +272,11 @@ export default class HealthService {
                 },
                 critical: false
             };
-            
+
         } catch (error) {
             const responseTime = Date.now() - startTime;
             console.error('[ERROR] Google Vision health check failed', error);
-            
+
             return {
                 status: 'DOWN',
                 responseTime: `${responseTime}ms`,
@@ -288,37 +288,37 @@ export default class HealthService {
 
     /**
      * Check filesystem access (upload directories)
-     * @private  
+     * @private
      */
     async checkFilesystem() {
         const startTime = Date.now();
-        
+
         try {
             // Check if upload directory exists and is writable
             const uploadDir = path.resolve(this.uploadPath);
-            
+
             // Check directory exists
             await fs.access(uploadDir, fs.constants.F_OK);
-            
+
             // Check directory is writable
             await fs.access(uploadDir, fs.constants.W_OK);
-            
+
             // Test write/read/delete
             const testFile = path.join(uploadDir, `health_test_${Date.now()}.tmp`);
             const testContent = 'health_check_test';
-            
+
             await fs.writeFile(testFile, testContent);
             const readContent = await fs.readFile(testFile, 'utf8');
-            
+
             if (readContent !== testContent) {
                 throw new Error('File write/read test failed');
             }
-            
+
             // Clean up test file
             await fs.unlink(testFile);
-            
+
             const responseTime = Date.now() - startTime;
-            
+
             return {
                 status: 'UP',
                 responseTime: `${responseTime}ms`,
@@ -329,11 +329,11 @@ export default class HealthService {
                 },
                 critical: true
             };
-            
+
         } catch (error) {
             const responseTime = Date.now() - startTime;
             console.error('[ERROR] Filesystem health check failed', error);
-            
+
             return {
                 status: 'DOWN',
                 responseTime: `${responseTime}ms`,
@@ -352,17 +352,17 @@ export default class HealthService {
      */
     async checkSystemResources() {
         const startTime = Date.now();
-        
+
         try {
             const memUsage = process.memoryUsage();
             const uptime = process.uptime();
-            
+
             // Check if memory usage is concerning (>90% of heap limit)
             const memoryUsagePercent = (memUsage.heapUsed / memUsage.heapTotal) * 100;
             const isMemoryHigh = memoryUsagePercent > 90;
-            
+
             const responseTime = Date.now() - startTime;
-            
+
             return {
                 status: isMemoryHigh ? 'DEGRADED' : 'UP',
                 responseTime: `${responseTime}ms`,
@@ -387,11 +387,11 @@ export default class HealthService {
                 },
                 critical: true
             };
-            
+
         } catch (error) {
             const responseTime = Date.now() - startTime;
             console.error('[ERROR] System resources health check failed', error);
-            
+
             return {
                 status: 'DOWN',
                 responseTime: `${responseTime}ms`,
@@ -408,7 +408,7 @@ export default class HealthService {
     async getDetailedSystemInfo() {
         try {
             const memUsage = process.memoryUsage();
-            
+
             return {
                 detailed: true,
                 resourceUsage: {

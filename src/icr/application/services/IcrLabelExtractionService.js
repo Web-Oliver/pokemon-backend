@@ -24,23 +24,21 @@ export class IcrLabelExtractionService {
    * STEP 2: Extract PSA labels from uploaded scans
    * EXACT EXTRACTION from IcrBatchService.js lines 123-196
    */
-  async extractLabels(scanIds) {
+  async extractLabels(ids) {
     const context = OperationManager.createContext('IcrLabelExtraction', 'extractLabels', {
-      scanCount: scanIds.length
+      scanCount: ids.length
     });
 
     return OperationManager.executeBatchOperation(
       context,
-      scanIds,
-      async (scanId, index) => {
-        const scan = await this.gradedCardScanRepository.findById(scanId);
+      ids,
+      async (id, index) => {
+        const scan = await this.gradedCardScanRepository.findById(id);
         if (!scan) {
           throw new Error('Scan not found');
         }
 
-        if (scan.processingStatus !== 'uploaded') {
-          throw new Error(`Already processed (${scan.processingStatus})`);
-        }
+        // NO STATUS CHECK - Always allow label extraction
 
         // Read uploaded image file
         const imageBuffer = await fs.readFile(scan.fullImage);
@@ -52,18 +50,18 @@ export class IcrLabelExtractionService {
         const labelPath = await this.saveExtractedLabel(
           extractionResult.labelBuffer,
           scan.originalFileName,
-          scanId
+          id
         );
 
         // Update GradedCardScan with label info
-        await this.gradedCardScanRepository.update(scanId, {
+        await this.gradedCardScanRepository.update(id, {
           labelImage: labelPath,
           extractedDimensions: extractionResult.extractedDimensions,
           processingStatus: 'extracted'
         });
 
         return {
-          scanId,
+          id,
           originalFileName: scan.originalFileName,
           labelPath,
           extractedDimensions: extractionResult.extractedDimensions
@@ -79,10 +77,10 @@ export class IcrLabelExtractionService {
   /**
    * Helper method extracted from IcrBatchService lines 1050-1055
    */
-  async saveExtractedLabel(labelBuffer, originalName, scanId) {
+  async saveExtractedLabel(labelBuffer, originalName, id) {
     // Generate filename using IcrPathManager
     const filenameInfo = IcrPathManager.generateFileName(`${originalName}_extracted_label.jpg`, {
-      scanId: scanId.toString().substring(0, 8)
+      id: id.toString().substring(0, 8)
     });
 
     // Use IcrPathManager for consistent path generation

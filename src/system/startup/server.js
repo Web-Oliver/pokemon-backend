@@ -143,6 +143,7 @@ app.use(enhancedErrorMiddleware);
 
 // Start server
 app.listen(PORT, async () => {
+  console.log(`✅ Server running on port ${PORT}`);
 
   // Initialize systems after server starts
   setTimeout(async () => {

@@ -43,15 +43,23 @@ class IcrBatchService {
    * Delegates to dedicated upload service
    */
   async uploadImages(imageFiles) {
-    return await this.imageUploadService.uploadImages(imageFiles);
+    console.log('DEBUG: IcrBatchService.uploadImages called with', imageFiles.length, 'files');
+    const result = await this.imageUploadService.uploadImages(imageFiles);
+    console.log('DEBUG: IcrBatchService got result:', {
+      hasIds: !!result.ids,
+      idCount: result.ids?.length || 0,
+      successful: result.successful,
+      resultKeys: Object.keys(result || {})
+    });
+    return result;
   }
 
   /**
    * STEP 2: Extract PSA labels from uploaded scans
    * Delegates to dedicated label extraction service
    */
-  async extractLabels(scanIds) {
-    return await this.labelExtractionService.extractLabels(scanIds);
+  async extractLabels(ids) {
+    return await this.labelExtractionService.extractLabels(ids);
   }
 
   /**
@@ -73,8 +81,9 @@ class IcrBatchService {
         stitched.labelHashes.forEach(hash => alreadyStitchedHashes.add(hash));
       });
 
-      // Filter out scans that have already been stitched
-      const newScans = scans.filter(scan => !alreadyStitchedHashes.has(scan.imageHash));
+      // ❌ TEMPORARILY DISABLED: Allow rescanning by processing all scans
+      // const newScans = scans.filter(scan => !alreadyStitchedHashes.has(scan.imageHash));
+      const newScans = scans; // Process all scans regardless of previous stitching
 
       if (newScans.length === 0) {
         Logger.info('ICR_STITCHING', 'All labels already stitched - no new labels to process', {
@@ -111,7 +120,7 @@ class IcrBatchService {
           availableScans.push(scan);
         } catch (error) {
           Logger.warn('ICR_STITCHING', 'Label file not found - skipping scan', {
-            scanId: scan._id,
+            id: scan._id,
             labelPath: scan.labelImage,
             error: error.message
           });
@@ -141,8 +150,8 @@ class IcrBatchService {
       const stitchedBuffer = await fs.readFile(stitchedResult.stitchedImagePath);
       const stitchedImageHash = ImageHashService.generateHash(stitchedBuffer);
 
-      // Create StitchedLabel record for AVAILABLE scans only
-      const newLabelHashes = availableScans.map(scan => scan.imageHash).sort();
+      // Create StitchedLabel record for AVAILABLE scans only - PRESERVE ORDER!
+      const newLabelHashes = availableScans.map(scan => scan.imageHash);
       const stitchedLabel = await this.stitchedLabelRepository.create({
         stitchedImagePath: stitchedResult.stitchedImagePath,
         stitchedImageHash,
@@ -261,11 +270,11 @@ class IcrBatchService {
   /**
    * Create PSA card from matched GradedCardScan with pre-populated certification details
    */
-  async createPsaCardFromScan(scanId, userInputs) {
+  async createPsaCardFromScan(id, userInputs) {
     try {
-      Logger.operationStart('ICR_CREATE_PSA', 'Creating PSA card from scan', { scanId });
+      Logger.operationStart('ICR_CREATE_PSA', 'Creating PSA card from scan', { id });
 
-      const scan = await this.gradedCardScanRepository.findById(scanId);
+      const scan = await this.gradedCardScanRepository.findById(id);
       if (!scan) {
         throw new Error('Scan not found');
       }
@@ -288,7 +297,7 @@ class IcrBatchService {
       };
 
       Logger.info('ICR_CREATE_PSA', 'Creating PSA card:', {
-        scanId,
+        id,
         grade: psaData.grade,
         certificationNumber: psaData.certificationNumber
       });
@@ -296,19 +305,19 @@ class IcrBatchService {
       const psaCard = await PsaGradedCard.create(psaData);
 
       // Mark scan as PSA created
-      await this.gradedCardScanRepository.update(scanId, {
+      await this.gradedCardScanRepository.update(id, {
         processingStatus: 'psa_created',
         psaCardId: psaCard._id
       });
 
       Logger.operationSuccess('ICR_CREATE_PSA', 'PSA card created successfully', {
-        scanId,
+        id,
         psaCardId: psaCard._id
       });
 
       return {
         psaCard,
-        sourceGradedCardScan: scanId
+        sourceGradedCardScan: id
       };
 
     } catch (error) {
@@ -349,6 +358,29 @@ class IcrBatchService {
    */
   async performCardMatchingByHashes(imageHashes) {
     return await this.cardMatchingService.performCardMatchingByHashes(imageHashes);
+  }
+
+  /**
+   * Select a specific card match for a scan
+   */
+  async selectCardMatch(id, cardId) {
+    const scan = await this.gradedCardScanRepository.findById(id);
+    if (!scan) {
+      throw new Error('Scan not found');
+    }
+
+    // Update the scan with the selected card match
+    await this.gradedCardScanRepository.update(id, {
+      selectedCardId: cardId,
+      matchingStatus: 'manual_override',
+      processedAt: new Date()
+    });
+
+    return {
+      id,
+      selectedCardId: cardId,
+      matchingStatus: 'manual_override'
+    };
   }
 
   // ==========================================================================

@@ -73,27 +73,61 @@ export class ImageStitchingEngine {
     const labelPositions = [];
     let currentTop = 0;
 
+    Logger.info('ImageStitchingEngine', `Processing ${labelBuffers.length} labels with max width: ${maxWidth}px`);
+
     for (let i = 0; i < labelBuffers.length; i++) {
+      const originalWidth = labelMetas[i].width;
       const originalHeight = labelMetas[i].height;
 
-      const resizedBuffer = await sharp(labelBuffers[i])
-        .resize(maxWidth, originalHeight, { fit: 'fill' })
+      Logger.info('ImageStitchingEngine', `Label ${i}: ${originalWidth}x${originalHeight}px`);
+
+      // FIXED: Preserve aspect ratio and text quality
+      const processedBuffer = await sharp(labelBuffers[i])
+        // Only resize if image is larger than max width, preserve aspect ratio
+        .resize(originalWidth > maxWidth ? maxWidth : null, null, {
+          fit: 'inside',           // Preserve aspect ratio
+          withoutEnlargement: true, // Don't enlarge small images
+          kernel: sharp.kernel.lanczos3 // High-quality resampling
+        })
+        // Enhance text quality
+        .sharpen(1.0, 1.0, 2.0)    // Sharpen text edges
+        .normalize()               // Improve contrast
+        .png({ quality: 100 })     // Use lossless format for text
         .toBuffer();
 
+      // Get actual dimensions after processing
+      const processedMeta = await sharp(processedBuffer).metadata();
+      const actualWidth = processedMeta.width;
+      const actualHeight = processedMeta.height;
+
+      Logger.info('ImageStitchingEngine', `Label ${i} processed: ${actualWidth}x${actualHeight}px`);
+
+      // Center horizontally if image is narrower than max width
+      const leftOffset = Math.max(0, Math.floor((maxWidth - actualWidth) / 2));
+
       compositeOperations.push({
-        input: resizedBuffer,
-        left: 0,
+        input: processedBuffer,
+        left: leftOffset,
         top: currentTop
       });
 
+      // Record actual positioned coordinates for accurate text distribution
       labelPositions.push({
         index: i,
         y: currentTop,
-        height: originalHeight
+        height: actualHeight,
+        actualWidth: actualWidth,
+        leftOffset: leftOffset,
+        originalWidth: originalWidth,
+        originalHeight: originalHeight,
+        aspectRatioPreserved: true
       });
 
-      currentTop += originalHeight;
+      // Add padding between labels to prevent text bleeding
+      currentTop += actualHeight + 5; // 5px padding
     }
+
+    Logger.info('ImageStitchingEngine', `Final stitched dimensions: ${maxWidth}x${currentTop}px`);
 
     return {
       operations: compositeOperations,

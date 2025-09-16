@@ -1,12 +1,12 @@
 /**
  * Endpoints Documentation Service
- * 
+ *
  * SOLID Principles:
  * - Single Responsibility: Manages endpoint metadata and documentation
  * - Open/Closed: Extensible through configuration without modifying core logic
  * - Interface Segregation: Focused interface for endpoint documentation
  * - Dependency Inversion: Depends on abstractions, not concrete implementations
- * 
+ *
  * Note: Does not extend BaseService as it doesn't need repository functionality
  */
 export default class EndpointsService {
@@ -29,10 +29,10 @@ export default class EndpointsService {
 
     console.log('Generating fresh endpoints documentation');
     const documentation = await this._generateEndpointsDocumentation();
-    
+
     this.endpointsCache = documentation;
     this.lastCacheTime = Date.now();
-    
+
     return documentation;
   }
 
@@ -50,8 +50,8 @@ export default class EndpointsService {
    * @private
    */
   _isCacheValid() {
-    return this.endpointsCache && 
-           this.lastCacheTime && 
+    return this.endpointsCache &&
+           this.lastCacheTime &&
            (Date.now() - this.lastCacheTime) < this.cacheTimeout;
   }
 
@@ -72,31 +72,31 @@ export default class EndpointsService {
 
     // System & Status endpoints
     endpoints.categories.system = this._getSystemEndpoints();
-    
+
     // Collection endpoints
     endpoints.categories.collections = this._getCollectionEndpoints();
-    
+
     // Pokemon data endpoints
     endpoints.categories.pokemon = this._getPokemonEndpoints();
-    
+
     // Search endpoints
     endpoints.categories.search = this._getSearchEndpoints();
-    
+
     // ICR (Image Character Recognition) endpoints
     endpoints.categories.icr = this._getIcrEndpoints();
-    
+
     // Marketplace endpoints
     endpoints.categories.marketplace = this._getMarketplaceEndpoints();
-    
+
     // Activity endpoints
     endpoints.categories.activities = this._getActivityEndpoints();
-    
+
     // Upload endpoints
     endpoints.categories.uploads = this._getUploadEndpoints();
-    
+
     // Workflow endpoints
     endpoints.categories.workflow = this._getWorkflowEndpoints();
-    
+
     // Management endpoints
     endpoints.categories.management = this._getManagementEndpoints();
 
@@ -169,7 +169,7 @@ export default class EndpointsService {
    */
   _getCollectionEndpoints() {
     const collectionTypes = ['psa-cards', 'raw-cards', 'sealed-products'];
-    
+
     return {
       name: 'Collections',
       description: 'Pokemon card and product collection management',
@@ -294,7 +294,7 @@ export default class EndpointsService {
         { method: 'GET', path: '/icr/images/stitched/:filename', summary: 'Get stitched image' },
         { method: 'DELETE', path: '/icr/scans', summary: 'Delete scans' },
         { method: 'DELETE', path: '/icr/stitched/:id', summary: 'Delete stitched image' },
-        { method: 'PUT', path: '/icr/batch/:scanId/select-match', summary: 'Select card match' },
+        { method: 'PUT', path: '/icr/batch/:id/select-match', summary: 'Select card match' },
         { method: 'POST', path: '/icr/create-psa', summary: 'Create PSA card' }
       ]
     };
@@ -380,7 +380,7 @@ export default class EndpointsService {
       description: 'System management - cache and monitoring',
       baseRoute: '/api',
       endpoints: [
-        { method: 'GET', path: '/cache/stats', summary: 'Get cache statistics' },
+        { method: 'GET', path: '/cache/stats', summary: 'Get cache statistics' }
       ]
     };
   }

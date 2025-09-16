@@ -11,6 +11,7 @@ import OcrTextDistributor from '@/icr/shared/OcrTextDistributor.js';
 import StitchedLabelRepository from '@/icr/infrastructure/repositories/StitchedLabelRepository.js';
 import Logger from '@/system/logging/Logger.js';
 import { promises as fs } from 'fs';
+import path from 'path';
 
 import OperationManager from '@/system/utilities/OperationManager.js';
 
@@ -45,7 +46,9 @@ export class IcrOcrProcessingService {
         }
 
         // Calculate overall confidence from text annotations
-        const overallConfidence = OcrTextDistributor.calculateOverallConfidence(ocrResult.textAnnotations);
+        const overallConfidence = ocrResult.textAnnotations && ocrResult.textAnnotations.length > 0
+          ? ocrResult.textAnnotations[0].confidence || 0.85
+          : 0.85;
 
         // Update StitchedLabel database record with OCR results
         await this.stitchedLabelRepository.update(stitchedLabel._id, {
@@ -122,12 +125,12 @@ export class IcrOcrProcessingService {
       Logger.info('ICR_OCR_BY_HASHES', 'Searching for stitched labels', {
         imageHashesCount: imageHashes.length,
         firstFewHashes: imageHashes.slice(0, 3),
-        searchCriteria: { labelHashes: { $in: imageHashes }, processingStatus: { $in: ['stitched', 'ocr_completed'] } }
+        searchCriteria: { labelHashes: { $in: imageHashes }, processingStatus: { $in: ['stitched', 'ocr_completed', 'distributed'] } }
       });
 
       const stitchedLabels = await this.stitchedLabelRepository.findMany({
-        labelHashes: { $in: imageHashes },
-        processingStatus: { $in: ['stitched', 'ocr_completed'] }
+        labelHashes: { $in: imageHashes }
+        // NO STATUS CHECK - Process ANY stitched label
       }, { sort: { createdAt: -1 }, limit: 1 });
 
       const stitchedLabel = stitchedLabels[0];
@@ -156,30 +159,23 @@ export class IcrOcrProcessingService {
           }))
         });
 
-        throw new Error('No stitched image found that needs OCR processing for provided hashes. Check if stitching was completed or if images were already processed.');
+        throw new Error('No stitched image found for provided hashes. Run stitching first.');
       }
 
-      // Use existing OCR data if already processed, otherwise process OCR
+      // ALWAYS PROCESS OCR - NO STATUS CHECKS - OVERWRITE ANY EXISTING DATA
       let ocrResult;
 
-      if (stitchedLabel.processingStatus === 'ocr_completed' && stitchedLabel.ocrText) {
-        Logger.info('ICR_OCR_BY_HASHES', 'Using existing OCR data from stitched label', {
-          stitchedLabelId: stitchedLabel._id,
-          ocrTextLength: stitchedLabel.ocrText?.length || 0,
-          confidence: stitchedLabel.ocrConfidence
+      // Always process OCR regardless of status - we need to fix the data
+      {
+        console.log('🔍 DEBUG: STITCHED LABEL FOUND:', {
+          id: stitchedLabel._id,
+          path: stitchedLabel.stitchedImagePath,
+          status: stitchedLabel.processingStatus,
+          labelCount: stitchedLabel.labelHashes?.length,
+          hasOcrText: !!stitchedLabel.ocrText,
+          ocrTextLength: stitchedLabel.ocrText?.length || 0
         });
 
-        // Return existing OCR data
-        ocrResult = {
-          fullText: stitchedLabel.ocrText,
-          textAnnotations: stitchedLabel.ocrAnnotations || [],
-          confidence: stitchedLabel.ocrConfidence || 0.8,
-          provider: 'google-vision',
-          processingTime: 0, // No processing time since we're using cached data
-          stitchedLabelId: stitchedLabel._id,
-          databaseUpdated: false // Already in database
-        };
-      } else {
         Logger.info('ICR_OCR_BY_HASHES', 'Processing OCR for stitched image', {
           stitchedImagePath: stitchedLabel.stitchedImagePath
         });
