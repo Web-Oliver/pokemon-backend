@@ -1,4 +1,4 @@
-import { MongoClient } from 'mongodb';
+import {MongoClient} from 'mongodb';
 
 async function updateCardMatchesWithSetId() {
     const client = new MongoClient('mongodb://localhost:27017/pokemon_collection');

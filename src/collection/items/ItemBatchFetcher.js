@@ -10,6 +10,7 @@
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import SealedProduct from '@/collection/items/SealedProduct.js';
+
 /**
  * Valid item types supported by the batch fetcher
  */
@@ -19,18 +20,18 @@ const VALID_ITEM_TYPES = ['psa', 'raw', 'sealed'];
  * Item type to model mapping
  */
 const ITEM_MODELS = {
-  psa: PsaGradedCard,
-  raw: RawCard,
-  sealed: SealedProduct
+    psa: PsaGradedCard,
+    raw: RawCard,
+    sealed: SealedProduct
 };
 
 /**
  * Item type to population field mapping
  */
 const POPULATION_FIELDS = {
-  psa: 'cardId',
-  raw: 'cardId',
-  sealed: 'productId'
+    psa: 'cardId',
+    raw: 'cardId',
+    sealed: 'productId'
 };
 
 /**
@@ -45,63 +46,63 @@ const POPULATION_FIELDS = {
  * @returns {Object} Object with items grouped by type and lookup map
  */
 async function batchFetchItems(selections, options = {}) {
-  const { populate = true, lean = true, select } = options;
+    const {populate = true, lean = true, select} = options;
 
-  // Group selections by item type for efficient batch querying
-  const groupedSelections = groupSelectionsByType(selections);
+    // Group selections by item type for efficient batch querying
+    const groupedSelections = groupSelectionsByType(selections);
 
-  // Build batch queries for each item type
-  const batchQueries = Object.entries(groupedSelections).map(([itemType, typeSelections]) => {
-    if (typeSelections.length === 0) return Promise.resolve([]);
+    // Build batch queries for each item type
+    const batchQueries = Object.entries(groupedSelections).map(([itemType, typeSelections]) => {
+        if (typeSelections.length === 0) return Promise.resolve([]);
 
-    const Model = ITEM_MODELS[itemType];
-    const itemIds = typeSelections.map(s => s.itemId);
+        const Model = ITEM_MODELS[itemType];
+        const itemIds = typeSelections.map(s => s.itemId);
 
-    let query = Model.find({ _id: { $in: itemIds } });
+        let query = Model.find({_id: {$in: itemIds}});
 
-    // Apply population if requested
-    if (populate && POPULATION_FIELDS[itemType]) {
-      query = query.populate(POPULATION_FIELDS[itemType]);
-    }
+        // Apply population if requested
+        if (populate && POPULATION_FIELDS[itemType]) {
+            query = query.populate(POPULATION_FIELDS[itemType]);
+        }
 
-    // Apply field selection if provided
-    if (select && select.length > 0) {
-      query = query.select(select.join(' '));
-    }
+        // Apply field selection if provided
+        if (select && select.length > 0) {
+            query = query.select(select.join(' '));
+        }
 
-    // Apply lean if requested
-    if (lean) {
-      query = query.lean();
-    }
+        // Apply lean if requested
+        if (lean) {
+            query = query.lean();
+        }
 
-    return query.exec();
-  });
+        return query.exec();
+    });
 
-  // Execute all batch queries in parallel
-  const [psaItems, rawItems, sealedItems] = await Promise.all(batchQueries);
+    // Execute all batch queries in parallel
+    const [psaItems, rawItems, sealedItems] = await Promise.all(batchQueries);
 
-  // Create items object grouped by type
-  const items = {
-    psa: psaItems || [],
-    raw: rawItems || [],
-    sealed: sealedItems || []
-  };
+    // Create items object grouped by type
+    const items = {
+        psa: psaItems || [],
+        raw: rawItems || [],
+        sealed: sealedItems || []
+    };
 
-  // Create lookup map for O(1) item retrieval
-  const itemsMap = createItemsLookupMap(items);
+    // Create lookup map for O(1) item retrieval
+    const itemsMap = createItemsLookupMap(items);
 
-  return {
-    items,
-    itemsMap,
-    stats: {
-      totalFetched: psaItems.length + rawItems.length + sealedItems.length,
-      byType: {
-        psa: psaItems.length,
-        raw: rawItems.length,
-        sealed: sealedItems.length
-      }
-    }
-  };
+    return {
+        items,
+        itemsMap,
+        stats: {
+            totalFetched: psaItems.length + rawItems.length + sealedItems.length,
+            byType: {
+                psa: psaItems.length,
+                raw: rawItems.length,
+                sealed: sealedItems.length
+            }
+        }
+    };
 }
 
 /**
@@ -112,77 +113,77 @@ async function batchFetchItems(selections, options = {}) {
  * @returns {Object} Object with validation results and existing items
  */
 async function batchValidateItemExistence(items) {
-  // Group items by type for batch validation
-  const groupedItems = groupItemsByType(items);
+    // Group items by type for batch validation
+    const groupedItems = groupItemsByType(items);
 
-  const validationQueries = Object.entries(groupedItems).map(async ([itemType, typeItems]) => {
-    if (typeItems.length === 0) return { itemType, existingItems: [] };
+    const validationQueries = Object.entries(groupedItems).map(async ([itemType, typeItems]) => {
+        if (typeItems.length === 0) return {itemType, existingItems: []};
 
-    const Model = ITEM_MODELS[itemType];
-    const itemIds = typeItems.map(item => item.itemId);
+        const Model = ITEM_MODELS[itemType];
+        const itemIds = typeItems.map(item => item.itemId);
 
-    const existingItems = await Model.find(
-      { _id: { $in: itemIds } },
-      { _id: 1 } // Only fetch IDs for existence check
-    ).lean().exec();
+        const existingItems = await Model.find(
+            {_id: {$in: itemIds}},
+            {_id: 1} // Only fetch IDs for existence check
+        ).lean().exec();
+
+        return {
+            itemType,
+            existingItems: existingItems.map(item => item._id.toString())
+        };
+    });
+
+    // Execute all validation queries in parallel
+    const validationResults = await Promise.all(validationQueries);
+
+    // Create lookup set for fast existence checking
+    const existingItemsSet = new Set();
+    const existingItemsByType = {};
+
+    validationResults.forEach(({itemType, existingItems}) => {
+        existingItemsByType[itemType] = existingItems;
+        existingItems.forEach(itemId => existingItemsSet.add(`${itemType}:${itemId}`));
+    });
+
+    // Validate each item and collect results
+    const validationErrors = [];
+    const validItems = [];
+
+    items.forEach(item => {
+        const {itemId, itemType} = item;
+        const itemKey = `${itemType}:${itemId}`;
+
+        if (!VALID_ITEM_TYPES.includes(itemType)) {
+            validationErrors.push({
+                itemId,
+                itemType,
+                error: `itemType must be one of: ${VALID_ITEM_TYPES.join(', ')}`
+            });
+            return;
+        }
+
+        if (!existingItemsSet.has(itemKey)) {
+            validationErrors.push({
+                itemId,
+                itemType,
+                error: 'Item not found in collection'
+            });
+            return;
+        }
+
+        validItems.push(item);
+    });
 
     return {
-      itemType,
-      existingItems: existingItems.map(item => item._id.toString())
+        validItems,
+        validationErrors,
+        existingItemsByType,
+        stats: {
+            totalValidated: items.length,
+            validCount: validItems.length,
+            errorCount: validationErrors.length
+        }
     };
-  });
-
-  // Execute all validation queries in parallel
-  const validationResults = await Promise.all(validationQueries);
-
-  // Create lookup set for fast existence checking
-  const existingItemsSet = new Set();
-  const existingItemsByType = {};
-
-  validationResults.forEach(({ itemType, existingItems }) => {
-    existingItemsByType[itemType] = existingItems;
-    existingItems.forEach(itemId => existingItemsSet.add(`${itemType}:${itemId}`));
-  });
-
-  // Validate each item and collect results
-  const validationErrors = [];
-  const validItems = [];
-
-  items.forEach(item => {
-    const { itemId, itemType } = item;
-    const itemKey = `${itemType}:${itemId}`;
-
-    if (!VALID_ITEM_TYPES.includes(itemType)) {
-      validationErrors.push({
-        itemId,
-        itemType,
-        error: `itemType must be one of: ${VALID_ITEM_TYPES.join(', ')}`
-      });
-      return;
-    }
-
-    if (!existingItemsSet.has(itemKey)) {
-      validationErrors.push({
-        itemId,
-        itemType,
-        error: 'Item not found in collection'
-      });
-      return;
-    }
-
-    validItems.push(item);
-  });
-
-  return {
-    validItems,
-    validationErrors,
-    existingItemsByType,
-    stats: {
-      totalValidated: items.length,
-      validCount: validItems.length,
-      errorCount: validationErrors.length
-    }
-  };
 }
 
 /**
@@ -194,29 +195,29 @@ async function batchValidateItemExistence(items) {
  * @returns {Object} Item data or null if not found
  */
 async function fetchSingleItem(itemId, itemType, options = {}) {
-  const { populate = true, lean = true, select } = options;
+    const {populate = true, lean = true, select} = options;
 
-  if (!VALID_ITEM_TYPES.includes(itemType)) {
-    throw new Error(`Invalid item type: ${itemType}. Must be one of: ${VALID_ITEM_TYPES.join(', ')}`);
-  }
+    if (!VALID_ITEM_TYPES.includes(itemType)) {
+        throw new Error(`Invalid item type: ${itemType}. Must be one of: ${VALID_ITEM_TYPES.join(', ')}`);
+    }
 
-  const Model = ITEM_MODELS[itemType];
+    const Model = ITEM_MODELS[itemType];
 
-  let query = Model.findById(itemId);
+    let query = Model.findById(itemId);
 
-  if (populate && POPULATION_FIELDS[itemType]) {
-    query = query.populate(POPULATION_FIELDS[itemType]);
-  }
+    if (populate && POPULATION_FIELDS[itemType]) {
+        query = query.populate(POPULATION_FIELDS[itemType]);
+    }
 
-  if (select && select.length > 0) {
-    query = query.select(select.join(' '));
-  }
+    if (select && select.length > 0) {
+        query = query.select(select.join(' '));
+    }
 
-  if (lean) {
-    query = query.lean();
-  }
+    if (lean) {
+        query = query.lean();
+    }
 
-  return await query.exec();
+    return await query.exec();
 }
 
 /**
@@ -228,14 +229,14 @@ async function fetchSingleItem(itemId, itemType, options = {}) {
  * @returns {boolean} True if item exists, false otherwise
  */
 async function itemExists(itemId, itemType) {
-  if (!VALID_ITEM_TYPES.includes(itemType)) {
-    return false;
-  }
+    if (!VALID_ITEM_TYPES.includes(itemType)) {
+        return false;
+    }
 
-  const Model = ITEM_MODELS[itemType];
-  const item = await Model.findById(itemId).select('_id').lean().exec();
+    const Model = ITEM_MODELS[itemType];
+    const item = await Model.findById(itemId).select('_id').lean().exec();
 
-  return Boolean(item);
+    return Boolean(item);
 }
 
 /**
@@ -246,15 +247,15 @@ async function itemExists(itemId, itemType) {
  * @returns {Object} Selections grouped by itemType
  */
 function groupSelectionsByType(selections) {
-  return selections.reduce((groups, selection) => {
-    const { itemType } = selection;
+    return selections.reduce((groups, selection) => {
+        const {itemType} = selection;
 
-    if (!groups[itemType]) {
-      groups[itemType] = [];
-    }
-    groups[itemType].push(selection);
-    return groups;
-  }, { psa: [], raw: [], sealed: [] });
+        if (!groups[itemType]) {
+            groups[itemType] = [];
+        }
+        groups[itemType].push(selection);
+        return groups;
+    }, {psa: [], raw: [], sealed: []});
 }
 
 /**
@@ -265,15 +266,15 @@ function groupSelectionsByType(selections) {
  * @returns {Object} Items grouped by itemType
  */
 function groupItemsByType(items) {
-  return items.reduce((groups, item) => {
-    const { itemType } = item;
+    return items.reduce((groups, item) => {
+        const {itemType} = item;
 
-    if (!groups[itemType]) {
-      groups[itemType] = [];
-    }
-    groups[itemType].push(item);
-    return groups;
-  }, { psa: [], raw: [], sealed: [] });
+        if (!groups[itemType]) {
+            groups[itemType] = [];
+        }
+        groups[itemType].push(item);
+        return groups;
+    }, {psa: [], raw: [], sealed: []});
 }
 
 /**
@@ -284,16 +285,16 @@ function groupItemsByType(items) {
  * @returns {Object} Lookup map with items indexed by type and ID
  */
 function createItemsLookupMap(items) {
-  const itemsMap = {};
+    const itemsMap = {};
 
-  Object.entries(items).forEach(([itemType, typeItems]) => {
-    itemsMap[itemType] = typeItems.reduce((map, item) => {
-      map[item._id.toString()] = item;
-      return map;
-    }, {});
-  });
+    Object.entries(items).forEach(([itemType, typeItems]) => {
+        itemsMap[itemType] = typeItems.reduce((map, item) => {
+            map[item._id.toString()] = item;
+            return map;
+        }, {});
+    });
 
-  return itemsMap;
+    return itemsMap;
 }
 
 /**
@@ -305,38 +306,38 @@ function createItemsLookupMap(items) {
  * @returns {Array} Transformed items with computed fields
  */
 function transformItemsWithComputedFields(items, computedFields = {}) {
-  return items.map(item => {
-    const transformed = {
-      ...item,
-      _id: item._id?.toString(),
-      id: item._id?.toString(),
-      cardId: item.cardId?._id?.toString(),
-      productId: item.productId?._id?.toString()
-    };
+    return items.map(item => {
+        const transformed = {
+            ...item,
+            _id: item._id?.toString(),
+            id: item._id?.toString(),
+            cardId: item.cardId?._id?.toString(),
+            productId: item.productId?._id?.toString()
+        };
 
-    // Apply any additional computed fields
-    Object.entries(computedFields).forEach(([key, value]) => {
-      if (typeof value === 'function') {
-        transformed[key] = value(item);
-      } else {
-        transformed[key] = value;
-      }
+        // Apply any additional computed fields
+        Object.entries(computedFields).forEach(([key, value]) => {
+            if (typeof value === 'function') {
+                transformed[key] = value(item);
+            } else {
+                transformed[key] = value;
+            }
+        });
+
+        return transformed;
     });
-
-    return transformed;
-  });
 }
 
 export {
-  batchFetchItems,
-  batchValidateItemExistence,
-  fetchSingleItem,
-  itemExists,
-  transformItemsWithComputedFields,
-  groupSelectionsByType,
-  groupItemsByType,
-  VALID_ITEM_TYPES,
-  ITEM_MODELS,
-  POPULATION_FIELDS
+    batchFetchItems,
+    batchValidateItemExistence,
+    fetchSingleItem,
+    itemExists,
+    transformItemsWithComputedFields,
+    groupSelectionsByType,
+    groupItemsByType,
+    VALID_ITEM_TYPES,
+    ITEM_MODELS,
+    POPULATION_FIELDS
 };
 export default batchFetchItems;

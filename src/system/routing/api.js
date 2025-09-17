@@ -9,85 +9,83 @@
  */
 
 import express from 'express';
-const router = express.Router();
-import { validationMiddlewares } from '@/system/middleware/validationMiddleware.js';
+import {validationMiddlewares} from '@/system/middleware/validationMiddleware.js';
 
 // Controllers
-import { getSales, getSalesSummary, getSalesGraphData } from '@/collection/sales/salesController.js';
-import { container, ServiceKeys } from '@/system/dependency-injection/ServiceContainer.js';
-import { getAllProducts,
-  getProductById,
-  getProductSetNames
-  } from '@/pokemon/products/productsController.js';
+import {getSales, getSalesGraphData, getSalesSummary} from '@/collection/sales/salesController.js';
+import {container, ServiceKeys} from '@/system/dependency-injection/ServiceContainer.js';
+import {getAllProducts, getProductById, getProductSetNames} from '@/pokemon/products/productsController.js';
+import {postToDba} from '@/marketplace/exports/exportController.js';
 import {
-  postToDba
-} from '@/marketplace/exports/exportController.js';
-import {
-  getSupportedSocialExportTypes,
-  getSupportedCollectionExportFormats,
-  getSocialExportHandler,
-  getCollectionExportHandler,
-  getExportDownloadHandler
+    getCollectionExportHandler,
+    getExportDownloadHandler,
+    getSocialExportHandler,
+    getSupportedCollectionExportFormats,
+    getSupportedSocialExportTypes
 } from '@/system/configuration/ExportRouteConfiguration.js';
-import { uploadImage, uploadImages, cleanupImages, cleanupAllOrphanedImages } from '@/uploads/uploadController.js';
-import { getAllAuctions,
-  getAuctionById,
-  createAuction,
-  updateAuction,
-  deleteAuction,
-  addItemToAuction,
-  removeItemFromAuction,
-  markItemAsSold
-  } from '@/collection/auctions/index.js';
+import {cleanupAllOrphanedImages, cleanupImages, uploadImage, uploadImages} from '@/uploads/uploadController.js';
+import {
+    addItemToAuction,
+    createAuction,
+    deleteAuction,
+    getAllAuctions,
+    getAuctionById,
+    markItemAsSold,
+    removeItemFromAuction,
+    updateAuction
+} from '@/collection/auctions/index.js';
+
+const router = express.Router();
+
 // ================================
 // STATUS ROUTES
 // ================================
 // Status endpoint using proper service layer (lazy-loaded)
 router.get('/status', (req, res, next) => {
-  const statusController = container.resolve(ServiceKeys.STATUS_CONTROLLER);
-  statusController.getStatus(req, res, next);
+    const statusController = container.resolve(ServiceKeys.STATUS_CONTROLLER);
+    statusController.getStatus(req, res, next);
 });
 // Health endpoints using dedicated health controller
 router.get('/health', (req, res, next) => {
-  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
-  healthController.getSystemHealth(req, res, next);
+    const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+    healthController.getSystemHealth(req, res, next);
 });
 
 router.get('/health/detailed', (req, res, next) => {
-  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
-  healthController.getDetailedHealth(req, res, next);
+    const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+    healthController.getDetailedHealth(req, res, next);
 });
 
 router.get('/health/ready', (req, res, next) => {
-  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
-  healthController.getReadiness(req, res, next);
+    const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+    healthController.getReadiness(req, res, next);
 });
 
 router.get('/health/live', (req, res, next) => {
-  const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
-  healthController.getLiveness(req, res, next);
+    const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
+    healthController.getLiveness(req, res, next);
 });
 
 // Endpoints Documentation - SOLID & DRY Implementation
 router.get('/endpoints', (req, res, next) => {
-  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-  endpointsController.getEndpoints(req, res, next);
+    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+    endpointsController.getEndpoints(req, res, next);
 });
 router.get('/endpoints/summary', (req, res, next) => {
-  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-  endpointsController.getEndpointsSummary(req, res, next);
+    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+    endpointsController.getEndpointsSummary(req, res, next);
 });
 router.get('/endpoints/openapi', (req, res, next) => {
-  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-  endpointsController.getOpenApiSpec(req, res, next);
+    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+    endpointsController.getOpenApiSpec(req, res, next);
 });
 router.get('/endpoints/category/:categoryName', (req, res, next) => {
-  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-  endpointsController.getCategoryEndpoints(req, res, next);
+    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+    endpointsController.getCategoryEndpoints(req, res, next);
 });
 router.delete('/endpoints/cache', (req, res, next) => {
-  const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-  endpointsController.clearCache(req, res, next);
+    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
+    endpointsController.clearCache(req, res, next);
 });
 
 // ================================
@@ -109,21 +107,21 @@ router.get('/products/:id', validationMiddlewares.validateObjectIdParam, getProd
 // ================================
 // Configuration-driven social exports
 router.post('/collections/social-exports', validationMiddlewares.validateExportBody, (req, res, next) => {
-  const { type } = req.body;
-  const handler = getSocialExportHandler(type);
+    const {type} = req.body;
+    const handler = getSocialExportHandler(type);
 
-  if (handler) {
-    handler(req, res, next);
-  } else {
-    res.status(400).json({
-      type: 'https://pokemon-collection.com/problems/invalid-export-type',
-      title: 'Invalid Export Type',
-      status: 400,
-      detail: `Export type '${type}' is not supported`,
-      instance: req.originalUrl,
-      supportedTypes: getSupportedSocialExportTypes()
-    });
-  }
+    if (handler) {
+        handler(req, res, next);
+    } else {
+        res.status(400).json({
+            type: 'https://pokemon-collection.com/problems/invalid-export-type',
+            title: 'Invalid Export Type',
+            status: 400,
+            detail: `Export type '${type}' is not supported`,
+            instance: req.originalUrl,
+            supportedTypes: getSupportedSocialExportTypes()
+        });
+    }
 });
 
 // ================================
@@ -131,41 +129,41 @@ router.post('/collections/social-exports', validationMiddlewares.validateExportB
 // ================================
 // Configuration-driven collection exports
 router.post('/collections/:type/exports', validationMiddlewares.validateExportBody, (req, res, next) => {
-  const { type } = req.params;
-  const { format } = req.body;
-  const handler = getCollectionExportHandler(format, type);
+    const {type} = req.params;
+    const {format} = req.body;
+    const handler = getCollectionExportHandler(format, type);
 
-  if (handler) {
-    handler(req, res, next);
-  } else {
-    const supportedFormats = getSupportedCollectionExportFormats();
-    res.status(400).json({
-      type: 'https://pokemon-collection.com/problems/invalid-export-format',
-      title: 'Invalid Export Format',
-      status: 400,
-      detail: `Export format '${format}' ${format === 'zip' ? `not supported for collection type '${type}'` : 'is not supported'}`,
-      instance: req.originalUrl,
-      supportedFormats
-    });
-  }
+    if (handler) {
+        handler(req, res, next);
+    } else {
+        const supportedFormats = getSupportedCollectionExportFormats();
+        res.status(400).json({
+            type: 'https://pokemon-collection.com/problems/invalid-export-format',
+            title: 'Invalid Export Format',
+            status: 400,
+            detail: `Export format '${format}' ${format === 'zip' ? `not supported for collection type '${type}'` : 'is not supported'}`,
+            instance: req.originalUrl,
+            supportedFormats
+        });
+    }
 });
 
 // Configuration-driven export downloads
 router.get('/collections/exports/:exportId', (req, res, next) => {
-  const { exportId } = req.params;
-  const handler = getExportDownloadHandler(exportId);
+    const {exportId} = req.params;
+    const handler = getExportDownloadHandler(exportId);
 
-  if (handler) {
-    handler(req, res, next);
-  } else {
-    res.status(404).json({
-      type: 'https://pokemon-collection.com/problems/export-not-found',
-      title: 'Export Not Found',
-      status: 404,
-      detail: `Export with ID '${exportId}' was not found`,
-      instance: req.originalUrl
-    });
-  }
+    if (handler) {
+        handler(req, res, next);
+    } else {
+        res.status(404).json({
+            type: 'https://pokemon-collection.com/problems/export-not-found',
+            title: 'Export Not Found',
+            status: 404,
+            detail: `Export with ID '${exportId}' was not found`,
+            instance: req.originalUrl
+        });
+    }
 });
 
 // ================================

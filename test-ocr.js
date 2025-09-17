@@ -33,7 +33,7 @@
 
 import path from 'path';
 import fs from 'fs';
-import { fileURLToPath } from 'url';
+import {fileURLToPath} from 'url';
 import fetch from 'node-fetch';
 import FormData from 'form-data';
 

@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import fs from 'fs/promises';
 import path from 'path';
-import { ImageAnnotatorClient } from '@google-cloud/vision';
+import {ImageAnnotatorClient} from '@google-cloud/vision';
 
 /**
  * HealthService - Comprehensive Dependency Health Checks
@@ -109,7 +109,7 @@ export default class HealthService {
 
         // Add detailed system information
         const detailedSystem = await this.getDetailedSystemInfo();
-        basicHealth.checks.system = { ...basicHealth.checks.system, ...detailedSystem };
+        basicHealth.checks.system = {...basicHealth.checks.system, ...detailedSystem};
 
         return basicHealth;
     }

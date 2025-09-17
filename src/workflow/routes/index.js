@@ -6,7 +6,7 @@
  */
 
 import express from 'express';
-import { approveOcrForCollection, rejectIcrResult } from '../controllers/OcrApprovalController.js';
+import {approveOcrForCollection, rejectIcrResult} from '../controllers/OcrApprovalController.js';
 
 const router = express.Router();
 

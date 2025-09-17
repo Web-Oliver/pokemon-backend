@@ -5,7 +5,7 @@
  * Tests the coordinate mapping algorithm against actual database data
  */
 
-import { MongoClient } from 'mongodb';
+import {MongoClient} from 'mongodb';
 import OcrTextDistributor from './src/icr/shared/OcrTextDistributor.js';
 
 const MONGODB_URI = 'mongodb://localhost:27017/pokemon_collection';

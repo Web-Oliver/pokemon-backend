@@ -3,16 +3,16 @@
  * Eliminates switch statement DRY violations in api.js
  */
 import {
+    generateDbaTitle,
     generateFacebookPost,
-    getCollectionFacebookTextFile,
-    generateDbaTitle
+    getCollectionFacebookTextFile
 } from '@/marketplace/listings/externalListingController.js';
 import {
+    downloadDbaZip,
+    exportToDba,
     zipPsaCardImages,
     zipRawCardImages,
-    zipSealedProductImages,
-    exportToDba,
-    downloadDbaZip
+    zipSealedProductImages
 } from '@/marketplace/exports/exportController.js';
 
 /**

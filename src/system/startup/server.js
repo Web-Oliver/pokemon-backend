@@ -3,25 +3,19 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import {fileURLToPath} from 'url';
 // Use the ES module syntax for dotenv
 import 'dotenv/config.js';
-
-// Define __dirname and __filename for ES Modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
 // Import all dependencies using the @ alias
 import connectDB from '@/system/database/db.js';
-import { enhancedErrorMiddleware } from '@/system/middleware/CentralizedErrorHandler.js';
-import { compressionMiddleware, setCacheHeaders } from '@/system/middleware/compression.js';
-import { getCacheStats } from '@/search/middleware/searchCache.js';
-import { initializeCacheSystem, shutdownCacheSystem } from '@/system/cache/initializeCacheSystem.js';
+import {enhancedErrorMiddleware} from '@/system/middleware/CentralizedErrorHandler.js';
+import {compressionMiddleware, setCacheHeaders} from '@/system/middleware/compression.js';
+import {getCacheStats} from '@/search/middleware/searchCache.js';
+import {initializeCacheSystem, shutdownCacheSystem} from '@/system/cache/initializeCacheSystem.js';
 // REMOVED: Legacy response transformer - unified response formatter used instead
-import { createVersioningMiddleware } from '@/system/middleware/versioning.js';
-import { paginationPresets } from '@/system/middleware/pagination.js';
+import {paginationPresets} from '@/system/middleware/pagination.js';
 // NEW: Unified response formatting
-import { responseFormatter } from '@/system/middleware/responseFormatter.js';
+import {responseFormatter} from '@/system/middleware/responseFormatter.js';
 // Import routes that DON'T use controllers (safe to import early)
 import unifiedSearchRoute from '@/search/routes/unifiedSearch.js';
 import apiRoute from '@/system/routing/api.js';
@@ -33,7 +27,11 @@ import dbaSelection from '@/marketplace/dba/dbaSelection.js';
 import productsRoute from '@/pokemon/products/products.js';
 import cacheManagement from '@/system/management/cacheManagement.js';
 // NEW: Import service bootstrap for dependency injection
-import { bootstrapServices, shutdownServices } from '@/system/startup/serviceBootstrap.js';
+import {bootstrapServices, shutdownServices} from '@/system/startup/serviceBootstrap.js';
+
+// Define __dirname and __filename for ES Modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Connect to MongoDB
 connectDB();
@@ -42,19 +40,19 @@ connectDB();
 await bootstrapServices();
 
 // Import routes that use controllers AFTER services are bootstrapped
-const { default: collectionsRoute } = await import('@/collection/items/collections.js');
-const { default: activityRoutes } = await import('@/collection/activities/index.js');
-const { default: icrBatchRoute } = await import('@/icr/routes/icrBatch.js');
+const {default: collectionsRoute} = await import('@/collection/items/collections.js');
+const {default: activityRoutes} = await import('@/collection/activities/index.js');
+const {default: icrBatchRoute} = await import('@/icr/routes/icrBatch.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Simple request logging (production-safe)
 if (process.env.NODE_ENV === 'development') {
-  app.use((req, res, next) => {
-    // Request logging disabled for production
-    next();
-  });
+    app.use((req, res, next) => {
+        // Request logging disabled for production
+        next();
+    });
 }
 
 // Performance middleware (applied early)
@@ -65,23 +63,23 @@ app.use(setCacheHeaders);
 app.use(cors());
 
 // Body parsing middleware
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ limit: '10mb', extended: true, parameterLimit: 1000 }));
+app.use(express.json({limit: '10mb'}));
+app.use(express.urlencoded({limit: '10mb', extended: true, parameterLimit: 1000}));
 
 // Pagination middleware for API routes
 app.use('/api', paginationPresets.api);
 
 // Request ID and tracking middleware
 app.use('/api', (req, res, next) => {
-  req.requestId = Date.now() + Math.random().toString(36).substr(2, 9);
-  next();
+    req.requestId = Date.now() + Math.random().toString(36).substr(2, 9);
+    next();
 });
 
 // NEW: Unified response formatting middleware (applies to all API routes)
 app.use('/api', responseFormatter({
-  version: '2.0',
-  includeProcessingTime: true,
-  includeMetrics: process.env.NODE_ENV !== 'production'
+    version: '2.0',
+    includeProcessingTime: true,
+    includeMetrics: process.env.NODE_ENV !== 'production'
 }));
 
 // REMOVED: Legacy response transformer - causes conflicts with unified response formatter
@@ -114,28 +112,28 @@ app.use('/api/icr', icrBatchRoute);
 
 // Root endpoint
 app.get('/', (req, res) => {
-  res.status(200).json({
-    message: 'Pokemon Collection Backend API',
-    version: '2.0',
-    status: 'operational',
-    documentation: '/api/version'
-  });
+    res.status(200).json({
+        message: 'Pokemon Collection Backend API',
+        version: '2.0',
+        status: 'operational',
+        documentation: '/api/version'
+    });
 });
 
 // Health check endpoint with performance metrics
 app.get('/api/health', (req, res) => {
-  const cacheStats = getCacheStats();
+    const cacheStats = getCacheStats();
 
-  res.status(200).json({
-    status: 'healthy',
-    timestamp: new Date().toISOString(),
-    uptime: process.uptime(),
-    cache: cacheStats,
-    memory: {
-      used: Math.round((process.memoryUsage().heapUsed / 1024 / 1024) * 100) / 100,
-      total: Math.round((process.memoryUsage().heapTotal / 1024 / 1024) * 100) / 100
-    }
-  });
+    res.status(200).json({
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        cache: cacheStats,
+        memory: {
+            used: Math.round((process.memoryUsage().heapUsed / 1024 / 1024) * 100) / 100,
+            total: Math.round((process.memoryUsage().heapTotal / 1024 / 1024) * 100) / 100
+        }
+    });
 });
 
 // Enhanced error handling middleware (must be last)
@@ -143,32 +141,32 @@ app.use(enhancedErrorMiddleware);
 
 // Start server
 app.listen(PORT, async () => {
-  console.log(`✅ Server running on port ${PORT}`);
+    console.log(`✅ Server running on port ${PORT}`);
 
-  // Initialize systems after server starts
-  setTimeout(async () => {
-    try {
-    } catch (error) {
-      console.error('❌ Backup system initialization failed:', error.message);
-    }
+    // Initialize systems after server starts
+    setTimeout(async () => {
+        try {
+        } catch (error) {
+            console.error('❌ Backup system initialization failed:', error.message);
+        }
 
-    try {
-      await initializeCacheSystem();
-    } catch (error) {
-      console.error('❌ Cache system initialization failed:', error.message);
-    }
-  }, 8000); // Wait 8 seconds for DB connection to be fully stable
+        try {
+            await initializeCacheSystem();
+        } catch (error) {
+            console.error('❌ Cache system initialization failed:', error.message);
+        }
+    }, 8000); // Wait 8 seconds for DB connection to be fully stable
 });
 
 // Graceful shutdown handling
 process.on('SIGTERM', async () => {
-  shutdownCacheSystem();
-  await shutdownServices(); // NEW: Cleanup DI services
-  process.exit(0);
+    shutdownCacheSystem();
+    await shutdownServices(); // NEW: Cleanup DI services
+    process.exit(0);
 });
 
 process.on('SIGINT', async () => {
-  shutdownCacheSystem();
-  await shutdownServices(); // NEW: Cleanup DI services
-  process.exit(0);
+    shutdownCacheSystem();
+    await shutdownServices(); // NEW: Cleanup DI services
+    process.exit(0);
 });

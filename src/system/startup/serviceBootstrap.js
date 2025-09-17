@@ -4,25 +4,29 @@
  * SINGLE RESPONSIBILITY: Initialize dependency injection system during app startup
  */
 
-import { registerServices, initializeServices, cleanupServices } from '@/system/dependency-injection/ServiceRegistration.js';
+import {
+    cleanupServices,
+    initializeServices,
+    registerServices
+} from '@/system/dependency-injection/ServiceRegistration.js';
 
 /**
  * Bootstrap services during application startup
  */
 export async function bootstrapServices() {
 
-  try {
-    // Step 1: Register all services in the container
-    registerServices();
+    try {
+        // Step 1: Register all services in the container
+        registerServices();
 
-    // Step 2: Initialize services that need async setup
-    await initializeServices();
+        // Step 2: Initialize services that need async setup
+        await initializeServices();
 
 
-  } catch (error) {
-    console.error('❌ [BOOTSTRAP] Service bootstrap failed:', error);
-    throw error;
-  }
+    } catch (error) {
+        console.error('❌ [BOOTSTRAP] Service bootstrap failed:', error);
+        throw error;
+    }
 }
 
 /**
@@ -30,9 +34,9 @@ export async function bootstrapServices() {
  */
 export async function shutdownServices() {
 
-  try {
-    await cleanupServices();
-  } catch (error) {
-    console.error('❌ [BOOTSTRAP] Service shutdown failed:', error);
-  }
+    try {
+        await cleanupServices();
+    } catch (error) {
+        console.error('❌ [BOOTSTRAP] Service shutdown failed:', error);
+    }
 }

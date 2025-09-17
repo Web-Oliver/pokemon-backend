@@ -8,26 +8,26 @@
  * AFTER: ~30 lines delegating to focused controllers
  */
 
-import { search, suggest, getStats } from './UnifiedSearchController.js';
-import { searchCards, searchProducts, searchSets, searchSetProducts } from './EntitySearchController.js';
-import { getRecommendations, getTrending } from './RelatedItemsController.js';
+import {getStats, search, suggest} from './UnifiedSearchController.js';
+import {searchCards, searchProducts, searchSetProducts, searchSets} from './EntitySearchController.js';
+import {getRecommendations, getTrending} from './RelatedItemsController.js';
 // Export all search functionality from focused controllers
 const searchController = {
-  // Unified Search functionality
-  search,
-  suggest,
-  getStats,
-  getSearchStats: getStats, // Alias for getStats
+    // Unified Search functionality
+    search,
+    suggest,
+    getStats,
+    getSearchStats: getStats, // Alias for getStats
 
-  // Entity-specific search
-  searchCards,
-  searchProducts,
-  searchSets,
-  searchSetProducts, // FIXED: Now uses dedicated SetProduct search
+    // Entity-specific search
+    searchCards,
+    searchProducts,
+    searchSets,
+    searchSetProducts, // FIXED: Now uses dedicated SetProduct search
 
-  // Related items and recommendations
-  getRecommendations,
-  getTrending
+    // Related items and recommendations
+    getRecommendations,
+    getTrending
 };
 
 export default searchController;

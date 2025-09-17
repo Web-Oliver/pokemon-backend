@@ -10,23 +10,23 @@ import mongoose from 'mongoose';
  * and simplify maintenance.
  */
 const priceHistorySchema = [
-  {
-    price: {
-      type: mongoose.Types.Decimal128,
-      required: true
-    },
-    dateUpdated: {
-      type: Date,
-      default: Date.now,
-      get(value) {
-        // Ensure dates are properly converted to ISO strings
-        if (value instanceof Date && !isNaN(value.getTime())) {
-          return value.toISOString();
+    {
+        price: {
+            type: mongoose.Types.Decimal128,
+            required: true
+        },
+        dateUpdated: {
+            type: Date,
+            default: Date.now,
+            get(value) {
+                // Ensure dates are properly converted to ISO strings
+                if (value instanceof Date && !isNaN(value.getTime())) {
+                    return value.toISOString();
+                }
+                return value;
+            }
         }
-        return value;
-      }
     }
-  }
 ];
 
 export default priceHistorySchema;

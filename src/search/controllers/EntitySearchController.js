@@ -54,10 +54,11 @@ class EntitySearchController extends BaseSearchController {
                 defaultLimit: 20,
                 defaultSort: undefined,
                 filterProcessors: {
-                    setName: { process: (value) => value },
-                    year: { process: (value) => parseInt(value, 10) },
-                    cardNumber: { process: (value) => value },
-                    variety: { process: (value) => value },
+                    setId: {process: (value) => value},
+                    setName: {process: (value) => value},
+                    year: {process: (value) => parseInt(value, 10)},
+                    cardNumber: {process: (value) => value},
+                    variety: {process: (value) => value},
                     minPrice: {
                         field: 'price',
                         process: async (value, existingFilter) => ({
@@ -72,7 +73,7 @@ class EntitySearchController extends BaseSearchController {
                             $lte: parseFloat(value)
                         })
                     },
-                    sold: { process: (value) => value === 'true' }
+                    sold: {process: (value) => value === 'true'}
                 },
                 populationHandlers: {
                     setId: async (results) => {
@@ -80,7 +81,7 @@ class EntitySearchController extends BaseSearchController {
                         return Promise.all(results.map(async (card) => {
                             if (card.setId && !card.setId.setName) {
                                 const set = await Set.findById(card.setId).select('setName year totalCardsInSet');
-                                return { ...card, setId: set || card.setId };
+                                return {...card, setId: set || card.setId};
                             }
                             return card;
                         }));
@@ -102,13 +103,13 @@ class EntitySearchController extends BaseSearchController {
                             },
                             meta: {
                                 query: '',
-                                filters: { setName: filters.setName, year: filters.year, setId: filters.setId },
+                                filters: {setName: filters.setName, year: filters.year, setId: filters.setId},
                                 totalResults: 0,
                                 searchType: 'cards'
                             }
                         };
                         const responseData = await this.executeHooks('beforeResponse', context.operation, emptyResult, context);
-                        Logger.operationSuccess('EntitySearch', 'SEARCH CARDS', { result: 'empty_query_no_filters' });
+                        Logger.operationSuccess('EntitySearch', 'SEARCH CARDS', {result: 'empty_query_no_filters'});
                         res.status(200).json(responseData);
                         return true;
                     }
@@ -123,8 +124,8 @@ class EntitySearchController extends BaseSearchController {
                     setName: {
                         process: async (value) => {
                             const Set = (await import('@/pokemon/sets/Set.js')).default;
-                            const matchingSet = await Set.findOne({ setName: value }).select('_id');
-                            return matchingSet ? { setId: matchingSet._id } : null;
+                            const matchingSet = await Set.findOne({setName: value}).select('_id');
+                            return matchingSet ? {setId: matchingSet._id} : null;
                         }
                     },
                     setProductId: {
@@ -133,7 +134,7 @@ class EntitySearchController extends BaseSearchController {
                                 const mongoose = (await import('mongoose')).default;
                                 return new mongoose.Types.ObjectId(value);
                             } catch (error) {
-                                Logger.error('EntitySearch', 'Invalid setProductId', { setProductId: value, error });
+                                Logger.error('EntitySearch', 'Invalid setProductId', {setProductId: value, error});
                                 return null;
                             }
                         }
@@ -154,7 +155,7 @@ class EntitySearchController extends BaseSearchController {
                     },
                     availableOnly: {
                         field: 'available',
-                        process: (value) => value === 'true' ? { $gt: 0 } : undefined
+                        process: (value) => value === 'true' ? {$gt: 0} : undefined
                     }
                 },
                 populationHandlers: {
@@ -163,7 +164,7 @@ class EntitySearchController extends BaseSearchController {
                         return Promise.all(results.map(async (product) => {
                             if (product.setProductId && !product.setProductId.name) {
                                 const setProduct = await SetProduct.findById(product.setProductId).select('name description');
-                                return { ...product, setProductId: setProduct || product.setProductId };
+                                return {...product, setProductId: setProduct || product.setProductId};
                             }
                             return product;
                         }));
@@ -175,14 +176,14 @@ class EntitySearchController extends BaseSearchController {
                 defaultLimit: 20,
                 defaultSort: undefined,
                 filterProcessors: {
-                    year: { process: (value) => parseInt(value, 10) }
+                    year: {process: (value) => parseInt(value, 10)}
                 },
                 populationHandlers: {}
             },
             SetProducts: {
                 allowEmptyQuery: false,
                 defaultLimit: 10,
-                defaultSort: { setProductName: 1 },
+                defaultSort: {setProductName: 1},
                 filterProcessors: {},
                 populationHandlers: {}
             }

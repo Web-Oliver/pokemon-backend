@@ -8,19 +8,20 @@
  */
 
 import express from 'express';
-const router = express.Router();
 import IcrBatchController from '@/icr/presentation/controllers/IcrBatchController.js';
-import { validationMiddlewares } from '@/system/middleware/validationMiddleware.js';
+import {validationMiddlewares} from '@/system/middleware/validationMiddleware.js';
+
+const router = express.Router();
 
 // NO CACHING FOR ICR - Removed all caching middleware to prevent workflow issues
 
 // Initialize controller with debug logging
 try {
-  const icrBatchController = new IcrBatchController();
+    const icrBatchController = new IcrBatchController();
 } catch (error) {
-  console.error('❌ [DEBUG] Failed to create IcrBatchController:', error.message);
-  console.error('❌ [DEBUG] Stack:', error.stack);
-  throw error;
+    console.error('❌ [DEBUG] Failed to create IcrBatchController:', error.message);
+    console.error('❌ [DEBUG] Stack:', error.stack);
+    throw error;
 }
 const icrBatchController = new IcrBatchController();
 
@@ -32,11 +33,11 @@ const icrBatchController = new IcrBatchController();
  * @route   POST /api/icr/upload
  * @desc    Upload PSA card images with duplicate detection
  * @access  Public
- * @body    {files} images - Array of image files (max 100 files, 50MB limit)
+ * @body    {files} images - Array of image files (max 50 files, 500MB limit)
  */
 router.post('/upload',
-  icrBatchController.getUploadMiddleware(),
-  icrBatchController.uploadBatch
+    icrBatchController.getUploadMiddleware(),
+    icrBatchController.uploadBatch
 );
 
 /**
@@ -46,7 +47,7 @@ router.post('/upload',
  * @body    {array} ids - Array of scan IDs to process
  */
 router.post('/extract-labels',
-  icrBatchController.extractLabels
+    icrBatchController.extractLabels
 );
 
 /**
@@ -56,8 +57,8 @@ router.post('/extract-labels',
  * @body    {array} imageHashes - Array of image hashes to stitch
  */
 router.post('/stitch',
-  validationMiddlewares.validateStitchingRequest,
-  icrBatchController.stitchBatch
+    validationMiddlewares.validateStitchingRequest,
+    icrBatchController.stitchBatch
 );
 
 /**
@@ -68,8 +69,8 @@ router.post('/stitch',
  * @body    {string} stitchedImagePath - Path to stitched image (optional)
  */
 router.post('/ocr',
-  validationMiddlewares.validateImageHashes,
-  icrBatchController.processOcr
+    validationMiddlewares.validateImageHashes,
+    icrBatchController.processOcr
 );
 
 /**
@@ -80,8 +81,8 @@ router.post('/ocr',
  * @body    {object} ocrResult - OCR result data (optional)
  */
 router.post('/distribute',
-  validationMiddlewares.validateImageHashes,
-  icrBatchController.distributeText
+    validationMiddlewares.validateImageHashes,
+    icrBatchController.distributeText
 );
 
 /**
@@ -91,8 +92,8 @@ router.post('/distribute',
  * @body    {array} imageHashes - Array of image hashes to match
  */
 router.post('/match',
-  validationMiddlewares.validateImageHashes,
-  icrBatchController.matchCards
+    validationMiddlewares.validateImageHashes,
+    icrBatchController.matchCards
 );
 
 // ================================
@@ -106,8 +107,8 @@ router.post('/match',
  * @param   {string} id - Scan ID
  */
 router.get('/scans/:id',
-  validationMiddlewares.validateObjectIdParam,
-  icrBatchController.getScanDetails
+    validationMiddlewares.validateObjectIdParam,
+    icrBatchController.getScanDetails
 );
 
 /**
@@ -119,8 +120,8 @@ router.get('/scans/:id',
  * @query   {number} limit - Results per page (optional, default 20)
  */
 router.get('/scans',
-  validationMiddlewares.validatePaginationQuery,
-  icrBatchController.getScans
+    validationMiddlewares.validatePaginationQuery,
+    icrBatchController.getScans
 );
 
 /**
@@ -131,8 +132,8 @@ router.get('/scans',
  * @query   {number} limit - Results per page (optional, default 20)
  */
 router.get('/stitched',
-  validationMiddlewares.validatePaginationQuery,
-  icrBatchController.getStitchedImages
+    validationMiddlewares.validatePaginationQuery,
+    icrBatchController.getStitchedImages
 );
 
 /**
@@ -141,7 +142,7 @@ router.get('/stitched',
  * @access  Public
  */
 router.post('/sync-statuses',
-  icrBatchController.syncStatuses
+    icrBatchController.syncStatuses
 );
 
 /**
@@ -150,7 +151,7 @@ router.post('/sync-statuses',
  * @access  Public
  */
 router.get('/status',
-  icrBatchController.getOverallStatus
+    icrBatchController.getOverallStatus
 );
 
 /**
@@ -160,8 +161,8 @@ router.get('/status',
  * @body    {array} imageHashes - Array of image hashes to check
  */
 router.post('/status/check',
-  validationMiddlewares.validateImageHashes,
-  icrBatchController.getImageStatuses
+    validationMiddlewares.validateImageHashes,
+    icrBatchController.getImageStatuses
 );
 
 // ================================
@@ -175,8 +176,8 @@ router.post('/status/check',
  * @param   {string} filename - Image filename
  */
 router.get('/images/full/:filename',
-  validationMiddlewares.validateFilename,
-  icrBatchController.serveFullImage
+    validationMiddlewares.validateFilename,
+    icrBatchController.serveFullImage
 );
 
 /**
@@ -186,8 +187,8 @@ router.get('/images/full/:filename',
  * @param   {string} filename - Image filename
  */
 router.get('/images/labels/:filename',
-  validationMiddlewares.validateFilename,
-  icrBatchController.serveLabelImage
+    validationMiddlewares.validateFilename,
+    icrBatchController.serveLabelImage
 );
 
 /**
@@ -197,8 +198,8 @@ router.get('/images/labels/:filename',
  * @param   {string} filename - Image filename
  */
 router.get('/images/stitched/:filename',
-  validationMiddlewares.validateFilename,
-  icrBatchController.serveStitchedImage
+    validationMiddlewares.validateFilename,
+    icrBatchController.serveStitchedImage
 );
 
 // ================================
@@ -212,7 +213,7 @@ router.get('/images/stitched/:filename',
  * @body    {array} ids - Array of scan IDs to delete
  */
 router.delete('/scans',
-  icrBatchController.deleteScans
+    icrBatchController.deleteScans
 );
 
 /**
@@ -222,8 +223,8 @@ router.delete('/scans',
  * @param   {string} id - Stitched image ID
  */
 router.delete('/stitched/:id',
-  validationMiddlewares.validateObjectIdParam,
-  icrBatchController.deleteStitchedImage
+    validationMiddlewares.validateObjectIdParam,
+    icrBatchController.deleteStitchedImage
 );
 
 // ================================
@@ -231,27 +232,53 @@ router.delete('/stitched/:id',
 // ================================
 
 /**
- * @route   PUT /api/icr/select-match
- * @desc    Manual card match selection override
+ * @route   GET /api/icr/scans/matched
+ * @desc    Get scans ready for PSA creation (matched status)
  * @access  Public
- * @body    {string} imageHash - Image hash identifier
- * @body    {string} cardId - Selected card ObjectId
+ * @query   {number} page - Page number (optional, default 1)
+ * @query   {number} limit - Results per page (optional, default 20)
  */
-router.put('/batch/:id/select-match',
-  icrBatchController.selectMatch
+router.get('/scans/matched',
+    validationMiddlewares.validatePaginationQuery,
+    icrBatchController.getMatchedScans
 );
 
 /**
- * @route   POST /api/icr/create-psa
+ * @route   PUT /api/icr/batch/:id/select-match
+ * @desc    Manual card match selection override
+ * @access  Public
+ * @param   {string} id - Scan ID
+ * @body    {string} cardId - Selected card ObjectId
+ */
+router.put('/batch/:id/select-match',
+    validationMiddlewares.validateObjectIdParam,
+    icrBatchController.selectMatch
+);
+
+/**
+ * @route   POST /api/icr/batch/:id/create-psa
  * @desc    Create PSA card from matched image
  * @access  Public
- * @body    {string} imageHash - Image hash identifier
+ * @param   {string} id - Scan ID
  * @body    {number} myPrice - User price
  * @body    {string} grade - PSA grade override (optional)
  * @body    {date} dateAdded - Date added (optional)
  */
-router.post('/create-psa',
-  icrBatchController.createPsaCard
+router.post('/batch/:id/create-psa',
+    validationMiddlewares.validateObjectIdParam,
+    icrBatchController.createPsaCard
+);
+
+/**
+ * @route   POST /api/icr/scans/:id/complete
+ * @desc    Complete scan after PSA card creation and cleanup files
+ * @access  Public
+ * @body    {string} psaCardId - Created PSA card ID
+ * @body    {boolean} cleanupFiles - Whether to delete scan images
+ * @body    {boolean} keepImageHash - Whether to keep imageHash for duplicate prevention
+ */
+router.post('/scans/:id/complete',
+    icrBatchController.completeScan
 );
 
 export default router;

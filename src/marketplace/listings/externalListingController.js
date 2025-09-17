@@ -1,9 +1,8 @@
-import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
-import facebookFormatter from '@/marketplace/facebook/facebookPostFormatter.js';
+import {fetchSingleItem} from '@/collection/items/ItemBatchFetcher.js';
 import dbaFormatter from '@/marketplace/dba/dbaFormatter.js';
 import FacebookPostService from '@/marketplace/facebook/FacebookPostService.js';
-import mongoose from 'mongoose';
-import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
+import {asyncHandler, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
+
 /**
  * Generate Facebook auction post text
  * POST /api/generate-facebook-post
@@ -14,16 +13,16 @@ import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedEr
  * }
  */
 const generateFacebookPost = asyncHandler(async (req, res) => {
-  const { items, topText, bottomText } = req.body;
+    const {items, topText, bottomText} = req.body;
 
-  // Use FacebookPostService to handle the entire workflow
-  const facebookPostService = new FacebookPostService();
-  const result = await facebookPostService.generateFacebookPost(items, topText, bottomText);
+    // Use FacebookPostService to handle the entire workflow
+    const facebookPostService = new FacebookPostService();
+    const result = await facebookPostService.generateFacebookPost(items, topText, bottomText);
 
-  res.status(200).json({
-    status: 'success',
-    data: result
-  });
+    res.status(200).json({
+        status: 'success',
+        data: result
+    });
 });
 
 /**
@@ -32,16 +31,16 @@ const generateFacebookPost = asyncHandler(async (req, res) => {
  * Body: { itemIds: string[] }
  */
 const getCollectionFacebookTextFile = asyncHandler(async (req, res) => {
-  const { itemIds } = req.body;
+    const {itemIds} = req.body;
 
-  // Use FacebookPostService to handle the entire workflow
-  const facebookPostService = new FacebookPostService();
-  const facebookPost = await facebookPostService.generateCollectionFacebookTextFile(itemIds);
+    // Use FacebookPostService to handle the entire workflow
+    const facebookPostService = new FacebookPostService();
+    const facebookPost = await facebookPostService.generateCollectionFacebookTextFile(itemIds);
 
-  // Return as plain text for file download
-  res.setHeader('Content-Type', 'text/plain');
-  res.setHeader('Content-Disposition', 'attachment; filename="facebook-post.txt"');
-  res.send(facebookPost);
+    // Return as plain text for file download
+    res.setHeader('Content-Type', 'text/plain');
+    res.setHeader('Content-Disposition', 'attachment; filename="facebook-post.txt"');
+    res.send(facebookPost);
 });
 
 /**
@@ -50,37 +49,38 @@ const getCollectionFacebookTextFile = asyncHandler(async (req, res) => {
  * Body: { itemId, itemCategory }
  */
 const generateDbaTitle = asyncHandler(async (req, res) => {
-  const { itemId, itemCategory } = req.body;
+    const {itemId, itemCategory} = req.body;
 
-  if (!itemId || !itemCategory) {
-    throw new ValidationError('Both itemId and itemCategory are required');
-  }
-
-  // Map old itemCategory format to new itemType format
-  const itemTypeMap = {
-    'SealedProduct': 'sealed',
-    'PsaGradedCard': 'psa',
-    'RawCard': 'raw'
-  };
-  const itemType = itemTypeMap[itemCategory];
-  if (!itemType) {
-    throw new ValidationError(`Invalid itemCategory: ${itemCategory}`);
-  }
-
-  const fetchedItem = await fetchSingleItem(itemId, itemType);
-  const dbaTitle = dbaFormatter.generateDbaTitle(fetchedItem, itemCategory);
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      dbaTitle
+    if (!itemId || !itemCategory) {
+        throw new ValidationError('Both itemId and itemCategory are required');
     }
-  });
+
+    // Map old itemCategory format to new itemType format
+    const itemTypeMap = {
+        'SealedProduct': 'sealed',
+        'PsaGradedCard': 'psa',
+        'RawCard': 'raw'
+    };
+    const itemType = itemTypeMap[itemCategory];
+    if (!itemType) {
+        throw new ValidationError(`Invalid itemCategory: ${itemCategory}`);
+    }
+
+    const fetchedItem = await fetchSingleItem(itemId, itemType);
+    const dbaTitle = dbaFormatter.generateDbaTitle(fetchedItem, itemCategory);
+
+    res.status(200).json({
+        status: 'success',
+        data: {
+            dbaTitle
+        }
+    });
 });
 
 export {
-  generateFacebookPost,
-  getCollectionFacebookTextFile,
-  generateDbaTitle
+    generateFacebookPost,
+    getCollectionFacebookTextFile,
+    generateDbaTitle
 };
-export default generateFacebookPost; ;
+export default generateFacebookPost;
+

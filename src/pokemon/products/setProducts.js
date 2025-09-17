@@ -4,16 +4,16 @@
  */
 
 import express from 'express';
-const router = express.Router();
-import { getAllSetProducts,
-  getSetProductsWithPagination,
-  getSetProductById,
-  getSetProductByName,
-  getSetProductStats
-  } from '@/pokemon/products/setProductsController.js';
-import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
+import {
+    getSetProductById,
+    getSetProductByName,
+    getSetProductsWithPagination
+} from '@/pokemon/products/setProductsController.js';
+import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
 import SetProductService from '@/pokemon/products/SetProductService.js';
-import { cachePresets } from '@/system/middleware/cachePresets.js';
+import {cachePresets} from '@/system/middleware/cachePresets.js';
+
+const router = express.Router();
 /**
  * @route   GET /api/set-products
  * @desc    Get set products with pagination and search
@@ -36,21 +36,21 @@ router.get('/', cachePresets.setData, getSetProductsWithPagination);
  * @query   {string} sortOrder - Sort order: asc/desc (default: asc)
  */
 router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) => {
-  const { query, page, limit, sortBy, sortOrder } = req.query;
+    const {query, page, limit, sortBy, sortOrder} = req.query;
 
-  const service = new SetProductService();
-  const results = await service.searchSetProducts({
-    query,
-    page: parseInt(page, 10) || 1,
-    limit: parseInt(limit, 10) || 20,
-    sortBy,
-    sortOrder
-  });
+    const service = new SetProductService();
+    const results = await service.searchSetProducts({
+        query,
+        page: parseInt(page, 10) || 1,
+        limit: parseInt(limit, 10) || 20,
+        sortBy,
+        sortOrder
+    });
 
-  res.json({
-    success: true,
-    data: results
-  });
+    res.json({
+        success: true,
+        data: results
+    });
 }));
 
 /**
@@ -59,13 +59,13 @@ router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) 
  * @access  Public
  */
 router.get('/stats', cachePresets.setData, asyncHandler(async (req, res) => {
-  const service = new SetProductService();
-  const stats = await service.getSetProductStatistics();
+    const service = new SetProductService();
+    const stats = await service.getSetProductStatistics();
 
-  res.json({
-    success: true,
-    data: stats
-  });
+    res.json({
+        success: true,
+        data: stats
+    });
 }));
 
 /**
@@ -77,19 +77,19 @@ router.get('/stats', cachePresets.setData, asyncHandler(async (req, res) => {
  * @query   {string} sortOrder - Sort order: asc/desc (optional, default: desc)
  */
 router.get('/with-counts', cachePresets.setData, asyncHandler(async (req, res) => {
-  const { limit, sortBy, sortOrder } = req.query;
+    const {limit, sortBy, sortOrder} = req.query;
 
-  const service = new SetProductService();
-  const setProducts = await service.getSetProductsWithCounts({
-    limit: parseInt(limit, 10) || 50,
-    sortBy,
-    sortOrder
-  });
+    const service = new SetProductService();
+    const setProducts = await service.getSetProductsWithCounts({
+        limit: parseInt(limit, 10) || 50,
+        sortBy,
+        sortOrder
+    });
 
-  res.json({
-    success: true,
-    data: setProducts
-  });
+    res.json({
+        success: true,
+        data: setProducts
+    });
 }));
 
 /**
@@ -119,21 +119,21 @@ router.get('/:id', cachePresets.setDetails, getSetProductById);
  * @query   {boolean} availableOnly - Show only available products (optional)
  */
 router.get('/:id/products', cachePresets.productData, asyncHandler(async (req, res) => {
-  const { id } = req.params;
-  const { page, limit, category, availableOnly } = req.query;
+    const {id} = req.params;
+    const {page, limit, category, availableOnly} = req.query;
 
-  const service = new SetProductService();
-  const results = await service.getProductsBySetProduct(id, {
-    page: parseInt(page, 10) || 1,
-    limit: parseInt(limit, 10) || 20,
-    category,
-    availableOnly: availableOnly === 'true'
-  });
+    const service = new SetProductService();
+    const results = await service.getProductsBySetProduct(id, {
+        page: parseInt(page, 10) || 1,
+        limit: parseInt(limit, 10) || 20,
+        category,
+        availableOnly: availableOnly === 'true'
+    });
 
-  res.json({
-    success: true,
-    data: results
-  });
+    res.json({
+        success: true,
+        data: results
+    });
 }));
 
 export default router;

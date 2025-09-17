@@ -32,7 +32,7 @@ node Import/MainImporter.js --fast
 ## Import Order
 
 1. **SetProduct** - Product expansion/set data (no dependencies)
-2. **Set** - Pokemon card sets (no dependencies)  
+2. **Set** - Pokemon card sets (no dependencies)
 3. **Product** - Products that reference SetProduct
 4. **Card** - Cards that reference Set
 
@@ -87,21 +87,21 @@ The optimized system provides detailed metrics:
 ### Common Issues
 
 1. **"No Sets found in database"**
-   - Import Sets before Cards
-   - Check MongoDB connection
+    - Import Sets before Cards
+    - Check MongoDB connection
 
 2. **"No SetProducts found in database"**
-   - Import SetProducts before Products
-   - Verify Products data contains setProductName fields
+    - Import SetProducts before Products
+    - Verify Products data contains setProductName fields
 
 3. **High memory usage**
-   - Reduce batchSize (try 100)
-   - Use --skip-existing for updates
+    - Reduce batchSize (try 100)
+    - Use --skip-existing for updates
 
 4. **Slow performance**
-   - Increase batchSize (try 500)
-   - Ensure MongoDB indexes exist
-   - Use SSD storage for better I/O
+    - Increase batchSize (try 500)
+    - Ensure MongoDB indexes exist
+    - Use SSD storage for better I/O
 
 ### Debug Mode
 

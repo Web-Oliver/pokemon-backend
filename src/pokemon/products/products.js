@@ -4,10 +4,11 @@
  */
 
 import express from 'express';
-const router = express.Router();
-import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
+import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
 import ProductApiService from '@/pokemon/products/ProductApiService.js';
-import { cachePresets } from '@/system/middleware/cachePresets.js';
+import {cachePresets} from '@/system/middleware/cachePresets.js';
+
+const router = express.Router();
 /**
  * @route   GET /api/products/search
  * @desc    Search products with pagination (SetProduct → Product hierarchy)
@@ -19,17 +20,17 @@ import { cachePresets } from '@/system/middleware/cachePresets.js';
  * @query   {boolean} availableOnly - Show only available products (optional)
  */
 router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) => {
-  const { page, limit, category, setName, availableOnly } = req.query;
+    const {page, limit, category, setName, availableOnly} = req.query;
 
-  const results = await ProductApiService.searchProducts({
-    page: parseInt(page, 10),
-    limit: parseInt(limit, 10),
-    category,
-    setName,
-    availableOnly: availableOnly === 'true'
-  });
+    const results = await ProductApiService.searchProducts({
+        page: parseInt(page, 10),
+        limit: parseInt(limit, 10),
+        category,
+        setName,
+        availableOnly: availableOnly === 'true'
+    });
 
-  res.json(results);
+    res.json(results);
 }));
 
 /**
@@ -38,12 +39,12 @@ router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) 
  * @access  Public
  */
 router.get('/categories', cachePresets.productData, asyncHandler(async (req, res) => {
-  const categories = await ProductApiService.getCategories();
+    const categories = await ProductApiService.getCategories();
 
-  res.json({
-    success: true,
-    data: categories
-  });
+    res.json({
+        success: true,
+        data: categories
+    });
 }));
 
 /**
@@ -52,12 +53,12 @@ router.get('/categories', cachePresets.productData, asyncHandler(async (req, res
  * @access  Public
  */
 router.get('/categories/:category', cachePresets.productData, asyncHandler(async (req, res) => {
-  const details = await ProductApiService.getCategoryDetails(req.params.category);
+    const details = await ProductApiService.getCategoryDetails(req.params.category);
 
-  res.json({
-    success: true,
-    data: details
-  });
+    res.json({
+        success: true,
+        data: details
+    });
 }));
 
 export default router;

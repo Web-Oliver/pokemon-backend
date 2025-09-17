@@ -33,7 +33,8 @@
     "multer": "^2.0.2",
     "node-cache": "^5.1.2",
     "node-fetch": "^3.3.2",
-    "sharp": "^0.33.4"
+    "sharp": "^0.33.4",
+    "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.24.5",

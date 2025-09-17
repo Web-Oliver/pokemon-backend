@@ -13,57 +13,57 @@
  * Master item type mappings
  */
 export const ITEM_TYPE_MAPPINGS = {
-  'SealedProduct': {
-    abbreviated: 'sealed',
-    displayName: 'Sealed Product',
-    pluralDisplay: 'Sealed Products',
-    category: 'sealed',
-    pluralName: 'sealedProducts',
-    populate: 'productId',
-    filterableFields: ['category', 'available', 'name', 'setName'],
-    entitySpecificFilters: ['minPrice', 'maxPrice', 'categories']
-  },
-  'PsaGradedCard': {
-    abbreviated: 'psa',
-    displayName: 'PSA Graded Card',
-    pluralDisplay: 'PSA Graded Cards',
-    category: 'psa',
-    pluralName: 'psaGradedCards',
-    populate: {
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-        model: 'Set'
-      }
+    'SealedProduct': {
+        abbreviated: 'sealed',
+        displayName: 'Sealed Product',
+        pluralDisplay: 'Sealed Products',
+        category: 'sealed',
+        pluralName: 'sealedProducts',
+        populate: 'productId',
+        filterableFields: ['category', 'available', 'name', 'setName'],
+        entitySpecificFilters: ['minPrice', 'maxPrice', 'categories']
     },
-    filterableFields: ['grade', 'cardName', 'setName'],
-    entitySpecificFilters: ['minGrade', 'maxGrade']
-  },
-  'RawCard': {
-    abbreviated: 'raw',
-    displayName: 'Raw Card',
-    pluralDisplay: 'Raw Cards',
-    category: 'raw',
-    pluralName: 'rawCards',
-    populate: {
-      path: 'cardId',
-      populate: {
-        path: 'setId',
-        model: 'Set'
-      }
+    'PsaGradedCard': {
+        abbreviated: 'psa',
+        displayName: 'PSA Graded Card',
+        pluralDisplay: 'PSA Graded Cards',
+        category: 'psa',
+        pluralName: 'psaGradedCards',
+        populate: {
+            path: 'cardId',
+            populate: {
+                path: 'setId',
+                model: 'Set'
+            }
+        },
+        filterableFields: ['grade', 'cardName', 'setName'],
+        entitySpecificFilters: ['minGrade', 'maxGrade']
     },
-    filterableFields: ['condition', 'cardName', 'setName'],
-    entitySpecificFilters: ['conditions']
-  }
+    'RawCard': {
+        abbreviated: 'raw',
+        displayName: 'Raw Card',
+        pluralDisplay: 'Raw Cards',
+        category: 'raw',
+        pluralName: 'rawCards',
+        populate: {
+            path: 'cardId',
+            populate: {
+                path: 'setId',
+                model: 'Set'
+            }
+        },
+        filterableFields: ['condition', 'cardName', 'setName'],
+        entitySpecificFilters: ['conditions']
+    }
 };
 
 /**
  * Reverse mapping from abbreviated to full class names
  */
 export const ABBREVIATED_TO_CLASS = {
-  'sealed': 'SealedProduct',
-  'psa': 'PsaGradedCard',
-  'raw': 'RawCard'
+    'sealed': 'SealedProduct',
+    'psa': 'PsaGradedCard',
+    'raw': 'RawCard'
 };
 
 /**
@@ -83,11 +83,11 @@ export const VALID_ABBREVIATED_TYPES = Object.keys(ABBREVIATED_TO_CLASS);
  * @throws {Error} - If className is invalid
  */
 export function toAbbreviated(className) {
-  const mapping = ITEM_TYPE_MAPPINGS[className];
-  if (!mapping) {
-    throw new Error(`Invalid item class name: ${className}. Must be one of: ${VALID_CLASS_NAMES.join(', ')}`);
-  }
-  return mapping.abbreviated;
+    const mapping = ITEM_TYPE_MAPPINGS[className];
+    if (!mapping) {
+        throw new Error(`Invalid item class name: ${className}. Must be one of: ${VALID_CLASS_NAMES.join(', ')}`);
+    }
+    return mapping.abbreviated;
 }
 
 /**
@@ -97,11 +97,11 @@ export function toAbbreviated(className) {
  * @throws {Error} - If abbreviated type is invalid
  */
 export function toClassName(abbreviated) {
-  const className = ABBREVIATED_TO_CLASS[abbreviated];
-  if (!className) {
-    throw new Error(`Invalid abbreviated type: ${abbreviated}. Must be one of: ${VALID_ABBREVIATED_TYPES.join(', ')}`);
-  }
-  return className;
+    const className = ABBREVIATED_TO_CLASS[abbreviated];
+    if (!className) {
+        throw new Error(`Invalid abbreviated type: ${abbreviated}. Must be one of: ${VALID_ABBREVIATED_TYPES.join(', ')}`);
+    }
+    return className;
 }
 
 /**
@@ -110,19 +110,19 @@ export function toClassName(abbreviated) {
  * @returns {string} - Display name
  */
 export function getDisplayName(type) {
-  // Try as class name first
-  const mapping = ITEM_TYPE_MAPPINGS[type];
-  if (mapping) {
-    return mapping.displayName;
-  }
+    // Try as class name first
+    const mapping = ITEM_TYPE_MAPPINGS[type];
+    if (mapping) {
+        return mapping.displayName;
+    }
 
-  // Try as abbreviated type
-  const className = ABBREVIATED_TO_CLASS[type];
-  if (className) {
-    return ITEM_TYPE_MAPPINGS[className].displayName;
-  }
+    // Try as abbreviated type
+    const className = ABBREVIATED_TO_CLASS[type];
+    if (className) {
+        return ITEM_TYPE_MAPPINGS[className].displayName;
+    }
 
-  throw new Error(`Invalid item type: ${type}`);
+    throw new Error(`Invalid item type: ${type}`);
 }
 
 /**
@@ -131,19 +131,19 @@ export function getDisplayName(type) {
  * @returns {string} - Plural display name
  */
 export function getPluralDisplayName(type) {
-  // Try as class name first
-  const mapping = ITEM_TYPE_MAPPINGS[type];
-  if (mapping) {
-    return mapping.pluralDisplay;
-  }
+    // Try as class name first
+    const mapping = ITEM_TYPE_MAPPINGS[type];
+    if (mapping) {
+        return mapping.pluralDisplay;
+    }
 
-  // Try as abbreviated type
-  const className = ABBREVIATED_TO_CLASS[type];
-  if (className) {
-    return ITEM_TYPE_MAPPINGS[className].pluralDisplay;
-  }
+    // Try as abbreviated type
+    const className = ABBREVIATED_TO_CLASS[type];
+    if (className) {
+        return ITEM_TYPE_MAPPINGS[className].pluralDisplay;
+    }
 
-  throw new Error(`Invalid item type: ${type}`);
+    throw new Error(`Invalid item type: ${type}`);
 }
 
 /**
@@ -152,7 +152,7 @@ export function getPluralDisplayName(type) {
  * @returns {boolean} - True if valid class name
  */
 export function isValidClassName(type) {
-  return VALID_CLASS_NAMES.includes(type);
+    return VALID_CLASS_NAMES.includes(type);
 }
 
 /**
@@ -161,7 +161,7 @@ export function isValidClassName(type) {
  * @returns {boolean} - True if valid abbreviated type
  */
 export function isValidAbbreviated(type) {
-  return VALID_ABBREVIATED_TYPES.includes(type);
+    return VALID_ABBREVIATED_TYPES.includes(type);
 }
 
 /**
@@ -170,7 +170,7 @@ export function isValidAbbreviated(type) {
  * @returns {boolean} - True if valid
  */
 export function isValidType(type) {
-  return isValidClassName(type) || isValidAbbreviated(type);
+    return isValidClassName(type) || isValidAbbreviated(type);
 }
 
 /**
@@ -178,10 +178,10 @@ export function isValidType(type) {
  * @returns {Object} - Object with classNames and abbreviated arrays
  */
 export function getAllValidTypes() {
-  return {
-    classNames: VALID_CLASS_NAMES,
-    abbreviated: VALID_ABBREVIATED_TYPES
-  };
+    return {
+        classNames: VALID_CLASS_NAMES,
+        abbreviated: VALID_ABBREVIATED_TYPES
+    };
 }
 
 /**
@@ -190,8 +190,8 @@ export function getAllValidTypes() {
  * @returns {Object|string|null} - Populate configuration
  */
 export function getPopulateConfig(entityName) {
-  const mapping = ITEM_TYPE_MAPPINGS[entityName];
-  return mapping ? mapping.populate : null;
+    const mapping = ITEM_TYPE_MAPPINGS[entityName];
+    return mapping ? mapping.populate : null;
 }
 
 /**
@@ -200,9 +200,9 @@ export function getPopulateConfig(entityName) {
  * @returns {Array} - Array of filterable field names
  */
 export function getFilterableFields(entityName) {
-  const mapping = ITEM_TYPE_MAPPINGS[entityName];
-  const commonFields = ['sold', 'dateAdded'];
-  return mapping ? [...commonFields, ...mapping.filterableFields] : commonFields;
+    const mapping = ITEM_TYPE_MAPPINGS[entityName];
+    const commonFields = ['sold', 'dateAdded'];
+    return mapping ? [...commonFields, ...mapping.filterableFields] : commonFields;
 }
 
 /**
@@ -211,8 +211,8 @@ export function getFilterableFields(entityName) {
  * @returns {Array} - Array of entity-specific filter field names
  */
 export function getEntitySpecificFilters(entityName) {
-  const mapping = ITEM_TYPE_MAPPINGS[entityName];
-  return mapping ? mapping.entitySpecificFilters : [];
+    const mapping = ITEM_TYPE_MAPPINGS[entityName];
+    return mapping ? mapping.entitySpecificFilters : [];
 }
 
 /**
@@ -221,8 +221,8 @@ export function getEntitySpecificFilters(entityName) {
  * @returns {string} - Plural name (e.g., 'psaGradedCards')
  */
 export function getPluralName(entityName) {
-  const mapping = ITEM_TYPE_MAPPINGS[entityName];
-  return mapping ? mapping.pluralName : `${entityName.toLowerCase()}s`;
+    const mapping = ITEM_TYPE_MAPPINGS[entityName];
+    return mapping ? mapping.pluralName : `${entityName.toLowerCase()}s`;
 }
 
 /**
@@ -232,22 +232,22 @@ export function getPluralName(entityName) {
  * @param {Object} filters - Existing filters object to extend
  */
 export function applyEntitySpecificFilters(entityName, query, filters) {
-  switch (entityName) {
-    case 'PsaGradedCard':
-      if (query.minGrade) filters.grade = { $gte: parseInt(query.minGrade, 10) };
-      if (query.maxGrade) filters.grade = { ...filters.grade, $lte: parseInt(query.maxGrade, 10) };
-      break;
-    case 'RawCard':
-      if (query.conditions && Array.isArray(query.conditions)) {
-        filters.condition = { $in: query.conditions };
-      }
-      break;
-    case 'SealedProduct':
-      if (query.minPrice) filters.myPrice = { $gte: parseFloat(query.minPrice) };
-      if (query.maxPrice) filters.myPrice = { ...filters.myPrice, $lte: parseFloat(query.maxPrice) };
-      if (query.categories && Array.isArray(query.categories)) {
-        filters.category = { $in: query.categories };
-      }
-      break;
-  }
+    switch (entityName) {
+        case 'PsaGradedCard':
+            if (query.minGrade) filters.grade = {$gte: parseInt(query.minGrade, 10)};
+            if (query.maxGrade) filters.grade = {...filters.grade, $lte: parseInt(query.maxGrade, 10)};
+            break;
+        case 'RawCard':
+            if (query.conditions && Array.isArray(query.conditions)) {
+                filters.condition = {$in: query.conditions};
+            }
+            break;
+        case 'SealedProduct':
+            if (query.minPrice) filters.myPrice = {$gte: parseFloat(query.minPrice)};
+            if (query.maxPrice) filters.myPrice = {...filters.myPrice, $lte: parseFloat(query.maxPrice)};
+            if (query.categories && Array.isArray(query.categories)) {
+                filters.category = {$in: query.categories};
+            }
+            break;
+    }
 }

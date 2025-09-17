@@ -1,6 +1,6 @@
 import SearchableRepository from '@/system/database/SearchableRepository.js';
 import Set from '@/pokemon/sets/Set.js';
-import { ValidationError } from '@/system/errors/ErrorTypes.js';
+
 /**
  * Set Repository
  *
@@ -13,23 +13,23 @@ import { ValidationError } from '@/system/errors/ErrorTypes.js';
  * REFACTORED: Now uses unified search abstraction, eliminating ~180 lines of duplicated search code.
  */
 class SetRepository extends SearchableRepository {
-  /**
-   * Creates a new set repository instance
-   */
-  constructor() {
-    super(Set, {
-      entityType: 'sets', // Use search configuration key
-      defaultSort: { year: -1, setName: 1 }
-    });
-  }
+    /**
+     * Creates a new set repository instance
+     */
+    constructor() {
+        super(Set, {
+            entityType: 'sets', // Use search configuration key
+            defaultSort: {year: -1, setName: 1}
+        });
+    }
 
-  // searchAdvanced method now inherited from SearchableRepository
-  // Eliminates ~180 lines of duplicated search logic including complex aggregation pipeline
-  // All original functionality preserved through search configuration
+    // searchAdvanced method now inherited from SearchableRepository
+    // Eliminates ~180 lines of duplicated search logic including complex aggregation pipeline
+    // All original functionality preserved through search configuration
 
-  // getSuggestions method now inherited from SearchableRepository
-  // Eliminates ~35 lines of duplicated suggestion formatting logic
-  // All original functionality preserved through search configuration
+    // getSuggestions method now inherited from SearchableRepository
+    // Eliminates ~35 lines of duplicated suggestion formatting logic
+    // All original functionality preserved through search configuration
 
 }
 

@@ -1,13 +1,8 @@
 import express from 'express';
+import {getAllCards, getCardById, getCardMetrics} from '@/pokemon/cards/cardsController.js';
+import {cachePresets} from '@/system/middleware/cachePresets.js';
+
 const router = express.Router();
-import { getAllCards,
-  getCardById,
-  createCard,
-  updateCard,
-  deleteCard,
-  getCardMetrics
-  } from '@/pokemon/cards/cardsController.js';
-import { cachePresets } from '@/system/middleware/cachePresets.js';
 // Card routes - READ-ONLY reference data
 router.get('/', cachePresets.cardData, getAllCards);
 router.get('/metrics', cachePresets.cardMetrics, getCardMetrics);

@@ -14,21 +14,21 @@
  * @returns {Array} Filtered array of cards
  */
 const applyPostPopulationFilters = (cards, filters) => {
-  const { setName, cardName } = filters;
-  let filteredCards = cards;
+    const {setName, cardName} = filters;
+    let filteredCards = cards;
 
-  if (setName) {
-    filteredCards = filteredCards.filter((card) =>
-      card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase())
-    );
-  }
-  if (cardName) {
-    filteredCards = filteredCards.filter((card) =>
-      card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase())
-    );
-  }
+    if (setName) {
+        filteredCards = filteredCards.filter((card) =>
+            card.cardId?.setId?.setName?.toLowerCase().includes(setName.toLowerCase())
+        );
+    }
+    if (cardName) {
+        filteredCards = filteredCards.filter((card) =>
+            card.cardId?.cardName?.toLowerCase().includes(cardName.toLowerCase())
+        );
+    }
 
-  return filteredCards;
+    return filteredCards;
 };
 
 /**
@@ -38,18 +38,19 @@ const applyPostPopulationFilters = (cards, filters) => {
  * @returns {Object} MongoDB query object
  */
 const buildBaseSoldQuery = (filters) => {
-  const { sold } = filters;
-  const query = {};
+    const {sold} = filters;
+    const query = {};
 
-  if (sold !== undefined) {
-    query.sold = sold === 'true';
-  }
+    if (sold !== undefined) {
+        query.sold = sold === 'true';
+    }
 
-  return query;
+    return query;
 };
 
 export {
-  applyPostPopulationFilters,
-  buildBaseSoldQuery
+    applyPostPopulationFilters,
+    buildBaseSoldQuery
 };
-export default applyPostPopulationFilters; ;
+export default applyPostPopulationFilters;
+
