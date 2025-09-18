@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import SetModel from '@/pokemon/sets/Set.js';
-import {ImportValidationError, ImportValidators} from '../shared/ImportValidators.js';
+import { ImportValidationError, ImportValidators } from '../shared/ImportValidators.js';
 
 /**
  * Optimized Set MongoDB Importer
@@ -76,7 +76,7 @@ class SetImporter {
 
         try {
             // Use lean() for better performance and only select needed fields
-            const existingSets = await SetModel.find({}, 'uniqueSetId setName').lean().hint({uniqueSetId: 1});
+            const existingSets = await SetModel.find({}, 'uniqueSetId setName').lean().hint({ uniqueSetId: 1 });
 
             for (const set of existingSets) {
                 this.existingIds.add(set.uniqueSetId);
@@ -211,7 +211,7 @@ class SetImporter {
             // Prepare bulk operations
             const bulkOps = batch.map(setData => {
                 // Remove metadata fields before saving
-                const {source, processedAt, ...cleanSetData} = setData;
+                const { ...cleanSetData } = setData;
 
                 if (this.options.skipExisting) {
                     // Use insertOne for new documents only
@@ -226,11 +226,11 @@ class SetImporter {
                     updateOne: {
                         filter: {
                             $or: [
-                                {uniqueSetId: cleanSetData.uniqueSetId},
-                                {setName: cleanSetData.setName}
+                                { uniqueSetId: cleanSetData.uniqueSetId },
+                                { setName: cleanSetData.setName }
                             ]
                         },
-                        update: {$set: cleanSetData},
+                        update: { $set: cleanSetData },
                         upsert: true
                     }
                 };
@@ -285,12 +285,12 @@ class SetImporter {
     async processBatchIndividually(batch) {
         for (const setData of batch) {
             try {
-                const {source, processedAt, ...cleanSetData} = setData;
+                const { ...cleanSetData } = setData;
 
                 const existing = await SetModel.findOne({
                     $or: [
-                        {uniqueSetId: cleanSetData.uniqueSetId},
-                        {setName: cleanSetData.setName}
+                        { uniqueSetId: cleanSetData.uniqueSetId },
+                        { setName: cleanSetData.setName }
                     ]
                 }).lean();
 
@@ -299,9 +299,9 @@ class SetImporter {
                         this.stats.skipped++;
                     } else {
                         await SetModel.updateOne(
-                            {_id: existing._id},
-                            {$set: cleanSetData},
-                            {runValidators: true}
+                            { _id: existing._id },
+                            { $set: cleanSetData },
+                            { runValidators: true }
                         );
                         this.stats.updated++;
                     }

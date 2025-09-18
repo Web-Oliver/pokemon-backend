@@ -426,7 +426,7 @@ class ErrorFactory {
     static createDbaError(operation, details, context = {}) {
         const errorType = ERROR_TYPES[`DBA_${operation.toUpperCase()}`] || ERROR_TYPES.OPERATION_FAILED;
 
-        return errorType.createError({operation, details, ...context});
+        return errorType.createError({ operation, details, ...context });
     }
 
     /**
@@ -440,7 +440,7 @@ class ErrorFactory {
     static createOcrError(phase, details, context = {}) {
         const errorType = ERROR_TYPES[`OCR_${phase.toUpperCase()}`] || ERROR_TYPES.OPERATION_FAILED;
 
-        return errorType.createError({phase, details, ...context});
+        return errorType.createError({ phase, details, ...context });
     }
 
     /**
@@ -454,7 +454,7 @@ class ErrorFactory {
     static createSearchError(searchType, details, context = {}) {
         const errorType = ERROR_TYPES[`SEARCH_${searchType.toUpperCase()}`] || ERROR_TYPES.OPERATION_FAILED;
 
-        return errorType.createError({searchType, details, ...context});
+        return errorType.createError({ searchType, details, ...context });
     }
 
     /**

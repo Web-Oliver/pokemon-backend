@@ -1,4 +1,4 @@
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
 /**
  * Sale Service
@@ -134,16 +134,16 @@ class SaleService {
      * @returns {Promise<Object>} - Sale statistics
      */
     static async getSaleStatistics(model, filters = {}) {
-        const baseQuery = {sold: true, ...filters};
+        const baseQuery = { sold: true, ...filters };
 
         const [totalSold, totalRevenue] = await Promise.all([
             model.countDocuments(baseQuery),
             model.aggregate([
-                {$match: baseQuery},
+                { $match: baseQuery },
                 {
                     $group: {
                         _id: null,
-                        total: {$sum: '$saleDetails.actualSoldPrice'}
+                        total: { $sum: '$saleDetails.actualSoldPrice' }
                     }
                 }
             ])

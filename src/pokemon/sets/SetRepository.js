@@ -19,7 +19,7 @@ class SetRepository extends SearchableRepository {
     constructor() {
         super(Set, {
             entityType: 'sets', // Use search configuration key
-            defaultSort: {year: -1, setName: 1}
+            defaultSort: { year: -1, setName: 1 }
         });
     }
 

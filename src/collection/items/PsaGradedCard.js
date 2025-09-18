@@ -1,17 +1,17 @@
 import mongoose from 'mongoose';
 import activityTrackingPlugin from '@/collection/activities/activityTracking.js';
-import {collectionItemTransform, priceHistorySchema, saleDetailsSchema} from '@/system/schemas/index.js';
+import { collectionItemTransform, priceHistorySchema, saleDetailsSchema } from '@/system/schemas/index.js';
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 const psaGradedCardSchema = new mongoose.Schema({
-    cardId: {type: Schema.Types.ObjectId, ref: 'Card', required: true},
-    grade: {type: String, required: true},
-    certNumber: {type: String}, // Optional PSA certification number
-    images: [{type: String}],
-    myPrice: {type: mongoose.Types.Decimal128, required: true},
+    cardId: { type: Schema.Types.ObjectId, ref: 'Card', required: true },
+    grade: { type: String, required: true },
+    certNumber: { type: String }, // Optional PSA certification number
+    images: [{ type: String }],
+    myPrice: { type: mongoose.Types.Decimal128, required: true },
     priceHistory: priceHistorySchema,
-    dateAdded: {type: Date, default: Date.now},
-    sold: {type: Boolean, default: false},
+    dateAdded: { type: Date, default: Date.now },
+    sold: { type: Boolean, default: false },
     saleDetails: saleDetailsSchema
 });
 

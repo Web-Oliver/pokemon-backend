@@ -125,26 +125,6 @@ export function getDisplayName(type) {
     throw new Error(`Invalid item type: ${type}`);
 }
 
-/**
- * Get plural display name for item type
- * @param {string} type - Class name or abbreviated type
- * @returns {string} - Plural display name
- */
-export function getPluralDisplayName(type) {
-    // Try as class name first
-    const mapping = ITEM_TYPE_MAPPINGS[type];
-    if (mapping) {
-        return mapping.pluralDisplay;
-    }
-
-    // Try as abbreviated type
-    const className = ABBREVIATED_TO_CLASS[type];
-    if (className) {
-        return ITEM_TYPE_MAPPINGS[className].pluralDisplay;
-    }
-
-    throw new Error(`Invalid item type: ${type}`);
-}
 
 /**
  * Validate if a type is a valid class name
@@ -173,16 +153,6 @@ export function isValidType(type) {
     return isValidClassName(type) || isValidAbbreviated(type);
 }
 
-/**
- * Get all valid types in both formats
- * @returns {Object} - Object with classNames and abbreviated arrays
- */
-export function getAllValidTypes() {
-    return {
-        classNames: VALID_CLASS_NAMES,
-        abbreviated: VALID_ABBREVIATED_TYPES
-    };
-}
 
 /**
  * Get populate configuration for entity type
@@ -205,15 +175,6 @@ export function getFilterableFields(entityName) {
     return mapping ? [...commonFields, ...mapping.filterableFields] : commonFields;
 }
 
-/**
- * Get entity-specific filter fields
- * @param {string} entityName - Entity class name
- * @returns {Array} - Array of entity-specific filter field names
- */
-export function getEntitySpecificFilters(entityName) {
-    const mapping = ITEM_TYPE_MAPPINGS[entityName];
-    return mapping ? mapping.entitySpecificFilters : [];
-}
 
 /**
  * Get plural name for entity
@@ -234,19 +195,19 @@ export function getPluralName(entityName) {
 export function applyEntitySpecificFilters(entityName, query, filters) {
     switch (entityName) {
         case 'PsaGradedCard':
-            if (query.minGrade) filters.grade = {$gte: parseInt(query.minGrade, 10)};
-            if (query.maxGrade) filters.grade = {...filters.grade, $lte: parseInt(query.maxGrade, 10)};
+            if (query.minGrade) filters.grade = { $gte: parseInt(query.minGrade, 10) };
+            if (query.maxGrade) filters.grade = { ...filters.grade, $lte: parseInt(query.maxGrade, 10) };
             break;
         case 'RawCard':
             if (query.conditions && Array.isArray(query.conditions)) {
-                filters.condition = {$in: query.conditions};
+                filters.condition = { $in: query.conditions };
             }
             break;
         case 'SealedProduct':
-            if (query.minPrice) filters.myPrice = {$gte: parseFloat(query.minPrice)};
-            if (query.maxPrice) filters.myPrice = {...filters.myPrice, $lte: parseFloat(query.maxPrice)};
+            if (query.minPrice) filters.myPrice = { $gte: parseFloat(query.minPrice) };
+            if (query.maxPrice) filters.myPrice = { ...filters.myPrice, $lte: parseFloat(query.maxPrice) };
             if (query.categories && Array.isArray(query.categories)) {
-                filters.category = {$in: query.categories};
+                filters.category = { $in: query.categories };
             }
             break;
     }

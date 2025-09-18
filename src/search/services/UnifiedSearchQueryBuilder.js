@@ -8,7 +8,7 @@
  * based on entity-specific configurations.
  */
 
-import {FILTER_OPERATORS, SEARCH_CONFIGS} from '@/search/services/searchConfigurations.js';
+import { FILTER_OPERATORS, SEARCH_CONFIGS } from '@/search/services/searchConfigurations.js';
 
 class UnifiedSearchQueryBuilder {
     constructor() {
@@ -136,7 +136,7 @@ class UnifiedSearchQueryBuilder {
         if (config.filters?.computed?.includes('priceNumeric')) {
             pipeline.push({
                 $addFields: {
-                    priceNumeric: {$toDouble: '$price'}
+                    priceNumeric: { $toDouble: '$price' }
                 }
             });
         }
@@ -165,7 +165,7 @@ class UnifiedSearchQueryBuilder {
 
         if (matchConditions.length > 0) {
             pipeline.push({
-                $match: matchConditions.length > 1 ? {$and: matchConditions} : matchConditions[0]
+                $match: matchConditions.length > 1 ? { $and: matchConditions } : matchConditions[0]
             });
         }
 
@@ -178,8 +178,8 @@ class UnifiedSearchQueryBuilder {
 
         // Add sorting stage
         const sortStage = query && config.scoring?.querySort
-            ? {$sort: config.scoring.querySort}
-            : {$sort: config.scoring?.defaultSort || {_id: 1}};
+            ? { $sort: config.scoring.querySort }
+            : { $sort: config.scoring?.defaultSort || { _id: 1 } };
 
         pipeline.push(sortStage);
 
@@ -198,18 +198,18 @@ class UnifiedSearchQueryBuilder {
             const textConditions = [];
 
             config.fields?.forEach(field => {
-                textConditions.push({[field.name]: this.operators.regex(query)});
+                textConditions.push({ [field.name]: this.operators.regex(query) });
             });
 
             // Add search fields from population
             if (config.population?.searchFields) {
                 config.population.searchFields.forEach(field => {
-                    textConditions.push({[field]: this.operators.regex(query)});
+                    textConditions.push({ [field]: this.operators.regex(query) });
                 });
             }
 
             if (textConditions.length > 0) {
-                matchConditions.push({$or: textConditions});
+                matchConditions.push({ $or: textConditions });
             }
         }
 
@@ -218,9 +218,9 @@ class UnifiedSearchQueryBuilder {
             config.filters.direct.forEach(field => {
                 if (filters[field] !== undefined) {
                     if (field === 'category') {
-                        matchConditions.push({[field]: this.operators.regex(filters[field])});
+                        matchConditions.push({ [field]: this.operators.regex(filters[field]) });
                     } else {
-                        matchConditions.push({[field]: filters[field]});
+                        matchConditions.push({ [field]: filters[field] });
                     }
                 }
             });
@@ -230,13 +230,13 @@ class UnifiedSearchQueryBuilder {
         if (config.filters?.range) {
             config.filters.range.forEach(field => {
                 if (field === 'minGradedPopulation' && filters.minGradedPopulation) {
-                    matchConditions.push({'total_grades.total_graded': this.operators.gte(filters.minGradedPopulation)});
+                    matchConditions.push({ 'total_grades.total_graded': this.operators.gte(filters.minGradedPopulation) });
                 } else if (field === 'minCardCount' && filters.minCardCount) {
-                    matchConditions.push({totalCardsInSet: this.operators.gte(filters.minCardCount)});
+                    matchConditions.push({ totalCardsInSet: this.operators.gte(filters.minCardCount) });
                 } else if (field === 'minGrade10Count' && filters.minGrade10Count) {
-                    matchConditions.push({'total_grades.grade_10': this.operators.gte(filters.minGrade10Count)});
+                    matchConditions.push({ 'total_grades.grade_10': this.operators.gte(filters.minGrade10Count) });
                 } else if (field === 'minAvailable' && filters.minAvailable) {
-                    matchConditions.push({available: this.operators.gte(filters.minAvailable)});
+                    matchConditions.push({ available: this.operators.gte(filters.minAvailable) });
                 } else if (field === 'priceRange' && filters.priceRange) {
                     matchConditions.push({
                         priceNumeric: {
@@ -256,15 +256,15 @@ class UnifiedSearchQueryBuilder {
 
                     if (rangeField === 'yearRange') {
                         matchConditions.push({
-                            year: {$gte: range.start, $lte: range.end}
+                            year: { $gte: range.start, $lte: range.end }
                         });
                     } else if (rangeField === 'gradedPopulationRange') {
                         matchConditions.push({
-                            'total_grades.total_graded': {$gte: range.min, $lte: range.max}
+                            'total_grades.total_graded': { $gte: range.min, $lte: range.max }
                         });
                     } else if (rangeField === 'cardCountRange') {
                         matchConditions.push({
-                            totalCardsInSet: {$gte: range.min, $lte: range.max}
+                            totalCardsInSet: { $gte: range.min, $lte: range.max }
                         });
                     }
                 }
@@ -275,7 +275,7 @@ class UnifiedSearchQueryBuilder {
         if (config.filters?.boolean) {
             config.filters.boolean.forEach(field => {
                 if (field === 'availableOnly' && filters.availableOnly) {
-                    matchConditions.push({available: this.operators.gt(0)});
+                    matchConditions.push({ available: this.operators.gt(0) });
                 }
             });
         }
@@ -318,7 +318,7 @@ class UnifiedSearchQueryBuilder {
             case 'exactMatch':
                 return {
                     $cond: {
-                        if: {$eq: [{$toLower: `$${stage.field}`}, query.toLowerCase()]},
+                        if: { $eq: [{ $toLower: `$${stage.field}` }, query.toLowerCase()] },
                         then: stage.score,
                         else: 0
                     }
@@ -329,7 +329,7 @@ class UnifiedSearchQueryBuilder {
                     $cond: {
                         if: {
                             $regexMatch: {
-                                input: {$toLower: `$${stage.field}`},
+                                input: { $toLower: `$${stage.field}` },
                                 regex: `^${query.toLowerCase()}`
                             }
                         },
@@ -343,7 +343,7 @@ class UnifiedSearchQueryBuilder {
                     $cond: {
                         if: {
                             $regexMatch: {
-                                input: {$toLower: `$${stage.field}`},
+                                input: { $toLower: `$${stage.field}` },
                                 regex: query.toLowerCase()
                             }
                         },
@@ -357,7 +357,7 @@ class UnifiedSearchQueryBuilder {
                     $cond: {
                         if: {
                             $regexMatch: {
-                                input: {$toLower: `$${stage.field}`},
+                                input: { $toLower: `$${stage.field}` },
                                 regex: `\\b${query.toLowerCase()}\\b`
                             }
                         },
@@ -369,8 +369,8 @@ class UnifiedSearchQueryBuilder {
             case 'popularity':
                 return {
                     $cond: {
-                        if: {$gt: [`$${stage.field}`, 0]},
-                        then: {$divide: [`$${stage.field}`, stage.divisor]},
+                        if: { $gt: [`$${stage.field}`, 0] },
+                        then: { $divide: [`$${stage.field}`, stage.divisor] },
                         else: 0
                     }
                 };
@@ -380,11 +380,11 @@ class UnifiedSearchQueryBuilder {
                     $cond: {
                         if: {
                             $regexMatch: {
-                                input: {$toLower: `$${stage.field}`},
+                                input: { $toLower: `$${stage.field}` },
                                 regex: query.toLowerCase()
                             }
                         },
-                        then: {$divide: [stage.base, {$strLenCP: `$${stage.field}`}]},
+                        then: { $divide: [stage.base, { $strLenCP: `$${stage.field}` }] },
                         else: 0
                     }
                 };
@@ -392,8 +392,8 @@ class UnifiedSearchQueryBuilder {
             case 'priceScore':
                 return {
                     $cond: {
-                        if: {$gt: [`$${stage.field}`, 0]},
-                        then: {$divide: [stage.base, `$${stage.field}`]},
+                        if: { $gt: [`$${stage.field}`, 0] },
+                        then: { $divide: [stage.base, `$${stage.field}`] },
                         else: 0
                     }
                 };
@@ -401,8 +401,8 @@ class UnifiedSearchQueryBuilder {
             case 'availabilityScore':
                 return {
                     $cond: {
-                        if: {$gt: [`$${stage.field}`, 0]},
-                        then: {$divide: [`$${stage.field}`, stage.divisor]},
+                        if: { $gt: [`$${stage.field}`, 0] },
+                        then: { $divide: [`$${stage.field}`, stage.divisor] },
                         else: 0
                     }
                 };
@@ -460,7 +460,7 @@ class UnifiedSearchQueryBuilder {
                     });
                 }
 
-                return {...item, score};
+                return { ...item, score };
             })
             .sort((a, b) => {
                 // Primary sort by score

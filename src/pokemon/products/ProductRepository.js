@@ -19,7 +19,7 @@ class ProductRepository extends SearchableRepository {
     constructor() {
         super(Product, {
             entityType: 'products', // Use search configuration key
-            defaultSort: {available: -1, price: 1},
+            defaultSort: { available: -1, price: 1 },
             defaultPopulate: 'setProductId'
         });
     }
@@ -76,20 +76,20 @@ class ProductRepository extends SearchableRepository {
                 {
                     $group: {
                         _id: '$category',
-                        count: {$sum: 1},
-                        totalAvailable: {$sum: '$available'},
-                        averagePrice: {$avg: {$toDouble: '$price'}}
+                        count: { $sum: 1 },
+                        totalAvailable: { $sum: '$available' },
+                        averagePrice: { $avg: { $toDouble: '$price' } }
                     }
                 },
                 {
-                    $sort: {count: -1}
+                    $sort: { count: -1 }
                 },
                 {
                     $project: {
                         category: '$_id',
                         count: 1,
                         totalAvailable: 1,
-                        averagePrice: {$round: ['$averagePrice', 2]},
+                        averagePrice: { $round: ['$averagePrice', 2] },
                         _id: 0
                     }
                 }
@@ -122,16 +122,16 @@ class ProductRepository extends SearchableRepository {
                 {
                     $group: {
                         _id: '$setProductId',
-                        setProductName: {$first: '$setProduct.setProductName'},
-                        uniqueSetProductId: {$first: '$setProduct.uniqueSetProductId'},
-                        count: {$sum: 1},
-                        totalAvailable: {$sum: '$available'},
-                        averagePrice: {$avg: {$toDouble: '$price'}},
-                        categories: {$addToSet: '$category'}
+                        setProductName: { $first: '$setProduct.setProductName' },
+                        uniqueSetProductId: { $first: '$setProduct.uniqueSetProductId' },
+                        count: { $sum: 1 },
+                        totalAvailable: { $sum: '$available' },
+                        averagePrice: { $avg: { $toDouble: '$price' } },
+                        categories: { $addToSet: '$category' }
                     }
                 },
                 {
-                    $sort: {count: -1}
+                    $sort: { count: -1 }
                 },
                 {
                     $project: {
@@ -140,8 +140,8 @@ class ProductRepository extends SearchableRepository {
                         uniqueSetProductId: 1,
                         count: 1,
                         totalAvailable: 1,
-                        averagePrice: {$round: ['$averagePrice', 2]},
-                        categoryCount: {$size: '$categories'},
+                        averagePrice: { $round: ['$averagePrice', 2] },
+                        categoryCount: { $size: '$categories' },
                         _id: 0
                     }
                 }

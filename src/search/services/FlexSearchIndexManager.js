@@ -305,7 +305,7 @@ class FlexSearchIndexManager {
      */
     getIndexStats() {
         if (!this.initialized) {
-            return {initialized: false, stats: null};
+            return { initialized: false, stats: null };
         }
 
         return {
@@ -334,7 +334,7 @@ class FlexSearchIndexManager {
             return [];
         }
 
-        const {limit = 10} = options;
+        const { limit = 10 } = options;
 
         try {
             let index;
@@ -359,7 +359,7 @@ class FlexSearchIndexManager {
             }
 
             // Perform the search using FlexSearch
-            const results = index.search(query.trim(), {limit});
+            const results = index.search(query.trim(), { limit });
 
             // FlexSearch returns results in format: [{ field: "fieldName", result: ["id1", "id2", ...] }, ...]
             // We need to extract all unique IDs from all fields

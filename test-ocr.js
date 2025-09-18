@@ -33,7 +33,7 @@
 
 import path from 'path';
 import fs from 'fs';
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url';
 import fetch from 'node-fetch';
 import FormData from 'form-data';
 
@@ -88,48 +88,48 @@ class ComprehensiveOcrTest {
       // Initialize
       await this.initialize();
 
-      console.log(`\n🔍 Step 1: Finding 10 test images`);
+      console.log('\n🔍 Step 1: Finding 10 test images');
       await this.findTestImages();
 
-      console.log(`\n📤 Step 2: Uploading images via ICR API`);
+      console.log('\n📤 Step 2: Uploading images via ICR API');
       await this.uploadImages();
 
-      console.log(`\n🏷️  Step 3: Extracting PSA labels via API`);
+      console.log('\n🏷️  Step 3: Extracting PSA labels via API');
       await this.extractLabels();
 
-      console.log(`\n🧩 Step 4: Stitching labels via API`);
+      console.log('\n🧩 Step 4: Stitching labels via API');
       await this.stitchLabels();
 
-      console.log(`\n👁️  Step 5: Running OCR processing via API`);
+      console.log('\n👁️  Step 5: Running OCR processing via API');
       await this.processOcr().catch(error => {
         console.error(`⚠️ OCR processing failed: ${error.message}`);
         this.testResults.ocrResults = { error: error.message };
       });
 
-      console.log(`\n📝 Step 6: Distributing text to labels via API`);
+      console.log('\n📝 Step 6: Distributing text to labels via API');
       await this.distributeText().catch(error => {
         console.error(`⚠️ Text distribution failed: ${error.message}`);
         this.testResults.distributionResults = { error: error.message };
       });
 
-      console.log(`\n🎯 Step 7: Matching cards via API`);
+      console.log('\n🎯 Step 7: Matching cards via API');
       await this.matchCards().catch(error => {
         console.error(`⚠️ Card matching failed: ${error.message}`);
         this.testResults.cardMatchingResults = { error: error.message };
       });
 
-      console.log(`\n📊 Step 8: Verifying scan OCR text distribution`);
+      console.log('\n📊 Step 8: Verifying scan OCR text distribution');
       await this.verifyScanOcrText().catch(error => {
         console.error(`⚠️ Scan verification failed: ${error.message}`);
       });
 
-      console.log(`\n📋 Step 9: Collecting comprehensive scan details`);
+      console.log('\n📋 Step 9: Collecting comprehensive scan details');
       await this.collectDetailedResults().catch(error => {
         console.error(`⚠️ Data collection failed: ${error.message}`);
         // Don't store error here as collectDetailedResults already handles errors gracefully
       });
 
-      console.log(`\n💾 Step 10: Saving comprehensive results`);
+      console.log('\n💾 Step 10: Saving comprehensive results');
       await this.saveResults();
 
       // Print final summary
@@ -234,7 +234,7 @@ class ComprehensiveOcrTest {
         const result = await response.json();
 
         // Debug: Log the actual response structure (reduced for clarity)
-        console.log(`DEBUG: Upload response structure:`, {
+        console.log('DEBUG: Upload response structure:', {
           success: result.success,
           message: result.message,
           dataKeys: Object.keys(result.data || {}),
@@ -373,7 +373,7 @@ class ComprehensiveOcrTest {
       }
 
       this.testResults.ocrResults = result;
-      console.log(`✅ OCR processing completed`);
+      console.log('✅ OCR processing completed');
       if (result.data) {
         console.log(`   - Total annotations: ${result.data.totalAnnotations || 0}`);
         console.log(`   - Processing time: ${result.data.processingTimeMs || 0}ms`);
@@ -451,7 +451,7 @@ class ComprehensiveOcrTest {
     };
 
     // Create comprehensive report
-    let report = this.generateTextReport();
+    const report = this.generateTextReport();
 
     // Save to file
     await fs.promises.writeFile(this.resultsFile, report, 'utf-8');
@@ -519,7 +519,7 @@ class ComprehensiveOcrTest {
     if (this.testResults.extractResults) {
       report += '🏷️  LABEL EXTRACTION RESULTS\n';
       report += '-'.repeat(50) + '\n';
-      report += `Status: ✅ API CALL SUCCESSFUL\n`;
+      report += 'Status: ✅ API CALL SUCCESSFUL\n';
       report += `Details: ${JSON.stringify(this.testResults.extractResults, null, 2)}\n`;
       report += '\n';
     }
@@ -528,7 +528,7 @@ class ComprehensiveOcrTest {
     if (this.testResults.stitchResults) {
       report += '🧩 STITCHING RESULTS\n';
       report += '-'.repeat(50) + '\n';
-      report += `Status: ✅ API CALL SUCCESSFUL\n`;
+      report += 'Status: ✅ API CALL SUCCESSFUL\n';
       report += `Stitched Label ID: ${this.testResults.stitchResults.stitchedLabelId}\n`;
       report += `Details: ${JSON.stringify(this.testResults.stitchResults, null, 2)}\n`;
       report += '\n';
@@ -538,7 +538,7 @@ class ComprehensiveOcrTest {
     if (this.testResults.ocrResults) {
       report += '👁️  OCR PROCESSING RESULTS\n';
       report += '-'.repeat(50) + '\n';
-      report += `Status: ✅ API CALL SUCCESSFUL\n`;
+      report += 'Status: ✅ API CALL SUCCESSFUL\n';
       report += `Total Annotations: ${this.testResults.ocrResults.totalAnnotations || 0}\n`;
       report += `Details: ${JSON.stringify(this.testResults.ocrResults, null, 2)}\n`;
       report += '\n';
@@ -548,7 +548,7 @@ class ComprehensiveOcrTest {
     if (this.testResults.distributionResults) {
       report += '📝 TEXT DISTRIBUTION RESULTS\n';
       report += '-'.repeat(50) + '\n';
-      report += `Status: ✅ API CALL SUCCESSFUL\n`;
+      report += 'Status: ✅ API CALL SUCCESSFUL\n';
       if (this.testResults.distributionResults.data) {
         report += `Success Count: ${this.testResults.distributionResults.data.successCount || 0}\n`;
         report += `Total Requested: ${this.testResults.distributionResults.data.totalRequested || 0}\n`;
@@ -563,10 +563,10 @@ class ComprehensiveOcrTest {
       report += '🔍 SCAN OCR TEXT VERIFICATION\n';
       report += '-'.repeat(50) + '\n';
       if (this.testResults.scanVerification.error) {
-        report += `Status: ❌ VERIFICATION FAILED\n`;
+        report += 'Status: ❌ VERIFICATION FAILED\n';
         report += `Error: ${this.testResults.scanVerification.error}\n`;
       } else {
-        report += `Status: ✅ VERIFICATION COMPLETED\n`;
+        report += 'Status: ✅ VERIFICATION COMPLETED\n';
         report += `Total Scans: ${this.testResults.scanVerification.totalScans}\n`;
         report += `Scans with OCR Text: ${this.testResults.scanVerification.scansWithText}\n`;
         report += `Success Rate: ${(this.testResults.scanVerification.successRate * 100).toFixed(1)}%\n`;
@@ -579,7 +579,7 @@ class ComprehensiveOcrTest {
     if (this.testResults.cardMatchingResults) {
       report += '🎯 CARD MATCHING RESULTS\n';
       report += '-'.repeat(50) + '\n';
-      report += `Status: ✅ API CALL SUCCESSFUL\n`;
+      report += 'Status: ✅ API CALL SUCCESSFUL\n';
       if (this.testResults.cardMatchingResults.data) {
         report += `Successful Matches: ${this.testResults.cardMatchingResults.data.successfulMatches || 0}\n`;
         report += `Total Processed: ${this.testResults.cardMatchingResults.data.totalProcessed || 0}\n`;
@@ -607,7 +607,7 @@ class ComprehensiveOcrTest {
           report += `   OCR Text (${scan.ocrText.length} chars): ${scan.ocrText.substring(0, 200)}${scan.ocrText.length > 200 ? '...' : ''}\n`;
           report += `   OCR Confidence: ${scan.confidence || 'N/A'}\n`;
         } else {
-          report += `   OCR Text: No OCR text available\n`;
+          report += '   OCR Text: No OCR text available\n';
         }
 
         if (scan.cardMatches && scan.cardMatches.length > 0) {
@@ -619,7 +619,7 @@ class ComprehensiveOcrTest {
             report += `   Selected Match: ${scan.selectedCardMatch.name || scan.selectedCardMatch.cardName}\n`;
           }
         } else {
-          report += `   Card Matches Found: 0\n`;
+          report += '   Card Matches Found: 0\n';
         }
       });
       report += '\n';
@@ -780,7 +780,7 @@ class ComprehensiveOcrTest {
         console.log(`  ${status} Scan ${i}: ${hash} - ${preview}`);
       });
 
-      console.log(`\n📊 OCR TEXT DISTRIBUTION SUMMARY:`);
+      console.log('\n📊 OCR TEXT DISTRIBUTION SUMMARY:');
       console.log(`  - ${scansWithText}/${allScans.length} scans have OCR text`);
       console.log(`  - Success Rate: ${((scansWithText / allScans.length) * 100).toFixed(1)}%`);
 

@@ -18,5 +18,5 @@ export function validateDateRange(startDate, endDate) {
         throw new Error('Start date cannot be after end date');
     }
 
-    return {startDate: start, endDate: end};
+    return { startDate: start, endDate: end };
 }

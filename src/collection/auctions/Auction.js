@@ -1,8 +1,8 @@
 import mongoose from 'mongoose';
 import activityTrackingPlugin from '@/collection/activities/activityTracking.js';
-import {auctionTransform} from '@/system/schemas/transforms.js';
+import { auctionTransform } from '@/system/schemas/transforms.js';
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 const auctionSchema = new mongoose.Schema({
     topText: {
         type: String,

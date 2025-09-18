@@ -7,7 +7,7 @@
 
 import PsaLabelExtractionService from '@/icr/infrastructure/services/PsaLabelExtractionService.js';
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 
 import OperationManager from '@/system/utilities/OperationManager.js';
 import IcrPathManager from '@/icr/shared/IcrPathManager.js';
@@ -30,7 +30,7 @@ export class IcrLabelExtractionService {
         return OperationManager.executeBatchOperation(
             context,
             ids,
-            async (id, index) => {
+            async (id) => {
                 const scan = await this.gradedCardScanRepository.findById(id);
                 if (!scan) {
                     throw new Error('Scan not found');

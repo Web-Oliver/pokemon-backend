@@ -20,20 +20,20 @@
  * @param {boolean} options.config.trackImageUpdates - Whether to track image changes (default: true)
  */
 function activityTrackingPlugin(schema, options = {}) {
-    const {itemType, config = {}} = options;
+    const { itemType, config = {} } = options;
 
     if (!itemType) {
         throw new Error('activityTrackingPlugin requires an itemType option');
     }
 
-    const {trackCreation = true, trackSales = true, trackPriceUpdates = true, trackImageUpdates = true} = config;
+    const { trackCreation = true, trackSales = true, trackPriceUpdates = true, trackImageUpdates = true } = config;
 
     // Store flags for middleware context
     schema.add({
         _activityTracking: {
-            wasNew: {type: Boolean, default: false},
-            isSaleUpdate: {type: Boolean, default: false},
-            previousState: {type: Object, default: {}}
+            wasNew: { type: Boolean, default: false },
+            isSaleUpdate: { type: Boolean, default: false },
+            previousState: { type: Object, default: {} }
         }
     });
 
@@ -115,7 +115,6 @@ function activityTrackingPlugin(schema, options = {}) {
             if (doc) {
                 try {
                     const update = this.getUpdate();
-                    const filter = this.getFilter();
 
                     // Populate for rich metadata (if cardId exists) with circular reference protection
                     if (doc.cardId && !doc._populated) {
@@ -126,9 +125,9 @@ function activityTrackingPlugin(schema, options = {}) {
                                 populate: {
                                     path: 'setId',
                                     model: 'Set',
-                                    options: {lean: true} // Prevent further population
+                                    options: { lean: true } // Prevent further population
                                 },
-                                options: {lean: true}
+                                options: { lean: true }
                             });
                         } catch (populateError) {
                             console.warn('Population failed in activity tracking, continuing without:', populateError.message);

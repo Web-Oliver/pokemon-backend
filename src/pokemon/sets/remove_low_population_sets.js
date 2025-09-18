@@ -54,7 +54,7 @@ function checkTotalPopulation(filePath) {
 
         if (!data.cards || !Array.isArray(data.cards)) {
             // Return set_name even if no card data, as it might be a valid set without population data.
-            return {hasData: false, psaTotal: 0, setName: data.set_name};
+            return { hasData: false, psaTotal: 0, setName: data.set_name };
         }
 
         const totalPopCard = data.cards.find((card) =>
@@ -63,15 +63,15 @@ function checkTotalPopulation(filePath) {
 
         if (!totalPopCard || !totalPopCard.psa_grades) {
             // Return set_name even if no total population card, might be valid otherwise
-            return {hasData: false, psaTotal: 0, setName: data.set_name};
+            return { hasData: false, psaTotal: 0, setName: data.set_name };
         }
 
         const psaTotal = totalPopCard.psa_grades.psa_total || 0;
 
-        return {hasData: true, psaTotal, setName: data.set_name};
+        return { hasData: true, psaTotal, setName: data.set_name };
     } catch (error) {
         console.error(`Error reading or parsing file ${filePath}: ${error.message}`);
-        return {hasData: false, psaTotal: 0, setName: null}; // Return null setName on error
+        return { hasData: false, psaTotal: 0, setName: null }; // Return null setName on error
     }
 }
 
@@ -148,10 +148,10 @@ function main() {
     const setsToProcess = [];
 
     for (const filePath of allJsonFiles) {
-        const {hasData, psaTotal, setName} = checkTotalPopulation(filePath);
+        const { hasData, psaTotal, setName } = checkTotalPopulation(filePath);
 
         if (setName) { // Only add if set_name was successfully retrieved
-            setsToProcess.push({filePath, hasData, psaTotal, setName});
+            setsToProcess.push({ filePath, hasData, psaTotal, setName });
         } else {
             console.warn(`Skipping file ${path.basename(filePath)} due to error or missing set_name.`);
         }
@@ -167,7 +167,7 @@ function main() {
         console.log('\nRemoving individual set files with low population...');
         let removedCount = 0;
 
-        for (const {filePath} of setsToRemove) {
+        for (const { filePath } of setsToRemove) {
             if (removeFile(filePath)) {
                 removedCount++;
             }
@@ -183,7 +183,7 @@ function main() {
     const existingSetNames = new Set();
 
     for (const filePath of finalExistingJsonFiles) {
-        const {setName} = checkTotalPopulation(filePath);
+        const { setName } = checkTotalPopulation(filePath);
 
         if (setName) {
             existingSetNames.add(setName);

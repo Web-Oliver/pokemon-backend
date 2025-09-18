@@ -78,7 +78,7 @@ class PaginationUtils {
      * @returns {Object} Pagination metadata
      */
     static createOffsetMetadata(params, totalCount, baseUrl) {
-        const {page, limit} = params;
+        const { page, limit } = params;
         const totalPages = Math.ceil(totalCount / limit);
         const hasNextPage = page < totalPages;
         const hasPrevPage = page > 1;
@@ -106,7 +106,7 @@ class PaginationUtils {
      * @returns {Object} Pagination metadata
      */
     static createCursorMetadata(params, items, hasMore, baseUrl) {
-        const {limit, cursor, direction, sort} = params;
+        const { limit, cursor, direction, sort } = params;
 
         let nextCursor = null;
         let prevCursor = null;
@@ -154,7 +154,7 @@ class PaginationUtils {
      * @returns {Object} Link object
      */
     static createOffsetLinks(params, totalCount, baseUrl) {
-        const {page, limit} = params;
+        const { page, limit } = params;
         const totalPages = Math.ceil(totalCount / limit);
         const links = {};
 
@@ -189,7 +189,7 @@ class PaginationUtils {
      * @returns {Object} Link object
      */
     static createCursorLinks(params, nextCursor, prevCursor, baseUrl) {
-        const {limit, sort} = params;
+        const { limit, sort } = params;
         const links = {};
 
         // Self link
@@ -229,7 +229,7 @@ class PaginationUtils {
     static decodeCursor(cursor) {
         try {
             return JSON.parse(Buffer.from(cursor, 'base64').toString('utf8'));
-        } catch (error) {
+        } catch {
             throw new Error('Invalid cursor format');
         }
     }
@@ -244,33 +244,33 @@ class PaginationUtils {
         if (!cursor) return {};
 
         const cursorData = this.decodeCursor(cursor);
-        const {direction = 'ASCENDING', element = 'EXCLUDED'} = cursorData;
+        const { direction = 'ASCENDING', element = 'EXCLUDED' } = cursorData;
 
         const query = {};
         const sortValue = cursorData[sortField];
-        const {id} = cursorData;
+        const { id } = cursorData;
 
         if (direction === 'ASCENDING') {
             if (element === 'EXCLUDED') {
                 query.$or = [
-                    {[sortField]: {$gt: sortValue}},
-                    {[sortField]: sortValue, _id: {$gt: id}}
+                    { [sortField]: { $gt: sortValue } },
+                    { [sortField]: sortValue, _id: { $gt: id } }
                 ];
             } else {
                 query.$or = [
-                    {[sortField]: {$gte: sortValue}},
-                    {[sortField]: sortValue, _id: {$gte: id}}
+                    { [sortField]: { $gte: sortValue } },
+                    { [sortField]: sortValue, _id: { $gte: id } }
                 ];
             }
         } else if (element === 'EXCLUDED') {
             query.$or = [
-                {[sortField]: {$lt: sortValue}},
-                {[sortField]: sortValue, _id: {$lt: id}}
+                { [sortField]: { $lt: sortValue } },
+                { [sortField]: sortValue, _id: { $lt: id } }
             ];
         } else {
             query.$or = [
-                {[sortField]: {$lte: sortValue}},
-                {[sortField]: sortValue, _id: {$lte: id}}
+                { [sortField]: { $lte: sortValue } },
+                { [sortField]: sortValue, _id: { $lte: id } }
             ];
         }
 
@@ -283,7 +283,7 @@ class PaginationUtils {
  * @param {Object} options - Middleware options
  * @returns {Function} Express middleware
  */
-function createPaginationMiddleware(options = {}) {
+function createPaginationMiddleware() {
     return (req, res, next) => {
         // Parse pagination parameters
         req.pagination = PaginationUtils.parseParams(req.query);
@@ -336,7 +336,7 @@ function createPaginationMiddleware(options = {}) {
                 ? PaginationUtils.buildCursorQuery(req.query.cursor, sortField)
                 : {};
 
-            return {...filters, ...cursorQuery};
+            return { ...filters, ...cursorQuery };
         };
 
         next();

@@ -8,7 +8,7 @@
 import IntelligentImageNamingService from '@/icr/infrastructure/services/IntelligentImageNamingService.js';
 import ImageHashService from '@/icr/shared/ImageHashService.js';
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 
 import OperationManager from '@/system/utilities/OperationManager.js';
@@ -36,7 +36,7 @@ export class IcrImageUploadService {
         const batchResult = await OperationManager.executeBatchOperation(
             context,
             imageFiles,
-            async (file, index) => {
+            async (file) => {
                 // Read file from disk (multer disk storage provides path, not buffer)
                 const fileBuffer = await fs.readFile(file.path);
                 const imageHash = ImageHashService.generateHash(fileBuffer);
@@ -51,7 +51,7 @@ export class IcrImageUploadService {
                 await fs.writeFile(filePath, fileBuffer);
 
                 // Check for duplicate first to avoid MongoDB error
-                let gradedCardScan = await this.gradedCardScanRepository.findOne({imageHash});
+                let gradedCardScan = await this.gradedCardScanRepository.findOne({ imageHash });
 
                 if (gradedCardScan) {
                     console.log('DEBUG: Duplicate image detected, returning existing scan:', {
@@ -120,7 +120,7 @@ export class IcrImageUploadService {
         const baseUploadDir = path.join(process.cwd(), 'uploads', 'icr');
         const dirs = ['full-images', 'extracted-labels', 'stitched-images'];
         for (const dir of dirs) {
-            await fs.mkdir(path.join(baseUploadDir, dir), {recursive: true});
+            await fs.mkdir(path.join(baseUploadDir, dir), { recursive: true });
         }
     }
 }

@@ -26,9 +26,9 @@ export class OcrCollectionService {
                 psaLabelId, cardId, matchConfidence, userConfirmed
             });
 
-            // Get PSA label
-            const PsaLabel = (await import('@/icr/infrastructure/persistence/PsaLabel.js')).default;
-            const psaLabel = await PsaLabel.findById(psaLabelId);
+            // Get graded card scan
+            const GradedCardScan = (await import('@/icr/infrastructure/persistence/GradedCardScan.js')).default;
+            const psaLabel = await GradedCardScan.findById(psaLabelId);
 
             if (!psaLabel) {
                 throw new Error('PSA label not found');
@@ -62,8 +62,8 @@ export class OcrCollectionService {
             const psaCard = new PsaGradedCard(psaCardData);
             await psaCard.save();
 
-            // Update PSA label status
-            await PsaLabel.findByIdAndUpdate(psaLabelId, {
+            // Update graded card scan status
+            await GradedCardScan.findByIdAndUpdate(psaLabelId, {
                 $set: {
                     'psaData.approved': true,
                     'psaData.approvedAt': new Date(),
@@ -95,7 +95,7 @@ export class OcrCollectionService {
             };
 
         } catch (error) {
-            Logger.error('OcrCollectionService', 'Match approval failed', error, {psaLabelId, cardId});
+            Logger.error('OcrCollectionService', 'Match approval failed', error, { psaLabelId, cardId });
             throw error;
         }
     }
@@ -145,7 +145,7 @@ export class OcrCollectionService {
             };
 
         } catch (error) {
-            Logger.error('OcrCollectionService', 'Collection item creation failed', error, {psaGradedCardId});
+            Logger.error('OcrCollectionService', 'Collection item creation failed', error, { psaGradedCardId });
             throw error;
         }
     }
@@ -155,9 +155,9 @@ export class OcrCollectionService {
      */
     async deletePsaLabel(id, reason = 'user_request') {
         try {
-            const PsaLabel = (await import('@/icr/infrastructure/persistence/PsaLabel.js')).default;
+            const GradedCardScan = (await import('@/icr/infrastructure/persistence/GradedCardScan.js')).default;
 
-            const psaLabel = await PsaLabel.findById(id);
+            const psaLabel = await GradedCardScan.findById(id);
             if (!psaLabel) {
                 throw new Error('PSA label not found');
             }
@@ -165,8 +165,8 @@ export class OcrCollectionService {
             // Check for associated PSA card
             const associatedPsaCard = await PsaGradedCard.findOne({
                 $or: [
-                    {'originalPsaLabelId': id},
-                    {'certificationNumber': psaLabel.certificationNumber}
+                    { 'originalPsaLabelId': id },
+                    { 'certificationNumber': psaLabel.certificationNumber }
                 ]
             });
 
@@ -175,7 +175,7 @@ export class OcrCollectionService {
             }
 
             // Soft delete
-            await PsaLabel.findByIdAndUpdate(id, {
+            await GradedCardScan.findByIdAndUpdate(id, {
                 $set: {
                     status: 'deleted',
                     deletedAt: new Date(),
@@ -184,7 +184,7 @@ export class OcrCollectionService {
                 }
             });
 
-            Logger.info('OcrCollectionService', 'PSA label deleted', {id, reason});
+            Logger.info('OcrCollectionService', 'PSA label deleted', { id, reason });
 
             return {
                 deletedLabelId: id,
@@ -193,7 +193,7 @@ export class OcrCollectionService {
             };
 
         } catch (error) {
-            Logger.error('OcrCollectionService', 'PSA label deletion failed', error, {id});
+            Logger.error('OcrCollectionService', 'PSA label deletion failed', error, { id });
             throw error;
         }
     }
@@ -232,7 +232,7 @@ export class OcrCollectionService {
      * Create PSA card data object
      * @private
      */
-    createPsaCardData(matchedCard, psaLabel, extractedData, matchConfidence, collectionImagePath, userConfirmed) {
+    createPsaCardData(matchedCard, psaLabel, extractedData, matchConfidence, collectionImagePath) {
         return {
             cardId: matchedCard._id,
             cardName: matchedCard.cardName,

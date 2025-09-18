@@ -5,10 +5,10 @@
  * Returns complete textAnnotations with bounding box coordinates for precise text mapping
  */
 
-import {GoogleVisionOcrProvider} from '@/icr/infrastructure/external/GoogleVisionOcrProvider.js';
-import {ImageStitchingEngine} from '@/icr/shared/ImageStitchingEngine.js';
+import { GoogleVisionOcrProvider } from '@/icr/infrastructure/external/GoogleVisionOcrProvider.js';
+import { ImageStitchingEngine } from '@/icr/shared/ImageStitchingEngine.js';
 import path from 'path';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 import Logger from '@/system/logging/Logger.js';
 
 class IcrStitchingService {
@@ -27,7 +27,7 @@ class IcrStitchingService {
         const dirs = [this.icrUploadsDir, this.stitchedImagesDir];
         for (const dir of dirs) {
             try {
-                await fs.mkdir(dir, {recursive: true});
+                await fs.mkdir(dir, { recursive: true });
             } catch (error) {
                 Logger.error('IcrStitchingService', `Failed to create directory ${dir}:`, error);
             }
@@ -126,8 +126,8 @@ class IcrStitchingService {
                 reusesExistingOcrProvider: true,
                 returnsCoordinateData: true
             };
-        } catch (error) {
-            return {error: 'Failed to get stats'};
+        } catch {
+            return { error: 'Failed to get stats' };
         }
     }
 }

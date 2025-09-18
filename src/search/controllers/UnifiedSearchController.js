@@ -1,4 +1,4 @@
-import {asyncHandler, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 import UnifiedSearchService from '@/search/services/UnifiedSearchService.js';
 import Logger from '@/system/logging/Logger.js';
 
@@ -11,9 +11,7 @@ class UnifiedSearchController {
      * Unified search across multiple types
      */
     search = asyncHandler(async (req, res) => {
-        const operation = 'unifiedSearch';
-        const context = {req, res, operation};
-        const {query, types, type, domain, limit, page, sort, filters} = req.query;
+        const { query, types, type, domain, limit, page, sort, filters } = req.query;
 
         // Allow empty queries for unified search (consistent with individual search endpoints)
         let searchQuery = query;
@@ -83,7 +81,7 @@ class UnifiedSearchController {
                 searchTypes: searchTypes
             });
 
-            let responseData = {
+            const responseData = {
                 success: true,
                 data: results,
                 meta: {
@@ -94,9 +92,9 @@ class UnifiedSearchController {
             };
 
             // Execute before response hooks
-            responseData = // await this.executeHooks('beforeResponse', operation, responseData, context);
+            // responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
 
-                res.status(200).json(responseData);
+            res.status(200).json(responseData);
         } catch (error) {
             // Execute error hooks
             // await this.executeHooks('onError', operation, error, context);
@@ -112,9 +110,7 @@ class UnifiedSearchController {
      * Search suggestions across multiple types
      */
     suggest = asyncHandler(async (req, res) => {
-        const operation = 'suggestions';
-        const context = {req, res, operation};
-        const {query, types, limit} = req.query;
+        const { query, types, limit } = req.query;
 
         Logger.operationStart('Search', 'SUGGESTIONS', {
             query: query,
@@ -136,7 +132,7 @@ class UnifiedSearchController {
 
             // Get suggestions for each type
             for (const type of searchTypes) {
-                results[type] = await this.service.getSuggestions(query, type, {limit: suggestionLimit});
+                results[type] = await this.service.getSuggestions(query, type, { limit: suggestionLimit });
             }
 
             // Execute after operation hooks
@@ -147,7 +143,7 @@ class UnifiedSearchController {
                 totalSuggestions: Object.values(results).reduce((sum, suggestions) => sum + suggestions.length, 0)
             });
 
-            let responseData = {
+            const responseData = {
                 success: true,
                 data: results,
                 meta: {
@@ -158,9 +154,9 @@ class UnifiedSearchController {
             };
 
             // Execute before response hooks
-            responseData = // await this.executeHooks('beforeResponse', operation, responseData, context);
+            // responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
 
-                res.status(200).json(responseData);
+            res.status(200).json(responseData);
         } catch (error) {
             // Execute error hooks
             // await this.executeHooks('onError', operation, error, context);
@@ -176,8 +172,6 @@ class UnifiedSearchController {
      * Search statistics across all searchable types
      */
     getStats = asyncHandler(async (req, res) => {
-        const operation = 'getStats';
-        const context = {req, res, operation};
 
         Logger.operationStart('Search', 'GET STATS', {});
 
@@ -212,15 +206,15 @@ class UnifiedSearchController {
                 totalEntities: cardCount + setCount + productCount + setProductCount
             });
 
-            let responseData = {
+            const responseData = {
                 success: true,
                 data: stats
             };
 
             // Execute before response hooks
-            responseData = // await this.executeHooks('beforeResponse', operation, responseData, context);
+            // responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
 
-                res.status(200).json(responseData);
+            res.status(200).json(responseData);
         } catch (error) {
             // Execute error hooks
             // await this.executeHooks('onError', operation, error, context);

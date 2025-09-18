@@ -1,6 +1,6 @@
 import Card from '@/pokemon/cards/Card.js';
 import Set from '@/pokemon/sets/Set.js';
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 import Logger from '@/system/logging/Logger.js';
 
 /**
@@ -73,7 +73,7 @@ class CardService {
     static async findOrCreateSet(setName, year) {
         try {
             // Find existing set
-            const existingSet = await Set.findOne({setName});
+            const existingSet = await Set.findOne({ setName });
 
             if (existingSet) {
                 return existingSet;
@@ -100,7 +100,7 @@ class CardService {
             return savedSet;
 
         } catch (error) {
-            Logger.error('CardService', `Error in findOrCreateSet: ${error.message}`, {setName, year});
+            Logger.error('CardService', `Error in findOrCreateSet: ${error.message}`, { setName, year });
             throw error;
         }
     }
@@ -146,7 +146,7 @@ class CardService {
                 }
             }
 
-            const updatedItem = await model.findByIdAndUpdate(id, updateData, {new: true});
+            const updatedItem = await model.findByIdAndUpdate(id, updateData, { new: true });
 
             Logger.info('CardService', `Updated ${entityType}: ${id} in ${Date.now() - startTime}ms`);
             return updatedItem;

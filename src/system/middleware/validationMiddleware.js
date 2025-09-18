@@ -22,7 +22,7 @@ const validate = (validations) => {
         });
 
         if (errors.length > 0) {
-            console.error('🔴 VALIDATE MIDDLEWARE: Validation failed', {errors});
+            console.error('🔴 VALIDATE MIDDLEWARE: Validation failed', { errors });
             return res.status(400).json({
                 success: false,
                 error: {
@@ -85,7 +85,7 @@ class ValidationChain {
     exists() {
         this.validators.push((value, field) => {
             if (value === undefined || value === null || value === '') {
-                return {field, message: `${field} is required`};
+                return { field, message: `${field} is required` };
             }
             return null;
         });
@@ -95,7 +95,7 @@ class ValidationChain {
     isString() {
         this.validators.push((value, field) => {
             if (value !== undefined && typeof value !== 'string') {
-                return {field, message: `${field} must be a string`};
+                return { field, message: `${field} must be a string` };
             }
             return null;
         });
@@ -107,10 +107,10 @@ class ValidationChain {
             if (value === undefined) return null;
             const length = String(value).length;
             if (options.min && length < options.min) {
-                return {field, message: `${field} must be at least ${options.min} characters`};
+                return { field, message: `${field} must be at least ${options.min} characters` };
             }
             if (options.max && length > options.max) {
-                return {field, message: `${field} must be at most ${options.max} characters`};
+                return { field, message: `${field} must be at most ${options.max} characters` };
             }
             return null;
         });
@@ -120,7 +120,7 @@ class ValidationChain {
     matches(pattern) {
         this.validators.push((value, field) => {
             if (value !== undefined && !pattern.test(String(value))) {
-                return {field, message: `${field} format is invalid`};
+                return { field, message: `${field} format is invalid` };
             }
             return null;
         });
@@ -130,7 +130,7 @@ class ValidationChain {
     isObjectId() {
         this.validators.push((value, field) => {
             if (value !== undefined && !ValidatorFactory.isValidObjectId(value)) {
-                return {field, message: `${field} must be a valid ObjectId`};
+                return { field, message: `${field} must be a valid ObjectId` };
             }
             return null;
         });
@@ -142,13 +142,13 @@ class ValidationChain {
             if (value === undefined) return null;
             const num = parseInt(value, 10);
             if (isNaN(num)) {
-                return {field, message: `${field} must be an integer`};
+                return { field, message: `${field} must be an integer` };
             }
             if (options.min !== undefined && num < options.min) {
-                return {field, message: `${field} must be at least ${options.min}`};
+                return { field, message: `${field} must be at least ${options.min}` };
             }
             if (options.max !== undefined && num > options.max) {
-                return {field, message: `${field} must be at most ${options.max}`};
+                return { field, message: `${field} must be at most ${options.max}` };
             }
             return null;
         });
@@ -158,7 +158,7 @@ class ValidationChain {
     isIn(values) {
         this.validators.push((value, field) => {
             if (value !== undefined && !values.includes(value)) {
-                return {field, message: `${field} must be one of: ${values.join(', ')}`};
+                return { field, message: `${field} must be one of: ${values.join(', ')}` };
             }
             return null;
         });
@@ -168,16 +168,16 @@ class ValidationChain {
     custom(validator) {
         this.validators.push(async (value, field, req) => {
             try {
-                const result = await validator(value, {req, location: this.location, path: this.field});
+                const result = await validator(value, { req, location: this.location, path: this.field });
                 if (result === true || result === undefined) {
                     return null;
                 }
                 if (typeof result === 'string') {
-                    return {field, message: result};
+                    return { field, message: result };
                 }
                 return result;
             } catch (error) {
-                return {field, message: error.message};
+                return { field, message: error.message };
             }
         });
         return this;
@@ -206,17 +206,17 @@ const body = (field) => new ValidationChain(field, 'body');
 export const validationMiddlewares = {
     // Search endpoint validation
     validateSearchEndpoint: validate([
-        query('query').optional().isString().isLength({max: 500}),
+        query('query').optional().isString().isLength({ max: 500 }),
         query('types').optional().isString(),
-        query('limit').optional().isInt({min: 1, max: 1000}),
-        query('page').optional().isInt({min: 1}),
+        query('limit').optional().isInt({ min: 1, max: 1000 }),
+        query('page').optional().isInt({ min: 1 }),
         query('sort').optional().isString(),
         query('filters').optional().isString()
     ]),
 
     // Search query validation
     validateSearchQuery: validate([
-        query('query').exists().isString().isLength({min: 1, max: 500})
+        query('query').exists().isString().isLength({ min: 1, max: 500 })
     ]),
 
     // ObjectId parameter validation
@@ -228,8 +228,8 @@ export const validationMiddlewares = {
 
     // Pagination validation
     validatePaginationQuery: validate([
-        query('page').optional().isInt({min: 1}),
-        query('limit').optional().isInt({min: 1, max: 1000})
+        query('page').optional().isInt({ min: 1 }),
+        query('limit').optional().isInt({ min: 1, max: 1000 })
     ]),
 
     // Export body validation
@@ -240,12 +240,12 @@ export const validationMiddlewares = {
 
     // ICR upload session validation
     validateUploadSessionId: validate([
-        param('uploadSessionId').exists().isString().isLength({min: 3, max: 50})
+        param('uploadSessionId').exists().isString().isLength({ min: 3, max: 50 })
     ]),
 
     // ICR OCR request validation
     validateOcrRequest: validate([
-        body('stitchedImagePath').optional().isString().isLength({max: 500})
+        body('stitchedImagePath').optional().isString().isLength({ max: 500 })
     ]),
 
     // ICR distribute request validation - ocrResult is optional for auto-lookup
@@ -322,9 +322,9 @@ export const validationMiddlewares = {
                 const GradedCardScanRepository = (await import('../../icr/infrastructure/repositories/GradedCardScanRepository.js')).default;
                 const repository = new GradedCardScanRepository();
 
-                console.log('🔍 VALIDATION DEBUG: Querying scans for hashes...', {hashCount: value.length});
+                console.log('🔍 VALIDATION DEBUG: Querying scans for hashes...', { hashCount: value.length });
                 const scans = await repository.findMany({
-                    imageHash: {$in: value}
+                    imageHash: { $in: value }
                 });
 
                 console.log('🔍 VALIDATION DEBUG: Found scans:', {
@@ -373,6 +373,6 @@ export const createValidationMiddleware = (validationChains) => {
 };
 
 // Export individual validator factories
-export {param, query, body, validate};
+export { param, query, body, validate };
 
 export default createValidationMiddleware;

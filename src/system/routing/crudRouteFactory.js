@@ -1,5 +1,5 @@
 import express from 'express';
-import {validationMiddlewares} from '@/system/middleware/validationMiddleware.js';
+import { validationMiddlewares } from '@/system/middleware/validationMiddleware.js';
 
 /**
  * CRUD Route Factory
@@ -30,8 +30,7 @@ function createCRUDRoutes(controller, options = {}) {
         includeMarkAsSold = true,
         middleware = [],
         routeMiddleware = {},
-        customRoutes = [],
-        routeOptions = {}
+        customRoutes = []
     } = options;
 
     const router = express.Router();
@@ -103,7 +102,7 @@ function createCRUDRoutes(controller, options = {}) {
 
     // Add custom routes
     customRoutes.forEach((route) => {
-        const {method = 'get', path, handler, middleware: routeSpecificMiddleware = []} = route;
+        const { method = 'get', path, handler, middleware: routeSpecificMiddleware = [] } = route;
 
         const handlerFunction = typeof handler === 'string' ? controller[handler] : handler;
 
@@ -125,7 +124,7 @@ function createCRUDRoutes(controller, options = {}) {
  * @returns {express.Router} - Configured Express router
  */
 function createReadOnlyRoutes(controller, options = {}) {
-    const {middleware = [], routeMiddleware = {}, customRoutes = []} = options;
+    const { middleware = [], routeMiddleware = {}, customRoutes = [] } = options;
 
     const router = express.Router();
 
@@ -146,7 +145,7 @@ function createReadOnlyRoutes(controller, options = {}) {
 
     // Add custom routes
     customRoutes.forEach((route) => {
-        const {method = 'get', path, handler, middleware: routeSpecificMiddleware = []} = route;
+        const { method = 'get', path, handler, middleware: routeSpecificMiddleware = [] } = route;
 
         const handlerFunction = typeof handler === 'string' ? controller[handler] : handler;
 
@@ -196,13 +195,13 @@ function createReferenceDataRoutes(controller, options = {}) {
  * @returns {express.Router} - Configured Express router
  */
 function createSearchableRoutes(controller, options = {}) {
-    const {searchRoutes = []} = options;
+    const { searchRoutes = [] } = options;
 
     const router = createReadOnlyRoutes(controller, options);
 
     // Add search routes
     searchRoutes.forEach((route) => {
-        const {path = '/search', handler = 'search', method = 'get', middleware: routeSpecificMiddleware = []} = route;
+        const { path = '/search', handler = 'search', method = 'get', middleware: routeSpecificMiddleware = [] } = route;
 
         const handlerFunction = typeof handler === 'string' ? controller[handler] : handler;
 
@@ -242,8 +241,8 @@ const ROUTE_PRESETS = {
         middleware: [],
         routeMiddleware: {},
         customRoutes: [
-            {method: 'get', path: '/stats', handler: 'getStats'},
-            {method: 'post', path: '/:id/read', handler: 'markAsRead'}
+            { method: 'get', path: '/stats', handler: 'getStats' },
+            { method: 'post', path: '/:id/read', handler: 'markAsRead' }
         ]
     },
 
@@ -253,8 +252,8 @@ const ROUTE_PRESETS = {
         middleware: [],
         routeMiddleware: {},
         customRoutes: [
-            {method: 'get', path: '/summary', handler: 'getSummary'},
-            {method: 'get', path: '/export', handler: 'exportData'}
+            { method: 'get', path: '/summary', handler: 'getSummary' },
+            { method: 'get', path: '/export', handler: 'exportData' }
         ]
     }
 };

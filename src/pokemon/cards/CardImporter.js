@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Card from '@/pokemon/cards/Card.js';
 import Set from '@/pokemon/sets/Set.js';
-import {ImportValidationError, ImportValidators} from './validators/ImportValidators.js';
+import { ImportValidationError, ImportValidators } from './validators/ImportValidators.js';
 
 /**
  * Optimized Card MongoDB Importer
@@ -174,15 +174,15 @@ class CardImporter {
                 }
                 return {
                     updateOne: {
-                        filter: {uniquePokemonId: cardData.uniquePokemonId},
-                        update: {$set: cardData},
+                        filter: { uniquePokemonId: cardData.uniquePokemonId },
+                        update: { $set: cardData },
                         upsert: true
                     }
                 };
 
             });
 
-            const result = await Card.bulkWrite(bulkOps, {ordered: false});
+            const result = await Card.bulkWrite(bulkOps, { ordered: false });
 
             this.stats.created += result.insertedCount || 0;
             this.stats.updated += result.modifiedCount || 0;

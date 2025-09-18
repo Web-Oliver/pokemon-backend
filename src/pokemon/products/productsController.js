@@ -10,9 +10,9 @@
  */
 
 import BaseController from '@/system/middleware/BaseController.js';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import Logger from '@/system/logging/Logger.js';
-import {ControllerExportFactory} from '@/system/factories/ControllerExportFactory.js';
+import { ControllerExportFactory } from '@/system/factories/ControllerExportFactory.js';
 
 // Legacy direct model imports - kept for compatibility during transition
 /**
@@ -26,7 +26,7 @@ class ProductsController extends BaseController {
      */
     getAll = asyncHandler(async (req, res) => {
         const operation = 'getAll';
-        const context = {req, res, operation};
+        const context = { req, res, operation };
 
         Logger.operationStart('Products', 'GET ALL', req.query);
 
@@ -35,7 +35,7 @@ class ProductsController extends BaseController {
             await this.executeHooks('beforeOperation', operation, req.query, context);
 
             // Extract query parameters
-            const {name, setName, category, page, limit, q, search, available} = req.query;
+            const { name, setName, category, page, limit, q, search, available } = req.query;
             const searchQuery = q || search || name || setName;
 
             // Build filters
@@ -98,13 +98,13 @@ class ProductsController extends BaseController {
      */
     getById = asyncHandler(async (req, res) => {
         const operation = 'getById';
-        const context = {req, res, operation, entityId: req.params.id};
+        const context = { req, res, operation, entityId: req.params.id };
 
-        Logger.operationStart('Product', 'GET BY ID', {id: req.params.id});
+        Logger.operationStart('Product', 'GET BY ID', { id: req.params.id });
 
         try {
             // Execute before operation hooks
-            await this.executeHooks('beforeOperation', operation, {id: req.params.id}, context);
+            await this.executeHooks('beforeOperation', operation, { id: req.params.id }, context);
 
             // Use ProductService for consistent data access (injected via BaseController)
             const product = await this.service.getProductById(req.params.id);
@@ -112,7 +112,7 @@ class ProductsController extends BaseController {
             // Execute after operation hooks
             await this.executeHooks('afterOperation', operation, product, context);
 
-            Logger.operationSuccess('Product', 'GET BY ID', {productId: product._id});
+            Logger.operationSuccess('Product', 'GET BY ID', { productId: product._id });
 
             let responseData = {
                 success: true,
@@ -126,7 +126,7 @@ class ProductsController extends BaseController {
         } catch (error) {
             // Execute error hooks
             await this.executeHooks('onError', operation, error, context);
-            Logger.operationError('Product', 'GET BY ID', error, {id: req.params.id});
+            Logger.operationError('Product', 'GET BY ID', error, { id: req.params.id });
             throw error;
         }
     });
@@ -136,7 +136,7 @@ class ProductsController extends BaseController {
      */
     getSetNames = asyncHandler(async (req, res) => {
         const operation = 'getSetNames';
-        const context = {req, res, operation};
+        const context = { req, res, operation };
 
         Logger.operationStart('Products', 'GET SET NAMES', req.query);
 
@@ -144,7 +144,7 @@ class ProductsController extends BaseController {
             // Execute before operation hooks
             await this.executeHooks('beforeOperation', operation, req.query, context);
 
-            const {q, search} = req.query;
+            const { q, search } = req.query;
             const searchQuery = q || search;
 
             // Use ProductService for consistent data access (injected via BaseController)
@@ -183,7 +183,7 @@ class ProductsController extends BaseController {
             enableMetrics: true,
             // Custom configuration for products
             defaultLimit: 20,
-            defaultSort: {available: -1, price: 1, _id: 1},
+            defaultSort: { available: -1, price: 1, _id: 1 },
             filterableFields: ['category', 'setName', 'available', 'minPrice', 'maxPrice']
         });
 

@@ -55,7 +55,7 @@ class ActivityTransformService {
      * @returns {Object} API-ready activity object
      */
     static transformForAPI(activity, options = {}) {
-        const {includeMetadata = true, includeVirtuals = true} = options;
+        const { includeMetadata = true, includeVirtuals = true } = options;
 
         const transformed = {
             id: activity._id || activity.id,
@@ -144,7 +144,7 @@ class ActivityTransformService {
      * @returns {Object} Transformed metadata
      */
     static transformMetadataByEntityType(entityType, metadata) {
-        const transformed = {...metadata};
+        const transformed = { ...metadata };
 
         switch (entityType) {
             case 'psa_card':

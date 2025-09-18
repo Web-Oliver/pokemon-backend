@@ -7,8 +7,8 @@
  * - NO direct database access, NO business logic in controller
  */
 
-import {asyncHandler, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
-import {OcrApprovalWorkflowService} from '@/icr/application/services/OcrApprovalWorkflowService.js';
+import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
+import { OcrApprovalWorkflowService } from '@/icr/application/services/OcrApprovalWorkflowService.js';
 import Logger from '@/system/logging/Logger.js';
 
 // Initialize service (should be injected in real implementation)
@@ -60,7 +60,7 @@ const approveOcrForCollection = asyncHandler(async (req, res) => {
  * REFACTORED: Controller only handles HTTP concerns, delegates to service
  */
 const rejectIcrResult = asyncHandler(async (req, res) => {
-    const {id, reason = 'user_rejection'} = req.body;
+    const { id, reason = 'user_rejection' } = req.body;
 
     // Input validation (controller responsibility)
     if (!id) {

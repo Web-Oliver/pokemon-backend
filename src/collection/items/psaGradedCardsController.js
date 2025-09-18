@@ -9,7 +9,7 @@
  * and BaseController infrastructure for consistent API responses and error handling.
  */
 
-import {CollectionControllerFactories} from '@/system/factories/CollectionControllerFactory.js';
+import { CollectionControllerFactories } from '@/system/factories/CollectionControllerFactory.js';
 
 // Create controller using factory - eliminates 50+ lines of duplicate code
 const controller = CollectionControllerFactories.createPsaGradedCardsController();

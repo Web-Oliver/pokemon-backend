@@ -1,9 +1,9 @@
 import Auction from '@/collection/auctions/Auction.js';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
-import {calculateAuctionTotalValue} from './auctionItemHelpers.js';
-import {fetchSingleItem} from '@/collection/items/ItemBatchFetcher.js';
-import {isValidClassName, toAbbreviated} from '@/system/constants/ItemTypeMapper.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
+import { calculateAuctionTotalValue } from './auctionItemHelpers.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
+import { isValidClassName, toAbbreviated } from '@/system/constants/ItemTypeMapper.js';
 import Logger from '@/system/logging/Logger.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 
@@ -17,11 +17,11 @@ const addItemToAuction = asyncHandler(async (req, res) => {
     try {
         ValidatorFactory.validateObjectId(req.params.id, 'Auction ID');
     } catch (error) {
-        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for adding item', error, {auctionId: req.params.id});
+        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for adding item', error, { auctionId: req.params.id });
         throw error;
     }
 
-    const {itemId, itemCategory} = req.body;
+    const { itemId, itemCategory } = req.body;
 
     if (!itemId || !itemCategory) {
         const error = new ValidationError('Both itemId and itemCategory are required');
@@ -35,16 +35,16 @@ const addItemToAuction = asyncHandler(async (req, res) => {
     // Validate item type and find the item
     if (!isValidClassName(itemCategory)) {
         const error = new ValidationError('Invalid itemCategory. Must be one of: SealedProduct, PsaGradedCard, RawCard');
-        Logger.operationError('INVALID_ITEM_CATEGORY', 'Invalid item category for auction', error, {itemCategory});
+        Logger.operationError('INVALID_ITEM_CATEGORY', 'Invalid item category for auction', error, { itemCategory });
         throw error;
     }
 
     const abbreviatedType = toAbbreviated(itemCategory);
-    const collectionItem = await fetchSingleItem(itemId, abbreviatedType, {lean: false});
+    const collectionItem = await fetchSingleItem(itemId, abbreviatedType, { lean: false });
 
     if (!collectionItem) {
         const error = new NotFoundError(`${itemCategory} with ID ${itemId} not found in your collection`);
-        Logger.operationError('ITEM_NOT_FOUND', 'Item not found for auction', error, {itemId, itemCategory});
+        Logger.operationError('ITEM_NOT_FOUND', 'Item not found for auction', error, { itemId, itemCategory });
         throw error;
     }
 
@@ -62,7 +62,7 @@ const addItemToAuction = asyncHandler(async (req, res) => {
     if (!auction) {
         const error = new NotFoundError('Auction not found');
 
-        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for adding item', error, {auctionId: req.params.id});
+        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for adding item', error, { auctionId: req.params.id });
         throw error;
     }
 
@@ -82,7 +82,7 @@ const addItemToAuction = asyncHandler(async (req, res) => {
         throw error;
     }
 
-    auction.items.push({itemId, itemCategory});
+    auction.items.push({ itemId, itemCategory });
 
     // Recalculate total value after adding item
     const previousTotalValue = auction.totalValue;
@@ -112,11 +112,11 @@ const removeItemFromAuction = asyncHandler(async (req, res) => {
     try {
         ValidatorFactory.validateObjectId(req.params.id, 'Auction ID');
     } catch (error) {
-        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for removing item', error, {auctionId: req.params.id});
+        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for removing item', error, { auctionId: req.params.id });
         throw error;
     }
 
-    const {itemId, itemCategory} = req.body;
+    const { itemId, itemCategory } = req.body;
 
     if (!itemId || !itemCategory) {
         const error = new ValidationError('Both itemId and itemCategory are required');
@@ -132,7 +132,7 @@ const removeItemFromAuction = asyncHandler(async (req, res) => {
     if (!auction) {
         const error = new NotFoundError('Auction not found');
 
-        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for removing item', error, {auctionId: req.params.id});
+        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for removing item', error, { auctionId: req.params.id });
         throw error;
     }
 
@@ -194,11 +194,11 @@ const markItemAsSold = asyncHandler(async (req, res) => {
     try {
         ValidatorFactory.validateObjectId(req.params.id, 'Auction ID');
     } catch (error) {
-        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for marking item sold', error, {auctionId: req.params.id});
+        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID for marking item sold', error, { auctionId: req.params.id });
         throw error;
     }
 
-    const {itemId, itemCategory, soldPrice} = req.body;
+    const { itemId, itemCategory, soldPrice } = req.body;
 
     if (!itemId || !itemCategory || soldPrice === undefined || soldPrice === null) {
         const error = new ValidationError('itemId, itemCategory, and soldPrice are required');
@@ -215,7 +215,7 @@ const markItemAsSold = asyncHandler(async (req, res) => {
     if (!auction) {
         const error = new NotFoundError('Auction not found');
 
-        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for marking item sold', error, {auctionId: req.params.id});
+        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found for marking item sold', error, { auctionId: req.params.id });
         throw error;
     }
 

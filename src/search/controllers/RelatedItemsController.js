@@ -1,4 +1,4 @@
-import {asyncHandler, NotFoundError, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler, NotFoundError, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 import mongoose from 'mongoose';
 import BaseController from '@/system/middleware/BaseController.js';
 import Logger from '@/system/logging/Logger.js';
@@ -22,9 +22,9 @@ class RelatedItemsController extends BaseController {
      */
     getRelatedCards = asyncHandler(async (req, res) => {
         const operation = 'getRelatedCards';
-        const context = {req, res, operation};
-        const {cardId} = req.params;
-        const {limit = 10} = req.query;
+        const context = { req, res, operation };
+        const { cardId } = req.params;
+        const { limit = 10 } = req.query;
 
         Logger.operationStart('RelatedItem', 'GET RELATED CARDS', {
             'Card ID': cardId,
@@ -33,7 +33,7 @@ class RelatedItemsController extends BaseController {
 
         try {
             // Execute before operation hooks
-            await this.executeHooks('beforeOperation', operation, {cardId, limit}, context);
+            await this.executeHooks('beforeOperation', operation, { cardId, limit }, context);
 
             if (!cardId) {
                 throw new ValidationError('Card ID is required');
@@ -51,12 +51,12 @@ class RelatedItemsController extends BaseController {
             // 2. Find all other cards in the same set
             const relatedCards = await Card.find({
                 setId: card.setId._id,
-                _id: {$ne: cardId} // Exclude the original card
+                _id: { $ne: cardId } // Exclude the original card
             })
                 .populate('setId', 'setName year')
                 .limit(parseInt(limit, 10))
                 .select('cardName cardNumber imageUrl price sold dateAdded setId')
-                .sort({cardNumber: 1}); // Sort by card number for logical ordering
+                .sort({ cardNumber: 1 }); // Sort by card number for logical ordering
 
             const result = {
                 success: true,
@@ -105,9 +105,9 @@ class RelatedItemsController extends BaseController {
      */
     getRelatedProducts = asyncHandler(async (req, res) => {
         const operation = 'getRelatedProducts';
-        const context = {req, res, operation};
-        const {productId} = req.params;
-        const {limit = 10, type = 'set'} = req.query;
+        const context = { req, res, operation };
+        const { productId } = req.params;
+        const { limit = 10, type = 'set' } = req.query;
 
         Logger.operationStart('RelatedItem', 'GET RELATED PRODUCTS', {
             'Product ID': productId,
@@ -117,7 +117,7 @@ class RelatedItemsController extends BaseController {
 
         try {
             // Execute before operation hooks
-            await this.executeHooks('beforeOperation', operation, {productId, limit, type}, context);
+            await this.executeHooks('beforeOperation', operation, { productId, limit, type }, context);
 
             if (!productId) {
                 throw new ValidationError('Product ID is required');
@@ -140,12 +140,12 @@ class RelatedItemsController extends BaseController {
                 // Find products from the same set
                 relatedProducts = await Product.find({
                     setProductId: product.setProductId._id,
-                    _id: {$ne: productId}
+                    _id: { $ne: productId }
                 })
                     .populate('setProductId', 'name category')
                     .limit(parseInt(limit, 10))
                     .select('name price available imageUrl setProductId')
-                    .sort({name: 1});
+                    .sort({ name: 1 });
             } else if (type === 'category' && product.setProductId?.category) {
                 // Find products in the same category
                 const SetProduct = (await import('@/pokemon/products/SetProduct.js')).default;
@@ -156,13 +156,13 @@ class RelatedItemsController extends BaseController {
                 const setProductIds = categorySetProducts.map(sp => sp._id);
 
                 relatedProducts = await Product.find({
-                    setProductId: {$in: setProductIds},
-                    _id: {$ne: productId}
+                    setProductId: { $in: setProductIds },
+                    _id: { $ne: productId }
                 })
                     .populate('setProductId', 'name category')
                     .limit(parseInt(limit, 10))
                     .select('name price available imageUrl setProductId')
-                    .sort({name: 1});
+                    .sort({ name: 1 });
 
                 relationshipType = 'category';
             }
@@ -213,8 +213,8 @@ class RelatedItemsController extends BaseController {
      */
     getRecommendations = asyncHandler(async (req, res) => {
         const operation = 'getRecommendations';
-        const context = {req, res, operation};
-        const {itemId, itemType = 'card', limit = 10} = req.query;
+        const context = { req, res, operation };
+        const { itemId, itemType = 'card', limit = 10 } = req.query;
 
         Logger.operationStart('RelatedItem', 'GET RECOMMENDATIONS', {
             'Item ID': itemId,
@@ -224,7 +224,7 @@ class RelatedItemsController extends BaseController {
 
         try {
             // Execute before operation hooks
-            await this.executeHooks('beforeOperation', operation, {itemId, itemType, limit}, context);
+            await this.executeHooks('beforeOperation', operation, { itemId, itemType, limit }, context);
 
             if (!itemId) {
                 throw new ValidationError('Item ID is required for recommendations');
@@ -255,13 +255,13 @@ class RelatedItemsController extends BaseController {
                     },
                     {
                         $match: {
-                            _id: {$ne: new mongoose.Types.ObjectId(itemId)},
+                            _id: { $ne: new mongoose.Types.ObjectId(itemId) },
                             'set.year': baseCard.setId.year,
                             variety: baseCard.variety
                         }
                     },
                     {
-                        $sample: {size: recommendationLimit}
+                        $sample: { size: recommendationLimit }
                     },
                     {
                         $project: {
@@ -321,8 +321,8 @@ class RelatedItemsController extends BaseController {
      */
     getTrending = asyncHandler(async (req, res) => {
         const operation = 'getTrending';
-        const context = {req, res, operation};
-        const {type = 'cards', period = 'week', limit = 20} = req.query;
+        const context = { req, res, operation };
+        const { type = 'cards', period = 'week', limit = 20 } = req.query;
 
         Logger.operationStart('RelatedItem', 'GET TRENDING', {
             'Type': type,
@@ -332,7 +332,7 @@ class RelatedItemsController extends BaseController {
 
         try {
             // Execute before operation hooks
-            await this.executeHooks('beforeOperation', operation, {type, period, limit}, context);
+            await this.executeHooks('beforeOperation', operation, { type, period, limit }, context);
 
             const trendingLimit = parseInt(limit, 10);
             const now = new Date();
@@ -360,22 +360,22 @@ class RelatedItemsController extends BaseController {
 
                 // Strategy: Most recently added cards with high prices (indicating demand)
                 trendingItems = await Card.find({
-                    dateAdded: {$gte: startDate},
-                    price: {$exists: true, $gt: 0}
+                    dateAdded: { $gte: startDate },
+                    price: { $exists: true, $gt: 0 }
                 })
                     .populate('setId', 'setName year')
-                    .sort({price: -1, dateAdded: -1})
+                    .sort({ price: -1, dateAdded: -1 })
                     .limit(trendingLimit)
                     .select('cardName cardNumber price imageUrl setId dateAdded');
             } else if (type === 'products') {
                 const Product = (await import('@/pokemon/products/Product.js')).default;
 
                 trendingItems = await Product.find({
-                    dateAdded: {$gte: startDate},
-                    price: {$exists: true, $gt: 0}
+                    dateAdded: { $gte: startDate },
+                    price: { $exists: true, $gt: 0 }
                 })
                     .populate('setProductId', 'name category')
-                    .sort({price: -1, dateAdded: -1})
+                    .sort({ price: -1, dateAdded: -1 })
                     .limit(trendingLimit)
                     .select('name price available imageUrl setProductId dateAdded');
             }

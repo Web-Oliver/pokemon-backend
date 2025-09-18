@@ -26,7 +26,7 @@ class CollectionCrudService extends BaseService {
         const repository = new BaseRepository(Model, {
             entityName: entityType,
             defaultPopulate: CollectionCrudService.getPopulateConfig(entityType),
-            defaultSort: {dateAdded: -1}
+            defaultSort: { dateAdded: -1 }
         });
 
         // Initialize BaseService with repository
@@ -68,23 +68,23 @@ class CollectionCrudService extends BaseService {
         // Call parent validation first
         await super.validateCreateData(data);
 
-        const {cardName, setName, myPrice} = data;
+        const { cardName, setName } = data;
 
         Logger.service(this.entityType, 'validateCreateData', 'Starting collection validation', data);
 
         // Common validation for all entities
         if (cardName || setName) {
             CardService.validateCollectionItemData(data, {
-                cardName: {type: 'string'},
-                setName: {type: 'string'},
-                myPrice: {type: 'number'}
+                cardName: { type: 'string' },
+                setName: { type: 'string' },
+                myPrice: { type: 'number' }
             });
         }
 
         // Entity-specific validation
         switch (this.entityType) {
             case 'PsaGradedCard':
-                ValidatorFactory.number(data.grade, 'Grade', {min: 1, max: 10, integer: true, required: true});
+                ValidatorFactory.number(data.grade, 'Grade', { min: 1, max: 10, integer: true, required: true });
                 break;
             case 'RawCard':
                 ValidatorFactory.enum(data.condition, ['mint', 'near_mint', 'excellent', 'good', 'light_played', 'played', 'poor'], 'Condition');
@@ -148,7 +148,7 @@ class CollectionCrudService extends BaseService {
      */
     async getStatistics() {
         const totalCount = await this.count({});
-        const soldCount = await this.count({sold: true});
+        const soldCount = await this.count({ sold: true });
         const availableCount = totalCount - soldCount;
 
         const stats = {
@@ -162,15 +162,15 @@ class CollectionCrudService extends BaseService {
         switch (this.entityType) {
             case 'PsaGradedCard':
                 const gradeStats = await this.repository.aggregate([
-                    {$group: {_id: '$grade', count: {$sum: 1}}},
-                    {$sort: {_id: 1}}
+                    { $group: { _id: '$grade', count: { $sum: 1 } } },
+                    { $sort: { _id: 1 } }
                 ]);
                 stats.gradeDistribution = gradeStats;
                 break;
             case 'SealedProduct':
                 const categoryStats = await this.repository.aggregate([
-                    {$group: {_id: '$category', count: {$sum: 1}}},
-                    {$sort: {count: -1}}
+                    { $group: { _id: '$category', count: { $sum: 1 } } },
+                    { $sort: { count: -1 } }
                 ]);
                 stats.categoryDistribution = categoryStats;
                 break;

@@ -10,7 +10,7 @@
  * bulkUpdate, and statistics are now provided by the factory.
  */
 
-import {CollectionControllerFactories} from '@/system/factories/CollectionControllerFactory.js';
+import { CollectionControllerFactories } from '@/system/factories/CollectionControllerFactory.js';
 
 // Create controller using factory - eliminates 68+ lines of duplicate code
 const controller = CollectionControllerFactories.createSealedProductsController();

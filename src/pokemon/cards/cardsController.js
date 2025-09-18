@@ -1,6 +1,6 @@
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import BaseController from '@/system/middleware/BaseController.js';
-import {ControllerExportFactory} from '@/system/factories/ControllerExportFactory.js';
+import { ControllerExportFactory } from '@/system/factories/ControllerExportFactory.js';
 
 // Cards Controller using BaseController with plugins
 class CardsController extends BaseController {

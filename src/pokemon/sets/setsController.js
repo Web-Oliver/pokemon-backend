@@ -1,7 +1,7 @@
 import Set from '@/pokemon/sets/Set.js';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import BaseController from '@/system/middleware/BaseController.js';
-import {ControllerExportFactory} from '@/system/factories/ControllerExportFactory.js';
+import { ControllerExportFactory } from '@/system/factories/ControllerExportFactory.js';
 import SearchService from '@/search/services/SearchService.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 
@@ -9,10 +9,10 @@ import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 class SetsController extends BaseController {
     // Custom method for paginated sets with search
     getSetsWithPagination = asyncHandler(async (req, res) => {
-        const {page = 1, limit = 15, q, year} = req.query;
+        const { page = 1, limit = 15, q, year } = req.query;
 
         // Validate pagination parameters
-        const {pageNum, limitNum} = ValidatorFactory.validatePagination(page, limit, 100);
+        const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, 100);
 
         // Build base query
         const baseQuery = {};
@@ -29,7 +29,7 @@ class SetsController extends BaseController {
             const filters = {};
             if (year) filters.year = parseInt(year, 10);
 
-            const searchOptions = {limit: limitNum, page: pageNum};
+            const searchOptions = { limit: limitNum, page: pageNum };
             const searchResults = await this.searchService.searchSets(q.trim(), filters, searchOptions);
             filteredSets = searchResults;
         } else {

@@ -9,13 +9,12 @@
  */
 
 import express from 'express';
-import {validationMiddlewares} from '@/system/middleware/validationMiddleware.js';
+import { validationMiddlewares } from '@/system/middleware/validationMiddleware.js';
 
 // Controllers
-import {getSales, getSalesGraphData, getSalesSummary} from '@/collection/sales/salesController.js';
-import {container, ServiceKeys} from '@/system/dependency-injection/ServiceContainer.js';
-import {getAllProducts, getProductById, getProductSetNames} from '@/pokemon/products/productsController.js';
-import {postToDba} from '@/marketplace/exports/exportController.js';
+import { getSales, getSalesGraphData, getSalesSummary } from '@/collection/sales/salesController.js';
+import { container, ServiceKeys } from '@/system/dependency-injection/ServiceContainer.js';
+import { getAllProducts, getProductById, getProductSetNames } from '@/pokemon/products/productsController.js';
 import {
     getCollectionExportHandler,
     getExportDownloadHandler,
@@ -23,7 +22,7 @@ import {
     getSupportedCollectionExportFormats,
     getSupportedSocialExportTypes
 } from '@/system/configuration/ExportRouteConfiguration.js';
-import {cleanupAllOrphanedImages, cleanupImages, uploadImage, uploadImages} from '@/uploads/uploadController.js';
+import { cleanupAllOrphanedImages, cleanupImages, uploadImage, uploadImages } from '@/uploads/uploadController.js';
 import {
     addItemToAuction,
     createAuction,
@@ -51,41 +50,11 @@ router.get('/health', (req, res, next) => {
     healthController.getSystemHealth(req, res, next);
 });
 
-router.get('/health/detailed', (req, res, next) => {
-    const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
-    healthController.getDetailedHealth(req, res, next);
-});
-
-router.get('/health/ready', (req, res, next) => {
-    const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
-    healthController.getReadiness(req, res, next);
-});
-
-router.get('/health/live', (req, res, next) => {
-    const healthController = container.resolve(ServiceKeys.HEALTH_CONTROLLER);
-    healthController.getLiveness(req, res, next);
-});
 
 // Endpoints Documentation - SOLID & DRY Implementation
 router.get('/endpoints', (req, res, next) => {
     const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
     endpointsController.getEndpoints(req, res, next);
-});
-router.get('/endpoints/summary', (req, res, next) => {
-    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-    endpointsController.getEndpointsSummary(req, res, next);
-});
-router.get('/endpoints/openapi', (req, res, next) => {
-    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-    endpointsController.getOpenApiSpec(req, res, next);
-});
-router.get('/endpoints/category/:categoryName', (req, res, next) => {
-    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-    endpointsController.getCategoryEndpoints(req, res, next);
-});
-router.delete('/endpoints/cache', (req, res, next) => {
-    const endpointsController = container.resolve(ServiceKeys.ENDPOINTS_CONTROLLER);
-    endpointsController.clearCache(req, res, next);
 });
 
 // ================================
@@ -107,7 +76,7 @@ router.get('/products/:id', validationMiddlewares.validateObjectIdParam, getProd
 // ================================
 // Configuration-driven social exports
 router.post('/collections/social-exports', validationMiddlewares.validateExportBody, (req, res, next) => {
-    const {type} = req.body;
+    const { type } = req.body;
     const handler = getSocialExportHandler(type);
 
     if (handler) {
@@ -129,8 +98,8 @@ router.post('/collections/social-exports', validationMiddlewares.validateExportB
 // ================================
 // Configuration-driven collection exports
 router.post('/collections/:type/exports', validationMiddlewares.validateExportBody, (req, res, next) => {
-    const {type} = req.params;
-    const {format} = req.body;
+    const { type } = req.params;
+    const { format } = req.body;
     const handler = getCollectionExportHandler(format, type);
 
     if (handler) {
@@ -150,7 +119,7 @@ router.post('/collections/:type/exports', validationMiddlewares.validateExportBo
 
 // Configuration-driven export downloads
 router.get('/collections/exports/:exportId', (req, res, next) => {
-    const {exportId} = req.params;
+    const { exportId } = req.params;
     const handler = getExportDownloadHandler(exportId);
 
     if (handler) {
@@ -166,10 +135,6 @@ router.get('/collections/exports/:exportId', (req, res, next) => {
     }
 });
 
-// ================================
-// DBA INTEGRATION RESOURCE - REST COMPLIANT
-// ================================
-router.post('/dba/posts', validationMiddlewares.validateExportBody, postToDba);
 
 // ================================
 // UPLOAD ROUTES

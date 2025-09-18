@@ -3,20 +3,20 @@ import mongoose from 'mongoose';
 const setProductSchema = new mongoose.Schema(
     {
         // Set product data
-        setProductName: {type: String, required: true, unique: true},
+        setProductName: { type: String, required: true, unique: true },
 
         // Unique identifier for database rebuilding
-        uniqueSetProductId: {type: Number, required: true, unique: true}
+        uniqueSetProductId: { type: Number, required: true, unique: true }
     },
-    {versionKey: false}
+    { versionKey: false }
 );
 
 // Add set product specific indexes for optimal query performance
 setProductSchema.index(
-    {setProductName: 'text'},
+    { setProductName: 'text' },
     {
         name: 'set_product_text_search',
-        weights: {setProductName: 10},
+        weights: { setProductName: 10 },
         background: true
     }
 ); // Text search with weights

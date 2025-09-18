@@ -13,7 +13,7 @@ export class StitchedLabelRepository extends BaseRepository {
     constructor() {
         super(StitchedLabel, {
             entityName: 'StitchedLabel',
-            defaultSort: {createdAt: -1},
+            defaultSort: { createdAt: -1 },
             defaultLimit: 50
         });
     }
@@ -22,7 +22,7 @@ export class StitchedLabelRepository extends BaseRepository {
      * Find stitched label by image hash
      */
     async findByHash(stitchedImageHash) {
-        return await this.findOne({stitchedImageHash});
+        return await this.findOne({ stitchedImageHash });
     }
 
     /**
@@ -30,7 +30,7 @@ export class StitchedLabelRepository extends BaseRepository {
      */
     async findByHashes(stitchedImageHashes) {
         return await this.findAll({
-            stitchedImageHash: {$in: stitchedImageHashes}
+            stitchedImageHash: { $in: stitchedImageHashes }
         });
     }
 
@@ -52,11 +52,11 @@ export class StitchedLabelRepository extends BaseRepository {
      * Find stitched labels with pagination (override base method)
      */
     async findWithPagination(options = {}) {
-        const {skip = 0, limit = 50, sort = {createdAt: -1}} = options;
+        const { skip = 0, limit = 50, sort = { createdAt: -1 } } = options;
 
         return await this.findAll(
             {},
-            {skip, limit: parseInt(limit, 10), sort}
+            { skip, limit: parseInt(limit, 10), sort }
         );
     }
 
@@ -64,7 +64,7 @@ export class StitchedLabelRepository extends BaseRepository {
      * Find labels by processing status
      */
     async findByStatus(status) {
-        return await this.findAll({processingStatus: status});
+        return await this.findAll({ processingStatus: status });
     }
 
     /**
@@ -72,7 +72,7 @@ export class StitchedLabelRepository extends BaseRepository {
      */
     async deleteManyByIds(labelIds) {
         return await this.deleteMany({
-            _id: {$in: labelIds}
+            _id: { $in: labelIds }
         });
     }
 
@@ -80,7 +80,7 @@ export class StitchedLabelRepository extends BaseRepository {
      * Update label processing status
      */
     async updateStatus(labelId, status) {
-        return await this.update(labelId, {processingStatus: status});
+        return await this.update(labelId, { processingStatus: status });
     }
 
     /**
@@ -89,7 +89,7 @@ export class StitchedLabelRepository extends BaseRepository {
     async findByBatchId(batchId) {
         // For now, find by any matching scan ID - this may need refinement
         return await this.findOne({
-            gradedCardScanIds: {$in: [batchId]}
+            gradedCardScanIds: { $in: [batchId] }
         });
     }
 
@@ -125,7 +125,7 @@ export class StitchedLabelRepository extends BaseRepository {
             {
                 $group: {
                     _id: '$processingStatus',
-                    count: {$sum: 1}
+                    count: { $sum: 1 }
                 }
             }
         ];

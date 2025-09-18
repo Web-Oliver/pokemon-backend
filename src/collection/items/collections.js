@@ -9,8 +9,8 @@
  */
 
 import express from 'express';
-import {createCollectionItemRoutes} from '@/system/routing/crudRouteFactory.js';
-import {createCollectionCache} from '@/system/middleware/cachePresets.js';
+import { createCollectionItemRoutes } from '@/system/routing/crudRouteFactory.js';
+import { createCollectionCache } from '@/system/middleware/cachePresets.js';
 // Import consolidated controllers
 import rawCardController from '@/collection/items/rawCardsController.js';
 import psaGradedCardController from '@/collection/items/psaGradedCardsController.js';
@@ -27,17 +27,17 @@ const COLLECTION_CONFIGS = {
     'raw-cards': {
         controller: rawCardController,
         cachePrefix: 'raw-card',
-        cacheTTL: {list: 300, details: 600} // 5min list, 10min details
+        cacheTTL: { list: 300, details: 600 } // 5min list, 10min details
     },
     'psa-graded-cards': {
         controller: psaGradedCardController,
         cachePrefix: 'psa-card',
-        cacheTTL: {list: 300, details: 600} // 5min list, 10min details
+        cacheTTL: { list: 300, details: 600 } // 5min list, 10min details
     },
     'sealed-products': {
         controller: sealedProductController,
         cachePrefix: 'sealed-product',
-        cacheTTL: {list: 300, details: 600} // 5min list, 10min details
+        cacheTTL: { list: 300, details: 600 } // 5min list, 10min details
     }
 };
 
@@ -69,7 +69,7 @@ const collectionTypes = Object.entries(COLLECTION_CONFIGS).map(([path, config]) 
         customRoutes: []
     });
 
-    return {path, routes};
+    return { path, routes };
 });
 
 // REST-compliant unified collection routes
@@ -141,7 +141,7 @@ router.delete('/collections/:type/:id', (req, res, next) => {
 });
 
 // Legacy routes for backward compatibility
-collectionTypes.forEach(({path, routes}) => {
+collectionTypes.forEach(({ path, routes }) => {
     router.use(`/${path}`, routes);
 });
 

@@ -23,8 +23,8 @@ class ProductService extends BaseService {
         // Create repository for Product model
         const productRepository = new BaseRepository(Product, {
             entityName: 'Product',
-            defaultPopulate: {path: 'setProductId', select: 'setProductName'},
-            defaultSort: {available: -1, price: 1, _id: 1}
+            defaultPopulate: { path: 'setProductId', select: 'setProductName' },
+            defaultSort: { available: -1, price: 1, _id: 1 }
         });
 
         // Initialize BaseService
@@ -43,11 +43,11 @@ class ProductService extends BaseService {
      */
     async validateEntitySpecificCreateData(data) {
         // Validate required product fields
-        ValidatorFactory.string(data.productName, 'Product name', {required: true, maxLength: 255});
-        ValidatorFactory.string(data.category, 'Category', {required: true});
-        ValidatorFactory.string(data.setName, 'Set name', {required: true});
-        ValidatorFactory.number(data.price, 'Price', {required: true, min: 0});
-        ValidatorFactory.number(data.available, 'Available quantity', {min: 0, integer: true});
+        ValidatorFactory.string(data.productName, 'Product name', { required: true, maxLength: 255 });
+        ValidatorFactory.string(data.category, 'Category', { required: true });
+        ValidatorFactory.string(data.setName, 'Set name', { required: true });
+        ValidatorFactory.number(data.price, 'Price', { required: true, min: 0 });
+        ValidatorFactory.number(data.available, 'Available quantity', { min: 0, integer: true });
 
         if (data.setProductId) {
             ValidatorFactory.objectId(data.setProductId, 'Set product reference');
@@ -58,22 +58,22 @@ class ProductService extends BaseService {
      * Product-specific validation for update operations
      * @protected
      */
-    async validateEntitySpecificUpdateData(data, id) {
+    async validateEntitySpecificUpdateData(data) {
         // Validate product fields for updates
         if (data.productName !== undefined) {
-            ValidatorFactory.string(data.productName, 'Product name', {required: true, maxLength: 255});
+            ValidatorFactory.string(data.productName, 'Product name', { required: true, maxLength: 255 });
         }
 
         if (data.category !== undefined) {
-            ValidatorFactory.string(data.category, 'Category', {required: true});
+            ValidatorFactory.string(data.category, 'Category', { required: true });
         }
 
         if (data.price !== undefined) {
-            ValidatorFactory.number(data.price, 'Price', {required: true, min: 0});
+            ValidatorFactory.number(data.price, 'Price', { required: true, min: 0 });
         }
 
         if (data.available !== undefined) {
-            ValidatorFactory.number(data.available, 'Available quantity', {min: 0, integer: true});
+            ValidatorFactory.number(data.available, 'Available quantity', { min: 0, integer: true });
         }
 
         if (data.setProductId !== undefined) {
@@ -99,19 +99,19 @@ class ProductService extends BaseService {
 
         // Handle search-based queries
         if (searchQuery) {
-            return this.searchProducts(searchQuery, filters, {page, limit});
+            return this.searchProducts(searchQuery, filters, { page, limit });
         }
 
         // Build query filters
         const query = this.buildProductQuery(filters);
 
         // Use BaseService findPaginated with enhanced options
-        const {pageNum, limitNum} = ValidatorFactory.validatePagination(page, limit, maxLimit);
+        const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, maxLimit);
 
         const paginatedResults = await this.findPaginated(query, {
             page: pageNum,
             limit: limitNum,
-            sort: {[sortBy]: sortOrder, price: 1, _id: 1},
+            sort: { [sortBy]: sortOrder, price: 1, _id: 1 },
             populate: this.repository.options.defaultPopulate,
             lean: true
         });
@@ -156,17 +156,17 @@ class ProductService extends BaseService {
      * @returns {Promise<Object>} - Search results with metadata
      */
     async searchProducts(searchQuery, filters = {}, options = {}) {
-        Logger.debug('ProductService', 'Searching products', {searchQuery, filters, options});
+        Logger.debug('ProductService', 'Searching products', { searchQuery, filters, options });
 
-        const {page = 1, limit = 50} = options;
-        const {pageNum, limitNum} = ValidatorFactory.validatePagination(page, limit, 100);
+        const { page = 1, limit = 50 } = options;
+        const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, 100);
 
         const searchOptions = {
             limit: limitNum,
             page: pageNum
         };
 
-        const {results, total, page: resultPage, totalPages} = await this.searchService.searchProducts(
+        const { results, total, page: resultPage, totalPages } = await this.searchService.searchProducts(
             searchQuery,
             filters,
             searchOptions
@@ -203,11 +203,11 @@ class ProductService extends BaseService {
      * @returns {Promise<Array>} - Set names with metadata
      */
     async getProductSetNames(searchQuery = null, options = {}) {
-        Logger.debug('ProductService', 'Getting product set names', {searchQuery, options});
+        Logger.debug('ProductService', 'Getting product set names', { searchQuery, options });
 
         if (searchQuery) {
             // Search-based set names extraction
-            const searchResults = await this.searchService.searchProducts(searchQuery, {}, {limit: 100});
+            const searchResults = await this.searchService.searchProducts(searchQuery, {}, { limit: 100 });
             const products = Array.isArray(searchResults) ? searchResults : searchResults.results || [];
 
             // Group products by setName and calculate metadata
@@ -220,7 +220,7 @@ class ProductService extends BaseService {
                         count: 0,
                         totalAvailable: 0,
                         categories: new Set(),
-                        priceRange: {min: Infinity, max: 0}
+                        priceRange: { min: Infinity, max: 0 }
                     };
                 }
 
@@ -255,12 +255,12 @@ class ProductService extends BaseService {
             {
                 $group: {
                     _id: '$setName',
-                    count: {$sum: 1},
-                    totalAvailable: {$sum: '$available'},
-                    categories: {$addToSet: '$category'},
-                    avgPrice: {$avg: '$price'},
-                    minPrice: {$min: '$price'},
-                    maxPrice: {$max: '$price'}
+                    count: { $sum: 1 },
+                    totalAvailable: { $sum: '$available' },
+                    categories: { $addToSet: '$category' },
+                    avgPrice: { $avg: '$price' },
+                    minPrice: { $min: '$price' },
+                    maxPrice: { $max: '$price' }
                 }
             },
             {
@@ -277,7 +277,7 @@ class ProductService extends BaseService {
                     _id: 0
                 }
             },
-            {$sort: {count: -1}}
+            { $sort: { count: -1 } }
         ]);
 
         Logger.debug('ProductService', 'Aggregation-based set names retrieved', {
@@ -298,9 +298,9 @@ class ProductService extends BaseService {
             {
                 $group: {
                     _id: '$category',
-                    count: {$sum: 1},
-                    totalAvailable: {$sum: '$available'},
-                    avgPrice: {$avg: '$price'}
+                    count: { $sum: 1 },
+                    totalAvailable: { $sum: '$available' },
+                    avgPrice: { $avg: '$price' }
                 }
             },
             {
@@ -308,12 +308,12 @@ class ProductService extends BaseService {
                     category: '$_id',
                     count: 1,
                     totalAvailable: 1,
-                    avgPrice: {$round: ['$avgPrice', 2]},
+                    avgPrice: { $round: ['$avgPrice', 2] },
                     _id: 0
                 }
             },
-            {$match: {category: {$ne: null}}},
-            {$sort: {count: -1}}
+            { $match: { category: { $ne: null } } },
+            { $sort: { count: -1 } }
         ]);
 
         Logger.debug('ProductService', 'Categories retrieved', {
@@ -330,33 +330,33 @@ class ProductService extends BaseService {
      * @returns {Promise<Object>} - Category details with products
      */
     async getCategoryDetails(categoryName, options = {}) {
-        Logger.debug('ProductService', 'Getting category details', {categoryName, options});
+        Logger.debug('ProductService', 'Getting category details', { categoryName, options });
 
-        const {limit = 20, page = 1} = options;
-        const {pageNum, limitNum} = ValidatorFactory.validatePagination(page, limit, 100);
+        const { limit = 20, page = 1 } = options;
+        const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, 100);
         const skip = (pageNum - 1) * limitNum;
 
-        const query = {category: categoryName};
+        const query = { category: categoryName };
 
         const [products, totalProducts, categoryStats] = await Promise.all([
             Product.find(query)
                 .populate('setProductId', 'setProductName')
                 .skip(skip)
                 .limit(limitNum)
-                .sort({available: -1, price: 1})
+                .sort({ available: -1, price: 1 })
                 .lean(),
             Product.countDocuments(query),
             Product.aggregate([
-                {$match: query},
+                { $match: query },
                 {
                     $group: {
                         _id: null,
-                        totalProducts: {$sum: 1},
-                        totalAvailable: {$sum: '$available'},
-                        avgPrice: {$avg: '$price'},
-                        minPrice: {$min: '$price'},
-                        maxPrice: {$max: '$price'},
-                        setNames: {$addToSet: '$setName'}
+                        totalProducts: { $sum: 1 },
+                        totalAvailable: { $sum: '$available' },
+                        avgPrice: { $avg: '$price' },
+                        minPrice: { $min: '$price' },
+                        maxPrice: { $max: '$price' },
+                        setNames: { $addToSet: '$setName' }
                     }
                 }
             ])
@@ -412,7 +412,7 @@ class ProductService extends BaseService {
         }
 
         if (filters.available === true || filters.available === 'true') {
-            query.available = {$gt: 0};
+            query.available = { $gt: 0 };
         }
 
         if (filters.minPrice || filters.maxPrice) {

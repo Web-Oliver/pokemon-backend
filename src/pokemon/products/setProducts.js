@@ -9,9 +9,9 @@ import {
     getSetProductByName,
     getSetProductsWithPagination
 } from '@/pokemon/products/setProductsController.js';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import SetProductService from '@/pokemon/products/SetProductService.js';
-import {cachePresets} from '@/system/middleware/cachePresets.js';
+import { cachePresets } from '@/system/middleware/cachePresets.js';
 
 const router = express.Router();
 /**
@@ -36,7 +36,7 @@ router.get('/', cachePresets.setData, getSetProductsWithPagination);
  * @query   {string} sortOrder - Sort order: asc/desc (default: asc)
  */
 router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) => {
-    const {query, page, limit, sortBy, sortOrder} = req.query;
+    const { query, page, limit, sortBy, sortOrder } = req.query;
 
     const service = new SetProductService();
     const results = await service.searchSetProducts({
@@ -77,7 +77,7 @@ router.get('/stats', cachePresets.setData, asyncHandler(async (req, res) => {
  * @query   {string} sortOrder - Sort order: asc/desc (optional, default: desc)
  */
 router.get('/with-counts', cachePresets.setData, asyncHandler(async (req, res) => {
-    const {limit, sortBy, sortOrder} = req.query;
+    const { limit, sortBy, sortOrder } = req.query;
 
     const service = new SetProductService();
     const setProducts = await service.getSetProductsWithCounts({
@@ -119,8 +119,8 @@ router.get('/:id', cachePresets.setDetails, getSetProductById);
  * @query   {boolean} availableOnly - Show only available products (optional)
  */
 router.get('/:id/products', cachePresets.productData, asyncHandler(async (req, res) => {
-    const {id} = req.params;
-    const {page, limit, category, availableOnly} = req.query;
+    const { id } = req.params;
+    const { page, limit, category, availableOnly } = req.query;
 
     const service = new SetProductService();
     const results = await service.getProductsBySetProduct(id, {

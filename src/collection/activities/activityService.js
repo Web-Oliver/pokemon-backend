@@ -5,7 +5,7 @@
  * Integrates with extracted services for clean separation of concerns.
  */
 
-import {Activity, ACTIVITY_TYPES} from '@/collection/activities/Activity.js';
+import { Activity, ACTIVITY_TYPES } from '@/collection/activities/Activity.js';
 import ActivityHelpers from '@/collection/activities/ActivityHelpers.js';
 
 class ActivityService {
@@ -80,7 +80,7 @@ class ActivityService {
             description: `${setName} - Collection item updated`,
             entityType: `${cardType}_card`,
             entityId: cardData._id,
-            metadata: {cardName, setName, changes}
+            metadata: { cardName, setName, changes }
         });
     }
 
@@ -97,7 +97,7 @@ class ActivityService {
             description: `${setName} - Card removed from collection`,
             entityType: `${cardType}_card`,
             entityId: cardData._id,
-            metadata: {cardName, setName}
+            metadata: { cardName, setName }
         });
     }
 
@@ -115,7 +115,7 @@ class ActivityService {
             description: `Price changed from ${oldPrice} to ${newPrice}`,
             entityType: `${cardType}_card`,
             entityId: cardData._id,
-            metadata: {cardName, oldPrice, newPrice, priceChange}
+            metadata: { cardName, oldPrice, newPrice, priceChange }
         });
     }
 
@@ -186,7 +186,7 @@ class ActivityService {
             // Generate PSA card activities
             const psaCards = await PsaGradedCard.find().populate({
                 path: 'cardId',
-                populate: {path: 'setId'}
+                populate: { path: 'setId' }
             }).lean();
 
             for (const card of psaCards) {
@@ -197,7 +197,7 @@ class ActivityService {
             // Generate Raw card activities
             const rawCards = await RawCard.find().populate({
                 path: 'cardId',
-                populate: {path: 'setId'}
+                populate: { path: 'setId' }
             }).lean();
 
             for (const card of rawCards) {

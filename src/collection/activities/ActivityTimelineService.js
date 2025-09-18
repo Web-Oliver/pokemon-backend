@@ -111,7 +111,7 @@ class ActivityTimelineService {
                 return null;
         }
 
-        return startDate ? {$gte: startDate} : null;
+        return startDate ? { $gte: startDate } : null;
     }
 
     /**

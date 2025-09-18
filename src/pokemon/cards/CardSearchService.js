@@ -21,14 +21,14 @@ class CardSearchService extends BaseSearchService {
     async searchCards(query, filters = {}, options = {}) {
         const searchConfig = {
             searchFields: ['cardName', 'cardNumber', 'variety'],
-            searchWeights: {cardName: 3, cardNumber: 2, variety: 1},
+            searchWeights: { cardName: 3, cardNumber: 2, variety: 1 },
             defaultPopulate: 'setId'
         };
 
         // Convert page to offset for BaseSearchService
-        const {page = 1, limit = 20, ...restOptions} = options;
+        const { page = 1, limit = 20, ...restOptions } = options;
         const offset = (page - 1) * limit;
-        const searchOptions = {...restOptions, offset, limit};
+        const searchOptions = { ...restOptions, offset, limit };
 
         const result = await this.performSearch('card', Card, query, filters, searchOptions, searchConfig);
 

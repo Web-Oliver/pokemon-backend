@@ -7,11 +7,11 @@
  * - Dependency Inversion: Depends on service abstractions
  */
 
-import {container, ServiceKeys} from '@/system/dependency-injection/ServiceContainer.js';
+import { container, ServiceKeys } from '@/system/dependency-injection/ServiceContainer.js';
 import ImageHashService from '@/icr/shared/ImageHashService.js';
-import {ImageStitchingEngine} from '@/icr/shared/ImageStitchingEngine.js';
+import { ImageStitchingEngine } from '@/icr/shared/ImageStitchingEngine.js';
 import Logger from '@/system/logging/Logger.js';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 
 import IcrPathManager from '@/icr/shared/IcrPathManager.js';
 
@@ -28,7 +28,7 @@ class IcrStitchingOrchestrator {
 
     async stitchImagesByHashes(imageHashes) {
         try {
-            Logger.operationStart('ICR_STITCH_ORCHESTRATOR', 'Orchestrating stitching workflow', {imageHashes});
+            Logger.operationStart('ICR_STITCH_ORCHESTRATOR', 'Orchestrating stitching workflow', { imageHashes });
 
             // 1. Find and validate scans
             const validationResult = await this.validateScansForStitching(imageHashes);
@@ -36,7 +36,7 @@ class IcrStitchingOrchestrator {
                 return validationResult;
             }
 
-            const {availableScans, labelBuffers} = validationResult;
+            const { availableScans, labelBuffers } = validationResult;
 
             // 2. Create stitched image
             const stitchResult = await this.createVerticalStitchedImage(labelBuffers);
@@ -89,10 +89,10 @@ class IcrStitchingOrchestrator {
     async validateScansForStitching(imageHashes) {
         // Find scans by imageHashes that have extracted labels
         const scans = await this.gradedCardScanRepository.findMany({
-            imageHash: {$in: imageHashes},
+            imageHash: { $in: imageHashes },
             // NO STATUS CHECK - Allow stitching ANY scan with a label
-            labelImage: {$exists: true, $ne: null}
-        }, {sort: {createdAt: -1}}); // FIXED: Sort newest first to match visual top-to-bottom order
+            labelImage: { $exists: true, $ne: null }
+        }, { sort: { createdAt: -1 } }); // FIXED: Sort newest first to match visual top-to-bottom order
 
         if (scans.length === 0) {
             throw new Error('No scans with extracted labels found for provided image hashes');
@@ -126,7 +126,7 @@ class IcrStitchingOrchestrator {
                 const labelBuffer = await fs.readFile(scan.labelImage);
                 labelBuffers.push(labelBuffer);
                 availableScans.push(scan);
-            } catch (error) {
+            } catch {
                 Logger.warn('ICR_STITCH_ORCHESTRATOR', 'Label file not found - skipping', {
                     id: scan._id,
                     labelPath: scan.labelImage,
@@ -139,7 +139,7 @@ class IcrStitchingOrchestrator {
             throw new Error('No label files available for new image hashes');
         }
 
-        return {availableScans, labelBuffers, isDuplicate: false};
+        return { availableScans, labelBuffers, isDuplicate: false };
     }
 
     async getAlreadyStitchedHashes() {
@@ -174,7 +174,7 @@ class IcrStitchingOrchestrator {
 
     async deleteStitchedImage(stitchedId) {
         try {
-            Logger.operationStart('ICR_STITCH_DELETE', 'Deleting stitched image', {stitchedId});
+            Logger.operationStart('ICR_STITCH_DELETE', 'Deleting stitched image', { stitchedId });
 
             const stitched = await this.stitchedLabelRepository.findById(stitchedId);
             if (!stitched) {
@@ -185,10 +185,10 @@ class IcrStitchingOrchestrator {
             try {
                 if (stitched.stitchedImagePath) {
                     await fs.unlink(stitched.stitchedImagePath);
-                    Logger.info('ICR_STITCH_DELETE', 'Deleted stitched image file', {path: stitched.stitchedImagePath});
+                    Logger.info('ICR_STITCH_DELETE', 'Deleted stitched image file', { path: stitched.stitchedImagePath });
                 }
             } catch (error) {
-                Logger.warn('ICR_STITCH_DELETE', 'Failed to delete stitched image file', {error: error.message});
+                Logger.warn('ICR_STITCH_DELETE', 'Failed to delete stitched image file', { error: error.message });
             }
 
             // Delete database record
@@ -198,7 +198,7 @@ class IcrStitchingOrchestrator {
             for (const hash of stitched.labelHashes) {
                 await this.gradedCardScanRepository.updateByHash(hash, {
                     processingStatus: 'extracted',
-                    $unset: {stitchedPosition: 1}
+                    $unset: { stitchedPosition: 1 }
                 });
             }
 

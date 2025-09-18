@@ -72,7 +72,7 @@ export default class BaseSearchController extends BaseController {
     async executeSearchOperation(entityType, req, res, config = {}) {
         const operation = `search${entityType}`;
         const searchType = entityType.toLowerCase();
-        const context = {req, res, operation};
+        const context = { req, res, operation };
 
         const {
             query,
@@ -80,7 +80,6 @@ export default class BaseSearchController extends BaseController {
             page,
             sort,
             populate,
-            exclude,
             ...filters
         } = req.query;
 
@@ -103,7 +102,7 @@ export default class BaseSearchController extends BaseController {
             }
 
             // Build options
-            const options = this.buildSearchOptions({limit, page, sort}, config);
+            const options = this.buildSearchOptions({ limit, page, sort }, config);
 
             // Build filters
             const processedFilters = await this.buildSearchFilters(filters, config);
@@ -167,7 +166,7 @@ export default class BaseSearchController extends BaseController {
     /**
      * Build search options with defaults
      */
-    buildSearchOptions({limit, page, sort}, config) {
+    buildSearchOptions({ limit, page, sort }, config) {
         return {
             limit: limit ? parseInt(limit, 10) : (config.defaultLimit || 20),
             page: page ? parseInt(page, 10) : 1,
@@ -194,8 +193,8 @@ export default class BaseSearchController extends BaseController {
         if (filters.exclude) {
             try {
                 const mongoose = (await import('mongoose')).default;
-                processedFilters._id = {$ne: new mongoose.Types.ObjectId(filters.exclude)};
-            } catch (error) {
+                processedFilters._id = { $ne: new mongoose.Types.ObjectId(filters.exclude) };
+            } catch {
                 // Invalid exclude ID, ignore
             }
         }

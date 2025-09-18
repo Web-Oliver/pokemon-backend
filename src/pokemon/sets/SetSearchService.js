@@ -8,6 +8,8 @@
 
 import Set from '@/pokemon/sets/Set.js';
 import BaseSearchService from '@/search/services/BaseSearchService.js';
+import FlexSearchIndexManager from '@/search/services/FlexSearchIndexManager.js';
+import Logger from '@/system/logging/Logger.js';
 
 class SetSearchService extends BaseSearchService {
     /**
@@ -21,14 +23,14 @@ class SetSearchService extends BaseSearchService {
     async searchSets(query, filters = {}, options = {}) {
         const searchConfig = {
             searchFields: ['setName', 'year'],
-            searchWeights: {setName: 3, year: 1},
+            searchWeights: { setName: 3, year: 1 },
             defaultPopulate: false
         };
 
         // Convert page to offset for BaseSearchService
-        const {page = 1, limit = 20, ...restOptions} = options;
+        const { page = 1, limit = 20, ...restOptions } = options;
         const offset = (page - 1) * limit;
-        const searchOptions = {...restOptions, offset, limit};
+        const searchOptions = { ...restOptions, offset, limit };
 
         const result = await this.performSearch('set', Set, query, filters, searchOptions, searchConfig);
 
@@ -61,7 +63,7 @@ class SetSearchService extends BaseSearchService {
      * @returns {Array} Array of suggestions
      */
     async getSetSuggestions(query, options = {}) {
-        const {limit = 10} = options;
+        const { limit = 10 } = options;
 
         if (!query || query.trim().length < 2) {
             return [];
@@ -84,7 +86,7 @@ class SetSearchService extends BaseSearchService {
 
             if (nameResults.length > 0) {
                 const sets = await Set.find({
-                    _id: {$in: nameResults.slice(0, limit)}
+                    _id: { $in: nameResults.slice(0, limit) }
                 })
                     .select('setName releaseDate')
                     .lean()
@@ -117,7 +119,7 @@ class SetSearchService extends BaseSearchService {
      * @returns {Object} Search results
      */
     async searchByYear(year, options = {}) {
-        const {limit = 50, offset = 0} = options;
+        const { limit = 50, offset = 0 } = options;
 
         Logger.operationStart('SET_SEARCH_BY_YEAR', 'Searching sets by year', {
             year,
@@ -139,7 +141,7 @@ class SetSearchService extends BaseSearchService {
             const sets = await Set.find(filters)
                 .skip(offset)
                 .limit(limit)
-                .sort({releaseDate: -1})
+                .sort({ releaseDate: -1 })
                 .lean()
                 .exec();
 
@@ -175,7 +177,7 @@ class SetSearchService extends BaseSearchService {
      * @returns {Object} Sets with card counts
      */
     async getSetsWithCardCounts(options = {}) {
-        const {limit = 50, offset = 0} = options;
+        const { limit = 50, offset = 0 } = options;
 
         Logger.operationStart('SETS_WITH_CARD_COUNTS', 'Fetching sets with card counts');
 
@@ -191,7 +193,7 @@ class SetSearchService extends BaseSearchService {
                 },
                 {
                     $addFields: {
-                        cardCount: {$size: '$cards'}
+                        cardCount: { $size: '$cards' }
                     }
                 },
                 {
@@ -200,7 +202,7 @@ class SetSearchService extends BaseSearchService {
                     }
                 },
                 {
-                    $sort: {cardCount: -1, setName: 1}
+                    $sort: { cardCount: -1, setName: 1 }
                 },
                 {
                     $skip: offset
@@ -245,17 +247,17 @@ class SetSearchService extends BaseSearchService {
             const pipeline = [
                 {
                     $match: {
-                        releaseDate: {$exists: true, $ne: null}
+                        releaseDate: { $exists: true, $ne: null }
                     }
                 },
                 {
                     $group: {
-                        _id: {$year: '$releaseDate'},
-                        count: {$sum: 1}
+                        _id: { $year: '$releaseDate' },
+                        count: { $sum: 1 }
                     }
                 },
                 {
-                    $sort: {_id: -1}
+                    $sort: { _id: -1 }
                 }
             ];
 
@@ -282,14 +284,14 @@ class SetSearchService extends BaseSearchService {
      * @private
      */
     async _searchAllSets(filters, options) {
-        const {limit, offset, populate} = options;
+        const { limit, offset } = options;
 
         Logger.operationStart('SET_SEARCH_ALL', 'Searching all sets with filters');
 
         const sets = await Set.find(filters)
             .skip(offset)
             .limit(limit)
-            .sort({setName: 1})
+            .sort({ setName: 1 })
             .lean()
             .exec();
 

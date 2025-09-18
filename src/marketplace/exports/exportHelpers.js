@@ -7,7 +7,7 @@
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import SealedProduct from '@/collection/items/SealedProduct.js';
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 
 /**
  * Model configuration for different collection types
@@ -76,7 +76,7 @@ const zipCollectionImages = async (collectionType, ids) => {
     if (ids) {
         const itemIds = ids.split(',').filter((id) => id.trim());
 
-        query._id = {$in: itemIds};
+        query._id = { $in: itemIds };
     }
 
     // Build query with optional population

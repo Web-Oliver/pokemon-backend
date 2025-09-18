@@ -121,7 +121,6 @@ export const responseFormatter = (options = {}) => {
  * Format response data into standardized format
  */
 function formatResponse(data, context) {
-    const {req, res, startTime, version, includeProcessingTime, includeMetrics} = context;
 
     // If data is already in our standard format, enhance it
     if (isStandardFormat(data)) {
@@ -163,7 +162,7 @@ function isStandardFormat(data) {
  * Enhance standard response with metadata
  */
 function enhanceStandardResponse(response, context) {
-    const {req, res, startTime, version, includeProcessingTime, includeMetrics} = context;
+    const { req, res, startTime, version, includeProcessingTime, includeMetrics } = context;
 
     // Ensure meta object exists
     if (!response.meta) {
@@ -200,7 +199,7 @@ function enhanceStandardResponse(response, context) {
  * Create standard response from scratch
  */
 function createStandardResponse(baseResponse, context) {
-    const {req, res, startTime, version, includeProcessingTime, includeMetrics} = context;
+    const { req, res, startTime, version, includeProcessingTime, includeMetrics } = context;
 
     const response = {
         ...baseResponse,
@@ -229,7 +228,7 @@ function createStandardResponse(baseResponse, context) {
 /**
  * Extract operation metadata from request/response
  */
-function getOperationMetadata(req, res) {
+function getOperationMetadata(req) {
     const metadata = {};
 
     // Try to determine operation type from HTTP method and path

@@ -23,7 +23,7 @@ class CardRepository extends SearchableRepository {
                 path: 'setId',
                 model: 'Set'
             },
-            defaultSort: {'grades.grade_total': -1, cardName: 1}
+            defaultSort: { 'grades.grade_total': -1, cardName: 1 }
         });
     }
 
@@ -35,7 +35,7 @@ class CardRepository extends SearchableRepository {
      */
     async findBySetId(setId, options = {}) {
         try {
-            return await this.findAll({setId}, options);
+            return await this.findAll({ setId }, options);
         } catch (error) {
             throw error;
         }
@@ -49,7 +49,7 @@ class CardRepository extends SearchableRepository {
      */
     async findByUniqueSetId(uniqueSetId, options = {}) {
         try {
-            return await this.findAll({uniqueSetId}, options);
+            return await this.findAll({ uniqueSetId }, options);
         } catch (error) {
             throw error;
         }
@@ -71,7 +71,7 @@ class CardRepository extends SearchableRepository {
                 .populate({
                     path: 'setId',
                     model: 'Set',
-                    match: {setName: new RegExp(setName, 'i')}
+                    match: { setName: new RegExp(setName, 'i') }
                 })
                 .sort(options.sort || this.options.defaultSort)
                 .limit(options.limit || 0)
@@ -90,7 +90,7 @@ class CardRepository extends SearchableRepository {
      */
     async findByCardNumber(cardNumber, options = {}) {
         try {
-            return await this.findAll({cardNumber}, options);
+            return await this.findAll({ cardNumber }, options);
         } catch (error) {
             throw error;
         }

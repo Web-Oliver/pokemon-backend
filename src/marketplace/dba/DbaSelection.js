@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 
 /**
  * DBA Selection Model
@@ -10,7 +10,7 @@ const {Schema} = mongoose;
  */
 const dbaSelectionSchema = new mongoose.Schema({
     // Reference to the item (can be PSA, Raw, or Sealed)
-    itemId: {type: Schema.Types.ObjectId, required: true},
+    itemId: { type: Schema.Types.ObjectId, required: true },
     itemType: {
         type: String,
         required: true,
@@ -18,11 +18,11 @@ const dbaSelectionSchema = new mongoose.Schema({
     },
 
     // DBA tracking information
-    selectedDate: {type: Date, default: Date.now},
-    isActive: {type: Boolean, default: true},
+    selectedDate: { type: Date, default: Date.now },
+    isActive: { type: Boolean, default: true },
 
     // Optional metadata
-    notes: {type: String, default: ''},
+    notes: { type: String, default: '' },
 
     // Automatically calculated fields (for convenience)
     expiryDate: {
@@ -37,9 +37,9 @@ const dbaSelectionSchema = new mongoose.Schema({
 
 // Index for efficient querying
 try {
-    dbaSelectionSchema.index({itemId: 1, itemType: 1}, {unique: true, background: true});
-    dbaSelectionSchema.index({isActive: 1}, {background: true});
-    dbaSelectionSchema.index({expiryDate: 1}, {background: true});
+    dbaSelectionSchema.index({ itemId: 1, itemType: 1 }, { unique: true, background: true });
+    dbaSelectionSchema.index({ isActive: 1 }, { background: true });
+    dbaSelectionSchema.index({ expiryDate: 1 }, { background: true });
 } catch (error) {
     console.error('[DbaSelection] Failed to create indexes:', error);
 }
@@ -61,13 +61,13 @@ dbaSelectionSchema.virtual('daysSelected').get(function () {
 });
 
 // Ensure virtuals are included in JSON output
-dbaSelectionSchema.set('toJSON', {virtuals: true});
+dbaSelectionSchema.set('toJSON', { virtuals: true });
 
 // Static method to get active selections
 dbaSelectionSchema.statics.getActiveSelections = function () {
     return this.find({
         isActive: true,
-        expiryDate: {$gt: new Date()}
+        expiryDate: { $gt: new Date() }
     });
 };
 
@@ -75,7 +75,7 @@ dbaSelectionSchema.statics.getActiveSelections = function () {
 dbaSelectionSchema.statics.getExpiredSelections = function () {
     return this.find({
         isActive: true,
-        expiryDate: {$lte: new Date()}
+        expiryDate: { $lte: new Date() }
     });
 };
 
@@ -85,7 +85,7 @@ dbaSelectionSchema.statics.getExpiringSoon = function (days = 10) {
 
     return this.find({
         isActive: true,
-        expiryDate: {$gt: new Date(), $lte: cutoffDate}
+        expiryDate: { $gt: new Date(), $lte: cutoffDate }
     });
 };
 

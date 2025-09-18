@@ -31,10 +31,10 @@ class MainImporter {
         this.stats = {
             startTime: new Date(),
             endTime: null,
-            setProducts: {created: 0, updated: 0, skipped: 0, errors: 0},
-            sets: {created: 0, updated: 0, skipped: 0, errors: 0},
-            products: {created: 0, updated: 0, skipped: 0, errors: 0},
-            cards: {created: 0, updated: 0, skipped: 0, errors: 0}
+            setProducts: { created: 0, updated: 0, skipped: 0, errors: 0 },
+            sets: { created: 0, updated: 0, skipped: 0, errors: 0 },
+            products: { created: 0, updated: 0, skipped: 0, errors: 0 },
+            cards: { created: 0, updated: 0, skipped: 0, errors: 0 }
         };
     }
 

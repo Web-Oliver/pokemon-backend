@@ -10,13 +10,13 @@
  */
 
 import BaseController from '@/system/middleware/BaseController.js';
-import {asyncHandler, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 import Logger from '@/system/logging/Logger.js';
 import path from 'path';
 import fs from 'fs';
 
 // Legacy imports - maintained for backward compatibility
-import {DbaExportService} from '@/marketplace/dba/dbaExportService.js';
+import { DbaExportService } from '@/marketplace/dba/dbaExportService.js';
 
 /**
  * Enhanced Export Controller using BaseController pattern
@@ -44,9 +44,9 @@ class ExportController extends BaseController {
      */
     exportToDba = asyncHandler(async (req, res) => {
         const operation = 'exportToDba';
-        const context = {req, res, operation};
+        const context = { req, res, operation };
 
-        const {items, customDescription = '', includeMetadata = true} = req.body;
+        const { items, customDescription = '', includeMetadata = true } = req.body;
 
         Logger.operationStart('Export', 'DBA EXPORT', {
             itemCount: items?.length || 0,
@@ -91,14 +91,14 @@ class ExportController extends BaseController {
      */
     downloadDbaZip = asyncHandler(async (req, res) => {
         const operation = 'downloadDbaZip';
-        const context = {req, res, operation};
+        const context = { req, res, operation };
 
         const dataFolder = path.join(process.cwd(), 'data');
 
-        Logger.operationStart('Export', 'DBA DOWNLOAD', {dataFolder});
+        Logger.operationStart('Export', 'DBA DOWNLOAD', { dataFolder });
 
         try {
-            await this.executeHooks('beforeOperation', operation, {dataFolder}, context);
+            await this.executeHooks('beforeOperation', operation, { dataFolder }, context);
 
             if (!fs.existsSync(dataFolder)) {
                 throw new ValidationError('No DBA export data found. Please generate export first.');
@@ -110,7 +110,7 @@ class ExportController extends BaseController {
             const timestamp = new Date().toISOString().split('T')[0];
             const filename = `dba-export-${timestamp}.zip`;
 
-            await this.executeHooks('afterOperation', operation, {filename, size: zipBuffer.length}, context);
+            await this.executeHooks('afterOperation', operation, { filename, size: zipBuffer.length }, context);
 
             Logger.operationSuccess('Export', 'DBA DOWNLOAD', {
                 filename,
@@ -127,54 +127,6 @@ class ExportController extends BaseController {
             await this.executeHooks('onError', operation, error, context);
             Logger.operationError('Export', 'DBA DOWNLOAD', error, {
                 dataFolderExists: fs.existsSync(dataFolder)
-            });
-            throw error;
-        }
-    });
-    /**
-     * Export collection items and post directly to DBA.dk
-     * POST /api/export/dba/post
-     */
-    postToDba = asyncHandler(async (req, res) => {
-        const operation = 'postToDba';
-        const context = {req, res, operation};
-
-        const {items, customDescription = '', dryRun = false} = req.body;
-
-        Logger.operationStart('Export', 'DBA POST', {
-            itemCount: items?.length || 0,
-            dryRun
-        });
-
-        try {
-            await this.executeHooks('beforeOperation', operation, req.body, context);
-
-            const result = await this.service.postToDba(items, {
-                customDescription,
-                dryRun
-            });
-
-            await this.executeHooks('afterOperation', operation, result, context);
-
-            Logger.operationSuccess('Export', 'DBA POST', {
-                itemCount: result.data?.totalItemsProcessed || 0,
-                dryRun
-            });
-
-            let responseData = {
-                success: true,
-                message: dryRun ? 'DBA export test completed successfully' : 'Items exported and posted to DBA.dk successfully',
-                data: result.data
-            };
-
-            responseData = await this.executeHooks('beforeResponse', operation, responseData, context);
-            res.status(200).json(responseData);
-        } catch (error) {
-            await this.executeHooks('onError', operation, error, context);
-            Logger.operationError('Export', 'DBA POST', error, {
-                itemCount: items?.length || 0,
-                dryRun,
-                customDescription: customDescription?.length || 0
             });
             throw error;
         }
@@ -198,9 +150,9 @@ class ExportController extends BaseController {
      */
     createZipExportMethod(collectionType) {
         const operationMap = {
-            'psa-cards': {operation: 'zipPsaCards', displayName: 'ZIP PSA CARDS'},
-            'raw-cards': {operation: 'zipRawCards', displayName: 'ZIP RAW CARDS'},
-            'sealed-products': {operation: 'zipSealedProducts', displayName: 'ZIP SEALED PRODUCTS'}
+            'psa-cards': { operation: 'zipPsaCards', displayName: 'ZIP PSA CARDS' },
+            'raw-cards': { operation: 'zipRawCards', displayName: 'ZIP RAW CARDS' },
+            'sealed-products': { operation: 'zipSealedProducts', displayName: 'ZIP SEALED PRODUCTS' }
         };
 
         const config = operationMap[collectionType];
@@ -210,14 +162,14 @@ class ExportController extends BaseController {
 
         return asyncHandler(async (req, res) => {
             const operation = config.operation;
-            const context = {req, res, operation};
+            const context = { req, res, operation };
 
             Logger.operationStart('Export', config.displayName, req.query);
 
             try {
                 await this.executeHooks('beforeOperation', operation, req.query, context);
 
-                const {ids} = req.query;
+                const { ids } = req.query;
                 const result = await this.service.exportToZip(collectionType, ids);
 
                 await this.executeHooks('afterOperation', operation, result, context);
@@ -259,9 +211,8 @@ const zipRawCardImages = (req, res, next) => getController().zipRawCardImages(re
 const zipSealedProductImages = (req, res, next) => getController().zipSealedProductImages(req, res, next);
 const exportToDba = (req, res, next) => getController().exportToDba(req, res, next);
 const downloadDbaZip = (req, res, next) => getController().downloadDbaZip(req, res, next);
-const postToDba = (req, res, next) => getController().postToDba(req, res, next);
-const getDbaStatus = (req, res, next) => getController().getDbaStatus(req, res, next);
-const testDbaIntegration = (req, res, next) => getController().testDbaIntegration(req, res, next);
+// const getDbaStatus = (req, res, next) => getController().getDbaStatus(req, res, next);
+// const testDbaIntegration = (req, res, next) => getController().testDbaIntegration(req, res, next);
 
 // Export individual methods for route compatibility
 export {
@@ -269,12 +220,9 @@ export {
     zipRawCardImages,
     zipSealedProductImages,
     exportToDba,
-    downloadDbaZip,
-    postToDba
+    downloadDbaZip
 };
 
-// Export controller instance accessor for advanced usage
-export const getExportController = getController;
 
 // Default export for backward compatibility
 export default zipPsaCardImages;

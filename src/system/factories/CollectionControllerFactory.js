@@ -16,9 +16,9 @@
  */
 
 import BaseController from '@/system/middleware/BaseController.js';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import Logger from '@/system/logging/Logger.js';
-import {responsePresets} from '@/system/middleware/responseFormatter.js';
+import { responsePresets } from '@/system/middleware/responseFormatter.js';
 import {
     applyEntitySpecificFilters,
     getFilterableFields,
@@ -71,7 +71,7 @@ export function createCollectionController({
          */
         search = asyncHandler(async (req, res) => {
             const operation = 'search';
-            const context = {req, res, operation};
+            const context = { req, res, operation };
 
             Logger.operationStart(this.options.entityName, 'SEARCH', {
                 'Query parameters': req.query
@@ -139,7 +139,7 @@ export function createCollectionController({
          * Addresses common collection management use case
          */
         bulkUpdate = asyncHandler(async (req, res) => {
-            const {ids, updateData} = req.body;
+            const { ids, updateData } = req.body;
 
             if (!ids || !Array.isArray(ids) || !updateData) {
                 return res.apiError('ids array and updateData are required', 400);
@@ -160,10 +160,10 @@ export function createCollectionController({
             for (const id of ids) {
                 try {
                     const updated = await this.service.update(id, updateData);
-                    results.successful.push({id, data: updated});
+                    results.successful.push({ id, data: updated });
                 } catch (error) {
-                    results.failed.push({id, error: error.message});
-                    Logger.error('CollectionController', `Failed to update ${this.options.entityName}`, error, {id});
+                    results.failed.push({ id, error: error.message });
+                    Logger.error('CollectionController', `Failed to update ${this.options.entityName}`, error, { id });
                 }
             }
 
@@ -257,7 +257,7 @@ export function createCollectionController({
          */
         async generateBasicStats() {
             const totalCount = await this.service.count({});
-            const soldCount = await this.service.count({sold: true});
+            const soldCount = await this.service.count({ sold: true });
             const availableCount = totalCount - soldCount;
 
             return {
@@ -309,7 +309,6 @@ export const CollectionControllerFactories = {
         });
     }
 };
-
 
 
 export default createCollectionController;

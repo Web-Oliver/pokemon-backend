@@ -10,6 +10,8 @@
  * - Performance-optimized validation patterns
  */
 
+import { URL } from 'url';
+
 class ImportValidationError extends Error {
     constructor(message, field, value, source) {
         super(message);

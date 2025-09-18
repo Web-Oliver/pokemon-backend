@@ -139,8 +139,7 @@ export const API_ENDPOINTS = {
         'DELETE /api/dba-selection': 'Remove items from DBA selection',
         'GET /api/dba-selection/stats': 'DBA selection statistics',
         'GET /api/dba-selection/:itemType/:itemId': 'Get DBA selection for specific item',
-        'PUT /api/dba-selection/:itemType/:itemId/notes': 'Update DBA selection notes',
-        'POST /api/dba/posts': 'Post items to DBA marketplace'
+        'PUT /api/dba-selection/:itemType/:itemId/notes': 'Update DBA selection notes'
     },
 
     uploads: {

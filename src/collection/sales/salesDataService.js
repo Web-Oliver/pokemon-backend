@@ -2,8 +2,8 @@ import SealedProduct from '@/collection/items/SealedProduct.js';
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import Logger from '@/system/logging/Logger.js';
-import {validateDateRange} from '@/system/validation/dateValidationHelpers.js';
-import {getDisplayName} from '@/system/constants/ItemTypeMapper.js';
+import { validateDateRange } from '@/system/validation/dateValidationHelpers.js';
+import { getDisplayName } from '@/system/constants/ItemTypeMapper.js';
 
 /**
  * Map item types to display categories using centralized ItemTypeMapper
@@ -33,11 +33,11 @@ async function fetchSalesData(filter, category) {
             SealedProduct.find(filter).populate('productId'),
             PsaGradedCard.find(filter).populate({
                 path: 'cardId',
-                populate: {path: 'setId'}
+                populate: { path: 'setId' }
             }),
             RawCard.find(filter).populate({
                 path: 'cardId',
-                populate: {path: 'setId'}
+                populate: { path: 'setId' }
             })
         ]);
 
@@ -68,7 +68,7 @@ async function fetchSalesData(filter, category) {
             case 'psaGradedCards':
                 salesData = await PsaGradedCard.find(filter).populate({
                     path: 'cardId',
-                    populate: {path: 'setId'}
+                    populate: { path: 'setId' }
                 });
                 salesData = salesData.filter(item => item).map((item) => ({
                     ...(item.toObject ? item.toObject() : item),
@@ -78,7 +78,7 @@ async function fetchSalesData(filter, category) {
             case 'rawCards':
                 salesData = await RawCard.find(filter).populate({
                     path: 'cardId',
-                    populate: {path: 'setId'}
+                    populate: { path: 'setId' }
                 });
                 salesData = salesData.filter(item => item).map((item) => ({
                     ...(item.toObject ? item.toObject() : item),
@@ -123,7 +123,7 @@ function buildDateFilter(startDate, endDate) {
         endDate
     });
 
-    const filter = {sold: true};
+    const filter = { sold: true };
 
     // Only validate date range if both dates are provided
     if (startDate && endDate) {

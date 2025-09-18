@@ -13,7 +13,7 @@ export class GradedCardScanRepository extends BaseRepository {
     constructor() {
         super(GradedCardScan, {
             entityName: 'GradedCardScan',
-            defaultSort: {createdAt: -1},
+            defaultSort: { createdAt: -1 },
             defaultLimit: 50
         });
     }
@@ -22,18 +22,18 @@ export class GradedCardScanRepository extends BaseRepository {
      * Find scan by image hash
      */
     async findByHash(imageHash) {
-        return await this.findOne({imageHash});
+        return await this.findOne({ imageHash });
     }
 
     /**
      * Find scans by processing status with pagination
      */
     async findByStatus(status, options = {}) {
-        const {skip = 0, limit = 50, sort = {createdAt: -1}} = options;
+        const { skip = 0, limit = 50, sort = { createdAt: -1 } } = options;
 
         return await this.findAll(
-            {processingStatus: status},
-            {skip, limit: parseInt(limit, 10), sort}
+            { processingStatus: status },
+            { skip, limit: parseInt(limit, 10), sort }
         );
     }
 
@@ -42,7 +42,7 @@ export class GradedCardScanRepository extends BaseRepository {
      */
     async findByHashes(imageHashes) {
         return await this.findAll({
-            imageHash: {$in: imageHashes}
+            imageHash: { $in: imageHashes }
         });
     }
 
@@ -60,14 +60,14 @@ export class GradedCardScanRepository extends BaseRepository {
         if (status === undefined) {
             return await this.count({}); // Count all documents
         }
-        return await this.count({processingStatus: status});
+        return await this.count({ processingStatus: status });
     }
 
     /**
      * Update scan processing status
      */
     async updateStatus(id, status) {
-        return await this.update(id, {processingStatus: status});
+        return await this.update(id, { processingStatus: status });
     }
 
     /**
@@ -75,8 +75,8 @@ export class GradedCardScanRepository extends BaseRepository {
      */
     async updateStatusByHashes(imageHashes, status) {
         return await this.updateMany(
-            {imageHash: {$in: imageHashes}},
-            {processingStatus: status}
+            { imageHash: { $in: imageHashes } },
+            { processingStatus: status }
         );
     }
 
@@ -85,7 +85,7 @@ export class GradedCardScanRepository extends BaseRepository {
      */
     async updateByHash(imageHash, updateData) {
         return await this.updateMany(
-            {imageHash},
+            { imageHash },
             updateData
         );
     }
@@ -95,7 +95,7 @@ export class GradedCardScanRepository extends BaseRepository {
      */
     async deleteManyByIds(ids) {
         return await this.deleteMany({
-            _id: {$in: ids}
+            _id: { $in: ids }
         });
     }
 
@@ -106,7 +106,7 @@ export class GradedCardScanRepository extends BaseRepository {
     async findByBatchId(batchId) {
         // This may need refinement based on how batch IDs are actually stored
         // For now, assume we group by creation time or some batch field
-        return await this.findAll({batchId});
+        return await this.findAll({ batchId });
     }
 
     /**
@@ -133,7 +133,7 @@ export class GradedCardScanRepository extends BaseRepository {
             processingStatus: 'extracted'
         };
         return await this.updateMany(
-            {batchId},
+            { batchId },
             clearData
         );
     }
@@ -146,7 +146,7 @@ export class GradedCardScanRepository extends BaseRepository {
             {
                 $group: {
                     _id: '$processingStatus',
-                    count: {$sum: 1}
+                    count: { $sum: 1 }
                 }
             }
         ];

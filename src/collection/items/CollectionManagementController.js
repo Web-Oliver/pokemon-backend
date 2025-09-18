@@ -5,7 +5,7 @@
  * Handles approval workflow, collection item creation, and PSA card operations
  */
 
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import Logger from '@/system/logging/Logger.js';
 import OcrCollectionService from '@/collection/services/CollectionService.js';
 import StandardResponseBuilder from '@/system/utilities/StandardResponseBuilder.js';
@@ -93,7 +93,7 @@ const approveMatch = asyncHandler(async (req, res) => {
  * Create collection item from approved PSA label
  */
 const createCollectionItem = asyncHandler(async (req, res) => {
-    const {psaGradedCardId, collectionData = {}} = req.body;
+    const { psaGradedCardId, collectionData = {} } = req.body;
 
     if (!psaGradedCardId) {
         return res.status(400).json({
@@ -137,15 +137,15 @@ const createCollectionItem = asyncHandler(async (req, res) => {
  * Delete unwanted PSA label
  */
 const deletePsaLabel = asyncHandler(async (req, res) => {
-    const {id} = req.params;
-    const {reason = 'user_request'} = req.body;
+    const { id } = req.params;
+    const { reason = 'user_request' } = req.body;
 
-    Logger.debug('OCR-COLLECTION', 'DELETE_LABEL_START', 'Deleting PSA label', {id, reason});
+    Logger.debug('OCR-COLLECTION', 'DELETE_LABEL_START', 'Deleting PSA label', { id, reason });
 
     try {
         const result = await collectionService.deletePsaLabel(id, reason);
 
-        Logger.debug('OCR-COLLECTION', 'DELETE_LABEL_SUCCESS', 'PSA label deleted', {id, reason});
+        Logger.debug('OCR-COLLECTION', 'DELETE_LABEL_SUCCESS', 'PSA label deleted', { id, reason });
 
         const response = StandardResponseBuilder.success(result, {
             message: 'PSA label successfully deleted',

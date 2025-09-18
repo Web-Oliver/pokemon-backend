@@ -85,15 +85,15 @@ class SearchService {
             const setProductRepo = new SetProductRepository();
 
             // Build search filters for SetProduct
-            const searchFilters = {...filters};
+            const searchFilters = { ...filters };
 
             if (query && query !== '*' && query.trim() !== '') {
                 // Use regex search on setProductName field with proper escaping
                 const escapedQuery = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-                searchFilters.setProductName = {$regex: escapedQuery, $options: 'i'};
+                searchFilters.setProductName = { $regex: escapedQuery, $options: 'i' };
             }
 
-            console.log('[SEARCHSERVICE] SetProduct search:', {query, searchFilters, options});
+            console.log('[SEARCHSERVICE] SetProduct search:', { query, searchFilters, options });
 
             // Search SetProduct collection directly
             const results = await setProductRepo.find(searchFilters, options);

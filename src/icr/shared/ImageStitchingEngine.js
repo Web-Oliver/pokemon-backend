@@ -17,7 +17,7 @@ export class ImageStitchingEngine {
      * SINGLE IMPLEMENTATION - no more duplication
      */
     static async createVerticalStitchedImage(labelBuffers, options = {}) {
-        const {quality = 90} = options;
+        const { quality = 90 } = options;
 
         try {
             const startTime = Date.now();
@@ -34,11 +34,11 @@ export class ImageStitchingEngine {
                     width: finalWidth,
                     height: finalHeight,
                     channels: 3,
-                    background: {r: 255, g: 255, b: 255}
+                    background: { r: 255, g: 255, b: 255 }
                 }
             })
                 .composite(compositeOperations)
-                .jpeg({quality})
+                .jpeg({ quality })
                 .toBuffer();
 
             const processingTime = Date.now() - startTime;
@@ -92,7 +92,7 @@ export class ImageStitchingEngine {
                 // Enhance text quality
                 .sharpen(1.0, 1.0, 2.0)    // Sharpen text edges
                 .normalize()               // Improve contrast
-                .png({quality: 100})     // Use lossless format for text
+                .png({ quality: 100 })     // Use lossless format for text
                 .toBuffer();
 
             // Get actual dimensions after processing

@@ -128,7 +128,7 @@ class Logger {
      * @param {string} message - Debug message
      * @param {any} data - Debug data
      */
-    static debug(component, message, data = null) {
+    static debug() {
         // Debug logging disabled to reduce console noise
 
     }

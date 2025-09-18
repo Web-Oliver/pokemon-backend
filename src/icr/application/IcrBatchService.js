@@ -19,7 +19,7 @@ import ImageHashService from '@/icr/shared/ImageHashService.js';
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
 import StitchedLabelRepository from '@/icr/infrastructure/repositories/StitchedLabelRepository.js';
 import Logger from '@/system/logging/Logger.js';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 
 class IcrBatchService {
@@ -65,9 +65,9 @@ class IcrBatchService {
      */
     async createStitchedImage(batchId) {
         try {
-            Logger.operationStart('ICR_STITCHING', 'Creating vertical stitched image', {batchId});
+            Logger.operationStart('ICR_STITCHING', 'Creating vertical stitched image', { batchId });
 
-            const scans = await this.gradedCardScanRepository.findMany({batchId}, {sort: {createdAt: 1}});
+            const scans = await this.gradedCardScanRepository.findMany({ batchId }, { sort: { createdAt: 1 } });
             if (scans.length === 0) {
                 throw new Error(`No scans found for batch ${batchId}`);
             }
@@ -187,7 +187,7 @@ class IcrBatchService {
             };
 
         } catch (error) {
-            Logger.operationError('ICR_STITCHING', 'Stitching failed', error, {batchId});
+            Logger.operationError('ICR_STITCHING', 'Stitching failed', error, { batchId });
             throw error;
         }
     }
@@ -235,7 +235,7 @@ class IcrBatchService {
             const scans = await this.gradedCardScanRepository.findByStatus(status, {
                 skip,
                 limit,
-                sort: {createdAt: -1}
+                sort: { createdAt: -1 }
             });
 
             const totalCount = await this.gradedCardScanRepository.countByStatus(status);
@@ -274,8 +274,8 @@ class IcrBatchService {
     async createPsaCardFromScan(id, userInputs) {
         try {
             console.log('🚀 PSA CARD CREATION STARTED');
-            console.log('📥 Input Parameters:', {id, userInputs});
-            Logger.operationStart('ICR_CREATE_PSA', 'Creating PSA card from scan', {id});
+            console.log('📥 Input Parameters:', { id, userInputs });
+            Logger.operationStart('ICR_CREATE_PSA', 'Creating PSA card from scan', { id });
 
             const scan = await this.gradedCardScanRepository.findById(id);
             if (!scan) {
@@ -301,7 +301,7 @@ class IcrBatchService {
             console.log('📦 IMPORTING MODULES...');
             const path = await import('path');
             const fs = await import('fs');
-            const {v4: uuidv4} = await import('uuid');
+            // const { v4: uuidv4 } = await import('uuid'); // Not used
             const mongoose = await import('mongoose');
             const CollectionService = (await import('@/collection/items/CollectionService.js')).default;
             const CollectionRepository = (await import('@/collection/items/CollectionRepository.js')).default;
@@ -315,7 +315,7 @@ class IcrBatchService {
             // Ensure collection folder exists
             if (!fs.existsSync(collectionFolder)) {
                 console.log('📁 CREATING COLLECTION FOLDER...');
-                fs.mkdirSync(collectionFolder, {recursive: true});
+                fs.mkdirSync(collectionFolder, { recursive: true });
                 console.log('✅ COLLECTION FOLDER CREATED');
             } else {
                 console.log('✅ COLLECTION FOLDER EXISTS');
@@ -438,7 +438,7 @@ class IcrBatchService {
      * Complete scan after PSA card creation - cleanup files and update status
      */
     async completeScan(scanId, options = {}) {
-        const {psaCardId, cleanupFiles = true, keepImageHash = true} = options;
+        const { psaCardId, cleanupFiles = true, keepImageHash = true } = options;
 
         try {
             Logger.operationStart('ICR_COMPLETE_SCAN', 'Completing scan after PSA creation', {
@@ -455,7 +455,7 @@ class IcrBatchService {
             }
 
             // File cleanup logic
-            let filesDeleted = [];
+            const filesDeleted = [];
             if (cleanupFiles) {
                 const fs = (await import('fs')).default;
                 const path = (await import('path')).default;
@@ -492,7 +492,7 @@ class IcrBatchService {
                 Logger.info('ICR_COMPLETE_SCAN', `Preserving imageHash for duplicate prevention: ${scan.imageHash}`);
             }
 
-            const updatedScan = await this.gradedCardScanRepository.update(scanId, updateData);
+            await this.gradedCardScanRepository.update(scanId, updateData);
 
             Logger.operationSuccess('ICR_COMPLETE_SCAN', 'Scan completion successful', {
                 scanId,
@@ -584,14 +584,14 @@ class IcrBatchService {
 
             // Get scans that are matched and ready for PSA creation
             const query = {
-                matchingStatus: {$in: ['auto_matched', 'manual_override']},
-                processingStatus: {$ne: 'card_created'}
+                matchingStatus: { $in: ['auto_matched', 'manual_override'] },
+                processingStatus: { $ne: 'card_created' }
             };
 
             const scans = await this.gradedCardScanRepository.findWithPagination(query, {
                 skip,
                 limit,
-                sort: {createdAt: -1}
+                sort: { createdAt: -1 }
             });
 
             const formattedScans = scans.data.map(scan => ({
@@ -631,17 +631,17 @@ class IcrBatchService {
     async ensureDirectories() {
         const dirs = ['full-images', 'labels', 'stitched-images'];
         for (const dir of dirs) {
-            await fs.mkdir(path.join(this.baseDir, dir), {recursive: true});
+            await fs.mkdir(path.join(this.baseDir, dir), { recursive: true });
         }
     }
 
 
     async clearExistingBatch(batchId) {
-        await this.gradedCardScanRepository.deleteMany({batchId});
+        await this.gradedCardScanRepository.deleteMany({ batchId });
     }
 
 
-    async saveFullImage(file, batchId, index) {
+    async saveFullImage(file) {
         const filename = `${file.originalname}`;
         const filePath = path.join(process.cwd(), 'uploads', 'icr', 'full-images', filename);
         await fs.writeFile(filePath, file.buffer);

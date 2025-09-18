@@ -46,7 +46,7 @@ const POPULATION_FIELDS = {
  * @returns {Object} Object with items grouped by type and lookup map
  */
 async function batchFetchItems(selections, options = {}) {
-    const {populate = true, lean = true, select} = options;
+    const { populate = true, lean = true, select } = options;
 
     // Group selections by item type for efficient batch querying
     const groupedSelections = groupSelectionsByType(selections);
@@ -58,7 +58,7 @@ async function batchFetchItems(selections, options = {}) {
         const Model = ITEM_MODELS[itemType];
         const itemIds = typeSelections.map(s => s.itemId);
 
-        let query = Model.find({_id: {$in: itemIds}});
+        let query = Model.find({ _id: { $in: itemIds } });
 
         // Apply population if requested
         if (populate && POPULATION_FIELDS[itemType]) {
@@ -117,14 +117,14 @@ async function batchValidateItemExistence(items) {
     const groupedItems = groupItemsByType(items);
 
     const validationQueries = Object.entries(groupedItems).map(async ([itemType, typeItems]) => {
-        if (typeItems.length === 0) return {itemType, existingItems: []};
+        if (typeItems.length === 0) return { itemType, existingItems: [] };
 
         const Model = ITEM_MODELS[itemType];
         const itemIds = typeItems.map(item => item.itemId);
 
         const existingItems = await Model.find(
-            {_id: {$in: itemIds}},
-            {_id: 1} // Only fetch IDs for existence check
+            { _id: { $in: itemIds } },
+            { _id: 1 } // Only fetch IDs for existence check
         ).lean().exec();
 
         return {
@@ -140,7 +140,7 @@ async function batchValidateItemExistence(items) {
     const existingItemsSet = new Set();
     const existingItemsByType = {};
 
-    validationResults.forEach(({itemType, existingItems}) => {
+    validationResults.forEach(({ itemType, existingItems }) => {
         existingItemsByType[itemType] = existingItems;
         existingItems.forEach(itemId => existingItemsSet.add(`${itemType}:${itemId}`));
     });
@@ -150,7 +150,7 @@ async function batchValidateItemExistence(items) {
     const validItems = [];
 
     items.forEach(item => {
-        const {itemId, itemType} = item;
+        const { itemId, itemType } = item;
         const itemKey = `${itemType}:${itemId}`;
 
         if (!VALID_ITEM_TYPES.includes(itemType)) {
@@ -195,7 +195,7 @@ async function batchValidateItemExistence(items) {
  * @returns {Object} Item data or null if not found
  */
 async function fetchSingleItem(itemId, itemType, options = {}) {
-    const {populate = true, lean = true, select} = options;
+    const { populate = true, lean = true, select } = options;
 
     if (!VALID_ITEM_TYPES.includes(itemType)) {
         throw new Error(`Invalid item type: ${itemType}. Must be one of: ${VALID_ITEM_TYPES.join(', ')}`);
@@ -248,14 +248,14 @@ async function itemExists(itemId, itemType) {
  */
 function groupSelectionsByType(selections) {
     return selections.reduce((groups, selection) => {
-        const {itemType} = selection;
+        const { itemType } = selection;
 
         if (!groups[itemType]) {
             groups[itemType] = [];
         }
         groups[itemType].push(selection);
         return groups;
-    }, {psa: [], raw: [], sealed: []});
+    }, { psa: [], raw: [], sealed: [] });
 }
 
 /**
@@ -267,14 +267,14 @@ function groupSelectionsByType(selections) {
  */
 function groupItemsByType(items) {
     return items.reduce((groups, item) => {
-        const {itemType} = item;
+        const { itemType } = item;
 
         if (!groups[itemType]) {
             groups[itemType] = [];
         }
         groups[itemType].push(item);
         return groups;
-    }, {psa: [], raw: [], sealed: []});
+    }, { psa: [], raw: [], sealed: [] });
 }
 
 /**

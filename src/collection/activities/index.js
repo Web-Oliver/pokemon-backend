@@ -14,12 +14,12 @@
 
 import express from 'express';
 import ActivityService from '@/collection/activities/activityService.js';
-import {Activity, ACTIVITY_PRIORITIES, ACTIVITY_TYPES} from '@/collection/activities/Activity.js';
-import {cachePresets} from '@/system/middleware/cachePresets.js';
+import { Activity, ACTIVITY_PRIORITIES, ACTIVITY_TYPES } from '@/collection/activities/Activity.js';
+import { cachePresets } from '@/system/middleware/cachePresets.js';
 
 const router = express.Router();
 // Context7 Error Handler Middleware
-const handleActivityError = (error, req, res, next) => {
+const handleActivityError = (error, req, res) => {
     console.error('[ACTIVITY API] Error:', error);
 
     if (error.name === 'ValidationError') {
@@ -48,7 +48,7 @@ const handleActivityError = (error, req, res, next) => {
 
 // Context7 Request Validation Middleware
 const validateActivityFilters = (req, res, next) => {
-    const {type, priority, dateRange, limit, offset} = req.query;
+    const { type, priority, dateRange, limit, offset } = req.query;
 
     // Validate activity type
     if (type && !Object.values(ACTIVITY_TYPES).includes(type)) {
@@ -191,11 +191,11 @@ router.get('/types', (req, res) => {
             types: activityTypes,
             priorities,
             dateRanges: [
-                {value: 'today', label: 'Today'},
-                {value: 'week', label: 'This Week'},
-                {value: 'month', label: 'This Month'},
-                {value: 'quarter', label: 'This Quarter'},
-                {value: 'all', label: 'All Time'}
+                { value: 'today', label: 'Today' },
+                { value: 'week', label: 'This Week' },
+                { value: 'month', label: 'This Month' },
+                { value: 'quarter', label: 'This Quarter' },
+                { value: 'all', label: 'All Time' }
             ]
         }
     });
@@ -228,7 +228,7 @@ router.get('/recent', cachePresets.activityData, async (req, res, next) => {
  */
 router.get('/entity/:entityType/:entityId', cachePresets.activityData, async (req, res, next) => {
     try {
-        const {entityType, entityId} = req.params;
+        const { entityType, entityId } = req.params;
 
         console.log(`[ACTIVITY API] GET /activities/entity/${entityType}/${entityId}`);
 
@@ -249,7 +249,7 @@ router.get('/entity/:entityType/:entityId', cachePresets.activityData, async (re
  */
 router.get('/search', async (req, res, next) => {
     try {
-        const {q: searchTerm, ...filters} = req.query;
+        const { q: searchTerm, ...filters } = req.query;
 
         if (!searchTerm || searchTerm.trim().length < 2) {
             return res.status(400).json({
@@ -295,7 +295,7 @@ router.get('/search', async (req, res, next) => {
  */
 router.get('/:id', cachePresets.activityData, async (req, res, next) => {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
 
         console.log(`[ACTIVITY API] GET /activities/${id}`);
 
@@ -352,7 +352,7 @@ router.post('/', async (req, res, next) => {
 // Mark as read handler for DRY compliance
 const markAsReadHandler = async (req, res, next) => {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
 
         console.log(`[ACTIVITY API] ${req.method} /activities/${id}/read`);
 
@@ -396,7 +396,7 @@ router.put('/:id/read', markAsReadHandler);
  */
 router.delete('/:id', async (req, res, next) => {
     try {
-        const {id} = req.params;
+        const { id } = req.params;
 
         console.log(`[ACTIVITY API] DELETE /activities/${id}`);
 

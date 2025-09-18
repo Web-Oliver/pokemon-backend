@@ -9,7 +9,7 @@ import OcrTextDistributor from '@/icr/shared/OcrTextDistributor.js';
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
 import StitchedLabelRepository from '@/icr/infrastructure/repositories/StitchedLabelRepository.js';
 import Logger from '@/system/logging/Logger.js';
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
 export default class IcrTextDistributionService {
     constructor() {
@@ -33,7 +33,7 @@ export default class IcrTextDistributionService {
             // Get stitched label with OCR data
             const stitchedLabel = await this.stitchedLabelRepository.findByBatchId(batchId);
             if (!stitchedLabel) {
-                throw new NotFoundError('StitchedLabel not found for batch', {batchId});
+                throw new NotFoundError('StitchedLabel not found for batch', { batchId });
             }
 
             // Validate stitched label has OCR data
@@ -77,7 +77,7 @@ export default class IcrTextDistributionService {
             // Get individual scans for this batch
             const scans = await this.gradedCardScanRepository.findByBatchId(batchId);
             if (!scans || scans.length === 0) {
-                throw new NotFoundError('No scans found for batch', {batchId});
+                throw new NotFoundError('No scans found for batch', { batchId });
             }
 
             // CRITICAL FIX: Order scans by stitched label hash order, not database order
@@ -275,7 +275,7 @@ export default class IcrTextDistributionService {
      * @returns {Promise<Object>} Re-distribution results
      */
     async redistributeOcrText(batchId) {
-        Logger.info('TEXT_DISTRIBUTION', 'Re-distributing OCR text', {batchId});
+        Logger.info('TEXT_DISTRIBUTION', 'Re-distributing OCR text', { batchId });
 
         // Clear existing OCR data from scans
         await this.gradedCardScanRepository.clearOcrDataByBatch(batchId);
@@ -300,13 +300,13 @@ export default class IcrTextDistributionService {
             // Find stitched label containing these hashes
             const stitchedLabel = await this.stitchedLabelRepository.findByLabelHashes(imageHashes);
             if (!stitchedLabel) {
-                throw new NotFoundError('StitchedLabel not found for hashes', {imageHashes});
+                throw new NotFoundError('StitchedLabel not found for hashes', { imageHashes });
             }
 
             // Get scans by hashes
             const scans = await this.gradedCardScanRepository.findByHashes(imageHashes);
             if (!scans || scans.length === 0) {
-                throw new NotFoundError('No scans found for hashes', {imageHashes});
+                throw new NotFoundError('No scans found for hashes', { imageHashes });
             }
 
             // Use provided OCR result or existing data
@@ -341,7 +341,7 @@ export default class IcrTextDistributionService {
                 const scan = scans.find(s => s.imageHash === imageHash);
 
                 if (!scan) {
-                    Logger.warn('TEXT_DISTRIBUTION_BY_HASHES', 'Scan not found for hash', {imageHash, hashIndex});
+                    Logger.warn('TEXT_DISTRIBUTION_BY_HASHES', 'Scan not found for hash', { imageHash, hashIndex });
                     continue;
                 }
 

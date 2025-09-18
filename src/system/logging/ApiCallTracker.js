@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 import crypto from 'crypto';
 
@@ -8,14 +8,14 @@ import crypto from 'crypto';
  * EVERY SINGLE API CALL MUST BE LOGGED TO PREVENT UNEXPECTED BILLING
  */
 const ApiCallSchema = new mongoose.Schema({
-    provider: {type: String, required: true, default: 'google-vision'},
-    endpoint: {type: String, required: true},
-    requestSize: {type: Number, required: true}, // bytes or request units
-    responseTime: {type: Number, required: true}, // milliseconds
-    success: {type: Boolean, required: true},
-    cost: {type: Number, required: true, default: 0}, // estimated cost in USD
-    features: [{type: String}], // features used (e.g., 'TEXT_DETECTION', 'LABEL_DETECTION')
-    timestamp: {type: Date, default: Date.now},
+    provider: { type: String, required: true, default: 'google-vision' },
+    endpoint: { type: String, required: true },
+    requestSize: { type: Number, required: true }, // bytes or request units
+    responseTime: { type: Number, required: true }, // milliseconds
+    success: { type: Boolean, required: true },
+    cost: { type: Number, required: true, default: 0 }, // estimated cost in USD
+    features: [{ type: String }], // features used (e.g., 'TEXT_DETECTION', 'LABEL_DETECTION')
+    timestamp: { type: Date, default: Date.now },
     metadata: {
         imageCount: Number,
         totalBytes: Number,
@@ -25,8 +25,8 @@ const ApiCallSchema = new mongoose.Schema({
 });
 
 // 🚨 CRITICAL INDEXES FOR QUOTA ENFORCEMENT
-ApiCallSchema.index({provider: 1, timestamp: 1});
-ApiCallSchema.index({provider: 1, 'timestamp': 1, success: 1});
+ApiCallSchema.index({ provider: 1, timestamp: 1 });
+ApiCallSchema.index({ provider: 1, 'timestamp': 1, success: 1 });
 
 const ApiCall = mongoose.model('ApiCall', ApiCallSchema);
 
@@ -200,9 +200,9 @@ class ApiCallTracker {
             }
 
             const updatedApiCall = await ApiCall.findOneAndUpdate(
-                {requestId},
+                { requestId },
                 updateData,
-                {new: true}
+                { new: true }
             );
 
             if (!updatedApiCall) {
@@ -243,7 +243,7 @@ class ApiCallTracker {
                 const fileContent = await fs.readFile(jsonFile, 'utf8');
 
                 existingData = JSON.parse(fileContent);
-            } catch (readError) {
+            } catch {
                 // File doesn't exist yet, start with empty array
                 existingData = [];
             }
@@ -312,7 +312,7 @@ class ApiCallTracker {
 
         return await ApiCall.countDocuments({
             provider,
-            timestamp: {$gte: startOfDay, $lte: endOfDay},
+            timestamp: { $gte: startOfDay, $lte: endOfDay },
             success: true
         });
     }
@@ -331,7 +331,7 @@ class ApiCallTracker {
 
         return await ApiCall.countDocuments({
             provider,
-            timestamp: {$gte: startOfMonth, $lte: endOfMonth},
+            timestamp: { $gte: startOfMonth, $lte: endOfMonth },
             success: true
         });
     }
@@ -345,20 +345,20 @@ class ApiCallTracker {
             {
                 $match: {
                     provider,
-                    timestamp: {$gte: startOfDay},
+                    timestamp: { $gte: startOfDay },
                     success: true
                 }
             },
             {
                 $group: {
                     _id: null,
-                    totalCost: {$sum: '$cost'},
-                    totalCalls: {$sum: 1}
+                    totalCost: { $sum: '$cost' },
+                    totalCalls: { $sum: 1 }
                 }
             }
         ]);
 
-        return result[0] || {totalCost: 0, totalCalls: 0};
+        return result[0] || { totalCost: 0, totalCalls: 0 };
     }
 
     async getMonthlyCost(provider = 'google-vision') {
@@ -371,20 +371,20 @@ class ApiCallTracker {
             {
                 $match: {
                     provider,
-                    timestamp: {$gte: startOfMonth},
+                    timestamp: { $gte: startOfMonth },
                     success: true
                 }
             },
             {
                 $group: {
                     _id: null,
-                    totalCost: {$sum: '$cost'},
-                    totalCalls: {$sum: 1}
+                    totalCost: { $sum: '$cost' },
+                    totalCalls: { $sum: 1 }
                 }
             }
         ]);
 
-        return result[0] || {totalCost: 0, totalCalls: 0};
+        return result[0] || { totalCost: 0, totalCalls: 0 };
     }
 
     /**
@@ -392,7 +392,7 @@ class ApiCallTracker {
      */
     async ensureTrackingDir() {
         try {
-            await fs.mkdir(this.trackingDir, {recursive: true});
+            await fs.mkdir(this.trackingDir, { recursive: true });
         } catch (error) {
             console.error('🚨 [SETUP] Failed to create tracking directory:', error);
         }

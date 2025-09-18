@@ -5,12 +5,12 @@
  * Extracted from IcrBatchService to follow SRP
  */
 
-import {GoogleVisionOcrProvider} from '@/icr/infrastructure/external/GoogleVisionOcrProvider.js';
+import { GoogleVisionOcrProvider } from '@/icr/infrastructure/external/GoogleVisionOcrProvider.js';
 import ImageHashService from '@/icr/shared/ImageHashService.js';
 import StitchedLabelRepository from '@/icr/infrastructure/repositories/StitchedLabelRepository.js';
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
 import Logger from '@/system/logging/Logger.js';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 import path from 'path';
 
 import OperationManager from '@/system/utilities/OperationManager.js';
@@ -33,7 +33,7 @@ export class IcrOcrProcessingService {
 
         return OperationManager.executeFileOperation(
             context,
-            {fileName: path.basename(stitchedImagePath)},
+            { fileName: path.basename(stitchedImagePath) },
             async () => {
                 const stitchedBuffer = await fs.readFile(stitchedImagePath);
                 const ocrResult = await this.googleVisionProvider.extractText(stitchedBuffer);
@@ -98,13 +98,13 @@ export class IcrOcrProcessingService {
      */
     async processOcrByBatch(batchId) {
         try {
-            Logger.operationStart('ICR_OCR_BY_BATCH', 'Auto-detecting stitched image for OCR', {batchId});
+            Logger.operationStart('ICR_OCR_BY_BATCH', 'Auto-detecting stitched image for OCR', { batchId });
 
             // Find most recent stitched label for this batch that hasn't been OCR processed yet
             const stitchedLabels = await this.stitchedLabelRepository.findMany({
                 batchId,
                 processingStatus: 'stitched'
-            }, {sort: {createdAt: -1}, limit: 1});
+            }, { sort: { createdAt: -1 }, limit: 1 });
             const stitchedLabel = stitchedLabels[0];
 
             if (!stitchedLabel) {
@@ -120,7 +120,7 @@ export class IcrOcrProcessingService {
             return await this.processOcr(stitchedLabel.stitchedImagePath);
 
         } catch (error) {
-            Logger.operationError('ICR_OCR_BY_BATCH', 'Auto-detection OCR failed', error, {batchId});
+            Logger.operationError('ICR_OCR_BY_BATCH', 'Auto-detection OCR failed', error, { batchId });
             throw error;
         }
     }
@@ -131,31 +131,31 @@ export class IcrOcrProcessingService {
      */
     async processOcrByHashes(imageHashes) {
         try {
-            Logger.operationStart('ICR_OCR_BY_HASHES', 'Processing OCR by hashes', {imageHashes});
+            Logger.operationStart('ICR_OCR_BY_HASHES', 'Processing OCR by hashes', { imageHashes });
 
             // Find ONE stitched label that contains ANY of these hashes (check both stitched and ocr_completed)
             Logger.info('ICR_OCR_BY_HASHES', 'Searching for stitched labels', {
                 imageHashesCount: imageHashes.length,
                 firstFewHashes: imageHashes.slice(0, 3),
                 searchCriteria: {
-                    labelHashes: {$in: imageHashes},
-                    processingStatus: {$in: ['stitched', 'ocr_complete', 'distributed']}
+                    labelHashes: { $in: imageHashes },
+                    processingStatus: { $in: ['stitched', 'ocr_complete', 'distributed'] }
                 }
             });
 
             const stitchedLabels = await this.stitchedLabelRepository.findMany({
-                labelHashes: {$in: imageHashes}
+                labelHashes: { $in: imageHashes }
                 // NO STATUS CHECK - Process ANY stitched label
-            }, {sort: {createdAt: -1}, limit: 1});
+            }, { sort: { createdAt: -1 }, limit: 1 });
 
             const stitchedLabel = stitchedLabels[0];
 
             if (!stitchedLabel) {
                 // DEBUG: Check what stitched labels actually exist
-                const allStitchedLabels = await this.stitchedLabelRepository.findMany({}, {limit: 5});
+                const allStitchedLabels = await this.stitchedLabelRepository.findMany({}, { limit: 5 });
                 const stitchedWithHashes = await this.stitchedLabelRepository.findMany({
-                    labelHashes: {$in: imageHashes}
-                }, {limit: 5});
+                    labelHashes: { $in: imageHashes }
+                }, { limit: 5 });
 
                 Logger.error('ICR_OCR_BY_HASHES', 'No stitched label found for OCR', {
                     providedHashCount: imageHashes.length,

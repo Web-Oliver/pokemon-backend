@@ -4,9 +4,9 @@
  */
 
 import express from 'express';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import ProductApiService from '@/pokemon/products/ProductApiService.js';
-import {cachePresets} from '@/system/middleware/cachePresets.js';
+import { cachePresets } from '@/system/middleware/cachePresets.js';
 
 const router = express.Router();
 /**
@@ -20,7 +20,7 @@ const router = express.Router();
  * @query   {boolean} availableOnly - Show only available products (optional)
  */
 router.get('/search', cachePresets.productSearch, asyncHandler(async (req, res) => {
-    const {page, limit, category, setName, availableOnly} = req.query;
+    const { page, limit, category, setName, availableOnly } = req.query;
 
     const results = await ProductApiService.searchProducts({
         page: parseInt(page, 10),

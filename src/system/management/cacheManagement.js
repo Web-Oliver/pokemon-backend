@@ -1,5 +1,5 @@
 import express from 'express';
-import {clearCache, getCacheStats, invalidateCache} from '@/search/middleware/searchCache.js';
+import { clearCache, getCacheStats, invalidateCache } from '@/search/middleware/searchCache.js';
 
 const router = express.Router();
 
@@ -23,7 +23,7 @@ router.get('/stats', (req, res) => {
 
 router.delete('/invalidate', (req, res) => {
     try {
-        const {pattern} = req.body;
+        const { pattern } = req.body;
         let invalidatedCount = 0;
 
         if (pattern) {

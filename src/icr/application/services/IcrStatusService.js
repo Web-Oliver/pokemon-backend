@@ -25,7 +25,7 @@ class IcrStatusService {
             const scans = await this.gradedCardScanRepository.findByStatus(status, {
                 skip,
                 limit,
-                sort: {createdAt: -1}
+                sort: { createdAt: -1 }
             });
 
             const totalCount = await this.gradedCardScanRepository.countByStatus(status);
@@ -65,7 +65,7 @@ class IcrStatusService {
             const stitchedImages = await this.stitchedLabelRepository.findWithPagination({
                 skip,
                 limit,
-                sort: {createdAt: -1}
+                sort: { createdAt: -1 }
             });
 
             const totalCount = await this.stitchedLabelRepository.count();

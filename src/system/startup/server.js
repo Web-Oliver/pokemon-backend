@@ -3,19 +3,19 @@
 import express from 'express';
 import cors from 'cors';
 import path from 'path';
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url';
 // Use the ES module syntax for dotenv
 import 'dotenv/config.js';
 // Import all dependencies using the @ alias
 import connectDB from '@/system/database/db.js';
-import {enhancedErrorMiddleware} from '@/system/middleware/CentralizedErrorHandler.js';
-import {compressionMiddleware, setCacheHeaders} from '@/system/middleware/compression.js';
-import {getCacheStats} from '@/search/middleware/searchCache.js';
-import {initializeCacheSystem, shutdownCacheSystem} from '@/system/cache/initializeCacheSystem.js';
+import { enhancedErrorMiddleware } from '@/system/middleware/CentralizedErrorHandler.js';
+import { compressionMiddleware, setCacheHeaders } from '@/system/middleware/compression.js';
+import { getCacheStats } from '@/search/middleware/searchCache.js';
+import { initializeCacheSystem, shutdownCacheSystem } from '@/system/cache/initializeCacheSystem.js';
 // REMOVED: Legacy response transformer - unified response formatter used instead
-import {paginationPresets} from '@/system/middleware/pagination.js';
+import { paginationPresets } from '@/system/middleware/pagination.js';
 // NEW: Unified response formatting
-import {responseFormatter} from '@/system/middleware/responseFormatter.js';
+import { responseFormatter } from '@/system/middleware/responseFormatter.js';
 // Import routes that DON'T use controllers (safe to import early)
 import unifiedSearchRoute from '@/search/routes/unifiedSearch.js';
 import apiRoute from '@/system/routing/api.js';
@@ -27,7 +27,7 @@ import dbaSelection from '@/marketplace/dba/dbaSelection.js';
 import productsRoute from '@/pokemon/products/products.js';
 import cacheManagement from '@/system/management/cacheManagement.js';
 // NEW: Import service bootstrap for dependency injection
-import {bootstrapServices, shutdownServices} from '@/system/startup/serviceBootstrap.js';
+import { bootstrapServices, shutdownServices } from '@/system/startup/serviceBootstrap.js';
 
 // Define __dirname and __filename for ES Modules
 const __filename = fileURLToPath(import.meta.url);
@@ -40,9 +40,9 @@ connectDB();
 await bootstrapServices();
 
 // Import routes that use controllers AFTER services are bootstrapped
-const {default: collectionsRoute} = await import('@/collection/items/collections.js');
-const {default: activityRoutes} = await import('@/collection/activities/index.js');
-const {default: icrBatchRoute} = await import('@/icr/routes/icrBatch.js');
+const { default: collectionsRoute } = await import('@/collection/items/collections.js');
+const { default: activityRoutes } = await import('@/collection/activities/index.js');
+const { default: icrBatchRoute } = await import('@/icr/routes/icrBatch.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -63,8 +63,8 @@ app.use(setCacheHeaders);
 app.use(cors());
 
 // Body parsing middleware
-app.use(express.json({limit: '10mb'}));
-app.use(express.urlencoded({limit: '10mb', extended: true, parameterLimit: 1000}));
+app.use(express.json({ limit: '10mb' }));
+app.use(express.urlencoded({ limit: '10mb', extended: true, parameterLimit: 1000 }));
 
 // Pagination middleware for API routes
 app.use('/api', paginationPresets.api);

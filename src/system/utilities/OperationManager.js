@@ -13,8 +13,8 @@
  */
 
 import Logger from '@/system/logging/Logger.js';
-import {StandardResponseBuilder} from './StandardResponseBuilder.js';
-import {AppError, DatabaseError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { StandardResponseBuilder } from './StandardResponseBuilder.js';
+import { AppError, DatabaseError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
 export class OperationManager {
     /**
@@ -28,8 +28,8 @@ export class OperationManager {
      * @returns {Promise<Object>} Standardized operation result
      */
     static async executeOperation(context, operationFn, options = {}) {
-        const {service, operation, data = {}} = context;
-        const {useStandardResponse = true, trackDuration = true} = options;
+        const { service, operation, data = {} } = context;
+        const { useStandardResponse = true, trackDuration = true } = options;
 
         const startTime = trackDuration ? Date.now() : null;
         const operationId = this.generateOperationId(service, operation);
@@ -92,17 +92,17 @@ export class OperationManager {
             });
 
             // Re-throw with additional context and proper error types
-            error.operationContext = {service, operation, operationId, duration};
+            error.operationContext = { service, operation, operationId, duration };
 
             // Enhance error with proper typing if not already typed
             if (!(error instanceof AppError)) {
                 if (error.name === 'ValidationError' || error.message?.includes('validation')) {
-                    throw new ValidationError(error.message, {originalError: error, ...error.operationContext});
+                    throw new ValidationError(error.message, { originalError: error, ...error.operationContext });
                 } else if (error.name === 'MongoError' || error.name === 'CastError' || error.code === 11000) {
-                    throw new DatabaseError(error.message, {originalError: error, ...error.operationContext});
+                    throw new DatabaseError(error.message, { originalError: error, ...error.operationContext });
                 }
                 // For other errors, wrap in AppError
-                throw new AppError(error.message, 500, {originalError: error, ...error.operationContext});
+                throw new AppError(error.message, 500, { originalError: error, ...error.operationContext });
             }
 
             throw error;
@@ -118,8 +118,8 @@ export class OperationManager {
      * @returns {Promise<Object>} Batch operation result
      */
     static async executeBatchOperation(context, items, processFn, options = {}) {
-        const {service, operation, data = {}} = context;
-        const {continueOnError = true, maxConcurrent = 5} = options;
+        const { service, operation } = context;
+        const { continueOnError = true, maxConcurrent = 5 } = options;
 
         return this.executeOperation(context, async () => {
             const results = [];
@@ -180,7 +180,7 @@ export class OperationManager {
                 }
             ).data; // Return just the data portion for internal use
 
-        }, {useStandardResponse: false, ...options});
+        }, { useStandardResponse: false, ...options });
     }
 
     /**
@@ -254,7 +254,7 @@ export class OperationManager {
      */
     static extractResultMetadata(result) {
         if (!result || typeof result !== 'object') {
-            return {resultSize: typeof result};
+            return { resultSize: typeof result };
         }
 
         const metadata = {};
@@ -287,7 +287,7 @@ export class OperationManager {
      * @private
      */
     static sanitizeErrorData(data) {
-        const sanitized = {...data};
+        const sanitized = { ...data };
 
         // Remove potentially sensitive fields
         const sensitiveFields = ['password', 'token', 'key', 'secret', 'auth'];
@@ -326,7 +326,7 @@ export class OperationManager {
      * @private
      */
     static sanitizeContextData(data) {
-        const sanitized = {...data};
+        const sanitized = { ...data };
 
         // Limit array sizes for logging
         Object.keys(sanitized).forEach(key => {

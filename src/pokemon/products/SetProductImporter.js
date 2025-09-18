@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import SetProduct from '@/pokemon/products/SetProduct.js';
-import {ImportValidationError, ImportValidators} from './validators/ImportValidators.js';
+import { ImportValidationError, ImportValidators } from './validators/ImportValidators.js';
 
 /**
  * SetProduct MongoDB Importer
@@ -147,18 +147,18 @@ class SetProductImporter {
                     updateOne: {
                         filter: {
                             $or: [
-                                {setProductName: setProductData.setProductName},
-                                {uniqueSetProductId: setProductData.uniqueSetProductId}
+                                { setProductName: setProductData.setProductName },
+                                { uniqueSetProductId: setProductData.uniqueSetProductId }
                             ]
                         },
-                        update: {$set: setProductData},
+                        update: { $set: setProductData },
                         upsert: true
                     }
                 };
 
             });
 
-            const result = await SetProduct.bulkWrite(bulkOps, {ordered: false});
+            const result = await SetProduct.bulkWrite(bulkOps, { ordered: false });
 
             this.stats.created += result.insertedCount || 0;
             this.stats.updated += result.modifiedCount || 0;

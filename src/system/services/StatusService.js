@@ -1,4 +1,4 @@
-import {API_CATEGORIES, API_ENDPOINTS, SYSTEM_INFO} from '@/system/constants/EndpointsConfig.js';
+import { API_CATEGORIES, API_ENDPOINTS, SYSTEM_INFO } from '@/system/constants/EndpointsConfig.js';
 
 /**
  * Service for handling system status information

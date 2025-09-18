@@ -17,7 +17,7 @@ class SetProductRepository extends SearchableRepository {
     constructor() {
         super(SetProduct, {
             entityType: 'setProducts', // Use search configuration key
-            defaultSort: {setProductName: 1}
+            defaultSort: { setProductName: 1 }
         });
     }
 

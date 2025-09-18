@@ -7,10 +7,10 @@
  * Replaces 40+ repeated try-catch blocks with consistent error handling patterns.
  */
 
-import {AppError, NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { AppError, NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 // asyncHandler is now implemented within this file
 import Logger from '@/system/logging/Logger.js';
-import {responsePresets} from '@/system/middleware/responseFormatter.js';
+import { responsePresets } from '@/system/middleware/responseFormatter.js';
 
 /**
  * Error context types for consistent logging and handling
@@ -163,7 +163,7 @@ class CentralizedErrorHandler {
                     ip: req.ip
                 };
 
-                this.handle(context, operation, error, requestMetadata, {throwError: false});
+                this.handle(context, operation, error, requestMetadata, { throwError: false });
 
                 // Send standardized error response
                 const statusCode = this._getErrorStatusCode(error);
@@ -172,7 +172,7 @@ class CentralizedErrorHandler {
                     context,
                     operation,
                     timestamp: new Date().toISOString(),
-                    ...(process.env.NODE_ENV !== 'production' && error.stack ? {stack: error.stack} : {})
+                    ...(process.env.NODE_ENV !== 'production' && error.stack ? { stack: error.stack } : {})
                 });
 
                 return res.status(statusCode).json(errorResponse);
@@ -197,7 +197,6 @@ class CentralizedErrorHandler {
             metadata = {}
         } = options;
 
-        let lastError;
 
         for (let attempt = 1; attempt <= maxRetries; attempt++) {
             try {
@@ -210,7 +209,6 @@ class CentralizedErrorHandler {
 
                 return result;
             } catch (error) {
-                lastError = error;
 
                 // Check if error is retryable
                 const isRetryable = retryableErrors.includes(error.name) ||
@@ -243,7 +241,7 @@ class CentralizedErrorHandler {
      * @returns {ValidationError} - Standardized validation error
      */
     static handleValidationError(context, validationResult, metadata = {}) {
-        const {isValid, errors, fieldErrors} = validationResult;
+        const { isValid, errors, fieldErrors } = validationResult;
 
         if (isValid) {
             return null; // No error
@@ -261,7 +259,7 @@ class CentralizedErrorHandler {
             ...metadata,
             validationErrors: errors,
             fieldErrors
-        }, {throwError: false});
+        }, { throwError: false });
 
         return validationError;
     }
@@ -340,7 +338,7 @@ class CentralizedErrorHandler {
     static _sanitizeBody(body) {
         if (!body || typeof body !== 'object') return body;
 
-        const sanitized = {...body};
+        const sanitized = { ...body };
         const sensitiveFields = ['password', 'token', 'apiKey', 'secret', 'auth'];
 
         sensitiveFields.forEach(field => {
@@ -384,7 +382,7 @@ const asyncHandler = (fn) => (req, res, next) => {
 /**
  * Enhanced error middleware for Express integration
  */
-const enhancedErrorMiddleware = (err, req, res, next) => {
+const enhancedErrorMiddleware = (err, req, res) => {
     const context = ERROR_CONTEXTS.GENERAL;
     const operation = `${req.method} ${req.path}`;
 
@@ -412,7 +410,7 @@ const enhancedErrorMiddleware = (err, req, res, next) => {
         context,
         operation,
         timestamp: new Date().toISOString(),
-        ...(process.env.NODE_ENV !== 'production' && err.stack ? {stack: err.stack} : {})
+        ...(process.env.NODE_ENV !== 'production' && err.stack ? { stack: err.stack } : {})
     });
 
     res.status(statusCode).json(errorResponse);

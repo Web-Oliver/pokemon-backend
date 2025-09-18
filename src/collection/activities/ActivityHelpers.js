@@ -29,10 +29,10 @@ class ActivityHelpers {
      * @returns {Promise<Array>} Array of recent activities
      */
     static async getRecentActivities(Activity, limit = 50, filters = {}) {
-        const query = {status: 'active', ...filters};
+        const query = { status: 'active', ...filters };
 
         return Activity.find(query)
-            .sort({timestamp: -1})
+            .sort({ timestamp: -1 })
             .limit(limit)
             .lean();
     }
@@ -47,13 +47,13 @@ class ActivityHelpers {
      */
     static async getActivitiesByTimeRange(Activity, startDate, endDate, filters = {}) {
         const query = {
-            timestamp: {$gte: startDate, $lte: endDate},
+            timestamp: { $gte: startDate, $lte: endDate },
             status: 'active',
             ...filters
         };
 
         return Activity.find(query)
-            .sort({timestamp: -1})
+            .sort({ timestamp: -1 })
             .lean();
     }
 
@@ -70,7 +70,7 @@ class ActivityHelpers {
             entityId,
             status: 'active'
         })
-            .sort({timestamp: -1})
+            .sort({ timestamp: -1 })
             .lean();
     }
 
@@ -86,19 +86,19 @@ class ActivityHelpers {
             $and: [
                 {
                     $or: [
-                        {title: {$regex: searchTerm, $options: 'i'}},
-                        {description: {$regex: searchTerm, $options: 'i'}},
-                        {details: {$regex: searchTerm, $options: 'i'}},
-                        {searchVector: {$regex: searchTerm, $options: 'i'}}
+                        { title: { $regex: searchTerm, $options: 'i' } },
+                        { description: { $regex: searchTerm, $options: 'i' } },
+                        { details: { $regex: searchTerm, $options: 'i' } },
+                        { searchVector: { $regex: searchTerm, $options: 'i' } }
                     ]
                 },
-                {status: 'active'},
+                { status: 'active' },
                 filters
             ]
         };
 
         return Activity.find(query)
-            .sort({timestamp: -1})
+            .sort({ timestamp: -1 })
             .lean();
     }
 
@@ -121,7 +121,7 @@ class ActivityHelpers {
             status = 'active'
         } = options;
 
-        const query = {status};
+        const query = { status };
 
         // Apply filters
         if (type) query.type = type;
@@ -141,17 +141,17 @@ class ActivityHelpers {
         // Search filter
         if (search) {
             query.$or = [
-                {title: {$regex: search, $options: 'i'}},
-                {description: {$regex: search, $options: 'i'}},
-                {details: {$regex: search, $options: 'i'}},
-                {'metadata.cardName': {$regex: search, $options: 'i'}},
-                {'metadata.setName': {$regex: search, $options: 'i'}}
+                { title: { $regex: search, $options: 'i' } },
+                { description: { $regex: search, $options: 'i' } },
+                { details: { $regex: search, $options: 'i' } },
+                { 'metadata.cardName': { $regex: search, $options: 'i' } },
+                { 'metadata.setName': { $regex: search, $options: 'i' } }
             ];
         }
 
         const [activities, total] = await Promise.all([
             Activity.find(query)
-                .sort({timestamp: -1})
+                .sort({ timestamp: -1 })
                 .skip(offset)
                 .limit(limit)
                 .lean(),
@@ -176,11 +176,11 @@ class ActivityHelpers {
         const bounds = ActivityTimelineService.getTimelineBounds();
 
         const [total, todayCount, weekCount, monthCount, recent] = await Promise.all([
-            Activity.countDocuments({status: 'active'}),
-            Activity.countDocuments({status: 'active', timestamp: {$gte: bounds.today}}),
-            Activity.countDocuments({status: 'active', timestamp: {$gte: bounds.weekAgo}}),
-            Activity.countDocuments({status: 'active', timestamp: {$gte: bounds.monthAgo}}),
-            Activity.findOne({status: 'active'}).sort({timestamp: -1}).lean()
+            Activity.countDocuments({ status: 'active' }),
+            Activity.countDocuments({ status: 'active', timestamp: { $gte: bounds.today } }),
+            Activity.countDocuments({ status: 'active', timestamp: { $gte: bounds.weekAgo } }),
+            Activity.countDocuments({ status: 'active', timestamp: { $gte: bounds.monthAgo } }),
+            Activity.findOne({ status: 'active' }).sort({ timestamp: -1 }).lean()
         ]);
 
         return {
@@ -364,10 +364,10 @@ class ActivityHelpers {
         // Search terms
         if (filters.search) {
             query.$or = [
-                {title: {$regex: filters.search, $options: 'i'}},
-                {description: {$regex: filters.search, $options: 'i'}},
-                {details: {$regex: filters.search, $options: 'i'}},
-                {searchVector: {$regex: filters.search, $options: 'i'}}
+                { title: { $regex: filters.search, $options: 'i' } },
+                { description: { $regex: filters.search, $options: 'i' } },
+                { details: { $regex: filters.search, $options: 'i' } },
+                { searchVector: { $regex: filters.search, $options: 'i' } }
             ];
         }
 

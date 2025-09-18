@@ -1,9 +1,6 @@
 import SetProduct from '@/pokemon/products/SetProduct.js';
-import {asyncHandler, NotFoundError, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
-import SearchService from '@/search/services/SearchService.js';
+import { asyncHandler, NotFoundError, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
-
-const searchService = new SearchService();
 const getAllSetProducts = asyncHandler(async (req, res) => {
     const setProducts = await SetProduct.find();
 
@@ -11,10 +8,10 @@ const getAllSetProducts = asyncHandler(async (req, res) => {
 });
 
 const getSetProductsWithPagination = asyncHandler(async (req, res) => {
-    const {page = 1, limit = 15, q, name} = req.query;
+    const { page = 1, limit = 15, q, name } = req.query;
 
     // Validate pagination parameters
-    const {pageNum, limitNum} = ValidatorFactory.validatePagination(page, limit, 100);
+    const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, 100);
 
     // Build base query
     const baseQuery = {};
@@ -24,7 +21,7 @@ const getSetProductsWithPagination = asyncHandler(async (req, res) => {
         const searchQuery = q || name;
 
         baseQuery.$or = [
-            {setProductName: {$regex: searchQuery, $options: 'i'}}
+            { setProductName: { $regex: searchQuery, $options: 'i' } }
         ];
     }
 
@@ -33,7 +30,7 @@ const getSetProductsWithPagination = asyncHandler(async (req, res) => {
         SetProduct.find(baseQuery)
             .skip((pageNum - 1) * limitNum)
             .limit(limitNum)
-            .sort({setProductName: 1})
+            .sort({ setProductName: 1 })
             .lean(),
         SetProduct.countDocuments(baseQuery)
     ]);
@@ -50,7 +47,7 @@ const getSetProductsWithPagination = asyncHandler(async (req, res) => {
 });
 
 const getSetProductById = asyncHandler(async (req, res) => {
-    const {id} = req.params;
+    const { id } = req.params;
 
     // Validate ObjectId format
     if (!ValidatorFactory.isValidObjectId(id)) {
@@ -67,14 +64,14 @@ const getSetProductById = asyncHandler(async (req, res) => {
 });
 
 const getSetProductByName = asyncHandler(async (req, res) => {
-    const {name} = req.params;
+    const { name } = req.params;
 
     if (!name || name.trim() === '') {
         throw new ValidationError('Set product name is required');
     }
 
     const setProduct = await SetProduct.findOne({
-        setProductName: {$regex: `^${name.trim()}$`, $options: 'i'}
+        setProductName: { $regex: `^${name.trim()}$`, $options: 'i' }
     }).lean();
 
     if (!setProduct) {
@@ -89,10 +86,10 @@ const getSetProductStats = asyncHandler(async (req, res) => {
         {
             $group: {
                 _id: null,
-                totalSetProducts: {$sum: 1},
-                avgUniqueSetProductId: {$avg: '$uniqueSetProductId'},
-                maxUniqueSetProductId: {$max: '$uniqueSetProductId'},
-                minUniqueSetProductId: {$min: '$uniqueSetProductId'}
+                totalSetProducts: { $sum: 1 },
+                avgUniqueSetProductId: { $avg: '$uniqueSetProductId' },
+                maxUniqueSetProductId: { $max: '$uniqueSetProductId' },
+                minUniqueSetProductId: { $min: '$uniqueSetProductId' }
             }
         }
     ]);

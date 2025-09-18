@@ -1,6 +1,6 @@
 import BaseRepository from './BaseRepository.js';
 import UnifiedSearchQueryBuilder from '@/search/services/UnifiedSearchQueryBuilder.js';
-import {SEARCH_CONFIGS} from '@/search/services/searchConfigurations.js';
+import { SEARCH_CONFIGS } from '@/search/services/searchConfigurations.js';
 
 /**
  * Searchable Repository Base Class
@@ -72,7 +72,7 @@ class SearchableRepository extends BaseRepository {
 
         // Apply limit if specified
         if (filters.limit) {
-            pipeline.push({$limit: filters.limit});
+            pipeline.push({ $limit: filters.limit });
         }
 
         return await this.aggregate(pipeline);
@@ -221,7 +221,7 @@ class SearchableRepository extends BaseRepository {
             }
 
             const searchConditions = {
-                [primaryField.name]: {$regex: query, $options: 'i'}
+                [primaryField.name]: { $regex: query, $options: 'i' }
             };
 
             return await this.findAll(searchConditions, options);
@@ -251,7 +251,7 @@ class SearchableRepository extends BaseRepository {
 
                 // Replace sort and add count
                 pipeline.pop(); // Remove sort stage
-                pipeline.push({$count: 'total'});
+                pipeline.push({ $count: 'total' });
 
                 const result = await this.aggregate(pipeline);
 
@@ -260,7 +260,6 @@ class SearchableRepository extends BaseRepository {
             // For simple searches, use regular count
             const {
                 searchConditions,
-                populateConfig,
                 needsPopulateFiltering
             } = this.searchQueryBuilder.buildSimpleSearchConditions(
                 this.entityType,
@@ -290,7 +289,7 @@ class SearchableRepository extends BaseRepository {
      */
     async searchWithPagination(query, filters = {}, paginationOptions = {}) {
         try {
-            const {page = 1, limit = this.options.defaultLimit} = paginationOptions;
+            const { page = 1, limit = this.options.defaultLimit } = paginationOptions;
             const skip = (page - 1) * limit;
 
             // Get total count

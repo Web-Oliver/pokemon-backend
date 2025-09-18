@@ -1,9 +1,9 @@
 import SealedProduct from '@/collection/items/SealedProduct.js';
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
-import {fetchSingleItem} from '@/collection/items/ItemBatchFetcher.js';
-import {isValidClassName, toAbbreviated} from '@/system/constants/ItemTypeMapper.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
+import { isValidClassName, toAbbreviated } from '@/system/constants/ItemTypeMapper.js';
 // Helper function to populate auction items
 const populateAuctionItems = async (auction) => {
     const populatedItems = [];
@@ -29,9 +29,9 @@ const populateAuctionItems = async (auction) => {
                                 path: 'cardId',
                                 populate: {
                                     path: 'setId',
-                                    options: {lean: true} // Prevent further population and transform issues
+                                    options: { lean: true } // Prevent further population and transform issues
                                 },
-                                options: {lean: true}
+                                options: { lean: true }
                             })
                             .lean(); // Use lean queries to prevent circular reference issues
                         break;
@@ -41,9 +41,9 @@ const populateAuctionItems = async (auction) => {
                                 path: 'cardId',
                                 populate: {
                                     path: 'setId',
-                                    options: {lean: true} // Prevent further population and transform issues
+                                    options: { lean: true } // Prevent further population and transform issues
                                 },
-                                options: {lean: true}
+                                options: { lean: true }
                             })
                             .lean(); // Use lean queries to prevent circular reference issues
                         break;
@@ -106,7 +106,7 @@ const validateAuctionItems = async (items) => {
             try {
                 // Use centralized item fetching with ItemBatchFetcher
                 const abbreviatedType = toAbbreviated(item.itemCategory);
-                const collectionItem = await fetchSingleItem(item.itemId, abbreviatedType, {lean: true});
+                const collectionItem = await fetchSingleItem(item.itemId, abbreviatedType, { lean: true });
 
                 if (!collectionItem) {
                     throw new NotFoundError(`${item.itemCategory} with ID ${item.itemId} not found in your collection`);
@@ -136,7 +136,7 @@ const calculateAuctionTotalValue = async (auction) => {
         try {
             // Use centralized item fetching with ItemBatchFetcher
             const abbreviatedType = toAbbreviated(item.itemCategory);
-            const collectionItem = await fetchSingleItem(item.itemId, abbreviatedType, {lean: false});
+            const collectionItem = await fetchSingleItem(item.itemId, abbreviatedType, { lean: false });
 
             if (collectionItem && collectionItem.myPrice) {
                 // Handle Decimal128 conversion

@@ -27,12 +27,12 @@ export class IcrCardMatchingService {
         });
 
         return OperationManager.executeOperation(context, async () => {
-            const scans = await this.gradedCardScanRepository.findMany({batchId, ocrText: {$exists: true, $ne: ''}});
+            const scans = await this.gradedCardScanRepository.findMany({ batchId, ocrText: { $exists: true, $ne: '' } });
 
             return OperationManager.executeBatchOperation(
-                {...context, operation: 'cardMatching'},
+                { ...context, operation: 'cardMatching' },
                 scans,
-                async (scan, index) => {
+                async (scan) => {
                     const parsingResult = await this.hierarchicalParser.parsePsaLabel(scan.ocrText);
 
                     const result = {
@@ -110,7 +110,7 @@ export class IcrCardMatchingService {
      */
     async performCardMatchingByHashes(imageHashes) {
         try {
-            Logger.operationStart('ICR_MATCH_BY_HASHES', 'Performing card matching by hashes', {imageHashes});
+            Logger.operationStart('ICR_MATCH_BY_HASHES', 'Performing card matching by hashes', { imageHashes });
 
             const scans = await this.gradedCardScanRepository.findByHashes(imageHashes);
 
@@ -184,7 +184,7 @@ export class IcrCardMatchingService {
                     matchingResults.push(result);
 
                 } catch (error) {
-                    Logger.operationError('ICR_SCAN_MATCHING_BY_HASH', 'Individual scan matching failed', error, {id: scan._id});
+                    Logger.operationError('ICR_SCAN_MATCHING_BY_HASH', 'Individual scan matching failed', error, { id: scan._id });
                     matchingResults.push({
                         id: scan._id,
                         imageHash: scan.imageHash,

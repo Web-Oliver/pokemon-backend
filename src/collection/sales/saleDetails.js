@@ -50,13 +50,13 @@ const saleDetailsSchema = {
         }
     },
     buyerAddress: {
-        streetName: {type: String},
-        postnr: {type: String},
-        city: {type: String}
+        streetName: { type: String },
+        postnr: { type: String },
+        city: { type: String }
     },
-    buyerPhoneNumber: {type: String},
-    buyerEmail: {type: String},
-    trackingNumber: {type: String}
+    buyerPhoneNumber: { type: String },
+    buyerEmail: { type: String },
+    trackingNumber: { type: String }
 };
 
 export default saleDetailsSchema;

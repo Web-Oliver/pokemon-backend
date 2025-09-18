@@ -1,4 +1,4 @@
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 
 /**
@@ -22,7 +22,7 @@ class BaseRepository {
         this.model = model;
         this.options = {
             defaultPopulate: options.defaultPopulate || null,
-            defaultSort: options.defaultSort || {dateAdded: -1},
+            defaultSort: options.defaultSort || { dateAdded: -1 },
             defaultLimit: options.defaultLimit || 1000,
             entityName: options.entityName || model.modelName,
             ...options
@@ -121,10 +121,10 @@ class BaseRepository {
      * @returns {Promise<Object>} - Object containing data, count, and pagination info
      */
     async findWithPagination(filters = {}, options = {}) {
-        const {page = 1, limit = this.options.defaultLimit, ...queryOptions} = options;
+        const { page = 1, limit = this.options.defaultLimit, ...queryOptions } = options;
 
         const skip = (page - 1) * limit;
-        const data = await this.findAll(filters, {...queryOptions, limit, skip});
+        const data = await this.findAll(filters, { ...queryOptions, limit, skip });
         const totalCount = await this.count(filters);
         const totalPages = Math.ceil(totalCount / limit);
 
@@ -157,7 +157,7 @@ class BaseRepository {
             const populate = options.populate || this.options.defaultPopulate;
 
             if (populate) {
-                return await this.findById(savedDocument._id, {populate});
+                return await this.findById(savedDocument._id, { populate });
             }
 
             return savedDocument;
@@ -201,7 +201,7 @@ class BaseRepository {
             const populate = options.populate || this.options.defaultPopulate;
 
             if (populate) {
-                return await this.findById(document._id, {populate});
+                return await this.findById(document._id, { populate });
             }
 
             return document;

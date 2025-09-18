@@ -1,4 +1,4 @@
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 import ImageManager from '@/uploads/imageManager.js';
 import SaleService from '@/collection/sales/saleService.js';
 import ActivityService from '@/collection/activities/activityService.js';
@@ -125,7 +125,7 @@ class CollectionService {
             const existingItem = await this.repository.findById(id);
 
             // Prepare update data
-            const updateData = {...data};
+            const updateData = { ...data };
 
             // Handle price history updates
             if (data.priceHistory && Array.isArray(data.priceHistory)) {
@@ -171,7 +171,7 @@ class CollectionService {
             // Get the item first to handle cleanup and activity tracking
             // Use proper populate configuration based on entity type
             const populateConfig = this.getDeletePopulateConfig();
-            const item = await this.repository.findById(id, {populate: populateConfig});
+            const item = await this.repository.findById(id, { populate: populateConfig });
 
             // Determine card type based on entity name and collection type
             let cardType = 'raw'; // default
@@ -448,8 +448,8 @@ class CollectionService {
         try {
             const operations = updates.map((update) => ({
                 updateOne: {
-                    filter: {_id: update.id},
-                    update: {$set: update.data}
+                    filter: { _id: update.id },
+                    update: { $set: update.data }
                 }
             }));
 

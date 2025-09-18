@@ -160,7 +160,7 @@ function convertDateToString(value) {
         if (!isNaN(date.getTime())) {
             return date.toISOString();
         }
-    } catch (error) {
+    } catch {
         // If all else fails, return null
         return null;
     }
@@ -259,25 +259,21 @@ function convertObjectIdsToStrings(obj, depth = 0) {
                 // IMPORTANT: Check for Date objects FIRST to avoid corrupting them
                 if (value instanceof Date) {
                     processed[key] = value; // Keep Date objects as-is
-                }
+                } else if (value.buffer && typeof value.buffer === 'object' && Object.keys(value.buffer).every(k => !isNaN(k))) {
                 // Check if it's an ObjectId with buffer property
-                else if (value.buffer && typeof value.buffer === 'object' && Object.keys(value.buffer).every(k => !isNaN(k))) {
                     // Convert buffer-based ObjectId to string
                     const bytesArray = Object.keys(value.buffer).map(k => value.buffer[k]);
                     const buffer = Buffer.from(bytesArray);
 
                     processed[key] = buffer.toString('hex');
-                }
+                } else if (value.constructor && (value.constructor.name === 'ObjectID' || value.constructor.name === 'ObjectId')) {
                 // Check if it's a Mongoose ObjectId
-                else if (value.constructor && (value.constructor.name === 'ObjectID' || value.constructor.name === 'ObjectId')) {
                     processed[key] = value.toString();
-                }
+                } else if (typeof value === 'string' && (/^[0-9a-fA-F]{24}$/).test(value)) {
                 // Check if it's already a proper ObjectId string format (24 hex characters)
-                else if (typeof value === 'string' && (/^[0-9a-fA-F]{24}$/).test(value)) {
                     processed[key] = value;
-                }
+                } else {
                 // Recursively process nested objects and arrays with depth tracking
-                else {
                     processed[key] = convertObjectIdsToStrings(value, depth + 1);
                 }
             } else {

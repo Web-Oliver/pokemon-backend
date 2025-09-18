@@ -58,7 +58,7 @@ class BaseService {
      * @returns {Promise<Array>} - Array of entities
      */
     async getAll(filters = {}, options = {}) {
-        this.log('getAll', 'Starting operation', {filters, options});
+        this.log('getAll', 'Starting operation', { filters, options });
 
         try {
             const results = await this.repository.findAll(filters, options);
@@ -70,7 +70,7 @@ class BaseService {
 
             return results;
         } catch (error) {
-            this.logError('getAll', error, {filters, options});
+            this.logError('getAll', error, { filters, options });
             throw error;
         }
     }
@@ -83,7 +83,7 @@ class BaseService {
      * @returns {Promise<Object>} - Entity object
      */
     async getById(id, options = {}) {
-        this.log('getById', 'Starting operation', {id, options});
+        this.log('getById', 'Starting operation', { id, options });
 
         try {
             // Validate ID format
@@ -100,7 +100,7 @@ class BaseService {
 
             return entity;
         } catch (error) {
-            this.logError('getById', error, {id, options});
+            this.logError('getById', error, { id, options });
             throw error;
         }
     }
@@ -139,7 +139,7 @@ class BaseService {
 
             return entity;
         } catch (error) {
-            this.logError('create', error, {data, options});
+            this.logError('create', error, { data, options });
             throw error;
         }
     }
@@ -181,7 +181,7 @@ class BaseService {
 
             return entity;
         } catch (error) {
-            this.logError('update', error, {id, data, options});
+            this.logError('update', error, { id, data, options });
             throw error;
         }
     }
@@ -193,7 +193,7 @@ class BaseService {
      * @returns {Promise<Object>} - Deleted entity
      */
     async delete(id) {
-        this.log('delete', 'Starting operation', {id});
+        this.log('delete', 'Starting operation', { id });
 
         try {
             // Validate ID
@@ -219,7 +219,7 @@ class BaseService {
 
             return entity;
         } catch (error) {
-            this.logError('delete', error, {id});
+            this.logError('delete', error, { id });
             throw error;
         }
     }
@@ -231,16 +231,16 @@ class BaseService {
      * @returns {Promise<number>} - Entity count
      */
     async count(filters = {}) {
-        this.log('count', 'Starting operation', {filters});
+        this.log('count', 'Starting operation', { filters });
 
         try {
             const count = await this.repository.count(filters);
 
-            this.log('count', 'Count completed', {count, hasFilters: Object.keys(filters).length > 0});
+            this.log('count', 'Count completed', { count, hasFilters: Object.keys(filters).length > 0 });
 
             return count;
         } catch (error) {
-            this.logError('count', error, {filters});
+            this.logError('count', error, { filters });
             throw error;
         }
     }
@@ -252,16 +252,16 @@ class BaseService {
      * @returns {Promise<boolean>} - True if exists
      */
     async exists(filters) {
-        this.log('exists', 'Starting operation', {filters});
+        this.log('exists', 'Starting operation', { filters });
 
         try {
             const exists = await this.repository.exists(filters);
 
-            this.log('exists', 'Existence check completed', {exists, filters});
+            this.log('exists', 'Existence check completed', { exists, filters });
 
             return exists;
         } catch (error) {
-            this.logError('exists', error, {filters});
+            this.logError('exists', error, { filters });
             throw error;
         }
     }
@@ -274,7 +274,7 @@ class BaseService {
      * @returns {Promise<Object>} - Paginated results
      */
     async findPaginated(filters = {}, options = {}) {
-        this.log('findPaginated', 'Starting operation', {filters, options});
+        this.log('findPaginated', 'Starting operation', { filters, options });
 
         try {
             const results = await this.repository.findWithPagination(filters, options);
@@ -287,7 +287,7 @@ class BaseService {
 
             return results;
         } catch (error) {
-            this.logError('findPaginated', error, {filters, options});
+            this.logError('findPaginated', error, { filters, options });
             throw error;
         }
     }
@@ -303,16 +303,16 @@ class BaseService {
      */
     async validateCreateData(data) {
         // Enhanced validation with ValidatorFactory
-        ValidatorFactory.object(data, 'Create data', {required: true});
+        ValidatorFactory.object(data, 'Create data', { required: true });
 
         // Common field validations that apply to most entities
         if (data.myPrice !== undefined) {
-            ValidatorFactory.price(data.myPrice, 'My price', {min: 0});
+            ValidatorFactory.price(data.myPrice, 'My price', { min: 0 });
         }
 
         if (data.images !== undefined) {
             ValidatorFactory.array(data.images, 'Images', {
-                itemValidator: (item) => ValidatorFactory.string(item, 'Image URL', {required: true})
+                itemValidator: (item) => ValidatorFactory.string(item, 'Image URL', { required: true })
             });
         }
 
@@ -351,16 +351,16 @@ class BaseService {
      */
     async validateUpdateData(data, id) {
         // Enhanced validation with ValidatorFactory
-        ValidatorFactory.object(data, 'Update data', {required: true});
+        ValidatorFactory.object(data, 'Update data', { required: true });
 
         // Common field validations for updates
         if (data.myPrice !== undefined) {
-            ValidatorFactory.price(data.myPrice, 'My price', {min: 0});
+            ValidatorFactory.price(data.myPrice, 'My price', { min: 0 });
         }
 
         if (data.images !== undefined) {
             ValidatorFactory.array(data.images, 'Images', {
-                itemValidator: (item) => ValidatorFactory.string(item, 'Image URL', {required: true})
+                itemValidator: (item) => ValidatorFactory.string(item, 'Image URL', { required: true })
             });
         }
 
@@ -395,7 +395,7 @@ class BaseService {
      */
     async preprocessCreateData(data) {
         // Default implementation - return data as-is
-        return {...data};
+        return { ...data };
     }
 
     /**
@@ -407,9 +407,9 @@ class BaseService {
      * @returns {Promise<Object>} - Processed data
      * @protected
      */
-    async preprocessUpdateData(data, id) {
+    async preprocessUpdateData(data) {
         // Default implementation - return data as-is
-        return {...data};
+        return { ...data };
     }
 
     /**
@@ -543,7 +543,7 @@ class BaseService {
                 totalProcessed: dataArray.length
             };
         } catch (error) {
-            this.logError('createMany', error, {itemCount: dataArray.length});
+            this.logError('createMany', error, { itemCount: dataArray.length });
             throw error;
         }
     }
@@ -565,9 +565,9 @@ class BaseService {
                 required: true,
                 minLength: 1,
                 itemValidator: (item) => {
-                    ValidatorFactory.object(item, 'Update item', {required: true});
+                    ValidatorFactory.object(item, 'Update item', { required: true });
                     ValidatorFactory.objectId(item.id, 'Update item ID');
-                    ValidatorFactory.object(item.data, 'Update item data', {required: true});
+                    ValidatorFactory.object(item.data, 'Update item data', { required: true });
                 }
             });
 
@@ -575,7 +575,7 @@ class BaseService {
             const errors = [];
 
             for (let i = 0; i < updates.length; i++) {
-                const {id, data} = updates[i];
+                const { id, data } = updates[i];
                 try {
                     const entity = await this.update(id, data, options);
                     results.push(entity);
@@ -601,7 +601,7 @@ class BaseService {
                 totalProcessed: updates.length
             };
         } catch (error) {
-            this.logError('updateMany', error, {itemCount: updates.length});
+            this.logError('updateMany', error, { itemCount: updates.length });
             throw error;
         }
     }
@@ -614,7 +614,7 @@ class BaseService {
      * @returns {Promise<Object>} - Updated entity
      */
     async markAsSold(id, saleDetails) {
-        this.log('markAsSold', 'Starting sale operation', {id, saleDetails});
+        this.log('markAsSold', 'Starting sale operation', { id, saleDetails });
 
         try {
             // Validate inputs
@@ -640,7 +640,7 @@ class BaseService {
 
             return entity;
         } catch (error) {
-            this.logError('markAsSold', error, {id, saleDetails});
+            this.logError('markAsSold', error, { id, saleDetails });
             throw error;
         }
     }

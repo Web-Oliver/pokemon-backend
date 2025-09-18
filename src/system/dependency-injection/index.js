@@ -10,7 +10,7 @@ import CollectionService from '@/collection/items/CollectionService.js';
 import ImageManager from '@/uploads/imageManager.js';
 import SaleService from '@/collection/sales/saleService.js';
 // SearchFactory removed - replaced with simple searchService
-import {getEntityConfig} from '@/system/database/entityConfigurations.js';
+import { getEntityConfig } from '@/system/database/entityConfigurations.js';
 import Logger from '@/system/logging/Logger.js';
 
 /**
@@ -253,7 +253,7 @@ class Container {
         }
 
         // Execute before resolve hooks
-        this.executeHooks('beforeResolve', {name, dependency, context});
+        this.executeHooks('beforeResolve', { name, dependency, context });
 
         this.isResolvingStack.add(name);
 
@@ -291,13 +291,13 @@ class Container {
             }
 
             // Execute after resolve hooks
-            this.executeHooks('afterResolve', {name, instance, dependency, context});
+            this.executeHooks('afterResolve', { name, instance, dependency, context });
 
             return instance;
 
         } catch (error) {
             // Execute error hooks
-            this.executeHooks('onError', {name, error, dependency, context});
+            this.executeHooks('onError', { name, error, dependency, context });
             throw error;
         } finally {
             this.isResolvingStack.delete(name);

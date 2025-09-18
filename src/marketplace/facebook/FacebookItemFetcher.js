@@ -1,8 +1,8 @@
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import SealedProduct from '@/collection/items/SealedProduct.js';
-import {fetchSingleItem} from '@/collection/items/ItemBatchFetcher.js';
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 
 /**
  * Facebook Item Fetcher Service
@@ -72,22 +72,22 @@ class FacebookItemFetcher {
                 // Try PSA cards first
                 let item = await PsaGradedCard.findById(itemId).populate({
                     path: 'cardId',
-                    populate: {path: 'setId', model: 'Set'}
+                    populate: { path: 'setId', model: 'Set' }
                 });
 
                 if (item) {
-                    fetchedItems.push({data: item, category: 'PsaGradedCard'});
+                    fetchedItems.push({ data: item, category: 'PsaGradedCard' });
                     continue;
                 }
 
                 // Try Raw cards
                 item = await RawCard.findById(itemId).populate({
                     path: 'cardId',
-                    populate: {path: 'setId', model: 'Set'}
+                    populate: { path: 'setId', model: 'Set' }
                 });
 
                 if (item) {
-                    fetchedItems.push({data: item, category: 'RawCard'});
+                    fetchedItems.push({ data: item, category: 'RawCard' });
                     continue;
                 }
 
@@ -95,7 +95,7 @@ class FacebookItemFetcher {
                 item = await SealedProduct.findById(itemId);
 
                 if (item) {
-                    fetchedItems.push({data: item, category: 'SealedProduct'});
+                    fetchedItems.push({ data: item, category: 'SealedProduct' });
                     continue;
                 }
 

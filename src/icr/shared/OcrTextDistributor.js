@@ -91,7 +91,7 @@ export class OcrTextDistributor {
             }
 
             // Sort text within each label by Y position (top to bottom)
-            distribution.forEach((segments, labelIndex) => {
+            distribution.forEach((segments) => {
                 segments.sort((a, b) => a.centerY - b.centerY);
             });
 
@@ -151,7 +151,7 @@ export class OcrTextDistributor {
      */
     static findBestLabelMatch(textCenterY, textBounds, labelPositions) {
         const TOLERANCE = 10; // 10px tolerance for boundary detection
-        let bestMatch = {labelIndex: -1, confidence: 0, overlapPercentage: 0};
+        let bestMatch = { labelIndex: -1, confidence: 0, overlapPercentage: 0 };
 
         for (let i = 0; i < labelPositions.length; i++) {
             const position = labelPositions[i];
@@ -220,8 +220,7 @@ export class OcrTextDistributor {
      * @param {Array} originalAnnotations - Original OCR annotations
      * @returns {Object} Quality metrics
      */
-    static getDistributionQualityMetrics(distributionResults, originalAnnotations) {
-        const totalAnnotations = originalAnnotations.length - 1; // Exclude full text block
+    static getDistributionQualityMetrics(distributionResults) {
         const distributedText = distributionResults.filter(text => text.length > 0);
         const emptyLabels = distributionResults.filter(text => text.length === 0);
 

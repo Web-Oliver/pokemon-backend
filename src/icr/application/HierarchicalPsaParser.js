@@ -266,7 +266,7 @@ class HierarchicalPsaParser {
         }
 
         // STEP 1: Get all sets matching the year (highly selective)
-        const matchingSets = await SetModel.find({year: year}, '_id setName year').lean();
+        const matchingSets = await SetModel.find({ year: year }, '_id setName year').lean();
 
         if (matchingSets.length === 0) {
             console.log(`No sets found for year ${year}`);
@@ -279,7 +279,7 @@ class HierarchicalPsaParser {
         // STEP 2: Get ALL cards from those sets (year-filtered first)
         const yearFilteredCards = await Card.find(
             {
-                setId: {$in: setIds}  // Only cards from year-matching sets
+                setId: { $in: setIds }  // Only cards from year-matching sets
             },
             'cardName cardNumber variety setId uniqueSetId uniquePokemonId'
         )
@@ -327,7 +327,7 @@ class HierarchicalPsaParser {
         const filteredCandidates = [];
         const rejectedCandidates = [];
 
-        cardCandidates.forEach((card, index) => {
+        cardCandidates.forEach((card) => {
             const cardName = card.cardName?.toUpperCase() || '';
 
             let bestMatch = null;
@@ -425,7 +425,7 @@ class HierarchicalPsaParser {
      * STEP 3: Enrich candidates with set details (if not populated)
      */
     async enrichWithSetDetails(candidates) {
-        const enrichedCandidates = candidates.map((card, index) => {
+        const enrichedCandidates = candidates.map((card) => {
 
             let setDetails = null;
 
@@ -455,14 +455,14 @@ class HierarchicalPsaParser {
         const verifiedCandidates = [];
         const rejectedCandidates = [];
 
-        candidates.forEach((candidate, index) => {
+        candidates.forEach((candidate) => {
             const setName = candidate.setDetails?.setName || '';
-            const setYear = candidate.setDetails?.year;
+            // const setYear = candidate.setDetails?.year; // Unused variable
             const setNameUpper = setName.toUpperCase();
 
             let setConfidence = 0;
             let matchedPortion = '';
-            let debugInfo = {
+            const debugInfo = {
                 exactMatch: false,
                 partialMatch: false,
                 words: [],
@@ -517,7 +517,7 @@ class HierarchicalPsaParser {
             if (willKeep) {
                 verifiedCandidates.push(result);
             } else {
-                rejectedCandidates.push({...result, rejectionReason: `Set confidence too low: ${setConfidence}`});
+                rejectedCandidates.push({ ...result, rejectionReason: `Set confidence too low: ${setConfidence}` });
             }
         });
 
@@ -528,7 +528,7 @@ class HierarchicalPsaParser {
     /**
      * PHASE 5: Score matches based on multiple factors
      */
-    scoreMatches(candidates, extractedData, ocrText) {
+    scoreMatches(candidates, extractedData) {
         return candidates.map(candidate => {
             const card = candidate.card;
             const setVerification = candidate.setVerification;

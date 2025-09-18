@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import fs from 'fs/promises';
 import path from 'path';
-import {ImageAnnotatorClient} from '@google-cloud/vision';
+import { ImageAnnotatorClient } from '@google-cloud/vision';
 
 /**
  * HealthService - Comprehensive Dependency Health Checks
@@ -100,50 +100,6 @@ export default class HealthService {
         }
     }
 
-    /**
-     * Get detailed health information for monitoring
-     * @returns {Promise<Object>} Detailed health data
-     */
-    async getDetailedHealthInfo() {
-        const basicHealth = await this.performHealthChecks();
-
-        // Add detailed system information
-        const detailedSystem = await this.getDetailedSystemInfo();
-        basicHealth.checks.system = {...basicHealth.checks.system, ...detailedSystem};
-
-        return basicHealth;
-    }
-
-    /**
-     * Check if service is ready to accept traffic
-     * @returns {Promise<boolean>} Readiness status
-     */
-    async checkReadiness() {
-        try {
-            // For readiness, we need database and cache to be working
-            await this.checkDatabase();
-            await this.checkCache();
-            return true;
-        } catch (error) {
-            console.error('[ERROR] Readiness check failed', error);
-            return false;
-        }
-    }
-
-    /**
-     * Check if service is alive (basic liveness)
-     * @returns {Promise<boolean>} Liveness status
-     */
-    async checkLiveness() {
-        try {
-            // Basic liveness - can we access system resources?
-            await this.checkSystemResources();
-            return true;
-        } catch (error) {
-            console.error('[ERROR] Liveness check failed', error);
-            return false;
-        }
-    }
 
     /**
      * Check MongoDB database connectivity

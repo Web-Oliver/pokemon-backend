@@ -57,32 +57,28 @@ const setCacheHeaders = (req, res, next) => {
                 Pragma: 'no-cache',
                 Expires: '0'
             });
-        }
+        } else if (req.url.includes('/auctions')) {
         // NO CACHE for auction data to ensure real-time updates
-        else if (req.url.includes('/auctions')) {
             res.set({
                 'Cache-Control': 'no-cache, no-store, must-revalidate',
                 Pragma: 'no-cache',
                 Expires: '0'
             });
-        }
+        } else if (req.url.includes('/search')) {
         // Short cache for search results only
-        else if (req.url.includes('/search')) {
             res.set({
                 'Cache-Control': 'public, max-age=60', // 1 minute
                 Vary: 'Accept-Encoding'
             });
-        }
+        } else if (req.url.includes('/icr')) {
         // NO CACHE for ICR/OCR - Real-time data required
-        else if (req.url.includes('/icr')) {
             res.set({
                 'Cache-Control': 'no-cache, no-store, must-revalidate',
                 'Pragma': 'no-cache',
                 'Expires': '0'
             });
-        }
+        } else {
         // Moderate cache for other less dynamic data
-        else {
             res.set({
                 'Cache-Control': 'public, max-age=300', // 5 minutes
                 Vary: 'Accept-Encoding'

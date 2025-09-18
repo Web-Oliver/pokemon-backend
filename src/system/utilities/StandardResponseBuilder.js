@@ -12,7 +12,7 @@
  * AFTER: Standardized patterns with context-specific metadata
  */
 
-import {AppError, NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { AppError, NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
 export class StandardResponseBuilder {
     /**
@@ -82,10 +82,10 @@ export class StandardResponseBuilder {
                 details: {
                     ...additionalDetails,
                     ...(error.details || {}),
-                    ...(error.operationContext && {operationContext: error.operationContext})
+                    ...(error.operationContext && { operationContext: error.operationContext })
                 },
                 timestamp: new Date().toISOString(),
-                ...(process.env.NODE_ENV !== 'production' && {stack: error.stack})
+                ...(process.env.NODE_ENV !== 'production' && { stack: error.stack })
             }
         };
     }

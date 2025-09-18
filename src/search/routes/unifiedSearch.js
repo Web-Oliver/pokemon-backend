@@ -1,7 +1,7 @@
 import express from 'express';
 import searchController from '@/search/controllers/searchController.js';
-import {searchCacheMiddleware} from '@/search/middleware/searchCache.js';
-import {validationMiddlewares} from '@/system/middleware/validationMiddleware.js';
+import { searchCacheMiddleware } from '@/search/middleware/searchCache.js';
+import { validationMiddlewares } from '@/system/middleware/validationMiddleware.js';
 
 const router = express.Router();
 /**

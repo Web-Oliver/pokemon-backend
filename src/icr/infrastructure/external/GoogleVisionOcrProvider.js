@@ -78,7 +78,7 @@ export class GoogleVisionOcrProvider {
 
             // Prepare request
             const request = {
-                image: {content: imageBuffer},
+                image: { content: imageBuffer },
                 features: [
                     {
                         type: 'TEXT_DETECTION', // ✅ FIXED: Use TEXT_DETECTION for PSA labels (better for simple text)
@@ -212,7 +212,7 @@ export class GoogleVisionOcrProvider {
                 0, 1, 90, 250, 46, 237, 0, 0, 0, 0, 73, 69, 78, 68, 174, 66, 96, 130
             ]);
 
-            const [result] = await this.client.textDetection({image: {content: testImage}});
+            await this.client.textDetection({ image: { content: testImage } });
             Logger.info('GoogleVisionOcrProvider', '✅ Connection test successful');
 
             return true;
@@ -232,7 +232,7 @@ export class GoogleVisionOcrProvider {
         const maxRequests = 60; // Max requests per minute
 
         // Clean old entries
-        for (const [timestamp, count] of this.rateLimiter.entries()) {
+        for (const [timestamp] of this.rateLimiter.entries()) {
             if (now - timestamp > windowMs) {
                 this.rateLimiter.delete(timestamp);
             }

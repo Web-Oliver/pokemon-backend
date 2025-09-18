@@ -112,7 +112,7 @@ export function getCollectionExportHandler(format, type = null) {
  * Get handler for export download
  */
 export function getExportDownloadHandler(exportId) {
-    for (const [key, config] of Object.entries(EXPORT_DOWNLOAD_HANDLERS)) {
+    for (const [, config] of Object.entries(EXPORT_DOWNLOAD_HANDLERS)) {
         if (config.matcher(exportId)) {
             return config.handler;
         }

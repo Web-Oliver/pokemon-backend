@@ -9,20 +9,13 @@
 
 import express from 'express';
 import IcrBatchController from '@/icr/presentation/controllers/IcrBatchController.js';
-import {validationMiddlewares} from '@/system/middleware/validationMiddleware.js';
+import { validationMiddlewares } from '@/system/middleware/validationMiddleware.js';
 
 const router = express.Router();
 
 // NO CACHING FOR ICR - Removed all caching middleware to prevent workflow issues
 
 // Initialize controller with debug logging
-try {
-    const icrBatchController = new IcrBatchController();
-} catch (error) {
-    console.error('❌ [DEBUG] Failed to create IcrBatchController:', error.message);
-    console.error('❌ [DEBUG] Stack:', error.stack);
-    throw error;
-}
 const icrBatchController = new IcrBatchController();
 
 // ================================

@@ -1,7 +1,7 @@
-import {fetchSingleItem} from '@/collection/items/ItemBatchFetcher.js';
+import { fetchSingleItem } from '@/collection/items/ItemBatchFetcher.js';
 import dbaFormatter from '@/marketplace/dba/dbaFormatter.js';
 import FacebookPostService from '@/marketplace/facebook/FacebookPostService.js';
-import {asyncHandler, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 
 /**
  * Generate Facebook auction post text
@@ -13,7 +13,7 @@ import {asyncHandler, ValidationError} from '@/system/middleware/CentralizedErro
  * }
  */
 const generateFacebookPost = asyncHandler(async (req, res) => {
-    const {items, topText, bottomText} = req.body;
+    const { items, topText, bottomText } = req.body;
 
     // Use FacebookPostService to handle the entire workflow
     const facebookPostService = new FacebookPostService();
@@ -31,7 +31,7 @@ const generateFacebookPost = asyncHandler(async (req, res) => {
  * Body: { itemIds: string[] }
  */
 const getCollectionFacebookTextFile = asyncHandler(async (req, res) => {
-    const {itemIds} = req.body;
+    const { itemIds } = req.body;
 
     // Use FacebookPostService to handle the entire workflow
     const facebookPostService = new FacebookPostService();
@@ -49,7 +49,7 @@ const getCollectionFacebookTextFile = asyncHandler(async (req, res) => {
  * Body: { itemId, itemCategory }
  */
 const generateDbaTitle = asyncHandler(async (req, res) => {
-    const {itemId, itemCategory} = req.body;
+    const { itemId, itemCategory } = req.body;
 
     if (!itemId || !itemCategory) {
         throw new ValidationError('Both itemId and itemCategory are required');

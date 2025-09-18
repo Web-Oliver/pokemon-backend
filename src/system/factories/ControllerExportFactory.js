@@ -22,7 +22,6 @@ export class ControllerExportFactory {
      */
     static createControllerExports(ControllerClass, methods, options = {}) {
         const {
-            enableLazyLoading = true,
             includeControllerGetter = true,
             methodAliases = {},
             includeDefaultExports = true

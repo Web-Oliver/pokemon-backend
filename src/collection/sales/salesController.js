@@ -1,7 +1,7 @@
 // Sales controller for managing sold items and sales analytics
-import {buildDateFilter, fetchSalesData} from '@/collection/sales/salesDataService.js';
-import {calculateSalesSummary, generateGraphData} from '@/collection/sales/salesAnalyticsService.js';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
+import { buildDateFilter, fetchSalesData } from '@/collection/sales/salesDataService.js';
+import { calculateSalesSummary, generateGraphData } from '@/collection/sales/salesAnalyticsService.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
 import Logger from '@/system/logging/Logger.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 
@@ -11,19 +11,19 @@ const getSales = asyncHandler(async (req, res) => {
         errorHandlers: SalesErrorHandlers,
         successLoggers: SalesSuccessLoggers
     } = ValidatorFactory.salesUtils;
-    Logger.operationStart('GET_SALES_DATA', 'Fetching sales data', {query: req.query});
+    Logger.operationStart('GET_SALES_DATA', 'Fetching sales data', { query: req.query });
 
-    const {category, startDate, endDate} = req.query;
+    const { category, startDate, endDate } = req.query;
 
     // Use centralized validation
-    SalesValidators.validateGetSalesParams({category, startDate, endDate});
+    SalesValidators.validateGetSalesParams({ category, startDate, endDate });
 
     try {
         const filter = buildDateFilter(startDate, endDate);
         const salesData = await fetchSalesData(filter, category);
 
         // Use centralized success logging
-        SalesSuccessLoggers.logGetSalesSuccess({category, startDate, endDate}, salesData);
+        SalesSuccessLoggers.logGetSalesSuccess({ category, startDate, endDate }, salesData);
 
         res.status(200).json({
             success: true,
@@ -32,7 +32,7 @@ const getSales = asyncHandler(async (req, res) => {
         });
     } catch (error) {
         // Use centralized error handling
-        SalesErrorHandlers.handleGetSalesError(error, {category, startDate, endDate});
+        SalesErrorHandlers.handleGetSalesError(error, { category, startDate, endDate });
     }
 });
 
@@ -42,12 +42,12 @@ const getSalesSummary = asyncHandler(async (req, res) => {
         errorHandlers: SalesErrorHandlers,
         successLoggers: SalesSuccessLoggers
     } = ValidatorFactory.salesUtils;
-    Logger.operationStart('GET_SALES_SUMMARY', 'Calculating sales summary', {query: req.query});
+    Logger.operationStart('GET_SALES_SUMMARY', 'Calculating sales summary', { query: req.query });
 
-    const {category, startDate, endDate} = req.query;
+    const { category, startDate, endDate } = req.query;
 
     // Use centralized validation
-    SalesValidators.validateGetSalesParams({category, startDate, endDate});
+    SalesValidators.validateGetSalesParams({ category, startDate, endDate });
 
     try {
         const filter = buildDateFilter(startDate, endDate);
@@ -55,17 +55,17 @@ const getSalesSummary = asyncHandler(async (req, res) => {
         const summary = calculateSalesSummary(salesData);
 
         // Use centralized success logging
-        SalesSuccessLoggers.logGetSalesSummarySuccess({category, startDate, endDate}, {
+        SalesSuccessLoggers.logGetSalesSummarySuccess({ category, startDate, endDate }, {
             salesDataCount: salesData.length,
             totalSales: summary.totalSales,
             totalValue: summary.totalValue,
             averageValue: summary.averageValue
         });
 
-        res.status(200).json({success: true, data: summary});
+        res.status(200).json({ success: true, data: summary });
     } catch (error) {
         // Use centralized error handling
-        SalesErrorHandlers.handleGetSalesSummaryError(error, {category, startDate, endDate});
+        SalesErrorHandlers.handleGetSalesSummaryError(error, { category, startDate, endDate });
     }
 });
 
@@ -75,12 +75,12 @@ const getSalesGraphData = asyncHandler(async (req, res) => {
         errorHandlers: SalesErrorHandlers,
         successLoggers: SalesSuccessLoggers
     } = ValidatorFactory.salesUtils;
-    Logger.operationStart('GET_SALES_GRAPH_DATA', 'Generating sales graph data', {query: req.query});
+    Logger.operationStart('GET_SALES_GRAPH_DATA', 'Generating sales graph data', { query: req.query });
 
-    const {category, startDate, endDate} = req.query;
+    const { category, startDate, endDate } = req.query;
 
     // Use centralized validation
-    SalesValidators.validateGetSalesParams({category, startDate, endDate});
+    SalesValidators.validateGetSalesParams({ category, startDate, endDate });
 
     try {
         const filter = buildDateFilter(startDate, endDate);
@@ -88,7 +88,7 @@ const getSalesGraphData = asyncHandler(async (req, res) => {
         const graphData = generateGraphData(salesData);
 
         // Use centralized success logging
-        SalesSuccessLoggers.logGetSalesGraphDataSuccess({category, startDate, endDate}, {
+        SalesSuccessLoggers.logGetSalesGraphDataSuccess({ category, startDate, endDate }, {
             salesDataCount: salesData.length,
             graphData
         });
@@ -96,7 +96,7 @@ const getSalesGraphData = asyncHandler(async (req, res) => {
         res.status(200).json(graphData);
     } catch (error) {
         // Use centralized error handling
-        SalesErrorHandlers.handleGetSalesGraphDataError(error, {category, startDate, endDate});
+        SalesErrorHandlers.handleGetSalesGraphDataError(error, { category, startDate, endDate });
     }
 });
 

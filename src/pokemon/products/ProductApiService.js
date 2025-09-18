@@ -13,7 +13,7 @@
 
 import Product from '@/pokemon/products/Product.js';
 import SetProduct from '@/pokemon/products/SetProduct.js';
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 
 class ProductApiService {
@@ -27,18 +27,18 @@ class ProductApiService {
             category,
             setName,
             availableOnly,
-            sort = {available: -1, price: 1}
+            sort = { available: -1, price: 1 }
         } = params;
 
         // Validate pagination
-        const {pageNum, limitNum} = ValidatorFactory.validatePagination(page, limit, 100);
+        const { pageNum, limitNum } = ValidatorFactory.validatePagination(page, limit, 100);
         const skip = (pageNum - 1) * limitNum;
 
         // Build query for Product model
         const query = {};
 
         if (category) query.category = category;
-        if (availableOnly === true) query.available = {$gt: 0};
+        if (availableOnly === true) query.available = { $gt: 0 };
 
         // Handle setName by looking up SetProduct and using its ID
         if (setName) {
@@ -100,8 +100,8 @@ class ProductApiService {
      */
     static async getCategories() {
         const categories = await Product.aggregate([
-            {$group: {_id: '$category', count: {$sum: 1}}},
-            {$sort: {_id: 1}}
+            { $group: { _id: '$category', count: { $sum: 1 } } },
+            { $sort: { _id: 1 } }
         ]);
 
         return categories.map(cat => ({
@@ -115,18 +115,18 @@ class ProductApiService {
      */
     static async getCategoryDetails(category) {
         const details = await Product.aggregate([
-            {$match: {category}},
+            { $match: { category } },
             {
                 $group: {
                     _id: null,
-                    totalProducts: {$sum: 1},
+                    totalProducts: { $sum: 1 },
                     availableProducts: {
-                        $sum: {$cond: [{$gt: ['$available', 0]}, 1, 0]}
+                        $sum: { $cond: [{ $gt: ['$available', 0] }, 1, 0] }
                     },
-                    totalAvailable: {$sum: '$available'},
-                    avgPrice: {$avg: {$toDouble: '$price'}},
-                    minPrice: {$min: {$toDouble: '$price'}},
-                    maxPrice: {$max: {$toDouble: '$price'}}
+                    totalAvailable: { $sum: '$available' },
+                    avgPrice: { $avg: { $toDouble: '$price' } },
+                    minPrice: { $min: { $toDouble: '$price' } },
+                    maxPrice: { $max: { $toDouble: '$price' } }
                 }
             }
         ]);

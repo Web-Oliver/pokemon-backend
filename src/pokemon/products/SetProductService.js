@@ -11,7 +11,7 @@
 
 import SetProduct from '@/pokemon/products/SetProduct.js';
 import Product from '@/pokemon/products/Product.js';
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
 class SetProductService {
 
@@ -39,7 +39,7 @@ class SetProductService {
 
         if (query && query.trim()) {
             mongoQuery.$or = [
-                {setProductName: {$regex: query.trim(), $options: 'i'}}
+                { setProductName: { $regex: query.trim(), $options: 'i' } }
             ];
         }
 
@@ -109,7 +109,7 @@ class SetProductService {
         }
 
         const setProduct = await SetProduct.findOne({
-            setProductName: {$regex: `^${setProductName.trim()}$`, $options: 'i'}
+            setProductName: { $regex: `^${setProductName.trim()}$`, $options: 'i' }
         }).lean();
 
         if (!setProduct) {
@@ -126,20 +126,20 @@ class SetProductService {
      * @returns {Object} Products with pagination
      */
     async getProductsBySetProduct(setProductId, options = {}) {
-        const {page = 1, limit = 20, category, availableOnly = false} = options;
+        const { page = 1, limit = 20, category, availableOnly = false } = options;
 
         // Verify SetProduct exists
         await this.getSetProductById(setProductId);
 
         // Build product query
-        const productQuery = {setProductId};
+        const productQuery = { setProductId };
 
         if (category) {
-            productQuery.category = {$regex: category, $options: 'i'};
+            productQuery.category = { $regex: category, $options: 'i' };
         }
 
         if (availableOnly) {
-            productQuery.available = {$gt: 0};
+            productQuery.available = { $gt: 0 };
         }
 
         // Calculate pagination
@@ -149,7 +149,7 @@ class SetProductService {
         const [products, totalCount] = await Promise.all([
             Product.find(productQuery)
                 .populate('setProductId', 'setProductName')
-                .sort({productName: 1})
+                .sort({ productName: 1 })
                 .skip(skip)
                 .limit(limit)
                 .lean(),
@@ -182,10 +182,10 @@ class SetProductService {
                 {
                     $group: {
                         _id: null,
-                        totalSetProducts: {$sum: 1},
-                        avgUniqueId: {$avg: '$uniqueSetProductId'},
-                        maxUniqueId: {$max: '$uniqueSetProductId'},
-                        minUniqueId: {$min: '$uniqueSetProductId'}
+                        totalSetProducts: { $sum: 1 },
+                        avgUniqueId: { $avg: '$uniqueSetProductId' },
+                        maxUniqueId: { $max: '$uniqueSetProductId' },
+                        minUniqueId: { $min: '$uniqueSetProductId' }
                     }
                 }
             ]),
@@ -195,19 +195,19 @@ class SetProductService {
                 {
                     $group: {
                         _id: '$setProductId',
-                        productCount: {$sum: 1},
-                        totalAvailable: {$sum: '$available'},
-                        avgPrice: {$avg: {$toDouble: '$price'}}
+                        productCount: { $sum: 1 },
+                        totalAvailable: { $sum: '$available' },
+                        avgPrice: { $avg: { $toDouble: '$price' } }
                     }
                 },
                 {
                     $group: {
                         _id: null,
-                        setProductsWithProducts: {$sum: 1},
-                        avgProductsPerSet: {$avg: '$productCount'},
-                        totalProducts: {$sum: '$productCount'},
-                        avgAvailablePerSet: {$avg: '$totalAvailable'},
-                        avgPriceOverall: {$avg: '$avgPrice'}
+                        setProductsWithProducts: { $sum: 1 },
+                        avgProductsPerSet: { $avg: '$productCount' },
+                        totalProducts: { $sum: '$productCount' },
+                        avgAvailablePerSet: { $avg: '$totalAvailable' },
+                        avgPriceOverall: { $avg: '$avgPrice' }
                     }
                 }
             ])
@@ -236,7 +236,7 @@ class SetProductService {
      * @returns {Array} SetProducts with product counts
      */
     async getSetProductsWithCounts(options = {}) {
-        const {limit = 50, sortBy = 'productCount', sortOrder = 'desc'} = options;
+        const { limit = 50, sortBy = 'productCount', sortOrder = 'desc' } = options;
 
         const sortObj = {};
 
@@ -255,7 +255,7 @@ class SetProductService {
             // Add computed fields
             {
                 $addFields: {
-                    productCount: {$size: '$products'},
+                    productCount: { $size: '$products' },
                     totalAvailable: {
                         $sum: {
                             $map: {
@@ -274,8 +274,8 @@ class SetProductService {
                 }
             },
             // Sort and limit
-            {$sort: sortObj},
-            {$limit: limit}
+            { $sort: sortObj },
+            { $limit: limit }
         ]);
 
         return setProductsWithCounts;

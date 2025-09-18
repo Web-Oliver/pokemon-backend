@@ -226,22 +226,22 @@ export default class EndpointsService {
             description: 'Pokemon cards, sets, and products reference data',
             baseRoute: '/api',
             endpoints: [
-                {method: 'GET', path: '/sets', summary: 'Get Pokemon sets'},
-                {method: 'GET', path: '/sets/:id', summary: 'Get set by ID'},
-                {method: 'GET', path: '/sets/:setId/cards', summary: 'Get cards in set'},
-                {method: 'GET', path: '/cards', summary: 'Get Pokemon cards'},
-                {method: 'GET', path: '/cards/metrics', summary: 'Get card metrics'},
-                {method: 'GET', path: '/cards/:id', summary: 'Get card by ID'},
-                {method: 'GET', path: '/products', summary: 'Get Pokemon products'},
-                {method: 'GET', path: '/products/:id', summary: 'Get product by ID'},
-                {method: 'GET', path: '/products/set-names', summary: 'Get product set names'},
-                {method: 'GET', path: '/products/search', summary: 'Search products'},
-                {method: 'GET', path: '/products/categories', summary: 'Get product categories'},
-                {method: 'GET', path: '/products/categories/:category', summary: 'Get products by category'},
-                {method: 'GET', path: '/set-products', summary: 'Get set products'},
-                {method: 'GET', path: '/set-products/search', summary: 'Search set products'},
-                {method: 'GET', path: '/set-products/stats', summary: 'Get set product statistics'},
-                {method: 'GET', path: '/set-products/:id', summary: 'Get set product by ID'}
+                { method: 'GET', path: '/sets', summary: 'Get Pokemon sets' },
+                { method: 'GET', path: '/sets/:id', summary: 'Get set by ID' },
+                { method: 'GET', path: '/sets/:setId/cards', summary: 'Get cards in set' },
+                { method: 'GET', path: '/cards', summary: 'Get Pokemon cards' },
+                { method: 'GET', path: '/cards/metrics', summary: 'Get card metrics' },
+                { method: 'GET', path: '/cards/:id', summary: 'Get card by ID' },
+                { method: 'GET', path: '/products', summary: 'Get Pokemon products' },
+                { method: 'GET', path: '/products/:id', summary: 'Get product by ID' },
+                { method: 'GET', path: '/products/set-names', summary: 'Get product set names' },
+                { method: 'GET', path: '/products/search', summary: 'Search products' },
+                { method: 'GET', path: '/products/categories', summary: 'Get product categories' },
+                { method: 'GET', path: '/products/categories/:category', summary: 'Get products by category' },
+                { method: 'GET', path: '/set-products', summary: 'Get set products' },
+                { method: 'GET', path: '/set-products/search', summary: 'Search set products' },
+                { method: 'GET', path: '/set-products/stats', summary: 'Get set product statistics' },
+                { method: 'GET', path: '/set-products/:id', summary: 'Get set product by ID' }
             ]
         };
     }
@@ -256,13 +256,13 @@ export default class EndpointsService {
             description: 'Multi-engine search across all Pokemon data (FlexSearch + FuseJS + MongoDB)',
             baseRoute: '/api/search',
             endpoints: [
-                {method: 'GET', path: '/search', summary: 'Unified search'},
-                {method: 'GET', path: '/search/suggest', summary: 'Search suggestions'},
-                {method: 'GET', path: '/search/cards', summary: 'Search cards'},
-                {method: 'GET', path: '/search/products', summary: 'Search products'},
-                {method: 'GET', path: '/search/sets', summary: 'Search sets'},
-                {method: 'GET', path: '/search/set-products', summary: 'Search set products'},
-                {method: 'GET', path: '/search/stats', summary: 'Get search statistics'}
+                { method: 'GET', path: '/search', summary: 'Unified search' },
+                { method: 'GET', path: '/search/suggest', summary: 'Search suggestions' },
+                { method: 'GET', path: '/search/cards', summary: 'Search cards' },
+                { method: 'GET', path: '/search/products', summary: 'Search products' },
+                { method: 'GET', path: '/search/sets', summary: 'Search sets' },
+                { method: 'GET', path: '/search/set-products', summary: 'Search set products' },
+                { method: 'GET', path: '/search/stats', summary: 'Get search statistics' }
             ]
         };
     }
@@ -277,25 +277,25 @@ export default class EndpointsService {
             description: 'OCR pipeline for PSA graded card processing using Google Vision API',
             baseRoute: '/api/icr',
             endpoints: [
-                {method: 'POST', path: '/icr/upload', summary: 'Upload images for OCR'},
-                {method: 'POST', path: '/icr/extract-labels', summary: 'Extract PSA labels'},
-                {method: 'POST', path: '/icr/stitch', summary: 'Stitch images'},
-                {method: 'POST', path: '/icr/ocr', summary: 'Perform OCR'},
-                {method: 'POST', path: '/icr/distribute', summary: 'Distribute OCR text'},
-                {method: 'POST', path: '/icr/match', summary: 'Match cards'},
-                {method: 'GET', path: '/icr/scans', summary: 'Get all scans'},
-                {method: 'GET', path: '/icr/scans/:id', summary: 'Get scan by ID'},
-                {method: 'GET', path: '/icr/stitched', summary: 'Get stitched images'},
-                {method: 'GET', path: '/icr/status', summary: 'Get processing status'},
-                {method: 'POST', path: '/icr/status/check', summary: 'Check batch status'},
-                {method: 'POST', path: '/icr/sync-statuses', summary: 'Sync processing statuses'},
-                {method: 'GET', path: '/icr/images/full/:filename', summary: 'Get full image'},
-                {method: 'GET', path: '/icr/images/labels/:filename', summary: 'Get label image'},
-                {method: 'GET', path: '/icr/images/stitched/:filename', summary: 'Get stitched image'},
-                {method: 'DELETE', path: '/icr/scans', summary: 'Delete scans'},
-                {method: 'DELETE', path: '/icr/stitched/:id', summary: 'Delete stitched image'},
-                {method: 'PUT', path: '/icr/batch/:id/select-match', summary: 'Select card match'},
-                {method: 'POST', path: '/icr/create-psa', summary: 'Create PSA card'}
+                { method: 'POST', path: '/icr/upload', summary: 'Upload images for OCR' },
+                { method: 'POST', path: '/icr/extract-labels', summary: 'Extract PSA labels' },
+                { method: 'POST', path: '/icr/stitch', summary: 'Stitch images' },
+                { method: 'POST', path: '/icr/ocr', summary: 'Perform OCR' },
+                { method: 'POST', path: '/icr/distribute', summary: 'Distribute OCR text' },
+                { method: 'POST', path: '/icr/match', summary: 'Match cards' },
+                { method: 'GET', path: '/icr/scans', summary: 'Get all scans' },
+                { method: 'GET', path: '/icr/scans/:id', summary: 'Get scan by ID' },
+                { method: 'GET', path: '/icr/stitched', summary: 'Get stitched images' },
+                { method: 'GET', path: '/icr/status', summary: 'Get processing status' },
+                { method: 'POST', path: '/icr/status/check', summary: 'Check batch status' },
+                { method: 'POST', path: '/icr/sync-statuses', summary: 'Sync processing statuses' },
+                { method: 'GET', path: '/icr/images/full/:filename', summary: 'Get full image' },
+                { method: 'GET', path: '/icr/images/labels/:filename', summary: 'Get label image' },
+                { method: 'GET', path: '/icr/images/stitched/:filename', summary: 'Get stitched image' },
+                { method: 'DELETE', path: '/icr/scans', summary: 'Delete scans' },
+                { method: 'DELETE', path: '/icr/stitched/:id', summary: 'Delete stitched image' },
+                { method: 'PUT', path: '/icr/batch/:id/select-match', summary: 'Select card match' },
+                { method: 'POST', path: '/icr/create-psa', summary: 'Create PSA card' }
             ]
         };
     }
@@ -310,10 +310,9 @@ export default class EndpointsService {
             description: 'External marketplace integrations (DBA, Facebook)',
             baseRoute: '/api',
             endpoints: [
-                {method: 'POST', path: '/dba/posts', summary: 'Post to DBA'},
-                {method: 'GET', path: '/dba-selection', summary: 'Get DBA selections'},
-                {method: 'POST', path: '/dba-selection', summary: 'Add to DBA selection'},
-                {method: 'DELETE', path: '/dba-selection', summary: 'Remove from DBA selection'}
+                { method: 'GET', path: '/dba-selection', summary: 'Get DBA selections' },
+                { method: 'POST', path: '/dba-selection', summary: 'Add to DBA selection' },
+                { method: 'DELETE', path: '/dba-selection', summary: 'Remove from DBA selection' }
             ]
         };
     }
@@ -328,13 +327,13 @@ export default class EndpointsService {
             description: 'Collection activity tracking and history',
             baseRoute: '/api/activities',
             endpoints: [
-                {method: 'GET', path: '/activities', summary: 'Get activities'},
-                {method: 'GET', path: '/activities/stats', summary: 'Get activity statistics'},
-                {method: 'GET', path: '/activities/types', summary: 'Get activity types'},
-                {method: 'GET', path: '/activities/recent', summary: 'Get recent activities'},
-                {method: 'GET', path: '/activities/:id', summary: 'Get activity by ID'},
-                {method: 'POST', path: '/activities', summary: 'Create activity'},
-                {method: 'DELETE', path: '/activities/:id', summary: 'Delete activity'}
+                { method: 'GET', path: '/activities', summary: 'Get activities' },
+                { method: 'GET', path: '/activities/stats', summary: 'Get activity statistics' },
+                { method: 'GET', path: '/activities/types', summary: 'Get activity types' },
+                { method: 'GET', path: '/activities/recent', summary: 'Get recent activities' },
+                { method: 'GET', path: '/activities/:id', summary: 'Get activity by ID' },
+                { method: 'POST', path: '/activities', summary: 'Create activity' },
+                { method: 'DELETE', path: '/activities/:id', summary: 'Delete activity' }
             ]
         };
     }
@@ -349,9 +348,9 @@ export default class EndpointsService {
             description: 'File upload and image management',
             baseRoute: '/api',
             endpoints: [
-                {method: 'POST', path: '/upload/image', summary: 'Upload single image'},
-                {method: 'POST', path: '/upload/images', summary: 'Upload multiple images'},
-                {method: 'DELETE', path: '/upload/cleanup', summary: 'Cleanup orphaned images'}
+                { method: 'POST', path: '/upload/image', summary: 'Upload single image' },
+                { method: 'POST', path: '/upload/images', summary: 'Upload multiple images' },
+                { method: 'DELETE', path: '/upload/cleanup', summary: 'Cleanup orphaned images' }
             ]
         };
     }
@@ -379,7 +378,7 @@ export default class EndpointsService {
             description: 'System management - cache and monitoring',
             baseRoute: '/api',
             endpoints: [
-                {method: 'GET', path: '/cache/stats', summary: 'Get cache statistics'}
+                { method: 'GET', path: '/cache/stats', summary: 'Get cache statistics' }
             ]
         };
     }

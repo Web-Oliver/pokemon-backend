@@ -19,13 +19,13 @@ class PsaLabelExtractionService {
     /**
      * Extract PSA label using computer vision red detection
      */
-    async extractPsaLabel(imageBuffer, options = {}) {
+    async extractPsaLabel(imageBuffer) {
         try {
             const startTime = Date.now();
 
             const image = sharp(imageBuffer);
             const metadata = await image.metadata();
-            const {width, height} = metadata;
+            const { width, height } = metadata;
 
             console.log(`PsaLabelExtractionService: Analyzing image: ${width}x${height}`);
 
@@ -48,7 +48,7 @@ class PsaLabelExtractionService {
                     width: redRegion.width,
                     height: redRegion.height
                 })
-                .jpeg({quality: 95})
+                .jpeg({ quality: 95 })
                 .toBuffer();
 
             const processingTime = Date.now() - startTime;
@@ -56,7 +56,7 @@ class PsaLabelExtractionService {
             return {
                 labelBuffer,
                 cropRegion: redRegion,
-                extractedDimensions: {width: redRegion.width, height: redRegion.height},
+                extractedDimensions: { width: redRegion.width, height: redRegion.height },
                 processingTime,
                 detectionMethod: redRegion.detected ? 'computer_vision' : 'fallback'
             };
@@ -73,9 +73,9 @@ class PsaLabelExtractionService {
     async findRedLabelRegion(imageBuffer, width, height) {
         try {
             // Convert to RGB for HSV processing
-            const {data} = await sharp(imageBuffer)
+            const { data } = await sharp(imageBuffer)
                 .raw()
-                .toBuffer({resolveWithObject: true});
+                .toBuffer({ resolveWithObject: true });
 
             // Find red pixels in top 20% of image (where PSA labels are)
             const searchHeight = Math.floor(height * 0.2);
@@ -91,7 +91,7 @@ class PsaLabelExtractionService {
                     // Convert RGB to HSV and check if it's red
                     const hsv = this.rgbToHsv(r, g, b);
                     if (this.isRedColor(hsv)) {
-                        redPixels.push({x, y});
+                        redPixels.push({ x, y });
                     }
                 }
             }

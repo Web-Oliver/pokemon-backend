@@ -10,9 +10,9 @@ const SEARCH_CONFIGS = {
     cards: {
         // Primary searchable fields with weights for relevance scoring
         fields: [
-            {name: 'cardName', weight: 3, exactMatchBonus: 100},
-            {name: 'cardNumber', weight: 2, exactMatchBonus: 80},
-            {name: 'variety', weight: 1, exactMatchBonus: 60}
+            { name: 'cardName', weight: 3, exactMatchBonus: 100 },
+            { name: 'cardNumber', weight: 2, exactMatchBonus: 80 },
+            { name: 'variety', weight: 1, exactMatchBonus: 60 }
         ],
 
         // Population configuration for relationships
@@ -34,10 +34,10 @@ const SEARCH_CONFIGS = {
         // Default sorting and scoring
         scoring: {
             algorithm: 'cardSpecific',
-            defaultSort: {'grades.grade_total': -1, cardName: 1},
-            querySort: {score: -1, 'grades.grade_total': -1, cardName: 1},
+            defaultSort: { 'grades.grade_total': -1, cardName: 1 },
+            querySort: { score: -1, 'grades.grade_total': -1, cardName: 1 },
             bonusFields: [
-                {field: 'grades.grade_total', divisor: 1000, max: 10}
+                { field: 'grades.grade_total', divisor: 1000, max: 10 }
             ]
         },
 
@@ -51,7 +51,7 @@ const SEARCH_CONFIGS = {
 
     sets: {
         fields: [
-            {name: 'setName', weight: 3, exactMatchBonus: 100}
+            { name: 'setName', weight: 3, exactMatchBonus: 100 }
         ],
 
         population: null, // No population needed
@@ -64,8 +64,8 @@ const SEARCH_CONFIGS = {
 
         scoring: {
             algorithm: 'aggregation', // Use MongoDB aggregation for complex scoring
-            defaultSort: {year: -1, setName: 1},
-            querySort: {score: -1, 'total_grades.total_graded': -1, year: -1},
+            defaultSort: { year: -1, setName: 1 },
+            querySort: { score: -1, 'total_grades.total_graded': -1, year: -1 },
             stages: [
                 {
                     type: 'exactMatch',
@@ -109,8 +109,8 @@ const SEARCH_CONFIGS = {
 
     products: {
         fields: [
-            {name: 'productName', weight: 3, exactMatchBonus: 100},
-            {name: 'category', weight: 1, exactMatchBonus: 30}
+            { name: 'productName', weight: 3, exactMatchBonus: 100 },
+            { name: 'category', weight: 1, exactMatchBonus: 30 }
         ],
 
         population: {
@@ -129,8 +129,8 @@ const SEARCH_CONFIGS = {
 
         scoring: {
             algorithm: 'aggregation',
-            defaultSort: {available: -1, price: 1},
-            querySort: {score: -1, available: -1, priceNumeric: 1},
+            defaultSort: { available: -1, price: 1 },
+            querySort: { score: -1, available: -1, priceNumeric: 1 },
             stages: [
                 {
                     type: 'exactMatch',
@@ -190,7 +190,7 @@ const SEARCH_CONFIGS = {
 
     setProducts: {
         fields: [
-            {name: 'setProductName', weight: 3, exactMatchBonus: 100}
+            { name: 'setProductName', weight: 3, exactMatchBonus: 100 }
         ],
 
         population: null,
@@ -202,8 +202,8 @@ const SEARCH_CONFIGS = {
 
         scoring: {
             algorithm: 'simple', // Just basic regex matching
-            defaultSort: {setProductName: 1},
-            querySort: {setProductName: 1}
+            defaultSort: { setProductName: 1 },
+            querySort: { setProductName: 1 }
         },
 
         suggestions: {
@@ -238,12 +238,12 @@ const FIELD_TYPES = {
  * Common filter operators
  */
 const FILTER_OPERATORS = {
-    regex: (value) => ({$regex: value, $options: 'i'}),
-    range: (min, max) => ({$gte: min, $lte: max}),
-    gte: (value) => ({$gte: value}),
-    gt: (value) => ({$gt: value}),
+    regex: (value) => ({ $regex: value, $options: 'i' }),
+    range: (min, max) => ({ $gte: min, $lte: max }),
+    gte: (value) => ({ $gte: value }),
+    gt: (value) => ({ $gt: value }),
     exact: (value) => value,
-    exists: () => ({$exists: true, $ne: null})
+    exists: () => ({ $exists: true, $ne: null })
 };
 
 export {

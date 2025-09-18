@@ -13,7 +13,7 @@
  */
 
 import path from 'path';
-import {promises as fs} from 'fs';
+import { promises as fs } from 'fs';
 
 export class IcrPathManager {
     // Base ICR directory structure
@@ -98,7 +98,7 @@ export class IcrPathManager {
 
         await Promise.all(
             directories.map(dir =>
-                fs.mkdir(dir, {recursive: true})
+                fs.mkdir(dir, { recursive: true })
             )
         );
     }
@@ -162,7 +162,7 @@ export class IcrPathManager {
             return {
                 totalFiles: 0,
                 deletedFiles: 0,
-                errors: [{file: 'temp directory', error: error.message}]
+                errors: [{ file: 'temp directory', error: error.message }]
             };
         }
     }
@@ -185,7 +185,7 @@ export class IcrPathManager {
                         const filePath = path.join(dirPath, file);
                         const fileStat = await fs.stat(filePath);
                         totalSize += fileStat.size;
-                    } catch (error) {
+                    } catch {
                         // Skip files we can't stat
                     }
                 }
@@ -238,7 +238,7 @@ export class IcrPathManager {
      */
     static async archiveBatch(batchId) {
         const archiveDir = path.join(this.BASE_ICR_DIR, 'archived', batchId);
-        await fs.mkdir(archiveDir, {recursive: true});
+        await fs.mkdir(archiveDir, { recursive: true });
 
         const batchFiles = [];
         const archiveResults = {

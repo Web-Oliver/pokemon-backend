@@ -8,7 +8,7 @@
 import path from 'path';
 import fs from 'fs';
 import JSZip from 'jszip';
-import {createPokemonNameShortener} from '@/pokemon/products/pokemonNameShortener.js';
+import { createPokemonNameShortener } from '@/pokemon/products/pokemonNameShortener.js';
 import OperationManager from '@/system/utilities/OperationManager.js';
 import StandardResponseBuilder from '@/system/utilities/StandardResponseBuilder.js';
 
@@ -213,7 +213,7 @@ class DbaExportService {
         }
 
         return items.map((itemData, index) => {
-            const {item, itemType, customTitle, customDescription: itemCustomDescription} = itemData;
+            const { item, itemType, customTitle, customDescription: itemCustomDescription } = itemData;
 
             try {
                 // Use custom title if provided, otherwise generate default
@@ -270,7 +270,7 @@ class DbaExportService {
         try {
             // Create data folder if it doesn't exist
             if (!fs.existsSync(dataFolder)) {
-                fs.mkdirSync(dataFolder, {recursive: true});
+                fs.mkdirSync(dataFolder, { recursive: true });
             }
 
             // Copy all images
@@ -329,7 +329,7 @@ class DbaExportService {
      * @returns {Promise<Object>} - Export result with file paths
      */
     async generateDbaExport(items, options = {}) {
-        const {customDescription = '', includeMetadata = true} = options;
+        const { customDescription = '', includeMetadata = true } = options;
         const context = OperationManager.createContext('DbaExport', 'generateDbaExport', {
             itemCount: items.length,
             includeMetadata
@@ -348,7 +348,7 @@ class DbaExportService {
                 description: item.description,
                 price: item.price,
                 imagePaths: item.imagePaths,
-                ...(includeMetadata && {metadata: item.metadata})
+                ...(includeMetadata && { metadata: item.metadata })
             }));
 
             // Create metadata file with selected image filenames for ZIP creation
@@ -439,7 +439,7 @@ class DbaExportService {
             }
 
             // Generate ZIP
-            const zipBuffer = await zip.generateAsync({type: 'nodebuffer'});
+            const zipBuffer = await zip.generateAsync({ type: 'nodebuffer' });
 
             console.log(`[DBA EXPORT] ZIP file created with ${selectedImageFiles.length} selected images`);
             return zipBuffer;

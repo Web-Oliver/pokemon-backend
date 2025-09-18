@@ -11,7 +11,7 @@ const initializeCacheSystem = async () => {
         };
     } catch (error) {
         Logger.error('CACHE_SYSTEM', 'Cache system initialization failed', error);
-        return {success: false, error: error.message};
+        return { success: false, error: error.message };
     }
 };
 

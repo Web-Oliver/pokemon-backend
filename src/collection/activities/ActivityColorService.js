@@ -150,8 +150,8 @@ class ActivityColorService {
     static getActivityStyling(activity) {
         const metadataColor = activity.metadata?.color;
         const activityType = activity.type;
-        const {priority} = activity;
-        const {status} = activity;
+        const { priority } = activity;
+        const { status } = activity;
 
         return {
             // Primary color classes (priority: metadata > type > priority)
@@ -204,11 +204,11 @@ class ActivityColorService {
      */
     static getAvailableColors() {
         return [
-            {name: 'emerald', label: 'Emerald', preview: 'bg-emerald-500'},
-            {name: 'amber', label: 'Amber', preview: 'bg-amber-500'},
-            {name: 'purple', label: 'Purple', preview: 'bg-purple-500'},
-            {name: 'indigo', label: 'Indigo', preview: 'bg-indigo-500'},
-            {name: 'red', label: 'Red', preview: 'bg-red-500'}
+            { name: 'emerald', label: 'Emerald', preview: 'bg-emerald-500' },
+            { name: 'amber', label: 'Amber', preview: 'bg-amber-500' },
+            { name: 'purple', label: 'Purple', preview: 'bg-purple-500' },
+            { name: 'indigo', label: 'Indigo', preview: 'bg-indigo-500' },
+            { name: 'red', label: 'Red', preview: 'bg-red-500' }
         ];
     }
 

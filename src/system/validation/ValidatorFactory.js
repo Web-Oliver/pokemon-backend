@@ -11,7 +11,7 @@ class ValidatorFactory {
             validators: {
                 saleDetails: this.saleDetails.bind(this),
                 price: this.price.bind(this),
-                validateGetSalesParams: ({category, startDate, endDate}) => {
+                validateGetSalesParams: ({ category, startDate, endDate }) => {
                     // Optional category validation
                     if (category !== undefined && category !== null && category !== '') {
                         ValidatorFactory.string(category, 'Category');
@@ -26,7 +26,7 @@ class ValidatorFactory {
                         ValidatorFactory.date(endDate, 'End date');
                     }
 
-                    return {category, startDate, endDate};
+                    return { category, startDate, endDate };
                 }
             },
             errorHandlers: {
@@ -38,15 +38,15 @@ class ValidatorFactory {
                     };
                 },
                 handleGetSalesError: (error, params) => {
-                    console.error('❌ Get Sales Error:', error.message, {params});
+                    console.error('❌ Get Sales Error:', error.message, { params });
                     throw error;
                 },
                 handleGetSalesSummaryError: (error, params) => {
-                    console.error('❌ Get Sales Summary Error:', error.message, {params});
+                    console.error('❌ Get Sales Summary Error:', error.message, { params });
                     throw error;
                 },
                 handleGetSalesGraphDataError: (error, params) => {
-                    console.error('❌ Get Sales Graph Data Error:', error.message, {params});
+                    console.error('❌ Get Sales Graph Data Error:', error.message, { params });
                     throw error;
                 }
             },
@@ -55,13 +55,13 @@ class ValidatorFactory {
                     console.log(`✅ ${field} validated successfully:`, value);
                 },
                 logGetSalesSuccess: (params, data) => {
-                    console.log('✅ Get Sales Success:', {params, count: data.length});
+                    console.log('✅ Get Sales Success:', { params, count: data.length });
                 },
                 logGetSalesSummarySuccess: (params, summary) => {
-                    console.log('✅ Get Sales Summary Success:', {params, summary});
+                    console.log('✅ Get Sales Summary Success:', { params, summary });
                 },
                 logGetSalesGraphDataSuccess: (params, result) => {
-                    console.log('✅ Get Sales Graph Data Success:', {params, result});
+                    console.log('✅ Get Sales Graph Data Success:', { params, result });
                 }
             }
         };
@@ -193,7 +193,7 @@ class ValidatorFactory {
     static validatePagination(page = 1, limit = 10, maxLimit = 100) {
         const pageNum = Math.max(1, parseInt(page, 10) || 1);
         const limitNum = Math.min(maxLimit, Math.max(1, parseInt(limit, 10) || 10));
-        return {pageNum, limitNum};
+        return { pageNum, limitNum };
     }
 
     // Number validation
@@ -277,7 +277,7 @@ class ValidatorFactory {
         this.object(saleDetails, fieldName, {
             required: true,
             schema: {
-                price: (val) => this.price(val, 'Sale price', {required: true}),
+                price: (val) => this.price(val, 'Sale price', { required: true }),
                 dateSold: (val) => this.date(val, 'Sale date'),
                 paymentMethod: (val) => this.string(val, 'Payment method'),
                 deliveryMethod: (val) => this.string(val, 'Delivery method'),
@@ -289,15 +289,15 @@ class ValidatorFactory {
 
     // Collection item data validation
     static collectionItemData(data, entityName) {
-        this.object(data, `${entityName} data`, {required: true});
+        this.object(data, `${entityName} data`, { required: true });
 
         // Common collection item validations
         if (data.myPrice !== undefined) {
-            this.price(data.myPrice, 'My price', {required: true});
+            this.price(data.myPrice, 'My price', { required: true });
         }
         if (data.images !== undefined) {
             this.array(data.images, 'Images', {
-                itemValidator: (item) => this.string(item, 'Image URL', {required: true})
+                itemValidator: (item) => this.string(item, 'Image URL', { required: true })
             });
         }
 

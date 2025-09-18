@@ -8,12 +8,12 @@
  * After: Single centralized utility with service layer integration
  */
 
-import {container} from '@/system/dependency-injection/ServiceContainer.js';
+import { container } from '@/system/dependency-injection/ServiceContainer.js';
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
 import RawCard from '@/collection/items/RawCard.js';
 import SealedProduct from '@/collection/items/SealedProduct.js';
 import Logger from '@/system/logging/Logger.js';
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
 
 /**
  * Centralized item fetching utility
@@ -32,7 +32,7 @@ class ItemFetcher {
             throw new ValidationError('Item type and ID are required');
         }
 
-        Logger.debug('ItemFetcher', `Fetching ${itemType} item`, {itemId, options});
+        Logger.debug('ItemFetcher', `Fetching ${itemType} item`, { itemId, options });
 
         try {
             // Try service layer first (preferred approach)
@@ -223,7 +223,7 @@ class ItemFetcher {
      */
     static getCollectionStats(items) {
         if (!Array.isArray(items)) {
-            return {total: 0, byType: {}};
+            return { total: 0, byType: {} };
         }
 
         const stats = {

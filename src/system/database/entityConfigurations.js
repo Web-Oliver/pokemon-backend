@@ -56,12 +56,12 @@ const FILTER_PATTERNS = {
  * Default sort configurations
  */
 const SORT_PATTERNS = {
-    DATE_DESC: {dateAdded: -1},
-    DATE_ASC: {dateAdded: 1},
-    PRICE_DESC: {myPrice: -1},
-    PRICE_ASC: {myPrice: 1},
-    NAME_ASC: {cardName: 1},
-    SET_NAME_ASC: {setName: 1}
+    DATE_DESC: { dateAdded: -1 },
+    DATE_ASC: { dateAdded: 1 },
+    PRICE_DESC: { myPrice: -1 },
+    PRICE_ASC: { myPrice: 1 },
+    NAME_ASC: { cardName: 1 },
+    SET_NAME_ASC: { setName: 1 }
 };
 
 /**
@@ -95,8 +95,8 @@ const ENTITY_CONFIGS = {
         // Validation rules
         requiredFields: ['cardId', 'grade'],
         validationRules: {
-            grade: {type: 'number', min: 1, max: 10, integer: true},
-            myPrice: {type: 'number', min: 0}
+            grade: { type: 'number', min: 1, max: 10, integer: true },
+            myPrice: { type: 'number', min: 0 }
         }
     },
 
@@ -131,7 +131,7 @@ const ENTITY_CONFIGS = {
                 type: 'enum',
                 choices: ['mint', 'near_mint', 'excellent', 'good', 'light_played', 'played', 'poor']
             },
-            myPrice: {type: 'number', min: 0}
+            myPrice: { type: 'number', min: 0 }
         }
     },
 
@@ -166,7 +166,7 @@ const ENTITY_CONFIGS = {
                 type: 'enum',
                 choices: ['Booster-Boxes', 'Elite-Trainer-Boxes', 'Collection-Boxes', 'Theme-Decks', 'Other']
             },
-            myPrice: {type: 'number', min: 0}
+            myPrice: { type: 'number', min: 0 }
         }
     },
 
@@ -197,9 +197,9 @@ const ENTITY_CONFIGS = {
         // Validation rules
         requiredFields: ['setId', 'cardName', 'cardNumber', 'uniquePokemonId', 'uniqueSetId'],
         validationRules: {
-            cardNumber: {type: 'string', required: true},
-            uniquePokemonId: {type: 'number', min: 1, integer: true, required: true},
-            uniqueSetId: {type: 'number', min: 1, integer: true, required: true}
+            cardNumber: { type: 'string', required: true },
+            uniquePokemonId: { type: 'number', min: 1, integer: true, required: true },
+            uniqueSetId: { type: 'number', min: 1, integer: true, required: true }
         }
     },
 
@@ -228,8 +228,8 @@ const ENTITY_CONFIGS = {
         // Validation rules
         requiredFields: ['setName'],
         validationRules: {
-            year: {type: 'number', min: 1996, max: 2030, integer: true},
-            totalCardsInSet: {type: 'number', min: 1, integer: true}
+            year: { type: 'number', min: 1996, max: 2030, integer: true },
+            totalCardsInSet: { type: 'number', min: 1, integer: true }
         }
     },
 
@@ -241,7 +241,7 @@ const ENTITY_CONFIGS = {
 
         // Repository configuration
         defaultPopulate: null,
-        defaultSort: {auctionDate: -1},
+        defaultSort: { auctionDate: -1 },
 
         // Controller configuration
         includeMarkAsSold: false,
@@ -263,8 +263,8 @@ const ENTITY_CONFIGS = {
                 type: 'enum',
                 choices: ['draft', 'active', 'sold', 'expired']
             },
-            totalValue: {type: 'number', min: 0},
-            soldValue: {type: 'number', min: 0}
+            totalValue: { type: 'number', min: 0 },
+            soldValue: { type: 'number', min: 0 }
         }
     }
 };
@@ -326,7 +326,7 @@ function getSearchConfig(entityType) {
     const config = getEntityConfig(entityType);
 
     if (!config) {
-        return {fields: [], weights: {}};
+        return { fields: [], weights: {} };
     }
 
     return {
@@ -344,7 +344,7 @@ function getValidationRules(entityType) {
     const config = getEntityConfig(entityType);
 
     if (!config) {
-        return {required: [], rules: {}};
+        return { required: [], rules: {} };
     }
 
     return {

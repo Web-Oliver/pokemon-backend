@@ -9,7 +9,7 @@ class CollectionRepository extends BaseRepository {
     constructor(Model, entityType, options = {}) {
         const config = {
             entityName: entityType,
-            defaultSort: {dateAdded: -1},
+            defaultSort: { dateAdded: -1 },
             ...options
         };
 
@@ -27,7 +27,7 @@ class CollectionRepository extends BaseRepository {
         // Add specific populate for sealed products
         if (entityType === 'SealedProduct') {
             config.defaultPopulate = 'productId';
-            config.defaultSort = {available: -1, price: 1};
+            config.defaultSort = { available: -1, price: 1 };
         }
 
         super(Model, config);
@@ -38,14 +38,14 @@ class CollectionRepository extends BaseRepository {
      * Find sold items
      */
     async findSold(options = {}) {
-        return await this.find({sold: true}, options);
+        return await this.find({ sold: true }, options);
     }
 
     /**
      * Find unsold items
      */
     async findUnsold(options = {}) {
-        return await this.find({sold: {$ne: true}}, options);
+        return await this.find({ sold: { $ne: true } }, options);
     }
 
     /**
@@ -68,7 +68,7 @@ class CollectionRepository extends BaseRepository {
 
         const searchQuery = {
             $or: searchFields.map(field => ({
-                [field]: {$regex: searchTerm, $options: 'i'}
+                [field]: { $regex: searchTerm, $options: 'i' }
             }))
         };
 
@@ -82,7 +82,7 @@ class CollectionRepository extends BaseRepository {
         if (this.entityType !== 'SealedProduct') {
             throw new Error('Category filtering only available for sealed products');
         }
-        return await this.find({category}, options);
+        return await this.find({ category }, options);
     }
 }
 

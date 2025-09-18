@@ -17,7 +17,7 @@ class FacebookPostBuilder {
             rawCards: []
         };
 
-        fetchedItems.forEach(({data, category}) => {
+        fetchedItems.forEach(({ data, category }) => {
             const formattedItem = facebookFormatter.formatItemForFacebook(data, category);
 
             switch (category) {

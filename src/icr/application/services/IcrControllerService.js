@@ -10,7 +10,7 @@
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
 import StitchedLabelRepository from '@/icr/infrastructure/repositories/StitchedLabelRepository.js';
 import IcrBatchService from '@/icr/application/IcrBatchService.js';
-import {FileSystemUtils} from '@/icr/shared/FileSystemUtils.js';
+import { FileSystemUtils } from '@/icr/shared/FileSystemUtils.js';
 import Logger from '@/system/logging/Logger.js';
 import fs from 'fs/promises';
 import fsConstants from 'fs';
@@ -27,13 +27,13 @@ export class IcrControllerService {
      * Get scans with pagination and filtering
      */
     async getScans(filters = {}, pagination = {}) {
-        const {status, skip = 0, limit = 150} = {...filters, ...pagination};
+        const { status, skip = 0, limit = 150 } = { ...filters, ...pagination };
 
         if (status) {
-            return await this.gradedCardScanRepository.findByStatus(status, {skip, limit});
+            return await this.gradedCardScanRepository.findByStatus(status, { skip, limit });
         }
 
-        return await this.gradedCardScanRepository.findMany({}, {skip, limit});
+        return await this.gradedCardScanRepository.findMany({}, { skip, limit });
     }
 
     /**
@@ -62,8 +62,8 @@ export class IcrControllerService {
      * Get stitched images with pagination
      */
     async getStitchedImages(pagination = {}) {
-        const {skip = 0, limit = 50} = pagination;
-        return await this.stitchedLabelRepository.findWithPagination({skip, limit});
+        const { skip = 0, limit = 50 } = pagination;
+        return await this.stitchedLabelRepository.findWithPagination({ skip, limit });
     }
 
     /**
@@ -72,7 +72,7 @@ export class IcrControllerService {
     async deleteScans(ids) {
         // Find scans by IDs using findAll with $in operator
         const scansToDelete = await this.gradedCardScanRepository.findAll({
-            _id: {$in: ids}
+            _id: { $in: ids }
         });
 
         // Delete associated files
@@ -95,7 +95,7 @@ export class IcrControllerService {
     async deleteStitchedImages(labelIds) {
         // Find labels by IDs using findAll with $in operator
         const labelsToDelete = await this.stitchedLabelRepository.findAll({
-            _id: {$in: labelIds}
+            _id: { $in: labelIds }
         });
 
         // Delete associated files
@@ -134,7 +134,7 @@ export class IcrControllerService {
             // SECURITY: Validate image type first
             const allowedTypes = ['full', 'label', 'stitched'];
             if (!allowedTypes.includes(imageType)) {
-                Logger.warn('IcrControllerService', 'Invalid image type attempted', {imageType, imagePath});
+                Logger.warn('IcrControllerService', 'Invalid image type attempted', { imageType, imagePath });
                 throw new Error('Invalid image type');
             }
 
@@ -233,14 +233,14 @@ export class IcrControllerService {
             try {
                 if (scan.fullImage) {
                     await fs.unlink(scan.fullImage);
-                    Logger.info('IcrControllerService', 'Deleted full image file', {path: scan.fullImage});
+                    Logger.info('IcrControllerService', 'Deleted full image file', { path: scan.fullImage });
                 }
                 if (scan.labelImage) {
                     await fs.unlink(scan.labelImage);
-                    Logger.info('IcrControllerService', 'Deleted label image file', {path: scan.labelImage});
+                    Logger.info('IcrControllerService', 'Deleted label image file', { path: scan.labelImage });
                 }
             } catch (error) {
-                Logger.warn('IcrControllerService', 'Failed to delete scan file', {error: error.message, id: scan._id});
+                Logger.warn('IcrControllerService', 'Failed to delete scan file', { error: error.message, id: scan._id });
             }
         }
     }
@@ -254,7 +254,7 @@ export class IcrControllerService {
             try {
                 if (label.stitchedImagePath) {
                     await fs.unlink(label.stitchedImagePath);
-                    Logger.info('IcrControllerService', 'Deleted stitched image file', {path: label.stitchedImagePath});
+                    Logger.info('IcrControllerService', 'Deleted stitched image file', { path: label.stitchedImagePath });
                 }
             } catch (error) {
                 Logger.warn('IcrControllerService', 'Failed to delete stitched file', {

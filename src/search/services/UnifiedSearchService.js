@@ -27,7 +27,7 @@ class UnifiedSearchService {
      * @returns {Object} Combined search results
      */
     async unifiedSearch(query, types = ['cards', 'products', 'sets'], options = {}) {
-        const {limit = 20} = options;
+        const { limit = 20 } = options;
         const perTypeLimit = Math.ceil(limit / types.length);
 
         Logger.operationStart('UNIFIED_SEARCH', 'Starting unified search', {
@@ -47,7 +47,7 @@ class UnifiedSearchService {
                         limit: perTypeLimit,
                         offset: 0,
                         populate: true
-                    }).then(result => ({type: 'cards', ...result}))
+                    }).then(result => ({ type: 'cards', ...result }))
                 );
             }
 
@@ -58,7 +58,7 @@ class UnifiedSearchService {
                         limit: perTypeLimit,
                         offset: 0,
                         populate: true
-                    }).then(result => ({type: 'products', ...result}))
+                    }).then(result => ({ type: 'products', ...result }))
                 );
             }
 
@@ -69,7 +69,7 @@ class UnifiedSearchService {
                         limit: perTypeLimit,
                         offset: 0,
                         populate: false
-                    }).then(result => ({type: 'sets', ...result}))
+                    }).then(result => ({ type: 'sets', ...result }))
                 );
             }
 
@@ -86,7 +86,7 @@ class UnifiedSearchService {
             };
 
             searchResults.forEach(result => {
-                const {type, cards, products, sets, total, searchMethod, ...metadata} = result;
+                const { type, cards, products, sets, total, searchMethod, ...metadata } = result;
 
                 combinedResults.results[type] = {
                     items: cards || products || sets || [],
@@ -125,7 +125,7 @@ class UnifiedSearchService {
      * @returns {Array} Array of suggestions
      */
     async getSuggestions(query, type = 'cards', options = {}) {
-        const {limit = 10} = options;
+        const { limit = 10 } = options;
 
         if (!query || query.trim().length < 2) {
             return [];
@@ -142,15 +142,15 @@ class UnifiedSearchService {
 
             switch (type) {
                 case 'cards':
-                    suggestions = await this.cardSearchService.getCardSuggestions(query, {limit});
+                    suggestions = await this.cardSearchService.getCardSuggestions(query, { limit });
                     break;
 
                 case 'products':
-                    suggestions = await this.productSearchService.getProductSuggestions(query, {limit});
+                    suggestions = await this.productSearchService.getProductSuggestions(query, { limit });
                     break;
 
                 case 'sets':
-                    suggestions = await this.setSearchService.getSetSuggestions(query, {limit});
+                    suggestions = await this.setSearchService.getSetSuggestions(query, { limit });
                     break;
 
                 case 'all':
@@ -159,9 +159,9 @@ class UnifiedSearchService {
                     const perTypeLimit = Math.ceil(limit / 3);
 
                     const [cardSuggestions, productSuggestions, setSuggestions] = await Promise.all([
-                        this.cardSearchService.getCardSuggestions(query, {limit: perTypeLimit}),
-                        this.productSearchService.getProductSuggestions(query, {limit: perTypeLimit}),
-                        this.setSearchService.getSetSuggestions(query, {limit: perTypeLimit})
+                        this.cardSearchService.getCardSuggestions(query, { limit: perTypeLimit }),
+                        this.productSearchService.getProductSuggestions(query, { limit: perTypeLimit }),
+                        this.setSearchService.getSetSuggestions(query, { limit: perTypeLimit })
                     ]);
 
                     suggestions = [

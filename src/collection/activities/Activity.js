@@ -205,10 +205,10 @@ const activitySchema = new mongoose.Schema(
 );
 
 // Context7 Premium Indexes for Performance
-activitySchema.index({type: 1, timestamp: -1});
-activitySchema.index({entityType: 1, entityId: 1});
-activitySchema.index({priority: 1, status: 1});
-activitySchema.index({timestamp: -1, isArchived: 1});
+activitySchema.index({ type: 1, timestamp: -1 });
+activitySchema.index({ entityType: 1, entityId: 1 });
+activitySchema.index({ priority: 1, status: 1 });
+activitySchema.index({ timestamp: -1, isArchived: 1 });
 activitySchema.index(
     {
         title: 'text',

@@ -5,9 +5,9 @@
  * Handles image upload, stitching, OCR, text distribution, and card matching.
  */
 
-import {asyncHandler, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 import BaseController from '@/system/middleware/BaseController.js';
-import {ServiceKeys} from '@/system/dependency-injection/ServiceContainer.js';
+import { ServiceKeys } from '@/system/dependency-injection/ServiceContainer.js';
 import IcrControllerService from '@/icr/application/services/IcrControllerService.js';
 import IcrFileService from '@/icr/infrastructure/services/IcrFileService.js';
 import Logger from '@/system/logging/Logger.js';
@@ -82,13 +82,13 @@ class IcrBatchController extends BaseController {
      * Extract PSA labels from uploaded scans
      */
     extractLabels = asyncHandler(async (req, res) => {
-        const {ids} = req.body;
+        const { ids } = req.body;
 
         if (!ids || !Array.isArray(ids) || ids.length === 0) {
             throw new ValidationError('ids array is required');
         }
 
-        Logger.info('IcrBatchController', '⚙️ Label extraction request received', {scanCount: ids.length});
+        Logger.info('IcrBatchController', '⚙️ Label extraction request received', { scanCount: ids.length });
 
         const result = await this.icrBatchService.extractLabels(ids);
 
@@ -103,9 +103,9 @@ class IcrBatchController extends BaseController {
      * Create vertical stitched image from extracted labels
      */
     stitchBatch = asyncHandler(async (req, res) => {
-        const {imageHashes} = req.body;
+        const { imageHashes } = req.body;
 
-        Logger.info('IcrBatchController', '🧩 Stitching request received', {imageHashes});
+        Logger.info('IcrBatchController', '🧩 Stitching request received', { imageHashes });
 
         const result = await this.icrBatchService.createStitchedImageFromHashes(imageHashes);
 
@@ -124,9 +124,9 @@ class IcrBatchController extends BaseController {
      * Process OCR on stitched image
      */
     processOcr = asyncHandler(async (req, res) => {
-        const {imageHashes, stitchedImagePath} = req.body;
+        const { imageHashes, stitchedImagePath } = req.body;
 
-        Logger.info('IcrBatchController', '👁️ OCR processing request received', {imageHashes});
+        Logger.info('IcrBatchController', '👁️ OCR processing request received', { imageHashes });
 
         let result;
         if (stitchedImagePath) {
@@ -148,7 +148,7 @@ class IcrBatchController extends BaseController {
      * Distribute OCR text to individual scans
      */
     distributeText = asyncHandler(async (req, res) => {
-        const {imageHashes, ocrResult} = req.body;
+        const { imageHashes, ocrResult } = req.body;
 
         Logger.info('IcrBatchController', '📋 Text distribution request received', {
             imageHashes,
@@ -189,9 +189,9 @@ class IcrBatchController extends BaseController {
      * Perform hierarchical card matching
      */
     matchCards = asyncHandler(async (req, res) => {
-        const {imageHashes} = req.body;
+        const { imageHashes } = req.body;
 
-        Logger.info('IcrBatchController', '🎯 Card matching request received', {imageHashes});
+        Logger.info('IcrBatchController', '🎯 Card matching request received', { imageHashes });
 
         const result = await this.icrBatchService.performCardMatchingByHashes(imageHashes);
 
@@ -208,8 +208,8 @@ class IcrBatchController extends BaseController {
      * Get batch results for frontend display
      */
     getBatchResults = asyncHandler(async (req, res) => {
-        const {batchId} = req.params;
-        const {page = 1, limit = 20} = req.query;
+        const { batchId } = req.params;
+        const { page = 1, limit = 20 } = req.query;
 
         Logger.info('IcrBatchController', '📊 Batch results request received', {
             batchId,
@@ -241,13 +241,13 @@ class IcrBatchController extends BaseController {
             'Expires': '0'
         });
 
-        const {status, page = 1, limit = 150} = req.query;
+        const { status, page = 1, limit = 150 } = req.query;
         const skip = (page - 1) * limit;
 
         // FIXED: Use service instead of direct database access
         const scans = await this.icrControllerService.getScans(
-            {status},
-            {skip, limit}
+            { status },
+            { skip, limit }
         );
 
         const totalCount = await this.icrControllerService.gradedCardScanRepository.countByStatus(status);
@@ -283,9 +283,9 @@ class IcrBatchController extends BaseController {
      * Get scans ready for PSA creation (matched status)
      */
     getMatchedScans = asyncHandler(async (req, res) => {
-        const {page = 1, limit = 20} = req.query;
+        const { page = 1, limit = 20 } = req.query;
 
-        Logger.info('IcrBatchController', '🎯 Get matched scans request', {page, limit});
+        Logger.info('IcrBatchController', '🎯 Get matched scans request', { page, limit });
 
         const result = await this.icrBatchService.getMatchedScans(
             parseInt(page, 10),
@@ -303,11 +303,11 @@ class IcrBatchController extends BaseController {
      * Get all stitched images
      */
     getStitchedImages = asyncHandler(async (req, res) => {
-        const {page = 1, limit = 20} = req.query;
+        const { page = 1, limit = 20 } = req.query;
         const skip = (page - 1) * limit;
 
         // FIXED: Use service instead of direct database access
-        const stitchedImages = await this.icrControllerService.getStitchedImages({skip, limit});
+        const stitchedImages = await this.icrControllerService.getStitchedImages({ skip, limit });
         const totalCount = await this.icrControllerService.stitchedLabelRepository.count();
 
         const formattedImages = stitchedImages.map(stitched => ({
@@ -341,9 +341,9 @@ class IcrBatchController extends BaseController {
      * Delete a stitched image and reset scans to extracted status
      */
     deleteStitchedImage = asyncHandler(async (req, res) => {
-        const {id} = req.params;
+        const { id } = req.params;
 
-        Logger.info('IcrBatchController', '🗑️ Delete stitched image request', {stitchedId: id});
+        Logger.info('IcrBatchController', '🗑️ Delete stitched image request', { stitchedId: id });
 
         // FIXED: Use service instead of direct database access
         const result = await this.icrControllerService.deleteStitchedImages([id]);
@@ -359,7 +359,7 @@ class IcrBatchController extends BaseController {
      * Sync scan statuses with existing stitched labels (fix inconsistent state)
      */
     syncStatuses = asyncHandler(async (req, res) => {
-        const {imageHashes} = req.body;
+        const { imageHashes } = req.body;
 
         Logger.info('IcrBatchController', '🔄 Syncing scan statuses...');
 
@@ -397,7 +397,7 @@ class IcrBatchController extends BaseController {
      * Get processing status for specific images
      */
     getImageStatuses = asyncHandler(async (req, res) => {
-        const {imageHashes} = req.body;
+        const { imageHashes } = req.body;
 
         if (!imageHashes || !Array.isArray(imageHashes) || imageHashes.length === 0) {
             throw new ValidationError('imageHashes array is required');
@@ -416,7 +416,7 @@ class IcrBatchController extends BaseController {
      * Serve full PSA card images
      */
     serveFullImage = asyncHandler(async (req, res) => {
-        const {filename} = req.params;
+        const { filename } = req.params;
 
         // FIXED: Use file service instead of direct file system access
         const imagePath = this.icrFileService.getUploadPath('fullImages');
@@ -437,7 +437,7 @@ class IcrBatchController extends BaseController {
      * Serve extracted PSA label images
      */
     serveLabelImage = asyncHandler(async (req, res) => {
-        const {filename} = req.params;
+        const { filename } = req.params;
 
         // FIXED: Use file service instead of direct file system access
         const imagePath = this.icrFileService.getUploadPath('extractedLabels');
@@ -458,7 +458,7 @@ class IcrBatchController extends BaseController {
      * Serve stitched images
      */
     serveStitchedImage = asyncHandler(async (req, res) => {
-        const {filename} = req.params;
+        const { filename } = req.params;
 
         // FIXED: Use file service instead of direct file system access
         const imagePath = this.icrFileService.getUploadPath('stitchedImages');
@@ -479,13 +479,13 @@ class IcrBatchController extends BaseController {
      * Delete multiple scans
      */
     deleteScans = asyncHandler(async (req, res) => {
-        const {ids} = req.body;
+        const { ids } = req.body;
 
         if (!ids || !Array.isArray(ids) || ids.length === 0) {
             throw new ValidationError('ids array is required');
         }
 
-        Logger.info('IcrBatchController', '🗑️ Scan deletion request received', {scanCount: ids.length});
+        Logger.info('IcrBatchController', '🗑️ Scan deletion request received', { scanCount: ids.length });
 
         // FIXED: Use service instead of direct database access
         const result = await this.icrControllerService.deleteScans(ids);
@@ -501,10 +501,10 @@ class IcrBatchController extends BaseController {
      * Manual card match selection
      */
     selectMatch = asyncHandler(async (req, res) => {
-        const {id} = req.params;
-        const {cardId} = req.body;
+        const { id } = req.params;
+        const { cardId } = req.body;
 
-        Logger.info('IcrBatchController', '🎯 Manual match selection', {id, cardId});
+        Logger.info('IcrBatchController', '🎯 Manual match selection', { id, cardId });
 
         // FIXED: Delegate to batch service instead of direct model access
         await this.icrBatchService.selectCardMatch(id, cardId);
@@ -531,9 +531,9 @@ class IcrBatchController extends BaseController {
             'Expires': '0'
         });
 
-        const {id} = req.params;
+        const { id } = req.params;
 
-        Logger.info('IcrBatchController', '🔍 Getting scan details', {id});
+        Logger.info('IcrBatchController', '🔍 Getting scan details', { id });
 
         // Get complete scan details with all OCR data and card matches
         const scan = await this.icrControllerService.getScanById(id);
@@ -574,8 +574,8 @@ class IcrBatchController extends BaseController {
      * Create PSA card from matched scan
      */
     createPsaCard = asyncHandler(async (req, res) => {
-        const {id} = req.params;
-        const {cardId, myPrice, dateAdded, grade, certificationNumber} = req.body;
+        const { id } = req.params;
+        const { cardId, myPrice, dateAdded, grade, certificationNumber } = req.body;
 
         Logger.info('IcrBatchController', '💳 PSA card creation request', {
             id,
@@ -607,8 +607,8 @@ class IcrBatchController extends BaseController {
      * Mark scan as completed after PSA card creation and cleanup files
      */
     completeScan = asyncHandler(async (req, res) => {
-        const {id} = req.params;
-        const {psaCardId, cleanupFiles = true, keepImageHash = true} = req.body;
+        const { id } = req.params;
+        const { psaCardId, cleanupFiles = true, keepImageHash = true } = req.body;
 
         Logger.info('IcrBatchController', '✅ Completing scan after PSA creation', {
             scanId: id,

@@ -1,7 +1,7 @@
-import {asyncHandler, NotFoundError} from '@/system/middleware/CentralizedErrorHandler.js';
-import {container} from '@/system/dependency-injection/ServiceContainer.js';
+import { asyncHandler, NotFoundError } from '@/system/middleware/CentralizedErrorHandler.js';
+import { container } from '@/system/dependency-injection/ServiceContainer.js';
 import Logger from '@/system/logging/Logger.js';
-import {getEntityConfig} from '@/system/database/entityConfigurations.js';
+import { getEntityConfig } from '@/system/database/entityConfigurations.js';
 
 /**
  * Enhanced Base Controller Class
@@ -25,8 +25,6 @@ class BaseController {
      * @returns {Promise<void>}
      */
     getAll = asyncHandler(async (req, res) => {
-        const operation = 'getAll';
-        const context = {req, res, operation};
 
         Logger.operationStart(`${this.options.entityName}S`, 'GET ALL', {
             'Query parameters': req.query
@@ -90,8 +88,6 @@ class BaseController {
      * @returns {Promise<void>}
      */
     getById = asyncHandler(async (req, res) => {
-        const operation = 'getById';
-        const context = {req, res, operation, entityId: req.params.id};
 
         Logger.operationStart(this.options.entityName, 'GET BY ID', {
             'ID': req.params.id
@@ -132,7 +128,7 @@ class BaseController {
      */
     create = asyncHandler(async (req, res) => {
         const operation = 'create';
-        const context = {req, res, operation};
+        const context = { req, res, operation };
 
         Logger.operationStart(this.options.entityName, 'CREATE', {
             'Request body': JSON.stringify(req.body, null, 2)
@@ -176,8 +172,6 @@ class BaseController {
      * @returns {Promise<void>}
      */
     update = asyncHandler(async (req, res) => {
-        const operation = 'update';
-        const context = {req, res, operation, entityId: req.params.id};
 
         Logger.operationStart(this.options.entityName, 'UPDATE', {
             'ID': req.params.id,
@@ -220,8 +214,6 @@ class BaseController {
      * @returns {Promise<void>}
      */
     delete = asyncHandler(async (req, res) => {
-        const operation = 'delete';
-        const context = {req, res, operation, entityId: req.params.id};
 
         Logger.operationStart(this.options.entityName, 'DELETE', {
             'ID': req.params.id
@@ -229,7 +221,7 @@ class BaseController {
 
         try {
 
-            const entity = await this.service.delete(req.params.id);
+            await this.service.delete(req.params.id);
 
 
             Logger.operationSuccess(this.options.entityName, 'DELETE', {
@@ -264,8 +256,6 @@ class BaseController {
             throw new NotFoundError('Mark as sold not supported for this resource');
         }
 
-        const operation = 'markAsSold';
-        const context = {req, res, operation, entityId: req.params.id};
 
         Logger.operationStart(this.options.entityName, 'MARK AS SOLD', {
             'ID': req.params.id,
@@ -322,7 +312,7 @@ class BaseController {
                 ? options.includeMarkAsSold
                 : entityConfig?.includeMarkAsSold !== false,
             defaultPopulate: options.defaultPopulate || entityConfig?.defaultPopulate || null,
-            defaultSort: options.defaultSort || entityConfig?.defaultSort || {dateAdded: -1},
+            defaultSort: options.defaultSort || entityConfig?.defaultSort || { dateAdded: -1 },
             defaultLimit: options.defaultLimit || 100,
             filterableFields: entityConfig?.filterableFields || [],
             enableCaching: options.enableCaching !== false,

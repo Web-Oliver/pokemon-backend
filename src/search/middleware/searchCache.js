@@ -8,7 +8,7 @@ const cache = new NodeCache({
 });
 
 const createCacheKey = (req) => {
-    const {q, limit, category, setId, setName, type} = req.query;
+    const { q, limit, category, setId, setName, type } = req.query;
     const route = req.route?.path || req.path;
 
     return `${route}:${JSON.stringify({
@@ -34,7 +34,7 @@ export const searchCacheMiddleware = (ttl = 300) => {
         if (cached) {
             return res.json({
                 ...cached,
-                meta: {...cached.meta, cached: true}
+                meta: { ...cached.meta, cached: true }
             });
         }
 

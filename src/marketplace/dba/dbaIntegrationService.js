@@ -8,7 +8,7 @@
 
 import path from 'path';
 import fs from 'fs';
-import {DbaExportService} from './dbaExportService.js';
+import { DbaExportService } from './dbaExportService.js';
 import Logger from '@/system/logging/Logger.js';
 
 /**
@@ -299,7 +299,7 @@ class DbaIntegrationService {
                             size: stat.size
                         };
                     }
-                } catch (e) {
+                } catch {
                     // Ignore directory read errors
                 }
             }

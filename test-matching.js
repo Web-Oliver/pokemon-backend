@@ -115,7 +115,7 @@ class MatchingVerificationTool {
       });
     });
 
-    console.log(`📊 OCR Extraction Analysis:`);
+    console.log('📊 OCR Extraction Analysis:');
     console.log(`  - Scans with Year: ${analysis.withYear}/${analysis.totalScans}`);
     console.log(`  - Scans with Card Numbers: ${analysis.withCardNumber}/${analysis.totalScans}`);
     console.log(`  - Scans with Pokemon Names: ${analysis.withPokemonName}/${analysis.totalScans}`);
@@ -207,7 +207,7 @@ class MatchingVerificationTool {
       analysis.detailedResults.push(detailed);
     });
 
-    console.log(`📊 Matching Results Summary:`);
+    console.log('📊 Matching Results Summary:');
     console.log(`  - Total Processed: ${analysis.totalProcessed}`);
     console.log(`  - Successful Matches: ${analysis.successfulMatches}`);
     console.log(`  - Success Rate: ${analysis.successRate}%`);
@@ -268,7 +268,7 @@ class MatchingVerificationTool {
         }
       });
 
-      console.log(`📊 Database State Comparison:`);
+      console.log('📊 Database State Comparison:');
       console.log(`  - Changed Scans: ${comparison.changedScans}`);
       console.log(`  - New Matches: ${comparison.newMatches}`);
 
@@ -340,7 +340,7 @@ class MatchingVerificationTool {
     };
     await fs.writeFile(simpleResultsPath, JSON.stringify(simpleResults, null, 2));
 
-    console.log(`✅ Results saved to:`);
+    console.log('✅ Results saved to:');
     console.log(`  - Detailed JSON: ${reportPath}`);
     console.log(`  - Text Report: ${textReportPath}`);
     console.log(`  - Simple Results: ${simpleResultsPath}`);

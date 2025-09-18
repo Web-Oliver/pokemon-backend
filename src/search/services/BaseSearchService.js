@@ -25,8 +25,8 @@ class BaseSearchService {
      * @returns {Object} Search results with metadata
      */
     async performSearch(entityType, Model, query, filters = {}, options = {}, searchConfig = {}) {
-        const {limit = 50, offset = 0, populate = true} = options;
-        const {searchFields = [], searchWeights = {}} = searchConfig;
+        const { limit = 50, offset = 0, populate = true } = options;
+        const { searchFields = [] } = searchConfig;
 
         const context = OperationManager.createContext('BaseSearch', 'performSearch', {
             entityType,
@@ -55,13 +55,13 @@ class BaseSearchService {
                     const flexSearchResults = await FlexSearchIndexManager.search(
                         entityType,
                         query,
-                        {limit: limit * 2} // Get more results for better filtering
+                        { limit: limit * 2 } // Get more results for better filtering
                     );
 
                     if (flexSearchResults && flexSearchResults.length > 0) {
                         // Convert FlexSearch IDs to ObjectIds and fetch from MongoDB
                         const mongoQuery = {
-                            _id: {$in: flexSearchResults},
+                            _id: { $in: flexSearchResults },
                             ...processedFilters
                         };
 
@@ -103,7 +103,7 @@ class BaseSearchService {
                         // FIXED: Only apply regex search to string fields, skip number fields
                         const stringFields = searchFields.filter(field => field !== 'year' && field !== 'totalCardsInSet');
                         const searchConditions = stringFields.map(field => ({
-                            [field]: {$regex: escapedQuery, $options: 'i'}
+                            [field]: { $regex: escapedQuery, $options: 'i' }
                         }));
 
                         // Handle number fields separately - only if query is a number
@@ -111,7 +111,7 @@ class BaseSearchService {
                         if (numberFields.length > 0 && (/^\\d+$/).test(query.trim())) {
                             const numericValue = parseInt(query.trim(), 10);
                             numberFields.forEach(field => {
-                                searchConditions.push({[field]: numericValue});
+                                searchConditions.push({ [field]: numericValue });
                             });
                         }
 
@@ -121,12 +121,12 @@ class BaseSearchService {
                         // Add individual filters as separate conditions
                         Object.entries(filters).forEach(([key, value]) => {
                             if (value !== undefined && value !== null) {
-                                conditions.push({[key]: value});
+                                conditions.push({ [key]: value });
                             }
                         });
 
                         // Add text search as OR condition
-                        conditions.push({$or: searchConditions});
+                        conditions.push({ $or: searchConditions });
 
                         // Combine with $and
                         if (conditions.length > 1) {
@@ -137,7 +137,7 @@ class BaseSearchService {
                     } else {
                         // Combine filters with text search
                         Object.assign(mongoQuery, filters);
-                        mongoQuery.$text = {$search: query};
+                        mongoQuery.$text = { $search: query };
                     }
                 } else {
                     Object.assign(mongoQuery, filters);
@@ -176,7 +176,7 @@ class BaseSearchService {
             };
 
             return finalResult;
-        }, {useStandardResponse: false}); // FIXED: Disable standard response wrapping
+        }, { useStandardResponse: false }); // FIXED: Disable standard response wrapping
     }
 
     /**
@@ -255,7 +255,7 @@ class BaseSearchService {
             }));
 
             const suggestions = await Model
-                .find({$or: orConditions})
+                .find({ $or: orConditions })
                 .select(suggestionFields.join(' '))
                 .limit(limit)
                 .lean();

@@ -9,7 +9,7 @@
 
 import GradedCardScanRepository from '@/icr/infrastructure/repositories/GradedCardScanRepository.js';
 import PsaGradedCard from '@/collection/items/PsaGradedCard.js';
-import {FileSystemUtils} from '@/icr/shared/FileSystemUtils.js';
+import { FileSystemUtils } from '@/icr/shared/FileSystemUtils.js';
 import Logger from '@/system/logging/Logger.js';
 import path from 'path';
 
@@ -74,7 +74,7 @@ export class OcrApprovalWorkflowService {
      */
     async rejectIcrResult(id, reason = 'user_rejection') {
         try {
-            Logger.operationStart('OCR_REJECTION_WORKFLOW', 'Starting OCR rejection workflow', {id, reason});
+            Logger.operationStart('OCR_REJECTION_WORKFLOW', 'Starting OCR rejection workflow', { id, reason });
 
             await this.gradedCardScanRepository.updateById(id, {
                 processingStatus: 'rejected',
@@ -83,7 +83,7 @@ export class OcrApprovalWorkflowService {
                 rejectionReason: reason
             });
 
-            Logger.operationSuccess('OCR_REJECTION_WORKFLOW', 'OCR rejection workflow completed', {id});
+            Logger.operationSuccess('OCR_REJECTION_WORKFLOW', 'OCR rejection workflow completed', { id });
 
             return {
                 rejectedScanId: id,

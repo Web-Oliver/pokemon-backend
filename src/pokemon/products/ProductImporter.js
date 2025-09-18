@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import Product from '@/pokemon/products/Product.js';
 import SetProduct from '@/pokemon/products/SetProduct.js';
-import {ImportValidationError, ImportValidators} from './validators/ImportValidators.js';
+import { ImportValidationError, ImportValidators } from './validators/ImportValidators.js';
 
 /**
  * Optimized Product MongoDB Importer
@@ -174,15 +174,15 @@ class ProductImporter {
                 }
                 return {
                     updateOne: {
-                        filter: {uniqueProductId: productData.uniqueProductId},
-                        update: {$set: productData},
+                        filter: { uniqueProductId: productData.uniqueProductId },
+                        update: { $set: productData },
                         upsert: true
                     }
                 };
 
             });
 
-            const result = await Product.bulkWrite(bulkOps, {ordered: false});
+            const result = await Product.bulkWrite(bulkOps, { ordered: false });
 
             this.stats.created += result.insertedCount || 0;
             this.stats.updated += result.modifiedCount || 0;

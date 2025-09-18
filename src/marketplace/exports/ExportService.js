@@ -11,11 +11,11 @@
  */
 
 import ItemFetcher from '@/collection/shared/ItemFetcher.js';
-import {DbaExportService} from '@/marketplace/dba/dbaExportService.js';
-import {DbaIntegrationService} from '@/marketplace/dba/dbaIntegrationService.js';
-import {zipCollectionImages} from '@/marketplace/exports/exportHelpers.js';
+import { DbaExportService } from '@/marketplace/dba/dbaExportService.js';
+import { DbaIntegrationService } from '@/marketplace/dba/dbaIntegrationService.js';
+import { zipCollectionImages } from '@/marketplace/exports/exportHelpers.js';
 import Logger from '@/system/logging/Logger.js';
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 
 class ExportService {
     constructor() {
@@ -31,7 +31,7 @@ class ExportService {
      * @returns {Promise<Object>} - Export result
      */
     async exportToZip(collectionType, ids = null, options = {}) {
-        Logger.debug('ExportService', 'Starting ZIP export', {collectionType, ids, options});
+        Logger.debug('ExportService', 'Starting ZIP export', { collectionType, ids, options });
 
         // Validate collection type
         const supportedTypes = ['psa-cards', 'raw-cards', 'sealed-products'];
@@ -122,65 +122,6 @@ class ExportService {
         }
     }
 
-    /**
-     * Post items to DBA marketplace
-     * @param {Array} items - Items to post
-     * @param {Object} options - Posting options
-     * @returns {Promise<Object>} - Posting result
-     */
-    async postToDba(items, options = {}) {
-        const {
-            customDescription = '',
-            dryRun = false
-        } = options;
-
-        Logger.debug('ExportService', 'Starting DBA posting', {
-            itemCount: items.length,
-            dryRun,
-            options
-        });
-
-        // Validate items array
-        if (!items || !Array.isArray(items) || items.length === 0) {
-            throw new ValidationError('No items provided for DBA posting');
-        }
-
-        try {
-            // Use ItemFetcher for consistent item fetching
-            const collectionItems = await this.fetchItemsForExport(items);
-
-            if (collectionItems.length === 0) {
-                throw new ValidationError('No valid items found for DBA posting');
-            }
-
-            // Use DBA integration service to export and post
-            const integrationResult = await this.dbaIntegrationService.exportAndPostToDba(collectionItems, {
-                customDescription,
-                includeMetadata: true,
-                dryRun
-            });
-
-            Logger.info('ExportService', 'DBA posting completed', {
-                success: integrationResult.success,
-                dryRun,
-                itemCount: collectionItems.length
-            });
-
-            return {
-                success: true,
-                data: integrationResult,
-                exportType: 'dba-post',
-                metadata: {
-                    dryRun,
-                    customDescription,
-                    processedItems: collectionItems.length
-                }
-            };
-        } catch (error) {
-            Logger.error('ExportService', 'DBA posting failed', error);
-            throw error;
-        }
-    }
 
     /**
      * Test DBA integration
@@ -235,7 +176,7 @@ class ExportService {
      * @returns {Promise<Object>} - Download information
      */
     async downloadDbaZip(exportId) {
-        Logger.debug('ExportService', 'Processing DBA ZIP download', {exportId});
+        Logger.debug('ExportService', 'Processing DBA ZIP download', { exportId });
 
         // This method coordinates with the DBA export service
         // The actual file streaming is handled by the controller
@@ -243,7 +184,7 @@ class ExportService {
             // Validate export exists and get metadata
             // Implementation depends on how DBA exports are stored/tracked
 
-            Logger.info('ExportService', 'DBA ZIP download prepared', {exportId});
+            Logger.info('ExportService', 'DBA ZIP download prepared', { exportId });
 
             return {
                 success: true,
@@ -289,17 +230,17 @@ class ExportService {
      * @private
      */
     async fetchItemsForExport(items) {
-        Logger.debug('ExportService', 'Fetching items for export', {count: items.length});
+        Logger.debug('ExportService', 'Fetching items for export', { count: items.length });
 
         // Prepare item requests for ItemFetcher
         const itemRequests = items.map(itemRequest => {
-            const {id, type, name, setName, customTitle, customDescription} = itemRequest;
+            const { id, type } = itemRequest;
 
             if (!id || !type) {
                 throw new ValidationError('Each item must have id and type fields');
             }
 
-            return {itemType: type, itemId: id};
+            return { itemType: type, itemId: id };
         });
 
         // Define populate options for different item types
@@ -307,7 +248,7 @@ class ExportService {
             populate: [
                 {
                     path: 'cardId',
-                    populate: {path: 'setId', model: 'Set'}
+                    populate: { path: 'setId', model: 'Set' }
                 },
                 {
                     path: 'productId',
@@ -326,7 +267,7 @@ class ExportService {
         // Process successful items with original metadata
         const collectionItems = fetchResult.items.map((itemData, index) => {
             const originalRequest = items[index];
-            const {name, setName, customTitle, customDescription: itemCustomDescription} = originalRequest;
+            const { name, setName, customTitle, customDescription: itemCustomDescription } = originalRequest;
 
             return {
                 item: {

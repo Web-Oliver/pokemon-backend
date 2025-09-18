@@ -9,6 +9,7 @@
 import Product from '@/pokemon/products/Product.js';
 import BaseSearchService from '@/search/services/BaseSearchService.js';
 import UnifiedSearchQueryBuilder from '@/search/services/UnifiedSearchQueryBuilder.js';
+import Logger from '@/system/logging/Logger.js';
 
 class ProductSearchService extends BaseSearchService {
 
@@ -24,14 +25,14 @@ class ProductSearchService extends BaseSearchService {
     async searchProducts(query, filters = {}, options = {}) {
         const searchConfig = {
             searchFields: ['productName', 'category'],
-            searchWeights: {productName: 3, category: 1},
+            searchWeights: { productName: 3, category: 1 },
             defaultPopulate: 'setProductId' // Fixed: Use correct field name
         };
 
         // Convert page to offset for BaseSearchService
-        const {page = 1, limit = 20, ...restOptions} = options;
+        const { page = 1, limit = 20, ...restOptions } = options;
         const offset = (page - 1) * limit;
-        const searchOptions = {...restOptions, offset, limit};
+        const searchOptions = { ...restOptions, offset, limit };
 
         const result = await this.performSearch('product', Product, query, filters, searchOptions, searchConfig);
 
@@ -59,7 +60,7 @@ class ProductSearchService extends BaseSearchService {
      * @returns {Array} Array of suggestion strings
      */
     async getProductSuggestions(query, options = {}) {
-        const {limit = 10} = options;
+        const { limit = 10 } = options;
 
         if (!query || query.trim().length < 1) {
             return [];
@@ -74,7 +75,7 @@ class ProductSearchService extends BaseSearchService {
             await this.indexManager.initializeIndexes();
 
             const productIndex = this.indexManager.getProductIndex();
-            const results = productIndex.search(query, {limit});
+            const results = productIndex.search(query, { limit });
 
             // Extract unique suggestions from search results
             const suggestions = new Set();
@@ -118,7 +119,7 @@ class ProductSearchService extends BaseSearchService {
      * @returns {Array} Products in the specified category
      */
     async searchProductsByCategory(category, additionalFilters = {}, options = {}) {
-        const filters = {category, ...additionalFilters};
+        const filters = { category, ...additionalFilters };
 
         return this.searchProducts('', filters, options);
     }
@@ -132,7 +133,7 @@ class ProductSearchService extends BaseSearchService {
      */
     async searchSealedProducts(query, options = {}) {
         const filters = {
-            category: {$in: ['Booster Box', 'Booster Pack', 'Theme Deck', 'Starter Deck', 'Bundle', 'Collection Box']}
+            category: { $in: ['Booster Box', 'Booster Pack', 'Theme Deck', 'Starter Deck', 'Bundle', 'Collection Box'] }
         };
 
         return this.searchProducts(query, filters, options);
@@ -150,7 +151,7 @@ class ProductSearchService extends BaseSearchService {
 
         for (const word of searchWords) {
             if (word.length >= 1) {
-                const results = productIndex.search(word, {limit: 1000});
+                const results = productIndex.search(word, { limit: 1000 });
 
                 results.forEach(result => {
                     if (Array.isArray(result.result)) {
@@ -172,11 +173,11 @@ class ProductSearchService extends BaseSearchService {
      * @private
      */
     async _combineWithMongoQuery(query, flexResultIds, filters, options) {
-        const {limit = 50, offset = 0, sort = {_id: -1}, populate = true} = options;
+        const { limit = 50, offset = 0, sort = { _id: -1 }, populate = true } = options;
 
         // Build MongoDB query using modern search conditions
         const queryBuilder = new UnifiedSearchQueryBuilder();
-        const {searchConditions} = queryBuilder.buildSimpleSearchConditions('products', query);
+        const { searchConditions } = queryBuilder.buildSimpleSearchConditions('products', query);
 
         // Add filters
         Object.assign(searchConditions, filters);
@@ -187,7 +188,7 @@ class ProductSearchService extends BaseSearchService {
         if (flexResultIds.length > 0) {
             const flexQuery = {
                 ...searchConditions,
-                _id: {$in: flexResultIds}
+                _id: { $in: flexResultIds }
             };
 
             let productQuery = Product.find(flexQuery);
@@ -224,7 +225,7 @@ class ProductSearchService extends BaseSearchService {
             // Exclude already found products
             const supplementQuery = {
                 ...searchConditions,
-                _id: {$nin: existingIds}
+                _id: { $nin: existingIds }
             };
 
             let productQuery = Product.find(supplementQuery)
@@ -257,7 +258,7 @@ class ProductSearchService extends BaseSearchService {
      * @private
      */
     async _searchProductsWithFiltersOnly(filters, options) {
-        const {limit = 50, offset = 0, sort = {_id: -1}, populate = true} = options;
+        const { limit = 50, offset = 0, sort = { _id: -1 }, populate = true } = options;
 
         let query = Product.find(filters)
             .sort(sort)
@@ -330,14 +331,14 @@ class ProductSearchService extends BaseSearchService {
      * @returns {Array} Popular categories with counts
      */
     async getPopularCategories(options = {}) {
-        const {limit = 10} = options;
+        const { limit = 10 } = options;
 
         try {
             const categories = await Product.aggregate([
-                {$group: {_id: '$category', count: {$sum: 1}}},
-                {$sort: {count: -1}},
-                {$limit: limit},
-                {$project: {category: '$_id', count: 1, _id: 0}}
+                { $group: { _id: '$category', count: { $sum: 1 } } },
+                { $sort: { count: -1 } },
+                { $limit: limit },
+                { $project: { category: '$_id', count: 1, _id: 0 } }
             ]);
 
             return categories;
@@ -359,8 +360,8 @@ class ProductSearchService extends BaseSearchService {
             const [totalProducts, categoryStats] = await Promise.all([
                 Product.countDocuments({}),
                 Product.aggregate([
-                    {$group: {_id: '$category', count: {$sum: 1}}},
-                    {$sort: {count: -1}}
+                    { $group: { _id: '$category', count: { $sum: 1 } } },
+                    { $sort: { count: -1 } }
                 ])
             ]);
 

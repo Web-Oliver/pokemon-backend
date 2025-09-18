@@ -6,7 +6,7 @@
  * Updated for new domain-driven architecture
  */
 
-import {container, ServiceKeys} from './ServiceContainer.js';
+import { container, ServiceKeys } from './ServiceContainer.js';
 
 // Repositories
 import CardRepository from '@/pokemon/cards/CardRepository.js';
@@ -31,14 +31,14 @@ import StatusService from '@/system/services/StatusService.js';
 import StatusController from '@/system/controllers/StatusController.js';
 import HealthService from '@/system/services/HealthService.js';
 import HealthController from '@/system/controllers/HealthController.js';
-import {cacheManager} from '@/search/middleware/searchCache.js';
+import { cacheManager } from '@/search/middleware/searchCache.js';
 import EndpointsService from '@/system/services/EndpointsService.js';
 import EndpointsController from '@/system/controllers/EndpointsController.js';
 import Logger from '@/system/logging/Logger.js';
 import IcrBatchService from '@/icr/application/IcrBatchService.js';
 import IcrStatusService from '@/icr/application/services/IcrStatusService.js';
 import IcrStitchingOrchestrator from '@/icr/application/services/IcrStitchingOrchestrator.js';
-import {GoogleVisionOcrProvider} from '@/icr/infrastructure/external/GoogleVisionOcrProvider.js';
+import { GoogleVisionOcrProvider } from '@/icr/infrastructure/external/GoogleVisionOcrProvider.js';
 import PsaLabelExtractionService from '@/icr/infrastructure/services/PsaLabelExtractionService.js';
 import IcrLabelExtractionService from '@/icr/application/services/IcrLabelExtractionService.js';
 import IcrTextDistributionService from '@/icr/application/services/IcrTextDistributionService.js';
@@ -86,21 +86,21 @@ export function registerServices() {
     container.registerSingleton('psaGradedCardService', () => {
         return new CollectionService(
             container.resolve('psaGradedCardRepository'),
-            {entityName: 'PsaGradedCard'}
+            { entityName: 'PsaGradedCard' }
         );
     });
 
     container.registerSingleton('rawCardService', () => {
         return new CollectionService(
             container.resolve('rawCardRepository'),
-            {entityName: 'RawCard'}
+            { entityName: 'RawCard' }
         );
     });
 
     container.registerSingleton('sealedProductService', () => {
         return new CollectionService(
             container.resolve('sealedProductRepository'),
-            {entityName: 'SealedProduct'}
+            { entityName: 'SealedProduct' }
         );
     });
 
@@ -198,7 +198,7 @@ export function registerServices() {
     });
 
     // Log registration stats
-    const stats = container.getStats();
+    container.getStats();
 }
 
 /**

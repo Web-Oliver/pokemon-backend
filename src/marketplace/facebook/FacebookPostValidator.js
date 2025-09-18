@@ -1,4 +1,4 @@
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 
 /**
  * Facebook Post Validator Service

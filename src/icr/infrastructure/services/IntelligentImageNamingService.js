@@ -17,7 +17,7 @@ export class IntelligentImageNamingService {
     /**
      * Generate standardized filename at upload time
      */
-    async generateUploadFilename(imageBuffer, originalFilename = '', imageHash = '') {
+    async generateUploadFilename(imageBuffer, imageHash = '') {
         try {
             Logger.info('IntelligentImageNamingService', 'Generating upload filename', {
                 imageHashPreview: imageHash.substring(0, 8)

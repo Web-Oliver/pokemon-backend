@@ -94,7 +94,7 @@ const SHORTENER_CONFIG = {
 
 class PokemonNameShortener {
     constructor(config = {}) {
-        this.config = {...SHORTENER_CONFIG, ...config};
+        this.config = { ...SHORTENER_CONFIG, ...config };
     }
 
     /**

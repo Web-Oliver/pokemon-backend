@@ -53,14 +53,14 @@ export class FileSystemUtils {
             try {
                 await fs.unlink(filePath);
                 results.deleted.push(filePath);
-                Logger.info('FileSystemUtils', 'File deleted successfully', {filePath});
+                Logger.info('FileSystemUtils', 'File deleted successfully', { filePath });
             } catch (error) {
                 if (error.code === 'ENOENT') {
                     results.notFound.push(filePath);
-                    Logger.warn('FileSystemUtils', 'File not found for deletion', {filePath});
+                    Logger.warn('FileSystemUtils', 'File not found for deletion', { filePath });
                 } else {
-                    results.failed.push({filePath, error: error.message});
-                    Logger.error('FileSystemUtils', 'Failed to delete file', error, {filePath});
+                    results.failed.push({ filePath, error: error.message });
+                    Logger.error('FileSystemUtils', 'Failed to delete file', error, { filePath });
                 }
             }
         }
@@ -105,7 +105,7 @@ export class FileSystemUtils {
             const validatedDest = this.validateImagePath(destinationPath, allowedDestDir);
 
             // Ensure destination directory exists
-            await fs.mkdir(path.dirname(validatedDest), {recursive: true});
+            await fs.mkdir(path.dirname(validatedDest), { recursive: true });
 
             // Copy file
             await fs.copyFile(validatedSource, validatedDest);
@@ -142,7 +142,7 @@ export class FileSystemUtils {
                 lastModified: stats.mtime
             };
         } catch (error) {
-            Logger.error('FileSystemUtils', 'Failed to read file', error, {filePath});
+            Logger.error('FileSystemUtils', 'Failed to read file', error, { filePath });
             throw new Error(`File not found: ${path.basename(filePath)}`);
         }
     }

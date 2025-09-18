@@ -1,6 +1,6 @@
-import {asyncHandler, NotFoundError, ValidationError} from '@/system/middleware/CentralizedErrorHandler.js';
+import { asyncHandler, NotFoundError, ValidationError } from '@/system/middleware/CentralizedErrorHandler.js';
 import DbaSelection from '@/marketplace/dba/DbaSelection.js';
-import {batchFetchItems, batchValidateItemExistence, VALID_ITEM_TYPES} from '@/collection/items/ItemBatchFetcher.js';
+import { batchFetchItems, batchValidateItemExistence, VALID_ITEM_TYPES } from '@/collection/items/ItemBatchFetcher.js';
 
 /**
  * Get all DBA selections with item details
@@ -8,17 +8,17 @@ import {batchFetchItems, batchValidateItemExistence, VALID_ITEM_TYPES} from '@/c
  * @param {Object} res - Express response object
  */
 const getAllDbaSelections = asyncHandler(async (req, res) => {
-    const {active, expiring} = req.query;
+    const { active, expiring } = req.query;
 
     const query = {};
 
     if (active === 'true') {
         query.isActive = true;
-        query.expiryDate = {$gt: new Date()};
+        query.expiryDate = { $gt: new Date() };
     } else if (active === 'false') {
         query.$or = [
-            {isActive: false},
-            {expiryDate: {$lte: new Date()}}
+            { isActive: false },
+            { expiryDate: { $lte: new Date() } }
         ];
     }
 
@@ -32,13 +32,13 @@ const getAllDbaSelections = asyncHandler(async (req, res) => {
         // Use lean() to get plain JS objects and limit fields
         selections = await DbaSelection.find(query)
             .select('itemId itemType selectedDate isActive notes expiryDate')
-            .sort({selectedDate: -1})
+            .sort({ selectedDate: -1 })
             .lean()
             .exec();
     }
 
     // Use centralized batch fetching service
-    const {itemsMap} = await batchFetchItems(selections, {
+    const { itemsMap } = await batchFetchItems(selections, {
         populate: true,
         lean: true
     });
@@ -95,28 +95,28 @@ const getAllDbaSelections = asyncHandler(async (req, res) => {
  * @param {Object} res - Express response object
  */
 const addToDbaSelection = asyncHandler(async (req, res) => {
-    const {items} = req.body;
+    const { items } = req.body;
 
     if (!items || !Array.isArray(items) || items.length === 0) {
         throw new ValidationError('Items array is required and must not be empty');
     }
 
     // Use batch validation for better performance
-    const {validItems, validationErrors} = await batchValidateItemExistence(items);
+    const { validItems, validationErrors } = await batchValidateItemExistence(items);
 
     const results = [];
     const errors = [...validationErrors];
 
     for (const item of validItems) {
-        const {itemId, itemType} = item;
+        const { itemId, itemType } = item;
 
         try {
 
             // Check if already selected for DBA
-            const existingSelection = await DbaSelection.findOne({itemId, itemType});
+            const existingSelection = await DbaSelection.findOne({ itemId, itemType });
 
             if (existingSelection && existingSelection.isActive) {
-                errors.push({itemId, error: 'Item is already selected for DBA'});
+                errors.push({ itemId, error: 'Item is already selected for DBA' });
 
                 continue;
             }
@@ -143,7 +143,7 @@ const addToDbaSelection = asyncHandler(async (req, res) => {
             results.push(selection);
 
         } catch (error) {
-            errors.push({itemId, error: error.message});
+            errors.push({ itemId, error: error.message });
         }
     }
 
@@ -161,7 +161,7 @@ const addToDbaSelection = asyncHandler(async (req, res) => {
  * @param {Object} res - Express response object
  */
 const removeFromDbaSelection = asyncHandler(async (req, res) => {
-    const {items} = req.body;
+    const { items } = req.body;
 
     if (!items || !Array.isArray(items) || items.length === 0) {
         throw new ValidationError('Items array is required and must not be empty');
@@ -171,19 +171,19 @@ const removeFromDbaSelection = asyncHandler(async (req, res) => {
     const errors = [];
 
     for (const item of items) {
-        const {itemId, itemType} = item;
+        const { itemId, itemType } = item;
 
         if (!itemId || !itemType) {
-            errors.push({itemId, error: 'itemId and itemType are required'});
+            errors.push({ itemId, error: 'itemId and itemType are required' });
 
             continue;
         }
 
         try {
-            const selection = await DbaSelection.findOne({itemId, itemType});
+            const selection = await DbaSelection.findOne({ itemId, itemType });
 
             if (!selection) {
-                errors.push({itemId, error: 'Item not found in DBA selection'});
+                errors.push({ itemId, error: 'Item not found in DBA selection' });
 
                 continue;
             }
@@ -195,7 +195,7 @@ const removeFromDbaSelection = asyncHandler(async (req, res) => {
             results.push(selection);
 
         } catch (error) {
-            errors.push({itemId, error: error.message});
+            errors.push({ itemId, error: error.message });
         }
     }
 
@@ -213,13 +213,13 @@ const removeFromDbaSelection = asyncHandler(async (req, res) => {
  * @param {Object} res - Express response object
  */
 const getDbaSelectionByItem = asyncHandler(async (req, res) => {
-    const {itemId, itemType} = req.params;
+    const { itemId, itemType } = req.params;
 
     if (!VALID_ITEM_TYPES.includes(itemType)) {
         throw new ValidationError(`itemType must be one of: ${VALID_ITEM_TYPES.join(', ')}`);
     }
 
-    const selection = await DbaSelection.findOne({itemId, itemType});
+    const selection = await DbaSelection.findOne({ itemId, itemType });
 
     if (!selection) {
         throw new NotFoundError('DBA selection not found for this item');
@@ -237,14 +237,14 @@ const getDbaSelectionByItem = asyncHandler(async (req, res) => {
  * @param {Object} res - Express response object
  */
 const updateDbaSelectionNotes = asyncHandler(async (req, res) => {
-    const {itemId, itemType} = req.params;
-    const {notes} = req.body;
+    const { itemId, itemType } = req.params;
+    const { notes } = req.body;
 
     if (!VALID_ITEM_TYPES.includes(itemType)) {
         throw new ValidationError(`itemType must be one of: ${VALID_ITEM_TYPES.join(', ')}`);
     }
 
-    const selection = await DbaSelection.findOne({itemId, itemType});
+    const selection = await DbaSelection.findOne({ itemId, itemType });
 
     if (!selection) {
         throw new NotFoundError('DBA selection not found for this item');
@@ -272,7 +272,7 @@ const getDbaSelectionStats = asyncHandler(async (req, res) => {
         expired,
         byType
     ] = await Promise.all([
-        DbaSelection.countDocuments({isActive: true, expiryDate: {$gt: new Date()}}),
+        DbaSelection.countDocuments({ isActive: true, expiryDate: { $gt: new Date() } }),
         DbaSelection.countDocuments({
             isActive: true,
             expiryDate: {
@@ -282,13 +282,13 @@ const getDbaSelectionStats = asyncHandler(async (req, res) => {
         }),
         DbaSelection.countDocuments({
             $or: [
-                {isActive: false},
-                {expiryDate: {$lte: new Date()}}
+                { isActive: false },
+                { expiryDate: { $lte: new Date() } }
             ]
         }),
         DbaSelection.aggregate([
-            {$match: {isActive: true, expiryDate: {$gt: new Date()}}},
-            {$group: {_id: '$itemType', count: {$sum: 1}}}
+            { $match: { isActive: true, expiryDate: { $gt: new Date() } } },
+            { $group: { _id: '$itemType', count: { $sum: 1 } } }
         ])
     ]);
 

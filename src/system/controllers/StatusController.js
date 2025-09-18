@@ -2,7 +2,7 @@
  * Simple Status Controller for system health endpoints
  * Does NOT extend BaseController - standalone utility controller
  */
-import {API_ENDPOINTS} from '@/system/constants/EndpointsConfig.js';
+import { API_ENDPOINTS } from '@/system/constants/EndpointsConfig.js';
 
 /**
  * StatusController - Completely Standalone
@@ -58,7 +58,7 @@ export default class StatusController {
     async getEndpointsByCategory(req, res) {
         console.log('[DEBUG] StatusController.getEndpointsByCategory called');
         try {
-            const {category} = req.params;
+            const { category } = req.params;
             const data = await this.statusService.getEndpointsByCategory(category);
 
             res.status(200).json({

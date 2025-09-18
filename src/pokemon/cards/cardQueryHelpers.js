@@ -14,7 +14,7 @@
  * @returns {Array} Filtered array of cards
  */
 const applyPostPopulationFilters = (cards, filters) => {
-    const {setName, cardName} = filters;
+    const { setName, cardName } = filters;
     let filteredCards = cards;
 
     if (setName) {
@@ -38,7 +38,7 @@ const applyPostPopulationFilters = (cards, filters) => {
  * @returns {Object} MongoDB query object
  */
 const buildBaseSoldQuery = (filters) => {
-    const {sold} = filters;
+    const { sold } = filters;
     const query = {};
 
     if (sold !== undefined) {

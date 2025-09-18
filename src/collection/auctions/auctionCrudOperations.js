@@ -1,17 +1,16 @@
 import Auction from '@/collection/auctions/Auction.js';
-import {asyncHandler} from '@/system/middleware/CentralizedErrorHandler.js';
-import {NotFoundError, ValidationError} from '@/system/errors/ErrorTypes.js';
-import {populateAuctionItems, validateAuctionItems} from './auctionItemHelpers.js';
+import { asyncHandler } from '@/system/middleware/CentralizedErrorHandler.js';
+import { NotFoundError, ValidationError } from '@/system/errors/ErrorTypes.js';
+import { populateAuctionItems, validateAuctionItems } from './auctionItemHelpers.js';
 import Logger from '@/system/logging/Logger.js';
-import {getEntityConfig, getFilterableFields, getValidationRules} from '@/system/database/entityConfigurations.js';
+import { getEntityConfig, getFilterableFields } from '@/system/database/entityConfigurations.js';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
 
 const getAllAuctions = asyncHandler(async (req, res) => {
-    Logger.operationStart('GET_ALL_AUCTIONS', 'Fetching all auctions', {query: req.query});
+    Logger.operationStart('GET_ALL_AUCTIONS', 'Fetching all auctions', { query: req.query });
 
     const entityConfig = getEntityConfig('auction');
     const filterableFields = getFilterableFields('auction');
-    const {isActive} = req.query;
     const query = {};
 
     // Apply filterable fields from entity configuration
@@ -36,19 +35,19 @@ const getAllAuctions = asyncHandler(async (req, res) => {
 });
 
 const getAuctionById = asyncHandler(async (req, res) => {
-    Logger.operationStart('GET_AUCTION_BY_ID', 'Fetching auction by ID', {auctionId: req.params.id});
+    Logger.operationStart('GET_AUCTION_BY_ID', 'Fetching auction by ID', { auctionId: req.params.id });
 
     try {
         ValidatorFactory.validateObjectId(req.params.id, 'Auction ID');
     } catch (error) {
-        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format', error, {auctionId: req.params.id});
+        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format', error, { auctionId: req.params.id });
         throw error;
     }
 
     const auction = await Auction.findById(req.params.id);
 
     if (!auction) {
-        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found in database', new NotFoundError('Auction not found'), {auctionId: req.params.id});
+        Logger.operationError('AUCTION_NOT_FOUND', 'Auction not found in database', new NotFoundError('Auction not found'), { auctionId: req.params.id });
         throw new NotFoundError('Auction not found');
     }
 
@@ -78,14 +77,12 @@ const getAuctionById = asyncHandler(async (req, res) => {
 });
 
 const createAuction = asyncHandler(async (req, res) => {
-    Logger.operationStart('CREATE_AUCTION', 'Creating new auction', {body: req.body});
+    Logger.operationStart('CREATE_AUCTION', 'Creating new auction', { body: req.body });
 
-    const {topText, bottomText, auctionDate, status, generatedFacebookPost, isActive, items, totalValue} = req.body;
-    const entityConfig = getEntityConfig('auction');
-    const validationRules = getValidationRules('auction');
+    const { topText, bottomText, auctionDate, status, generatedFacebookPost, isActive, items, totalValue } = req.body;
+    // const entityConfig = getEntityConfig('auction'); // Unused
 
     // Validate required fields using entity configuration
-    const {requiredFields} = entityConfig;
 
     if (!topText || !bottomText) {
         const error = new ValidationError('Missing required fields: topText and bottomText are required');
@@ -133,13 +130,12 @@ const updateAuction = asyncHandler(async (req, res) => {
     try {
         ValidatorFactory.validateObjectId(req.params.id, 'Auction ID');
     } catch (error) {
-        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format for update', error, {auctionId: req.params.id});
+        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format for update', error, { auctionId: req.params.id });
         throw error;
     }
 
-    const {topText, bottomText, auctionDate, status, generatedFacebookPost, isActive, items, totalValue, soldValue} =
+    const { topText, bottomText, auctionDate, status, generatedFacebookPost, isActive, items, totalValue, soldValue } =
         req.body;
-    const entityConfig = getEntityConfig('auction');
 
     const updateData = {};
 
@@ -161,12 +157,12 @@ const updateAuction = asyncHandler(async (req, res) => {
         updateData.items = items;
     }
 
-    const updatedAuction = await Auction.findByIdAndUpdate(req.params.id, updateData, {new: true, runValidators: true});
+    const updatedAuction = await Auction.findByIdAndUpdate(req.params.id, updateData, { new: true, runValidators: true });
 
     if (!updatedAuction) {
         const error = new NotFoundError('Auction not found');
 
-        Logger.operationError('AUCTION_UPDATE_NOT_FOUND', 'Auction not found for update', error, {auctionId: req.params.id});
+        Logger.operationError('AUCTION_UPDATE_NOT_FOUND', 'Auction not found for update', error, { auctionId: req.params.id });
         throw error;
     }
 
@@ -180,12 +176,12 @@ const updateAuction = asyncHandler(async (req, res) => {
 });
 
 const deleteAuction = asyncHandler(async (req, res) => {
-    Logger.operationStart('DELETE_AUCTION', 'Deleting auction', {auctionId: req.params.id});
+    Logger.operationStart('DELETE_AUCTION', 'Deleting auction', { auctionId: req.params.id });
 
     try {
         ValidatorFactory.validateObjectId(req.params.id, 'Auction ID');
     } catch (error) {
-        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format for deletion', error, {auctionId: req.params.id});
+        Logger.operationError('INVALID_AUCTION_ID', 'Invalid auction ID format for deletion', error, { auctionId: req.params.id });
         throw error;
     }
 
@@ -194,7 +190,7 @@ const deleteAuction = asyncHandler(async (req, res) => {
     if (!deletedAuction) {
         const error = new NotFoundError('Auction not found');
 
-        Logger.operationError('AUCTION_DELETE_NOT_FOUND', 'Auction not found for deletion', error, {auctionId: req.params.id});
+        Logger.operationError('AUCTION_DELETE_NOT_FOUND', 'Auction not found for deletion', error, { auctionId: req.params.id });
         throw error;
     }
 

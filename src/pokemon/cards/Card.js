@@ -1,42 +1,42 @@
 import mongoose from 'mongoose';
 import ValidatorFactory from '@/system/validation/ValidatorFactory.js';
-import {ValidationError} from '@/system/errors/ErrorTypes.js';
+import { ValidationError } from '@/system/errors/ErrorTypes.js';
 
-const {Schema} = mongoose;
+const { Schema } = mongoose;
 const cardSchema = new mongoose.Schema(
     {
         // MongoDB ObjectId relationships
-        setId: {type: Schema.Types.ObjectId, ref: 'Set', required: true},
+        setId: { type: Schema.Types.ObjectId, ref: 'Set', required: true },
 
         // Card data
-        cardName: {type: String, required: true},
-        variety: {type: String, default: ''},
-        cardNumber: {type: String, required: true},
+        cardName: { type: String, required: true },
+        variety: { type: String, default: '' },
+        cardNumber: { type: String, required: true },
 
         // Unique identifiers for database rebuilding
-        uniquePokemonId: {type: Number, required: true, unique: true},
-        uniqueSetId: {type: Number, required: true},
+        uniquePokemonId: { type: Number, required: true, unique: true },
+        uniqueSetId: { type: Number, required: true },
 
         // PSA grade population data
         grades: {
-            grade_1: {type: Number, default: 0},
-            grade_2: {type: Number, default: 0},
-            grade_3: {type: Number, default: 0},
-            grade_4: {type: Number, default: 0},
-            grade_5: {type: Number, default: 0},
-            grade_6: {type: Number, default: 0},
-            grade_7: {type: Number, default: 0},
-            grade_8: {type: Number, default: 0},
-            grade_9: {type: Number, default: 0},
-            grade_10: {type: Number, default: 0},
-            grade_total: {type: Number, default: 0}
+            grade_1: { type: Number, default: 0 },
+            grade_2: { type: Number, default: 0 },
+            grade_3: { type: Number, default: 0 },
+            grade_4: { type: Number, default: 0 },
+            grade_5: { type: Number, default: 0 },
+            grade_6: { type: Number, default: 0 },
+            grade_7: { type: Number, default: 0 },
+            grade_8: { type: Number, default: 0 },
+            grade_9: { type: Number, default: 0 },
+            grade_10: { type: Number, default: 0 },
+            grade_total: { type: Number, default: 0 }
         }
     },
-    {versionKey: false}
+    { versionKey: false }
 );
 
 // Compound index to ensure uniqueness for cards within a set
-cardSchema.index({setId: 1, cardName: 1, cardNumber: 1, variety: 1}, {unique: true});
+cardSchema.index({ setId: 1, cardName: 1, cardNumber: 1, variety: 1 }, { unique: true });
 
 // Text search index for efficient search across card name and card number
 cardSchema.index(
@@ -56,23 +56,23 @@ cardSchema.index(
 );
 
 // Optimized indexes for common search patterns
-cardSchema.index({cardName: 1});
-cardSchema.index({setId: 1, cardName: 1});
-cardSchema.index({setId: 1, cardNumber: 1});
-cardSchema.index({cardNumber: 1}); // Card number lookup
+cardSchema.index({ cardName: 1 });
+cardSchema.index({ setId: 1, cardName: 1 });
+cardSchema.index({ setId: 1, cardNumber: 1 });
+cardSchema.index({ cardNumber: 1 }); // Card number lookup
 
 // Note: uniquePokemonId and uniqueSetId indexes are automatically created by unique: true in schema
 
 // PSA grade indexes
-cardSchema.index({'grades.grade_total': 1}); // Grade total filtering
-cardSchema.index({'grades.grade_10': -1}); // PSA 10 filtering
-cardSchema.index({setId: 1, 'grades.grade_total': -1}); // Set with grade population
-cardSchema.index({uniqueSetId: 1, 'grades.grade_total': -1}); // Unique set with grade population
-cardSchema.index({variety: 1}); // Variety filtering
+cardSchema.index({ 'grades.grade_total': 1 }); // Grade total filtering
+cardSchema.index({ 'grades.grade_10': -1 }); // PSA 10 filtering
+cardSchema.index({ setId: 1, 'grades.grade_total': -1 }); // Set with grade population
+cardSchema.index({ uniqueSetId: 1, 'grades.grade_total': -1 }); // Unique set with grade population
+cardSchema.index({ variety: 1 }); // Variety filtering
 
 // Add validation for new structure
 cardSchema.pre('save', function (next) {
-    const {validateUniquePokemonId, validateUniqueSetId, validateGrades} = {
+    const { validateUniquePokemonId, validateUniqueSetId, validateGrades } = {
         validateUniquePokemonId: ValidatorFactory.validateUniquePokemonId,
         validateUniqueSetId: ValidatorFactory.validateUniqueSetId,
         validateGrades: ValidatorFactory.validateGrades

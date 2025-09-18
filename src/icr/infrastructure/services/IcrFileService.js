@@ -10,7 +10,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 import Logger from '@/system/logging/Logger.js';
-import {FileSystemUtils} from '@/icr/shared/FileSystemUtils.js';
+import { FileSystemUtils } from '@/icr/shared/FileSystemUtils.js';
 
 import IcrPathManager from '@/icr/shared/IcrPathManager.js';
 
@@ -31,8 +31,8 @@ export class IcrFileService {
     async ensureDirectories() {
         try {
             for (const [dirName, dirPath] of Object.entries(this.directories)) {
-                await fs.mkdir(dirPath, {recursive: true});
-                Logger.debug('IcrFileService', `Ensured directory: ${dirName}`, {path: dirPath});
+                await fs.mkdir(dirPath, { recursive: true });
+                Logger.debug('IcrFileService', `Ensured directory: ${dirName}`, { path: dirPath });
             }
         } catch (error) {
             Logger.error('IcrFileService', 'Failed to ensure directories', error);
@@ -82,7 +82,7 @@ export class IcrFileService {
         try {
             return await fs.readFile(validatedPath);
         } catch (error) {
-            Logger.error('IcrFileService', 'Failed to read file', error, {filePath: validatedPath});
+            Logger.error('IcrFileService', 'Failed to read file', error, { filePath: validatedPath });
             throw new Error(`File not found: ${path.basename(validatedPath)}`);
         }
     }
@@ -105,7 +105,7 @@ export class IcrFileService {
             });
             return filePath;
         } catch (error) {
-            Logger.error('IcrFileService', 'Failed to write file', error, {filePath});
+            Logger.error('IcrFileService', 'Failed to write file', error, { filePath });
             throw error;
         }
     }
@@ -121,14 +121,14 @@ export class IcrFileService {
         try {
             const validatedPath = this.validateFilePath(filePath);
             await fs.unlink(validatedPath);
-            Logger.info('IcrFileService', 'File deleted successfully', {filePath: validatedPath});
+            Logger.info('IcrFileService', 'File deleted successfully', { filePath: validatedPath });
             return true;
         } catch (error) {
             if (error.code === 'ENOENT') {
-                Logger.warn('IcrFileService', 'File not found for deletion', {filePath});
+                Logger.warn('IcrFileService', 'File not found for deletion', { filePath });
                 return false;
             }
-            Logger.error('IcrFileService', 'Failed to delete file', error, {filePath});
+            Logger.error('IcrFileService', 'Failed to delete file', error, { filePath });
             throw error;
         }
     }
@@ -142,7 +142,7 @@ export class IcrFileService {
         try {
             return await fs.stat(validatedPath);
         } catch (error) {
-            Logger.error('IcrFileService', 'Failed to get file stats', error, {filePath: validatedPath});
+            Logger.error('IcrFileService', 'Failed to get file stats', error, { filePath: validatedPath });
             throw new Error(`File not accessible: ${path.basename(validatedPath)}`);
         }
     }
